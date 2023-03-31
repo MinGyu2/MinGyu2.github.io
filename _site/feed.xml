@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-31T16:41:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">github.io 블로그 시작하기</title><link href="http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/" rel="alternate" type="text/html" title="github.io 블로그 시작하기" /><published>2023-03-31T00:00:00+09:00</published><updated>2023-03-31T22:06:00+09:00</updated><id>http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94</id><content type="html" xml:base="http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/"><![CDATA[<p>GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-31T23:49:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">1주차</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/1%EC%A3%BC%EC%B0%A8%EC%88%98%EC%97%85/" rel="alternate" type="text/html" title="1주차" /><published>2023-03-31T00:00:00+09:00</published><updated>2023-03-31T22:06:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/1%EC%A3%BC%EC%B0%A8%EC%88%98%EC%97%85</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/1%EC%A3%BC%EC%B0%A8%EC%88%98%EC%97%85/"><![CDATA[<h2 id="web-service">Web Service</h2>
+<ul>
+  <li>네트워크 상에서 서로 다른 종류의 컴퓨터들 강에 상호작용을 하기 위한 소프트웨어 시스템이다.</li>
+  <li>HTTP 프로토콜은 응답과 요청의 구조로 이용자(클라이언트) 웹서버에 요청을 하면 웹서버가 응답을 하는 구조이다.</li>
+</ul>
+
+<h3 id="동적-페이지">동적 페이지</h3>
+<ul>
+  <li>누가 요청하는 것에 따라 서버에서 응답이 달라진다.</li>
+</ul>
+
+<h3 id="정적-페이지">정적 페이지</h3>
+<ul>
+  <li>누가 요청을 하든 서버의 응답은 항상 일정하다.</li>
+</ul>
+
+<h3 id="서버-클라이언트-구조">서버-클라이언트 구조</h3>
+<p><em>클라이언트 &lt;&gt; 웹서버 &lt;&gt; WAS &lt;&gt; DB 서버</em></p>
+
+<h4 id="클라이언트">클라이언트</h4>
+<ul>
+  <li>PC나 스마트폰등의 사용자 측을 말한다. 사용자가 요청을 서버에 전달하기 위해 웹브라우저를 사용한다. 크롬, 파이어폭스, 사파리, 엣지등이 있다.</li>
+  <li>클라이언트 측의 웹 브라우저에서 실행되는 코드를 프론트엔드라 한다. 자바스크립트가 여기에 해당한다.</li>
+</ul>
+
+<h4 id="서버">서버</h4>
+<ul>
+  <li><strong>웹서버</strong> : HTML로 만든 웹 페이지가 들어 있는 파일을 클라이어트에게 제공하는 것이다. <strong>아파치</strong>, <strong>nginx</strong> 등이 있다.</li>
+  <li><strong>WAS</strong>(Web Application Server) : 웹 응용 프로그램이 설치되어 작동한는 웹 애플리케이션 서버를 말한다. 웹 서버와 DB 서버 사이의 미들웨어 이다. 그리고 동적 페이지를 생성하기 위한 처리를 한다.</li>
+  <li><strong>DB 서버</strong> : 데이터베이스를 저장 및 관리하는 서버를 말한다.</li>
+  <li>서버측에서 실행되는 코드를 백엔드라 한다. php가 여기에 해당한다.</li>
+</ul>
+
+<h3 id="url-구조">URL 구조</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">http://IP 주소 or Domain/파일경로?파라미터=1</code> 의 구조로 이루어져 있다.</li>
+  <li>맨 처음을 보고 어떤 프로토콜인지 알 수 있다.(<code class="language-plaintext highlighter-rouge">http</code>, <code class="language-plaintext highlighter-rouge">https</code>, <code class="language-plaintext highlighter-rouge">ftp</code> 등)</li>
+  <li><strong>파일경로</strong>는 컴퓨터의 폴더와 비슷하다고 생각하면 된다.</li>
+  <li><strong>파라미터</strong>는 상자라고 생각하면 된다. 예를 들어 <code class="language-plaintext highlighter-rouge">?name=1</code> 은 name 이라는 상자에 데이터 1을 넣는 것이다.</li>
+</ul>
+
+<h3 id="http-상태-메세지">HTTP 상태 메세지</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>상태 메세지</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>성공적(GOOD)</td>
+    </tr>
+    <tr>
+      <td>300</td>
+      <td>Redirect 즉 새 URL로 이동한 것 이다.</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>클라이언트 측 오류 메세지(요청을 잘못한 것이다.)</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>서버 측 오류</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="참고-사이트">참고 사이트</h3>
+<ul>
+  <li><a href="https://dev-youngjun.tistory.com/67">웹 시스템 WAS 원리</a></li>
+  <li><a href="http://wiki.hash.kr/index.php/%EC%84%9C%EB%B2%84-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8">서버 클라이언트 구조</a></li>
+  <li><a href="https://www.beusable.net/blog/?p=4507">URL 구조</a></li>
+  <li><a href="https://doomed-lab.tistory.com/15">HTTP 상태 메세지 정리</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[서버 동작 방식]]></summary></entry><entry><title type="html">github.io 블로그 시작하기</title><link href="http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/" rel="alternate" type="text/html" title="github.io 블로그 시작하기" /><published>2023-03-30T00:00:00+09:00</published><updated>2023-03-30T22:06:00+09:00</updated><id>http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94</id><content type="html" xml:base="http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/"><![CDATA[<p>GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
 GitHub Blog 서비스의 이름은 Pages이다.</p>
 
 <p>Pages가 다른 블로그 플랫폼 보다 편한 것 같아서 마음에 든다.
@@ -6,4 +82,4 @@ GitHub Blog 서비스의 이름은 Pages이다.</p>
 
 <p>YFM에서 정의한 제목을 이중 괄호 구문으로 본문에 추가할 수 있다.
 이 글의 제목은 github.io 블로그 시작하기이고
-마지막으로 수정된 시간은 2023-03-31 08:06:00 -0500이다.</p>]]></content><author><name>Jung MinGyu</name></author><summary type="html"><![CDATA[GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.]]></summary></entry></feed>
+마지막으로 수정된 시간은 2023-03-30 08:06:00 -0500이다.</p>]]></content><author><name>Jung MinGyu</name></author><summary type="html"><![CDATA[GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.]]></summary></entry></feed>
