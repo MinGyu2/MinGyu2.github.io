@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-01T23:25:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">JSP, Servlet, Spring 개념</title><link href="http://localhost:4000/%EC%9B%B9%EA%B0%9C%EB%85%90/" rel="alternate" type="text/html" title="JSP, Servlet, Spring 개념" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EA%B0%9C%EB%85%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EA%B0%9C%EB%85%90/"><![CDATA[<h3 id="jsp--java-server-page-">JSP ( Java Server Page )</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-01T23:31:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">JSP, Servlet, Spring 개념</title><link href="http://localhost:4000/%EC%9B%B9%EA%B0%9C%EB%85%90/" rel="alternate" type="text/html" title="JSP, Servlet, Spring 개념" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EA%B0%9C%EB%85%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EA%B0%9C%EB%85%90/"><![CDATA[<h3 id="jsp--java-server-page-">JSP ( Java Server Page )</h3>
 <ul>
   <li>확장자가 <strong>.jsp</strong> 인 파일이다.</li>
   <li>html 문서 안에 자바 코드를 삽해 사용할 수 있도록 해준다.</li>
@@ -7,7 +7,6 @@
 
 <h3 id="servlet">servlet</h3>
 <ul>
-  <li>자바로 웹 어플리케이션을</li>
   <li>확장자가 <strong>.java</strong> 이다.</li>
   <li>자바 코드 안에 HTML을 포함하고 있다.</li>
   <li>웹 서버의 성능을 향상하기 위해 사용되는 자바 클래스의 일종이다.</li>
