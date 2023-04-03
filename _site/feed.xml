@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-02T21:57:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">웹서버 만들기(1)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/" rel="alternate" type="text/html" title="웹서버 만들기(1)" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-03T14:28:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">웹서버 만들기(1)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/" rel="alternate" type="text/html" title="웹서버 만들기(1)" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/"><![CDATA[<ul>
   <li>목표 : jsp 를 이용하여 간단한 로그인 서버를 만들것이다.</li>
   <li>환경 : 우분투 22.04</li>
   <li>MVC ( Model View Controller ) 구조
@@ -51,11 +51,82 @@ sudo service nginx restart
   <li><code class="language-plaintext highlighter-rouge">vi /etc/nginx/nginx.conf</code> 파일을 살폅보면  sites-enabled 폴더 안의 파일들을 살펴보는 것을 알 수 있다.<br />
 <img src="https://user-images.githubusercontent.com/31990118/229353926-9b507926-9f5d-473d-ab29-0799a6397947.png" alt="Pasted image 20230402210019" /></li>
   <li><code class="language-plaintext highlighter-rouge">sudo vi /etc/nginx/sites-enabled/default</code> 열어보자.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353955-531e2be4-b333-40b5-9b0e-acc6667119c4.png" alt="Pasted image 20230402210418" /><br />
+<img src="https://user-images.githubusercontent.com/31990118/229410744-73a7dfc8-86e8-498d-9daf-df2f8f1c7bb7.png" alt="image" /><br />
 <strong>location /</strong> 의 <strong>proxy_pass</strong> 부분에 tomcat의 동작중인 주소를 넣어준다.</li>
   <li>[http://localhost] 로 접속하면 nginx로 연결되는 것이아닌 tomcat으로 연결되는것을 확인할 수 있다.
 <img src="https://user-images.githubusercontent.com/31990118/229354036-affbd17e-02f9-4e49-85f5-bd2f5809c239.png" alt="Pasted image 20230402210711" /></li>
 </ol>
+
+<h3 id="nginx와-tomcat-연동중-발생한-오류">nginx와 tomcat 연동중 발생한 오류</h3>
+
+<ul>
+  <li><strong>실패1 css 파일 못찾음</strong> <br />
+<img src="https://user-images.githubusercontent.com/31990118/229415729-79a7ef72-b801-49a3-83f2-84afb7b1c755.png" alt="Pasted image 20230403132740" />
+<img src="https://user-images.githubusercontent.com/31990118/229415824-3200151f-5f51-4ea1-8e9d-bee2e9079f8b.png" alt="Pasted image 20230403132719" /></li>
+  <li>해결법
+    <ul>
+      <li>방법 (1)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled/default</code> 파일의 <strong>location /</strong> 부분을 살펴보자.</li>
+          <li><strong>try_files $uri $uri/ =404;</strong> 부분을 주석처리 안해주면 <strong>jsp</strong> 가 제대로 동작안하거나 웹사이트가 제대로 동작안 할 수 있다. 따라서 <strong>try_files $uri $uri/ =404;</strong>  부분을 주석처리해주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229415970-22abbd83-7558-496f-be5b-82830905b8f9.png" alt="Pasted image 20230403134856" /></li>
+        </ul>
+      </li>
+      <li>방법(2)
+        <ul>
+          <li><strong>try_files $uri $uri/ =404;</strong> 을 주석처리 하지않고 .css 요청이 들어올 때도 proxy_pass 처리해 준다. <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled/default</code> 파일에 넣어주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229416083-d35558ad-6d55-438f-8fef-d03b8a3a5cf7.png" alt="Pasted image 20230403135114" /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>실패2 jsp는 동작은 하지만 서버가 페이지를 이상하게 만들어서줌.</strong>
+<img src="https://user-images.githubusercontent.com/31990118/229416212-618480f1-fb39-418d-abb1-437ccd4cbee4.png" alt="Pasted image 20230403135438" /><br />예상동작<br /><img src="https://user-images.githubusercontent.com/31990118/229416494-f48f6664-16c2-4f1b-a82c-f4594d7b7a2c.png" alt="image" /></li>
+  <li>해결법
+    <ul>
+      <li>방법(1)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">location ~ \.js {</code> 부분에서 <code class="language-plaintext highlighter-rouge">add_header Content-Type application/x-javascript;</code> 부분을 주석처리 해주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229416362-acd08166-018e-4ac8-99a6-dc07c4e4d408.png" alt="Pasted image 20230403135944" /></li>
+        </ul>
+      </li>
+      <li>방법(2)
+        <ul>
+          <li><strong>try_files $uri $uri/ =404;</strong> 부분을 주석처리 안해주면 <strong>jsp</strong> 가 제대로 동작안하거나 웹사이트가 제대로 동작안 할 수 있다. 따라서 <strong>try_files $uri $uri/ =404;</strong>  부분을 주석처리해주면 된다.<br /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>주의
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">default</code> 파일 바꾸고 나서 nginx 서버를 재시작해줘야 한다.<br /><code class="language-plaintext highlighter-rouge">sudo service nginx restart</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="jsp-동작-테스트">JSP 동작 테스트</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">apache-tomcat-10.1.7/webapps/ROOT</code> 위치에 <strong>test.jsp</strong> 파일을 만들어준다.</li>
+  <li>그리고 다음 내용을 test.jsp 파일에 추가해준다.</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-jsp" data-lang="jsp"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>  <span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;%</span> <span class="nc">String</span> <span class="n">test</span><span class="o">=</span><span class="s">"hello"</span><span class="o">;</span> <span class="nt">%&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+          <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="nt">&lt;%=</span><span class="n">test</span><span class="nt">%&gt;</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/html&gt;</span>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>동작결과<br /> <code class="language-plaintext highlighter-rouge">http://localhost/test.jsp</code> 또는 <code class="language-plaintext highlighter-rouge">http://주소/test.jsp</code> 로 들어가면 alert 창이 뜨는 것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/229417802-a74e2a24-a818-483f-a0d4-16a5901817f4.png" alt="Pasted image 20230403141653" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/229417878-61157c2c-3e76-499e-bce9-3515112cecff.png" alt="Pasted image 20230403141721" /></li>
+</ul>
 
 <h3 id="참고-사이트">참고 사이트</h3>
 <ul>
