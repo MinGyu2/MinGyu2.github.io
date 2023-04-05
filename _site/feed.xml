@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-04T21:42:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">웹서버 만들기(3)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/" rel="alternate" type="text/html" title="웹서버 만들기(3)" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-05T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-06T02:19:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">웹서버 만들기(4)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/" rel="alternate" type="text/html" title="웹서버 만들기(4)" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-05T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
+<a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">웹서버 만들기(2)</a><br />
+<a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/">웹서버 만들기(3)</a></p>
+
+<h3 id="오라클-db-서버-만들기">오라클 db 서버 만들기</h3>
+<ul>
+  <li>우분투에 설치할려 했지만 잘안되서 레트햇 호환 리눅스인 rocky os에 오라클 db를 설치하려고 한다.</li>
+</ul>
+
+<h3 id="rocky-os를-가상머신에-설치하기">Rocky OS를 가상머신에 설치하기.</h3>
+<ul>
+  <li>흠 … <code class="language-plaintext highlighter-rouge">Rocky 9.1</code> 을 설치하니 오라클 DB 설치가 안된다.  그래서 <strong>Rocky 8.7</strong>을 다시 설치하였다. 설치 방법은 <code class="language-plaintext highlighter-rouge">Rocky 9.1</code> 방법이랑 같다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143080-62432050-0c3a-44b4-aab8-5f6e94557910.png" alt="Pasted image 20230405150704" /></li>
+</ul>
+
+<ol>
+  <li>Hyper-V 에서 새 가상 컴퓨터 만들기를 진행한다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143421-43da0921-f3a3-43fa-9781-8c26cbb5b58c.png" alt="Pasted image 20230405011838" /></li>
+  <li>세대는 2세대로 지정하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143523-63e397a0-dbff-407f-a620-95835287a0bd.png" alt="Pasted image 20230405011904" /></li>
+  <li>메모리할당, 네트워킹 구성, 가상 하드 디스크위치를 지정하고 부팅 os를 rocky8.7.iso 로 설정하고 마침을 눌러준다.</li>
+  <li>rocky os 의 가상머신이 생성된 것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143587-a9d7a935-6dc1-477a-a755-6585304af7b5.png" alt="Pasted image 20230405011655" /></li>
+  <li>rocky 가상머신을 우클릭하여 설정창에 들어가 준다. 그다음 보안 창에 들어가준다. 보안  <code class="language-plaintext highlighter-rouge">Microsoft UEFI 인증 기관</code>으로 변경하고 적용해 주자.<br /><img src="https://user-images.githubusercontent.com/31990118/230143703-cad23733-cb63-43ac-8bb0-5cd334292014.png" alt="Pasted image 20230405012353" /></li>
+  <li>rocky 가상머신에 연결하고 실행하고 설치를 진행하자.<br /><img src="https://user-images.githubusercontent.com/31990118/230143808-0ce9759d-05be-46c6-85b6-81ac6a81e0c6.png" alt="Pasted image 20230405150952" /></li>
+  <li>만약 <code class="language-plaintext highlighter-rouge">Failde to allocate usable memory for kernel</code> 이 발생했다면 메모리 크기를 2기가 이상으로 늘려보자. 그러면 해당 오류는 사라진다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143866-02f1f570-83eb-4e60-80d6-3e35614f87dd.png" alt="Pasted image 20230405013407" /></li>
+  <li>설치를 진행해주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143933-58c1ca7a-59eb-4bd1-b752-ee1a7e23c12a.png" alt="Pasted image 20230405151105" /><br /><img src="https://user-images.githubusercontent.com/31990118/230143988-8fe602ca-9a5b-473d-a978-061b8a6795e4.png" alt="Pasted image 20230405151154" /></li>
+  <li>설치완료<br /><img src="https://user-images.githubusercontent.com/31990118/230144158-51586520-486e-4934-95ff-153443aca8c4.png" alt="Pasted image 20230405150704" /></li>
+</ol>
+
+<h3 id="오라클-db-빠른-설치하기">오라클 DB 빠른 설치하기</h3>
+<ol>
+  <li>먼저 <code class="language-plaintext highlighter-rouge">oracle-database-preinstall-21c-1.0-1.el8.x86_64.rpm</code> 설치를 진행한다.<br /><script src="https://gist.github.com/MinGyu2/deb4fdd6303928ae41d118e1a525076f.js"></script><img src="https://user-images.githubusercontent.com/31990118/230144242-d9f9384b-8220-42d3-8d4c-274fec310977.png" alt="Pasted image 20230405152255" /><br /><br /><img src="https://user-images.githubusercontent.com/31990118/230144284-b5e25167-b665-4cdb-b731-deed73cf01d4.png" alt="Pasted image 20230405152725" /></li>
+  <li>그리고 나서 먼저 <code class="language-plaintext highlighter-rouge">wget https://download.oracle.com/otn-pub/otn_software/db-express/oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm</code>  를 통해 <code class="language-plaintext highlighter-rouge">oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm</code> 를 다운받고 다음 명령을 통해 설치를 진행한다.<br /><script src="https://gist.github.com/MinGyu2/f3dd9b8f726fecf0f64ac9d7b89bf2d0.js"></script><img src="https://user-images.githubusercontent.com/31990118/230144803-6525dd61-5294-4014-8629-a48f4a645ada.png" alt="Pasted image 20230405232753" /></li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/init.d/oracle-xe-21c configure</code> 통해 db 서버를 동작한다. 처음 동작을 시킨다면 다음과 같이 비번을 새로 지정해 줘야 한다. <br /><img src="https://user-images.githubusercontent.com/31990118/230145159-306c415e-0f8c-412d-a3d5-a716a6345928.png" alt="Pasted image 20230405232822" /><br /><br /><img src="https://user-images.githubusercontent.com/31990118/230145206-193ab464-4ce4-4697-88f4-baf45fa1062a.png" alt="Pasted image 20230405233046" /><br />위의 주소로 접속하면 접속이 잘 안될수 있다. <br /><img src="https://user-images.githubusercontent.com/31990118/230145293-5710b599-2ba4-42a7-9522-24480d0cf2a0.png" alt="Pasted image 20230405233158" /></li>
+  <li>위의 문제를 해결하기 위해서 먼저 <strong>oracl user</strong> 로 전환한다.<br /><code class="language-plaintext highlighter-rouge">su - oracle</code></li>
+  <li><strong>~/.bash_profile</strong> 을 편집해야한다. 다음 내용을 추가해주자.<br /><script src="https://gist.github.com/MinGyu2/3df339b075e7106f8c3be6508da83421.js"></script></li>
+  <li>현재 세션에 변화를 적용하기 위해 업데이트된 <strong>.bash_profile</strong> 을 실행하자.<br /><code class="language-plaintext highlighter-rouge">source ~/.bash_profile</code></li>
+  <li>이제부터 <code class="language-plaintext highlighter-rouge">리눅스의 CLI</code> 에서 <strong>Oracle RDBMS</strong> 를 실행할 수 있다.</li>
+  <li><strong>lsnrctl</strong> 명령을 통해 오라클의 상태를 확인할 수 있다.<br /><code class="language-plaintext highlighter-rouge">lsnrctl status</code><br /><img src="https://user-images.githubusercontent.com/31990118/230145612-6a6ea856-f44f-47fe-8c49-e903a41b5309.png" alt="Pasted image 20230405234130" /></li>
+  <li><code class="language-plaintext highlighter-rouge">sqlplus /as sysdba</code> 를 통해 <strong>SQL 커맨드 창</strong>으로 들어갈 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230145691-87775cdd-f998-4023-8749-5ba0c05f8121.png" alt="Pasted image 20230405234744" /></li>
+  <li><code class="language-plaintext highlighter-rouge">ss -tulpn | grep 5500</code>  명령을 통해 알아봤을 때 현재 로컬에서만 <strong>EM Express</strong> 서비스에 접속할 수있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230145753-d0009039-0f85-4f00-b8cb-0003ec12659d.png" alt="Pasted image 20230405234956" /></li>
+  <li><strong>SQL 커맨드 창</strong> 에서 <br /><code class="language-plaintext highlighter-rouge">EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);</code><br /> 입력하면 외부에서도 접속 가능하게 된다.<br /><script src="https://gist.github.com/MinGyu2/a33780e933966e16eeb7275dbf115209.js"></script><img src="https://user-images.githubusercontent.com/31990118/230145891-bcd02f3d-6797-4ac9-b8ea-ab935192094f.png" alt="Pasted image 20230405235211" /></li>
+  <li><code class="language-plaintext highlighter-rouge">https://아이피주소:5500/em</code>을 통해 접속하면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/230146140-abaea83b-5c5a-4ae2-9adb-de7ad206a40f.png" alt="Pasted image 20230405235302" /></li>
+  <li>사용자이름 <code class="language-plaintext highlighter-rouge">sys</code> , 비번(우리가 지정한 비번), 컨테이너 이름 <code class="language-plaintext highlighter-rouge">cdb$root</code> 를 입력하고 로그인해주면 다음 화면이 나온다.<br /><img src="https://user-images.githubusercontent.com/31990118/230146191-30b05ff1-533b-4095-ba22-9a8cfa1e1534.png" alt="Pasted image 20230406001343" /></li>
+  <li>Oracle DB 설치가 아주 잘되었다!!</li>
+</ol>
+
+<h3 id="참고-사이트">참고 사이트</h3>
+<ul>
+  <li><a href="https://www.centlinux.com/2022/06/install-oracle-database-21c-xe-on-rocky-linux.html">Install Oracle Database 21c XE on Rocky Linux 8</a></li>
+  <li><a href="https://www.oracle.com/kr/database/technologies/appdev/xe/quickstart.html">Oracle Database Express Edition</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="DB" /><summary type="html"><![CDATA[DB 설치 및 구도]]></summary></entry><entry><title type="html">웹서버 만들기(3)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/" rel="alternate" type="text/html" title="웹서버 만들기(3)" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-05T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
 <a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">웹서버 만들기(2)</a></p>
 
 <h3 id="servlet-에서-클라이언트에게-jsp-페이지-보여주기">Servlet 에서 클라이언트에게 JSP 페이지 보여주기</h3>
