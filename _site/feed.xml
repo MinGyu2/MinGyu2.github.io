@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-06T03:03:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">웹서버 만들기(4)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/" rel="alternate" type="text/html" title="웹서버 만들기(4)" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-07T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-06T14:56:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">웹서버 만들기(4)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/" rel="alternate" type="text/html" title="웹서버 만들기(4)" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-07T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
 <a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">웹서버 만들기(2)</a><br />
 <a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/">웹서버 만들기(3)</a></p>
 
@@ -42,11 +42,37 @@
   <li>Oracle DB 설치가 아주 잘되었다!!</li>
 </ol>
 
+<h3 id="oracle-db-의-sqlplus에서-한글-깨질때">Oracle DB 의 sqlplus에서 한글 깨질때.</h3>
+<ol>
+  <li><strong>export NLS_LANG=KOREAN_KOREA.AL32UTF8</strong> 를 <code class="language-plaintext highlighter-rouge">.bash_profile</code> 에 추가해주면 된다.</li>
+  <li>그런다음 <br /><code class="language-plaintext highlighter-rouge">source ~/.bash_profile</code><br />명령으로 <code class="language-plaintext highlighter-rouge">bash_profile</code> 을 시작해주면 된다.</li>
+</ol>
+
+<h3 id="oracle">Oracle</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">lsnrctl stop</code>,  <code class="language-plaintext highlighter-rouge">lsnrctl start</code><br /><img src="https://user-images.githubusercontent.com/31990118/230284160-75c7ed50-89c9-4a7b-a1aa-84fdfbeff56e.png" alt="Pasted image 20230406035320" />
+<br /><code class="language-plaintext highlighter-rouge">nmap localhost</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sqlplus / as sysdba</code> 로 SQL 에 접속한다. <br /><code class="language-plaintext highlighter-rouge">startup</code> : 시작<br /><code class="language-plaintext highlighter-rouge">shutdown</code> : 중지<br /><img src="https://user-images.githubusercontent.com/31990118/230284196-83b122e4-3f46-41ad-8f31-655d2c3797c5.png" alt="Pasted image 20230406035505" />
+<br /><code class="language-plaintext highlighter-rouge">nmap localhost</code></li>
+</ol>
+
+<ul>
+  <li>무조건 위 순서대로 해야한다. 2 번 만하면 포트가 아무것도 안려있는것을 확인할 수 있다.</li>
+</ul>
+
+<h3 id="rocky-서버-네트워크-설정">Rocky 서버 네트워크 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">nmtui</code> 를 사용한다. 고정 아이피 설정이 가능하다.</li>
+</ul>
+
 <h4 id="nginx--servlet--jsp--msql-구현이-완료되었다">nginx + servlet + jsp , msql 구현이 완료되었다!</h4>
 <h3 id="참고-사이트">참고 사이트</h3>
 <ul>
   <li><a href="https://www.centlinux.com/2022/06/install-oracle-database-21c-xe-on-rocky-linux.html">Install Oracle Database 21c XE on Rocky Linux 8</a></li>
   <li><a href="https://www.oracle.com/kr/database/technologies/appdev/xe/quickstart.html">Oracle Database Express Edition</a></li>
+  <li><a href="https://docs.rockylinux.org/guides/network/basic_network_configuration/">Network Configuration - Documentation (rockylinux.org)</a></li>
+  <li><a href="https://taisou.tistory.com/622">sqlplus 에서 한글이 깨질때 (tistory.com)</a></li>
+  <li><a href="https://mkil.tistory.com/336">ORACLE DB 시작 및 중지 / 리스너 시작 및 중지 하는방법 (tistory.com)</a></li>
 </ul>]]></content><author><name>Jung MinGyu</name></author><category term="DB" /><summary type="html"><![CDATA[DB 설치 및 구도]]></summary></entry><entry><title type="html">웹서버 만들기(3)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/" rel="alternate" type="text/html" title="웹서버 만들기(3)" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-05T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
 <a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">웹서버 만들기(2)</a></p>
 
