@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-09T14:55:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">웹서버 개발 5</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5/" rel="alternate" type="text/html" title="웹서버 개발 5" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T22:06:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5/"><![CDATA[<h3 id="post-와-get-동작-확인">POST 와 GET 동작 확인</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-10T02:55:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">오라클DB</title><link href="http://localhost:4000/%EC%98%A4%EB%9D%BC%ED%81%B4DB/" rel="alternate" type="text/html" title="오라클DB" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T22:06:00+09:00</updated><id>http://localhost:4000/%EC%98%A4%EB%9D%BC%ED%81%B4DB</id><content type="html" xml:base="http://localhost:4000/%EC%98%A4%EB%9D%BC%ED%81%B4DB/"><![CDATA[<h3 id="db">DB</h3>
+<hr />
+<ul>
+  <li>여러 사람에 의해 공유되어 사용될 목적으로 통합하여 관리되는 데이터의 집합이다.</li>
+  <li>자료를 구조화 하여 저장함으로써 자료 검색과 갱신의 효율을 높일 수 있다.</li>
+</ul>
+
+<h3 id="oracle-db">Oracle DB</h3>
+<hr />
+<ul>
+  <li>DB 서버가 통합된 하나의 스토리지를 공유하는 방식이다.</li>
+  <li>오라클 db 는 mysql 과 달리 데이터 베이스를 만드는 것이 아닌 사용자를 만들고 권한을 부여한다.</li>
+  <li>사용자 중심으로 테이블을 관리한다.</li>
+</ul>
+
+<h4 id="oracle-사용자-생성">Oracle 사용자 생성</h4>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">su - oracle</code> 명령을 이용하여 <code class="language-plaintext highlighter-rouge">oracle</code> 사용자로 전환한다.<br /><img src="https://user-images.githubusercontent.com/31990118/230787698-796c4b78-52ec-44f4-a291-4b01c4ad5faa.png" alt="Pasted image 20230409214824" /></li>
+  <li><code class="language-plaintext highlighter-rouge">sqlplus / as sysdba</code> 명령을 통해 <code class="language-plaintext highlighter-rouge">SQL</code> 창으로 들어가자.<br /><img src="https://user-images.githubusercontent.com/31990118/230787719-e9f09ac1-7b75-45ac-a3ff-199c2c39eabf.png" alt="Pasted image 20230409220051" /></li>
+  <li><code class="language-plaintext highlighter-rouge">CREATE USER "사용자명" identified by "비번"</code> 명령을 <code class="language-plaintext highlighter-rouge">SQL</code> 창에 입력하여 사용자를 생성한다.</li>
+  <li>여기서 <code class="language-plaintext highlighter-rouge">ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다.</code> 라는 오류가 발생 한다면 사용자명 앞에 <code class="language-plaintext highlighter-rouge">c##</code> 또는 <code class="language-plaintext highlighter-rouge">C##</code> 을 붙여야한다.<br /><code class="language-plaintext highlighter-rouge">CREATE USER "c##사용자명" identified by "비번"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">select username from dba_users;</code> 명령을 <code class="language-plaintext highlighter-rouge">SQL</code> 창에 입력하여 새로 만든 계정을 확인할 수 있다.</li>
+  <li>새로 만든 계정에 접속할려고 하면 권한이 없다는 에러가 발생한다. <code class="language-plaintext highlighter-rouge">SYS</code> 계정으로 먼저 연결한 다음 권한을 부여해줘야 한다.<br /><script src="https://gist.github.com/MinGyu2/61b386bb2045be5bab0eb3a64d866805.js"></script></li>
+  <li><code class="language-plaintext highlighter-rouge">conn 사용자명</code> 을 <code class="language-plaintext highlighter-rouge">SQL</code> 창에 입력하여 새로 만든 계정으로 접속한다.<br /><script src="https://gist.github.com/MinGyu2/0b46dde8c67e9a3284935fc95b687727.js"></script></li>
+  <li>테이블 생성을 해보자. 밑에는 예시 테이블이다.<br /><script src="https://gist.github.com/MinGyu2/f291c98972b64cb9d9daec3a05fcc7f6.js"></script></li>
+  <li>생성한 테이블을 확인하자. <code class="language-plaintext highlighter-rouge">TEST</code> 라는 테이블이 만들어진 것을 확인할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/dd0fc152241100f36b8990e5178f81e5.js"></script></li>
+  <li>생성한 테이블에 데이터를 넣어보자.<br /><script src="https://gist.github.com/MinGyu2/d5ae11104c21b190b8a6ce0df9ba96b5.js"></script></li>
+  <li><code class="language-plaintext highlighter-rouge">ORA-01950: 테이블스페이스 'USERS'에 대한 권한이 없습니다.</code> 오류가 발생하였다.  해당 에러는 <code class="language-plaintext highlighter-rouge">users</code> 테이블스페이스에서 얼마만큼의 영역을 할당한것인지 정해지지 않은 상태이기 때문이다. 해결 방법은 해당 테이블스페이스에 대해 공간을 할당해 주면된다.<br /><script src="https://gist.github.com/MinGyu2/409ec5c72c8b7b53f90d89e9c8e466c7.js"></script><br /><script src="https://gist.github.com/MinGyu2/8ad5b5aa792babb467fa0fe44f2a48f1.js"></script></li>
+  <li>이제 다시 <code class="language-plaintext highlighter-rouge">insert</code> 명령어로 데이터를 넣어보자.<br /><script src="https://gist.github.com/MinGyu2/e10317d95ba51c0efc4475e4325788b6.js"></script></li>
+  <li>테이블에 잘 들어갔는지 확인해 보자. 데이터가 db에 잘 들어갔다.<br /><script src="https://gist.github.com/MinGyu2/9278303018b0d0298a546647843f12d2.js"></script></li>
+</ol>
+
+<h3 id="oracle-db-명령어">Oracle DB 명령어</h3>
+<hr />
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">show user</code> : 현재 접속중인 유저를 알 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">SELECT * FROM tab;</code> : 현재 계정의 테이블 목록 조회하기.</li>
+  <li><code class="language-plaintext highlighter-rouge">select * from all_users;</code> : 계정 정보들 확인하기.</li>
+  <li><code class="language-plaintext highlighter-rouge">SELECT owner FROM dba_tables WHERE table_name= '테이블명';</code> : 테이블 소유자가 누구인지 확인할 수 있다. 단 <code class="language-plaintext highlighter-rouge">SYS</code> 유저로 접속한다음 이 명령어를 사용해야 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">CREATE USER 사용자명 IDENTIFIED BY 암호;</code> : 사용자 생성.</li>
+  <li><code class="language-plaintext highlighter-rouge">ALTER USER 사용자명 IDENTIFIED BY 새로운 암호;</code> : 사용자 비밀번호 변경.</li>
+  <li><code class="language-plaintext highlighter-rouge">DROP USER 사용자명 CASCADE;</code> : 사용자 삭제.</li>
+  <li><code class="language-plaintext highlighter-rouge">grant 권한,권한2,.. to 계정명;</code> : 권한 부여하기.</li>
+  <li><code class="language-plaintext highlighter-rouge">revoke 권한,권한2,.. from 계정명;</code> : 권한 회수하기(취소하기).</li>
+  <li><code class="language-plaintext highlighter-rouge">commit;</code> : 지금 까지의 변경 사항들 적용하기.</li>
+  <li><code class="language-plaintext highlighter-rouge">select * from DBA_ROLE_PRIVS WHERE GRANTEE = 사용자명(대문자);</code> : 사용자에게 부여된 권한들을 확인할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">delete from 테이블명;</code> : 테이블의 모든 행을 삭제한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">drop table 테이블명;</code> : 테이블을 삭제한다. 정확히는 휴지통으로 보낸다.</li>
+  <li><code class="language-plaintext highlighter-rouge">drop table 테이블 이름 purge;</code> : 휴지통으로 보내지 않고 테이블을 완전 삭제 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">show recyclebin;</code> : 휴지통의 테이블들 조회.</li>
+  <li><code class="language-plaintext highlighter-rouge">FLASHBACK TABLE 테이블 이름 TO BEFORE DROP;</code> : 휴지통의 테이블 복원.</li>
+  <li><code class="language-plaintext highlighter-rouge">PURGE RECYCLEBIN;</code> : 휴지통 비우기.</li>
+  <li><code class="language-plaintext highlighter-rouge">PURGE TABLE 테이블 이름;</code> : 휴지통에서 특정 테이블만 삭제.</li>
+  <li><code class="language-plaintext highlighter-rouge">PURGE DBA_RECYCLEBIN;</code> : DBA 권한으로 휴지통 내 테이블 전체 삭제.</li>
+  <li><code class="language-plaintext highlighter-rouge">select status from v$instance;</code> : 현재 DB 상태 확인하기.</li>
+</ul>
+
+<p><br /><br /></p>
+<details>
+<summary>
+참고 사이트 목록
+</summary>
+<h3 id="참고-사이트">참고 사이트<a class="header-link" href="#참고-사이트" title="Permalink"><span class="sr-only">Permalink</span><i class="fas fa-link"></i></a></h3>
+<ul>
+  <li><a href="https://www.centlinux.com/2022/06/install-oracle-database-21c-xe-on-rocky-linux.html">Install Oracle Database 21c XE on Rocky Linux 8 CentLinux</a></li>
+  <li><a href="https://boanhack.tistory.com/171">오라클 현재 DB 상태 확인하기</a></li>
+  <li><a href="https://coding-factory.tistory.com/413">Oracle ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다. 에러 해결</a></li>
+  <li><a href="https://gent.tistory.com/528">Oracle 사용자 생성 및 삭제 방법 (Create User) (tistory.com)</a></li>
+  <li><a href="https://sgcomputer.tistory.com/247">Oracle 오라클 기본 - 데이터 베이스 만들기(사용자 생성)</a></li>
+  <li><a href="https://velog.io/@alicesykim95/Oracle%EA%B3%BC-MySQL%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90">Oracle과 MySQL의 차이점 </a></li>
+  <li><a href="https://streamls.tistory.com/entry/Oracle-%EC%84%A4%EC%B9%98-%ED%9B%84-%EA%B3%84%EC%A0%95-%EC%83%9D%EC%84%B1-%EB%B0%8F-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%9D%EC%84%B1">Oracle 설치 후 계정 생성 및 테이블 생성</a></li>
+  <li><a href="https://endorphin0710.tistory.com/28">오라클 현재 작업중인 유저 확인하기</a></li>
+  <li><a href="https://yjy0755.tistory.com/22">새로운 계정을 만들어 테이블 만들어보기 </a></li>
+  <li><a href="https://holics1226.tistory.com/16">ORA-01045 (로그인 실패/권한 부족)</a></li>
+  <li><a href="https://www.oracletutorial.com/oracle-administration/oracle-show-tables/">Oracle Show Tables: List Tables in Oracle Database (oracletutorial.com)</a></li>
+  <li><a href="https://jink1982.tistory.com/33">Oracle 데이터 입력(INSERT), 조회(SELECT), UPDATE(수정), DELETE(삭제)</a></li>
+  <li><a href="https://gogogameboy.tistory.com/entry/oracle-sql-select2">오라클 SQL, SELECT문 특정 열 선택 </a></li>
+  <li><a href="https://gent.tistory.com/407">오라클 INSERT 방법 &amp; 노하우 정리 (데이터 입력)</a></li>
+  <li><a href="https://dololak.tistory.com/756"> 오라클 ORA-01950: 테이블스페이스 ‘USERS’에 대한 권한이 없습니다 오류 해결 방법</a></li>
+  <li><a href="https://m.blog.naver.com/cksgy32/221675944029">SQLD ORA-01950: 테이블스페이스 ‘USERS’에 대한 권한이 없습니다.</a></li>
+  <li><a href="https://hengbokhan.tistory.com/78">Oracle BIN$…형식의 테이블 완전히 삭제하기</a></li>
+  <li><a href="https://bangu4.tistory.com/320">오라클 계정,권한 관리 (tistory.com)</a></li>
+  <li><a href="https://m.blog.naver.com/deersoul6662/221466474481">oracle 모든 유저, 데이터 베이스, 테이블 확인 : 네이버 블로그 (naver.com)</a></li>
+  <li><a href="https://ajdahrdl.tistory.com/2">Oracle 계정 생성 및 권한 부여 방법 (tistory.com)</a></li>
+  <li><a href="https://loghada.tistory.com/4">Oracle DB 계정 생성/사용자 확인)</a></li>
+</ul>
+</details>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="Database" /><summary type="html"><![CDATA[오라클 db로 계정 생성, 테이블 생성, 데이터 삽입을 해보자.]]></summary></entry><entry><title type="html">웹서버 개발 5</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5/" rel="alternate" type="text/html" title="웹서버 개발 5" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T22:06:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5/"><![CDATA[<h3 id="post-와-get-동작-확인">POST 와 GET 동작 확인</h3>
 <hr />
 <ul>
   <li>GET<br /><script src="https://gist.github.com/MinGyu2/1ed4e7cc1b3cef438c72952254e3efd2.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/230756591-dd06327e-4753-456e-a601-ceb8da120991.png" alt="Pasted image 20230406195223" /></li>
@@ -659,12 +745,4 @@ sudo service nginx restart
   <li><a href="http://wiki.hash.kr/index.php/%EC%84%9C%EB%B2%84-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8">서버 클라이언트 구조</a></li>
   <li><a href="https://www.beusable.net/blog/?p=4507">URL 구조</a></li>
   <li><a href="https://doomed-lab.tistory.com/15">HTTP 상태 메세지 정리</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[Web Service 네트워크 상에서 서로 다른 종류의 컴퓨터들 강에 상호작용을 하기 위한 소프트웨어 시스템이다. HTTP 프로토콜은 응답과 요청의 구조로 이용자(클라이언트) 웹서버에 요청을 하면 웹서버가 응답을 하는 구조이다.]]></summary></entry><entry><title type="html">github.io 블로그 시작하기</title><link href="http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/" rel="alternate" type="text/html" title="github.io 블로그 시작하기" /><published>2023-03-30T00:00:00+09:00</published><updated>2023-03-30T22:06:00+09:00</updated><id>http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94</id><content type="html" xml:base="http://localhost:4000/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/"><![CDATA[<p>GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
-GitHub Blog 서비스의 이름은 Pages이다.</p>
-
-<p>Pages가 다른 블로그 플랫폼 보다 편한 것 같아서 마음에 든다.
-다른 사람들도 같이 많이 사용했으면 좋겠다는 생각이 든다.</p>
-
-<p>YFM에서 정의한 제목을 이중 괄호 구문으로 본문에 추가할 수 있다.
-이 글의 제목은 github.io 블로그 시작하기이고
-마지막으로 수정된 시간은 2023-03-30 08:06:00 -0500이다.</p>]]></content><author><name>Jung MinGyu</name></author><summary type="html"><![CDATA[GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[Web Service 네트워크 상에서 서로 다른 종류의 컴퓨터들 강에 상호작용을 하기 위한 소프트웨어 시스템이다. HTTP 프로토콜은 응답과 요청의 구조로 이용자(클라이언트) 웹서버에 요청을 하면 웹서버가 응답을 하는 구조이다.]]></summary></entry></feed>
