@@ -355,13 +355,16 @@ select * from members where id='입력id' and hashpwd=standard_hash('입력 pwd'
 - MD5, SHA1, SHA256, SHA512 등이 있다.
 
 
-### SQL 에 따른 주석 차이
+### SQL  차이
 ---
 
 | |mysql|oracle db|
 |---|---|---|
 |한줄 주석| #, --  | --
 | 부분 주석 | /\*\*/ | /\*\*/
+|SHA512| SHA2('A',512) | standard_hash('A','SHA512' )|
+|더미 테이블| select 'a', 'b' | select 'a','b' from dual |
+
 
 <br><br>
 
@@ -389,3 +392,19 @@ select * from members where id='입력id' and hashpwd=standard_hash('입력 pwd'
 |8|AND|
 |9|OR|
 
+### 참고 사이트
+---
+- [ORACLE의 연산자 우선순위 (tistory.com)](https://graypastel.tistory.com/entry/ORACLE%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84)
+- [오라클 - 11. 오라클의 연산자우선순위 : 네이버 블로그 (naver.com)](https://m.blog.naver.com/michael_cho77/221570607776)
+- [Operator precedence rules (oracle.com)](https://docs.oracle.com/cd/E49933_01/server.770/es_eql/src/ceql_expr_precedence_rules.html)
+- [MySQL 주석 (tistory.com)](https://bamtory29.tistory.com/entry/MySQL-%EC%A3%BC%EC%84%9D)
+- [해시 함수는 무엇인가?](https://upbitcare.com/academy/education/blockchain/52)
+- [오라클 NVL, NVL2 함수 사용방법 (null, 공백, 치환) (tistory.com)](https://gent.tistory.com/189)
+- [데이터 형식 변환(데이터베이스 엔진) - SQL Server](https://learn.microsoft.com/ko-kr/sql/t-sql/data-types/data-type-conversion-database-engine?view=sql-server-ver16)
+- [oracle 비교 함수 (DECODE(), LEAST(), GREATEST(), NVL(), WIDTH_BUCKET() )](https://hyejin.tistory.com/157)
+- [php - Storing SHA-512 Hashes in MySQL - Stack Overflow](https://stackoverflow.com/questions/2568469/storing-sha-512-hashes-in-mysql)
+- [MySQL Function 암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)](https://blog.jiniworld.me/93)
+- [Oracle STANDARD_HASH 설명 : 오라클 함수 (tistory.com)](https://atotw.tistory.com/24)
+- [MySQL Function암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)](https://blog.jiniworld.me/93)
+- [SQL Injection 기초 - MS/ORACLE/MY SQL , 시간지연, 주석 등 (tistory.com)](https://imlena94.tistory.com/entry/SQL-Injection-%EA%B8%B0%EC%B4%88-MSORACLEMY-SQL-%EC%8B%9C%EA%B0%84%EC%A7%80%EC%97%B0-%EC%A3%BC%EC%84%9D-%EB%93%B1)
+- [SQL 정렬하기 order by 쿼리 사용법 1, 2 desc 의미 (tistory.com)](https://jhnyang.tistory.com/470)

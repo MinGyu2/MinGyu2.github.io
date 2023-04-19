@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-19T20:52:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-19T21:11:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -696,7 +696,7 @@
   <li>MD5, SHA1, SHA256, SHA512 등이 있다.</li>
 </ul>
 
-<h3 id="sql-에-따른-주석-차이">SQL 에 따른 주석 차이</h3>
+<h3 id="sql--차이">SQL  차이</h3>
 <hr />
 
 <table>
@@ -717,6 +717,16 @@
       <td>부분 주석</td>
       <td>/**/</td>
       <td>/**/</td>
+    </tr>
+    <tr>
+      <td>SHA512</td>
+      <td>SHA2(‘A’,512)</td>
+      <td>standard_hash(‘A’,’SHA512’ )</td>
+    </tr>
+    <tr>
+      <td>더미 테이블</td>
+      <td>select ‘a’, ‘b’</td>
+      <td>select ‘a’,’b’ from dual</td>
     </tr>
   </tbody>
 </table>
@@ -806,7 +816,26 @@
       <td>OR</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Jung MinGyu</name></author><category term="SQL" /><category term="Oracle DB" /><category term="SQL Injection" /><category term="Java" /><summary type="html"><![CDATA[SQL Injection 이란? sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다. 웹 해킹 기술중 하나이다.]]></summary></entry><entry><title type="html">웹서버 만들기(7)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/" rel="alternate" type="text/html" title="웹서버 만들기(7)" /><published>2023-04-14T00:00:00+09:00</published><updated>2023-04-15T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/"><![CDATA[<ul>
+</table>
+
+<h3 id="참고-사이트">참고 사이트</h3>
+<hr />
+<ul>
+  <li><a href="https://graypastel.tistory.com/entry/ORACLE%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84">ORACLE의 연산자 우선순위 (tistory.com)</a></li>
+  <li><a href="https://m.blog.naver.com/michael_cho77/221570607776">오라클 - 11. 오라클의 연산자우선순위 : 네이버 블로그 (naver.com)</a></li>
+  <li><a href="https://docs.oracle.com/cd/E49933_01/server.770/es_eql/src/ceql_expr_precedence_rules.html">Operator precedence rules (oracle.com)</a></li>
+  <li><a href="https://bamtory29.tistory.com/entry/MySQL-%EC%A3%BC%EC%84%9D">MySQL 주석 (tistory.com)</a></li>
+  <li><a href="https://upbitcare.com/academy/education/blockchain/52">해시 함수는 무엇인가?</a></li>
+  <li><a href="https://gent.tistory.com/189">오라클 NVL, NVL2 함수 사용방법 (null, 공백, 치환) (tistory.com)</a></li>
+  <li><a href="https://learn.microsoft.com/ko-kr/sql/t-sql/data-types/data-type-conversion-database-engine?view=sql-server-ver16">데이터 형식 변환(데이터베이스 엔진) - SQL Server</a></li>
+  <li><a href="https://hyejin.tistory.com/157">oracle 비교 함수 (DECODE(), LEAST(), GREATEST(), NVL(), WIDTH_BUCKET() )</a></li>
+  <li><a href="https://stackoverflow.com/questions/2568469/storing-sha-512-hashes-in-mysql">php - Storing SHA-512 Hashes in MySQL - Stack Overflow</a></li>
+  <li><a href="https://blog.jiniworld.me/93">MySQL Function 암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)</a></li>
+  <li><a href="https://atotw.tistory.com/24">Oracle STANDARD_HASH 설명 : 오라클 함수 (tistory.com)</a></li>
+  <li><a href="https://blog.jiniworld.me/93">MySQL Function암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)</a></li>
+  <li><a href="https://imlena94.tistory.com/entry/SQL-Injection-%EA%B8%B0%EC%B4%88-MSORACLEMY-SQL-%EC%8B%9C%EA%B0%84%EC%A7%80%EC%97%B0-%EC%A3%BC%EC%84%9D-%EB%93%B1">SQL Injection 기초 - MS/ORACLE/MY SQL , 시간지연, 주석 등 (tistory.com)</a></li>
+  <li><a href="https://jhnyang.tistory.com/470">SQL 정렬하기 order by 쿼리 사용법 1, 2 desc 의미 (tistory.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL" /><category term="Oracle DB" /><category term="SQL Injection" /><category term="Java" /><summary type="html"><![CDATA[SQL Injection 이란? sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다. 웹 해킹 기술중 하나이다.]]></summary></entry><entry><title type="html">웹서버 만들기(7)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/" rel="alternate" type="text/html" title="웹서버 만들기(7)" /><published>2023-04-14T00:00:00+09:00</published><updated>2023-04-15T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/"><![CDATA[<ul>
   <li>웹 서버 만들기 (1) ~ (6) 과정을 통해 웹서버와 DB서버 구현을 완료하였다.</li>
   <li>웹 서버에서 db에 저장된 데이터를 가져오는 방법도 알아보았다.</li>
 </ul>
