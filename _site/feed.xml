@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-19T21:11:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-20T19:25:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -23,7 +23,195 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL Injection 로그인 우회</title><link href="http://localhost:4000/SQLInjection/" rel="alternate" type="text/html" title="SQL Injection 로그인 우회" /><published>2023-04-19T00:00:00+09:00</published><updated>2023-04-19T23:13:00+09:00</updated><id>http://localhost:4000/SQLInjection</id><content type="html" xml:base="http://localhost:4000/SQLInjection/"><![CDATA[<h2 id="sql-injection-이란">SQL Injection 이란?</h2>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
+
+<p><br /></p>
+<h3 id="회원가입-버튼-추가">회원가입 버튼 추가</h3>
+<hr />
+<blockquote>
+  <p><strong>로그인 페이지에 회원가입 버튼 추가</strong><br /><img src="https://user-images.githubusercontent.com/31990118/233329577-363a25da-eafd-46a5-8eb1-0d83f5d75943.png" alt="Pasted image 20230420151719" /></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>회원가입 버튼 부분(클라이언트)</strong><br /><script src="https://gist.github.com/MinGyu2/e0ee562997986b0cc8fd8d4c1cd4433a.js"></script></p>
+  <ul>
+    <li>회원 가입 페이지로 연결해준다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>회원가입 페이지 연결(서버)</strong></p>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">formAction</span> <span class="o">=</span> <span class="s">"/sign_in_page/authentication"</span><span class="o">;</span>
+<span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"formAction"</span><span class="o">,</span> <span class="n">formAction</span><span class="o">);</span>
+<span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"signUpLink"</span><span class="o">,</span> <span class="s">"/sign_in_page/sign_up_page"</span><span class="o">);</span>
+<span class="c1">// session id 가 만료되었거나 없어서 새롭게 로그인 해 줘야한다.</span>
+<span class="c1">// 로그인 페이지를 보여준다.</span>
+<span class="n">gotoForwardPage</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">,</span> <span class="s">"/WEB-INF/sign_in_page/sign_in_page.jsp"</span><span class="o">);</span>
+</code></pre></div>  </div>
+  <ul>
+    <li>서버에서 <code class="language-plaintext highlighter-rouge">signUpLink</code> 변수를 넣은후 <code class="language-plaintext highlighter-rouge">sign_in_page.jsp</code> 로 forward 해야지만 회원가입 링크 부분이 완성이 된다.</li>
+    <li>만약 signUpLink 변수를 안주면 회원가입 버튼이 안보인다.<br /><img src="https://user-images.githubusercontent.com/31990118/233330281-cb605b66-ab9a-4335-bd36-b76aea157fde.png" alt="Pasted image 20230420153007" /></li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<h3 id="회원가입-페이지">회원가입 페이지</h3>
+<hr />
+<blockquote>
+  <p>회원가입 페이지<br /><img src="https://user-images.githubusercontent.com/31990118/233330449-37b9eb7a-5c2e-424c-a505-158e2ea7230c.png" alt="Pasted image 20230420153118" /></p>
+</blockquote>
+
+<blockquote>
+  <p>구성</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Username</code>
+      <ul>
+        <li>유저 아이디를 입력한다.</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">중복확인</code>
+      <ul>
+        <li>서버로 유저가 입력한 아이디를 보내 중복하는 아이디인지 확인한다.</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">Email</code>
+      <ul>
+        <li>유저 이메일을 입력한다.</li>
+        <li>이메일 패턴에 맞게 입력하여야 한다.</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">Password</code>
+      <ul>
+        <li>유저 비밀번호를 입력한다.</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">Password 확인</code>
+      <ul>
+        <li>유저 비밀번호를 동일하게 입력한다.</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">회원가입</code>
+      <ul>
+        <li>중복확인, 이메일 패턴 일치 여부, 비밀번호 일치 여부를 확인한 후 각각 입력한 데이터를 서버로 전송한다.</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<h3 id="아이디-중복-확인">아이디 중복 확인</h3>
+<hr />
+
+<blockquote>
+  <p><strong>유저 아이디 중복 확인 (클라이언트)</strong><br /><script src="https://gist.github.com/MinGyu2/05f9fea7bbc9fab773e3fa6ce86fa623.js"></script></p>
+  <ul>
+    <li>중복확인 버튼을 누르면 <code class="language-plaintext highlighter-rouge">Http get</code> 요청을 통해 <code class="language-plaintext highlighter-rouge">username</code>에 사용자가 입력한 id를 넣어 중복확인 서버 주소를 이용하여 보낸다.</li>
+    <li>서버에서 보내온 응답을 통해 아이디가 중복하는지 확인한다.<br /><img src="https://user-images.githubusercontent.com/31990118/233331834-0ad61a19-546a-418d-a474-c6fce7c81f2f.png" alt="Pasted image 20230420155201" /><br /><img src="https://user-images.githubusercontent.com/31990118/233331879-4bf2dff8-c9e8-4d3c-98b8-03ab84536a4a.png" alt="Pasted image 20230420155213" /></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>유저 아이디 중복 확인 (서버)</strong><br /><script src="https://gist.github.com/MinGyu2/98d645f481a935817b22cbeb249f7e08.js"></script></p>
+  <ul>
+    <li>클라이언트에서 보낸 <code class="language-plaintext highlighter-rouge">username</code>을 확인해 볼 수 있다.</li>
+    <li><code class="language-plaintext highlighter-rouge">LoginAuthentication.isExistUserName(getServletContext(), username);</code> 를 통해 존재하는 유저인지 판단할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/738f5d2240625fccce92b5213fcaabb3.js"></script></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>UsersDAO</strong> class에서 isExistUserName 함수 부분 코드<br /><script src="https://gist.github.com/MinGyu2/363caaa55ac904382e56c801dcce6b35.js"></script></p>
+  <ul>
+    <li>이미 존재하는 유저면 <code class="language-plaintext highlighter-rouge">true</code>를 리턴하고 존재안하는 유저면 <code class="language-plaintext highlighter-rouge">false</code>를 리턴한다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>회원가입 JSP 전체 코드(클라이언트)</strong><br /><script src="https://gist.github.com/MinGyu2/d8e184b74e83a72c4772e20e6c42d159.js"></script></p>
+</blockquote>
+
+<p><br /></p>
+<h3 id="이메일-형식인지-확인">이메일 형식인지 확인</h3>
+<hr />
+<blockquote>
+  <p><strong>자바스크립트를 통해 이메일 형식인지 확인하다.</strong><br /><script src="https://gist.github.com/MinGyu2/485eceb2ce9abaf1c97ef67bcf0bc371.js"></script></p>
+  <ul>
+    <li>이메일을 입력하고 다음 입력창으로 넘어가면 <code class="language-plaintext highlighter-rouge">onchange='email_change()'</code> 옵션을 통해 자동으로 위의 함수가 실행된다.</li>
+    <li>정규식을 통해 이메일 형식인지 확인한다.<br /><img src="https://user-images.githubusercontent.com/31990118/233336731-a2be5db6-6395-469e-ad5c-b5d481f752fe.png" alt="image" /></li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<h3 id="비밀번호-일치-확인">비밀번호 일치 확인</h3>
+<hr />
+<blockquote>
+  <p><strong>자바스크립트를 통해 비밀번호가 서로 일치하는지 확인한다.</strong><br /><script src="https://gist.github.com/MinGyu2/ec8eb649562e27a5f05c92c7b92b50e3.js"></script></p>
+  <ul>
+    <li>비밀번호를 입혁하고 다음 입력창으로 넘어가면 <code class="language-plaintext highlighter-rouge">onchange='pwd_confirm()'</code> 옵션을 통해 자동으로 위의 함수가 실행된다.</li>
+    <li>두개의 비밀번호를 비교하여 일치하면 성공이고 다르면 “일치안함” 메세지를 사용자에게 보여준다.<br /><img src="https://user-images.githubusercontent.com/31990118/233336814-d63b3904-17ad-4b2e-9985-206b29f1a483.png" alt="image" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233337192-9757ab02-99b7-48ae-b153-1fca92fbdbe6.png" alt="image" /></li>
+  </ul>
+</blockquote>
+
+<p><br /><br /></p>
+<h2 id="회원가입-버튼-누른-후">회원가입 버튼 누른 후</h2>
+
+<p><br /></p>
+<h3 id="회원가입-클라이언트">회원가입 (클라이언트)</h3>
+<hr />
+<blockquote>
+  <p><strong>회원가입 버튼 누른 후 동작 이벤트</strong><br /><script src="https://gist.github.com/MinGyu2/31a2b857fcfac7617b3cbfb255089626.js"></script></p>
+  <ul>
+    <li>회원정보를 전부 입력한 후 <strong>회원가입</strong> 버튼을 누르면 <code class="language-plaintext highlighter-rouge">onclick="sign_up()"</code> 옵션에 의해 위의 함수가 동작한다.</li>
+    <li>서버로 입력한 정보를 보내기전 id 중복 확인을 했는지, email 형식이 맞는지, 비밀번호가 서로 일치하는지 확인한다.</li>
+    <li>모두 통과가 되면 post 형식으로 입력한 데이터를 서버로 전달한다.</li>
+    <li>자바스크립트에서 post 형식으로 전송하는 방법은 없다. 따라서 form과 input 요소를 만들어주고 body에 추가한 후 post 전송을 해 줘야한다.</li>
+  </ul>
+</blockquote>
+
+<p><br /></p>
+<h3 id="회원가입-서버">회원가입 (서버)</h3>
+<hr />
+<blockquote>
+  <p><strong>회원가입</strong><br /><script src="https://gist.github.com/MinGyu2/274abc0e913bf1d8f71e71363ec033dd.js"></script></p>
+  <ul>
+    <li>서버는 클라이언트에서 post 전송한 <code class="language-plaintext highlighter-rouge">아이디</code>, <code class="language-plaintext highlighter-rouge">이메일</code>, <code class="language-plaintext highlighter-rouge">비밀번호</code>, <code class="language-plaintext highlighter-rouge">비밀번호 확인</code>을 받는다.</li>
+    <li>SignUp 클래스의 <code class="language-plaintext highlighter-rouge">아이디</code>, <code class="language-plaintext highlighter-rouge">이메일</code>, <code class="language-plaintext highlighter-rouge">비밀번호</code>, <code class="language-plaintext highlighter-rouge">비밀번호 확인</code>를 인자로 받는 createUser 함수를  이용하여 유저를 만들어준다.</li>
+    <li>계정생성에 실패를 하면 <code class="language-plaintext highlighter-rouge">fail</code> 경고 창을 보여준다. 그 다음 회원가입 창으로 다시 돌아온다.<br /><img src="https://user-images.githubusercontent.com/31990118/233332309-06785554-751e-4e06-9d21-b7f836176f65.png" alt="Pasted image 20230420180533" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233332365-854571a6-47ef-41b4-80dd-6f1a33fde2fa.png" alt="Pasted image 20230420180559" /></li>
+    <li>계정생성에 성공하면 success 창을 보여준다. 그 다음 로그인 창으로 이동한다.<br /><img src="https://user-images.githubusercontent.com/31990118/233332463-b75b9e82-b55c-4e9e-8feb-1f6c17f021b4.png" alt="Pasted image 20230420182057" />
+<br /><img src="https://user-images.githubusercontent.com/31990118/233332511-ce87dd92-3a9c-4710-abca-cbe0bd1f6c28.png" alt="Pasted image 20230420182109" /></li>
+  </ul>
+</blockquote>
+
+<p><br /><br /></p>
+<h2 id="전체코드">전체코드</h2>
+
+<blockquote>
+  <p><strong>로그인 페이지 전체 코드</strong><br /><script src="https://gist.github.com/MinGyu2/3212b923469a3b72b67a13e6f6b4d51c.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>LoginAuthentication 클래스 코드</strong> <br /><script src="https://gist.github.com/MinGyu2/a23d33cdf3ea3337b87849d774a01149.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>UsersDAO 클래스 코드</strong><br /><script src="https://gist.github.com/MinGyu2/af111b0e426e4b9b4067bd1e4e88535f.js"></script></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>SignUp 클래스 코드</strong><br /><script src="https://gist.github.com/MinGyu2/7025dc86b1a157e32f024cfd84f52c34.js"></script></p>
+</blockquote>
+
+<p><br /><br /></p>
+<h3 id="참고-사이트">참고 사이트</h3>
+<hr />
+<ul>
+  <li><a href="https://www.baeldung.com/java-email-validation-regex">Email Validation in Java</a></li>
+  <li><a href="https://yceffort.kr/2020/01/think-about-fetch">자바스크립트에서 http 요청하기 - fetch에 대한 고찰 – yceffort</a></li>
+  <li><a href="https://kang-james.tistory.com/entry/JSP-%EC%95%84%EC%9D%B4%EB%94%94-%EC%A4%91%EB%B3%B5-%EC%B2%B4%ED%81%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84-%EB%8F%99%EA%B8%B0-%EB%B0%A9%EC%8B%9D">JSP 아이디 중복 체크 기능 구현 동기 방식 (tistory.com)</a></li>
+  <li><a href="https://www.freecodecamp.org/korean/news/javascripteseo-gajang-jal-alryeojin-http-yoceong-bangbeob-2/">JavaScript에서 가장 잘 알려진 HTTP 요청 방법 (freecodecamp.org)</a></li>
+  <li><a href="https://cocoon1787.tistory.com/700">회원가입 창 만들기 (HTML, CSS, JS / 입력형식체크, 문자인증 기능추가)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Web" /><category term="Oracle DB" /><category term="Java" /><summary type="html"><![CDATA[회원가입 구현하기.]]></summary></entry><entry><title type="html">SQL Injection 로그인 우회</title><link href="http://localhost:4000/SQLInjection/" rel="alternate" type="text/html" title="SQL Injection 로그인 우회" /><published>2023-04-19T00:00:00+09:00</published><updated>2023-04-19T23:13:00+09:00</updated><id>http://localhost:4000/SQLInjection</id><content type="html" xml:base="http://localhost:4000/SQLInjection/"><![CDATA[<h2 id="sql-injection-이란">SQL Injection 이란?</h2>
 <ul>
   <li>sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다.</li>
   <li>웹 해킹 기술중 하나이다.</li>
@@ -1577,51 +1765,4 @@ RSAPSSSHA512(…)
   <li><a href="https://www.tutorialspoint.com/servlets/servlets-packaging.htm">Servlets - Packaging (tutorialspoint.com)</a></li>
   <li><a href="https://dololak.tistory.com/502">서블릿/JSP RequestDispatcher란. RequestDispatcher로 forward() 하기</a></li>
   <li><a href="https://initialcommit.com/blog/how-to-send-data-from-servlet-to-jsp">How to send data from Java Servlet to JSP </a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[간단한 로그인 서버를 만들기 (3)]]></summary></entry><entry><title type="html">웹서버 만들기(2)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/" rel="alternate" type="text/html" title="웹서버 만들기(2)" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a></p>
-<h3 id="tomcat-기본-폴더-변경">Tomcat 기본 폴더 변경</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">apache-tomcat-10.1.7/conf/server.xml</code> 에서 Host의 appBase 부분에 원하는 기본폴더 경로를 넣어주면된다.<br /><img src="https://user-images.githubusercontent.com/31990118/229538683-e88bd49c-0863-4b52-93e3-e1b8e668c13c.png" alt="Pasted image 20230403161627" /></li>
-  <li>톰켓을 재시작해준다.<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/shutdown.sh</code> 톰캣 중지<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/startup.sh</code> 톰캣 시작</li>
-  <li><code class="language-plaintext highlighter-rouge">apache-tomcat-10.1.7</code> 와 같은 위치에 <strong>myWeb</strong>  폴더를 만들어준다.<br /><img src="https://user-images.githubusercontent.com/31990118/229538804-c61cf487-ff22-4ba3-afb8-7358bd3a6fc4.png" alt="Pasted image 20230403162230" /></li>
-  <li><code class="language-plaintext highlighter-rouge">myWeb</code> 폴더안에 <strong>ROOT</strong> 폴더를 만들어준다.<br /><img src="https://user-images.githubusercontent.com/31990118/229538910-1c718aca-5a81-4b2e-965e-4f0536657b41.png" alt="Pasted image 20230403162644" /></li>
-  <li><code class="language-plaintext highlighter-rouge">ROOT</code> 폴더에 index.jsp 파일 만들어준다. 다음 내용을 입력해준다.
-    <div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span> <span class="nc">String</span> <span class="n">test</span><span class="o">=</span><span class="s">"hello"</span><span class="o">;</span><span class="nt">%&gt;</span>
-<span class="nt">&lt;%=</span><span class="n">test</span><span class="nt">%&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>http://localhost 로 들어가면 hello 라는 문구를 출력하는 페이지를 볼 수 있다. <br /><img src="https://user-images.githubusercontent.com/31990118/229539147-895b04b6-10f6-4d36-912d-0ee78aa76b9f.png" alt="Pasted image 20230403163523" /></li>
-</ol>
-
-<h3 id="servlet">Servlet</h3>
-<ul>
-  <li>자바 소스코드를 컴파일하여 서버에서 사용하는 것이라 생각하면 된다.</li>
-  <li>톰켓이 설치되어 있어야한다. 그리고 nginx 와 톰캣이 연동되어 있어야한다.</li>
-</ul>
-
-<ol>
-  <li><strong>App.java</strong> 파일을 만들고 다음 코드를 입력해주자.
-<script src="https://gist.github.com/MinGyu2/25985c0a56f4b1d065ea3728c8e2ca7b.js"></script></li>
-  <li>컴파일 해보자<br /><code class="language-plaintext highlighter-rouge">javac -cp apache-tomcat-10.1.7/lib/servlet-api.jar App.java -d 출력파일위치</code><br /><strong>App.class</strong> 파일이 만들어진것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/229539398-2ae422bf-460d-4391-90f9-ea0467a3676a.png" alt="Pasted image 20230403221606" /></li>
-  <li>기본폴더(여기서는 myWeb 이다) <code class="language-plaintext highlighter-rouge">ROOT 폴더</code>안에 <strong>WEB-INF</strong> 폴더를 만들어주자.<br /><img src="https://user-images.githubusercontent.com/31990118/229541020-b2f57225-18a5-4b72-8380-04e778e88839.png" alt="Pasted image 20230403222333" /></li>
-  <li><code class="language-plaintext highlighter-rouge">WEB-INF</code> 폴더안에 <strong>classes</strong> 폴더를 만들어주자. 이 폴더안에 앞에서 만들었던 App.class 파일을 넣을것이다.<br /><img src="https://user-images.githubusercontent.com/31990118/229541088-44173183-012a-4813-b25b-6edd46cca653.png" alt="Pasted image 20230403222739" /></li>
-  <li><code class="language-plaintext highlighter-rouge">WEB-INF</code> 폴더안에 web.xml 파일을 만들어주자. 그다음 다음 내용을 추가하자. <code class="language-plaintext highlighter-rouge">web.xml</code>을 통해 Servlet을 매핑하였다.<br /><script src="https://gist.github.com/MinGyu2/d0fb4b8d208eba837b98492a0f88086d.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">http://localhost/hello</code> 로 접속하면 다음 화면이 출력되는것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/229541547-b6ab7b4c-6a49-40e8-a0a9-71a96e8a507f.png" alt="Pasted image 20230403223750" /></li>
-  <li>톰캣을 재시작할 필요가 있을 수 있다.<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/shutdown.sh</code> 톰캣 중지<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/startup.sh</code> 톰캣 시작</li>
-</ol>
-
-<h3 id="jsp">JSP</h3>
-<ul>
-  <li>먼저 처음에 만들어 주었던 <code class="language-plaintext highlighter-rouge">index.jsp</code> 파일을 삭제해준다.</li>
-  <li><code class="language-plaintext highlighter-rouge">WEB-INF</code> 폴더안에 web.xml 파일에서 <code class="language-plaintext highlighter-rouge">&lt;url-pattern&gt;/&lt;/url-pattern&gt;</code> 로 변경한다. 그러면 이제 <code class="language-plaintext highlighter-rouge">http://localhost</code> 로 접속하여도 다음 화면이 출려되는것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/229541717-36410547-aa40-4c98-8a70-f940e314268f.png" alt="Pasted image 20230403223750" />
-<script src="https://gist.github.com/MinGyu2/3a6e85f36084a036ec177160a99558f3.js"></script></li>
-  <li>servlet 에서는 데이터 계산에 관련된 것만 하고 클라이언트에게 보여주는 화면은 jsp를 통해 보여줄 것이다.</li>
-</ul>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<ul>
-  <li><a href="https://blog.miyam.net/116">Tomcat에서 ROOT로 Context 변경하기 (miyam.net)</a></li>
-  <li><a href="https://ddoongi.tistory.com/25">IDE 없이 간단한 Servlet 만들어보기 (tistory.com)</a></li>
-  <li><a href="https://develop-writing.tistory.com/20">Hello Servlet! 만들어보기 (IDE 없이) (tistory.com)</a></li>
-  <li><a href="https://velog.io/@jsj3282/MVC-%ED%8C%A8%ED%84%B4-%EA%B5%AC%ED%98%842-%EB%AA%A8%EB%8D%B8-2-%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-MVC-%ED%8C%A8%ED%84%B4">MVC 패턴 구현(2) : 모델 2 구조를 이용한 MVC 패턴(1) (velog.io)</a></li>
-  <li><a href="https://whitewing4139.tistory.com/261">2. JSP, Servlet 기본 파일 위치</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><category term="servlet" /><summary type="html"><![CDATA[간단한 로그인 서버를 만들기 (2)]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[간단한 로그인 서버를 만들기 (3)]]></summary></entry></feed>
