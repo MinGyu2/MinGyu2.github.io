@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-24T03:21:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-26T19:16:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -23,7 +23,188 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL Injection 과정정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="SQL Injection 과정정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h3 id="환경">환경</h3>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹서버 만들기(9) 주소검색기능</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89/" rel="alternate" type="text/html" title="웹서버 만들기(9) 주소검색기능" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89/"><![CDATA[<h2 id="주소-검색-기능">주소 검색 기능</h2>
+<ul>
+  <li>서버
+    <ul>
+      <li>오라클 DB 서버 : oracle-database-xe-21c</li>
+    </ul>
+  </li>
+  <li>구조
+    <ul>
+      <li>우편번호</li>
+      <li>주소( 시도 도로명 건물번호본번 건물번호부번 )</li>
+      <li>주소2(층수 부가 정보)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="주소찾기-동작과정">주소찾기 동작과정</h3>
+<hr />
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog7KO87IaM7LC-6riwIOyalOyyrVxu7ISc67KEIC0-PiBEQiDshJzrsoQgOiDso7zshozrpbwg7J207Jqp7ZWY7JesIOyasO2OuOuyiO2YuCwg7KO87IaMIOyalOyyrVxuREIg7ISc67KELT4-IOyEnOuyhCA6IOyasO2OuOuyiO2YuCwg7KO87IaMIOydkeuLtVxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOyasO2OuOuyiO2YuCwg7KO87IaMIOydkeuLtSIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<h3 id="우편번호-db--다운받기">우편번호 DB  다운받기</h3>
+<hr />
+<ul>
+  <li><a href="https://www.epost.go.kr/search/zipcode/cmzcd002k01.jsp">우편번호 DB와 검색기</a>에서 다운받는다.</li>
+  <li>압축 파일안에는 text 파일들이 들어있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">|</code> 의 구분자로 데이터들이 분리되어 있다.</li>
+  <li>UTF-8 (BOM) 형태로 포맷 되어있다. 포맷을 UTF-8 로 변경하자.</li>
+  <li>우리는 여기서 대구광역시, 경기도 파일을 oracle db 에 Import 할 것이다.</li>
+</ul>
+
+<h3 id="sql-developer-231-다운로드">SQL Developer 23.1 다운로드</h3>
+<hr />
+<ul>
+  <li>Oracle db 서버와 연결하여 보다 쉽게 sql 문들을 사용하기 위한것 이다.</li>
+  <li><a href="https://www.oracle.com/database/sqldeveloper/technologies/download/">Oracle SQL Developer Downloads</a></li>
+</ul>
+
+<h5 id="오라클-서버와-연결하기">오라클 서버와 연결하기</h5>
+<ol>
+  <li><strong>Oracle SQL Development</strong> 를 연다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Oracle 접속</code> 우클릭 &gt; 새 접속<br /><img src="https://user-images.githubusercontent.com/31990118/234529534-04d39ca0-e749-4e62-9d23-5de70888c85c.png" alt="Pasted image 20230421225802" /></li>
+  <li>사용자 이름, 비밀번호, db 서버 호스트 이름을 입력후 테스트를 클릭하여 접속 테스를 한다.</li>
+  <li>테스트가 성공하였다면 접속 버튼을 눌러 접속해준다.<br /><img src="https://user-images.githubusercontent.com/31990118/234529679-37b86579-4e45-4e05-9d0d-ba5eb75afdb9.png" alt="Pasted image 20230421225917" /></li>
+</ol>
+
+<h5 id="오라클-db에-주소-text-데이터-import-하기">오라클 db에 주소 text 데이터 Import 하기</h5>
+<ol>
+  <li>테이블 우클릭한다.<br /><img src="https://user-images.githubusercontent.com/31990118/234529812-a7e707be-ebe9-4e12-95b0-184bb31c3f8a.png" alt="Pasted image 20230421230129" /></li>
+  <li>데이터 임포트를 클릭한다.<br /><img src="https://user-images.githubusercontent.com/31990118/234529931-49af9420-b874-4bcb-bc56-cb7e4f59c0ac.png" alt="Pasted image 20230421230214" /></li>
+  <li>위에서 다운받은 우편번호 db 파일중 하나의 파일을 선택한다. 이때 파일을 <code class="language-plaintext highlighter-rouge">UTF-8</code> 로 포맷되어 있어야 한다.</li>
+  <li>다음을 눌러주어 데이터를 임포트해준다. 이 과정에서 처음으로 주소 데이터를 임포트를 한다면 주소 테이블 이름을 정해줘야 한다. 여기서는 테이블 이름을 ‘ko_address’ 라 정해주었다.</li>
+  <li>다음 sql 명령을 통해 확인해 보면 내용이 잘 출력되는 것을 알 수 있다.
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span>
+<span class="k">from</span> <span class="n">ko_address</span>
+<span class="k">where</span> <span class="err">시도</span> <span class="k">like</span> <span class="s1">'%도%'</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p><img src="https://user-images.githubusercontent.com/31990118/234530306-b01fb64c-727f-4b37-8d0e-367b37593610.png" alt="Pasted image 20230421230552" /></p>
+  </li>
+  <li>다른 데이터를 import 할 때는 <code class="language-plaintext highlighter-rouge">ko_address</code>테이블로 데이터를 넣어 주면 된다.</li>
+</ol>
+
+<h3 id="ui-부분">UI 부분</h3>
+<hr />
+<ul>
+  <li>회원가입 페이지에 주소찾기 버튼을 추가하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531123-6b2ecb7b-9090-4d73-90bb-8f202aff4817.png" alt="Pasted image 20230426152657" /></li>
+  <li>주소찾기 버튼을 누르면 주소 찾기 창이 열린다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531218-a874417b-80be-4f3c-8149-aea64c48eede.png" alt="Pasted image 20230426152712" /></li>
+  <li>주소를 입력하고 검색버튼을 클릭하면 서버로 입력한 주소를 요청으로 보내고 응답결과인 우편번호와 주소들을 화면에 보여준다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531305-fe304efe-30db-4feb-936f-92df58f369d0.png" alt="Pasted image 20230426163522" /></li>
+  <li>주소를 클릭하여 주면 우편번호와 주소가 회원가입 페이지의 주소 부분에 들어가게 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531391-8fab6c8f-9922-446a-a0c8-3957e0631dc5.png" alt="Pasted image 20230426154811" /></li>
+</ul>
+
+<h5 id="코드">코드</h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sign_up_page.jsp</code> 에 주소검색을 위한 코드를 추가하였다.<br /><script src="https://gist.github.com/MinGyu2/94743489626663324bf55bc9a944782b.js"></script></li>
+  <li><code class="language-plaintext highlighter-rouge">/sign_in_page/sign_up_page/find_address_number?address=주소</code> 형태로 서버로 get요청을 보낸다.</li>
+  <li>
+    <p>서버로부터 응답을 받으면 <code class="language-plaintext highlighter-rouge">\n</code> 로 분리하여 table에 넣어 사용자에게 보여준다.<br /><script src="https://gist.github.com/MinGyu2/6f1c5edd8a3efc93ae0d349e245c605c.js"></script></p>
+  </li>
+  <li>주소검색창 UI 부분.<br /><script src="https://gist.github.com/MinGyu2/e95aa28a4aded72d65d68c959478611f.js"></script></li>
+</ul>
+
+<p><br /><br /></p>
+<h3 id="서버부분---db-서버-">서버부분 ( + DB 서버 )</h3>
+<hr />
+<ul>
+  <li>서버에서 유저가 입력한 주소를 받아 주소에 해당하는 우편번호와 주소를 DB에서 찾아 응답으로 보낸다.</li>
+</ul>
+
+<h4 id="코드-1">코드</h4>
+
+<h5 id="dbconnection-class-추가">DBConnection Class 추가</h5>
+<ul>
+  <li>DB 서버와 연결하기전 사전 준비를 하기위한 클래스이다.</li>
+  <li>DBConnection의 <strong>connectDB</strong> 함수를 통해 DB 서버와 연결한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/6e74fe516a6df3691df95462f14a2caa.js"></script>
+
+<h5 id="addressdao-class-추가">AddressDAO Class 추가</h5>
+<ul>
+  <li>DB의 <code class="language-plaintext highlighter-rouge">KO_ADDRESS</code> 테이블에 접근하여 우편번호와 주소를 읽어오기위한 클래스이다.</li>
+  <li><strong>getAddressNumber</strong> 함수는 사용자가 입력한 주소를 이용하여 우편번호와 주소를 찾는다. 그리고 우편주소와 주소를 하나의 String으로 만들어 리턴한다.</li>
+  <li><strong>getAddressNumber</strong> 함수에서는 테이블에서 최대 50개 까지의 우편번호와 주소를 찾아 리턴할 수 있다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/0e0ff6366b722575bdfae1214607bd40.js"></script>
+
+<h5 id="login-클래스에-우편번호-uri-부분-추가하기">Login 클래스에 우편번호 uri 부분 추가하기.</h5>
+<ul>
+  <li>사용자가 주소를 입력하고 서버로부터 우편주소와 주소를 받기위해 get 요청을 한다.</li>
+  <li>서버는 <code class="language-plaintext highlighter-rouge">/sign_in_page/sign_up_page/find_address_number</code> uri로 get 요청을 받는다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/18f3a30443c3ef0f67a9d426f05919ba.js"></script>
+
+<h3 id="회원-가입-할-때-우편번호-및-주소를-추가로-db에-저장하기">회원 가입 할 때 우편번호 및 주소를 추가로 db에 저장하기</h3>
+<hr />
+<h4 id="사전-준비">사전 준비</h4>
+<ul>
+  <li>먼저 우편번호와 주소를 저장하기 위한 컬럼을 만들어줘야 한다.
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">alter</span> <span class="k">table</span> <span class="n">users</span> <span class="k">add</span> <span class="err">우편번호</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="k">default</span> <span class="s1">'12428'</span> <span class="k">not</span> <span class="k">null</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">table</span> <span class="n">users</span> <span class="k">add</span> <span class="err">주소</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">default</span> <span class="s1">'경기도 가평군 북한강변로 326-138'</span> <span class="k">not</span> <span class="k">null</span><span class="p">;</span>
+<span class="k">alter</span> <span class="k">table</span> <span class="n">users</span> <span class="k">add</span> <span class="err">주소</span><span class="mi">2</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">default</span> <span class="s1">' '</span> <span class="k">not</span> <span class="k">null</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>현재 <code class="language-plaintext highlighter-rouge">USERS</code> 테이블의 컬럼.<br /><img src="https://user-images.githubusercontent.com/31990118/234541935-94eeae91-cce3-4fa2-a686-0220c42f3fe8.png" alt="Pasted image 20230426165757" /></li>
+  <li>회원가입할 때 우편번호와 주소를 필요로 한다.</li>
+</ul>
+
+<h4 id="클라이언트-수정-부분">클라이언트 수정 부분</h4>
+
+<h5 id="sign_up_pagejsp-부분-수정">sign_up_page.jsp 부분 수정</h5>
+<ul>
+  <li>회원가입을 하기위하여 우편번호, 주소를 추가하여 서버로 post 요청을 보낸다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/1c924566aa82beaaa656739e56e2e993.js"></script>
+
+<h4 id="서버-수정-부분">서버 수정 부분</h4>
+
+<h5 id="login-class-의-회원가입-부분-수정">Login class 의 회원가입 부분 수정</h5>
+<ul>
+  <li>사용자로부터 address_number, address1, address2를 추가적으로 post 요청 받는다.</li>
+  <li><strong>SignUp.createUser</strong> 함수의 인자로 주어 회원가입을 진행한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/3d75cdc317274ea780a2fccb9d74f1a8.js"></script>
+
+<h5 id="singup-부분-수정">SingUp 부분 수정</h5>
+<ul>
+  <li>우편번호와 주소 부분을 추가로 받는다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/f87fa4e9bebf0e81cb2188234ea98c1d.js"></script>
+
+<h5 id="userdao-createuser-함수-부분-수정">UserDAO createUser 함수 부분 수정</h5>
+<ul>
+  <li>유저 정보 테이블에 주소를 저장하는 부분을 추가한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/245cb5a0fbc2d20c5a01dedbea471b9e.js"></script>
+
+<h4 id="동작화면">동작화면</h4>
+<ol>
+  <li>회원가입 페이지에서 정보를 입력한다.<br /><img src="https://user-images.githubusercontent.com/31990118/234544104-b12395fb-0da9-472b-a1db-2538c8163165.png" alt="Pasted image 20230426172840" /></li>
+  <li>주소찾기 버튼을 누르명 주소찾기창이 나온다. 이 창에서 주소를 입력하고 검색 버튼을 눌러준다. <br /><img src="https://user-images.githubusercontent.com/31990118/234544163-bff55a86-4bf3-4599-9136-e46583e8d853.png" alt="Pasted image 20230426173129" /></li>
+  <li>맞는 주소를 클릭하면 회원가입의 주소창에 우편번호와 주소가 들어간다.<br /><img src="https://user-images.githubusercontent.com/31990118/234544217-fb54c52f-cf29-4195-9042-be7be09f0edc.png" alt="Pasted image 20230426173238" /></li>
+  <li>회원가입 버튼을 클릭하여 준다.<br /><img src="https://user-images.githubusercontent.com/31990118/234544275-5a680719-969e-4a1e-87cb-d2806d207b41.png" alt="Pasted image 20230426173314" /></li>
+  <li>새로 생성한 계정으로 로그인해보기.<br /><img src="https://user-images.githubusercontent.com/31990118/234544328-b337f9e6-38eb-4d36-8a72-cd7c1f799214.png" alt="Pasted image 20230426173707" /><br /><img src="https://user-images.githubusercontent.com/31990118/234544361-f2ce717c-fb36-4aca-9a80-03c5afe76445.png" alt="Pasted image 20230426173726" /></li>
+  <li><code class="language-plaintext highlighter-rouge">USERS</code> 테이블에 user4 유저 생성됬는지 확인하기.<br /><img src="https://user-images.githubusercontent.com/31990118/234544415-0900aba6-29eb-4dbe-b841-bfb7fe7262ba.png" alt="Pasted image 20230426173901" /></li>
+</ol>
+
+<h3 id="참고-사이트">참고 사이트</h3>
+<hr />
+<ul>
+  <li><a href="https://accessgudid.nlm.nih.gov/resources/developers/importing_delimited_device_files/oracle">Importing Delimited Device Files into an Oracle Database using Oracle SQL Developer</a></li>
+  <li><a href="https://deveric.tistory.com/68">주소 데이터의 빠른 조회를 위해 인덱스 설정하기 (tistory.com)</a></li>
+  <li><a href="https://www.codingfactory.net/10424">JavaScript / Object / String.split() / 문자열 분할하는 메서드 – CODING FACTORY</a></li>
+  <li><a href="https://hogni.tistory.com/122">자바스크립트 childNodes 속성과 children 속성의 차이 (tistory.com)</a></li>
+  <li><a href="https://ggmouse.tistory.com/417">JavaScript this 인자 전달 onclick/href (tistory.com)</a></li>
+  <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal">W3Schools Tryit Editor</a></li>
+  <li><a href="https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm">우편번호검색 - 통합검색 우편번호 (epost.go.kr)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">SQL Injection 과정정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="SQL Injection 과정정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h3 id="환경">환경</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- MYSQL 서버
 </code></pre></div></div>
 
@@ -1771,80 +1952,4 @@ RSAPSSSHA512(…)
   <li><a href="https://hudi.blog/session-based-auth-vs-token-based-auth/">세션 기반 인증과 토큰 기반 인증</a></li>
   <li><a href="https://tansfil.tistory.com/59">쉽게 알아보는 서버 인증 2편(Access Token + Refresh Token)</a></li>
   <li><a href="https://velog.io/@gusdnr814/%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%9D%B8%EC%A6%9D-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95#%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B8%EC%A6%9D">로그인 인증 4가지 방법 (velog.io)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="cookie" /><category term="session" /><category term="token" /><summary type="html"><![CDATA[로그인 인증 방식은 여러가지가 있다.]]></summary></entry><entry><title type="html">웹서버 만들기(4)</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/" rel="alternate" type="text/html" title="웹서버 만들기(4)" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-07T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C4/"><![CDATA[<p><a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C1/">웹서버 만들기(1)</a><br />
-<a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C2/">웹서버 만들기(2)</a><br />
-<a href="https://mingyu2.github.io/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C3/">웹서버 만들기(3)</a></p>
-
-<h3 id="오라클-db-서버-만들기">오라클 db 서버 만들기</h3>
-<ul>
-  <li>우분투에 설치할려 했지만 잘안되서 레트햇 호환 리눅스인 rocky os에 오라클 db를 설치하려고 한다.</li>
-</ul>
-
-<h3 id="rocky-os를-가상머신에-설치하기">Rocky OS를 가상머신에 설치하기.</h3>
-<ul>
-  <li>흠 … <code class="language-plaintext highlighter-rouge">Rocky 9.1</code> 을 설치하니 오라클 DB 설치가 안된다.  그래서 <strong>Rocky 8.7</strong>을 다시 설치하였다. 설치 방법은 <code class="language-plaintext highlighter-rouge">Rocky 9.1</code> 방법이랑 같다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143080-62432050-0c3a-44b4-aab8-5f6e94557910.png" alt="Pasted image 20230405150704" /></li>
-</ul>
-
-<ol>
-  <li>Hyper-V 에서 새 가상 컴퓨터 만들기를 진행한다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143421-43da0921-f3a3-43fa-9781-8c26cbb5b58c.png" alt="Pasted image 20230405011838" /></li>
-  <li>세대는 2세대로 지정하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143523-63e397a0-dbff-407f-a620-95835287a0bd.png" alt="Pasted image 20230405011904" /></li>
-  <li>메모리할당, 네트워킹 구성, 가상 하드 디스크위치를 지정하고 부팅 os를 rocky8.7.iso 로 설정하고 마침을 눌러준다.</li>
-  <li>rocky os 의 가상머신이 생성된 것을 확인할 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143587-a9d7a935-6dc1-477a-a755-6585304af7b5.png" alt="Pasted image 20230405011655" /></li>
-  <li>rocky 가상머신을 우클릭하여 설정창에 들어가 준다. 그다음 보안 창에 들어가준다. 보안  <code class="language-plaintext highlighter-rouge">Microsoft UEFI 인증 기관</code>으로 변경하고 적용해 주자.<br /><img src="https://user-images.githubusercontent.com/31990118/230143703-cad23733-cb63-43ac-8bb0-5cd334292014.png" alt="Pasted image 20230405012353" /></li>
-  <li>rocky 가상머신에 연결하고 실행하고 설치를 진행하자.<br /><img src="https://user-images.githubusercontent.com/31990118/230143808-0ce9759d-05be-46c6-85b6-81ac6a81e0c6.png" alt="Pasted image 20230405150952" /></li>
-  <li>만약 <code class="language-plaintext highlighter-rouge">Failde to allocate usable memory for kernel</code> 이 발생했다면 메모리 크기를 2기가 이상으로 늘려보자. 그러면 해당 오류는 사라진다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143866-02f1f570-83eb-4e60-80d6-3e35614f87dd.png" alt="Pasted image 20230405013407" /></li>
-  <li>설치를 진행해주면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/230143933-58c1ca7a-59eb-4bd1-b752-ee1a7e23c12a.png" alt="Pasted image 20230405151105" /><br /><img src="https://user-images.githubusercontent.com/31990118/230143988-8fe602ca-9a5b-473d-a978-061b8a6795e4.png" alt="Pasted image 20230405151154" /></li>
-  <li>설치완료<br /><img src="https://user-images.githubusercontent.com/31990118/230144158-51586520-486e-4934-95ff-153443aca8c4.png" alt="Pasted image 20230405150704" /></li>
-</ol>
-
-<h3 id="오라클-db-빠른-설치하기">오라클 DB 빠른 설치하기</h3>
-<ol>
-  <li>먼저 <code class="language-plaintext highlighter-rouge">oracle-database-preinstall-21c-1.0-1.el8.x86_64.rpm</code> 설치를 진행한다.<br /><script src="https://gist.github.com/MinGyu2/deb4fdd6303928ae41d118e1a525076f.js"></script><img src="https://user-images.githubusercontent.com/31990118/230144242-d9f9384b-8220-42d3-8d4c-274fec310977.png" alt="Pasted image 20230405152255" /><br /><br /><img src="https://user-images.githubusercontent.com/31990118/230144284-b5e25167-b665-4cdb-b731-deed73cf01d4.png" alt="Pasted image 20230405152725" /></li>
-  <li>그리고 나서 먼저 <code class="language-plaintext highlighter-rouge">wget https://download.oracle.com/otn-pub/otn_software/db-express/oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm</code>  를 통해 <code class="language-plaintext highlighter-rouge">oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm</code> 를 다운받고 다음 명령을 통해 설치를 진행한다.<br /><script src="https://gist.github.com/MinGyu2/f3dd9b8f726fecf0f64ac9d7b89bf2d0.js"></script><img src="https://user-images.githubusercontent.com/31990118/230144803-6525dd61-5294-4014-8629-a48f4a645ada.png" alt="Pasted image 20230405232753" /></li>
-  <li><code class="language-plaintext highlighter-rouge">/etc/init.d/oracle-xe-21c configure</code> 통해 db 서버를 동작한다. 처음 동작을 시킨다면 다음과 같이 비번을 새로 지정해 줘야 한다. <br /><img src="https://user-images.githubusercontent.com/31990118/230145159-306c415e-0f8c-412d-a3d5-a716a6345928.png" alt="Pasted image 20230405232822" /><br /><br /><img src="https://user-images.githubusercontent.com/31990118/230145206-193ab464-4ce4-4697-88f4-baf45fa1062a.png" alt="Pasted image 20230405233046" /><br />위의 주소로 접속하면 접속이 잘 안될수 있다. <br /><img src="https://user-images.githubusercontent.com/31990118/230145293-5710b599-2ba4-42a7-9522-24480d0cf2a0.png" alt="Pasted image 20230405233158" /></li>
-  <li>위의 문제를 해결하기 위해서 먼저 <strong>oracl user</strong> 로 전환한다.<br /><code class="language-plaintext highlighter-rouge">su - oracle</code></li>
-  <li><strong>~/.bash_profile</strong> 을 편집해야한다. 다음 내용을 추가해주자.<br /><script src="https://gist.github.com/MinGyu2/3df339b075e7106f8c3be6508da83421.js"></script></li>
-  <li>현재 세션에 변화를 적용하기 위해 업데이트된 <strong>.bash_profile</strong> 을 실행하자.<br /><code class="language-plaintext highlighter-rouge">source ~/.bash_profile</code></li>
-  <li>이제부터 <code class="language-plaintext highlighter-rouge">리눅스의 CLI</code> 에서 <strong>Oracle RDBMS</strong> 를 실행할 수 있다.</li>
-  <li><strong>lsnrctl</strong> 명령을 통해 오라클의 상태를 확인할 수 있다.<br /><code class="language-plaintext highlighter-rouge">lsnrctl status</code><br /><img src="https://user-images.githubusercontent.com/31990118/230145612-6a6ea856-f44f-47fe-8c49-e903a41b5309.png" alt="Pasted image 20230405234130" /></li>
-  <li><code class="language-plaintext highlighter-rouge">sqlplus /as sysdba</code> 를 통해 <strong>SQL 커맨드 창</strong>으로 들어갈 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230145691-87775cdd-f998-4023-8749-5ba0c05f8121.png" alt="Pasted image 20230405234744" /></li>
-  <li><code class="language-plaintext highlighter-rouge">ss -tulpn | grep 5500</code>  명령을 통해 알아봤을 때 현재 로컬에서만 <strong>EM Express</strong> 서비스에 접속할 수있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230145753-d0009039-0f85-4f00-b8cb-0003ec12659d.png" alt="Pasted image 20230405234956" /></li>
-  <li><strong>SQL 커맨드 창</strong> 에서 <br /><code class="language-plaintext highlighter-rouge">EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);</code><br /> 입력하면 외부에서도 접속 가능하게 된다.<br /><script src="https://gist.github.com/MinGyu2/a33780e933966e16eeb7275dbf115209.js"></script><img src="https://user-images.githubusercontent.com/31990118/230145891-bcd02f3d-6797-4ac9-b8ea-ab935192094f.png" alt="Pasted image 20230405235211" /></li>
-  <li><code class="language-plaintext highlighter-rouge">https://아이피주소:5500/em</code>을 통해 접속하면 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/230146140-abaea83b-5c5a-4ae2-9adb-de7ad206a40f.png" alt="Pasted image 20230405235302" /></li>
-  <li>사용자이름 <code class="language-plaintext highlighter-rouge">sys</code> , 비번(우리가 지정한 비번), 컨테이너 이름 <code class="language-plaintext highlighter-rouge">cdb$root</code> 를 입력하고 로그인해주면 다음 화면이 나온다.<br /><img src="https://user-images.githubusercontent.com/31990118/230146191-30b05ff1-533b-4095-ba22-9a8cfa1e1534.png" alt="Pasted image 20230406001343" /></li>
-  <li>Oracle DB 설치가 아주 잘되었다!!</li>
-</ol>
-
-<h4 id="nginx--servlet--jsp--oracle-db-구현이-완료되었다">nginx + servlet + jsp , oracle DB 구현이 완료되었다!</h4>
-
-<h3 id="oracle-db-의-sqlplus에서-한글-깨질때">Oracle DB 의 sqlplus에서 한글 깨질때.</h3>
-<ol>
-  <li><strong>export NLS_LANG=KOREAN_KOREA.AL32UTF8</strong> 를 <code class="language-plaintext highlighter-rouge">.bash_profile</code> 에 추가해주면 된다.</li>
-  <li>그런다음 <br /><code class="language-plaintext highlighter-rouge">source ~/.bash_profile</code><br />명령으로 <code class="language-plaintext highlighter-rouge">bash_profile</code> 을 시작해주면 된다.</li>
-</ol>
-
-<h3 id="oracle">Oracle</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">lsnrctl stop</code>,  <code class="language-plaintext highlighter-rouge">lsnrctl start</code><br /><img src="https://user-images.githubusercontent.com/31990118/230284160-75c7ed50-89c9-4a7b-a1aa-84fdfbeff56e.png" alt="Pasted image 20230406035320" />
-<br /><code class="language-plaintext highlighter-rouge">nmap localhost</code></li>
-  <li><code class="language-plaintext highlighter-rouge">sqlplus / as sysdba</code> 로 SQL 에 접속한다. <br /><code class="language-plaintext highlighter-rouge">startup</code> : 시작<br /><code class="language-plaintext highlighter-rouge">shutdown</code> : 중지<br /><img src="https://user-images.githubusercontent.com/31990118/230284196-83b122e4-3f46-41ad-8f31-655d2c3797c5.png" alt="Pasted image 20230406035505" />
-<br /><code class="language-plaintext highlighter-rouge">nmap localhost</code></li>
-</ol>
-
-<ul>
-  <li>무조건 위 순서대로 해야한다. 2 번 만하면 포트가 아무것도 안려있는것을 확인할 수 있다.</li>
-</ul>
-
-<h3 id="rocky-서버-네트워크-설정">Rocky 서버 네트워크 설정</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">nmtui</code> 를 사용한다. 고정 아이피 설정이 가능하다.</li>
-</ul>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<ul>
-  <li><a href="https://www.centlinux.com/2022/06/install-oracle-database-21c-xe-on-rocky-linux.html">Install Oracle Database 21c XE on Rocky Linux 8</a></li>
-  <li><a href="https://www.oracle.com/kr/database/technologies/appdev/xe/quickstart.html">Oracle Database Express Edition</a></li>
-  <li><a href="https://docs.rockylinux.org/guides/network/basic_network_configuration/">Network Configuration - Documentation (rockylinux.org)</a></li>
-  <li><a href="https://taisou.tistory.com/622">sqlplus 에서 한글이 깨질때 (tistory.com)</a></li>
-  <li><a href="https://mkil.tistory.com/336">ORACLE DB 시작 및 중지 / 리스너 시작 및 중지 하는방법 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="DB" /><summary type="html"><![CDATA[DB 설치 및 실행]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="cookie" /><category term="session" /><category term="token" /><summary type="html"><![CDATA[로그인 인증 방식은 여러가지가 있다.]]></summary></entry></feed>
