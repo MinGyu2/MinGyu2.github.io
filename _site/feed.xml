@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-27T17:04:32+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-27T18:13:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -70,7 +70,7 @@
   <li><a href="https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering">sql - How do I limit the number of rows returned by an Oracle query after ordering? - Stack Overflow</a></li>
   <li><a href="https://jwklife.tistory.com/45">오라클 테이블 &amp; 컬럼 조회 하는 방법 :: 인 생 (tistory.com)</a></li>
   <li><a href="https://mymuseum.tistory.com/9">Oracle DB (데이터 베이스) 정보 찾기 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[error based sql injection 을 연습하기 위하여 직접 db 에러를 보여주는 로그인 페이지를 만들었다.]]></summary></entry><entry><title type="html">웹서버 만들기(9) 주소검색기능</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89/" rel="alternate" type="text/html" title="웹서버 만들기(9) 주소검색기능" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89/"><![CDATA[<h2 id="주소-검색-기능">주소 검색 기능</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[error based sql injection 을 연습하기 위하여 직접 db 에러를 보여주는 로그인 페이지를 만들었다.]]></summary></entry><entry><title type="html">웹서버 만들기(9) 주소검색기능</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89/" rel="alternate" type="text/html" title="웹서버 만들기(9) 주소검색기능" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C9%EC%A3%BC%EC%86%8C%EA%B2%80%EC%83%89/"><![CDATA[<h1 id="주소-검색-기능">주소 검색 기능</h1>
 <ul>
   <li>서버
     <ul>
@@ -86,12 +86,10 @@
   </li>
 </ul>
 
-<h3 id="주소찾기-동작과정">주소찾기 동작과정</h3>
-<hr />
+<h2 id="주소찾기-동작과정">주소찾기 동작과정</h2>
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog7KO87IaM7LC-6riwIOyalOyyrVxu7ISc67KEIC0-PiBEQiDshJzrsoQgOiDso7zshozrpbwg7J207Jqp7ZWY7JesIOyasO2OuOuyiO2YuCwg7KO87IaMIOyalOyyrVxuREIg7ISc67KELT4-IOyEnOuyhCA6IOyasO2OuOuyiO2YuCwg7KO87IaMIOydkeuLtVxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOyasO2OuOuyiO2YuCwg7KO87IaMIOydkeuLtSIsIm1lcm1haWQiOm51bGx9" /></p>
 
-<h3 id="우편번호-db--다운받기">우편번호 DB  다운받기</h3>
-<hr />
+<h2 id="우편번호-db--다운받기">우편번호 DB  다운받기</h2>
 <ul>
   <li><a href="https://www.epost.go.kr/search/zipcode/cmzcd002k01.jsp">우편번호 DB와 검색기</a>에서 다운받는다.</li>
   <li>압축 파일안에는 text 파일들이 들어있다.</li>
@@ -100,14 +98,13 @@
   <li>우리는 여기서 대구광역시, 경기도 파일을 oracle db 에 Import 할 것이다.</li>
 </ul>
 
-<h3 id="sql-developer-231-다운로드">SQL Developer 23.1 다운로드</h3>
-<hr />
+<h2 id="sql-developer-231-다운로드">SQL Developer 23.1 다운로드</h2>
 <ul>
   <li>Oracle db 서버와 연결하여 보다 쉽게 sql 문들을 사용하기 위한것 이다.</li>
   <li><a href="https://www.oracle.com/database/sqldeveloper/technologies/download/">Oracle SQL Developer Downloads</a></li>
 </ul>
 
-<h5 id="오라클-서버와-연결하기">오라클 서버와 연결하기</h5>
+<h3 id="오라클-서버와-연결하기">오라클 서버와 연결하기</h3>
 <ol>
   <li><strong>Oracle SQL Development</strong> 를 연다.</li>
   <li><code class="language-plaintext highlighter-rouge">Oracle 접속</code> 우클릭 &gt; 새 접속<br /><img src="https://user-images.githubusercontent.com/31990118/234529534-04d39ca0-e749-4e62-9d23-5de70888c85c.png" alt="Pasted image 20230421225802" /></li>
@@ -115,7 +112,7 @@
   <li>테스트가 성공하였다면 접속 버튼을 눌러 접속해준다.<br /><img src="https://user-images.githubusercontent.com/31990118/234529679-37b86579-4e45-4e05-9d0d-ba5eb75afdb9.png" alt="Pasted image 20230421225917" /></li>
 </ol>
 
-<h5 id="오라클-db에-주소-text-데이터-import-하기">오라클 db에 주소 text 데이터 Import 하기</h5>
+<h3 id="오라클-db에-주소-text-데이터-import-하기">오라클 db에 주소 text 데이터 Import 하기</h3>
 <ol>
   <li>테이블 우클릭한다.<br /><img src="https://user-images.githubusercontent.com/31990118/234529812-a7e707be-ebe9-4e12-95b0-184bb31c3f8a.png" alt="Pasted image 20230421230129" /></li>
   <li>데이터 임포트를 클릭한다.<br /><img src="https://user-images.githubusercontent.com/31990118/234529931-49af9420-b874-4bcb-bc56-cb7e4f59c0ac.png" alt="Pasted image 20230421230214" /></li>
@@ -131,8 +128,7 @@
   <li>다른 데이터를 import 할 때는 <code class="language-plaintext highlighter-rouge">ko_address</code>테이블로 데이터를 넣어 주면 된다.</li>
 </ol>
 
-<h3 id="ui-부분">UI 부분</h3>
-<hr />
+<h2 id="ui-부분">UI 부분</h2>
 <ul>
   <li>회원가입 페이지에 주소찾기 버튼을 추가하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531123-6b2ecb7b-9090-4d73-90bb-8f202aff4817.png" alt="Pasted image 20230426152657" /></li>
   <li>주소찾기 버튼을 누르면 주소 찾기 창이 열린다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531218-a874417b-80be-4f3c-8149-aea64c48eede.png" alt="Pasted image 20230426152712" /></li>
@@ -140,7 +136,7 @@
   <li>주소를 클릭하여 주면 우편번호와 주소가 회원가입 페이지의 주소 부분에 들어가게 된다.<br /><img src="https://user-images.githubusercontent.com/31990118/234531391-8fab6c8f-9922-446a-a0c8-3957e0631dc5.png" alt="Pasted image 20230426154811" /></li>
 </ul>
 
-<h5 id="코드">코드</h5>
+<h3 id="코드">코드</h3>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">sign_up_page.jsp</code> 에 주소검색을 위한 코드를 추가하였다.<br /><script src="https://gist.github.com/MinGyu2/94743489626663324bf55bc9a944782b.js"></script></li>
   <li><code class="language-plaintext highlighter-rouge">/sign_in_page/sign_up_page/find_address_number?address=주소</code> 형태로 서버로 get요청을 보낸다.</li>
@@ -151,15 +147,15 @@
 </ul>
 
 <p><br /><br /></p>
-<h3 id="서버부분---db-서버-">서버부분 ( + DB 서버 )</h3>
-<hr />
+
+<h2 id="서버부분---db-서버-">서버부분 ( + DB 서버 )</h2>
 <ul>
   <li>서버에서 유저가 입력한 주소를 받아 주소에 해당하는 우편번호와 주소를 DB에서 찾아 응답으로 보낸다.</li>
 </ul>
 
-<h4 id="코드-1">코드</h4>
+<h3 id="코드-1">코드</h3>
 
-<h5 id="dbconnection-class-추가">DBConnection Class 추가</h5>
+<h4 id="dbconnection-class-추가">DBConnection Class 추가</h4>
 <ul>
   <li>DB 서버와 연결하기전 사전 준비를 하기위한 클래스이다.</li>
   <li>DBConnection의 <strong>connectDB</strong> 함수를 통해 DB 서버와 연결한다.</li>
@@ -167,7 +163,7 @@
 
 <script src="https://gist.github.com/MinGyu2/6e74fe516a6df3691df95462f14a2caa.js"></script>
 
-<h5 id="addressdao-class-추가">AddressDAO Class 추가</h5>
+<h4 id="addressdao-class-추가">AddressDAO Class 추가</h4>
 <ul>
   <li>DB의 <code class="language-plaintext highlighter-rouge">KO_ADDRESS</code> 테이블에 접근하여 우편번호와 주소를 읽어오기위한 클래스이다.</li>
   <li><strong>getAddressNumber</strong> 함수는 사용자가 입력한 주소를 이용하여 우편번호와 주소를 찾는다. 그리고 우편주소와 주소를 하나의 String으로 만들어 리턴한다.</li>
@@ -176,7 +172,7 @@
 
 <script src="https://gist.github.com/MinGyu2/0e0ff6366b722575bdfae1214607bd40.js"></script>
 
-<h5 id="login-클래스에-우편번호-uri-부분-추가하기">Login 클래스에 우편번호 uri 부분 추가하기.</h5>
+<h4 id="login-클래스에-우편번호-uri-부분-추가하기">Login 클래스에 우편번호 uri 부분 추가하기.</h4>
 <ul>
   <li>사용자가 주소를 입력하고 서버로부터 우편주소와 주소를 받기위해 get 요청을 한다.</li>
   <li>서버는 <code class="language-plaintext highlighter-rouge">/sign_in_page/sign_up_page/find_address_number</code> uri로 get 요청을 받는다.</li>
@@ -184,9 +180,8 @@
 
 <script src="https://gist.github.com/MinGyu2/18f3a30443c3ef0f67a9d426f05919ba.js"></script>
 
-<h3 id="회원-가입-할-때-우편번호-및-주소를-추가로-db에-저장하기">회원 가입 할 때 우편번호 및 주소를 추가로 db에 저장하기</h3>
-<hr />
-<h4 id="사전-준비">사전 준비</h4>
+<h2 id="회원-가입-할-때-우편번호-및-주소를-추가로-db에-저장하기">회원 가입 할 때 우편번호 및 주소를 추가로 db에 저장하기</h2>
+<h3 id="사전-준비">사전 준비</h3>
 <ul>
   <li>먼저 우편번호와 주소를 저장하기 위한 컬럼을 만들어줘야 한다.
     <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">alter</span> <span class="k">table</span> <span class="n">users</span> <span class="k">add</span> <span class="err">우편번호</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="k">default</span> <span class="s1">'12428'</span> <span class="k">not</span> <span class="k">null</span><span class="p">;</span>
@@ -198,18 +193,18 @@
   <li>회원가입할 때 우편번호와 주소를 필요로 한다.</li>
 </ul>
 
-<h4 id="클라이언트-수정-부분">클라이언트 수정 부분</h4>
+<h3 id="클라이언트-수정-부분">클라이언트 수정 부분</h3>
 
-<h5 id="sign_up_pagejsp-부분-수정">sign_up_page.jsp 부분 수정</h5>
+<h4 id="sign_up_pagejsp-부분-수정">sign_up_page.jsp 부분 수정</h4>
 <ul>
   <li>회원가입을 하기위하여 우편번호, 주소를 추가하여 서버로 post 요청을 보낸다.</li>
 </ul>
 
 <script src="https://gist.github.com/MinGyu2/1c924566aa82beaaa656739e56e2e993.js"></script>
 
-<h4 id="서버-수정-부분">서버 수정 부분</h4>
+<h3 id="서버-수정-부분">서버 수정 부분</h3>
 
-<h5 id="login-class-의-회원가입-부분-수정">Login class 의 회원가입 부분 수정</h5>
+<h4 id="login-class-의-회원가입-부분-수정">Login class 의 회원가입 부분 수정</h4>
 <ul>
   <li>사용자로부터 address_number, address1, address2를 추가적으로 post 요청 받는다.</li>
   <li><strong>SignUp.createUser</strong> 함수의 인자로 주어 회원가입을 진행한다.</li>
@@ -217,21 +212,21 @@
 
 <script src="https://gist.github.com/MinGyu2/3d75cdc317274ea780a2fccb9d74f1a8.js"></script>
 
-<h5 id="singup-부분-수정">SingUp 부분 수정</h5>
+<h4 id="singup-부분-수정">SingUp 부분 수정</h4>
 <ul>
   <li>우편번호와 주소 부분을 추가로 받는다.</li>
 </ul>
 
 <script src="https://gist.github.com/MinGyu2/f87fa4e9bebf0e81cb2188234ea98c1d.js"></script>
 
-<h5 id="userdao-createuser-함수-부분-수정">UserDAO createUser 함수 부분 수정</h5>
+<h4 id="userdao-createuser-함수-부분-수정">UserDAO createUser 함수 부분 수정</h4>
 <ul>
   <li>유저 정보 테이블에 주소를 저장하는 부분을 추가한다.</li>
 </ul>
 
 <script src="https://gist.github.com/MinGyu2/245cb5a0fbc2d20c5a01dedbea471b9e.js"></script>
 
-<h4 id="동작화면">동작화면</h4>
+<h3 id="동작화면">동작화면</h3>
 <ol>
   <li>회원가입 페이지에서 정보를 입력한다.<br /><img src="https://user-images.githubusercontent.com/31990118/234544104-b12395fb-0da9-472b-a1db-2538c8163165.png" alt="Pasted image 20230426172840" /></li>
   <li>주소찾기 버튼을 누르명 주소찾기창이 나온다. 이 창에서 주소를 입력하고 검색 버튼을 눌러준다. <br /><img src="https://user-images.githubusercontent.com/31990118/234544163-bff55a86-4bf3-4599-9136-e46583e8d853.png" alt="Pasted image 20230426173129" /></li>
@@ -241,8 +236,7 @@
   <li><code class="language-plaintext highlighter-rouge">USERS</code> 테이블에 user4 유저 생성됬는지 확인하기.<br /><img src="https://user-images.githubusercontent.com/31990118/234544415-0900aba6-29eb-4dbe-b841-bfb7fe7262ba.png" alt="Pasted image 20230426173901" /></li>
 </ol>
 
-<h3 id="참고-사이트">참고 사이트</h3>
-<hr />
+<h2 id="참고-사이트">참고 사이트</h2>
 <ul>
   <li><a href="https://accessgudid.nlm.nih.gov/resources/developers/importing_delimited_device_files/oracle">Importing Delimited Device Files into an Oracle Database using Oracle SQL Developer</a></li>
   <li><a href="https://deveric.tistory.com/68">주소 데이터의 빠른 조회를 위해 인덱스 설정하기 (tistory.com)</a></li>
@@ -251,17 +245,17 @@
   <li><a href="https://ggmouse.tistory.com/417">JavaScript this 인자 전달 onclick/href (tistory.com)</a></li>
   <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal">W3Schools Tryit Editor</a></li>
   <li><a href="https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm">우편번호검색 - 통합검색 우편번호 (epost.go.kr)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">SQL Injection 과정정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="SQL Injection 과정정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h3 id="환경">환경</h3>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">SQL Injection 과정정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="SQL Injection 과정정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h1 id="환경">환경</h1>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- MYSQL 서버
 </code></pre></div></div>
 
-<h3 id="질의문의-결과가-화면에-보일때">질의문의 결과가 화면에 보일때.</h3>
-<hr />
+<p><br /><br /></p>
+<h1 id="질의문의-결과가-화면에-보일때">질의문의 결과가 화면에 보일때.</h1>
 <ul>
   <li>게시판(글이 화면에 나옴), 회원정보(마이페이지), 주소검색, 검색페이지 등</li>
 </ul>
 
-<h5 id="sqli-과정">SQLi 과정</h5>
+<h2 id="sqli-과정">SQLi 과정</h2>
 <ol>
   <li>서버에서 어떤 질의문을 사용하는지 추측하기.
     <ul>
@@ -317,24 +311,25 @@
       <li>위에서 파악한 table명과 해당 table에 대한 column 명을 이용하여 정보를 빼오자!</li>
       <li><code class="language-plaintext highlighter-rouge">select column명 from table명</code> 명령을 이용하여 저장된 정보를 알 수 있다.</li>
       <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',column명,'3','4' from table명 -- %' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',column명,'3','4' from table명 -- </code></li>
+      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',column명,'3','4' from table명 -- </code>
+<br /><br /></li>
     </ul>
   </li>
 </ol>
 
 <p><br /><br /></p>
-<h3 id="질의문의-결과가-화면에-안보일때">질의문의 결과가 화면에 안보일때.</h3>
-<hr />
+
+<h1 id="질의문의-결과가-화면에-안보일때">질의문의 결과가 화면에 안보일때.</h1>
 <ul>
   <li>로그인, 아이디 중복 체크.</li>
 </ul>
 
-<h5 id="조건">조건</h5>
+<h2 id="조건">조건</h2>
 <ul>
   <li>Error 메시지가 화면에 출력될때. ( <strong>Error Bases SQL Injection</strong> )</li>
 </ul>
 
-<h5 id="sqli-과정-1">SQLi 과정</h5>
+<h2 id="sqli-과정-1">SQLi 과정</h2>
 <ol>
   <li>서버에서 어떤 질의문을 사용하는지 추측하기.
     <ul>
@@ -390,7 +385,7 @@
       <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1</code></li>
     </ul>
   </li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql DB" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql DBIntroduce" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
 
 <p><br /></p>
 <h3 id="회원가입-버튼-추가">회원가입 버튼 추가</h3>
@@ -1400,12 +1395,12 @@
 
 <h3 id="로그인-구현">로그인 구현</h3>
 <hr />
-<h5 id="로그인-인증-구조">로그인 인증 구조</h5>
+<h4 id="로그인-인증-구조">로그인 인증 구조</h4>
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /><br /></p>
 
 <p><br /><br /></p>
 
-<h5 id="유저정보를-저장-하기-위한-db-특징">유저정보를 저장 하기 위한 DB 특징</h5>
+<h4 id="유저정보를-저장-하기-위한-db-특징">유저정보를 저장 하기 위한 DB 특징</h4>
 <ul>
   <li>
     <p>유저의 정보를 저장하기 위해서 <code class="language-plaintext highlighter-rouge">오라클DB</code> 에서 <code class="language-plaintext highlighter-rouge">USERS</code> 테이블을 만들어 주었다.</p>
@@ -1479,7 +1474,7 @@
 
 <p><br /><br /></p>
 
-<h5 id="db-를-관리하기-위한-클래스">DB 를 관리하기 위한 클래스</h5>
+<h4 id="db-를-관리하기-위한-클래스">DB 를 관리하기 위한 클래스</h4>
 <ul>
   <li>UsersDAO 를 통해 데이터베이스와 연결하고 저장되어있는 유저정보를 불러올 수 있다.</li>
   <li>DB 서버에 있는 정보를 보다 쉽게 읽어올 수 있다.<br /><script src="https://gist.github.com/MinGyu2/7eba85df3c0d5e2f9d1a76ff2682e726.js"></script></li>
@@ -1488,7 +1483,7 @@
 
 <p><br /><br /></p>
 
-<h5 id="로그인-페이지-접속">로그인 페이지 접속</h5>
+<h4 id="로그인-페이지-접속">로그인 페이지 접속</h4>
 <ol>
   <li>로그인을 하기 위한 url은 <code class="language-plaintext highlighter-rouge">http://주소/sign_in_page</code> 로 설정 하였다.</li>
   <li><code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/web.xml</code> 의 파일에서 <code class="language-plaintext highlighter-rouge">/sign_in_page</code> uri 가 어떤 클래스로 이어져야 설정하였다.<br /><script src="https://gist.github.com/MinGyu2/ace2c5b71179095cfefcc7e3253d7504.js"></script>즉 <code class="language-plaintext highlighter-rouge">/sign_in_page</code> uri로 요청이 들어오면 <code class="language-plaintext highlighter-rouge">com.mingyu2.login.Login</code> 클래스로 요청을 전달받을 수 있다.</li>
@@ -1501,7 +1496,11 @@
 
 <p><br /><br /></p>
 
-<h5 id="로그인-인증-sign_in_pageauthentication-">로그인 인증 (<code class="language-plaintext highlighter-rouge">/sign_in_page/authentication</code> )</h5>
+<h4 id="로그인-인증">로그인 인증</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/sign_in_page/authentication</code></li>
+</ul>
+
 <ol>
   <li>먼저 세션 키가 존재하는지 확인하자. 존재하면 바로 메인페이지로 이동한다.</li>
   <li>post를 통해 요청이 들어오면 먼저 아이디와 비밀번호를 확인한다.</li>
@@ -1517,7 +1516,7 @@
 
 <p><br /><br /></p>
 
-<h5 id="비밀번호-인증-과정loginauthentication-클래스">비밀번호 인증 과정(<code class="language-plaintext highlighter-rouge">LoginAuthentication</code> 클래스)</h5>
+<h4 id="비밀번호-인증-과정loginauthentication-클래스">비밀번호 인증 과정(<code class="language-plaintext highlighter-rouge">LoginAuthentication</code> 클래스)</h4>
 <ol>
   <li><code class="language-plaintext highlighter-rouge">Users</code> 테이블에 존재하는 유저인지 확인한다.</li>
   <li>존재하는 아이디면 salt 와 암호 알고리즘 유형을 가지고 온다.</li>
@@ -1537,7 +1536,7 @@
   <li>현재 로그인 된 유저 정보를 확인할 수 있다.</li>
 </ul>
 
-<h5 id="메인페이지-접속">메인페이지 접속</h5>
+<h4 id="메인페이지-접속">메인페이지 접속</h4>
 <ol>
   <li><code class="language-plaintext highlighter-rouge">http://주소/main_page</code> 주소를 통해 메인 페이지에 접속을 한다.</li>
   <li><code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/web.xml</code> 안에 <code class="language-plaintext highlighter-rouge">/main_page</code> uri 요청이 왔을 때 연결해줘야 하는 클래스를 적어주었다.<br /><script src="https://gist.github.com/MinGyu2/a1ce521401bcd401eda9dbfc61a59c2a.js"></script></li>
@@ -1549,7 +1548,7 @@
 
 <p><br /><br /></p>
 
-<h5 id="jsp-메인-페이지">jsp 메인 페이지</h5>
+<h4 id="jsp-메인-페이지">jsp 메인 페이지</h4>
 <ul>
   <li>여기서 <code class="language-plaintext highlighter-rouge">main_page_root.jsp</code> 나 <code class="language-plaintext highlighter-rouge">main_page.page</code> 구조는 동일하다.</li>
   <li>메인페이지(<code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/sign_in_page/main_page.jsp</code>)</li>
@@ -1575,12 +1574,12 @@
 
 <h3 id="url-와-uri-차이">URL 와 URI 차이</h3>
 <hr />
-<h5 id="url">URL</h5>
+<h4 id="url">URL</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://localhost/login_page/authentication</code> : 프로토콜 유형을 포함한 완전한 사이트 경로를 말한다.</li>
 </ul>
 
-<h5 id="uri">URI</h5>
+<h4 id="uri">URI</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">/login_page/authentication</code> : 주소 다음의 경로를 의미한다.</li>
 </ul>
@@ -1726,12 +1725,12 @@
 
 <h3 id="발생했던-오류">발생했던 오류</h3>
 <hr />
-<h5 id="오류-내용">오류 내용</h5>
+<h4 id="오류-내용">오류 내용</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver</code> 오류가 발생하였다. 해당 오류는 <code class="language-plaintext highlighter-rouge">orcale</code> 과 연결을 하기 위한 jdbc 파일을 못찾아서 발생한 오류이다.</li>
 </ul>
 
-<h5 id="해결법">해결법</h5>
+<h4 id="해결법">해결법</h4>
 <ol>
   <li>먼저 <a href="https://www.oracle.com/kr/database/technologies/appdev/jdbc-downloads.html">JDBC 다운 사이트</a> 에서 먼저 현재 사용중인 <code class="language-plaintext highlighter-rouge">Oracle DB</code> 버전에 맞는 창을 선택한다. 그다음 현재 서버에서 사용중인 JDK 버전을 지원하는 JDBC 를 다운 받는다.<br /><img src="https://user-images.githubusercontent.com/31990118/230883197-363d14b3-6ac9-4eba-af25-6b6133ddff9b.png" alt="Pasted image 20230410160406" /></li>
   <li>다운받은 JDBC 파일을 <code class="language-plaintext highlighter-rouge">WEB-INF/lib</code> 폴더에 넣어준다.<br /><script src="https://gist.github.com/MinGyu2/3eaef32da9891939cc7cb6028f9beec3.js"></script></li>
@@ -1739,22 +1738,22 @@
   <li>오류가 없어졌다!</li>
 </ol>
 
-<h5 id="오류-내용-1">오류 내용</h5>
+<h4 id="오류-내용-1">오류 내용</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">java.sql.SQLException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=Y10z7f22RfCCr07I1wmkCg==)</code></li>
 </ul>
 
-<h5 id="해결법-1">해결법</h5>
+<h4 id="해결법-1">해결법</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">String dbURL = "jdbc:oracle:thin:@서버주소:1521:XE";</code> 주소를 맞게 적어주어야 한다.</li>
 </ul>
 
-<h5 id="오류-내용-2">오류 내용</h5>
+<h4 id="오류-내용-2">오류 내용</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">java.sql.SQLException: ORA-01017: 사용자명/비밀번호가 부적합, 로그온할 수 없습니다.</code></li>
 </ul>
 
-<h5 id="해결법-2">해결법</h5>
+<h4 id="해결법-2">해결법</h4>
 <ul>
   <li>사용자명과 비밀번호를 맞게 입력해야한다.</li>
 </ul>
