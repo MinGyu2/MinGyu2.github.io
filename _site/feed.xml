@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T22:30:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T22:51:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -72,7 +72,7 @@
   <li>테이블 이름들 추출하기. <br /><script src="https://gist.github.com/MinGyu2/65ae660dd4ef296c1a50279c04dc8467.js"></script></li>
   <li>컬럼 명 추출 하기.<br /><script src="https://gist.github.com/MinGyu2/17bae3c8991982ee9e076df17b090fa7.js"></script></li>
   <li>정보 추출하기.<br /><script src="https://gist.github.com/MinGyu2/5b9e37325e12999931619d2a70f71dac.js"></script></li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="sql injection" /><category term="Mysql" /><summary type="html"><![CDATA[Blind SQL Injection 과정 정리.]]></summary></entry><entry><title type="html">Error Based SQL Injection 연습</title><link href="http://localhost:4000/ErrorBasedSQLi/" rel="alternate" type="text/html" title="Error Based SQL Injection 연습" /><published>2023-04-27T00:00:00+09:00</published><updated>2023-04-27T23:13:00+09:00</updated><id>http://localhost:4000/ErrorBasedSQLi</id><content type="html" xml:base="http://localhost:4000/ErrorBasedSQLi/"><![CDATA[<ul>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="sql injection" /><category term="Mysql" /><category term="DB" /><summary type="html"><![CDATA[Blind SQL Injection 과정 정리.]]></summary></entry><entry><title type="html">Error Based SQL Injection 연습</title><link href="http://localhost:4000/ErrorBasedSQLi/" rel="alternate" type="text/html" title="Error Based SQL Injection 연습" /><published>2023-04-27T00:00:00+09:00</published><updated>2023-04-27T23:13:00+09:00</updated><id>http://localhost:4000/ErrorBasedSQLi</id><content type="html" xml:base="http://localhost:4000/ErrorBasedSQLi/"><![CDATA[<ul>
   <li>Error Based SQL Injection을 연습하기 위해 DB 에러를 보여주는 로그인 페이지를 만들었다.</li>
 </ul>
 
@@ -294,17 +294,29 @@
   <li><a href="https://ggmouse.tistory.com/417">JavaScript this 인자 전달 onclick/href (tistory.com)</a></li>
   <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal">W3Schools Tryit Editor</a></li>
   <li><a href="https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm">우편번호검색 - 통합검색 우편번호 (epost.go.kr)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">Union SQLi 과 Error Based SQLi 과정 정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="Union SQLi 과 Error Based SQLi 과정 정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h1 id="환경">환경</h1>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- MYSQL 서버
-</code></pre></div></div>
-
-<p><br /><br /></p>
-<h1 id="질의문의-결과가-화면에-보일때">질의문의 결과가 화면에 보일때.</h1>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">Union SQLi &amp;amp; Error Based SQLi 과정 정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="Union SQLi &amp;amp; Error Based SQLi 과정 정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-30T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h2 id="환경">환경</h2>
 <ul>
-  <li>게시판(글이 화면에 나옴), 회원정보(마이페이지), 주소검색, 검색페이지 등</li>
+  <li>MYSQL 서버</li>
 </ul>
 
-<h2 id="union-sql-injection-과정">Union SQL Injection 과정</h2>
+<p><br /></p>
+
+<h2 id="union-sqli">Union SQLi</h2>
+
+<h3 id="조건">조건</h3>
+<ul>
+  <li>질의문 결과가 화면에 보여야 한다.</li>
+</ul>
+
+<h3 id="동작-유형">동작 유형</h3>
+<ul>
+  <li>게시판 ( 글이 화면에 나온다. )</li>
+  <li>회원정보 ( 마이페이지 )</li>
+  <li>주소검색</li>
+  <li>검색 페이지</li>
+</ul>
+
+<h3 id="과정">과정</h3>
 <ol>
   <li>서버에서 어떤 질의문을 사용하는지 추측하기.
     <ul>
@@ -368,17 +380,29 @@
 
 <p><br /><br /></p>
 
-<h1 id="질의문의-결과가-화면에-안보일때">질의문의 결과가 화면에 안보일때.</h1>
+<h2 id="error-based-sqli">Error Based SQLi</h2>
 <ul>
-  <li>로그인, 아이디 중복 체크.</li>
+  <li>논리 에러를 의도적으로 일으켜 데이터를 추출하는 공격이다.</li>
 </ul>
 
-<h2 id="조건">조건</h2>
+<h3 id="조건-1">조건</h3>
 <ul>
-  <li>Error 메시지가 화면에 출력될때. ( <strong>Error Bases SQL Injection</strong> )</li>
+  <li>Error 메세지가 화면에 보여야한다.</li>
 </ul>
 
-<h2 id="error-based-sql-injection-과정">Error Based SQL Injection 과정</h2>
+<h3 id="동작-유형-1">동작 유형</h3>
+<ul>
+  <li>로그인 페이지</li>
+  <li>아이디 중복 체크</li>
+</ul>
+
+<h3 id="sql-논리-에러를-발생시킬-수-있는-함수">SQL 논리 에러를 발생시킬 수 있는 함수</h3>
+<ul>
+  <li>updatexml</li>
+  <li>ExtractValue</li>
+</ul>
+
+<h3 id="과정-1">과정</h3>
 <ol>
   <li>서버에서 어떤 질의문을 사용하는지 추측하기.
     <ul>
@@ -434,7 +458,7 @@
       <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1</code></li>
     </ul>
   </li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql DBIntroduce" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
 
 <p><br /></p>
 <h3 id="회원가입-버튼-추가">회원가입 버튼 추가</h3>
