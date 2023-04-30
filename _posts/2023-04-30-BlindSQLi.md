@@ -6,6 +6,7 @@ categories:
 tags:
     - sql injection
     - Mysql
+    - DB
 last_modified_at: 2023-04-30T09:13:00-05:00
 ---
 ## 이전 포스팅
