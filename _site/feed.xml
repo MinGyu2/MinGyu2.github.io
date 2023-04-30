@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-27T18:41:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T22:30:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -23,7 +23,56 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Error Based SQL Injection 연습</title><link href="http://localhost:4000/ErrorBasedSQLi/" rel="alternate" type="text/html" title="Error Based SQL Injection 연습" /><published>2023-04-27T00:00:00+09:00</published><updated>2023-04-27T23:13:00+09:00</updated><id>http://localhost:4000/ErrorBasedSQLi</id><content type="html" xml:base="http://localhost:4000/ErrorBasedSQLi/"><![CDATA[<ul>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Blind SQL Injection 과정</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/" rel="alternate" type="text/html" title="Blind SQL Injection 과정" /><published>2023-04-30T00:00:00+09:00</published><updated>2023-04-30T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/"><![CDATA[<h2 id="이전-포스팅">이전 포스팅</h2>
+<p><a href="https://mingyu2.github.io/SQLi%EB%B0%A9%EB%B2%95/">Union SQLi 과 Error Based SQLi 과정 정리.</a></p>
+
+<h2 id="mysql-사전-지식">MYSQL 사전 지식</h2>
+
+<h3 id="db-명-출력하기">DB 명 출력하기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">database</span><span class="p">()</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="테이블명-출력하기">테이블명 출력하기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">table_name</span> <span class="k">from</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span> <span class="k">where</span> <span class="n">table_schema</span><span class="o">=</span><span class="s1">'DB명'</span>
+</code></pre></div></div>
+
+<h3 id="컬럼명-출력하기">컬럼명 출력하기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">columns</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'테이블명'</span>
+</code></pre></div></div>
+
+<h2 id="blind-sqli">Blind SQLi</h2>
+<ul>
+  <li>참과 거짓 조건에 따른 응답을 이용하여 한글자씩 알아내어 데이터를 추출하는 공격이다.</li>
+</ul>
+
+<h3 id="조건">조건</h3>
+<ul>
+  <li>결과가 화면에 안나오는 곳에서 사용한다.</li>
+  <li>참과 거짓 조건에 따라 응답이 다른 곳에서 이용가능하다.</li>
+</ul>
+
+<h3 id="필요-함수">필요 함수</h3>
+<ul>
+  <li>substring</li>
+  <li>ascii</li>
+</ul>
+
+<h3 id="과정">과정</h3>
+<ol>
+  <li>서버에서 어떤 질의문을 사용하는지 예측하기.
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">x</span> <span class="k">from</span> <span class="n">x</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'x'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Blind SQLi 을 사용하기 위하여 참/거짓 일때 응답 결과가 다른지 확인하기.<br /><script src="https://gist.github.com/MinGyu2/f65663add3c2cf18dc2b4d996a442919.js"></script></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">select</code> 문 사용 가능한지 확인하기.<br /><script src="https://gist.github.com/MinGyu2/4fe0c4b88eaf431299f49c54cb89d8f1.js"></script></li>
+  <li>공격 포맷 만들기.<br /><script src="https://gist.github.com/MinGyu2/b7db2b39edc6e326b2426cc6a34fdeb5.js"></script></li>
+  <li>database 이름 추출하기. 한 문자씩 알아내어야 한다.<br /><script src="https://gist.github.com/MinGyu2/cd056483c528aad3bb968bf459155150.js"></script></li>
+  <li>테이블 이름들 추출하기. <br /><script src="https://gist.github.com/MinGyu2/65ae660dd4ef296c1a50279c04dc8467.js"></script></li>
+  <li>컬럼 명 추출 하기.<br /><script src="https://gist.github.com/MinGyu2/17bae3c8991982ee9e076df17b090fa7.js"></script></li>
+  <li>정보 추출하기.<br /><script src="https://gist.github.com/MinGyu2/5b9e37325e12999931619d2a70f71dac.js"></script></li>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="sql injection" /><category term="Mysql" /><summary type="html"><![CDATA[Blind SQL Injection 과정 정리.]]></summary></entry><entry><title type="html">Error Based SQL Injection 연습</title><link href="http://localhost:4000/ErrorBasedSQLi/" rel="alternate" type="text/html" title="Error Based SQL Injection 연습" /><published>2023-04-27T00:00:00+09:00</published><updated>2023-04-27T23:13:00+09:00</updated><id>http://localhost:4000/ErrorBasedSQLi</id><content type="html" xml:base="http://localhost:4000/ErrorBasedSQLi/"><![CDATA[<ul>
   <li>Error Based SQL Injection을 연습하기 위해 DB 에러를 보여주는 로그인 페이지를 만들었다.</li>
 </ul>
 
@@ -245,7 +294,7 @@
   <li><a href="https://ggmouse.tistory.com/417">JavaScript this 인자 전달 onclick/href (tistory.com)</a></li>
   <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal">W3Schools Tryit Editor</a></li>
   <li><a href="https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm">우편번호검색 - 통합검색 우편번호 (epost.go.kr)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">SQL Injection 과정정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="SQL Injection 과정정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h1 id="환경">환경</h1>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">Union SQLi 과 Error Based SQLi 과정 정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="Union SQLi 과 Error Based SQLi 과정 정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-24T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h1 id="환경">환경</h1>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- MYSQL 서버
 </code></pre></div></div>
 
@@ -255,7 +304,7 @@
   <li>게시판(글이 화면에 나옴), 회원정보(마이페이지), 주소검색, 검색페이지 등</li>
 </ul>
 
-<h2 id="sqli-과정">SQLi 과정</h2>
+<h2 id="union-sql-injection-과정">Union SQL Injection 과정</h2>
 <ol>
   <li>서버에서 어떤 질의문을 사용하는지 추측하기.
     <ul>
@@ -329,7 +378,7 @@
   <li>Error 메시지가 화면에 출력될때. ( <strong>Error Bases SQL Injection</strong> )</li>
 </ul>
 
-<h2 id="sqli-과정-1">SQLi 과정</h2>
+<h2 id="error-based-sql-injection-과정">Error Based SQL Injection 과정</h2>
 <ol>
   <li>서버에서 어떤 질의문을 사용하는지 추측하기.
     <ul>
@@ -1765,36 +1814,4 @@
   <li><a href="https://www.java4s.com/java-servlet-tutorials/how-to-connect-servlet-to-the-database-with-example/">How to Connect Servlet to the Database (Oracle) with Example (java4s.com)</a></li>
   <li><a href="https://vhxpffltm.tistory.com/131">서블릿과 데이터베이스 연동 조회: PrepareStatement (tistory.com)</a></li>
   <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=robinnw&amp;logNo=220000301263">서블릿 오라클DB연동 - Servlet&amp;JDBC (insert , select SQL 사용)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="nginx" /><category term="tomcat" /><category term="servlet" /><summary type="html"><![CDATA[오라클 DB 와 웹 서버 연동 테스트]]></summary></entry><entry><title type="html">웹서버 개발 5</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5/" rel="alternate" type="text/html" title="웹서버 개발 5" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T22:06:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C5/"><![CDATA[<h3 id="post-와-get-동작-확인">POST 와 GET 동작 확인</h3>
-<hr />
-<ul>
-  <li>GET<br /><script src="https://gist.github.com/MinGyu2/1ed4e7cc1b3cef438c72952254e3efd2.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/230756591-dd06327e-4753-456e-a601-ceb8da120991.png" alt="Pasted image 20230406195223" /></li>
-  <li>POST<br /><script src="https://gist.github.com/MinGyu2/95a11b93e1f2b786ecae35f7c1b3983a.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/230756773-384d8902-197e-416d-8e87-f6e9e8bda51a.png" alt="Pasted image 20230406195234" /></li>
-  <li><code class="language-plaintext highlighter-rouge">form</code> 태그 안의 <strong>action</strong> 은 목적지가 적힌다.</li>
-  <li>위의 GET의 submit 버튼을 누르면 다음과 같은 링크로 이동이 된다.<br /><code class="language-plaintext highlighter-rouge">http://주소/request_get?data=test</code><br />데이터가 링크에 그대로 노출되는것을 확인할 수있다.</li>
-  <li>POST의 submit 버튼을 누르면 링크는 다음과 같다.<br /><code class="language-plaintext highlighter-rouge">http://주소/request_post</code> <br />Post 방식에서는 데이터의 내용을 링크에 안보여 준다.<br />요청을 좀 더 자세히 살펴보면 (Burp suite 를 이용) 다음과 같이 전송 방식은 post이고 data에 데이터를 담아 요청을 보내는것을 확인할 수있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230756791-9730f16e-8069-4a44-adc5-39173d72d07b.png" alt="Pasted image 20230406195842" /><br /><img src="https://user-images.githubusercontent.com/31990118/230756809-759edb0e-76f3-4886-a997-d526365325ae.png" alt="Pasted image 20230406195858" /></li>
-</ul>
-
-<h3 id="get-방식-데이터-서버에서-받기">GET 방식 데이터 서버에서 받기</h3>
-<hr />
-<ul>
-  <li>servlet 을 이용하였다. <strong>doGet</strong> 함수를 Override 하여 재정의 해주었다. 그리고 uri로 <code class="language-plaintext highlighter-rouge">get</code>요청이 왔을 때 다음 사진과 같이 나오도록 하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/230756827-1b50ac46-2848-416a-b4a9-46b45d62cd75.png" alt="Pasted image 20230406203701" /><br /><img src="https://user-images.githubusercontent.com/31990118/230756840-22065fec-38fe-4c64-aac6-254e28e51dfd.png" alt="Pasted image 20230406203717" /><br /><script src="https://gist.github.com/MinGyu2/485877dfa8e372b4572c970d12b29c8d.js"></script><br /><script src="https://gist.github.com/MinGyu2/074dd3e21dbed0379e4817fee80eaf24.js"></script></li>
-</ul>
-
-<h3 id="post-방식-데이터-서버에서-받기">POST 방식 데이터 서버에서 받기</h3>
-<hr />
-<ul>
-  <li>
-    <p>servlet 을 이용하였다. <strong>doPost</strong> 함수를 override 하여 재정의 해주었다. 그리고 <code class="language-plaintext highlighter-rouge">post</code> 요청이 왔을 때 다음 사진과 같이 나오도록 하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/230756911-68b243b5-85e4-4560-8ae5-930bf98f913d.png" alt="Pasted image 20230409131539" /><br /><img src="https://user-images.githubusercontent.com/31990118/230756917-b9ab099c-6016-4401-844c-fe40a40a9484.png" alt="Pasted image 20230409131610" /><br /><script src="https://gist.github.com/MinGyu2/34767a4d7ae12380cb4115ded3c76132.js"></script><br /><script src="https://gist.github.com/MinGyu2/074dd3e21dbed0379e4817fee80eaf24.js"></script></p>
-  </li>
-  <li>
-    <p>참고로 get 과 post  에서 사용하는 requestPage 부분의 함수는 같은 함수이다.</p>
-  </li>
-</ul>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<ul>
-  <li><a href="https://lasbe.tistory.com/83">Html form 태그와 input 요소들, GET / POST 방식 (tistory.com)</a></li>
-  <li><a href="https://velog.io/@jsj3282/MVC-%ED%8C%A8%ED%84%B4-%EA%B5%AC%ED%98%842-%EB%AA%A8%EB%8D%B8-2-%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-MVC-%ED%8C%A8%ED%84%B4">MVC 패턴 구현(2) : 모델 2 구조를 이용한 MVC 패턴(1)</a></li>
-  <li><a href="https://initialcommit.com/blog/how-to-send-data-from-servlet-to-jsp">How to send data from Java Servlet to JSP </a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="GET" /><category term="POST" /><category term="servlet" /><category term="jsp" /><category term="html" /><summary type="html"><![CDATA[get 과 post에 대해 알아보고, 직접 테스트 해보자]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="nginx" /><category term="tomcat" /><category term="servlet" /><summary type="html"><![CDATA[오라클 DB 와 웹 서버 연동 테스트]]></summary></entry></feed>
