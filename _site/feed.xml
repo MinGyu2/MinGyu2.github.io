@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T22:51:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-04T11:33:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -23,7 +23,255 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Blind SQL Injection 과정</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/" rel="alternate" type="text/html" title="Blind SQL Injection 과정" /><published>2023-04-30T00:00:00+09:00</published><updated>2023-04-30T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/"><![CDATA[<h2 id="이전-포스팅">이전 포스팅</h2>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">메뉴 버튼 및 게시판 제작</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/" rel="alternate" type="text/html" title="메뉴 버튼 및 게시판 제작" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/"><![CDATA[<h2 id="jsp-페이지-모듈화">JSP 페이지 모듈화</h2>
+<ul>
+  <li>액션 태그를 사용해서 화면을 모듈화시켜 코드가 중복되는 것을 방지 할 수 있다.</li>
+</ul>
+
+<h3 id="-액션-태그-사용법"><jsp:include> 액션 태그 사용법</jsp:include></h3>
+<ul>
+  <li>
+    <p>사용법
+<script src="https://gist.github.com/MinGyu2/049ae15892e904872ad0834e58949544.js"></script></p>
+  </li>
+  <li>
+    <p>태크 속성 설명</p>
+    <ul>
+      <li>page : 포함할 JSP 페이지</li>
+      <li>flush : true 로 설정하면 현재 페이지가 지금까지 버퍼에 저장한 내용을 웹 브라우저로 전송하게 된다.  일단 헤더 정보가 웹 브라우저에 전송이 되고 나면 헤더 정보를 추가해도 결과가 반영되지 않는다. 따라서 일반적으로는 ‘false’로 지정한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="-액션-태그-처리-과정"><jsp:include> 액션 태그 처리 과정</jsp:include></h3>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4gbWFpbi5qc3AgOiDsmpTssq1cbm1haW4uanNwIC0-PiBtYWluLmpzcCA6IOy2nOugpSDrgrTsmqkxXG5tYWluLmpzcCAtPj4gc3ViLmpzcCA6IOyalOyyrVxuc3ViLmpzcCAtPj4gbWFpbi5qc3AgOiDstpzroKUg64K07JqpIHN1YlxubWFpbi5qc3AgLT4-IG1haW4uanNwIDog7Lac66ClIOuCtOyaqTJcbm1haW4uanNwIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOy2nOugpSDrsoTtjbwg64K07JqpIOyghOuLrCIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<h3 id="활용">활용</h3>
+<ul>
+  <li>
+    <jsp:include> 액션 태그를 만들고 있는 서버에 적용시켰다.
+</jsp:include>
+  </li>
+  <li>모듈화가 가능하여 코드가 좀 더 깔끔해졌다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/31990118/236090570-d82e92f3-80ab-443c-b49e-51d778305b87.png" alt="Pasted image 20230503235614" /></p>
+
+<h3 id="jsp">JSP</h3>
+<ul>
+  <li>main_page.jsp
+<script src="https://gist.github.com/MinGyu2/9303d6fa76e692d462a8e14cc207c5aa.js"></script></li>
+  <li>home.jsp
+<script src="https://gist.github.com/MinGyu2/772a5f530bbe6aeea2276afddb4a4b90.js"></script></li>
+</ul>
+
+<h2 id="메뉴-버튼">메뉴 버튼</h2>
+<ul>
+  <li>메인 페이지에 홈 버튼과 게시판 버튼을 만들었다.<br /><img src="https://user-images.githubusercontent.com/31990118/236091135-887cf47e-a593-4a8e-b36e-23d851d3805b.png" alt="Pasted image 20230503231355" /></li>
+  <li>Home 버튼을 누르면 로그인하고 접속 하였을 때 가장처음 화면에 나타나는 페이지이다.</li>
+  <li>게시판 버튼을 누르면 서버에 저장된 게시글들을 확인해 볼 수 있다.</li>
+</ul>
+
+<h3 id="jsp-1">JSP</h3>
+<ul>
+  <li>servlet 부터 메뉴 리스트를 받아와 사용하였다.</li>
+  <li>다음 코드는 메뉴창을 나타내는 부분이다.</li>
+  <li>main_page.jsp
+<script src="https://gist.github.com/MinGyu2/218ef37523342f45dfa8ac7676c54ce3.js"></script></li>
+</ul>
+
+<h3 id="servlet-java-코드">Servlet (Java 코드)</h3>
+<ul>
+  <li>메뉴 servlet 코드에서 메뉴 리스트를 만든 다음 메인 jsp 페이지로 포워딩 해준다.</li>
+  <li>메인 jsp 페이지 파일에서 메뉴 리스트를 받아 html 파일을 완성 시키고 유저에게 페이지를 보여준다.</li>
+  <li>MainPage.java
+<script src="https://gist.github.com/MinGyu2/60f564ef505632451acd34c7fbfc90a8.js"></script></li>
+</ul>
+
+<h2 id="게시판">게시판</h2>
+
+<h3 id="게시판-리스트-확인">게시판 리스트 확인</h3>
+<ul>
+  <li>게시판 버튼을 누르면 서버에 저장된 모든 글들을 볼 수 있다.</li>
+  <li>글을 작성한 사람 이름, 글 제목 그리고 글 요약을 살펴볼 수 있다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/31990118/236091519-177d6bf1-2f52-4705-80db-174d6430dee8.png" alt="Pasted image 20230503235957" /></p>
+
+<h4 id="jsp-2">JSP</h4>
+<h5 id="main_pagejsp">main_page.jsp</h5>
+<ul>
+  <li>
+    <jsp:include> 액션 태그를 이용하였다.
+
+</jsp:include>
+  </li>
+</ul>
+<script src="https://gist.github.com/MinGyu2/a7f9b3c687ae254e052484f934159038.js"></script>
+
+<h5 id="notice_boardjsp">notice_board.jsp</h5>
+<ul>
+  <li>for을 이용하여 servlet 으로 부터 받은 게시판 목록들을 나열하였다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/2fe9c7d42b55a006bcfc6dc05c0d89fa.js"></script>
+
+<h4 id="servlet">Servlet</h4>
+<h5 id="mainpagejava">MainPage.java</h5>
+<ul>
+  <li>NoticeBoardDAO 클래스를 이용하여 게시판 목록들을 DB 에서 불러왔다. 그리고 배열에 저장해 주었다.</li>
+  <li>setAttribute 를 이용하여 jsp 페이지로 배열을 전달해 주었다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/e335fc6b887792c12db6660d9a218de0.js"></script>
+
+<p><br /><br /></p>
+
+<h3 id="게시판-글-자세히-읽기">게시판 글 자세히 읽기</h3>
+<ul>
+  <li>게시판 리스트 중 하나를 클릭하여 들어가면 스스로 작성한 글이나, 다른 사용자가 작성한 글을 읽을 수 있다.</li>
+  <li>자기 자신이 쓴 글에 들어가면 글 수정을 위한 버튼이 나타난다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/31990118/236093552-1a3768f9-3b3e-4909-96dc-e60d1933a0bb.png" alt="Pasted image 20230504000326" />
+<img src="https://user-images.githubusercontent.com/31990118/236093639-ba25e841-0276-42f5-8522-b2153563765c.png" alt="Pasted image 20230504000408" /></p>
+
+<h4 id="jsp-3">JSP</h4>
+<h5 id="notice_detailjsp">notice_detail.jsp</h5>
+<ul>
+  <li>
+    <jsp:include> 액션태그를 사용하였다.
+
+</jsp:include>
+  </li>
+</ul>
+<script src="https://gist.github.com/MinGyu2/dc906936bba90e8490400a1920312804.js"></script>
+
+<h5 id="noticejsp">notice.jsp</h5>
+<ul>
+  <li>servlet 클래스에서 게시물 정보를 넘겨준다.</li>
+  <li>게시글 작성자와 현재 접속중인 유저가 동일하면 수정 버튼을 활성화 한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/020b226f69db9478f8f899cf96839770.js"></script>
+
+<h4 id="servlet-1">Servlet</h4>
+<h5 id="mainpagejava-1">MainPage.java</h5>
+<ul>
+  <li>Get 을 통해 게시글의 sid를 받는다. Get으로 받은 <code class="language-plaintext highlighter-rouge">detailid</code> 입력을 가져온다.</li>
+  <li>setAttribute 를 통해 게시글 정보를 jsp 한테 넘겨준다.</li>
+  <li>게시글 작성자와 현재 접속중인 유저가 동일하면 수정 버튼을 활성화 한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/a1917d62bb85a89be487042c767cf58e.js"></script>
+
+<p><br /><br /></p>
+
+<h3 id="게시판-새로운-글-쓰기">게시판 새로운 글 쓰기</h3>
+<ul>
+  <li>게시판에서 글쓰기 버튼을 클릭 하면 글쓰기 페이지가 나온다.</li>
+  <li>제목 또는 본문 둘중에 하나라도 빈칸이면 저장이 안된다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/31990118/236095373-403e687b-f55c-4db5-a59a-f0abc3320fbb.png" alt="Pasted image 20230503231355" />
+<img src="https://user-images.githubusercontent.com/31990118/236095408-bcc22308-3e11-4a65-ab53-f482d6c64925.png" alt="Pasted image 20230504003204" /></p>
+
+<h4 id="jsp-4">JSP</h4>
+<h5 id="notice_writejsp">notice_write.jsp</h5>
+<ul>
+  <li>제목과 글을 입력하고 저장 버튼을 눌러주면 POST 방식으로 제목과 글을 서버로 전송한다.</li>
+  <li>취소 버튼을 누르면 이전 페이지 다시 되돌아 간다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/a026cd33b55c1112bceff74b40c6ecb6.js"></script>
+
+<h4 id="servlet-2">Servlet</h4>
+<h5 id="mainpagejava-2">MainPage.java</h5>
+<ul>
+  <li>noticeBoardWrite uri 로 접속하면 글쓰기 jsp 페이지로 넘어간다.</li>
+  <li>글쓰기 jsp 페이지로 noticeBoardSave uri를 넘겨준다.</li>
+  <li>저장 버튼을 눌러 저장을 할 때는 오직 POST 전송일 때만 가능하다.</li>
+  <li>서버는 제목과 글을 POST 파라미터로 받는다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/879701715b88f54216b4aaa469b096a4.js"></script>
+
+<p><br /><br /></p>
+
+<h2 id="db">DB</h2>
+
+<h3 id="게시판-사용자-생성">게시판 사용자 생성</h3>
+<ul>
+  <li>게시판 글을 저장하기 위한 사용자를 먼저 만들어 주었다.<br /><script src="https://gist.github.com/MinGyu2/55b19361307bf1b1de4d1cd0807c04e6.js"></script></li>
+</ul>
+
+<h3 id="게시판-테이블-생성">게시판 테이블 생성</h3>
+<ul>
+  <li>게시판 글을 저장하는 테이블을 만들어 주었다.<br /><script src="https://gist.github.com/MinGyu2/a1528a7022d98d4db54891421b5acdd6.js"></script></li>
+</ul>
+
+<h3 id="게시판-글-올릴-때-사용한-sql-문">게시판 글 올릴 때 사용한 SQL 문</h3>
+<ul>
+  <li>다음 sql 쿼리문을 이용하여 글을 저장하였다.<br /><script src="https://gist.github.com/MinGyu2/ce3e8b3d981950a7141949a12be9c2a3.js"></script></li>
+</ul>
+
+<h3 id="게시판-글-삭제">게시판 글 삭제</h3>
+<ul>
+  <li>키인 <code class="language-plaintext highlighter-rouge">sid</code> 를 기준으로 글을 삭제한다.<br /><script src="https://gist.github.com/MinGyu2/fce1909509ddeac56a6388150bc807ee.js"></script></li>
+</ul>
+
+<h4 id="글을-삭제할-때-조건">글을 삭제할 때 조건</h4>
+<ul>
+  <li>관리자는 모든 글을 삭제 가능하다.</li>
+  <li>사용자는 자기 자신이 쓴 글만 삭제가 가능해야한다.</li>
+</ul>
+
+<h2 id="전체-코드">전체 코드</h2>
+<ul>
+  <li>main_page.jsp
+<script src="https://gist.github.com/MinGyu2/e72b96cfba044c98a0eae09899473d6c.js"></script></li>
+</ul>
+
+<h2 id="발생한-오류">발생한 오류</h2>
+<h3 id="create-session-권한-오류">create session 권한 오류</h3>
+<ul>
+  <li>오류 내용<br /><script src="https://gist.github.com/MinGyu2/40bf1fba073564873745a6dc81d79744.js"></script></li>
+  <li>해결법<br /><script src="https://gist.github.com/MinGyu2/bc97c6225891a1e111bf525a3260b546.js"></script></li>
+</ul>
+
+<h3 id="create-table-할-때-부적합한-식별자-오류">create table 할 때 부적합한 식별자 오류</h3>
+<ul>
+  <li>오류 내용<br /><script src="https://gist.github.com/MinGyu2/f672b13ed2b599dbe7ce42c6740a3d23.js"></script></li>
+  <li>해결법<br /><script src="https://gist.github.com/MinGyu2/66fbc7cbd7a1ef5ea30fd8964a4bc23f.js"></script></li>
+</ul>
+
+<h3 id="테이블스페이스-오류">테이블스페이스 오류</h3>
+<ul>
+  <li>오류 내용
+<script src="https://gist.github.com/MinGyu2/3a32023b66ca251333fabdc13e339532.js"></script></li>
+  <li>해결법
+<script src="https://gist.github.com/MinGyu2/d928036f484915143ef937e0ce36ed1c.js"></script></li>
+</ul>
+
+<h3 id="열을-사용할-수-없습니다">열을 사용할 수 없습니다.</h3>
+<ul>
+  <li>오류 내용
+<script src="https://gist.github.com/MinGyu2/86f8126d9d8d4888fb9cdacf5467e9ce.js"></script></li>
+  <li>해결법
+<script src="https://gist.github.com/MinGyu2/a9ca4d9719b57d2401daee09dfa26ecf.js"></script></li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://all-record.tistory.com/106">JSP 페이지 모듈화 &lt;jsp:include&gt; 액션태그 (tistory.com)</a></li>
+  <li><a href="https://ojji.wayful.com/2015/04/HTML-DIV-tag-Scroll-Bar-Display-Hidden-Set-Overflow-auto-hidden-scroll-white-space-nowrap-overflow-x-overflow-y.html">HTML DIV tag: 스크롤바 넣기와 제어하기 </a></li>
+  <li><a href="https://ju-won.tistory.com/14">div 강제 줄바꿈 처리 (tistory.com)</a></li>
+  <li><a href="https://dogsavestheworld.tistory.com/275">JSP 게시판 만들기 - (10) 글쓰기 기능 구현 (CREATE) (tistory.com)</a></li>
+  <li><a href="https://velog.io/@leemember/CSS-textarea-%ED%81%AC%EA%B8%B0-%EA%B3%A0%EC%A0%95%ED%95%98%EA%B8%B0">textarea 크기 고정하기 (velog.io)</a></li>
+  <li><a href="https://totoscoming-coding.tistory.com/36"> HTML 예제 - 게시판 글쓰기 창 :: 쩝쩝산중 코딩로그 (tistory.com)</a></li>
+  <li><a href="https://gent.tistory.com/323">오라클 컬럼(Column) 추가, 삭제 방법 (컬럼 순서 변경) (tistory.com)</a></li>
+  <li><a href="https://offbyone.tistory.com/316">오라클 에러 ORA-00984: 열을 사용할 수 없습니다 (tistory.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="JSP" /><category term="SERVLET" /><category term="JAVA" /><summary type="html"><![CDATA[메뉴 버튼 및 게시판 제작 하기]]></summary></entry><entry><title type="html">Blind SQL Injection 과정</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/" rel="alternate" type="text/html" title="Blind SQL Injection 과정" /><published>2023-04-30T00:00:00+09:00</published><updated>2023-04-30T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/"><![CDATA[<h2 id="이전-포스팅">이전 포스팅</h2>
 <p><a href="https://mingyu2.github.io/SQLi%EB%B0%A9%EB%B2%95/">Union SQLi 과 Error Based SQLi 과정 정리.</a></p>
 
 <h2 id="mysql-사전-지식">MYSQL 사전 지식</h2>
@@ -1778,64 +2026,4 @@
   <li><a href="https://loghada.tistory.com/4">Oracle DB 계정 생성/사용자 확인</a></li>
   <li><a href="https://www.ibm.com/docs/ko/i/7.1?topic=language-removing-rows-from-table-using-delete-statement">DELETE문을 사용하여 테이블에서 행 제거 - IBM Documentation</a></li>
 </ul>
-</details>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="Database" /><summary type="html"><![CDATA[오라클 db로 계정 생성, 테이블 생성, 데이터 삽입을 해보자.]]></summary></entry><entry><title type="html">웹서버 개발 6</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C6/" rel="alternate" type="text/html" title="웹서버 개발 6" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T22:06:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C6</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C6/"><![CDATA[<h3 id="오라클-db-와-연동하기">오라클 DB 와 연동하기</h3>
-<hr />
-<h4 id="testjavaproject-에서-오라클-db-와-연결하기-위한-코드">TestJavaProject 에서 오라클 db 와 연결하기 위한 코드</h4>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">Class.forName</code> 함수를 통해 오라클 JDBC Driver를 로드한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">DriverManager.getConnection</code> 함수를 이용하여 <strong>오라클DB</strong> 서버와 연결하였다.</li>
-  <li>쿼리를 주어 테이블에서 데이터를 읽어오거나 데이터를 삽입할 수 있다.</li>
-  <li>마지막으로 <code class="language-plaintext highlighter-rouge">conn.close();</code> 함수를 이용하여 db 연결을 끊는다.</li>
-</ol>
-
-<ul>
-  <li>아래의 코드는 <code class="language-plaintext highlighter-rouge">TEST</code> 라는 테이블에서 데이터를 꺼내오는 것이다.<br /><script src="https://gist.github.com/MinGyu2/84d7986953182e41729c772a5c9988c2.js"></script></li>
-  <li>프로젝트 구조는 다음과 같다.<br /><script src="https://gist.github.com/MinGyu2/aecd0ef9557cfc64392751a5e89ddf0e.js"></script></li>
-  <li>App.java 의 <code class="language-plaintext highlighter-rouge">doPost</code> 부분도 고쳐보자.</li>
-  <li><code class="language-plaintext highlighter-rouge">String s = db.getUsers();</code> 즉 위에서 만든 <code class="language-plaintext highlighter-rouge">getUsers</code> 함수를 호출하여 db의 내용을 가져올 수 있다.<br /><script src="https://gist.github.com/MinGyu2/a3b054d36fbb2b7b92f46922e179a591.js"></script></li>
-  <li>프로젝트를 컴파일 하고 컴파일한 결과를 <code class="language-plaintext highlighter-rouge">WEB-INF/classes/</code> 로 옮겨주자. 옮긴  다음 톰캣을 재시작하자. 사이트에 들어가서 request 페이지로 Post 요청을 하면 다음과 같이 <code class="language-plaintext highlighter-rouge">TEST 테이블</code>의 내용을 읽어올 수 있다.<br /><img src="https://user-images.githubusercontent.com/31990118/230882931-93d56fb5-9a9b-44c2-988d-2ea05ae7f6d9.png" alt="Pasted image 20230410175406" /><br /><img src="https://user-images.githubusercontent.com/31990118/230883009-7215843d-66f1-4ae5-afa3-cd6d118129a3.png" alt="Pasted image 20230410175309" /></li>
-</ul>
-
-<h3 id="발생했던-오류">발생했던 오류</h3>
-<hr />
-<h4 id="오류-내용">오류 내용</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver</code> 오류가 발생하였다. 해당 오류는 <code class="language-plaintext highlighter-rouge">orcale</code> 과 연결을 하기 위한 jdbc 파일을 못찾아서 발생한 오류이다.</li>
-</ul>
-
-<h4 id="해결법">해결법</h4>
-<ol>
-  <li>먼저 <a href="https://www.oracle.com/kr/database/technologies/appdev/jdbc-downloads.html">JDBC 다운 사이트</a> 에서 먼저 현재 사용중인 <code class="language-plaintext highlighter-rouge">Oracle DB</code> 버전에 맞는 창을 선택한다. 그다음 현재 서버에서 사용중인 JDK 버전을 지원하는 JDBC 를 다운 받는다.<br /><img src="https://user-images.githubusercontent.com/31990118/230883197-363d14b3-6ac9-4eba-af25-6b6133ddff9b.png" alt="Pasted image 20230410160406" /></li>
-  <li>다운받은 JDBC 파일을 <code class="language-plaintext highlighter-rouge">WEB-INF/lib</code> 폴더에 넣어준다.<br /><script src="https://gist.github.com/MinGyu2/3eaef32da9891939cc7cb6028f9beec3.js"></script></li>
-  <li>톰켓을 다시 시작하자.<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/shutdown.sh</code> 톰캣 중지<br /><code class="language-plaintext highlighter-rouge">./apache-tomcat-10.1.7/bin/startup.sh</code> 톰캣 시작</li>
-  <li>오류가 없어졌다!</li>
-</ol>
-
-<h4 id="오류-내용-1">오류 내용</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">java.sql.SQLException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=Y10z7f22RfCCr07I1wmkCg==)</code></li>
-</ul>
-
-<h4 id="해결법-1">해결법</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">String dbURL = "jdbc:oracle:thin:@서버주소:1521:XE";</code> 주소를 맞게 적어주어야 한다.</li>
-</ul>
-
-<h4 id="오류-내용-2">오류 내용</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">java.sql.SQLException: ORA-01017: 사용자명/비밀번호가 부적합, 로그온할 수 없습니다.</code></li>
-</ul>
-
-<h4 id="해결법-2">해결법</h4>
-<ul>
-  <li>사용자명과 비밀번호를 맞게 입력해야한다.</li>
-</ul>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<hr />
-<ul>
-  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=jobberbell&amp;logNo=221149377915">oracle.jdbc.driver.OracleDriver 에러 해결방법</a></li>
-  <li><a href="https://www.java4s.com/java-servlet-tutorials/how-to-connect-servlet-to-the-database-with-example/">How to Connect Servlet to the Database (Oracle) with Example (java4s.com)</a></li>
-  <li><a href="https://vhxpffltm.tistory.com/131">서블릿과 데이터베이스 연동 조회: PrepareStatement (tistory.com)</a></li>
-  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=robinnw&amp;logNo=220000301263">서블릿 오라클DB연동 - Servlet&amp;JDBC (insert , select SQL 사용)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="nginx" /><category term="tomcat" /><category term="servlet" /><summary type="html"><![CDATA[오라클 DB 와 웹 서버 연동 테스트]]></summary></entry></feed>
+</details>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="Database" /><summary type="html"><![CDATA[오라클 db로 계정 생성, 테이블 생성, 데이터 삽입을 해보자.]]></summary></entry></feed>
