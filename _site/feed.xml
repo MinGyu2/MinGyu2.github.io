@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-04T11:36:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-07T03:41:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTCArIOyVheyEsSDsiqTtgazrpr3tirjrpbwg7KCE64us7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkzsnYQg7YG066at7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Drpbwg7JqU7LKt7ZWc64ukLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDtjpjsnbTsp4Drpbwg7J2R64u17ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDslYXshLEg7Iqk7YGs66a97Yq47JeQIOydmO2VtCDtjpjsnbTsp4Ag6rWs7KGw6rCAIOuPmeyggeycvOuhnCDrs4DtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOqzteqyqeyekCA6IOuvvOqwkO2VnCDrjbDsnbTthLDrpbwg7KCE7Iah7ZWc64ukLiIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG5BW-qzteqyqeyekF0gLS0-fOyVheydmOyggeyduCDsiqTtgazrpr3tirjrpbwg64Sj7J2AIOqyjOyLnOq4gOydhCDsnpHshLHtlZzri6R8IEJb7ISc67KEXTtcbkNb7IKs7Jqp7J6QXSAtLT587IKs7Jqp7J6Q6rCAIOyVheydmOyggeyduCDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsmpTssq3tlZzri6R8IEJb7ISc67KEXVxuQlvshJzrsoRdIC0tPiB86rKM7Iuc6riA7J2EIOydkeuLteycvOuhnCDrs7Trgrjri6R8IENb7IKs7Jqp7J6QXVxuQ1vsgqzsmqnsnpBdIC0tPiB86rO16rKp7J6Q64qUIOyCrOyaqeyekOuhnOu2gO2EsCDrr7zqsJDtlZwg642w7J207YSw66W8IOuwm-uKlOuLpC58IEFb6rO16rKp7J6QXSIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5CW-yEnOuyhF0gLS0-IHzqsozsi5zquIDsnYQg7J2R64u17Jy866GcIOuztOuCuOuLpHwgQ1vsgqzsmqnsnpBdXG5BW-qzteqyqeyekF0gLS0-fOyVheydmOyggeyduCDsiqTtgazrpr3tirjrpbwg64Sj7J2AIOqyjOyLnOq4gOydhCDsnpHshLHtlZzri6R8IEJb7ISc67KEXTtcbkNb7IKs7Jqp7J6QXSAtLT587IKs7Jqp7J6Q6rCAIOyVheydmOyggeyduCDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsmpTssq3tlZzri6R8IEJb7ISc67KEXVxuQ1vsgqzsmqnsnpBdIC0tPiB86rO16rKp7J6Q64qUIOyCrOyaqeyekOuhnOu2gO2EsCDrr7zqsJDtlZwg642w7J207YSw66W8IOuwm-uKlOuLpC58IEFb6rO16rKp7J6QXSIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
@@ -23,7 +29,182 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹서버 만들기 10 메뉴 버튼 및 게시판 제작</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/" rel="alternate" type="text/html" title="웹서버 만들기 10 메뉴 버튼 및 게시판 제작" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/"><![CDATA[<h2 id="jsp-페이지-모듈화">JSP 페이지 모듈화</h2>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 이론</title><link href="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="XSS 이론" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-07T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="xss">XSS</h2>
+<h3 id="개념">개념</h3>
+<ul>
+  <li>클라우드 측 코드를 삽입하는 공격이다.</li>
+  <li>피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다.</li>
+  <li>Cross-site Scripting 의 약자이다.</li>
+  <li>개발자가 고려하지 않는 기능을 동작시킨다.</li>
+</ul>
+
+<h3 id="공격-피해">공격 피해</h3>
+
+<h4 id="사용자-쿠키-탈취">사용자 쿠키 탈취</h4>
+<ul>
+  <li>document.cookie 를 활용하여 사용자 쿠키 값을 훔친다.</li>
+  <li>사용자 브라우저의 쿠키에 저장된 합법적인 <strong>Session ID 값</strong>이나 <strong>액세스 토큰 값</strong>을 훔쳐 원격지 서버로 전송한다.</li>
+</ul>
+
+<h4 id="사용자-개인정보-탈취">사용자 개인정보 탈취</h4>
+<ul>
+  <li>Key Logger 방식으로 사용자 입력을 탈취한다.</li>
+  <li>XSS Keylog 가 삽입된 페이지에 사용자가 접근하면 Keyboard Event 를 통해 입력 값을 후킹한다.</li>
+  <li>후킹한 값을 원격지 서버로 전송한다.</li>
+</ul>
+
+<h4 id="악성코드-다운로드">악성코드 다운로드</h4>
+<ul>
+  <li>사용자가 악성 스크립트가 있는 URL을 클릭하도록 유도하여 악성 프로그램 다운로드 받는 사이트로 리타이렉한다.</li>
+  <li>사용자가 악성 프로그램을 다운로드 하도록 유도한다.</li>
+</ul>
+
+<h4 id="피싱-사이트-강제-이동">피싱 사이트 강제 이동</h4>
+<ul>
+  <li>가짜 사이트로 위장하여 사용자의 로그인 정보를 탈취한다.</li>
+  <li>실제 사이트와 유사한 웹 페이지를 통해 사용자의 개인정보를 훔쳐올 수 있다.</li>
+</ul>
+
+<h3 id="공격-유형">공격 유형</h3>
+
+<h4 id="stored-xss--서버에-저장하기-">Stored XSS ( 서버에 저장하기 )</h4>
+
+<h5 id="설명">설명</h5>
+<ul>
+  <li>비정상적인 방법이 아니라 서버에서 제공하는 서비스의 취약점을 이용한 것이다.</li>
+  <li>공격자가 악성 스크립트를 서버 페이지에 저장하고 해당 페이지를 사용자에게 노출 시킨다.</li>
+  <li>사용자가 악성 스크립트가 들어있는 페이지를 방문하면 악성 스크립트가 사용자 브라우저에서 실행된다.</li>
+</ul>
+
+<h5 id="유형">유형</h5>
+<ul>
+  <li>댓글</li>
+  <li>게시판</li>
+  <li>이메일</li>
+  <li>블로그 포스</li>
+  <li>채팅방의 유저 이름</li>
+</ul>
+
+<h5 id="과정">과정</h5>
+<ol>
+  <li>XSS 취약점이 있는 게시판에 쿠키 정보를 탈취하기 위한 악성 스크립트를 포함한 게시물을 작성한다.</li>
+  <li>사용자가 해당 글 열람 시 사용자의 쿠키 정보가 공격자에게 전송된다.</li>
+  <li>공격자가 사용자의 쿠키정보를 이용하여 사이트에 접근한다.</li>
+</ol>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64Sj7J2AIOqyjOyLnOq4gOydhCDsnpHshLHtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOyVheyEsSDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsmpTssq3tlZzri6QuXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsnZHri7XtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOyCrOyaqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjqsIAg64-Z7J6R7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDqs7XqsqnsnpAgOiDrr7zqsJDtlZwg642w7J207YSwIOyghOyGoe2VnOuLpC4iLCJtZXJtYWlkIjpudWxsfQ" /></p>
+
+<h4 id="reflected-xss">Reflected XSS</h4>
+
+<h5 id="설명-1">설명</h5>
+<ul>
+  <li>악성 스크립트가 담긴 URL을 만들어 일반 사용자에게 전달한다.</li>
+  <li>URL 주소 뒤에 붙는 쿼리에 악성 스크립트를 작성하여 전달한다.</li>
+  <li>사용자가 공격자가 건네준 URL을 클릭하여 방문하면 악성 스크립트가 담긴 페이지를 사용자에게 보여준다. 그리고 사용자 브라우저에서 악성 스크립트가 실행된다.</li>
+</ul>
+
+<h5 id="유형-1">유형</h5>
+<ul>
+  <li>이메일</li>
+</ul>
+
+<h5 id="과정-1">과정</h5>
+<ol>
+  <li>XSS 취약한 서버 URL와 악성 스크립트를 합쳐서 만든 링크를 사용자에게 보낸다.</li>
+  <li>사용자가 링크를 클릭하면 취약한 서버에 악성 스크립트랑 같이 요청을 보낸다.</li>
+  <li>사용자는 서버로 부터 응답을 받는다. 이때 받은 페이지는 서버에서 완성된 페이지이고 악성 스크립트가 담겨져 있다.</li>
+  <li>사용자 브라우저는 악성 스크립트를 동작시킨다.</li>
+  <li>공격자는 사용자의 민감한 정보를 훔칠 수 있다.</li>
+</ol>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTCArIOyVheyEsSDsiqTtgazrpr3tirjsnYQg67O064K464ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkzsnYQg7YG066at7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Drpbwg7JqU7LKt7ZWc64ukLlxu7ISc67KEIC0-PiDshJzrsoQgOiDslYXshLEg7Iqk7YGs66a97Yq466W8IOuEo-ydgCDtjpjsnbTsp4Drpbwg7JmE7ISxIOyLnO2CqOuLpC5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeA66W8IOydkeuLte2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuOqwgCDrj5nsnpHtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOqzteqyqeyekCA6IOuvvOqwkO2VnCDrjbDsnbTthLDrpbwg7KCE7Iah7ZWc64ukLiIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<h4 id="dom-based-xss">DOM Based XSS</h4>
+
+<h5 id="설명-2">설명</h5>
+<ul>
+  <li>JavaScript 코드로 DOM 객체를 제어하는 과정에서 발생한다.</li>
+  <li>악성 스크립트가 서버로 전송되지 않고, 브라우저에서 동적으로 동작한다.</li>
+  <li>웹 사이트 코드를 조사하지 않고는 취약점을 발견할 수 없다. 따라서 공격 당하기 쉽다.</li>
+  <li>url에 사용자가 접근할 경우 서버와의 상호작용 없이 브라우저에서 악성 스크립트가 실행된다.</li>
+  <li>DOM 이 만들어지고 화면에 렌더링 된 이후, 악성 스크립트 코드에 의해 DOM 구조가 동적으로 바뀐다.</li>
+</ul>
+
+<h5 id="과정-2">과정</h5>
+<ol>
+  <li>악성 스크립트가 실행되도록 URL 주소를 만들어 사용자에게 전달한다.</li>
+  <li>사용자는 링크를 클릭하여 서버에 페이지를 요청하고 서버는 사용자에게 페이지를 넘겨준다.</li>
+  <li>서버로부터 받은 페이지를 사용자가 읽을 때 사용자 브라우저에서 악성 스크립트를 동작 시킨다.</li>
+  <li>사용자 브라우저에서 페이지 구조를 동적으로 변경한다.</li>
+  <li>사용자는 공격자에게 민감한 데이터를 전송한다.</li>
+</ol>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTCArIOyVheyEsSDsiqTtgazrpr3tirjrpbwg7KCE64us7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkzsnYQg7YG066at7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Drpbwg7JqU7LKt7ZWc64ukLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDtjpjsnbTsp4Drpbwg7J2R64u17ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDslYXshLEg7Iqk7YGs66a97Yq47JeQIOydmO2VtCDtjpjsnbTsp4Ag6rWs7KGw6rCAIOuPmeyggeycvOuhnCDrs4DtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOqzteqyqeyekCA6IOuvvOqwkO2VnCDrjbDsnbTthLDrpbwg7KCE7Iah7ZWc64ukLiIsIm1lcm1haWQiOm51bGx9" /></p>
+
+<h3 id="대응-방안">대응 방안</h3>
+<ul>
+  <li>신뢰할 수 없는 사이트, 메일을 피해야한다.</li>
+  <li>콘텐츠 보안 정(CSP) 사용한다. 스크립트 실행에 대한 정책을 설정하여 예방한다.</li>
+  <li>HTTP 응답에 유저가 입력한 데이터가 존재한다면 입력한 데이터를 인코딩 해야 한다.</li>
+  <li>입력에 필터를 적용해야 한다. 즉 어떤 데이터 유효하고 예상되는 입력인지 확인한다. 특수 문자를 단순 문자로 인식하게 한다.</li>
+</ul>
+
+<h4 id="xss-필터링">XSS 필터링</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>문자</th>
+      <th>인코딩 된 문자</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;amp;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;lt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;#x27;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;quot;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;#40;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;#41;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;#x2F;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://junhyunny.github.io/information/security/spring-mvc/stored-cross-site-scripting/">저장형 XSS(Stored Cross Site Scripting) 공격과 방어 - Junhyunny’s Devlogs</a></li>
+  <li><a href="https://zidarn87.tistory.com/217">토픽 스터디 / 정보보안 / XSS(Cross Site Scripting) 공격 - 해킹</a></li>
+  <li><a href="https://velog.io/@ckdwns9121/%ED%86%A0%ED%81%B0token%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%83%88%EC%B7%A8-%EB%8B%B9%ED%95%98%EB%8A%94%EA%B0%80">토큰(token)은 어떻게 탈취 당하는가? (velog.io)</a></li>
+  <li><a href="https://portswigger.net/web-security/cross-site-scripting">What is cross-site scripting (XSS) and how to prevent it?</a></li>
+  <li><a href="https://dar0m.tistory.com/227">XSS(Cross-site Scripting) 공격 (tistory.com)</a></li>
+  <li><a href="https://4rgos.tistory.com/1">XSS(Cross Site Scripting) 공격이란? :: ARGOS (tistory.com)</a></li>
+  <li><a href="https://nordvpn.com/ko/blog/xss-attack/#head3-3">크로스 사이트 스크립팅의 정의 및 공격 유형 NordVPN</a></li>
+  <li><a href="https://namu.wiki/w/XSS">XSS - 나무위키 (namu.wiki)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><summary type="html"><![CDATA[XSS 개념 클라우드 측 코드를 삽입하는 공격이다. 피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다. Cross-site Scripting 의 약자이다. 개발자가 고려하지 않는 기능을 동작시킨다.]]></summary></entry><entry><title type="html">웹서버 만들기 10 메뉴 버튼 및 게시판 제작</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/" rel="alternate" type="text/html" title="웹서버 만들기 10 메뉴 버튼 및 게시판 제작" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/"><![CDATA[<h2 id="jsp-페이지-모듈화">JSP 페이지 모듈화</h2>
 <ul>
   <li>액션 태그를 사용해서 화면을 모듈화시켜 코드가 중복되는 것을 방지 할 수 있다.</li>
 </ul>
@@ -1938,92 +2119,4 @@
   <li><a href="https://stackoverflow.com/questions/11047548/getting-cookie-in-servlet">java - Getting cookie in servlet - Stack Overflow</a></li>
   <li><a href="https://velog.io/@hyun6ik/Servlet-Http-Session">Servlet Http Session (velog.io)</a></li>
   <li><a href="https://record-than-remember.tistory.com/entry/%EB%A1%9C%EA%B7%B8%EC%9D%B8-%E2%86%92-%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83-%EB%B2%84%ED%8A%BC">로그인,로그아웃 Session &amp; 로그인 버튼 → 로그아웃 버튼 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="로그인" /><category term="로그아웃" /><category term="HASH" /><category term="Oracle DB" /><summary type="html"><![CDATA[웹 서버 만들기 (1) ~ (6) 과정을 통해 웹서버와 DB서버 구현을 완료하였다. 웹 서버에서 db에 저장된 데이터를 가져오는 방법도 알아보았다.]]></summary></entry><entry><title type="html">오라클DB</title><link href="http://localhost:4000/%EC%98%A4%EB%9D%BC%ED%81%B4DB/" rel="alternate" type="text/html" title="오라클DB" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T22:06:00+09:00</updated><id>http://localhost:4000/%EC%98%A4%EB%9D%BC%ED%81%B4DB</id><content type="html" xml:base="http://localhost:4000/%EC%98%A4%EB%9D%BC%ED%81%B4DB/"><![CDATA[<h3 id="db">DB</h3>
-<hr />
-<ul>
-  <li>여러 사람에 의해 공유되어 사용될 목적으로 통합하여 관리되는 데이터의 집합이다.</li>
-  <li>자료를 구조화 하여 저장함으로써 자료 검색과 갱신의 효율을 높일 수 있다.</li>
-</ul>
-
-<h3 id="oracle-db">Oracle DB</h3>
-<hr />
-<ul>
-  <li>DB 서버가 통합된 하나의 스토리지를 공유하는 방식이다.</li>
-  <li>오라클 db 는 mysql 과 달리 데이터 베이스를 만드는 것이 아닌 사용자를 만들고 권한을 부여한다.</li>
-  <li>사용자 중심으로 테이블을 관리한다.</li>
-</ul>
-
-<h4 id="oracle-사용자-생성">Oracle 사용자 생성</h4>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">su - oracle</code> 명령을 이용하여 <code class="language-plaintext highlighter-rouge">oracle</code> 사용자로 전환한다.<br /><img src="https://user-images.githubusercontent.com/31990118/230787698-796c4b78-52ec-44f4-a291-4b01c4ad5faa.png" alt="Pasted image 20230409214824" /></li>
-  <li><code class="language-plaintext highlighter-rouge">sqlplus / as sysdba</code> 명령을 통해 <code class="language-plaintext highlighter-rouge">SQL</code> 창으로 들어가자.<br /><img src="https://user-images.githubusercontent.com/31990118/230787719-e9f09ac1-7b75-45ac-a3ff-199c2c39eabf.png" alt="Pasted image 20230409220051" /></li>
-  <li><code class="language-plaintext highlighter-rouge">CREATE USER "사용자명" identified by "비번"</code> 명령을 <code class="language-plaintext highlighter-rouge">SQL</code> 창에 입력하여 사용자를 생성한다.</li>
-  <li>여기서 <code class="language-plaintext highlighter-rouge">ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다.</code> 라는 오류가 발생 한다면 사용자명 앞에 <code class="language-plaintext highlighter-rouge">c##</code> 또는 <code class="language-plaintext highlighter-rouge">C##</code> 을 붙여야한다.<br /><code class="language-plaintext highlighter-rouge">CREATE USER "c##사용자명" identified by "비번"</code></li>
-  <li><code class="language-plaintext highlighter-rouge">select username from dba_users;</code> 명령을 <code class="language-plaintext highlighter-rouge">SQL</code> 창에 입력하여 새로 만든 계정을 확인할 수 있다.</li>
-  <li>새로 만든 계정에 접속할려고 하면 권한이 없다는 에러가 발생한다. <code class="language-plaintext highlighter-rouge">SYS</code> 계정으로 먼저 연결한 다음 권한을 부여해줘야 한다.<br /><script src="https://gist.github.com/MinGyu2/61b386bb2045be5bab0eb3a64d866805.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">conn 사용자명</code> 을 <code class="language-plaintext highlighter-rouge">SQL</code> 창에 입력하여 새로 만든 계정으로 접속한다.<br /><script src="https://gist.github.com/MinGyu2/0b46dde8c67e9a3284935fc95b687727.js"></script></li>
-  <li>테이블 생성을 해보자. 밑에는 예시 테이블이다.<br /><script src="https://gist.github.com/MinGyu2/f291c98972b64cb9d9daec3a05fcc7f6.js"></script></li>
-  <li>생성한 테이블을 확인하자. <code class="language-plaintext highlighter-rouge">TEST</code> 라는 테이블이 만들어진 것을 확인할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/dd0fc152241100f36b8990e5178f81e5.js"></script></li>
-  <li>생성한 테이블에 데이터를 넣어보자.<br /><script src="https://gist.github.com/MinGyu2/d5ae11104c21b190b8a6ce0df9ba96b5.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">ORA-01950: 테이블스페이스 'USERS'에 대한 권한이 없습니다.</code> 오류가 발생하였다.  해당 에러는 <code class="language-plaintext highlighter-rouge">users</code> 테이블스페이스에서 얼마만큼의 영역을 할당한것인지 정해지지 않은 상태이기 때문이다. 해결 방법은 해당 테이블스페이스에 대해 공간을 할당해 주면된다.<br /><script src="https://gist.github.com/MinGyu2/409ec5c72c8b7b53f90d89e9c8e466c7.js"></script><br /><script src="https://gist.github.com/MinGyu2/8ad5b5aa792babb467fa0fe44f2a48f1.js"></script></li>
-  <li>이제 다시 <code class="language-plaintext highlighter-rouge">insert</code> 명령어로 데이터를 넣어보자.<br /><script src="https://gist.github.com/MinGyu2/e10317d95ba51c0efc4475e4325788b6.js"></script></li>
-  <li>테이블에 잘 들어갔는지 확인해 보자. 데이터가 db에 잘 들어갔다.<br /><script src="https://gist.github.com/MinGyu2/9278303018b0d0298a546647843f12d2.js"></script></li>
-</ol>
-
-<h3 id="oracle-db-명령어">Oracle DB 명령어</h3>
-<hr />
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">show user</code> : 현재 접속중인 유저를 알 수 있다.</li>
-  <li><code class="language-plaintext highlighter-rouge">SELECT * FROM tab;</code> : 현재 계정의 테이블 목록 조회하기.</li>
-  <li><code class="language-plaintext highlighter-rouge">select * from all_users;</code> : 계정 정보들 확인하기.</li>
-  <li><code class="language-plaintext highlighter-rouge">SELECT owner FROM dba_tables WHERE table_name= '테이블명';</code> : 테이블 소유자가 누구인지 확인할 수 있다. 단 <code class="language-plaintext highlighter-rouge">SYS</code> 유저로 접속한다음 이 명령어를 사용해야 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">CREATE USER 사용자명 IDENTIFIED BY 암호;</code> : 사용자 생성.</li>
-  <li><code class="language-plaintext highlighter-rouge">ALTER USER 사용자명 IDENTIFIED BY 새로운 암호;</code> : 사용자 비밀번호 변경.</li>
-  <li><code class="language-plaintext highlighter-rouge">DROP USER 사용자명 CASCADE;</code> : 사용자 삭제.</li>
-  <li><code class="language-plaintext highlighter-rouge">grant 권한,권한2,.. to 계정명;</code> : 권한 부여하기.</li>
-  <li><code class="language-plaintext highlighter-rouge">revoke 권한,권한2,.. from 계정명;</code> : 권한 회수하기(취소하기).</li>
-  <li><code class="language-plaintext highlighter-rouge">commit;</code> : 지금 까지의 변경 사항들 적용하기.</li>
-  <li><code class="language-plaintext highlighter-rouge">select * from DBA_ROLE_PRIVS WHERE GRANTEE = 사용자명(대문자);</code> : 사용자에게 부여된 권한들을 확인할 수 있다.</li>
-  <li><code class="language-plaintext highlighter-rouge">delete from 테이블명;</code> : 테이블의 모든 행을 삭제한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">drop table 테이블명;</code> : 테이블을 삭제한다. 정확히는 휴지통으로 보낸다.</li>
-  <li><code class="language-plaintext highlighter-rouge">drop table 테이블 이름 purge;</code> : 휴지통으로 보내지 않고 테이블을 완전 삭제 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">show recyclebin;</code> : 휴지통의 테이블들 조회.</li>
-  <li><code class="language-plaintext highlighter-rouge">FLASHBACK TABLE 테이블 이름 TO BEFORE DROP;</code> : 휴지통의 테이블 복원.</li>
-  <li><code class="language-plaintext highlighter-rouge">PURGE RECYCLEBIN;</code> : 휴지통 비우기.</li>
-  <li><code class="language-plaintext highlighter-rouge">PURGE TABLE 테이블 이름;</code> : 휴지통에서 특정 테이블만 삭제.</li>
-  <li><code class="language-plaintext highlighter-rouge">PURGE DBA_RECYCLEBIN;</code> : DBA 권한으로 휴지통 내 테이블 전체 삭제.</li>
-  <li><code class="language-plaintext highlighter-rouge">select status from v$instance;</code> : 현재 DB 상태 확인하기.</li>
-  <li><code class="language-plaintext highlighter-rouge">DELETE FROM 테이블명 WHERE 조건;</code> : 테이블에 있는 조건에 맞는 행을 삭제한다.</li>
-</ul>
-
-<p><br /><br /></p>
-<details>
-<summary>
-참고 사이트 목록
-</summary>
-<h3 id="참고-사이트">참고 사이트<a class="header-link" href="#참고-사이트" title="Permalink"><span class="sr-only">Permalink</span><i class="fas fa-link"></i></a></h3>
-<ul>
-  <li><a href="https://www.centlinux.com/2022/06/install-oracle-database-21c-xe-on-rocky-linux.html">Install Oracle Database 21c XE on Rocky Linux 8 CentLinux</a></li>
-  <li><a href="https://boanhack.tistory.com/171">오라클 현재 DB 상태 확인하기</a></li>
-  <li><a href="https://coding-factory.tistory.com/413">Oracle ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다. 에러 해결</a></li>
-  <li><a href="https://gent.tistory.com/528">Oracle 사용자 생성 및 삭제 방법 (Create User) (tistory.com)</a></li>
-  <li><a href="https://sgcomputer.tistory.com/247">Oracle 오라클 기본 - 데이터 베이스 만들기(사용자 생성)</a></li>
-  <li><a href="https://velog.io/@alicesykim95/Oracle%EA%B3%BC-MySQL%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90">Oracle과 MySQL의 차이점 </a></li>
-  <li><a href="https://streamls.tistory.com/entry/Oracle-%EC%84%A4%EC%B9%98-%ED%9B%84-%EA%B3%84%EC%A0%95-%EC%83%9D%EC%84%B1-%EB%B0%8F-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%9D%EC%84%B1">Oracle 설치 후 계정 생성 및 테이블 생성</a></li>
-  <li><a href="https://endorphin0710.tistory.com/28">오라클 현재 작업중인 유저 확인하기</a></li>
-  <li><a href="https://yjy0755.tistory.com/22">새로운 계정을 만들어 테이블 만들어보기 </a></li>
-  <li><a href="https://holics1226.tistory.com/16">ORA-01045 (로그인 실패/권한 부족)</a></li>
-  <li><a href="https://www.oracletutorial.com/oracle-administration/oracle-show-tables/">Oracle Show Tables: List Tables in Oracle Database (oracletutorial.com)</a></li>
-  <li><a href="https://jink1982.tistory.com/33">Oracle 데이터 입력(INSERT), 조회(SELECT), UPDATE(수정), DELETE(삭제)</a></li>
-  <li><a href="https://gogogameboy.tistory.com/entry/oracle-sql-select2">오라클 SQL, SELECT문 특정 열 선택 </a></li>
-  <li><a href="https://gent.tistory.com/407">오라클 INSERT 방법 &amp; 노하우 정리 (데이터 입력)</a></li>
-  <li><a href="https://dololak.tistory.com/756"> 오라클 ORA-01950: 테이블스페이스 ‘USERS’에 대한 권한이 없습니다 오류 해결 방법</a></li>
-  <li><a href="https://m.blog.naver.com/cksgy32/221675944029">SQLD ORA-01950: 테이블스페이스 ‘USERS’에 대한 권한이 없습니다.</a></li>
-  <li><a href="https://hengbokhan.tistory.com/78">Oracle BIN$…형식의 테이블 완전히 삭제하기</a></li>
-  <li><a href="https://bangu4.tistory.com/320">오라클 계정,권한 관리 (tistory.com)</a></li>
-  <li><a href="https://m.blog.naver.com/deersoul6662/221466474481">oracle 모든 유저, 데이터 베이스, 테이블 확인 : 네이버 블로그 (naver.com)</a></li>
-  <li><a href="https://ajdahrdl.tistory.com/2">Oracle 계정 생성 및 권한 부여 방법 (tistory.com)</a></li>
-  <li><a href="https://loghada.tistory.com/4">Oracle DB 계정 생성/사용자 확인</a></li>
-  <li><a href="https://www.ibm.com/docs/ko/i/7.1?topic=language-removing-rows-from-table-using-delete-statement">DELETE문을 사용하여 테이블에서 행 제거 - IBM Documentation</a></li>
-</ul>
-</details>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="Database" /><summary type="html"><![CDATA[오라클 db로 계정 생성, 테이블 생성, 데이터 삽입을 해보자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="로그인" /><category term="로그아웃" /><category term="HASH" /><category term="Oracle DB" /><summary type="html"><![CDATA[웹 서버 만들기 (1) ~ (6) 과정을 통해 웹서버와 DB서버 구현을 완료하였다. 웹 서버에서 db에 저장된 데이터를 가져오는 방법도 알아보았다.]]></summary></entry></feed>
