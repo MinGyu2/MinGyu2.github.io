@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-07T03:41:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTCArIOyVheyEsSDsiqTtgazrpr3tirjrpbwg7KCE64us7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkzsnYQg7YG066at7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Drpbwg7JqU7LKt7ZWc64ukLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDtjpjsnbTsp4Drpbwg7J2R64u17ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDslYXshLEg7Iqk7YGs66a97Yq47JeQIOydmO2VtCDtjpjsnbTsp4Ag6rWs7KGw6rCAIOuPmeyggeycvOuhnCDrs4DtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOqzteqyqeyekCA6IOuvvOqwkO2VnCDrjbDsnbTthLDrpbwg7KCE7Iah7ZWc64ukLiIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-08T01:30:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTCArIOyVheyEsSDsiqTtgazrpr3tirjrpbwg7KCE64us7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkzsnYQg7YG066at7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Drpbwg7JqU7LKt7ZWc64ukLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDtjpjsnbTsp4Drpbwg7J2R64u17ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDslYXshLEg7Iqk7YGs66a97Yq47JeQIOydmO2VtCDtjpjsnbTsp4Ag6rWs7KGw6rCAIOuPmeyggeycvOuhnCDrs4DtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOqzteqyqeyekCA6IOuvvOqwkO2VnCDrjbDsnbTthLDrpbwg7KCE7Iah7ZWc64ukLiIsIm1lcm1haWQiOm51bGx9" /></p>
 
 <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG5BW-qzteqyqeyekF0gLS0-fOyVheydmOyggeyduCDsiqTtgazrpr3tirjrpbwg64Sj7J2AIOqyjOyLnOq4gOydhCDsnpHshLHtlZzri6R8IEJb7ISc67KEXTtcbkNb7IKs7Jqp7J6QXSAtLT587IKs7Jqp7J6Q6rCAIOyVheydmOyggeyduCDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsmpTssq3tlZzri6R8IEJb7ISc67KEXVxuQlvshJzrsoRdIC0tPiB86rKM7Iuc6riA7J2EIOydkeuLteycvOuhnCDrs7Trgrjri6R8IENb7IKs7Jqp7J6QXVxuQ1vsgqzsmqnsnpBdIC0tPiB86rO16rKp7J6Q64qUIOyCrOyaqeyekOuhnOu2gO2EsCDrr7zqsJDtlZwg642w7J207YSw66W8IOuwm-uKlOuLpC58IEFb6rO16rKp7J6QXSIsIm1lcm1haWQiOm51bGx9" /></p>
 
@@ -29,7 +29,68 @@
 </code></pre></div></div>
 <blockquote>
   <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 이론</title><link href="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="XSS 이론" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-07T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="xss">XSS</h2>
+</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL Injection 정리</title><link href="http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="SQL Injection 정리" /><published>2023-05-08T00:00:00+09:00</published><updated>2023-05-08T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="sql-injection">SQL Injection</h2>
+
+<h3 id="개념">개념</h3>
+<ul>
+  <li>임의의 SQL 질의문을 삽입해 실행하는 공격이다.</li>
+</ul>
+
+<h3 id="공격-피해">공격 피해</h3>
+
+<h4 id="인증-우회">인증 우회</h4>
+<ul>
+  <li>입력에 SQL 질의문을 삽입하여 인증 우회를 한다.</li>
+  <li>사용자가 입력한 값이 별도의 검증 과정 없이 서버의 SQL 문과 합쳐져 발생하는 문제이다.</li>
+</ul>
+
+<h4 id="데이터-추출">데이터 추출</h4>
+<ul>
+  <li>공격자가 원하는 정보를 DB에서 읽어올 수 있다.</li>
+  <li>사용자가 입력한 값이 별도의 검증 과정 없이 서버의 SQL 문과 합쳐져 발생하는 문제이다.</li>
+</ul>
+
+<h4 id="데이터-변조">데이터 변조</h4>
+<ul>
+  <li>insert, delete, update 구문을 이용하여 DB 서버에 저장된 데이터를 변화시킨다.</li>
+  <li>사용자가 입력한 값이 별도의 검증 과정 없이 서버의 SQL 문과 합쳐져 발생하는 문제이다.</li>
+</ul>
+
+<h4 id="web-shell">Web Shell</h4>
+<ul>
+  <li>업로드 취약점을 통하여 시스템에 명령을 내릴수 있는 코드를 말한다.</li>
+  <li>SQL Injection 공격을 통해 악성코드를 업로드할 수 있다.</li>
+  <li>하지만 웹 서버와 DB 서버가 물리적으로 분리되어 있다면 악성코드를 실행하기 힘들다.</li>
+</ul>
+
+<h3 id="공격-유형">공격 유형</h3>
+
+<h4 id="union-sqli">Union SQLi</h4>
+<ul>
+  <li>union 문을 이용하여 select 문을 추가하고, 결과를 받아본다.</li>
+</ul>
+
+<h4 id="error-based-sqli">Error Based SQLi</h4>
+<ul>
+  <li>논리에러를 유발시킬 수 있는 특정 함수를 이용한다.</li>
+</ul>
+
+<h4 id="blind-sqli">Blind SQLi</h4>
+<ul>
+  <li>참과 거짓 조건을 이용해서 데이터 문자 하나씩 추출한다.</li>
+</ul>
+
+<h3 id="대응-방안">대응 방안</h3>
+<ul>
+  <li>Prepared Statement 를 이용하기. 단 order by, table 이름, column 이름에는 적용할 수 없다.</li>
+  <li>화이트 리스트 필터링.(허락. 더 안전하다. ) 즉 정해놓은 애들만 들어올 수 있다.</li>
+  <li>블랙 리스트 필터링. (금지) 금지한 명령어는 사용할 수 없다.</li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://ko.wikipedia.org/wiki/%EC%9B%B9_%EC%85%B8">웹 셸 - 위키백과, 우리 모두의 백과사전 (wikipedia.org)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL Injection" /><summary type="html"><![CDATA[SQL Injection 간단하게 정리해보자.]]></summary></entry><entry><title type="html">XSS 이론</title><link href="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="XSS 이론" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-07T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="xss">XSS</h2>
 <h3 id="개념">개념</h3>
 <ul>
   <li>클라우드 측 코드를 삽입하는 공격이다.</li>
@@ -1890,233 +1951,4 @@
   <li><a href="https://blog.jiniworld.me/93">MySQL Function암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)</a></li>
   <li><a href="https://imlena94.tistory.com/entry/SQL-Injection-%EA%B8%B0%EC%B4%88-MSORACLEMY-SQL-%EC%8B%9C%EA%B0%84%EC%A7%80%EC%97%B0-%EC%A3%BC%EC%84%9D-%EB%93%B1">SQL Injection 기초 - MS/ORACLE/MY SQL , 시간지연, 주석 등 (tistory.com)</a></li>
   <li><a href="https://jhnyang.tistory.com/470">SQL 정렬하기 order by 쿼리 사용법 1, 2 desc 의미 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL" /><category term="Oracle DB" /><category term="SQL Injection" /><category term="Java" /><summary type="html"><![CDATA[SQL Injection 이란? sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다. 웹 해킹 기술중 하나이다.]]></summary></entry><entry><title type="html">웹서버 만들기 7</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/" rel="alternate" type="text/html" title="웹서버 만들기 7" /><published>2023-04-14T00:00:00+09:00</published><updated>2023-04-15T00:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C7/"><![CDATA[<ul>
-  <li>웹 서버 만들기 (1) ~ (6) 과정을 통해 웹서버와 DB서버 구현을 완료하였다.</li>
-  <li>웹 서버에서 db에 저장된 데이터를 가져오는 방법도 알아보았다.</li>
-</ul>
-
-<h3 id="로그인-구현">로그인 구현</h3>
-<hr />
-<h4 id="로그인-인증-구조">로그인 인증 구조</h4>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /><br /></p>
-
-<p><br /><br /></p>
-
-<h4 id="유저정보를-저장-하기-위한-db-특징">유저정보를 저장 하기 위한 DB 특징</h4>
-<ul>
-  <li>
-    <p>유저의 정보를 저장하기 위해서 <code class="language-plaintext highlighter-rouge">오라클DB</code> 에서 <code class="language-plaintext highlighter-rouge">USERS</code> 테이블을 만들어 주었다.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>컬럼명</th>
-          <th>데이터 타입</th>
-          <th>조건</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>sid</td>
-          <td>NUMBER(20)</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>username</td>
-          <td>NVARCHAR2(32)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>email</td>
-          <td>NVARCHAR2(100)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>salt</td>
-          <td>VARCHAR2(30)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>password</td>
-          <td>VARCHAR2(150)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>gen_time</td>
-          <td>NUMBER(20)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>modifi_time</td>
-          <td>NUMBER(20)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>algorithm</td>
-          <td>VARCHAR2(32)|</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>authority</td>
-          <td>CHAR(1)</td>
-          <td>‘0’ 또는 ‘1’ 만 올수 있다.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <script src="https://gist.github.com/MinGyu2/201dcfdfea3de5ae750045ffedffadab.js"></script>
-  </li>
-  <li>일단 로그인을 위한 루트계정을 만들어 주었다.</li>
-  <li>패스워드를 바로 <code class="language-plaintext highlighter-rouge">USERS</code> 테이블에 저장하는 것이아닌 <strong>해시</strong>계산한 값이 저장된다.<br />즉 패스워드 부분에는 <code class="language-plaintext highlighter-rouge">HASH(SALT + 유저비번)</code> 값이 저장된다.</li>
-  <li><code class="language-plaintext highlighter-rouge">gen_time</code> 생성시각을 나타낸다.</li>
-  <li><code class="language-plaintext highlighter-rouge">modifi_time</code> 수정시각을 나타낸다.</li>
-  <li><code class="language-plaintext highlighter-rouge">algorithm</code> 은 어떤 해시함수를 사용하였는지 표시해 준다.(ex- SHA512 등… )</li>
-  <li><code class="language-plaintext highlighter-rouge">authority</code> 는 유저가 관리자 권한을 가지는지 나타낸다.</li>
-</ul>
-
-<p><br /><br /></p>
-
-<h4 id="db-를-관리하기-위한-클래스">DB 를 관리하기 위한 클래스</h4>
-<ul>
-  <li>UsersDAO 를 통해 데이터베이스와 연결하고 저장되어있는 유저정보를 불러올 수 있다.</li>
-  <li>DB 서버에 있는 정보를 보다 쉽게 읽어올 수 있다.<br /><script src="https://gist.github.com/MinGyu2/7eba85df3c0d5e2f9d1a76ff2682e726.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">USERS</code> 테이블에서 읽어온 유저정보는 User 클래스에 저장하여 보다 쉽게 데이터를 읽을 수 있게 하였다.<br /><script src="https://gist.github.com/MinGyu2/025aa74454ea85396923fb446b403f7f.js"></script></li>
-</ul>
-
-<p><br /><br /></p>
-
-<h4 id="로그인-페이지-접속">로그인 페이지 접속</h4>
-<ol>
-  <li>로그인을 하기 위한 url은 <code class="language-plaintext highlighter-rouge">http://주소/sign_in_page</code> 로 설정 하였다.</li>
-  <li><code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/web.xml</code> 의 파일에서 <code class="language-plaintext highlighter-rouge">/sign_in_page</code> uri 가 어떤 클래스로 이어져야 설정하였다.<br /><script src="https://gist.github.com/MinGyu2/ace2c5b71179095cfefcc7e3253d7504.js"></script>즉 <code class="language-plaintext highlighter-rouge">/sign_in_page</code> uri로 요청이 들어오면 <code class="language-plaintext highlighter-rouge">com.mingyu2.login.Login</code> 클래스로 요청을 전달받을 수 있다.</li>
-  <li>아이디와 패스워드 입력을 받기 위한 페이지를 만들어준다. <code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/sign_in_page/sing_in_page.jsp</code> 를 만들어 주었다. 그리고 이 페이지를 <code class="language-plaintext highlighter-rouge">http://주소/sign_in_page</code> 로 접속 하였을 때 보여줄 것이다.<br /><script src="https://gist.github.com/MinGyu2/44c33efb670bae35a1877a99f17a2c6c.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">web.xml</code> 에서 설정한 것 처럼 <code class="language-plaintext highlighter-rouge">Login</code> 클래스에서 클라이언트의 요청을 받는다.<br />만약 클라이언트 요청에서 받은 session id 값이 존재하는 것이면 로그인 페이지에서 바로 메인페이지로 넘어간다.<br />session id 값이 존재 안한다면 <code class="language-plaintext highlighter-rouge">sing_in_page.jsp</code> 페이지를 클라이언트에게 보여준다.<br /><script src="https://gist.github.com/MinGyu2/1e30a18c7cee7f902a809e464219fdd3.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">/sign_in_page</code> uri 로 요청이 들어오면 <code class="language-plaintext highlighter-rouge">/WEB-INF/sign_in_page/sign_in_page.jsp</code> 으로 포워드되게 하였다.<br /><img src="https://user-images.githubusercontent.com/31990118/231966307-6e9a496d-7bd9-4810-bba3-f092cac3caca.png" alt="Pasted image 20230414021004" /></li>
-  <li>즉 첫 로그인이거나 세션이 만료된 상태에서 <code class="language-plaintext highlighter-rouge">http://주소/sign_in_page</code> url 로 접속하면 로그인 페이지를 보여준다.</li>
-  <li>아이디와 비번을 입력하고 <code class="language-plaintext highlighter-rouge">sign in</code> 버튼을 눌러주면 <code class="language-plaintext highlighter-rouge">POST</code> 방식으로 아이디와 비밀번호를 <code class="language-plaintext highlighter-rouge">http://주소/sign_in_page/authentication</code> 로 전송한다.</li>
-</ol>
-
-<p><br /><br /></p>
-
-<h4 id="로그인-인증">로그인 인증</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">/sign_in_page/authentication</code></li>
-</ul>
-
-<ol>
-  <li>먼저 세션 키가 존재하는지 확인하자. 존재하면 바로 메인페이지로 이동한다.</li>
-  <li>post를 통해 요청이 들어오면 먼저 아이디와 비밀번호를 확인한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">LoginAuthentication</code>클래스의 인스턴스를 만들어준다. 인증 클래스의 <code class="language-plaintext highlighter-rouge">userAuthenticatoin</code> 함수에 유저 이름과 패스워드를 전송해준다.</li>
-  <li>인증이 성공하면 <code class="language-plaintext highlighter-rouge">User</code> 정보를 얻을 수 있다. 하지만 인증에 실패하면 <code class="language-plaintext highlighter-rouge">null</code> 값을 받게된다.</li>
-  <li>즉 null 값을 받아 로그인에 실패하면 <code class="language-plaintext highlighter-rouge">/sign_in_page</code> 다시 로그인 페이지로 리다이렉트 요청을 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">User</code> 정보를 받으면 로그인에 성공했다는 것이다.  따라서 <code class="language-plaintext highlighter-rouge">User</code> 오브젝트를 세션에 저장하여 준다. 세션 정보는 session id를 통해 가져올 수 있다.</li>
-  <li>확인해 보니 session id는 자동으로 쿠키에 저장 된다.</li>
-  <li>로그인에 성공하고 session id 도 생성되었다. 마지막으로 메인 페이지로 리다이렉션 해준다.<br /></li>
-</ol>
-
-<script src="https://gist.github.com/MinGyu2/6a43536366c80a7b07529ade2c3fbf9e.js"></script>
-
-<p><br /><br /></p>
-
-<h4 id="비밀번호-인증-과정loginauthentication-클래스">비밀번호 인증 과정(<code class="language-plaintext highlighter-rouge">LoginAuthentication</code> 클래스)</h4>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">Users</code> 테이블에 존재하는 유저인지 확인한다.</li>
-  <li>존재하는 아이디면 salt 와 암호 알고리즘 유형을 가지고 온다.</li>
-  <li>salt 와 입력받은 password 를 합치고 알고리즘 유형에 따라 HASH 암호화를 진행한다.</li>
-  <li>이렇게 <strong>새로 만들어진 해시 암호문</strong>과 <strong>db에 저장된 해시 암호문</strong>을 비교한다.</li>
-  <li>암호문들이 서로 동일하면 로그인에 성공하여 <strong>User</strong> 정보를 리턴해 준다.<br /></li>
-</ol>
-
-<script src="https://gist.github.com/MinGyu2/4ed99fbf300a5d7d8356f63efa7abd65.js"></script>
-
-<p><br /><br /><br /></p>
-
-<h3 id="main-페이지">Main 페이지</h3>
-<hr />
-<ul>
-  <li>로그인에 성공하거나 <code class="language-plaintext highlighter-rouge">session id</code> 가 만료되기 전에 들어갈 수 있는 메인 화면이다.</li>
-  <li>현재 로그인 된 유저 정보를 확인할 수 있다.</li>
-</ul>
-
-<h4 id="메인페이지-접속">메인페이지 접속</h4>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">http://주소/main_page</code> 주소를 통해 메인 페이지에 접속을 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/web.xml</code> 안에 <code class="language-plaintext highlighter-rouge">/main_page</code> uri 요청이 왔을 때 연결해줘야 하는 클래스를 적어주었다.<br /><script src="https://gist.github.com/MinGyu2/a1ce521401bcd401eda9dbfc61a59c2a.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">MainPage</code> 클래스에서 <code class="language-plaintext highlighter-rouge">/main_page</code> uri 요청을 처리해 준다.<br /><script src="https://gist.github.com/MinGyu2/9ea7553e8b77f47e458607acaec9cd85.js"></script></li>
-  <li><code class="language-plaintext highlighter-rouge">main_page</code> 로 요청이 들어오게 되면 먼저 session id가 존재하는지 확인한다.</li>
-  <li>만약 session id가 존재하지 않는다면 로그인페이지로 리다이렉션 해준다. (<code class="language-plaintext highlighter-rouge">sign_in_page</code>)</li>
-  <li>로그인에 성공한다면 관리자 권한을 가진 유저인지 확인을 한다. 관리자 권한을 가진 유저라면 <code class="language-plaintext highlighter-rouge">/main_page_root.jsp</code> 로 포워딩하고, 아니면 <code class="language-plaintext highlighter-rouge">/main_page.jsp</code> 페이지로 포워딩한다.<br /><img src="https://user-images.githubusercontent.com/31990118/231967785-38c5df57-d340-4a28-abe4-43fe9803b026.png" alt="happyhacking" /></li>
-</ol>
-
-<p><br /><br /></p>
-
-<h4 id="jsp-메인-페이지">jsp 메인 페이지</h4>
-<ul>
-  <li>여기서 <code class="language-plaintext highlighter-rouge">main_page_root.jsp</code> 나 <code class="language-plaintext highlighter-rouge">main_page.page</code> 구조는 동일하다.</li>
-  <li>메인페이지(<code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/sign_in_page/main_page.jsp</code>)</li>
-  <li>메인페이지(<code class="language-plaintext highlighter-rouge">MYWEB/ROOT/WEB-INF/sign_in_page/main_page_root.jsp</code>)<br /></li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/28ecd1c7ac7ad9ef0ba296df8025341b.js"></script>
-<p><br /><img src="https://user-images.githubusercontent.com/31990118/231967785-38c5df57-d340-4a28-abe4-43fe9803b026.png" alt="happyhacking" /></p>
-
-<p><br /><br /><br /></p>
-
-<h3 id="로그아웃-기능">로그아웃 기능</h3>
-<hr />
-<ul>
-  <li>로그아웃을 하면 기존에 사용하던 <code class="language-plaintext highlighter-rouge">session id</code> 값을 지워준다.</li>
-  <li>로그인 상태서만 로그아웃 버튼을 누를 수 있다.</li>
-  <li>로그아웃 버튼을 누루면 <code class="language-plaintext highlighter-rouge">/user-logout</code> uri 로 로그아웃 요청을 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">web.xml</code> 을 살펴보면 <code class="language-plaintext highlighter-rouge">/user-logout</code> uri로 요청이 들어왔을 때  <code class="language-plaintext highlighter-rouge">com.mingyu2.login.Logout</code> 클래스로 연결해야하는 것을 볼 수 있다<br /><script src="https://gist.github.com/MinGyu2/b5501ea8b16941e7fb2759feffd4f143.js"></script></li>
-  <li>로그아웃 동작 방식 및 코드<br /><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /><br /><script src="https://gist.github.com/MinGyu2/9b052bd4504a2334ec5af46d8dc68ddf.js"></script></li>
-</ul>
-
-<p><br /><br /></p>
-
-<h3 id="url-와-uri-차이">URL 와 URI 차이</h3>
-<hr />
-<h4 id="url">URL</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">http://localhost/login_page/authentication</code> : 프로토콜 유형을 포함한 완전한 사이트 경로를 말한다.</li>
-</ul>
-
-<h4 id="uri">URI</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">/login_page/authentication</code> : 주소 다음의 경로를 의미한다.</li>
-</ul>
-
-<p><br /><br /></p>
-
-<h3 id="oracle-db-와-mysql">Oracle DB 와 MYSQL</h3>
-<hr />
-<ul>
-  <li>서로 타입이 서로 달라 테이블을 만들때 힘들었다.</li>
-  <li><a href="https://blog.naver.com/PostView.naver?blogId=seek316&amp;logNo=222108639805&amp;parentCategoryNo=&amp;categoryNo=67&amp;viewDate=&amp;isShowPopularPosts=false&amp;from=postView">MYSQL 데이터 타입 종류</a></li>
-  <li><a href="https://codedragon.tistory.com/6159">오라클에 Boolean형 자료형 저장하기</a></li>
-  <li><a href="https://wjheo.tistory.com/entry/%EC%98%A4%EB%9D%BC%ED%81%B4-EXISTS-%ED%99%9C%EC%9A%A9-%EC%98%88%EC%A0%9C">오라클 EXISTS 활용 예제</a></li>
-  <li><a href="https://goddaehee.tistory.com/92">Oracle Dual 테이블이란?</a></li>
-  <li><a href="https://string.tistory.com/29">Oracle과 MSSQL 데이터 타입 비교</a></li>
-</ul>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<hr />
-<ul>
-  <li><a href="https://needjarvis.tistory.com/681">사이트에서 쿠키(Cookie) 확인하기 (tistory.com)</a></li>
-  <li><a href="https://velog.io/@leesomyoung/DB-%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%EB%A5%BC-%EC%95%94%ED%98%B8%ED%99%94%ED%95%98%EC%97%AC-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0">DB 비밀번호를 암호화하여 안전하게 저장하기 (velog.io)</a></li>
-  <li><a href="https://initialcommit.com/blog/how-to-send-data-from-servlet-to-jsp">How to send data from Java Servlet to JSP (initialcommit.com)</a></li>
-  <li><a href="https://rastalion.me/%ED%9A%8C%EC%9B%90-%EA%B0%80%EC%9E%85-%EB%B0%8F-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%84%A4%EA%B3%84/">회원 가입 및 로그인을 위한 테이블 설계 - RastaLion’s IT Blog</a></li>
-  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=robinnw&amp;logNo=220000301263">JSP &amp; Servlet :: 서블릿 오라클DB연동</a></li>
-  <li><a href="https://linuxism.ustd.ip.or.kr/428">회원 정보 테이블 설계 시 고려 사항 (ip.or.kr)</a></li>
-  <li><a href="https://gofnrk.tistory.com/79">자바 비밀번호 암호화 (SHA256,SHA512) + Salt (tistory.com)</a></li>
-  <li><a href="https://kdhyo98.tistory.com/48">Java Random보단 SecureRandom 를 사용하자. </a></li>
-  <li><a href="https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#securerandom-number-generation-algorithms">Java Security Standard Algorithm Names (oracle.com)</a></li>
-  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=ding-dong&amp;logNo=221360965771">java Base64 인코딩 : 네이버 블로그 (naver.com)</a></li>
-  <li><a href="https://chlee21.tistory.com/148">Java Servlet session이란? :: choice blog (tistory.com)</a></li>
-  <li><a href="https://hajoung56.tistory.com/59">varchar와 nvarchar의 차이 (tistory.com)</a></li>
-  <li><a href="https://blog.naver.com/PostView.nhn?blogId=kinsoo007&amp;logNo=221328795448">setAttribute(),getAttribute(),sendRedirect(),getRequestDispatcher()</a></li>
-  <li><a href="https://galid1.tistory.com/502">Web - cookie 와 session 분석 (servlet 예제) (tistory.com)</a></li>
-  <li><a href="https://stackoverflow.com/questions/11047548/getting-cookie-in-servlet">java - Getting cookie in servlet - Stack Overflow</a></li>
-  <li><a href="https://velog.io/@hyun6ik/Servlet-Http-Session">Servlet Http Session (velog.io)</a></li>
-  <li><a href="https://record-than-remember.tistory.com/entry/%EB%A1%9C%EA%B7%B8%EC%9D%B8-%E2%86%92-%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83-%EB%B2%84%ED%8A%BC">로그인,로그아웃 Session &amp; 로그인 버튼 → 로그아웃 버튼 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="로그인" /><category term="로그아웃" /><category term="HASH" /><category term="Oracle DB" /><summary type="html"><![CDATA[웹 서버 만들기 (1) ~ (6) 과정을 통해 웹서버와 DB서버 구현을 완료하였다. 웹 서버에서 db에 저장된 데이터를 가져오는 방법도 알아보았다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL" /><category term="Oracle DB" /><category term="SQL Injection" /><category term="Java" /><summary type="html"><![CDATA[SQL Injection 이란? sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다. 웹 해킹 기술중 하나이다.]]></summary></entry></feed>
