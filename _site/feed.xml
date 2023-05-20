@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-20T00:55:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 총 정리</title><link href="http://localhost:4000/XSS%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="XSS 총 정리" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/XSS%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="xss--cross-site-scripting--란">XSS ( Cross-Site Scripting ) 란</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-20T23:48:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CSRF 간단한 정리</title><link href="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="CSRF 간단한 정리" /><published>2023-05-21T00:00:00+09:00</published><updated>2021-05-20T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="csrf--cross-site-request-forgery--란">CSRF ( Cross Site Request Forgery ) 란</h2>
+<ul>
+  <li>요청을 위조하는 공격이다.</li>
+  <li>피해자가 몰랐던 요청을 서버에 보내게 하는 공격이다.</li>
+  <li>피해자는 자신의 의도와는 다르게, 서버로 임이의 요청을 하게 만드는 공격이다.</li>
+  <li>피해자 세션을 활용한 공격이다.</li>
+</ul>
+
+<h2 id="발생-위치">발생 위치</h2>
+<ul>
+  <li>모든 요청에서 발생할 수 있다.</li>
+  <li>비밀번호 변경, 이메일 주소 변경, 관리자 계정 등록 등.</li>
+</ul>
+
+<h2 id="중요">중요</h2>
+<ul>
+  <li>단 피해자가 로그인을 한 채로 링크를 클릭해야 피해자 세션 정보로 요청이 보내진다.</li>
+</ul>
+
+<h2 id="공격-방법">공격 방법</h2>
+
+<h3 id="get-방식일-때">GET 방식일 때</h3>
+<ul>
+  <li>CSRF 공격이 쉬워진다.</li>
+  <li>요청을 주는 url을 만들어 사용자에게 주어 클릭하도록 만들어주면 된다.</li>
+</ul>
+
+<h3 id="post-방식일-때">POST 방식일 때</h3>
+<ol>
+  <li>가장 간단한 방법은 사용자가 클릭하게 유도하는 방법.</li>
+  <li>XSS 취약점과 CSRF 취약점을 합쳐서 공격하는 방법. 단 같은 도메인에서 두개(xss, csrf)의 취약점이 나타나야 한다.</li>
+</ol>
+
+<ul>
+  <li>iframe 을 이용하여 form post 결과를 iframe 에서 볼 수 있게 만든다. 이러면 페이지 이동은 없으면서 사용자는 자신도 모르게 요청을 보내게 된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe width="0" height="0" border="0" name="frame" id="frame" style="display:none;"&gt;&lt;/iframe&gt;
+
+
+&lt;form method="POST" action="xxx" target="frame"&gt;
+	&lt;input&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+document.forms[0].submit();
+&lt;/script&gt;
+</code></pre></div></div>
+
+<h2 id="csrf-방어하기">CSRF 방어하기</h2>
+
+<h3 id="csrf를-referrer-로-막기">CSRF를 Referrer 로 막기</h3>
+
+<h4 id="referrer-란">Referrer 란?</h4>
+<ul>
+  <li>이 요청을 어디서 한 건지 확인하는 용도이다.</li>
+</ul>
+
+<h3 id="referrer-로-막기">Referrer 로 막기</h3>
+<ul>
+  <li>예를들어 마이페이지에서 비밀번호 변경 요청이 와야 정상 요청이다.</li>
+  <li>게시판 같은 곳에서 비밀번호 변경 요청이 오면 비정상적인 요청인 것 이다.</li>
+  <li>요청을 어디서 한 것인지 확인하여 비정상적인 요청이면 막아 CSRF 공격을 예방할 수 있다.</li>
+</ul>
+
+<h3 id="csrf-토큰을-이용하여-막기">CSRF 토큰을 이용하여 막기</h3>
+
+<h4 id="csrf-토큰-란">CSRF 토큰 란?</h4>
+<ul>
+  <li>CSRF 를 막기위해 만들어진 것 이다.</li>
+  <li>서버에서 CSRF 토큰을 발행하여 요청이 발생하는 페이지에 몰래 넣어둔다.</li>
+  <li>사용자가 요청을 보내면 토큰 값도 같이 요청의 파라미터로 보내진다.</li>
+</ul>
+
+<h4 id="csrf-토큰으로-막기">CSRF 토큰으로 막기</h4>
+<ul>
+  <li>사용자가 요청한 토큰 값과 서버에 저장된 토큰 값이 일치해야 정상적인 요청이라 판단한다.</li>
+  <li>따라서 공격자는 서버에서 발행하는 CSRF 토큰을 알 수가 없어 CSRF 공격을 성공시킬 수 없다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"~~"</span><span class="nt">&gt;</span>
+... 생략 ...
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">value=</span><span class="s">"csrf 토큰"</span><span class="nt">&gt;</span>
+... 생략 ...
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<h2 id="우회-방법">우회 방법</h2>
+<h3 id="referrer-check-bypass">Referrer Check Bypass</h3>
+<ul>
+  <li>referrer 헤더 체크 동작방식이 다음과 같으면 referrer 헤더를 없애서 검사를 우회할 수 있다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>만약 referrer 헤더가 존재하면
+	검사시작
+없으면
+	그냥 패스
+</code></pre></div></div>
+
+<ul>
+  <li>다음 방법으로 referrer 헤더를 없앨 수 있다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"referrer"</span> <span class="na">content=</span><span class="s">"no-referrer"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="csrf-토큰-bypass">CSRF 토큰 Bypass</h3>
+<ul>
+  <li>XSS 취약점을 이용하여야 한다.</li>
+  <li>먼저 토큰을 발행하는 페이지를 찾는다.</li>
+  <li><code class="language-plaintext highlighter-rouge">iframe</code> 을 활용해 준다. 토큰 발행 페이지를 iframe을 통해 불러오고, iframe 에 접근하여 토큰을 파싱해 온다.</li>
+  <li>토큰과 같이 요청을 서버로 보내면 공격성공이다. 서버는 CSRF 토큰을 보고 정상적인 요청이라 판단한다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"csrf 토큰을 발행하는 페이지"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">iframe</span> <span class="nx">접근하여</span> <span class="nx">csrf</span> <span class="nx">토큰을</span> <span class="nx">파싱해서</span> <span class="nx">가지고</span> <span class="nx">온다</span><span class="p">.</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h2 id="xss-와-csrf-차이점">XSS 와 CSRF 차이점</h2>
+
+<h3 id="csrf">CSRF</h3>
+<ul>
+  <li>피해자가 자신도 모르게 서버로 임이의 요청을 보내게 하는 공격이다.</li>
+</ul>
+
+<h3 id="xss">XSS</h3>
+<ul>
+  <li>클라이언트 측 스크립트를 삽입하는 공격이다.</li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 란 무엇일까.]]></summary></entry><entry><title type="html">XSS 총 정리</title><link href="http://localhost:4000/XSS%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="XSS 총 정리" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/XSS%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="xss--cross-site-scripting--란">XSS ( Cross-Site Scripting ) 란</h2>
 <ul>
   <li>클라이언트 측 스크립트를 삽입하는 공격이다.</li>
   <li>웹 애플리케이션에서 발생하는 취약점이다.</li>
@@ -1406,51 +1536,4 @@ blind sql injection success
   <li>테이블 이름들 추출하기. <br /><script src="https://gist.github.com/MinGyu2/65ae660dd4ef296c1a50279c04dc8467.js"></script></li>
   <li>컬럼 명 추출 하기.<br /><script src="https://gist.github.com/MinGyu2/17bae3c8991982ee9e076df17b090fa7.js"></script></li>
   <li>정보 추출하기.<br /><script src="https://gist.github.com/MinGyu2/5b9e37325e12999931619d2a70f71dac.js"></script></li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="sql injection" /><category term="Mysql" /><category term="DB" /><summary type="html"><![CDATA[Blind SQL Injection 과정 정리.]]></summary></entry><entry><title type="html">Error Based SQL Injection 연습</title><link href="http://localhost:4000/ErrorBasedSQLi/" rel="alternate" type="text/html" title="Error Based SQL Injection 연습" /><published>2023-04-27T00:00:00+09:00</published><updated>2023-04-27T23:13:00+09:00</updated><id>http://localhost:4000/ErrorBasedSQLi</id><content type="html" xml:base="http://localhost:4000/ErrorBasedSQLi/"><![CDATA[<ul>
-  <li>Error Based SQL Injection을 연습하기 위해 DB 에러를 보여주는 로그인 페이지를 만들었다.</li>
-</ul>
-
-<h3 id="조건">조건</h3>
-<ul>
-  <li>SQL 질의문 결과가 화면에 안보임. (로그인, 아이디 중복 체크)</li>
-  <li>DB Error 메세지가 화면에 출력되어야 한다.</li>
-</ul>
-
-<h3 id="sqli-취약점-서버-환경">SQLi 취약점 서버 환경</h3>
-<hr />
-<ul>
-  <li>웹서버 : 우분투 Ubuntu 22.04.2 LTS</li>
-  <li>DB 서버 : Oracle DB oracle-database-xe-21c</li>
-</ul>
-
-<h3 id="과정">과정</h3>
-<hr />
-<ol>
-  <li>서버에서 어떤 질의문을 사용하고 있는지 추측하기.
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">xxx</span> <span class="k">from</span> <span class="n">xxx</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'x'</span> <span class="p">....</span>
-</code></pre></div>    </div>
-    <p><img src="https://user-images.githubusercontent.com/31990118/234779915-76b7335a-3e35-4f0f-97de-a902fe96ad7b.png" alt="Pasted image 20230427144207" /></p>
-  </li>
-  <li>의도적으로 오류 발생 시킨다음 오류 내용 확인 한다. SQL 오류가 출력되는 것을 확인할 수 있다.
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="n">x</span><span class="s1">'
-</span></code></pre></div>    </div>
-    <p><img src="https://user-images.githubusercontent.com/31990118/234780248-2ebfb6be-ab2c-4952-879c-72825539b485.png" alt="Pasted image 20230427144608" /></p>
-  </li>
-  <li>Error Based SQL Injection Function 동작하는지 확인하기. <code class="language-plaintext highlighter-rouge">test</code> 단어가 오류에 출력되는 것을 확인할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/293d020a722eab98690d36a3d0941b2d.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/234782415-65e101a8-f895-4990-ab70-23b9ee55828e.png" alt="Pasted image 20230427145024" /></li>
-  <li>사용자 이름 구하기. <code class="language-plaintext highlighter-rouge">C##DBFORPROB</code> 라는 것을 알 수 있다.<br /><script src="https://gist.github.com/MinGyu2/bece6ae6ed2f5d8876d443bb48e43594.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/234782649-f607470f-6044-4410-b577-819ff2a794d8.png" alt="Pasted image 20230427145221" /></li>
-  <li><strong>Table</strong> 이름 구하기. <code class="language-plaintext highlighter-rouge">MEMBERS</code> 테이블이 존재하는 것을 확인할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/e6bac283e7b366b8b86d8cb0aa8af81e.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/234783063-ee4f03be-69e8-49f9-b0df-0d9949055a5e.png" alt="Pasted image 20230427150937" /></li>
-  <li><strong>column</strong> 이름 구하기.<br /><script src="https://gist.github.com/MinGyu2/18aed7c05b1894da21c4f243ecf50fc7.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/234784240-620cbc18-efed-4af0-baf2-f881f587d037.png" alt="Pasted image 20230427151541" /><br /><img src="https://user-images.githubusercontent.com/31990118/234784314-9d32b04c-8828-4ef2-b5cc-4f0924a2ff2a.png" alt="Pasted image 20230427151801" /></li>
-  <li>데이터 추출하기.<br /><script src="https://gist.github.com/MinGyu2/9d815c9e7f74b80823ac81c15d60aec8.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/234785665-fe1ac79a-2812-4c9f-a2b8-709ec4eac7d8.png" alt="Pasted image 20230427160531" /></li>
-</ol>
-
-<ul>
-  <li>추출한 정보 확인<br /><img src="https://user-images.githubusercontent.com/31990118/234787698-dd12b6ff-d729-4617-9be5-95f2ef87e07a.png" alt="Pasted image 20230427152642" /><br /><img src="https://user-images.githubusercontent.com/31990118/234788225-fbe9d647-85ef-46c1-8d81-2535e4979f08.png" alt="Pasted image 20230427161753" /></li>
-</ul>
-
-<h3 id="참고사이트">참고사이트</h3>
-<hr />
-<ul>
-  <li><a href="https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering">sql - How do I limit the number of rows returned by an Oracle query after ordering? - Stack Overflow</a></li>
-  <li><a href="https://jwklife.tistory.com/45">오라클 테이블 &amp; 컬럼 조회 하는 방법 :: 인 생 (tistory.com)</a></li>
-  <li><a href="https://mymuseum.tistory.com/9">Oracle DB (데이터 베이스) 정보 찾기 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="DB" /><category term="sql injection" /><summary type="html"><![CDATA[error based sql injection 을 연습하기 위하여 직접 db 에러를 보여주는 로그인 페이지를 만들었다.]]></summary></entry></feed>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="sql injection" /><category term="Mysql" /><category term="DB" /><summary type="html"><![CDATA[Blind SQL Injection 과정 정리.]]></summary></entry></feed>
