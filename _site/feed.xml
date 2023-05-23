@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-23T03:05:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CSRF 실습 1</title><link href="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51/" rel="alternate" type="text/html" title="CSRF 실습 1" /><published>2023-05-23T00:00:00+09:00</published><updated>2021-05-23T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51/"><![CDATA[<h2 id="csrf-실습-1번-문제">CSRF 실습 1번 문제</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-23T13:19:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CSRF 실습 1</title><link href="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51/" rel="alternate" type="text/html" title="CSRF 실습 1" /><published>2023-05-23T00:00:00+09:00</published><updated>2021-05-23T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B51/"><![CDATA[<h2 id="csrf-실습-1번-문제">CSRF 실습 1번 문제</h2>
 <ul>
   <li><strong>csrf 공격</strong>을 이용하여 계정의 비밀번호를 바꿔야한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c98520c7-9094-4710-a7f4-ed2bebd17d88" alt="Pasted image 20230522191000" /></li>
 </ul>
@@ -165,7 +165,118 @@ http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=22
 <ul>
   <li>iframe 과 서로 쿠키 값을 공유하기 때문에 가능한 방법이었다.</li>
   <li>사용자는 정상적으로 게시글을 확인한 것 처럼 느낄것이다. 하지만 사용자는 로그아웃 하고 다시 로그인 할 때 비밀번호가 변경되었다는 것을 알 수 있다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 실습 1번 문제를 풀어보자.]]></summary></entry><entry><title type="html">CSRF 간단한 정리</title><link href="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="CSRF 간단한 정리" /><published>2023-05-21T00:00:00+09:00</published><updated>2021-05-20T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="csrf--cross-site-request-forgery--란">CSRF ( Cross Site Request Forgery ) 란</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 실습 1번 문제를 풀어보자.]]></summary></entry><entry><title type="html">CSRF 실습 2</title><link href="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B52/" rel="alternate" type="text/html" title="CSRF 실습 2" /><published>2023-05-23T00:00:00+09:00</published><updated>2021-05-23T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B52</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%8B%A4%EC%8A%B52/"><![CDATA[<h2 id="csrf-실습-2번-문제-설">CSRF 실습 2번 문제 설</h2>
+<ul>
+  <li>CSRF 1번 문제와 비슷하게 계정의 비밀번호를 변경하는 문제이다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/e73d2fca-6932-4692-b5bb-527d33c09b2f" alt="Pasted image 20230523031645" /></li>
+</ul>
+
+<h2 id="서버-분석-및-취약점-찾기">서버 분석 및 취약점 찾기</h2>
+
+<h3 id="비밀번호-변경-요청">비밀번호 변경 요청</h3>
+<ul>
+  <li>오직 POST 요청으로만 비밀번호를 변경할 수 있다.</li>
+</ul>
+
+<h3 id="게시글--stored-xss-">게시글 ( Stored XSS )</h3>
+<ul>
+  <li>게시글 제목과 게시글 본문에 XSS 취약점이 존재한다.</li>
+  <li>POC 코드 <code class="language-plaintext highlighter-rouge">alert(1)</code> 을 통해 확인이 가능하다.</li>
+  <li>게시글 제목<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/14ea3881-b828-4647-9e7d-7c7e7599e65b" alt="Pasted image 20230523125242" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/74654dbd-7f59-40c7-9efd-a90a09ff0474" alt="Pasted image 20230523125304" /></li>
+  <li>게시글 본문<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/55f3ac55-414b-4586-9216-90b486174bef" alt="Pasted image 20230523125334" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/780e58ae-1d6b-4801-b0a7-70bfb49d052a" alt="Pasted image 20230523125351" /></li>
+  <li>script 태그 부분의 내용은 게시글에서 안보인다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/4fb232eb-2d4d-4883-9d73-81ef936569bd" alt="Pasted image 20230523125414" /></li>
+</ul>
+
+<h3 id="비밀번호-변경">비밀번호 변경</h3>
+<ul>
+  <li>비밀번호 변경을 한 후 <code class="language-plaintext highlighter-rouge">location.href</code> 를 통해 클라이언트 측에서 로그아웃 요청을 서버로 보낸다.</li>
+  <li>즉 서버에서는 클라이언트 측에서 로그아웃 신호를 보내주기 전 까지는 세션을 만료 시키지 않는다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="dl">'</span><span class="s1">index.php?session=true</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="공격-시나리오">공격 시나리오</h2>
+
+<h3 id="xss게시판--csrf비밀번호-변경-요청-취약점-이용하기">XSS(게시판) + CSRF(비밀번호 변경 요청) 취약점 이용하기.</h3>
+
+<h4 id="최종-목표">최종 목표</h4>
+<ul>
+  <li>사용자자 공격자가 작성한 게시글에 방문하면 사용자도 모르게 자동으로 비밀번호가 바뀐다. 하지만 사용자는 정상적으로 게시글을 방문한 것 처럼 느낀다. 즉 사용자는 로그아웃 하고 다시 로그인할 때 까지 비밀번호가 변경되었다는 것을 알아차리기 힘들다.</li>
+</ul>
+
+<h4 id="비밀번호-변경-요청-동작-방식--예측-">비밀번호 변경 요청 동작 방식 ( 예측 )</h4>
+<ol>
+  <li>POST 요청으로 사용자가 입력한 비밀번호를 전송하여 변경한다.</li>
+  <li>사용자는 응답으로 로그아웃을 하라는 링크를 받는다.</li>
+  <li>사용자는 서버로 로그아웃 요청을 보내어 로그아웃을 진행한다.</li>
+</ol>
+
+<ul>
+  <li>비밀번호 변경 POST 요청<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8adbbd7e-51cf-448e-9da7-d3b4e5ebb87b" alt="Pasted image 20230523124958" /></li>
+</ul>
+
+<h4 id="시나리오">시나리오</h4>
+<ol>
+  <li>공격자는 악성 스크립트가 담긴 게시글을 작성한다.</li>
+  <li>사용자는 로그인하여 공격자의 게시글을 확인한다.</li>
+  <li>사용자가 공격자의 게시글에 방문하면 악성 스크립트가 동작하여 사용자의 비밀번호를 공격자가 설정한 비밀번호로 변경한다.</li>
+  <li>비밀번호가 변경 되었어도 사용자가 서버로 로그아웃 요청을 보내지 않아 계속 서비스를 이용할 수 있다.</li>
+</ol>
+
+<h4 id="공격-스크립트">공격 스크립트</h4>
+
+<h5 id="스크립트로-post-요청-보내기">스크립트로 POST 요청 보내기</h5>
+<ul>
+  <li>fetch 함수를 이용하였다.</li>
+  <li>fetch를 이용하여 post 요청을 보내면 응답으로 <code class="language-plaintext highlighter-rouge">location.href</code> 을 받지만 실행되지 않아 자동으로 로그아웃 되는 것을 방지할 수 있다. ( 세션 만료 방지 )</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nf">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">mypage_update.php</span><span class="dl">"</span><span class="p">,{</span>
+	<span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+	<span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+		<span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/x-www-form-urlencoded</span><span class="dl">"</span>
+	<span class="p">},</span>
+	<span class="na">body</span><span class="p">:</span> <span class="dl">"</span><span class="s2">id=&amp;info=&amp;pw=2222</span><span class="dl">"</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h5 id="최종-공격-스크립트">최종 공격 스크립트</h5>
+<ul>
+  <li>자동으로 비밀번호 변경 요청을 서버로 보내게 된다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nf">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">mypage_update.php</span><span class="dl">"</span><span class="p">,{</span>
+	<span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+	<span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+		<span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/x-www-form-urlencoded</span><span class="dl">"</span>
+	<span class="p">},</span>
+	<span class="na">body</span><span class="p">:</span> <span class="dl">"</span><span class="s2">id=&amp;info=&amp;pw=2222</span><span class="dl">"</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h4 id="공격시작">공격시작</h4>
+<ol>
+  <li>공격자는 악성 스크립트가 담긴 게시글 작성한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a955160b-60a8-4575-bd87-548d119377ee" alt="Pasted image 20230523125941" /></li>
+  <li>게시글을 저장해준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/391c5b4b-caba-43fe-a73c-46d69b1768ad" alt="Pasted image 20230523130032" /></li>
+  <li>사용자가 공격자가 작성한 게시글에 방문하게 되면 자동으로 비밀번호가 바뀌게 된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/6154015a-65cc-4da4-88af-ed3e60b24fa6" alt="Pasted image 20230523130148" /></li>
+</ol>
+
+<h2 id="결론">결론</h2>
+<ul>
+  <li>Javascript의 fetch 함수를 이용하여 POST 요청을 서버에 보내고 응답을 받아온다.</li>
+  <li>사용자는 일반적인 게시글을 방문한 것 처럼 느끼게 된다. 하지만 실제로는 게시글 방문과 동시에 비밀번호 요청이 가는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/b90ae746-4800-4425-99a2-ba2a32be7fff" alt="Pasted image 20230523130254" /></li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://www.daleseo.com/js-window-fetch/">자바스크립트의 fetch() 함수로 원격 API 호출하기</a></li>
+  <li><a href="https://velog.io/@seoltang/fetch-POST-Request">fetch 함수: POST Request (velog.io)</a></li>
+  <li><a href="https://sisiblog.tistory.com/261">자바스크립트 fetch로 formdata post 보내기 (tistory.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 실습 2번 문제를 풀어보자.]]></summary></entry><entry><title type="html">CSRF 간단한 정리</title><link href="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="CSRF 간단한 정리" /><published>2023-05-21T00:00:00+09:00</published><updated>2021-05-20T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="csrf--cross-site-request-forgery--란">CSRF ( Cross Site Request Forgery ) 란</h2>
 <ul>
   <li>요청을 위조하는 공격이다.</li>
   <li>피해자가 몰랐던 요청을 서버에 보내게 하는 공격이다.</li>
@@ -1406,252 +1517,4 @@ blind sql injection success
   <li><a href="https://4rgos.tistory.com/1">XSS(Cross Site Scripting) 공격이란? :: ARGOS (tistory.com)</a></li>
   <li><a href="https://nordvpn.com/ko/blog/xss-attack/#head3-3">크로스 사이트 스크립팅의 정의 및 공격 유형 NordVPN</a></li>
   <li><a href="https://namu.wiki/w/XSS">XSS - 나무위키 (namu.wiki)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><summary type="html"><![CDATA[XSS 개념 클라우드 측 코드를 삽입하는 공격이다. 클라이언트의 브라우저에서 실행된다. 피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다. Cross-site Scripting 의 약자이다. 개발자가 고려하지 않는 기능을 동작시킨다.]]></summary></entry><entry><title type="html">웹서버 만들기 10 메뉴 버튼 및 게시판 제작</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/" rel="alternate" type="text/html" title="웹서버 만들기 10 메뉴 버튼 및 게시판 제작" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C10%EB%A9%94%EB%89%B4%EB%B2%84%ED%8A%BC%EB%B0%8F%EA%B2%8C%EC%8B%9C%ED%8C%90/"><![CDATA[<h2 id="jsp-페이지-모듈화">JSP 페이지 모듈화</h2>
-<ul>
-  <li>액션 태그를 사용해서 화면을 모듈화시켜 코드가 중복되는 것을 방지 할 수 있다.</li>
-</ul>
-
-<h3 id="-액션-태그-사용법"><jsp:include> 액션 태그 사용법</jsp:include></h3>
-<ul>
-  <li>
-    <p>사용법
-<script src="https://gist.github.com/MinGyu2/049ae15892e904872ad0834e58949544.js"></script></p>
-  </li>
-  <li>
-    <p>태크 속성 설명</p>
-    <ul>
-      <li>page : 포함할 JSP 페이지</li>
-      <li>flush : true 로 설정하면 현재 페이지가 지금까지 버퍼에 저장한 내용을 웹 브라우저로 전송하게 된다.  일단 헤더 정보가 웹 브라우저에 전송이 되고 나면 헤더 정보를 추가해도 결과가 반영되지 않는다. 따라서 일반적으로는 ‘false’로 지정한다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="-액션-태그-처리-과정"><jsp:include> 액션 태그 처리 과정</jsp:include></h3>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAo67iM65287Jqw7KCAKSAtPj4gbWFpbi5qc3AgOiDsmpTssq1cbm1haW4uanNwIC0-PiBtYWluLmpzcCA6IOy2nOugpSDrgrTsmqkxXG5tYWluLmpzcCAtPj4gc3ViLmpzcCA6IOyalOyyrVxuc3ViLmpzcCAtPj4gbWFpbi5qc3AgOiDstpzroKUg64K07JqpIHN1YlxubWFpbi5qc3AgLT4-IG1haW4uanNwIDog7Lac66ClIOuCtOyaqTJcbm1haW4uanNwIC0-PiDsgqzsmqnsnpAo67iM65287Jqw7KCAKSA6IOy2nOugpSDrsoTtjbwg64K07JqpIOyghOuLrCIsIm1lcm1haWQiOm51bGx9" /></p>
-
-<h3 id="활용">활용</h3>
-<ul>
-  <li>
-    <jsp:include> 액션 태그를 만들고 있는 서버에 적용시켰다.
-</jsp:include>
-  </li>
-  <li>모듈화가 가능하여 코드가 좀 더 깔끔해졌다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/31990118/236090570-d82e92f3-80ab-443c-b49e-51d778305b87.png" alt="Pasted image 20230503235614" /></p>
-
-<h3 id="jsp">JSP</h3>
-<ul>
-  <li>main_page.jsp
-<script src="https://gist.github.com/MinGyu2/9303d6fa76e692d462a8e14cc207c5aa.js"></script></li>
-  <li>home.jsp
-<script src="https://gist.github.com/MinGyu2/772a5f530bbe6aeea2276afddb4a4b90.js"></script></li>
-</ul>
-
-<h2 id="메뉴-버튼">메뉴 버튼</h2>
-<ul>
-  <li>메인 페이지에 홈 버튼과 게시판 버튼을 만들었다.<br /><img src="https://user-images.githubusercontent.com/31990118/236091135-887cf47e-a593-4a8e-b36e-23d851d3805b.png" alt="Pasted image 20230503231355" /></li>
-  <li>Home 버튼을 누르면 로그인하고 접속 하였을 때 가장처음 화면에 나타나는 페이지이다.</li>
-  <li>게시판 버튼을 누르면 서버에 저장된 게시글들을 확인해 볼 수 있다.</li>
-</ul>
-
-<h3 id="jsp-1">JSP</h3>
-<ul>
-  <li>servlet 부터 메뉴 리스트를 받아와 사용하였다.</li>
-  <li>다음 코드는 메뉴창을 나타내는 부분이다.</li>
-  <li>main_page.jsp
-<script src="https://gist.github.com/MinGyu2/218ef37523342f45dfa8ac7676c54ce3.js"></script></li>
-</ul>
-
-<h3 id="servlet-java-코드">Servlet (Java 코드)</h3>
-<ul>
-  <li>메뉴 servlet 코드에서 메뉴 리스트를 만든 다음 메인 jsp 페이지로 포워딩 해준다.</li>
-  <li>메인 jsp 페이지 파일에서 메뉴 리스트를 받아 html 파일을 완성 시키고 유저에게 페이지를 보여준다.</li>
-  <li>MainPage.java
-<script src="https://gist.github.com/MinGyu2/60f564ef505632451acd34c7fbfc90a8.js"></script></li>
-</ul>
-
-<h2 id="게시판">게시판</h2>
-
-<h3 id="게시판-리스트-확인">게시판 리스트 확인</h3>
-<ul>
-  <li>게시판 버튼을 누르면 서버에 저장된 모든 글들을 볼 수 있다.</li>
-  <li>글을 작성한 사람 이름, 글 제목 그리고 글 요약을 살펴볼 수 있다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/31990118/236091519-177d6bf1-2f52-4705-80db-174d6430dee8.png" alt="Pasted image 20230503235957" /></p>
-
-<h4 id="jsp-2">JSP</h4>
-<h5 id="main_pagejsp">main_page.jsp</h5>
-<ul>
-  <li>
-    <jsp:include> 액션 태그를 이용하였다.
-
-</jsp:include>
-  </li>
-</ul>
-<script src="https://gist.github.com/MinGyu2/a7f9b3c687ae254e052484f934159038.js"></script>
-
-<h5 id="notice_boardjsp">notice_board.jsp</h5>
-<ul>
-  <li>for을 이용하여 servlet 으로 부터 받은 게시판 목록들을 나열하였다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/2fe9c7d42b55a006bcfc6dc05c0d89fa.js"></script>
-
-<h4 id="servlet">Servlet</h4>
-<h5 id="mainpagejava">MainPage.java</h5>
-<ul>
-  <li>NoticeBoardDAO 클래스를 이용하여 게시판 목록들을 DB 에서 불러왔다. 그리고 배열에 저장해 주었다.</li>
-  <li>setAttribute 를 이용하여 jsp 페이지로 배열을 전달해 주었다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/e335fc6b887792c12db6660d9a218de0.js"></script>
-
-<p><br /><br /></p>
-
-<h3 id="게시판-글-자세히-읽기">게시판 글 자세히 읽기</h3>
-<ul>
-  <li>게시판 리스트 중 하나를 클릭하여 들어가면 스스로 작성한 글이나, 다른 사용자가 작성한 글을 읽을 수 있다.</li>
-  <li>자기 자신이 쓴 글에 들어가면 글 수정을 위한 버튼이 나타난다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/31990118/236093552-1a3768f9-3b3e-4909-96dc-e60d1933a0bb.png" alt="Pasted image 20230504000326" />
-<img src="https://user-images.githubusercontent.com/31990118/236093639-ba25e841-0276-42f5-8522-b2153563765c.png" alt="Pasted image 20230504000408" /></p>
-
-<h4 id="jsp-3">JSP</h4>
-<h5 id="notice_detailjsp">notice_detail.jsp</h5>
-<ul>
-  <li>
-    <jsp:include> 액션태그를 사용하였다.
-
-</jsp:include>
-  </li>
-</ul>
-<script src="https://gist.github.com/MinGyu2/dc906936bba90e8490400a1920312804.js"></script>
-
-<h5 id="noticejsp">notice.jsp</h5>
-<ul>
-  <li>servlet 클래스에서 게시물 정보를 넘겨준다.</li>
-  <li>게시글 작성자와 현재 접속중인 유저가 동일하면 수정 버튼을 활성화 한다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/020b226f69db9478f8f899cf96839770.js"></script>
-
-<h4 id="servlet-1">Servlet</h4>
-<h5 id="mainpagejava-1">MainPage.java</h5>
-<ul>
-  <li>Get 을 통해 게시글의 sid를 받는다. Get으로 받은 <code class="language-plaintext highlighter-rouge">detailid</code> 입력을 가져온다.</li>
-  <li>setAttribute 를 통해 게시글 정보를 jsp 한테 넘겨준다.</li>
-  <li>게시글 작성자와 현재 접속중인 유저가 동일하면 수정 버튼을 활성화 한다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/a1917d62bb85a89be487042c767cf58e.js"></script>
-
-<p><br /><br /></p>
-
-<h3 id="게시판-새로운-글-쓰기">게시판 새로운 글 쓰기</h3>
-<ul>
-  <li>게시판에서 글쓰기 버튼을 클릭 하면 글쓰기 페이지가 나온다.</li>
-  <li>제목 또는 본문 둘중에 하나라도 빈칸이면 저장이 안된다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/31990118/236095373-403e687b-f55c-4db5-a59a-f0abc3320fbb.png" alt="Pasted image 20230503231355" />
-<img src="https://user-images.githubusercontent.com/31990118/236095408-bcc22308-3e11-4a65-ab53-f482d6c64925.png" alt="Pasted image 20230504003204" /></p>
-
-<h4 id="jsp-4">JSP</h4>
-<h5 id="notice_writejsp">notice_write.jsp</h5>
-<ul>
-  <li>제목과 글을 입력하고 저장 버튼을 눌러주면 POST 방식으로 제목과 글을 서버로 전송한다.</li>
-  <li>취소 버튼을 누르면 이전 페이지 다시 되돌아 간다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/a026cd33b55c1112bceff74b40c6ecb6.js"></script>
-
-<h4 id="servlet-2">Servlet</h4>
-<h5 id="mainpagejava-2">MainPage.java</h5>
-<ul>
-  <li>noticeBoardWrite uri 로 접속하면 글쓰기 jsp 페이지로 넘어간다.</li>
-  <li>글쓰기 jsp 페이지로 noticeBoardSave uri를 넘겨준다.</li>
-  <li>저장 버튼을 눌러 저장을 할 때는 오직 POST 전송일 때만 가능하다.</li>
-  <li>서버는 제목과 글을 POST 파라미터로 받는다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/879701715b88f54216b4aaa469b096a4.js"></script>
-
-<p><br /><br /></p>
-
-<h2 id="db">DB</h2>
-
-<h3 id="게시판-사용자-생성">게시판 사용자 생성</h3>
-<ul>
-  <li>게시판 글을 저장하기 위한 사용자를 먼저 만들어 주었다.<br /><script src="https://gist.github.com/MinGyu2/55b19361307bf1b1de4d1cd0807c04e6.js"></script></li>
-</ul>
-
-<h3 id="게시판-테이블-생성">게시판 테이블 생성</h3>
-<ul>
-  <li>게시판 글을 저장하는 테이블을 만들어 주었다.<br /><script src="https://gist.github.com/MinGyu2/a1528a7022d98d4db54891421b5acdd6.js"></script></li>
-</ul>
-
-<h3 id="게시판-글-올릴-때-사용한-sql-문">게시판 글 올릴 때 사용한 SQL 문</h3>
-<ul>
-  <li>다음 sql 쿼리문을 이용하여 글을 저장하였다.<br /><script src="https://gist.github.com/MinGyu2/ce3e8b3d981950a7141949a12be9c2a3.js"></script></li>
-</ul>
-
-<h3 id="게시판-글-삭제">게시판 글 삭제</h3>
-<ul>
-  <li>키인 <code class="language-plaintext highlighter-rouge">sid</code> 를 기준으로 글을 삭제한다.<br /><script src="https://gist.github.com/MinGyu2/fce1909509ddeac56a6388150bc807ee.js"></script></li>
-</ul>
-
-<h4 id="글을-삭제할-때-조건">글을 삭제할 때 조건</h4>
-<ul>
-  <li>관리자는 모든 글을 삭제 가능하다.</li>
-  <li>사용자는 자기 자신이 쓴 글만 삭제가 가능해야한다.</li>
-</ul>
-
-<h2 id="전체-코드">전체 코드</h2>
-<ul>
-  <li>main_page.jsp
-<script src="https://gist.github.com/MinGyu2/e72b96cfba044c98a0eae09899473d6c.js"></script></li>
-</ul>
-
-<h2 id="발생한-오류">발생한 오류</h2>
-<h3 id="create-session-권한-오류">create session 권한 오류</h3>
-<ul>
-  <li>오류 내용<br /><script src="https://gist.github.com/MinGyu2/40bf1fba073564873745a6dc81d79744.js"></script></li>
-  <li>해결법<br /><script src="https://gist.github.com/MinGyu2/bc97c6225891a1e111bf525a3260b546.js"></script></li>
-</ul>
-
-<h3 id="create-table-할-때-부적합한-식별자-오류">create table 할 때 부적합한 식별자 오류</h3>
-<ul>
-  <li>오류 내용<br /><script src="https://gist.github.com/MinGyu2/f672b13ed2b599dbe7ce42c6740a3d23.js"></script></li>
-  <li>해결법<br /><script src="https://gist.github.com/MinGyu2/66fbc7cbd7a1ef5ea30fd8964a4bc23f.js"></script></li>
-</ul>
-
-<h3 id="테이블스페이스-오류">테이블스페이스 오류</h3>
-<ul>
-  <li>오류 내용
-<script src="https://gist.github.com/MinGyu2/3a32023b66ca251333fabdc13e339532.js"></script></li>
-  <li>해결법
-<script src="https://gist.github.com/MinGyu2/d928036f484915143ef937e0ce36ed1c.js"></script></li>
-</ul>
-
-<h3 id="열을-사용할-수-없습니다">열을 사용할 수 없습니다.</h3>
-<ul>
-  <li>오류 내용
-<script src="https://gist.github.com/MinGyu2/86f8126d9d8d4888fb9cdacf5467e9ce.js"></script></li>
-  <li>해결법
-<script src="https://gist.github.com/MinGyu2/a9ca4d9719b57d2401daee09dfa26ecf.js"></script></li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://all-record.tistory.com/106">JSP 페이지 모듈화 &lt;jsp:include&gt; 액션태그 (tistory.com)</a></li>
-  <li><a href="https://ojji.wayful.com/2015/04/HTML-DIV-tag-Scroll-Bar-Display-Hidden-Set-Overflow-auto-hidden-scroll-white-space-nowrap-overflow-x-overflow-y.html">HTML DIV tag: 스크롤바 넣기와 제어하기 </a></li>
-  <li><a href="https://ju-won.tistory.com/14">div 강제 줄바꿈 처리 (tistory.com)</a></li>
-  <li><a href="https://dogsavestheworld.tistory.com/275">JSP 게시판 만들기 - (10) 글쓰기 기능 구현 (CREATE) (tistory.com)</a></li>
-  <li><a href="https://velog.io/@leemember/CSS-textarea-%ED%81%AC%EA%B8%B0-%EA%B3%A0%EC%A0%95%ED%95%98%EA%B8%B0">textarea 크기 고정하기 (velog.io)</a></li>
-  <li><a href="https://totoscoming-coding.tistory.com/36"> HTML 예제 - 게시판 글쓰기 창 :: 쩝쩝산중 코딩로그 (tistory.com)</a></li>
-  <li><a href="https://gent.tistory.com/323">오라클 컬럼(Column) 추가, 삭제 방법 (컬럼 순서 변경) (tistory.com)</a></li>
-  <li><a href="https://offbyone.tistory.com/316">오라클 에러 ORA-00984: 열을 사용할 수 없습니다 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="JSP" /><category term="SERVLET" /><category term="JAVA" /><summary type="html"><![CDATA[메뉴 버튼 및 게시판 제작 하기]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><summary type="html"><![CDATA[XSS 개념 클라우드 측 코드를 삽입하는 공격이다. 클라이언트의 브라우저에서 실행된다. 피해자 컴퓨터(브라우저)에 악의적인 코드를 실행되게 하는 공격이다. Cross-site Scripting 의 약자이다. 개발자가 고려하지 않는 기능을 동작시킨다.]]></summary></entry></feed>
