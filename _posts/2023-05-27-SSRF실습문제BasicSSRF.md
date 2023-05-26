@@ -1,6 +1,6 @@
 ---
-title: "SSRF 실습 문제 "
-excerpt: "오직 로컬에서만 되냐 젠장"
+title: "SSRF 실습 문제 Basic SSRF"
+excerpt: "SSRF 실습 문제 Basic SSRF 문제를 풀어보자. "
 tags:
     - SSRF
     - 웹 해킹
