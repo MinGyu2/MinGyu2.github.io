@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-29T04:57:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 실습 7번</title><link href="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="XSS 실습 7번" /><published>2023-05-29T00:00:00+09:00</published><updated>2023-05-29T23:13:00+09:00</updated><id>http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="xss-란">XSS 란?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-30T15:41:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 실습 7번</title><link href="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="XSS 실습 7번" /><published>2023-05-29T00:00:00+09:00</published><updated>2023-05-29T23:13:00+09:00</updated><id>http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="xss-란">XSS 란?</h2>
 <ul>
   <li>크라이언트 측 스크립트를 삽입하는 공격이다.</li>
 </ul>
@@ -371,7 +371,7 @@ id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidde
   <li>csrf 공격을 예방하기 위하여 서버에서는 csrf 토큰을 사용하였지만 서버의 xss 취약점과 iframe 태그를 이용하여 csrf 토큰 방어법을 우회하였다.</li>
   <li>fetch 함수를 통해 POST 전송을 보다 쉽게할 수 있었다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d286ca44-4185-4277-ad72-e8fb5bdee8b3" alt="Pasted image 20230525190729" /></li>
   <li>사용자는 정상적으로 게시글을 확인하였다고 느낀다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3afde40a-f935-45fa-b5a2-dd7038de3ebd" alt="Pasted image 20230525191153" /></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="csrf" /><category term="xss" /><summary type="html"><![CDATA[CSRF 실습 문제 풀어보기]]></summary></entry><entry><title type="html">웹 서버 만들기(13) 업로드 다운로드 조회수</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13/" rel="alternate" type="text/html" title="웹 서버 만들기(13) 업로드 다운로드 조회수" /><published>2023-05-25T00:00:00+09:00</published><updated>2023-05-25T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13/"><![CDATA[<h2 id="파일-업로드">파일 업로드</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="csrf" /><category term="xss" /><summary type="html"><![CDATA[CSRF 실습 문제 풀어보기]]></summary></entry><entry><title type="html">웹 서버 만들기(13) 업로드 다운로드 조회수</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13/" rel="alternate" type="text/html" title="웹 서버 만들기(13) 업로드 다운로드 조회수" /><published>2023-05-25T00:00:00+09:00</published><updated>2023-05-30T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13/"><![CDATA[<h2 id="파일-업로드">파일 업로드</h2>
 <ul>
   <li>Part API를 이용하여 파일 업로드를 구현하였다.</li>
 </ul>
@@ -538,7 +538,8 @@ http {
 <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
 </code></pre></div></div>
 
-<h4 id="webxml">web.xml</h4>
+<h4 id="선택">선택</h4>
+<h5 id="선택-1-webxml">선택 1. web.xml</h5>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">request.getParts()</code> 를 사용하기 위해서는 임시저장 폴더를 만들어 줘야 한다.</li>
   <li><code class="language-plaintext highlighter-rouge">file-size-threshold</code> 에 설정한 용량이 넘으면 임시저장 폴더에 저장한다는 것이다.</li>
@@ -555,6 +556,21 @@ http {
 		<span class="nt">&lt;file-size-threshold&gt;</span>1024<span class="nt">&lt;/file-size-threshold&gt;</span>
 	<span class="nt">&lt;/multipart-config&gt;</span>
 <span class="nt">&lt;/servlet&gt;</span>
+</code></pre></div></div>
+
+<h5 id="선택-2-annotation-적기">선택 2. annotation 적기.</h5>
+<ul>
+  <li>각 클래스마다 적어주어야 한다.</li>
+  <li>location 설정을 따로 안하면 자바가 지정해놓은 임시 저장소를 이용한다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@MultipartConfig</span><span class="o">(</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">location</span> <span class="o">=</span> <span class="s">"/home/mq/temp"</span><span class="o">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">maxFileSize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">maxRequestSize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">,</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">fileSizeThreshold</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
 </code></pre></div></div>
 
 <p><br /></p>
