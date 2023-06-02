@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mingyu2.github.io/sitemap.xml
