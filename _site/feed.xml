@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-07T00:21:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">File Upload 공격 실습 (2)</title><link href="http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B5(2)/" rel="alternate" type="text/html" title="File Upload 공격 실습 (2)" /><published>2023-06-06T00:00:00+09:00</published><updated>2023-06-06T23:13:00+09:00</updated><id>http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B5(2)</id><content type="html" xml:base="http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B5(2)/"><![CDATA[<h2 id="취약점-사이트">취약점 사이트</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-07T17:28:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹 서버의 File Upload 취약점 traversal</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84FileUpload%EC%B7%A8%EC%95%BD%EC%A0%90%EC%A0%9C%EA%B1%B0/" rel="alternate" type="text/html" title="웹 서버의 File Upload 취약점 traversal" /><published>2023-06-07T00:00:00+09:00</published><updated>2023-06-07T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84FileUpload%EC%B7%A8%EC%95%BD%EC%A0%90%EC%A0%9C%EA%B1%B0</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84FileUpload%EC%B7%A8%EC%95%BD%EC%A0%90%EC%A0%9C%EA%B1%B0/"><![CDATA[<h2 id="file-upload-취약점">File Upload 취약점</h2>
+<ul>
+  <li><strong>Traversal</strong> 우회방법을 이용하여 업로드 파일 저장 위치를 바꿀 수 있다.</li>
+  <li>
+    <p>정삭적으로 파일을 업로드 하였을 때.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/1f2c69a3-6014-4a81-9dc1-3869d52311cd" alt="Pasted image 20230606153031" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/22372933-db5f-44f2-9469-94701b9b36b4" alt="Pasted image 20230606153110" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/fe15095e-2d7c-4dde-99dc-d167e6014f5a" alt="Pasted image 20230606160012" /></p>
+  </li>
+  <li>
+    <p>현재 디렉토리를 의미하는 <code class="language-plaintext highlighter-rouge">./</code> 를 파일 이름에 붙이고 업로드 하였을 때.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/3b16aa74-d42a-40c9-a537-1bc03ca57e82" alt="Pasted image 20230606155610" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/84774942-e5ac-4a4c-8074-a3b8836ee220" alt="Pasted image 20230606155621" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d8ea09bc-f7c9-4bca-9df8-4ad43d6eeb4b" alt="Pasted image 20230606160009" /></p>
+  </li>
+  <li>이렇게 공격자는 마음대로 업로드 파일 저장 위치를 바꾸어 저장할 수 있다.</li>
+</ul>
+
+<h2 id="특정-문자-금지하기">특정 문자 금지하기</h2>
+<ul>
+  <li>업로드 파일 명에 특수문자를 사용하여 디렉토리를 옮기는 것을 막기위해 특정 특수문자를 필터링한다.</li>
+  <li>즉 <code class="language-plaintext highlighter-rouge">\ , / , : , * , ? , &lt; , &gt; , | , % , " </code> 문자를 필터링 한다.</li>
+  <li>다음과 같은 문자가오는 파일이름이면 서버에 저장하지 않는다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">regex</span> <span class="o">=</span> <span class="s">"[/\\\\:*?&lt;&gt;|\"%]+"</span><span class="o">;</span>
+<span class="kt">var</span> <span class="n">pattern</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">regex</span><span class="o">);</span>
+<span class="n">pattern</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">fileName</span><span class="o">).</span><span class="na">find</span><span class="o">()</span>
+</code></pre></div></div>
+
+<h2 id="구현">구현</h2>
+<ul>
+  <li>특정 문자가 파일이름에 들어가 있으면 업로드 파일을 서버에 저장하지 않는다.</li>
+</ul>
+
+<h3 id="mainpagejava">MainPage.java</h3>
+
+<ul>
+  <li>특수 문자 검사 함수</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"> </span> <span class="err"> </span> <span class="c1">// true : dont save file in server</span>
+<span class="err"> </span> <span class="err"> </span> <span class="c1">// false : save file in server</span>
+<span class="err"> </span> <span class="err"> </span> <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">notCorrectFileName</span><span class="o">(</span><span class="nc">String</span> <span class="n">fileNmae</span><span class="o">){</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">regex</span> <span class="o">=</span> <span class="s">"[/\\\\:*?&lt;&gt;|\"%]+"</span><span class="o">;</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pattern</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">regex</span><span class="o">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">pattern</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">fileNmae</span><span class="o">).</span><span class="na">find</span><span class="o">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>검사하고 싶은 파일 이름을 넣어준다. 검사를 통과해야 업로드한 파일을 서버에 저장한다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 파일 이름에 금지된 문자가 사용되면 파일 업로드 안하기.</span>
+<span class="k">if</span><span class="o">(</span><span class="n">notCorrectFileName</span><span class="o">(</span><span class="n">파일</span> <span class="n">이름</span><span class="o">)){</span>
+	<span class="k">continue</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="결과">결과</h2>
+<ul>
+  <li>burp suite 의 intercept 기능을 이용하여 파일 이름을 변경하여 서버로 요청을 보내게한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2894a644-59d8-4a67-950c-5911a9cddef1" alt="Pasted image 20230607170427" /></li>
+  <li>게시글은 작성되지만 파일은 서버에 저장이 안되는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/80c70def-c5e7-4b8c-8c5f-2a0d21035687" alt="Pasted image 20230607170507" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/69491d41-f74f-4cb2-a4a6-78c8497a0947" alt="Pasted image 20230607172749" /></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="file upload" /><category term="file upload traversal" /><summary type="html"><![CDATA[웹 서버의 File Upload 취약점을 제거해 보자.]]></summary></entry><entry><title type="html">File Upload 공격 실습 (2)</title><link href="http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B5(2)/" rel="alternate" type="text/html" title="File Upload 공격 실습 (2)" /><published>2023-06-06T00:00:00+09:00</published><updated>2023-06-06T23:13:00+09:00</updated><id>http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B5(2)</id><content type="html" xml:base="http://localhost:4000/FileUpload%EC%8B%A4%EC%8A%B5(2)/"><![CDATA[<h2 id="취약점-사이트">취약점 사이트</h2>
 <ul>
   <li>내가 만든 웹 사이트를 이용하였다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c46d4050-cc28-43ea-8e0f-0fca6023ca7f" alt="Pasted image 20230606142017" /></li>
 </ul>
@@ -2054,98 +2112,4 @@ id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidde
 <h2 id="후기">후기</h2>
 <ul>
   <li>직접 스터디에서 풀이해 주었지만 직접 SSRF 문제를 풀어보니 파라미터로 URL을 입력받는 것이 얼마나 위험한지 알 수 있었다. SSRF 취약점을 이용하면 외부에서 접근이 불가능한 내부 페이지에 접속을 직접 확인할 수 있어 재밌었다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[SSRF 실습 문제 Basic SSRF 문제를 풀어보자.]]></summary></entry><entry><title type="html">CSRF 와 SSRF</title><link href="http://localhost:4000/CSRF%EC%99%80SSRF/" rel="alternate" type="text/html" title="CSRF 와 SSRF" /><published>2023-05-26T00:00:00+09:00</published><updated>2021-05-26T23:13:00+09:00</updated><id>http://localhost:4000/CSRF%EC%99%80SSRF</id><content type="html" xml:base="http://localhost:4000/CSRF%EC%99%80SSRF/"><![CDATA[<h2 id="csrf-공격">CSRF 공격</h2>
-
-<h3 id="설명">설명</h3>
-<ul>
-  <li>Cross Site Request Forgery</li>
-  <li>피해자가 임의의 요청을 서버에 보내게하는 공격이다.</li>
-</ul>
-
-<h3 id="발생-위치">발생 위치</h3>
-<ul>
-  <li>모든 요청에서 방생할 수 있다.</li>
-  <li>중요한 요청에서 발생할 수 있다.</li>
-  <li>게시판 글 작성 CSRF or 비밀번호 변경 CSRF ( 상황에 따라 위험도가 달라질 수 있다.)</li>
-</ul>
-
-<h3 id="csrf-공격-기법">CSRF 공격 기법</h3>
-<h4 id="get-method">GET Method</h4>
-<ul>
-  <li>URL 링크를 만들어 사용자에게 보내 클릭하게 만들면 된다.</li>
-  <li>로그인 한 다음 볼 수 있는 페이지에 URL를 두고 클릭하게 해야한다.</li>
-</ul>
-
-<h4 id="post-method">POST Method</h4>
-<ul>
-  <li>무조건 XSS 취약점을 같은 도메인에서 찾아야 한다. 왜냐하면 같은 도메인이어야 로그인 세션이 그대로 남아있기 때문이다. ( 쿠키 값 유지 )</li>
-</ul>
-
-<h4 id="referer-bypass-포인트">Referer Bypass 포인트</h4>
-<ul>
-  <li>meta 태그를 이용하여 우회를 시도할 수 있다.</li>
-  <li>단 서버에서 referer 값이 없을 때는 검사를 안하고 통과시켜줘야 한다.</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"referrer"</span> <span class="na">content=</span><span class="s">"no-referrer"</span><span class="nt">&gt;</span>
-</code></pre></div></div>
-
-<h4 id="csrf-token-우회">CSRF Token 우회</h4>
-<ul>
-  <li>서버에서 랜덤한 CSRF Token을 만들고 세션에 저장한다.</li>
-  <li>중요한 요청 페이지에 CSRF Token을 넣어준다.</li>
-  <li>공격자는 CSRF Token을 마음대로 만들 수 없다.</li>
-  <li>하지만 동일한 도메인에 XSS 취약점이 존재하면 CSRF Token 우회가 가능하다.</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"csrf 토큰이 들어있는 페이지"</span> <span class="na">onload=</span><span class="s">"load()"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/iframe&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="kd">function</span> <span class="nf">load</span><span class="p">(){</span>
-	<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">"</span><span class="s2">iframe</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">csrf_token</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h3 id="csrf-대응방안">CSRF 대응방안</h3>
-<ul>
-  <li>지키고자하는 요청에서 <strong>인증정보 추가</strong>하기. (예: 옛날 비밀번호 한번더 입력 , 문자 인증 번호 등 … )</li>
-  <li>애매한 요청 (예: 게시판) 일 때는 Referer Check, CSRF Token을 추가하기.</li>
-</ul>
-
-<h2 id="ssrf-공격">SSRF 공격</h2>
-<h3 id="설명-1">설명</h3>
-<ul>
-  <li>Server Side Request Forgery</li>
-  <li>서버가 임이의 요청을 보내게하는 공격이다.</li>
-  <li>많은 API를 사용함으로써 공격하기 더욱 쉬워졌다.</li>
-</ul>
-
-<h3 id="발생-위치-1">발생 위치</h3>
-<ul>
-  <li>파라미터로 URL을 받는 경우.</li>
-  <li>서버가 외부 자원(리소스)를 이용하는 곳.</li>
-  <li>예 : <code class="language-plaintext highlighter-rouge">view.php?weatherAPI=https://kakao.com/~~~</code></li>
-</ul>
-
-<h3 id="서버에서-url-동작-방식">서버에서 URL 동작 방식</h3>
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IEFQSeyjvOyGjOqwgCDri7TquLQg7Y6Y7J207KeAIOyalOyyrVxu7ISc67KEIC0-PiBBUEkg7ISc67KEIDog642w7J207YSwIOyalOyyrVxuQVBJIOyEnOuyhCAtPj4g7ISc67KEIDog642w7J207YSwIOydkeuLtVxu7ISc67KEIC0-PiDshJzrsoQgOiDtjpjsnbTsp4Ag66CM642U66eBXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>
-<ol>
-  <li>서버가 사용자가 보낸 요청으로 API주소를 받는다.</li>
-  <li>서버에서 주소로 요청한다. 즉 데이터를 가지고 온다.</li>
-  <li>서버에서 가지고온 데이터를 가지고 페이지를 만들어 사용자에서 응답한다.</li>
-</ol>
-
-<h3 id="공격-유형">공격 유형</h3>
-<h4 id="서버-내부-접속하기">서버 내부 접속하기</h4>
-<ul>
-  <li>admin 페이지 접근을 목적으로 한다.</li>
-  <li>파라미터로 <code class="language-plaintext highlighter-rouge">http://localhost</code> admin 페이지 접속 가능.</li>
-  <li>파라미터로 <code class="language-plaintext highlighter-rouge">ftp://localhost/etc/passwd</code> 임의의 파일 열람 가능.</li>
-  <li>만약 공격자가 내부 서버의 아이피 주소 유형을 알아냈다면 알아낸 주소를 가지고 포트 스캔이 가능하다.<br /><code class="language-plaintext highlighter-rouge">http://192.168.0.x:80</code> 즉 주소값을 계속 변경하여 내부망에 존재하는 웹 페이지에 접근가능하다.</li>
-</ul>
-
-<h3 id="ssrf-대응-방안">SSRF 대응 방안</h3>
-<ul>
-  <li>파라미터로 URL을 안 받으면 된다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="CSRF" /><category term="SSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[CSRF 와 SSRF에 대하여 정리하기.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="SSRF" /><category term="웹 해킹" /><summary type="html"><![CDATA[SSRF 실습 문제 Basic SSRF 문제를 풀어보자.]]></summary></entry></feed>
