@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-12T21:35:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7sgqzsmqnsnpAgLT4-IOybuSDshJzrsoQgOiDqs4TsoJUg7IKt7KCcIOyalOyyrVxu7Ju5IOyEnOuyhCAtPj4gREIg7ISc67KEIDog7IKs7Jqp7J6Q7JmAIOq0gOugqOuQnCDsoovslYTsmpQg7KCV67O0IOyCreygnFxuREIg7ISc67KEIC0-PiDsm7kg7ISc67KEIDog7IKt7KCcIOyZhOujjCDsnZHri7VcbuybuSDshJzrsoQgLT4-IERCIOyEnOuyhCA6IOyCrOyaqeyekOqwgCDsnpHshLHtlZwg6rKM7Iuc6riA6rO8IOq0gOugqOuQnCDsoovslYTsmpQg7KCV67O0IOyCreygnCDsmpTssq1cbkRCIOyEnOuyhCAtPj4g7Ju5IOyEnOuyhCA6IOyCreygnCDsmYTro4wg7J2R64u1XG7sm7kg7ISc67KEIC0-PiBEQiDshJzrsoQgOiDsgqzsmqnsnpDqsIAg7J6R7ISx7ZWcIOqyjOyLnOq4gOqzvCDqtIDroKjrkJwg7YyM7J28IOygleuztCDsgq3soJwg7JqU7LKtXG5EQiDshJzrsoQgLT4-IOybuSDshJzrsoQgOiDsgq3soJwg7JmE66OMIOydkeuLtVxu7Ju5IOyEnOuyhCAtPj4gREIg7ISc67KEIDog7IKs7Jqp7J6Q6rCAIOyekeyEse2VnCDqsozsi5zquIAg7IKt7KCcIOyalOyyrVxuREIg7ISc67KEIC0-PiDsm7kg7ISc67KEIDog7IKt7KCcIOyZhOujjCDsnZHri7VcbuybuSDshJzrsoQgLT4-IERCIOyEnOuyhCA6IOyCrOyaqeyekCDqs4TsoJUg7IKt7KCcXG5EQiDshJzrsoQgLT4-IOybuSDshJzrsoQgOiDsgq3soJwg7JmE66OMIOydkeuLtVxu7Ju5IOyEnOuyhCAtPj4g7IKs7Jqp7J6QIDog6rOE7KCVIOyCreygnCDsmYTro4wg7J2R64u1IiwibWVybWFpZCI6bnVsbH0" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">보고서 작성법</title><link href="http://localhost:4000/%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%9E%91%EC%84%B1%EB%B2%95/" rel="alternate" type="text/html" title="보고서 작성법" /><published>2023-06-12T00:00:00+09:00</published><updated>2023-06-12T23:13:00+09:00</updated><id>http://localhost:4000/%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%9E%91%EC%84%B1%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%9E%91%EC%84%B1%EB%B2%95/"><![CDATA[<h2 id="보고서">보고서</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-16T22:08:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">웹 서버 용어 및 취약점 간단한 정리</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EC%9A%A9%EC%96%B4%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="웹 서버 용어 및 취약점 간단한 정리" /><published>2023-06-16T00:00:00+09:00</published><updated>2023-06-16T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EC%9A%A9%EC%96%B4%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EC%9A%A9%EC%96%B4%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="인증">인증</h2>
+<ul>
+  <li>그 사람이 맞는지 확인하는 작업이다.</li>
+</ul>
+
+<h2 id="인가">인가</h2>
+<ul>
+  <li>허락된 사람에게만 어떤 권한을 부여하는 것이다.</li>
+</ul>
+
+<h2 id="쿠키">쿠키</h2>
+<ul>
+  <li>클라이언트 측에 저장되는 작은 기록 정보 파일이다.</li>
+  <li>웹 서버로 보내는 작은 데이터 조각이다.</li>
+</ul>
+
+<h2 id="세션">세션</h2>
+<ul>
+  <li>유저의 정보를 서버에 저장한다.</li>
+  <li>서버에 유저의 인증정보를 저장한다.</li>
+  <li>클라이언트의 인증 상태정보를 저장한다.</li>
+  <li>연결 지속성을 제공하기위해 서버에 저장되는 정보이다.</li>
+</ul>
+
+<h2 id="세션-id">세션 ID</h2>
+<ul>
+  <li>세션 테이블을 구분하기 위한 ID 이다.</li>
+  <li>세션을 식별하기 위하여 사용되는 작은 데이터 이다.</li>
+</ul>
+
+<h2 id="인증-취약점">인증 취약점</h2>
+
+<h3 id="인증-우회">인증 우회</h3>
+<ul>
+  <li>인증 기능을 서버에 구현해야 하지만 클라이언트 측에서 인증 검사가 구현되었을 때 발생하는 취약점이다.</li>
+  <li>인증을 해야 접속할 수 있는 코드가 주석 처리되어 코드에 남아있을 경우 인증 우회가 발생한다.</li>
+</ul>
+
+<h3 id="대응방안">대응방안</h3>
+<ul>
+  <li>서버에서 인증 기능이 구현되어야 한다. 즉 서버에서 인증 검사를 하여야 한다.</li>
+  <li>인증을 우회할 수 있는 민감한 정보가 클라이언트 측 스크립트에  남아 있으면 삭제하여야 한다.</li>
+</ul>
+
+<h2 id="인가-취약점">인가 취약점</h2>
+
+<h3 id="인가-우회">인가 우회</h3>
+<ul>
+  <li>서버에서 불충분한 검사에 의하여 발생한다.</li>
+  <li>권한이 없는데 해당 정보를 확인하거나 수정 또는 삭제를 할 수 있다.</li>
+  <li>파라미터 값 또는 쿠키 값을 통해 사용자를 구분한다면 사용자는 값 변조를 통해 열람 권한이 없는 다른 유저의 정보를 확인할 수 있다.</li>
+</ul>
+
+<h3 id="대응방안-1">대응방안</h3>
+<ul>
+  <li>서버에서 세션을 통하여 권한이 있는 유저인지 판단하여야 한다.</li>
+  <li>민감한 정보를 접근할 때 서버에서 세션 ID 또는 발급받은 토큰을 이용하여 권한이 있는지 검사하여야한다.</li>
+</ul>
+
+<h2 id="우회-팁">우회 팁</h2>
+
+<h3 id="자바스크립트-난독화-되어-있을-때">자바스크립트 난독화 되어 있을 때</h3>
+
+<h4 id="정적-분석하기">정적 분석하기</h4>
+<ul>
+  <li>자바스크립트 난독화 해제 기능을 이용하여 난독화 해제하기.</li>
+</ul>
+
+<h4 id="동적-분석하기">동적 분석하기</h4>
+<ul>
+  <li>true 가 되는 조건을 찾아 직접 실행시키기. 즉 인증이 되는 조건을 스크립트를 분석하여 찾아 실행시켜주면 된다.</li>
+</ul>
+
+<h3 id="hsts-오류">HSTS 오류</h3>
+<ul>
+  <li>강제로 HTTPS 연결을 하게 만드는 옵션이다.</li>
+  <li>동적 HSTS 정책에 저장된 도메인을 삭제해 주면 된다.</li>
+</ul>
+
+<h4 id="edge-브라우저-일-경우">edge 브라우저 일 경우</h4>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">edge://net-internals/#hsts</code> 에 접속한다.</li>
+  <li>삭제할 도메인 명을 입력해 준다.</li>
+</ol>
+
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/57e24d92-732b-40de-b925-f6ff561578b5" alt="Pasted image 20230616215502" /></p>
+
+<h4 id="chrome-브라우저-일-경우">chrome 브라우저 일 경우</h4>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">chrome://net-internals/#hsts</code> 에 접속한다.</li>
+  <li>삭제할 도메인 명을 입력해 준다.</li>
+</ol>
+
+<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/85517351-15af-4eea-944f-9ace54907c23" alt="Pasted image 20230616215739" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="인증" /><category term="인가" /><category term="쿠키" /><category term="세션" /><category term="세션ID" /><category term="javascript" /><category term="HSTS" /><summary type="html"><![CDATA[웹 서버 용어 및 취약점에 대하여 간단히 정리해 보자.]]></summary></entry><entry><title type="html">보고서 작성법</title><link href="http://localhost:4000/%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%9E%91%EC%84%B1%EB%B2%95/" rel="alternate" type="text/html" title="보고서 작성법" /><published>2023-06-12T00:00:00+09:00</published><updated>2023-06-12T23:13:00+09:00</updated><id>http://localhost:4000/%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%9E%91%EC%84%B1%EB%B2%95</id><content type="html" xml:base="http://localhost:4000/%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%9E%91%EC%84%B1%EB%B2%95/"><![CDATA[<h2 id="보고서">보고서</h2>
 <ul>
   <li>내용을 깔끔하게 전달하기 위한 것이다.</li>
   <li>최종 결과물이다.</li>
@@ -2820,375 +2914,4 @@ jsp &gt; .jspx ( .jsp 와 문법이 다르다. )
   <li><a href="https://lynmp.com/ko/article/de811c9dc5fj">MySQL 중복값 갯수와 각각의 값 구하기 - LYNMP</a></li>
   <li><a href="https://hongong.hanbit.co.kr/sql-%EA%B8%B0%EB%B3%B8-%EB%AC%B8%EB%B2%95-joininner-outer-cross-self-join/">SQL 기본 문법: JOIN(INNER, OUTER, CROSS, SELF JOIN) (hanbit.co.kr)</a></li>
   <li><a href="https://mingggu.tistory.com/83">ORDER BY 여러개 사용 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="jsp" /><category term="servlet" /><category term="sql" /><category term="oracle db" /><category term="java" /><summary type="html"><![CDATA[게시글 좋아요 및 정렬 기능을 만들어 보았다.]]></summary></entry><entry><title type="html">웹 서버 만들기(14) 게시글 검색 기능 및 날짜 지정 검색</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C14/" rel="alternate" type="text/html" title="웹 서버 만들기(14) 게시글 검색 기능 및 날짜 지정 검색" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C14</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C14/"><![CDATA[<h2 id="게시글-검색-기능">게시글 검색 기능</h2>
-
-<h3 id="목표">목표</h3>
-<ul>
-  <li>제목, 작성자, 내용, 제목+내용 을 유형으로 검색을 시도한다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/dc3f1f33-88b1-4c17-bac6-0436a079bf3b" alt="Pasted image 20230602023619" /></li>
-  <li>각 유형을 선택하고 검색을 시도하면 유형에 따라 검색문과 일치하는 결과의 게시글들을 보여준다.</li>
-</ul>
-
-<h3 id="유형-선택창">유형 선택창</h3>
-<ul>
-  <li>제목, 작성자, 내용, 제목+내용의 유형들로 선택창을 만들어 주었다.</li>
-  <li>기본으로 선택되어 있는 유형은 <code class="language-plaintext highlighter-rouge">제목+내용</code> 이다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/997ca3c5-7018-4332-9a2c-ca3c5c7082a3" alt="Pasted image 20230602025353" /></li>
-  <li>유형을 선택하여 검색을 진행한다.</li>
-</ul>
-
-<h3 id="jsp-코드">JSP 코드</h3>
-
-<h4 id="notice_boardjsp">notice_board.jsp</h4>
-<ul>
-  <li>servlet 에서 넘겨받은 optionVal 값을 이용하여 검색한 후에도 선택한 값을 계속 유지하여준다.</li>
-  <li>id가 <code class="language-plaintext highlighter-rouge">searchForm</code> 인 form이 submit할 때 선택된 유형도 파라미터에 넣어저 서버로 요청을 보내게된다.<br /><code class="language-plaintext highlighter-rouge">?option_val=1&amp;page=1&amp;q=</code></li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"option_val"</span> <span class="na">form=</span><span class="s">"searchForm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span> <span class="na">selected</span> <span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span> <span class="nt">&gt;</span>제목+내용<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span> <span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span> <span class="na">selected</span> <span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span> <span class="nt">&gt;</span>작성자<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span> <span class="na">selected</span> <span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span> <span class="nt">&gt;</span>제목<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span> <span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">4</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span> <span class="na">selected</span> <span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span> <span class="nt">&gt;</span>내용<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
-
-<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">id=</span><span class="s">"searchForm"</span><span class="nt">&gt;</span>
-... 생략 ...
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>검색 전<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/b9ac62a4-f428-4222-83fc-9bb848f97043" alt="Pasted image 20230602025138" /></p>
-  </li>
-  <li>
-    <p>검색 후<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/06390675-9cc8-43ae-8b7e-e892596b44de" alt="Pasted image 20230602025225" /></p>
-  </li>
-</ul>
-
-<h3 id="servlet-코드--java-코드-">Servlet 코드 ( Java 코드 )</h3>
-
-<h4 id="mainpagejava">MainPage.java</h4>
-<ul>
-  <li>사용자에게서 받은 option 값이 1~4 범위의 수인지 검사한다.</li>
-  <li>option 값과 검색문 값을 이용하여 게시글 수와 게시글 목록을 받아온다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-		<span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoard</span><span class="o">)){</span>
-			<span class="c1">// 검색 옵션 option_val</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 1 제목+내용</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 2 작성자</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 3 제목</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 4 내용</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">ov</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"option_val"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">optionVal</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">optionVal</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">ov</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">optionVal</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">optionVal</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">optionVal</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 검색 결과 총 게시글 수 알아보기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">noticeBoardDAO</span><span class="o">.</span><span class="na">getCount</span><span class="o">(</span><span class="n">optionVal</span><span class="o">,</span><span class="n">q</span><span class="o">,</span> <span class="n">from</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 검색 데이터 가져오기.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">array</span> <span class="o">=</span> <span class="n">noticeBoardDAO</span><span class="o">.</span><span class="na">getNoticeList</span><span class="o">(</span><span class="n">optionVal</span><span class="o">,</span><span class="n">q</span><span class="o">,</span><span class="n">start</span><span class="o">,</span><span class="n">number</span><span class="o">,</span> <span class="n">from</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 검색 옵션 값 jsp 로 보내기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"optionVal"</span><span class="o">,</span> <span class="n">optionVal</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span>
-</code></pre></div></div>
-
-<h4 id="noticeboarddaojava">NoticeBoardDAO.java</h4>
-<ul>
-  <li>옵션에 맞는 쿼리문을 만들어 DB 게시글 테이블에서 게시글 목록을 가져온다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoticeBoardDAO</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 전체 목록 가져오기 or 검색 목록 가져오기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 1 &lt;= optionVal &lt;= 4</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 1 제목 + 내용</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 2 작성자</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 3 제목</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 4 내용</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 날짜 범위</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Notice</span><span class="o">&gt;</span> <span class="nf">getNoticeList</span><span class="o">(</span><span class="kt">int</span> <span class="n">optionVal</span><span class="o">,</span><span class="nc">String</span> <span class="n">question</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">number</span><span class="o">,</span> <span class="kt">long</span> <span class="n">from</span><span class="o">,</span> <span class="kt">long</span> <span class="n">to</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">optionVal</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">optionVal</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Notice</span><span class="o">&gt;();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Connection</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"select * from "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">tableName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%' or main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (username like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">3</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">4</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" and (gen_time &gt; ? and gen_time &lt; ?)"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" order by gen_time desc "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 0번째 부터 5개의 자료만 출력해라.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"OFFSET ? ROWS FETCH NEXT ? ROWS ONLY"</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">from</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="n">start</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="n">number</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">from</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="n">start</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="n">number</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>옵션에 맞는 쿼리문을 만들어 DB 게시글 테이블에 저장된 데이터 수를 알아낸다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoticeBoardDAO</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 게시판 목록 수 가져오기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 1 &lt;= optionVal &lt;= 4</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 1 제목 + 내용</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 2 작성자</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 3 제목</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 4 내용</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCount</span><span class="o">(</span><span class="kt">int</span> <span class="n">optionVal</span><span class="o">,</span> <span class="nc">String</span> <span class="n">question</span><span class="o">,</span> <span class="kt">long</span> <span class="n">from</span><span class="o">,</span> <span class="kt">long</span> <span class="n">to</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">optionVal</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">optionVal</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// var query = "select count(sid) from notice_board";</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"select count(sid) from "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">tableName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%' or main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (username like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">3</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">4</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  and (gen_time &gt; ? and gen_time &lt; ?)"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">re</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Connection</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="n">cnt</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">cnt</span><span class="o">+=</span><span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="결과">결과</h3>
-<ul>
-  <li>작성자 user2 검색결과<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/dc473372-74cd-44ac-8d45-2888a2e46162" alt="Pasted image 20230602032148" /></li>
-  <li>작성자 mq 검색결과<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/6f259fb9-609f-4acb-bcdf-8d6217611b13" alt="Pasted image 20230602032213" /></li>
-  <li>제목+내용 test 검색결과<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c57db689-0bca-4ac3-9f37-3556686c7f4f" alt="Pasted image 20230602032247" /></li>
-</ul>
-
-<h2 id="게시글-날짜-지정-검색">게시글 날짜 지정 검색</h2>
-
-<h3 id="목표-1">목표</h3>
-<ul>
-  <li>날짜 범위를 지정하여 검색을 시도하면 지정된 날짜 사이에 작상된 게시글들을 가지고 온다.</li>
-  <li>날짜 형식(yyyy-MM-dd)이 일치하지 않으면 디펄트로 설정된 값을 날짜로 지정한다.</li>
-</ul>
-
-<h3 id="날짜-선택창">날짜 선택창</h3>
-<ul>
-  <li>사용자는 직접 날짜를 선택할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/cf9f6e2e-e771-43e5-8cb8-9546c844f4f4" alt="Pasted image 20230602032643" /></li>
-  <li>검색을 누르면 GET 요청으로 날짜가 파라미터에 들어가 서버로 전송된다.<br /><code class="language-plaintext highlighter-rouge">?option_val=1&amp;page=1&amp;q=&amp;date_from=2023-05-18&amp;date_to=2023-06-01</code></li>
-</ul>
-
-<h3 id="jsp-코드-1">JSP 코드</h3>
-
-<h4 id="notice_boardjsp-1">notice_board.jsp</h4>
-<ul>
-  <li>타입이 date인 input 태그들을 추가하였다.</li>
-  <li>date_from ~ date_to 사이의 결과를 검색할 수 있다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">id=</span><span class="s">"searchForm"</span><span class="nt">&gt;</span>
-... 생략 ... 
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">name=</span><span class="s">"date_from"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">name=</span><span class="s">"date_to"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"검색"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre></div></div>
-
-<h3 id="servlet-코드--java-코드--1">Servlet 코드 ( Java 코드 )</h3>
-
-<h4 id="mainpagejava-1">MainPage.java</h4>
-<ul>
-  <li>사용자로 부터 date_from,  date_to 값을 받는다.</li>
-  <li>유효한 날짜인지 확인한다.</li>
-  <li>DB 게시글 테이블에는 게시글 생성날짜가 long 타입으로 저장되어 있다. 따라서 사용자에게 받은 날짜들을 long 타입으로 변환한다.</li>
-  <li>검색된 게시글 수, 게시글 목록을 DB 테이블로 부터 가져온다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">noticeBoard</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span><span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 검색 날짜 범위</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">dateFrom</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"date_from"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">dateTo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"date_to"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">dateFrom</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">dateTo</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">dateFrom</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">dateTo</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">dateFrom</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)</span> <span class="o">||</span> <span class="n">dateTo</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">dateFrom</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">dateTo</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 날짜 유효한지 검사</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">re</span> <span class="o">=</span> <span class="s">"(19|20)\\d{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">dateFrom</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">re</span><span class="o">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">dateTo</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">re</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">dateFrom</span> <span class="o">=</span> <span class="s">"1980-01-01"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">dateTo</span> <span class="o">=</span> <span class="s">"2999-12-31"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd HH:mm"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">obj</span><span class="o">.</span><span class="na">setTimeZone</span><span class="o">(</span><span class="nc">TimeZone</span><span class="o">.</span><span class="na">getTimeZone</span><span class="o">(</span><span class="s">"Asia/Seoul"</span><span class="o">));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">long</span> <span class="n">from</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">long</span> <span class="n">to</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// long type 변환</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">from</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">dateFrom</span><span class="o">+</span><span class="s">" 00:01"</span><span class="o">).</span><span class="na">getTime</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">to</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">dateTo</span><span class="o">+</span><span class="s">" 23:59"</span><span class="o">).</span><span class="na">getTime</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">from</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">to</span> <span class="o">=</span> <span class="nc">Long</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 검색 결과 총 게시글 수 알아보기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">noticeBoardDAO</span><span class="o">.</span><span class="na">getCount</span><span class="o">(</span><span class="n">optionVal</span><span class="o">,</span><span class="n">q</span><span class="o">,</span> <span class="n">from</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 검색 데이터 가져오기.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">array</span> <span class="o">=</span> <span class="n">noticeBoardDAO</span><span class="o">.</span><span class="na">getNoticeList</span><span class="o">(</span><span class="n">optionVal</span><span class="o">,</span><span class="n">q</span><span class="o">,</span><span class="n">start</span><span class="o">,</span><span class="n">number</span><span class="o">,</span> <span class="n">from</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// date from and date to</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"dateFrom"</span><span class="o">,</span> <span class="n">dateFrom</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"dateTo"</span><span class="o">,</span> <span class="n">dateTo</span><span class="o">);</span>
-</code></pre></div></div>
-
-<h4 id="noticeboarddaojava-1">NoticeBoardDAO.java</h4>
-<ul>
-  <li>쿼리문에 생성일 범위를 추가하여 특정 범위에 있는 게시글들을 가지고 온다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoticeBoardDAO</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Notice</span><span class="o">&gt;</span> <span class="nf">getNoticeList</span><span class="o">(</span><span class="kt">int</span> <span class="n">optionVal</span><span class="o">,</span><span class="nc">String</span> <span class="n">question</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">number</span><span class="o">,</span> <span class="kt">long</span> <span class="n">from</span><span class="o">,</span> <span class="kt">long</span> <span class="n">to</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Notice</span><span class="o">&gt;();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Connection</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"select * from "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">tableName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%' or main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (username like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">3</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">4</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 게시글 범위</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" and (gen_time &gt; ? and gen_time &lt; ?)"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" order by gen_time desc "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 0번째 부터 5개의 자료만 출력해라.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"OFFSET ? ROWS FETCH NEXT ? ROWS ONLY"</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">from</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="n">start</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="n">number</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">question</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">from</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="n">start</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="n">number</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>쿼리문에 생성일 범위를 추가하여 특정 범위에 있는 게시글 수를 구한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoticeBoardDAO</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCount</span><span class="o">(</span><span class="kt">int</span> <span class="n">optionVal</span><span class="o">,</span> <span class="nc">String</span> <span class="n">question</span><span class="o">,</span> <span class="kt">long</span> <span class="n">from</span><span class="o">,</span> <span class="kt">long</span> <span class="n">to</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"select count(sid) from "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">tableName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%' or main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (username like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">3</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (title like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">optionVal</span> <span class="o">==</span> <span class="mi">4</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" where (main_text like '%'||?||'%')"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  and (gen_time &gt; ? and gen_time &lt; ?)"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">int</span> <span class="n">re</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Connection</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="n">cnt</span><span class="o">,</span> <span class="n">from</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">cnt</span> <span class="o">+=</span><span class="mi">1</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="n">cnt</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
-</code></pre></div></div>
-
-<h4 id="noticejava">Notice.java</h4>
-<ul>
-  <li>테이블에 저장된 생성시간(long)을 사람이 볼 수 있는 날짜로 변경한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Notice</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getGenDate</span><span class="o">(){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"dd MMM yyy HH:mm"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">obj</span><span class="o">.</span><span class="na">setTimeZone</span><span class="o">(</span><span class="nc">TimeZone</span><span class="o">.</span><span class="na">getTimeZone</span><span class="o">(</span><span class="s">"Asia/Seoul"</span><span class="o">));</span> <span class="c1">// 타임존 한국</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">res</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="n">genTime</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">res</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="결과-1">결과</h3>
-<ul>
-  <li>날짜 범위를 지정하고 검색하면 날짜 사이에 생성된 게시글 목록들을 볼 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/39d994ec-2892-4be4-97cd-57a93f070883" alt="Pasted image 20230602035208" /></li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://heum-story.tistory.com/74">JAVA Date 정규식 :: Simple Dev (tistory.com)</a></li>
-  <li><a href="https://axce.tistory.com/31">HTML input 요소 :: 날짜, 시간 관련 입력 (tistory.com)</a></li>
-  <li><a href="http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=html_ref_tag_select_form_01">©TCP-tryWWW (tcpschool.com)</a></li>
-  <li><a href="https://youngest-programming.tistory.com/101">자바 어떤 기기에서든 어디서든 한국의 날짜만 얻고 싶을 때 (tistory.com)</a></li>
-  <li><a href="https://hianna.tistory.com/322">HTML콤보박스(select) (1) - 기본값 지정, 비활성화, 항목 비활성화 - 어제 오늘 내일 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="jsp" /><category term="servlet" /><category term="java" /><summary type="html"><![CDATA[게시글 검색 기능 및 날짜 지정 검색을 제작하여 보자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="jsp" /><category term="servlet" /><category term="sql" /><category term="oracle db" /><category term="java" /><summary type="html"><![CDATA[게시글 좋아요 및 정렬 기능을 만들어 보았다.]]></summary></entry></feed>
