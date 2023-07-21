@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-21T15:44:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-21T16:44:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
 </code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">JWT 란?</title><link href="http://localhost:4000/JWT/" rel="alternate" type="text/html" title="JWT 란?" /><published>2023-07-21T00:00:00+09:00</published><updated>2023-07-21T23:13:00+09:00</updated><id>http://localhost:4000/JWT</id><content type="html" xml:base="http://localhost:4000/JWT/"><![CDATA[<h2 id="jwt-란">JWT 란?</h2>
 <ul>
   <li>JSON Web Tokens</li>
@@ -67,7 +67,7 @@ JWT = Header.Payload.Signature
   <li>ARP 프로토콜을 이용한 MITM 공격이다.</li>
   <li>근거리 통신망에서만 사용할 수 있는 공격이다.</li>
   <li>사용자가 IP 주소에 대응하는 MAC 주소를 찾을 때 공격자가 해당 IP의 MAC주소는 자기라고 알리는 것이다. 즉 원래 IP에 대응하는 기기의 응답보다 빠르게 공격자가 자기 MAC주소를 알리는 것이다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="MIMA" /><category term="ARP" /><category term="ARP Spoofing" /><summary type="html"><![CDATA[MITM 공격에 대하여 알아보자.]]></summary></entry><entry><title type="html">주통기반 Web 취약점 시나리오 (수정중)</title><link href="http://localhost:4000/%EC%A3%BC%ED%86%B5%EA%B8%B0%EB%B0%98%EA%B3%B5%EA%B2%A9%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="주통기반 Web 취약점 시나리오 (수정중)" /><published>2023-07-02T00:00:00+09:00</published><updated>2023-07-07T23:13:00+09:00</updated><id>http://localhost:4000/%EC%A3%BC%ED%86%B5%EA%B8%B0%EB%B0%98%EA%B3%B5%EA%B2%A9%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/%EC%A3%BC%ED%86%B5%EA%B8%B0%EB%B0%98%EA%B3%B5%EA%B2%A9%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="3-ldap-인젝션">3. LDAP 인젝션</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="MIMA" /><category term="ARP" /><category term="ARP Spoofing" /><summary type="html"><![CDATA[MITM 공격에 대하여 알아보자.]]></summary></entry><entry><title type="html">주통기반 Web 취약점 시나리오</title><link href="http://localhost:4000/%EC%A3%BC%ED%86%B5%EA%B8%B0%EB%B0%98%EA%B3%B5%EA%B2%A9%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="주통기반 Web 취약점 시나리오" /><published>2023-07-02T00:00:00+09:00</published><updated>2023-07-21T23:13:00+09:00</updated><id>http://localhost:4000/%EC%A3%BC%ED%86%B5%EA%B8%B0%EB%B0%98%EA%B3%B5%EA%B2%A9%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/%EC%A3%BC%ED%86%B5%EA%B8%B0%EB%B0%98%EA%B3%B5%EA%B2%A9%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="3-ldap-인젝션">3. LDAP 인젝션</h2>
 
 <h3 id="ldap">LDAP</h3>
 <ul>
@@ -128,6 +128,19 @@ JWT = Header.Payload.Signature
   <li>XPath 로 구성된 로그인 페이지에서 인증을 우회할 수 있다.</li>
 </ul>
 
+<h2 id="8-디렉터리-인덱싱">8. 디렉터리 인덱싱</h2>
+<ul>
+  <li>인덱스 파일로 지정한 파일이 존재하지 않거나, 디렉토리 리스팅을 허락하도록 설정했을 경우 디렉터리 리스트가 사용자에게 노출된다.</li>
+  <li>URL에 디렉터리 명을 입력했을 때 디렉터리 목록을 확인할 수 있다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-5">취약점 시나리오</h3>
+<ul>
+  <li>서버의 디렉토리 구조를 쉽게 파악할 수 있다.</li>
+  <li>민감한 정보가 포함된 설정 파일이 노출될 수 있다.</li>
+  <li>백업한 서버 코드가 노출될 수 있다.</li>
+</ul>
+
 <h2 id="9-정보-누출">9. 정보 누출</h2>
 
 <h3 id="개인-정보-누출">개인 정보 누출</h3>
@@ -141,6 +154,16 @@ JWT = Header.Payload.Signature
   <li>이러한 정보로 해당 버전에 취약점이 존재하는지 확인할 수 있다.</li>
 </ul>
 
+<h2 id="10-악성-콘텐츠">10. 악성 콘텐츠</h2>
+<ul>
+  <li>확장자를 제한하지 않아 악성 파일을 게시글에 업로드할 수 있다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-6">취약점 시나리오</h3>
+<ul>
+  <li>피해자가 악성 파일을 다운로드 받고 실행시 악성 코드 감염 등 보안상 심각한 위험에 노출된다.</li>
+</ul>
+
 <h2 id="11-크로스사이트-스크립팅">11. 크로스사이트 스크립팅</h2>
 <ul>
   <li>클라이언트 측 스크립트를 삽입하는 공격이다.</li>
@@ -152,7 +175,7 @@ JWT = Header.Payload.Signature
   <li>게시글, 게시판과 같은 곳에서 발생한다.</li>
 </ul>
 
-<h4 id="취약점-시나리오-5">취약점 시나리오</h4>
+<h4 id="취약점-시나리오-7">취약점 시나리오</h4>
 <ol>
   <li>공격자는 악의적인 스크립트를 삽입한 게시글을 작성한다.</li>
   <li>방문자가 악성 게시글에 방문하면 사용자 브라우저에서 악성 스크립트가 동작하여 악의적인 행위를 수행한다. ( 쿠키 세션 ID값을 공격자 서버로 전송 )</li>
@@ -163,12 +186,43 @@ JWT = Header.Payload.Signature
   <li>사용자의 요청 파라미터 값을 그대로 보여주는 페이지에서 발생한다.</li>
 </ul>
 
-<h4 id="취약점-시나리오-6">취약점 시나리오</h4>
+<h4 id="취약점-시나리오-8">취약점 시나리오</h4>
 <ol>
   <li>공격자는 악성 스크립트를 삽입한 악성 링크를 만든다.</li>
   <li>사용자가 악성 링크를 클릭하도록 유도한다.</li>
   <li>사용자가 악성 링크를 클릭하여 들어가면 삽입한 악성 스크립트가 사용자 브라우저에서 동작하여 악의적인 행위를 수행한다. (키로거 삽입, 세션 ID 값 탈취)</li>
 </ol>
+
+<h2 id="12-약한-문자열-강도">12. 약한 문자열 강도</h2>
+<ul>
+  <li>인증 정보( 로그인 비밀번호 )의 등록 또는 변경 시 해당 값의 복잡성을 점검하지 않아 공격자가 쉽게 인증정보를 유추할 수 있다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-9">취약점 시나리오</h3>
+<ul>
+  <li>공격자는 흔히 사용되는 비밀번호를 추측하여 무단으로 타 사용자의 계정으로 접속하는 악의적인 행위를 수행한다.</li>
+</ul>
+
+<h2 id="13-불충분한-인증">13. 불충분한 인증</h2>
+<ul>
+  <li>중요한 페이지에 접근할 때 추가 인증기능이 구현되어 있지 않아 인증우회 문제가 발생할 수 있다.</li>
+  <li>인증 기능 미구현.</li>
+</ul>
+
+<h3 id="취약점-시나리오-10">취약점 시나리오</h3>
+<ul>
+  <li>URL을 통해 인증을 우회하여 중요 정보 페이지에 접근할 수 있다.</li>
+</ul>
+
+<h2 id="14-취약한-패스워드-복구">14. 취약한 패스워드 복구</h2>
+<ul>
+  <li>패스워드를 복구 기능이 적절히 구현되어 있지 않아 공격자는 사용자의 비밀번호 획득 및 변경이 가능하다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-11">취약점 시나리오</h3>
+<ul>
+  <li>패스워드 복구 로직( 패스워드 찾기 등)으로 공격자가 불법적으로 다른 사용자의 패스워드를 획득, 병경할 수 있다.</li>
+</ul>
 
 <h2 id="15-csrf">15. CSRF</h2>
 <ul>
@@ -177,11 +231,33 @@ JWT = Header.Payload.Signature
   <li>주로 XSS 공격과 같이 CSRF공격을 진행한다.</li>
 </ul>
 
-<h3 id="취약점-시나리오-7">취약점 시나리오</h3>
+<h3 id="취약점-시나리오-12">취약점 시나리오</h3>
 <ol>
   <li>공격자는 XSS 취약점을 이용하여 악의적인 요청을 보내는 게시글을 작성한다.</li>
   <li>사용자가 악성 게시글에 방문하면 자신도 모르게 서버로 악의적인 요청을 보내게된다.</li>
 </ol>
+
+<h2 id="17-불충분한-인가">17. 불충분한 인가</h2>
+<ul>
+  <li>사용자가 권한이 없는 데이터에 접근 및 수정이 가능하다.</li>
+  <li>권한 검사 기능 미구현.</li>
+</ul>
+
+<h3 id="취약점-시나리오-13">취약점 시나리오</h3>
+<ul>
+  <li>무단으로 다른 사용자의 게시글을 수정한다.</li>
+  <li>무단으로 다른 사용자의 계정 정보를 수정한다.</li>
+</ul>
+
+<h2 id="18-불충분한-세션-만료">18. 불충분한 세션 만료</h2>
+<ul>
+  <li>세션의 만료 기간을 설정하지 않아 로그아웃 하기 전까지 계속 같은 세션을 이용한다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-14">취약점 시나리오</h3>
+<ul>
+  <li>공격자에게 한번이라도 세션 ID값을 탈취당하면 공격자는 정상적인 사용자로 위장하여 웹 서버에 악의적인 행위를 수행 할 수 있다.</li>
+</ul>
 
 <h2 id="19-세션-고정">19. 세션 고정</h2>
 <ul>
@@ -189,12 +265,23 @@ JWT = Header.Payload.Signature
   <li>즉 서버에서 세션 ID값을 새로 발급해주는 것이 아닌 기존 유저가 가지고 있는 세션 ID값을 이용하여 로그인 여부를 확인한다.</li>
 </ul>
 
-<h3 id="취약점-시나리오-8">취약점 시나리오</h3>
+<h3 id="취약점-시나리오-15">취약점 시나리오</h3>
 <ol>
   <li>Reflected XSS 취약점을 이용하여 로그인 페이지에 스크립트를 사용하여 피해자의 쿠키 세션 ID값을 공격자 세션 ID 값으로 바꾼다.</li>
   <li>피해자가 악성 링크를 이용하여 로그인을 하여도 세션 ID값이 바뀌지 않아 공격자는 피해자로 로그인 인증우회 한다.</li>
   <li>이렇게 로그인을 우회하여 피해자의 정보 탈취 및 권한 우회가 가능하다.</li>
 </ol>
+
+<h2 id="20-자동화-공격">20. 자동화 공격</h2>
+<ul>
+  <li>매크로를 이용하여 게시글 작성 또는 로그인이 가능한 취약점이다.</li>
+</ul>
+
+<h3 id="취약점">취약점</h3>
+<ul>
+  <li>매크로로 게시글을 작성 요청을 무단으로 보내어 게시판을 도배할 수 있다.</li>
+  <li>로그인 시도를 제한하지 않아 사전 대입 공격으로 사용자의 계정을 탈취할 수 있다.</li>
+</ul>
 
 <h2 id="22-파일-업로드">22. 파일 업로드</h2>
 <ul>
@@ -202,7 +289,7 @@ JWT = Header.Payload.Signature
   <li>악의적인 웹 쉘 파일을 업로드 및 실행하여 서버에 치명적인 영향을 미칠 수 있다.</li>
 </ul>
 
-<h3 id="취약점-시나리오-9">취약점 시나리오</h3>
+<h3 id="취약점-시나리오-16">취약점 시나리오</h3>
 <ol>
   <li>공격자는 서버에 웹 쉘 파일을 업로드한다.</li>
   <li>공격자는 웹 쉘 파일을 실행시켜 서버에서 민감한 파일 추출할 수 있다. (db 계정 정보, 웹 서버 코드)</li>
@@ -215,11 +302,51 @@ JWT = Header.Payload.Signature
   <li>file traversal 취약점을 이용하여 서버의 민감한 정보를 탈취할 수 있다.</li>
 </ul>
 
-<h3 id="취약점-시나리오-10">취약점 시나리오</h3>
+<h3 id="취약점-시나리오-17">취약점 시나리오</h3>
 <ol>
   <li>공격자는 file traversal 공격을 이용하여 서버의 민감한 파일을 탈취한다.</li>
   <li>공격자는 이러한 민감한 파일을 분석하여 또 다른 취약점을 발견할 수 있다.</li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="LDAP" /><category term="Comman Injection" /><category term="SQL Injection" /><category term="SSI Injection" /><category term="XPath Injection" /><category term="XSS" /><category term="CSRF" /><category term="File Upload" /><category term="File Download" /><summary type="html"><![CDATA[주통기반 Web 취약점 시나리오를 정리해보자]]></summary></entry><entry><title type="html">Buffer Overflow 와 Format String Bug</title><link href="http://localhost:4000/BoF%EC%99%80FSB/" rel="alternate" type="text/html" title="Buffer Overflow 와 Format String Bug" /><published>2023-06-30T00:00:00+09:00</published><updated>2023-06-30T23:13:00+09:00</updated><id>http://localhost:4000/BoF%EC%99%80FSB</id><content type="html" xml:base="http://localhost:4000/BoF%EC%99%80FSB/"><![CDATA[<h2 id="프로세스-구조">프로세스 구조</h2>
+</ol>
+
+<h2 id="24-관리자-페이지-노출">24. 관리자 페이지 노출</h2>
+<ul>
+  <li>유추하기 쉬운 URL을 통해 관리자 페이지 접근이 가능한 취약점이다.</li>
+  <li>admin, manager, phpMyAdmin</li>
+</ul>
+
+<h3 id="취약점-시나리오-18">취약점 시나리오</h3>
+<ul>
+  <li>비인가자가 관리자 메뉴에 무단으로 접근하여 악의적인 행위(웹 사이트 변조)를 수행할 수 있다.</li>
+</ul>
+
+<h2 id="27-데이터-평문-전송">27. 데이터 평문 전송</h2>
+<ul>
+  <li>서버와 클라이언트 간 암호화 통신이 이루어져 있지않아 민감한 정보가 외부로 노출될 수 있다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-19">취약점 시나리오</h3>
+<ul>
+  <li>MIMT(중간자) 공격을 이용하여 사용자가 요청한 민감한 정보를 탈취 및 도용 할 수 있다. (계정 정보)</li>
+</ul>
+
+<h2 id="28-쿠키-변조">28. 쿠키 변조</h2>
+<ul>
+  <li>쿠키 값을 변조하여 권한을 우회하거나 다른 사용자로 위장하는 취약점을 말한다.</li>
+</ul>
+
+<h3 id="취약점-시나리오-20">취약점 시나리오</h3>
+<ul>
+  <li>공격자가 쿠키 값을 변경하여 관리자 권한을 획득할 수 있다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>변경 전
+Cookie
+auth=User
+
+변경 후
+Cookie
+auth=Admin
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="주통기반" /><summary type="html"><![CDATA[주통기반 Web 취약점 시나리오를 정리해보자]]></summary></entry><entry><title type="html">Buffer Overflow 와 Format String Bug</title><link href="http://localhost:4000/BoF%EC%99%80FSB/" rel="alternate" type="text/html" title="Buffer Overflow 와 Format String Bug" /><published>2023-06-30T00:00:00+09:00</published><updated>2023-06-30T23:13:00+09:00</updated><id>http://localhost:4000/BoF%EC%99%80FSB</id><content type="html" xml:base="http://localhost:4000/BoF%EC%99%80FSB/"><![CDATA[<h2 id="프로세스-구조">프로세스 구조</h2>
 <p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/69baa543-8e82-4d24-bd92-5683a77d051b" alt="Pasted image 20230630182437" /></p>
 
 <h3 id="code">CODE</h3>
