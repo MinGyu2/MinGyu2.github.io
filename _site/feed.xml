@@ -1,5 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-14T21:39:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">MITM 공격이란?</title><link href="http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9/" rel="alternate" type="text/html" title="MITM 공격이란?" /><published>2023-07-14T00:00:00+09:00</published><updated>2023-07-14T23:13:00+09:00</updated><id>http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9</id><content type="html" xml:base="http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9/"><![CDATA[<h2 id="mitm">MITM</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-21T14:49:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">JWT 란?</title><link href="http://localhost:4000/JWT/" rel="alternate" type="text/html" title="JWT 란?" /><published>2023-07-21T00:00:00+09:00</published><updated>2023-07-21T23:13:00+09:00</updated><id>http://localhost:4000/JWT</id><content type="html" xml:base="http://localhost:4000/JWT/"><![CDATA[<h2 id="jwt-란">JWT 란?</h2>
+<ul>
+  <li>JSON Web Tokens</li>
+  <li>세션 ID값을 대체할 수 있다.</li>
+  <li>웹 표준을 따르기 때문에 대부분의 언어가 이를 지원한다.</li>
+</ul>
+
+<h2 id="구조">구조</h2>
+<ul>
+  <li><strong>Header.Payload.Signature</strong> 로 구성되어 있다.</li>
+  <li>’.(dot)’을 구분자로 하여 JWT 토큰 1개를 만든다.</li>
+</ul>
+
+<h3 id="header">Header</h3>
+<ul>
+  <li>해시 알고리즘 유형</li>
+</ul>
+
+<h3 id="payload">Payload</h3>
+<ul>
+  <li>데이터 ( ex: { user:admin } )</li>
+</ul>
+
+<h3 id="signature">Signature</h3>
+<ul>
+  <li>무결성 검증을 위한것이다.</li>
+  <li>즉 JWT 토큰이 변조되어 있는지 확인할 수 있다.</li>
+  <li>비밀 키를 이용하여 해시 처리를 한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Signature= 암호알고리즘(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  비밀 키.
+)
+
+JWT = Header.Payload.Signature
+</code></pre></div></div>
+
+<h2 id="단점">단점</h2>
+<ul>
+  <li>서버가 사용자 웹 브라우저에 너무 많은 정보를 전달할 위험이있다.</li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://jwt.io/">JSON Web Tokens - jwt.io</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="JWT" /><category term="HMAC" /><summary type="html"><![CDATA[JWT에 대하여 알아보자.]]></summary></entry><entry><title type="html">MITM 공격이란?</title><link href="http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9/" rel="alternate" type="text/html" title="MITM 공격이란?" /><published>2023-07-14T00:00:00+09:00</published><updated>2023-07-14T23:13:00+09:00</updated><id>http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9</id><content type="html" xml:base="http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9/"><![CDATA[<h2 id="mitm">MITM</h2>
 <ul>
   <li>Man In The Middle 공격(중간자 공격)</li>
   <li>공격자가 사용자와 웹 애플리케이션간의 데이터 흐름을 조작하여 데이터를 가로채는 공격이다.</li>
@@ -2848,496 +2895,4 @@ Host: 221.27.0.6
   <li>파일을 DB 테이블에 저장하기.</li>
   <li>파일 저장 위치를 물리적으로 분리시키기. ( NAS )</li>
   <li>디렉토리 traversal 막기. (  <code class="language-plaintext highlighter-rouge">../</code> 경로 이동 막기 )</li>
-</ol>]]></content><author><name>Jung MinGyu</name></author><category term="file upload" /><category term="file download" /><category term="lfi" /><category term="rfi" /><summary type="html"><![CDATA[File Upload, LFI, RFI, File Download 공격에 대하여 알아보자.]]></summary></entry><entry><title type="html">웹 서버 개발 (17) 마이페이지</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80/" rel="alternate" type="text/html" title="웹 서버 개발 (17) 마이페이지" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C17%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80/"><![CDATA[<h2 id="마이페이지">마이페이지</h2>
-<ul>
-  <li>사용자 정보 확인 기능.</li>
-  <li>사용자 정보 변경 기능.</li>
-</ul>
-
-<h2 id="사용자-정보-확인">사용자 정보 확인</h2>
-<ul>
-  <li>사용자는 아이디, 이메일, 주소를 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/1f3080f9-e247-473e-9242-0851b64eb35c" alt="Pasted image 20230608002224" /></li>
-  <li>마이페이지 버튼을 눌러 마이페이지에 접속하면 사용자 정보를 확인가능하다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a4b177b5-ce06-4d4b-bf2d-db87e497579e" alt="Pasted image 20230608002341" /></li>
-</ul>
-
-<h3 id="jsp-코드">JSP 코드</h3>
-
-<h4 id="main_pagejsp">main_page.jsp</h4>
-
-<ul>
-  <li>마이페이지 버튼</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button-design"</span> <span class="na">href=</span><span class="s">"/main_page/my_page"</span><span class="nt">&gt;</span>마이페이지<span class="nt">&lt;/a&gt;</span>
-</code></pre></div></div>
-
-<ul>
-  <li>servlet 이 넘겨준 menuNumber을 이용하여 마이페이지를 불러온다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span> <span class="k">if</span><span class="o">(</span><span class="n">menuNumber</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;jsp:include </span><span class="na">page=</span><span class="s">"./sub_main/mypage.jsp"</span><span class="na"> flush=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span> <span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">menuNumber</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-</code></pre></div></div>
-
-<h4 id="mypagejsp">mypage.jsp</h4>
-
-<ul>
-  <li>servlet을 통해 db 에 저장된 사용자 정보를 받아온다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ page </span><span class="na">contentType=</span><span class="s">"text/html;charset=UTF-8"</span><span class="na"> language=</span><span class="s">"java"</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"com.mingyu2.login.authentication.database.User"</span><span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span>
-<span class="kt">var</span> <span class="n">user</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"user"</span><span class="o">);</span>
-<span class="nt">%&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"border:1px solid #000000;margin:0 auto 0 auto; width: 60%;text-align: center;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h2&gt;</span>사용자 정보<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;span&gt;</span>아이디 : <span class="nt">&lt;b&gt;&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">getUsernameFilter</span><span class="o">()</span> <span class="nt">%&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;span&gt;</span>이메일 : <span class="nt">&lt;b&gt;&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getEmail</span><span class="o">())</span> <span class="nt">%&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;span&gt;</span>우편번호 : <span class="nt">&lt;b&gt;&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getAddressNumber</span><span class="o">())</span> <span class="nt">%&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;span&gt;</span>주소 : <span class="nt">&lt;b&gt;&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getAddress</span><span class="o">())</span> <span class="nt">%&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;span&gt;</span>주소2 : <span class="nt">&lt;b&gt;&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getAddressSub</span><span class="o">())</span> <span class="nt">%&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button-design"</span> <span class="na">style=</span><span class="s">"margin-top: 20px; margin-bottom:10px;"</span> <span class="na">id=</span><span class="s">"logout"</span> <span class="na">href=</span><span class="s">"/main_page/my_page/change_info"</span><span class="nt">&gt;</span>정보 수정<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
-<h3 id="servlet-코드">Servlet 코드</h3>
-
-<h4 id="mainpagejava">MainPage.java</h4>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">myPage</span> <span class="o">=</span> <span class="s">"/main_page/my_page"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 마이페이지</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">myPage</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 메뉴들</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">menus</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;&gt;();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"Home"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="s">"/main_page"</span><span class="o">,</span><span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"게시판"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="n">noticeBoard</span><span class="o">+</span><span class="n">baseNoticeBoardParameter</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="s">""</span><span class="o">,</span><span class="s">""</span><span class="o">,</span><span class="s">""</span><span class="o">,</span><span class="mi">1</span><span class="o">),</span> <span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"버튼2"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="s">""</span><span class="o">,</span><span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"버튼2"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="s">""</span><span class="o">,</span><span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"menus"</span><span class="o">,</span> <span class="n">menus</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">mainPage</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="사용자-정보-변경">사용자 정보 변경</h2>
-<ul>
-  <li>사용자는 이메일, 주소, 비밀번호를 변경할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/15cc24df-d584-4563-b29c-baba0923523a" alt="Pasted image 20230608003819" /></li>
-  <li>정보 수정 버튼을 눌러 정보 수정 페이지로 들어간다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/a290a3a1-ce7a-4b9e-974e-af9dd61537a5" alt="Pasted image 20230608003941" /></li>
-</ul>
-
-<h3 id="정보-변경">정보 변경</h3>
-<ul>
-  <li>email 과 주소를 변경한다.</li>
-</ul>
-
-<h4 id="정보-변경-sql-문">정보 변경 SQL 문</h4>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">update</span> <span class="n">users</span> 
-<span class="k">set</span> <span class="n">email</span><span class="o">=</span><span class="s1">'이메일'</span><span class="p">,</span> <span class="err">우편번호</span><span class="o">=</span><span class="s1">'우편번호'</span><span class="p">,</span> <span class="err">주소</span><span class="o">=</span><span class="s1">'주소'</span><span class="p">,</span> <span class="err">주소</span><span class="mi">2</span><span class="o">=</span><span class="s1">'주소2'</span> 
-<span class="k">where</span> <span class="n">sid</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="비밀번호-변경하기">비밀번호 변경하기</h3>
-<ul>
-  <li>비밀번호 변경은 중요한 요청이기 때문에 인증기능을 추가하였다.</li>
-  <li>즉 현재 비밀번호를 입력하고 일치하여야 비밀번호가 변경된다.</li>
-</ul>
-
-<h4 id="비밀번호-변경-sql-문">비밀번호 변경 SQL 문</h4>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">update</span> <span class="n">users</span> 
-<span class="k">set</span> <span class="n">salt</span><span class="o">=</span><span class="nv">"새로운 salt"</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="nv">"해시화한 새로운 비번"</span><span class="p">,</span> <span class="n">modifi_time</span><span class="o">=</span><span class="err">변경시각</span> 
-<span class="k">where</span> <span class="n">sid</span><span class="o">=</span><span class="mi">1</span> <span class="k">where</span> <span class="n">sid</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="jsp-코드-1">JSP 코드</h3>
-
-<h4 id="main_pagejsp-1">main_page.jsp</h4>
-<ul>
-  <li>servlet 에서 받은 menuNumber을 이용하여 사용자 정보 변경 페이지로 들어간다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%</span> <span class="o">}</span> <span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">menuNumber</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;jsp:include </span><span class="na">page=</span><span class="s">"./sub_main/mypage_change_info.jsp"</span><span class="na"> flush=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;%</span> <span class="o">}</span> <span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">menuNumber</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span> <span class="nt">%&gt;</span>
-</code></pre></div></div>
-
-<h4 id="mypage_change_infojsp">mypage_change_info.jsp</h4>
-<ul>
-  <li>사용자 정보를 수정하는 페이지이다.</li>
-</ul>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ page </span><span class="na">contentType=</span><span class="s">"text/html;charset=UTF-8"</span><span class="na"> language=</span><span class="s">"java"</span> <span class="nt">%&gt;</span>
-<span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"com.mingyu2.login.authentication.database.User"</span><span class="nt">%&gt;</span>
-<span class="nt">&lt;%</span>
-<span class="kt">var</span> <span class="n">user</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"user"</span><span class="o">);</span>
-<span class="nt">%&gt;</span>
-<span class="nt">&lt;style&gt;</span>
-<span class="nc">.user-info-change</span> <span class="o">&gt;</span> <span class="nt">form</span> <span class="o">&gt;</span> <span class="nt">input</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span>
-<span class="nt">&lt;style&gt;</span>
-<span class="nc">.modal</span><span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">overflow</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">background-color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">background-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span> <span class="m">0.4</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c">/* padding-top: 60px; */</span>
-<span class="p">}</span>
-<span class="nc">.modal-content</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fefefe</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">margin</span><span class="p">:</span> <span class="m">5%</span> <span class="nb">auto</span> <span class="m">15%</span> <span class="nb">auto</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">border</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">solid</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nf">#search-address</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">width</span><span class="p">:</span> <span class="m">80%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nf">#search-address-bt</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">width</span><span class="p">:</span><span class="m">20%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.show-addresses</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">height</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.over_ya</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">overflow-y</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.address-result</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.address-result</span><span class="o">,</span><span class="nc">.address-result</span> <span class="nt">th</span><span class="o">,</span><span class="nc">.address-result</span> <span class="nt">td</span><span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#bcbcbc</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="kd">function</span> <span class="nf">search_address</span><span class="p">(){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">address_table</span><span class="dl">'</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">table</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">scount</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search_count</span><span class="dl">'</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">scount</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;b&gt;</span><span class="dl">"</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/b&gt;</span><span class="dl">"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">input</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-address</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">if</span><span class="p">(</span><span class="nx">input</span> <span class="o">==</span> <span class="dl">''</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// 서버로 검색</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">const</span> <span class="nx">Http</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLHttpRequest</span><span class="p">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">const</span> <span class="nx">uri</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">${signUpFindAddressNum}</span><span class="dl">"</span><span class="o">+</span><span class="dl">"</span><span class="s2">?address=</span><span class="dl">"</span><span class="o">+</span><span class="nx">input</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">Http</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span> <span class="nx">uri</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">Http</span><span class="p">.</span><span class="nf">send</span><span class="p">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">Http</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">Http</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">username_is_success</span> <span class="o">=</span> <span class="nx">re</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">re</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 정보 받음</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">if</span><span class="p">(</span><span class="nx">re</span> <span class="o">==</span> <span class="dl">""</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">split</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="nf">parseInt</span><span class="p">(</span><span class="nx">split</span><span class="p">.</span><span class="nx">length</span><span class="o">/</span><span class="mi">3</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">scount</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;b&gt;</span><span class="dl">"</span><span class="o">+</span><span class="nx">cnt</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/b&gt;</span><span class="dl">"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">cnt</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 정보 테이블에 표시</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// let table = document.getElementById('address_table');</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">s</span><span class="o">&lt;</span><span class="nx">cnt</span><span class="o">*</span><span class="mi">3</span><span class="p">;</span><span class="nx">s</span><span class="o">+=</span><span class="mi">3</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">table</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="dl">"</span><span class="s2">&lt;tr&gt;</span><span class="dl">"</span><span class="o">+</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="dl">"</span><span class="s2">&lt;th&gt;</span><span class="dl">"</span><span class="o">+</span><span class="nx">split</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/th&gt;</span><span class="dl">"</span><span class="o">+</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="dl">"</span><span class="s2">&lt;td&gt;&lt;a href='javascript:' onclick='select_address(this);'&gt;</span><span class="dl">"</span><span class="o">+</span><span class="nx">split</span><span class="p">[</span><span class="nx">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/a&gt;&lt;br&gt;&lt;a href='javascript:' onclick='select_address(this);'&gt;</span><span class="dl">"</span><span class="o">+</span><span class="nx">split</span><span class="p">[</span><span class="nx">s</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/a&gt;&lt;/td&gt;</span><span class="dl">"</span><span class="o">+</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="dl">"</span><span class="s2">&lt;/tr&gt;</span><span class="dl">"</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="p">};</span>
-<span class="p">}</span>
-<span class="kd">function</span> <span class="nf">select_address</span><span class="p">(</span><span class="nx">item</span><span class="p">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">th</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nf">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">th</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">tb</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">address-number</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">th</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">address-text</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">tb</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">addr</span><span class="dl">'</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">address_is_success</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">address_table</span><span class="dl">'</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">table</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-address</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">scount</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search_count</span><span class="dl">'</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nx">scount</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;b&gt;</span><span class="dl">"</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/b&gt;</span><span class="dl">"</span>
-<span class="p">}</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">if</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="o">==</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">addr</span><span class="dl">'</span><span class="p">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">addr</span><span class="dl">'</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">address_table</span><span class="dl">'</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">table</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-address</span><span class="dl">'</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">let</span> <span class="nx">scount</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search_count</span><span class="dl">'</span><span class="p">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nx">scount</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;b&gt;</span><span class="dl">"</span><span class="o">+</span><span class="dl">"</span><span class="s2">&lt;/b&gt;</span><span class="dl">"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
-<span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"addr"</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>우편번호 검색<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;div&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search-address"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">required</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"search-address-bt"</span> <span class="na">href=</span><span class="s">"javascript:search_address();"</span><span class="nt">&gt;</span>검색<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"text-align:left;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span&gt;&lt;b&gt;</span>검색결과 : <span class="nt">&lt;/b&gt;&lt;/span&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"search_count"</span> <span class="na">style=</span><span class="s">"color:red;"</span><span class="nt">&gt;&lt;/span&gt;</span>
-        <span class="nt">&lt;span&gt;&lt;b&gt;</span> 건<span class="nt">&lt;/b&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"show-addresses over_ya"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"address-result"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;thead&gt;</span>
-            <span class="nt">&lt;tr&gt;</span>
-                <span class="nt">&lt;th</span> <span class="na">style=</span><span class="s">"width:30%"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>우편번호<span class="nt">&lt;/th&gt;</span>
-                <span class="nt">&lt;th</span> <span class="na">style=</span><span class="s">"width:70%"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>주소<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/thead&gt;</span>
-        <span class="nt">&lt;tbody</span> <span class="na">id=</span><span class="s">"address_table"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/tbody&gt;</span>
-        <span class="nt">&lt;/table&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"document.getElementById('addr').style.display='none'"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-  
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"border:1px solid #000000;margin:0 auto 0 auto; width: 60%;text-align: center;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h2&gt;</span>사용자 정보 변경<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"user-info-change"</span> <span class="na">style=</span><span class="s">"margin:0 auto 0 auto; width: 60%;text-align: left;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"change_user_info"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label&gt;</span>아이디<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"</span><span class="nt">&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">getUsernameFilter</span><span class="o">()</span> <span class="nt">%&gt;</span><span class="s">"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;br&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;label&gt;</span>이메일<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">value=</span><span class="s">"</span><span class="nt">&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getEmail</span><span class="o">())</span> <span class="nt">%&gt;</span><span class="s">"</span><span class="nt">&gt;&lt;br&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;label&gt;</span>주소<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"address-number"</span> <span class="na">name=</span><span class="s">"address-number"</span> <span class="na">value=</span><span class="s">"</span><span class="nt">&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getAddressNumber</span><span class="o">())</span> <span class="nt">%&gt;</span><span class="s">"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"address-text"</span> <span class="na">name=</span><span class="s">"address"</span> <span class="na">value=</span><span class="s">"</span><span class="nt">&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getAddress</span><span class="o">())</span> <span class="nt">%&gt;</span><span class="s">"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"address-text2"</span> <span class="na">name=</span><span class="s">"address-sub"</span> <span class="na">value=</span><span class="s">"</span><span class="nt">&lt;%=</span><span class="n">user</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getAddressSub</span><span class="o">())</span> <span class="nt">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"find_address_bt"</span> <span class="na">onclick=</span><span class="s">"document.getElementById('addr').style.display='block'"</span><span class="nt">&gt;</span>주소찾기<span class="nt">&lt;/button&gt;&lt;br&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"변경하기"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/form&gt;</span>
-    <span class="nt">&lt;br&gt;&lt;hr&gt;&lt;br&gt;</span>
-    <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"change_user_pwd"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label&gt;</span>현재 비밀번호<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"pwd"</span> <span class="na">type=</span><span class="s">"password"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label&gt;</span>새로운 비밀번호<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"new-pwd"</span> <span class="na">type=</span><span class="s">"password"</span><span class="nt">&gt;&lt;br&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"변경하기"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/form&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
-<h3 id="servlet-코드-1">Servlet 코드</h3>
-
-<h4 id="mainpagejava-1">MainPage.java</h4>
-<ul>
-  <li>주소와 이메일 변경을 DB 에 요청한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainPage</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span><span class="o">{</span>
-<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">uriSearch</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 마이페이지 사용자 정보 변경 페이지</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">myPageChangeInfo</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 메뉴들</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">menus</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;&gt;();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"Home"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="s">"/main_page"</span><span class="o">,</span><span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"게시판"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="n">noticeBoard</span><span class="o">+</span><span class="n">baseNoticeBoardParameter</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="s">""</span><span class="o">,</span><span class="s">""</span><span class="o">,</span><span class="s">""</span><span class="o">,</span><span class="mi">1</span><span class="o">),</span> <span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"버튼2"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="s">""</span><span class="o">,</span><span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">menus</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span><span class="s">"버튼2"</span><span class="o">,</span><span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Boolean</span><span class="o">&gt;(</span><span class="s">""</span><span class="o">,</span><span class="kc">false</span><span class="o">)));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"menus"</span><span class="o">,</span> <span class="n">menus</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"signUpFindAddressNum"</span><span class="o">,</span> <span class="n">findAddress</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">mainPage</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>우편번호 찾기 요청을 처리한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 우편번호 찾기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">findAddress</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">address</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"address"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 주소를 이용하여 우편 번호 찾기 시작!</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">addressDAO</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AddressDAO</span><span class="o">(</span><span class="n">getServletContext</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">addressDAO</span><span class="o">.</span><span class="na">getAddressNumber</span><span class="o">(</span><span class="n">address</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 끝</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">()));</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>사용자 정보 변경 요청을 처리한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"POST"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">changeUserInfo</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">email</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"email"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">addressNumber</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"address-number"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">address</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"address"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">addressSub</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"address-sub"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">user</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"user"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">isOK</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UsersDAO</span><span class="o">(</span><span class="n">getServletContext</span><span class="o">()).</span><span class="na">updateUserInfo</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getSid</span><span class="o">(),</span> <span class="n">email</span><span class="o">,</span> <span class="n">addressNumber</span><span class="o">,</span> <span class="n">address</span><span class="o">,</span> <span class="n">addressSub</span><span class="o">);</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"요청옴 "</span><span class="o">+</span><span class="n">email</span><span class="o">+</span><span class="s">"  "</span><span class="o">+</span><span class="n">addressNumber</span><span class="o">+</span><span class="s">"  "</span><span class="o">+</span><span class="n">address</span><span class="o">+</span><span class="s">"  "</span><span class="o">+</span><span class="n">addressSub</span><span class="o">+</span><span class="s">"  "</span><span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="na">getSid</span><span class="o">());</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">result</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">isOK</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('change success!');location.href='"</span><span class="o">+</span><span class="n">myPage</span><span class="o">+</span><span class="s">"'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('change fail!');location.href='"</span><span class="o">+</span><span class="n">myPage</span><span class="o">+</span><span class="s">"'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>비밀번호 변경 요청을 처리한다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"POST"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">uri</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">changePWD</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">result</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pwd</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"pwd"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">newPwd</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"new-pwd"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">user</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"user"</span><span class="o">);</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">isOK</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UsersDAO</span><span class="o">(</span><span class="n">getServletContext</span><span class="o">()).</span><span class="na">updatePWD</span><span class="o">(</span><span class="n">user</span><span class="o">,</span> <span class="n">pwd</span><span class="o">,</span> <span class="n">newPwd</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"비번 변경 요청 : "</span><span class="o">+</span><span class="n">pwd</span><span class="o">+</span><span class="s">"   "</span><span class="o">+</span><span class="n">newPwd</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">isOK</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('password change success!');location.href='/user-logout'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">result</span> <span class="o">=</span> <span class="s">"&lt;script&gt;alert('password change fail!');location.href='/user-logout'&lt;/script&gt;"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">simplePage</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h4 id="usersdaojava">UsersDAO.java</h4>
-
-<ul>
-  <li>DB에 저장된 주소 및 이메일을 실질적으로 변경해준다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
-
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// update user info</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">updateUserInfo</span><span class="o">(</span><span class="kt">long</span> <span class="n">sid</span><span class="o">,</span><span class="nc">String</span> <span class="n">email</span><span class="o">,</span> <span class="nc">String</span> <span class="n">addressNumber</span><span class="o">,</span> <span class="nc">String</span> <span class="n">address</span><span class="o">,</span> <span class="nc">String</span> <span class="n">addressSub</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">regexPattern</span> <span class="o">=</span> <span class="s">"^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"</span><span class="o">+</span><span class="s">"[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$"</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(!</span><span class="n">email</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">regexPattern</span><span class="o">)</span> <span class="o">||</span> <span class="n">addressNumber</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)</span> <span class="o">||</span> <span class="n">address</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">addressSub</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">addressSub</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span> <span class="c1">// 빈칸으로 db 업데이할 때 오류 발생 방지.</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">re</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"update "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">tableName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" set email=?, 우편번호=?, modifi_time=?, 주소=?, 주소2=? where sid=?"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">connectDB</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">email</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">addressNumber</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="n">addressSub</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="n">sid</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">re</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">re</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Close</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">re</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>DB에 저장된 비밀번호를 실질적으로 변경해준다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsersDAO</span> <span class="o">{</span>
-<span class="o">...</span> <span class="n">생략</span> <span class="o">...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="c1">// update user password</span>
-<span class="err"> </span> <span class="err"> </span> <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">updatePWD</span><span class="o">(</span><span class="nc">User</span> <span class="n">user</span><span class="o">,</span><span class="nc">String</span> <span class="n">pwd</span><span class="o">,</span> <span class="nc">String</span> <span class="n">newPwd</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">re</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">pwd</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)</span> <span class="o">||</span> <span class="n">newPwd</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">)){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 현재 비밀번호 일치하는지 확인</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">info</span> <span class="o">=</span> <span class="nc">LoginAuthentication</span><span class="o">.</span><span class="na">userAuthenticatoin</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">user</span><span class="o">.</span><span class="na">getUsername</span><span class="o">(),</span> <span class="n">pwd</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span><span class="o">(</span><span class="n">info</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 비밀번호 변경하기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// salt 만들기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">random</span> <span class="o">=</span> <span class="nc">SecureRandom</span><span class="o">.</span><span class="na">getInstanceStrong</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">bytes</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">16</span><span class="o">];</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">random</span><span class="o">.</span><span class="na">nextBytes</span><span class="o">(</span><span class="n">bytes</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">salt</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="nc">Base64</span><span class="o">.</span><span class="na">getEncoder</span><span class="o">().</span><span class="na">encode</span><span class="o">(</span><span class="n">bytes</span><span class="o">));</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 새로운 비번 sha-512 로 해시 암호화 하기</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">md</span> <span class="o">=</span> <span class="nc">MessageDigest</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="s">"SHA-512"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">md</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">salt</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">md</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">newPwd</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">password</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%064x"</span><span class="o">,</span><span class="k">new</span> <span class="nc">BigInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="n">md</span><span class="o">.</span><span class="na">digest</span><span class="o">()));</span>
-  
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"update "</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">tableName</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">query</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" set salt=?, password=?, modifi_time=? where sid=?"</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">connectDB</span><span class="o">();</span>
-
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kt">var</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">query</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">salt</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="n">user</span><span class="o">.</span><span class="na">getSid</span><span class="o">());</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">pstmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">re</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nc">Close</span><span class="o">();</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">re</span><span class="o">;</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="결론">결론</h2>
-<ul>
-  <li>마이페이지를 만들어 db에 저장된 사용자의 정보를 보여주었다. 그리고 사용자의 정보를 업데이트할 수 있는 기능도 추가하였다.</li>
-  <li>이메일, 주소, 비밀번호를 마이페이지에서 변경할 수 있다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="웹 서버" /><category term="jsp" /><category term="servlet" /><category term="oracle db" /><summary type="html"><![CDATA[사용자 정보를 수정할 수 있는 마이페이지를 만들어보자.]]></summary></entry></feed>
+</ol>]]></content><author><name>Jung MinGyu</name></author><category term="file upload" /><category term="file download" /><category term="lfi" /><category term="rfi" /><summary type="html"><![CDATA[File Upload, LFI, RFI, File Download 공격에 대하여 알아보자.]]></summary></entry></feed>
