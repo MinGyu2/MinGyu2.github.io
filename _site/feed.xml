@@ -1,5 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-27T19:35:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr]php type confusion 문제</title><link href="http://localhost:4000/dreamhack/php_typeconfusion/" rel="alternate" type="text/html" title="[wargame.kr]php type confusion 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_typeconfusion</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_typeconfusion/"><![CDATA[<h2 id="php-형-변환">PHP 형 변환</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-27T20:05:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr]php v5.3 strcmp 취약점 문제</title><link href="http://localhost:4000/dreamhack/php_5_3_strcmp/" rel="alternate" type="text/html" title="[wargame.kr]php v5.3 strcmp 취약점 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_5_3_strcmp</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_5_3_strcmp/"><![CDATA[<h2 id="strcmp-취약점">strcmp 취약점</h2>
+<ul>
+  <li>php 버전 5.3 에서 발생한 취약점이다.</li>
+  <li>strcmp 에 Array 와 string을 넣어 비교할 때 발생하는 취약점이다.</li>
+</ul>
+
+<h3 id="array-로-입력받기">Array 로 입력받기</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test[]=aa
+</code></pre></div></div>
+
+<ul>
+  <li>php 에서 해당 요청을 받으면 array 형태로 받는 것을 확인할 수 있다.</li>
+</ul>
+
+<h3 id="취약점-활용">취약점 활용</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">strcmp(Array(),string)</code> 을 비교하면 null 값을 리턴한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">null==0</code> 을 비교하면 true 가 된다.</li>
+</ul>
+
+<h3 id="문제">문제</h3>
+<ul>
+  <li><a href="https://dreamhack.io/wargame/challenges/328">문제</a></li>
+  <li><code class="language-plaintext highlighter-rouge">strcmp($_POST['password'], $password) == 0</code> 이 true 여야 flag 값을 받아볼 수 있다.</li>
+  <li>이 때 strcmp(Array(), string) 일 때 null 값을 반환하게 된다.</li>
+  <li>그리고 <code class="language-plaintext highlighter-rouge">null == 0</code> 은 true 이기 때문에 flag 값을 받아볼 수 있다.</li>
+</ul>
+
+<h3 id="공격-payload">공격 payload</h3>
+<ul>
+  <li>array 형태로 요청을 보내주면 된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>password[]=123
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="sqli" /><summary type="html"><![CDATA[php v5.3 strcmp 취약점에 대하여 알아보자.]]></summary></entry><entry><title type="html">[wargame.kr]php type confusion 문제</title><link href="http://localhost:4000/dreamhack/php_typeconfusion/" rel="alternate" type="text/html" title="[wargame.kr]php type confusion 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_typeconfusion</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_typeconfusion/"><![CDATA[<h2 id="php-형-변환">PHP 형 변환</h2>
 <ul>
   <li><a href="https://dreamhack.io/wargame/challenges/329">문제</a></li>
   <li>서로 비교할 때 비교 각 대상의 타입이 일치하지 않아 발생하는 취약점이다.</li>
@@ -650,120 +685,4 @@ auth=User
 변경 후
 Cookie
 auth=Admin
-</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="주통기반" /><summary type="html"><![CDATA[주통기반 Web 취약점 시나리오를 정리해보자]]></summary></entry><entry><title type="html">Buffer Overflow 와 Format String Bug</title><link href="http://localhost:4000/BoF%EC%99%80FSB/" rel="alternate" type="text/html" title="Buffer Overflow 와 Format String Bug" /><published>2023-06-30T00:00:00+09:00</published><updated>2023-06-30T23:13:00+09:00</updated><id>http://localhost:4000/BoF%EC%99%80FSB</id><content type="html" xml:base="http://localhost:4000/BoF%EC%99%80FSB/"><![CDATA[<h2 id="프로세스-구조">프로세스 구조</h2>
-<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/69baa543-8e82-4d24-bd92-5683a77d051b" alt="Pasted image 20230630182437" /></p>
-
-<h3 id="code">CODE</h3>
-<ul>
-  <li>TEXT 영역이라고도 한다.</li>
-  <li>실행할 프로그램의 코드가 저장되어 있다.</li>
-  <li>CPU는 코드 영역에 저장된 명령어를 하나씩 가져가서 처리한다.</li>
-</ul>
-
-<h3 id="data">DATA</h3>
-<ul>
-  <li>프로그램의 전역 변수와 정적(static) 변수가 저장되는 영역이다.</li>
-  <li>프로그램의 시작과 함께 할당되며, 프로그램이 종료되면 소멸한다.</li>
-</ul>
-
-<h3 id="heap">HEAP</h3>
-<ul>
-  <li>사용자가 직접 관리할 수 있는 메모리 영역이다.</li>
-  <li>사용자에 의해 동적으로 메모리 공각이 할당되고 해제된다.</li>
-  <li>메모리의 낮은 주소에서 높은 주소로 할당된다.</li>
-  <li>c 언어의 malloc</li>
-</ul>
-
-<h3 id="stack">STACK</h3>
-<ul>
-  <li>함수의 호출과 함께 할당되며, 함수의 호출이 완료되면 소멸한다.</li>
-  <li>함수의 호출과 관계된 지역변수와 매개변수가 저장된다.</li>
-  <li>메모리의 높은 주소에서 낮은 주소로 할당된다.</li>
-</ul>
-
-<h3 id="stack-할당-예시">STACK 할당 예시</h3>
-<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/ed4d540f-8c6d-4225-98ad-41efe673736f" alt="Pasted image 20230630202730" /></p>
-
-<h2 id="buffer-overflow">Buffer Overflow</h2>
-<ul>
-  <li>할당된 버퍼의 크기를 초과한 데이터가 입력되어 인접한 다른 메모리 정보를 덧쓰는 현상이다.</li>
-  <li>프로세스가 데이터를 버퍼에 저장할 때 프로그래머가 지정한 곳 바깥에 저장하는 것을 의미한다.</li>
-  <li>할당받은 공간보다 더 많은 입력을 받아 발생한다.</li>
-  <li>return address 를 변경하여 악의적인 코드를 실행시킬 수 있다.</li>
-</ul>
-
-<h3 id="bof-발생-예시">BoF 발생 예시</h3>
-<ul>
-  <li>32 bit 시스템이라고 가정한다.</li>
-</ul>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-	<span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
-	<span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span><span class="n">buf</span><span class="p">);</span>
-	<span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>입력 전.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/5c1f1895-e12f-4ef6-bd0e-fd0d0ea01b1c" alt="Pasted image 20230630211112" /></li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">AAAAAAAAAAAAAAAAAA</code> 입력을 한다</p>
-  </li>
-  <li>
-    <p>입력 후.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/2d36546a-6267-422b-a102-f6c57b67369e" alt="Pasted image 20230630211134" /></p>
-  </li>
-  <li>할당 받은 버퍼 크기를 넘는 입력을 받아 인접한 메모리의 정보가 덧씌워졌다.</li>
-  <li>Buffer Overflow 공격을 통해 리턴 주소를 공격자 마음대로 수정할 수 있다.</li>
-</ul>
-
-<h2 id="포맷-스트링--fsb-">포맷 스트링 ( FSB )</h2>
-<ul>
-  <li>Format String Bug</li>
-  <li>입력 값에 포맷 스트링을 넣으면 문자로 취급하는게 아닌, 서식 문자로 취급하여 취약점이 일어날 수 있다.</li>
-  <li>포맷팅 문자열에서 발생한다.</li>
-  <li>메모리 안의 정보를 누출시킬 수 있다. 즉 스택 메모리의 정보를 얻을 수 있다.</li>
-  <li>잘못된 메모리 주소에 접근을 시도하여 프로그램을 중단시킬 수 있다.</li>
-  <li>%n 을 이용하여 스택 값을 변조할 수 있다. 즉 리턴 주소 값을 수정하여 악의적인 코드를 실행시킬 수 있다.</li>
-</ul>
-
-<h3 id="예시">예시</h3>
-<ul>
-  <li>코드</li>
-</ul>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
-	<span class="n">printf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./example "%s%s%s%s"
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>스택에 있는 메모리 정보를 노출 시킨다.</p>
-  </li>
-  <li>
-    <p>입력</p>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./example "%p%p%p%p"
-</code></pre></div></div>
-
-<ul>
-  <li>실행하는 순간의 스택에 있는 메모리 주소를 출력해준다.</li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://blue-pxngxxn.tistory.com/entry/%EC%B7%A8%EC%95%BD%EC%A0%90%EA%B3%B5%EA%B2%A9-Format-String-Attack-FSB">Format String Attack (FSB) (tistory.com)</a></li>
-  <li><a href="http://www.tcpschool.com/c/c_memory_stackframe">코딩의 시작, TCP School</a></li>
-  <li><a href="http://www.tcpschool.com/c/c_memory_structure">코딩의 시작, TCP School</a></li>
-  <li><a href="https://zangzangs.tistory.com/107">프로세스 메모리 구조 (코드, 데이터, 스텍, 힙) (tistory.com)</a></li>
-  <li><a href="https://ko.wikipedia.org/wiki/%EB%B2%84%ED%8D%BC_%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C">버퍼 오버플로 - 위키백과, 우리 모두의 백과사전 (wikipedia.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="BOF" /><category term="FSB" /><summary type="html"><![CDATA[bof 와 fsb 에 대하여 알아보자.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="주통기반" /><summary type="html"><![CDATA[주통기반 Web 취약점 시나리오를 정리해보자]]></summary></entry></feed>
