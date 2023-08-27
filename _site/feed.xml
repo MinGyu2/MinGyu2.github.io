@@ -1,5 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-17T14:37:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">CVE-2021-44228 Log4shell 취약점에 대하여 알아보자.</title><link href="http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="CVE-2021-44228 Log4shell 취약점에 대하여 알아보자." /><published>2023-08-17T00:00:00+09:00</published><updated>2023-08-17T23:13:00+09:00</updated><id>http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="cve-2021-44228-log4shell-취약점">CVE-2021-44228 Log4Shell 취약점</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-27T15:27:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr]tmitter 문제</title><link href="http://localhost:4000/dreamhack/tmitter%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="[wargame.kr]tmitter 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/tmitter%EB%AC%B8%EC%A0%9C</id><content type="html" xml:base="http://localhost:4000/dreamhack/tmitter%EB%AC%B8%EC%A0%9C/"><![CDATA[<h2 id="sql-injection">SQL Injection</h2>
+<ul>
+  <li><a href="https://dreamhack.io/wargame/writeups/11825">문제</a></li>
+</ul>
+
+<h3 id="방법-1">방법 1.</h3>
+<ul>
+  <li>insert 문을 예측하여 admin 계정의 비밀번호를 얻어 주었다.</li>
+  <li>union sql injection</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test','1'),('key','name',(select ps from tmitter_user where id='admin'),'3')#
+</code></pre></div></div>
+
+<h3 id="방법-2">방법 2.</h3>
+<ul>
+  <li>아이디 검사 시스템의 허점을 이용하여 방법이다.</li>
+  <li>서버에서 아이디의 최대 길이를 검사하지 않아 발생한 문제이다.</li>
+  <li>로그인 방식을 예측하기.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select * from tmitter_user where id=아이디 and pw=비밀번호
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>아이디 크기가 char(32) 이다. 따라서 회원 가입을 할 때 서버에서 아이디 길이를 따로 검사하지 않는다 따라서 아이디가 저장될 때 32 바이트 만을 저장한다. 그리고 mysql 에서 데이터를 저장할 때 공백을 생략하는 것 같다.</p>
+  </li>
+  <li>
+    <p>회원가입</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id=admin++++++++++++++++++++++++++++++++++++1&amp;pw=1234567
+</code></pre></div></div>
+
+<ul>
+  <li>두 개의 admin 계정이 생성되었다.</li>
+  <li>원래 admin 계정과 현재 만든 admin 계정 두 개가 생성되어있다.</li>
+  <li>후에 만든 admin 계정으로 로그인을 하면 원래 admin 계정으로 로그인 되는 것을 확인할 수 있다. 왜냐하면 db에 먼저 저장된 admin 이라는 id의 정보를 읽어오기 때문이다.</li>
+</ul>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://private.tistory.com/63">여러개 한번에 insert 하기</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="sqli" /><summary type="html"><![CDATA[tmitter 문제 풀이.]]></summary></entry><entry><title type="html">CVE-2021-44228 Log4shell 취약점에 대하여 알아보자.</title><link href="http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="CVE-2021-44228 Log4shell 취약점에 대하여 알아보자." /><published>2023-08-17T00:00:00+09:00</published><updated>2023-08-17T23:13:00+09:00</updated><id>http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="cve-2021-44228-log4shell-취약점">CVE-2021-44228 Log4Shell 취약점</h2>
 
 <h3 id="취약점-정보">취약점 정보</h3>
 <ul>
@@ -2131,97 +2176,4 @@ auth=Admin
 <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="o">}</span>
 <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="c1">// 파일 삭제 end</span>
-</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="servlet" /><category term="jsp" /><category term="db" /><category term="게시판" /><summary type="html"><![CDATA[비회원 문의 게시판을 만들어 보자.]]></summary></entry><entry><title type="html">웹 서버 용어 및 취약점 간단한 정리</title><link href="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EC%9A%A9%EC%96%B4%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="웹 서버 용어 및 취약점 간단한 정리" /><published>2023-06-16T00:00:00+09:00</published><updated>2023-06-16T23:13:00+09:00</updated><id>http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EC%9A%A9%EC%96%B4%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/%EC%9B%B9%EC%84%9C%EB%B2%84%EC%9A%A9%EC%96%B4%EA%B0%84%EB%8B%A8%ED%95%9C%EC%A0%95%EB%A6%AC/"><![CDATA[<h2 id="인증">인증</h2>
-<ul>
-  <li>그 사람이 맞는지 확인하는 작업이다.</li>
-</ul>
-
-<h2 id="인가">인가</h2>
-<ul>
-  <li>허락된 사람에게만 어떤 권한을 부여하는 것이다.</li>
-</ul>
-
-<h2 id="쿠키">쿠키</h2>
-<ul>
-  <li>클라이언트 측에 저장되는 작은 기록 정보 파일이다.</li>
-  <li>웹 서버로 보내는 작은 데이터 조각이다.</li>
-</ul>
-
-<h2 id="세션">세션</h2>
-<ul>
-  <li>유저의 정보를 서버에 저장한다.</li>
-  <li>서버에 유저의 인증정보를 저장한다.</li>
-  <li>클라이언트의 인증 상태정보를 저장한다.</li>
-  <li>연결 지속성을 제공하기위해 서버에 저장되는 정보이다.</li>
-</ul>
-
-<h2 id="세션-id">세션 ID</h2>
-<ul>
-  <li>세션 테이블을 구분하기 위한 ID 이다.</li>
-  <li>세션을 식별하기 위하여 사용되는 작은 데이터 이다.</li>
-</ul>
-
-<h2 id="인증-취약점">인증 취약점</h2>
-
-<h3 id="인증-우회">인증 우회</h3>
-<ul>
-  <li>인증 기능을 서버에 구현해야 하지만 클라이언트 측에서 인증 검사가 구현되었을 때 발생하는 취약점이다.</li>
-  <li>인증을 해야 접속할 수 있는 코드가 주석 처리되어 코드에 남아있을 경우 인증 우회가 발생한다.</li>
-</ul>
-
-<h3 id="대응방안">대응방안</h3>
-<ul>
-  <li>서버에서 인증 기능이 구현되어야 한다. 즉 서버에서 인증 검사를 하여야 한다.</li>
-  <li>인증을 우회할 수 있는 민감한 정보가 클라이언트 측 스크립트에  남아 있으면 삭제하여야 한다.</li>
-</ul>
-
-<h2 id="인가-취약점">인가 취약점</h2>
-
-<h3 id="인가-우회">인가 우회</h3>
-<ul>
-  <li>서버에서 불충분한 검사에 의하여 발생한다.</li>
-  <li>권한이 없는데 해당 정보를 확인하거나 수정 또는 삭제를 할 수 있다.</li>
-  <li>파라미터 값 또는 쿠키 값을 통해 사용자를 구분한다면 사용자는 값 변조를 통해 열람 권한이 없는 다른 유저의 정보를 확인할 수 있다.</li>
-</ul>
-
-<h3 id="대응방안-1">대응방안</h3>
-<ul>
-  <li>서버에서 세션을 통하여 권한이 있는 유저인지 판단하여야 한다.</li>
-  <li>민감한 정보를 접근할 때 서버에서 세션 ID 또는 발급받은 토큰을 이용하여 권한이 있는지 검사하여야한다.</li>
-</ul>
-
-<h2 id="우회-팁">우회 팁</h2>
-
-<h3 id="자바스크립트-난독화-되어-있을-때">자바스크립트 난독화 되어 있을 때</h3>
-
-<h4 id="정적-분석하기">정적 분석하기</h4>
-<ul>
-  <li>자바스크립트 난독화 해제 기능을 이용하여 난독화 해제하기.</li>
-</ul>
-
-<h4 id="동적-분석하기">동적 분석하기</h4>
-<ul>
-  <li>true 가 되는 조건을 찾아 직접 실행시키기. 즉 인증이 되는 조건을 스크립트를 분석하여 찾아 실행시켜주면 된다.</li>
-</ul>
-
-<h3 id="hsts-오류">HSTS 오류</h3>
-<ul>
-  <li>강제로 HTTPS 연결을 하게 만드는 옵션이다.</li>
-  <li>동적 HSTS 정책에 저장된 도메인을 삭제해 주면 된다.</li>
-</ul>
-
-<h4 id="edge-브라우저-일-경우">edge 브라우저 일 경우</h4>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">edge://net-internals/#hsts</code> 에 접속한다.</li>
-  <li>삭제할 도메인 명을 입력해 준다.</li>
-</ol>
-
-<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/57e24d92-732b-40de-b925-f6ff561578b5" alt="Pasted image 20230616215502" /></p>
-
-<h4 id="chrome-브라우저-일-경우">chrome 브라우저 일 경우</h4>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">chrome://net-internals/#hsts</code> 에 접속한다.</li>
-  <li>삭제할 도메인 명을 입력해 준다.</li>
-</ol>
-
-<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/85517351-15af-4eea-944f-9ace54907c23" alt="Pasted image 20230616215739" /></p>]]></content><author><name>Jung MinGyu</name></author><category term="인증" /><category term="인가" /><category term="쿠키" /><category term="세션" /><category term="세션ID" /><category term="javascript" /><category term="HSTS" /><summary type="html"><![CDATA[웹 서버 용어 및 취약점에 대하여 간단히 정리해 보자.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="servlet" /><category term="jsp" /><category term="db" /><category term="게시판" /><summary type="html"><![CDATA[비회원 문의 게시판을 만들어 보자.]]></summary></entry></feed>
