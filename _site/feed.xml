@@ -1,5 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-10T17:47:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">[wargame.kr] weblog-1 문제</title><link href="http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="[wargame.kr] weblog-1 문제" /><published>2023-09-10T00:00:00+09:00</published><updated>2023-09-10T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/"><![CDATA[<h2 id="문제">문제</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-11T15:47:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">PHP 비교연산자</title><link href="http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90/" rel="alternate" type="text/html" title="PHP 비교연산자" /><published>2023-09-11T00:00:00+09:00</published><updated>2023-09-11T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90</id><content type="html" xml:base="http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90/"><![CDATA[<ul>
+  <li>php 에 존재하는 취약점이다!</li>
+</ul>
+
+<h2 id="문제">문제</h2>
+<ul>
+  <li><a href="https://dreamhack.io/wargame/challenges/338">jff3_magic 워게임 Dreamhack</a></li>
+</ul>
+
+<h2 id="php-비교-연산자">PHP 비교 연산자</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">==</code> : 자료형에 상관없이 값만 비교한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">===</code> : 자료형 및 값을 비교한다.</li>
+</ul>
+
+<h3 id="취약점">취약점</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">==</code> 이용하여 값을 비교할 때 값 만을 비교하여 발생할 수 있다.</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">'0e2'</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s1">'0'</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span><span class="o">==</span><span class="s1">'0'</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">0</span><span class="n">e123</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s1">'0'</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span><span class="o">==</span><span class="s1">'0'</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<h3 id="magic-hash">Magic Hash</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">0e1234</code> 문자열을 이용하여 비교를 하면 php 에서는 float 형식으로 인식하게 된다.</li>
+  <li>즉 0e 로 시작하고 뒤에 모두 숫자가 오는 문자열을 이용하여 비교를 하면 float 형식으로 인식하게된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0e2 == 0*10^2 == 0
+즉 0을 비교하는 것이랑 같은 효과를 발생한다.
+</code></pre></div></div>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://t-okk.tistory.com/27">HackCTF Web 마법봉 (매직해시 취약점) (tistory.com)</a></li>
+  <li><a href="http://php.adamharvey.name/manual/kr/types.comparisons.php">PHP: PHP 자료형 비교표 - Manual (adamharvey.name)</a></li>
+  <li><a href="https://comsec.tistory.com/86">HackCTF  Hash  :: 보안 한 걸음 (tistory.com)</a></li>
+  <li><a href="https://acloit.tistory.com/entry/%EB%A7%A4%EC%A7%81%ED%95%B4%EC%8B%9C">매직해시 (tistory.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="php" /><category term="비교연산자" /><summary type="html"><![CDATA[PHP 비교연산자 취약점에 대하여 알아보자.]]></summary></entry><entry><title type="html">[wargame.kr] weblog-1 문제</title><link href="http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="[wargame.kr] weblog-1 문제" /><published>2023-09-10T00:00:00+09:00</published><updated>2023-09-10T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/dreamhack/weblog-1_log%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/"><![CDATA[<h2 id="문제">문제</h2>
 <ul>
   <li><a href="https://dreamhack.io/wargame/challenges/71">weblog-1 문제</a></li>
 </ul>
@@ -564,30 +613,4 @@ com.sun.jndi.cosnaming.object.trustURLCodebase=false
   <li><a href="https://www.trendmicro.com/ko_kr/what-is/apache-log4j-vulnerability.html">Apache Log4J(Log4Shell) 취약점이란? (trendmicro.com)</a></li>
   <li><a href="https://www.kisec.com/rsrh_rpt_det.do?id=783">한국정보보호교육센터 (kisec.com)</a></li>
   <li><a href="https://ko.wikipedia.org/wiki/LDAP">LDAP - 위키백과, 우리 모두의 백과사전 (wikipedia.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="java" /><category term="log4j" /><category term="log4shell" /><category term="CVE-2021-44228" /><category term="CVE" /><summary type="html"><![CDATA[Log4shell 취약점 무엇인지 정리해 보았다.]]></summary></entry><entry><title type="html">Log4j 직접 사용해보기</title><link href="http://localhost:4000/log4j%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate" type="text/html" title="Log4j 직접 사용해보기" /><published>2023-08-09T00:00:00+09:00</published><updated>2023-08-09T23:13:00+09:00</updated><id>http://localhost:4000/log4j%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/log4j%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/"><![CDATA[<h2 id="log4j-란">Log4j 란</h2>
-<ul>
-  <li>컴퓨터가 언제, 무슨 일을 어떻게 했는지 남기는 도구이다.</li>
-  <li>JAVA를 사용하여 Log를 남기는 도구이다.</li>
-  <li>콘솔 및 파일출력 형태의 로깅을 지원한다.</li>
-</ul>
-
-<h2 id="log4j-실습">Log4j 실습</h2>
-
-<ol>
-  <li>먼저 버전에 맞는 log4j jar 파일을 <a href="https://archive.apache.org/dist/logging/log4j/">다운로드</a>하기. 여기서는 log4j-2.14.1 버전을 이용하여 실습을 진행하였다.</li>
-  <li>여기서는 log4j-api-2.14.1.jar 과 log4j-core-2.14.1.jar 파일을 사용하여 테스트 하였다.</li>
-  <li>테스트 자바 프로젝트 구조. bin 폴더에 컴파일이 완료된 class 파일이 들어간다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/32855c4e-c4c8-4cc0-93d9-ff7700ade6d9" alt="Pasted image 20230803151419" /></li>
-  <li>테스트 코드.<br /><script src="https://gist.github.com/MinGyu2/d95d7a9d3bd8736dcb89b0cbbbc87c5e.js"></script></li>
-  <li>컴파일 하기. 프로젝트 위치에서 아래의 명령어를 실행시켜 주면 된다. 그러면 bin/classes 폴더에 컴파일된 class 파일을 확인할 수 있다.<br /><script src="https://gist.github.com/MinGyu2/3a442c140c8e5a6ca60bbf9773153ab0.js"></script><img src="https://user-images.githubusercontent.com/31990118/259305662-d0c16f6f-6b29-4f5e-b4b5-2766c4937c78.png" alt="Pasted image 20230803153809" /></li>
-  <li>
-    <p>실행하기. 로그기록이 출력되는 것을 확인할 수 있다. 그리고 Lookup 기능의 동작을 확인할 수 있다.
-<br /><script src="https://gist.github.com/MinGyu2/984a597d1105904eefb9330f8217ea53.js"></script><br /><img src="https://user-images.githubusercontent.com/31990118/259305774-677c9efa-e860-4ebd-97ef-8bcb97c41fbe.png" alt="Pasted image 20230803153939" /></p>
-  </li>
-  <li>메세지 LookUps 기능은 log4j 2.15.0 에서 디펄트로 꺼져있다. 그리고 이 기능은 log4j 2.16.0 (2.12.2, 2.12.3, 2.3.1)에서 완전히 제거되었다. log4j 2.19.0 으로 테스트 해보면 lookUp 기능이 동작안하는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/e6932b91-3b8e-4dba-80c7-fe54f7f9a811" alt="Pasted image 20230809152136" /><br /><br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/fb24b755-ae59-4222-8a49-400989498151" alt="Pasted image 20230809152205" /></li>
-</ol>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">NVD - CVE-2021-44228 (nist.gov)</a></li>
-  <li><a href="https://logging.apache.org/log4j/2.x/release-notes/2.16.0.html">Log4j – (apache.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="java" /><category term="log4j" /><summary type="html"><![CDATA[Log4j가 무엇인지 정리하고, 직접 사용해 보았다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="java" /><category term="log4j" /><category term="log4shell" /><category term="CVE-2021-44228" /><category term="CVE" /><summary type="html"><![CDATA[Log4shell 취약점 무엇인지 정리해 보았다.]]></summary></entry></feed>
