@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-02T20:30:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-02T20:32:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
 </code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">Docker 설치하기</title><link href="http://localhost:4000/ubuntu/docker%EC%84%A4%EC%B9%98/" rel="alternate" type="text/html" title="Docker 설치하기" /><published>2023-10-02T00:00:00+09:00</published><updated>2023-10-02T23:13:00+09:00</updated><id>http://localhost:4000/ubuntu/docker%EC%84%A4%EC%B9%98</id><content type="html" xml:base="http://localhost:4000/ubuntu/docker%EC%84%A4%EC%B9%98/"><![CDATA[<h2 id="설치된-docker-버전-삭제하기">설치된 Docker 버전 삭제하기</h2>
 
 <ul>
@@ -85,23 +85,14 @@ sudo docker run hello-world
 
 <h2 id="참고-사이트">참고 사이트</h2>
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>[Install Docker Engine on Raspberry Pi OS</td>
-          <td>Docker Docs](https://docs.docker.com/engine/install/raspberry-pi-os/#install-from-a-package)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li><a href="https://docs.docker.com/engine/install/raspberry-pi-os/#install-from-a-package">Install Docker Engine on Raspberry Pi OS Docker Docs</a></li>
   <li><a href="https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/">Index of linux/ubuntu/dists/jammy/pool/stable/amd64/ (docker.com)</a></li>
   <li><a href="https://main.tistory.com/26">Ubuntu Architecture 확인 방법 (tistory.com)</a></li>
   <li><a href="https://askubuntu.com/questions/1437128/docker-service-wont-start-on-ubuntu-22-04-on-wsl2">Docker service won’t start on Ubuntu 22.04 on WSL2 - Ask Ubuntu</a></li>
   <li><a href="https://askubuntu.com/questions/1437128/docker-service-wont-start-on-ubuntu-22-04-on-wsl2">Docker service won’t start on Ubuntu 22.04 on WSL2 - Ask Ubuntu</a></li>
   <li><a href="https://www.lainyzine.com/ko/article/how-to-start-shutdown-reboot-wsl-linux/">WSL 리눅스 시작/종료/재부팅 방법 (lainyzine.com)</a></li>
   <li><a href="https://seong6496.tistory.com/316">우분투 버전 간단한 확인방법 (tistory.com)</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Ubuntu" /><category term="docker" /><summary type="html"><![CDATA[설치된 Docker 버전 삭제하기]]></summary></entry><entry><title type="html">PHP md5 (SQL Injection)</title><link href="http://localhost:4000/dreamhack/SQLiPHPmd5/" rel="alternate" type="text/html" title="PHP md5 (SQL Injection)" /><published>2023-09-12T00:00:00+09:00</published><updated>2023-09-12T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/SQLiPHPmd5</id><content type="html" xml:base="http://localhost:4000/dreamhack/SQLiPHPmd5/"><![CDATA[<h2 id="문제">문제</h2>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="Ubuntu" /><category term="docker" /><summary type="html"><![CDATA[Docker 패키지를 이용하여 설치하여 보자.]]></summary></entry><entry><title type="html">PHP md5 (SQL Injection)</title><link href="http://localhost:4000/dreamhack/SQLiPHPmd5/" rel="alternate" type="text/html" title="PHP md5 (SQL Injection)" /><published>2023-09-12T00:00:00+09:00</published><updated>2023-09-12T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/SQLiPHPmd5</id><content type="html" xml:base="http://localhost:4000/dreamhack/SQLiPHPmd5/"><![CDATA[<h2 id="문제">문제</h2>
 <ul>
   <li><a href="https://dreamhack.io/wargame/challenges/337">wargame.kr md5 password 워게임 Dreamhack</a></li>
 </ul>
