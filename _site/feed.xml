@@ -1,5 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-06T03:19:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">Docker 명령어 정리</title><link href="http://localhost:4000/ubuntu/docker%EB%AA%85%EB%A0%B9%EC%96%B4/" rel="alternate" type="text/html" title="Docker 명령어 정리" /><published>2023-10-06T00:00:00+09:00</published><updated>2023-10-06T23:13:00+09:00</updated><id>http://localhost:4000/ubuntu/docker%EB%AA%85%EB%A0%B9%EC%96%B4</id><content type="html" xml:base="http://localhost:4000/ubuntu/docker%EB%AA%85%EB%A0%B9%EC%96%B4/"><![CDATA[<h2 id="run">RUN</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-19T14:32:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">Selenium in Python 유용한 정보</title><link href="http://localhost:4000/%EA%B8%B0%EC%88%A0/SeleniumInPython/" rel="alternate" type="text/html" title="Selenium in Python 유용한 정보" /><published>2023-10-19T00:00:00+09:00</published><updated>2023-10-19T23:13:00+09:00</updated><id>http://localhost:4000/%EA%B8%B0%EC%88%A0/SeleniumInPython</id><content type="html" xml:base="http://localhost:4000/%EA%B8%B0%EC%88%A0/SeleniumInPython/"><![CDATA[<h2 id="selenium-브라우저-드라이버-경로-주기">Selenium 브라우저 드라이버 경로 주기</h2>
+
+<ul>
+  <li>브라우저 드라이버 경로를 직접 설정해 줄 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="n">selenium.webdriver.edge.service</span> <span class="kn">import</span> <span class="n">Service</span>
+
+<span class="n">edge_path</span> <span class="o">=</span> <span class="s">'msedgedriver.exe'</span>
+<span class="n">service</span> <span class="o">=</span> <span class="nc">Service</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="n">edge_path</span><span class="p">)</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Edge</span><span class="p">(</span><span class="n">service</span> <span class="o">=</span> <span class="n">service</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-find_element-or-find_elements">Selenium find_element or find_elements</h2>
+<ul>
+  <li>find_element 또는 find_elements 를 통해 원하는 element를 얻어줄 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">from</span> <span class="n">selenium</span><span class="p">.</span><span class="n">webdriver</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">by</span> <span class="n">immport</span> <span class="n">By</span>
+
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">'...'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span><span class="s">'NAME'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s">'Class name'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s">'selector'</span><span class="p">)</span>
+
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">'...'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span><span class="s">'NAME'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s">'Class name'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s">'selector'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-클릭">Selenium 클릭</h2>
+<ul>
+  <li>먼저 element 를 찾아주어야 한다. ( 클릭할 element 찾아주기. )</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bt</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
+
+<span class="n">bt</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">click</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+
+<span class="n">bt</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
+<span class="n">bt</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="n">ENTER</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-글-입력">Selenium 글 입력</h2>
+<ul>
+  <li>element (input 등) 에 사용자 입력을 넣어줄 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">id</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'login_id'</span><span class="p">)</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'login_pwd'</span><span class="p">)</span>
+
+<span class="nb">id</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="s">'id'</span><span class="p">)</span>
+<span class="n">pwd</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-프로그램-끝나도-자동-종료-안되게-하기">Selenium 프로그램 끝나도 자동 종료 안되게 하기</h2>
+
+<ul>
+  <li>단 selenium 을 실행시킨 터미널을 끄면 selenium 브라우저도 같이 종료되는 것을 확인할 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">EdgeOptions</span><span class="p">()</span>
+<span class="n">options</span><span class="p">.</span><span class="nf">add_experimental_option</span><span class="p">(</span><span class="s">"detach"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Edge</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-alert-창-제어하기">Selenium Alert 창 제어하기</h2>
+
+<ul>
+  <li>Alert 창이 떴을 때 제어하지 않고 작업을 진행하면 UnexpectedAlertPresentException 오류가 발생한다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+	<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">'xxx'</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">UnexpectedAlertPresentException</span><span class="p">:</span>
+	<span class="c1"># 자동으로 alert 창이 닫긴다.
+</span>	<span class="k">pass</span>
+
+<span class="n">또는</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">'xxx'</span><span class="p">)</span>
+		<span class="k">break</span>
+	<span class="k">except</span> <span class="n">UnexpectedAlertPresentException</span><span class="p">:</span>
+		<span class="c1"># 자동으로 alert 창이 닫긴다.
+</span>		<span class="k">pass</span>
+</code></pre></div></div>
+
+<h2 id="selenium-element-소스-코드-확인하기">Selenium element 소스 코드 확인하기</h2>
+
+<ul>
+  <li>element 의 소스 코드를 쉽게 확인해볼 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ele</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'아이디'</span><span class="p">)</span>
+<span class="n">ele</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">'outerHTML'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-브라우저-크기-설정">Selenium 브라우저 크기 설정</h2>
+
+<ul>
+  <li>첫 브라우저를 열기전에 사용하면 된다. 브라우저가 열리고 나서는 크기를 조절할 수 없다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Edge</span><span class="p">()</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">set_window_size</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span><span class="mi">800</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="selenium-새창-열기-새로운-탭-열기">Selenium 새창 열기 (새로운 탭 열기)</h2>
+
+<ul>
+  <li>자바 스크립트 코드를 이용하여 새로운 창을 열 수 있다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 처음 URL 열기.
+</span><span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="c1"># 새로운 창 만들기.
+</span><span class="n">driver</span><span class="p">.</span><span class="nf">execute_script</span><span class="p">(</span><span class="s">"window.open('');"</span><span class="p">)</span>
+
+<span class="c1"># 새로운 창으로 전환 및 새로운 URL 로 이동
+</span><span class="n">driver</span><span class="p">.</span><span class="n">switch_to</span><span class="p">.</span><span class="nf">window</span><span class="p">(</span><span class="n">driver</span><span class="p">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="참고-사이트">참고 사이트</h2>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/70886308/webdriver-call-with-executable-path-deprecated">python - Webdriver call with executable path deprecated - Stack Overflow</a></li>
+  <li><a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/browsers/test_edge.py#L54">seleniumhq.github.io/examples/python/tests/browsers/test_edge.py at trunk · SeleniumHQ/seleniumhq.github.io</a></li>
+  <li><a href="https://yukifox.tistory.com/entry/selenium%EC%97%90%EC%84%9C-Alert-%EC%A0%9C%EC%96%B4-%EB%B0%A9%EB%B2%95">저장소 :: selenium에서 Alert 제어 방법 (tistory.com)</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[How to get HTML source of a Web Element in Selenium WebDriver</td>
+          <td>BrowserStack](https://www.browserstack.com/guide/get-html-source-of-web-element-in-selenium-webdriver)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="https://stackoverflow.com/questions/15397483/how-to-set-browsers-width-and-height-in-selenium-webdriver">python - How to set browser’s width and height in Selenium WebDriver? - Stack Overflow</a></li>
+  <li><a href="https://www.geeksforgeeks.org/opening-and-closing-tabs-using-selenium/">Opening and Closing Tabs Using Selenium - GeeksforGeeks</a></li>
+  <li><a href="https://couplewith.tistory.com/448">python Selenium - 웹페이지 Alert창 종류와 관리 (tistory.com)</a></li>
+  <li><a href="https://dejavuqa.tistory.com/109">find_element By로 정리하기 (tistory.com)</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Selenium 으로 간단한 매크로 만들기</td>
+          <td>python (tistory.com)](https://ssamko.tistory.com/9)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="기술" /><category term="selenium" /><category term="python" /><summary type="html"><![CDATA[Selenium 브라우저 드라이버 경로 주기]]></summary></entry><entry><title type="html">Docker 명령어 정리</title><link href="http://localhost:4000/ubuntu/docker%EB%AA%85%EB%A0%B9%EC%96%B4/" rel="alternate" type="text/html" title="Docker 명령어 정리" /><published>2023-10-06T00:00:00+09:00</published><updated>2023-10-06T23:13:00+09:00</updated><id>http://localhost:4000/ubuntu/docker%EB%AA%85%EB%A0%B9%EC%96%B4</id><content type="html" xml:base="http://localhost:4000/ubuntu/docker%EB%AA%85%EB%A0%B9%EC%96%B4/"><![CDATA[<h2 id="run">RUN</h2>
 <ul>
   <li>컨테이너를 만드는 동시에 실행시킨다.</li>
 </ul>
@@ -717,39 +880,4 @@ token=토큰 값&amp;score=30000000000
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
     <span class="nf">main</span><span class="p">()</span>
 
-</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="session" /><summary type="html"><![CDATA[session 위조 문제 풀이.]]></summary></entry><entry><title type="html">[wargame.kr]php v5.3 strcmp 취약점 문제</title><link href="http://localhost:4000/dreamhack/php_5_3_strcmp/" rel="alternate" type="text/html" title="[wargame.kr]php v5.3 strcmp 취약점 문제" /><published>2023-08-27T00:00:00+09:00</published><updated>2023-08-27T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/php_5_3_strcmp</id><content type="html" xml:base="http://localhost:4000/dreamhack/php_5_3_strcmp/"><![CDATA[<h2 id="strcmp-취약점">strcmp 취약점</h2>
-<ul>
-  <li>php 버전 5.3 에서 발생한 취약점이다.</li>
-  <li>strcmp 에 Array 와 string을 넣어 비교할 때 발생하는 취약점이다.</li>
-</ul>
-
-<h3 id="array-로-입력받기">Array 로 입력받기</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test[]=aa
-</code></pre></div></div>
-
-<ul>
-  <li>php 에서 해당 요청을 받으면 array 형태로 받는 것을 확인할 수 있다.</li>
-</ul>
-
-<h3 id="취약점-활용">취약점 활용</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">strcmp(Array(),string)</code> 을 비교하면 null 값을 리턴한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">null==0</code> 을 비교하면 true 가 된다.</li>
-</ul>
-
-<h3 id="문제">문제</h3>
-<ul>
-  <li><a href="https://dreamhack.io/wargame/challenges/328">문제</a></li>
-  <li><code class="language-plaintext highlighter-rouge">strcmp($_POST['password'], $password) == 0</code> 이 true 여야 flag 값을 받아볼 수 있다.</li>
-  <li>이 때 strcmp(Array(), string) 일 때 null 값을 반환하게 된다.</li>
-  <li>그리고 <code class="language-plaintext highlighter-rouge">null == 0</code> 은 true 이기 때문에 flag 값을 받아볼 수 있다.</li>
-</ul>
-
-<h3 id="공격-payload">공격 payload</h3>
-<ul>
-  <li>array 형태로 요청을 보내주면 된다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>password[]=123
-</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="sqli" /><summary type="html"><![CDATA[php v5.3 strcmp 취약점에 대하여 알아보자.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="session" /><summary type="html"><![CDATA[session 위조 문제 풀이.]]></summary></entry></feed>
