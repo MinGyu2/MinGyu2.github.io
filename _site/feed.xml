@@ -1,5 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-26T11:22:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">SSH 연결 오류(Host key verification failed.)</title><link href="http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC/" rel="alternate" type="text/html" title="SSH 연결 오류(Host key verification failed.)" /><published>2023-10-26T00:00:00+09:00</published><updated>2023-10-26T23:13:00+09:00</updated><id>http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC</id><content type="html" xml:base="http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC/"><![CDATA[<h2 id="ssh-오류-해결법--host-key-verification-failed-">SSH 오류 해결법 ( Host key verification failed. )</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-02T15:53:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">Docker + QEMU</title><link href="http://localhost:4000/ubuntu/dockerAndqemu/" rel="alternate" type="text/html" title="Docker + QEMU" /><published>2023-11-02T00:00:00+09:00</published><updated>2023-11-02T23:13:00+09:00</updated><id>http://localhost:4000/ubuntu/dockerAndqemu</id><content type="html" xml:base="http://localhost:4000/ubuntu/dockerAndqemu/"><![CDATA[<ul>
+  <li>다른 아키텍처 이미지를 동작시키기 위해서는 qemu 가 필요하다.</li>
+</ul>
+
+<h2 id="docker-설치">Docker 설치</h2>
+
+<ul>
+  <li><a href="https://mingyu2.github.io/">기록하는 개발자 (mingyu2.github.io)</a></li>
+</ul>
+
+<h2 id="qemu-설치">Qemu 설치</h2>
+
+<ul>
+  <li>다른 아키텍처의 이미지 컨테이너 생성이 가능해진다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install qemu-user-static
+</code></pre></div></div>
+
+<h2 id="테스트-실행">테스트 실행</h2>
+
+<ul>
+  <li>
+    <p>host 컴퓨터와 다른 아키텍처의 이미지 컨테이너를 생성 및 실행할 수 있다.</p>
+  </li>
+  <li>
+    <p>host 컴퓨터</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ uname -a
+
+Linux  5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre></div></div>
+
+<ul>
+  <li>arm64 아키텍처 컨테이너</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run --rm -it --platform linux/arm64 ubuntu:latest uname -a
+
+Linux 135f72d2febe 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
+</code></pre></div></div>
+
+<ul>
+  <li>amd64 아키텍처 컨테이너</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run --rm -it --platform linux/amd64 ubuntu:latest uname -a
+
+Linux 4a0c73349a8f 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre></div></div>
+
+<h2 id="참고사이트">참고사이트</h2>
+<ul>
+  <li><a href="https://www.qemu.org/download/#linux">Download QEMU - QEMU</a></li>
+  <li><a href="https://docs.docker.com/build/drivers/docker-container/#qemu">Docker container build driver - Docker Docs</a></li>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="ubuntu" /><category term="docker" /><summary type="html"><![CDATA[host 아키텍처와 다른 docker 이미지를 동작시켜보자.]]></summary></entry><entry><title type="html">SSH 연결 오류(Host key verification failed.)</title><link href="http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC/" rel="alternate" type="text/html" title="SSH 연결 오류(Host key verification failed.)" /><published>2023-10-26T00:00:00+09:00</published><updated>2023-10-26T23:13:00+09:00</updated><id>http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC</id><content type="html" xml:base="http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC/"><![CDATA[<h2 id="ssh-오류-해결법--host-key-verification-failed-">SSH 오류 해결법 ( Host key verification failed. )</h2>
 
 <ul>
   <li>이전에 접속한 키로 계속 접근을 시도하여 발생하는 문제이다.</li>
@@ -723,104 +780,4 @@ md5 = &amp;�p'='63@-��
   <li><a href="https://www.php.net/manual/en/wrappers.php">php 프로토콜</a></li>
   <li><a href="https://www.php.net/manual/en/filters.php">php 에서 지원하는 필터</a></li>
   <li><a href="https://rot13.com/">rot13 디코더</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="php" /><category term="include" /><category term="wrapper" /><summary type="html"><![CDATA[PHP LFI 문제 풀이]]></summary></entry><entry><title type="html">[wargame.kr] fly me to the moon 문제</title><link href="http://localhost:4000/dreamhack/fly_me_to_the_moon/" rel="alternate" type="text/html" title="[wargame.kr] fly me to the moon 문제" /><published>2023-08-28T00:00:00+09:00</published><updated>2023-08-28T23:13:00+09:00</updated><id>http://localhost:4000/dreamhack/fly_me_to_the_moon</id><content type="html" xml:base="http://localhost:4000/dreamhack/fly_me_to_the_moon/"><![CDATA[<p><a href="https://dreamhack.io/wargame/challenges/324">문제</a></p>
-
-<h2 id="요청-위조-방법-1">요청 위조 (방법 1)</h2>
-<ul>
-  <li>게임이 완료되고 요청하는 점수와 토큰 값을 위조해주면 된다.</li>
-</ul>
-
-<h3 id="분석">분석</h3>
-<ul>
-  <li>token 값을 일정 주기로 받아오는 것을 확인할 수 있다.</li>
-  <li>게임 완료 시 토큰 값과 게임 점수를 같이 전송하는 것을 확인할 수 있다.</li>
-  <li>게임을 시작할 때는 token 값을 안 받아오는 것을 확인할 수 있었다.</li>
-</ul>
-
-<h3 id="공격">공격</h3>
-<ul>
-  <li>burp suite 의 intercept 기능을 이용하여 31337 이상으로 만들어 요청을 보내주면 된다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>token=9355&amp;score=3000000
-</code></pre></div></div>
-
-<h2 id="javascript-위조-방법-2">javascript 위조 (방법 2)</h2>
-<ul>
-  <li>js 방어법을 우회하는 방법을 이용하였다.</li>
-  <li>javascipt 를 이용한 게임이기 때문에 javascipt 코드를 위조하여 점수를 마음대로 바꿀 수 있다.</li>
-  <li>js 코드를 분석해 보면 사람이 못 알아보게 encode 되어 있는 것을 확인할 수 있다.</li>
-  <li>따라서 사람이 알아볼 수 있게 <code class="language-plaintext highlighter-rouge">de4js</code> 를 이용하여 decode 를 진행해 주었다.</li>
-</ul>
-
-<h3 id="코드-위조">코드 위조</h3>
-<ul>
-  <li>코드를 보면 다음 위치에서 점수를 서버로 보내는 것을 확인할 수 있다.</li>
-</ul>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nf">if </span><span class="p">(</span><span class="nx">BTunnelGame</span><span class="p">.</span><span class="nf">checkLife</span><span class="p">())</span> <span class="p">{</span>
-        <span class="nf">setTimeout</span><span class="p">(</span><span class="dl">'</span><span class="s1">updateTunnel()</span><span class="dl">'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">img#ship</span><span class="dl">'</span><span class="p">).</span><span class="nf">fadeOut</span><span class="p">(</span><span class="dl">'</span><span class="s1">slow</span><span class="dl">'</span><span class="p">);</span>
-        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">img.left_wall</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">display</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="p">);</span>
-        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">img.right_wall</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">display</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="p">);</span>
-        <span class="nx">$</span><span class="p">.</span><span class="nf">ajax</span><span class="p">({</span>
-            <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">high-scores.php</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">data</span><span class="p">:</span> <span class="dl">'</span><span class="s1">token=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">token</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;score=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">BTunnelGame</span><span class="p">.</span><span class="nf">getScore</span><span class="p">(),</span>
-            <span class="na">success</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">_0x8618x19</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nf">showHighScores</span><span class="p">(</span><span class="nx">_0x8618x19</span><span class="p">)</span>
-            <span class="p">}</span>
-        <span class="p">})</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">score=</code> 부분의 점수를 위조해주면 된다.</li>
-</ul>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nx">$</span><span class="p">.</span><span class="nf">ajax</span><span class="p">({</span>
-            <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">high-scores.php</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">data</span><span class="p">:</span> <span class="dl">'</span><span class="s1">token=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">token</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;score=</span><span class="dl">'</span> <span class="o">+</span> <span class="mi">3000000</span><span class="p">,</span>
-            <span class="na">success</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">_0x8618x19</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nf">showHighScores</span><span class="p">(</span><span class="nx">_0x8618x19</span><span class="p">)</span>
-            <span class="p">}</span>
-        <span class="p">})</span>
-</code></pre></div></div>
-
-<ul>
-  <li>이렇게 위조하여 완성 js 코드를 intercept 기능을 이용하여 원래 코드를 지우고 위조 코드를 붙여 넣어주면 된다.</li>
-</ul>
-
-<h2 id="비-정상-요청-방법-3">비 정상 요청 (방법 3)</h2>
-<ul>
-  <li>분석 결과 token 요청 후 받은 토큰 값과 점수를 같이 서버로 보낸다.</li>
-</ul>
-
-<h3 id="공격-1">공격</h3>
-<ul>
-  <li>먼저 토큰 값을 get 요청으로 받아준다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://서버 주소/token.php
-</code></pre></div></div>
-
-<ul>
-  <li>그 다음 위에서 받은 토큰 값과 점수를 POST 요청으로 보내주면 된다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://서버 주소/high-scores.php
-
-token=토큰 값&amp;score=30000000000
-</code></pre></div></div>
-
-<ul>
-  <li>여기서 GET 요청 할 때 와 POST 요청할 때의 PHPSESSID 쿠키 값이 같아야 한다.</li>
-</ul>
-
-<h2 id="참고-사이트">참고 사이트</h2>
-<ul>
-  <li><a href="https://lelinhtinh.github.io/de4js/">de4js</a></li>
-</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="js" /><category term="request" /><summary type="html"><![CDATA[fly me to the moon 문제 풀이.]]></summary></entry></feed>
+</ul>]]></content><author><name>Jung MinGyu</name></author><category term="dreamhack" /><category term="wargame" /><category term="php" /><category term="include" /><category term="wrapper" /><summary type="html"><![CDATA[PHP LFI 문제 풀이]]></summary></entry></feed>
