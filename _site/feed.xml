@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-02T15:53:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
-</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">Docker + QEMU</title><link href="http://localhost:4000/ubuntu/dockerAndqemu/" rel="alternate" type="text/html" title="Docker + QEMU" /><published>2023-11-02T00:00:00+09:00</published><updated>2023-11-02T23:13:00+09:00</updated><id>http://localhost:4000/ubuntu/dockerAndqemu</id><content type="html" xml:base="http://localhost:4000/ubuntu/dockerAndqemu/"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-10T17:39:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">그래프 그리기 위한것</title><link href="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/" rel="alternate" type="text/html" title="그래프 그리기 위한것" /><published>2099-09-09T00:00:00+09:00</published><updated>2099-12-31T23:13:00+09:00</updated><id>http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC</id><content type="html" xml:base="http://localhost:4000/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9%EC%88%98%EC%97%85/%EC%98%A4%EC%A7%81%EB%A1%9C%EC%BB%AC/"><![CDATA[<pre><code class="language-mermaild!">sequenceDiagram
+</code></pre>]]></content><author><name>Jung MinGyu</name></author><category term="모의해킹수업" /><category term="웹 구조" /><summary type="html"><![CDATA[오직 로컬에서만 되냐 젠장]]></summary></entry><entry><title type="html">Docker + QEMU</title><link href="http://localhost:4000/ubuntu/dockerAndqemu/" rel="alternate" type="text/html" title="Docker + QEMU" /><published>2023-11-02T00:00:00+09:00</published><updated>2023-11-10T23:13:00+09:00</updated><id>http://localhost:4000/ubuntu/dockerAndqemu</id><content type="html" xml:base="http://localhost:4000/ubuntu/dockerAndqemu/"><![CDATA[<ul>
   <li>다른 아키텍처 이미지를 동작시키기 위해서는 qemu 가 필요하다.</li>
 </ul>
 
@@ -9,13 +9,20 @@
   <li><a href="https://mingyu2.github.io/">기록하는 개발자 (mingyu2.github.io)</a></li>
 </ul>
 
-<h2 id="qemu-설치">Qemu 설치</h2>
+<h2 id="리눅스-binfmt">리눅스 <a href="https://github.com/tonistiigi/binfmt">binfmt</a></h2>
 
 <ul>
-  <li>다른 아키텍처의 이미지 컨테이너 생성이 가능해진다.</li>
+  <li>다른 아키텍처의 컨테이너를 만들기 위해서는 먼저 아래 명령어를 통해 추가 설치해주면 된다.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install qemu-user-static
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run --privileged --rm tonistiigi/binfmt --install all
+</code></pre></div></div>
+
+<ul>
+  <li>설치 확인.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker buildx ls
 </code></pre></div></div>
 
 <h2 id="테스트-실행">테스트 실행</h2>
@@ -56,6 +63,7 @@ Linux 4a0c73349a8f 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 
 <ul>
   <li><a href="https://www.qemu.org/download/#linux">Download QEMU - QEMU</a></li>
   <li><a href="https://docs.docker.com/build/drivers/docker-container/#qemu">Docker container build driver - Docker Docs</a></li>
+  <li><a href="https://velog.io/@koo8624/Docker-Buildx%EB%A1%9C-cross-platform-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0">Docker Buildx로 cross-platform 이미지 빌드하기 (velog.io)</a></li>
 </ul>]]></content><author><name>Jung MinGyu</name></author><category term="ubuntu" /><category term="docker" /><summary type="html"><![CDATA[host 아키텍처와 다른 docker 이미지를 동작시켜보자.]]></summary></entry><entry><title type="html">SSH 연결 오류(Host key verification failed.)</title><link href="http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC/" rel="alternate" type="text/html" title="SSH 연결 오류(Host key verification failed.)" /><published>2023-10-26T00:00:00+09:00</published><updated>2023-10-26T23:13:00+09:00</updated><id>http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC</id><content type="html" xml:base="http://localhost:4000/ssh/error/SSH_%EC%97%B0%EA%B2%B0_%EC%97%90%EB%9F%AC/"><![CDATA[<h2 id="ssh-오류-해결법--host-key-verification-failed-">SSH 오류 해결법 ( Host key verification failed. )</h2>
 
 <ul>
