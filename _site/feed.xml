@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-27T14:44:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">Debian 계열 Linux Chrome 한글 깨짐 해결법</title><link href="http://0.0.0.0:4000/ubuntu/linux/Debian%EA%B3%84%EC%97%B4%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%95%B4%EA%B2%B0%EB%B2%95/" rel="alternate" type="text/html" title="Debian 계열 Linux Chrome 한글 깨짐 해결법" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T14:13:00+00:00</updated><id>http://0.0.0.0:4000/ubuntu/linux/Debian%EA%B3%84%EC%97%B4%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%95%B4%EA%B2%B0%EB%B2%95</id><content type="html" xml:base="http://0.0.0.0:4000/ubuntu/linux/Debian%EA%B3%84%EC%97%B4%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%95%B4%EA%B2%B0%EB%B2%95/"><![CDATA[<h2 id="칼리리눅스-크롬-브라우저">칼리리눅스 크롬 브라우저</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-11-07T09:08:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">기록하는 개발자</title><subtitle>기록소</subtitle><author><name>Jung MinGyu</name></author><entry><title type="html">Debian 계열 Linux Chrome 한글 깨짐 해결법</title><link href="http://0.0.0.0:4000/ubuntu/linux/Debian%EA%B3%84%EC%97%B4%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%95%B4%EA%B2%B0%EB%B2%95/" rel="alternate" type="text/html" title="Debian 계열 Linux Chrome 한글 깨짐 해결법" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T14:13:00+00:00</updated><id>http://0.0.0.0:4000/ubuntu/linux/Debian%EA%B3%84%EC%97%B4%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%95%B4%EA%B2%B0%EB%B2%95</id><content type="html" xml:base="http://0.0.0.0:4000/ubuntu/linux/Debian%EA%B3%84%EC%97%B4%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%90%ED%95%B4%EA%B2%B0%EB%B2%95/"><![CDATA[<h2 id="칼리리눅스-크롬-브라우저">칼리리눅스 크롬 브라우저</h2>
 <ul>
   <li>한글이 깨지는 것을 확인할 수 있다.<br /><img src="https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/4dc1c7eb-d737-454c-8982-6bc5ae14585b" alt="Pasted image 20240125153018" /></li>
 </ul>
@@ -18,6 +18,7 @@
 </ol>
 
 <h2 id="참고-사이트">참고 사이트</h2>
+
 <ul>
   <li><a href="https://vtam.net/121">칼리 리눅스 한글 깨짐 현상해결</a></li>
 </ul>]]></content><author><name>Jung MinGyu</name></author><category term="ubuntu" /><category term="linux" /><category term="linux" /><category term="debian" /><summary type="html"><![CDATA[Linux 한글 깨짐 해결 방법.]]></summary></entry><entry><title type="html">WSL 저장 공간(VHDX) 위치 옮기기</title><link href="http://0.0.0.0:4000/windows/wsl_vhdx%EC%98%AE%EA%B8%B0%EA%B8%B0/" rel="alternate" type="text/html" title="WSL 저장 공간(VHDX) 위치 옮기기" /><published>2023-12-06T00:00:00+00:00</published><updated>2023-12-06T14:13:00+00:00</updated><id>http://0.0.0.0:4000/windows/wsl_vhdx%EC%98%AE%EA%B8%B0%EA%B8%B0</id><content type="html" xml:base="http://0.0.0.0:4000/windows/wsl_vhdx%EC%98%AE%EA%B8%B0%EA%B8%B0/"><![CDATA[<ul>
@@ -192,7 +193,7 @@ $ ssh-keygen -R [아이피 주소]
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 <span class="kn">from</span> <span class="n">selenium.webdriver.edge.service</span> <span class="kn">import</span> <span class="n">Service</span>
 
-<span class="n">edge_path</span> <span class="o">=</span> <span class="s">'msedgedriver.exe'</span>
+<span class="n">edge_path</span> <span class="o">=</span> <span class="sh">'</span><span class="s">msedgedriver.exe</span><span class="sh">'</span>
 <span class="n">service</span> <span class="o">=</span> <span class="nc">Service</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="n">edge_path</span><span class="p">)</span>
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Edge</span><span class="p">(</span><span class="n">service</span> <span class="o">=</span> <span class="n">service</span><span class="p">)</span>
 </code></pre></div></div>
@@ -204,17 +205,17 @@ $ ssh-keygen -R [아이피 주소]
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">from</span> <span class="n">selenium</span><span class="p">.</span><span class="n">webdriver</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">by</span> <span class="n">immport</span> <span class="n">By</span>
 
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">'...'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span><span class="s">'NAME'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s">'Class name'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s">'selector'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">ID</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span><span class="sh">'</span><span class="s">NAME</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="sh">'</span><span class="s">Class name</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="sh">'</span><span class="s">selector</span><span class="sh">'</span><span class="p">)</span>
 
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">'...'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span><span class="s">'NAME'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s">'Class name'</span><span class="p">)</span>
-<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s">'selector'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">ID</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span><span class="sh">'</span><span class="s">NAME</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="sh">'</span><span class="s">Class name</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="sh">'</span><span class="s">selector</span><span class="sh">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="selenium-클릭">Selenium 클릭</h2>
@@ -222,14 +223,14 @@ $ ssh-keygen -R [아이피 주소]
   <li>먼저 element 를 찾아주어야 한다. ( 클릭할 element 찾아주기. )</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bt</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bt</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">ID</span><span class="sh">'</span><span class="p">)</span>
 
 <span class="n">bt</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">click</span><span class="p">()</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
 
-<span class="n">bt</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'ID'</span><span class="p">)</span>
+<span class="n">bt</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">ID</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">bt</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="n">ENTER</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -238,11 +239,11 @@ $ ssh-keygen -R [아이피 주소]
   <li>element (input 등) 에 사용자 입력을 넣어줄 수 있다.</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">id</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'login_id'</span><span class="p">)</span>
-<span class="n">pwd</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'login_pwd'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">id</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">login_id</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_elements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">login_pwd</span><span class="sh">'</span><span class="p">)</span>
 
-<span class="nb">id</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="s">'id'</span><span class="p">)</span>
-<span class="n">pwd</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="nb">id</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">pwd</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="sh">'</span><span class="s">password</span><span class="sh">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="selenium-프로그램-끝나도-자동-종료-안되게-하기">Selenium 프로그램 끝나도 자동 종료 안되게 하기</h2>
@@ -252,7 +253,7 @@ $ ssh-keygen -R [아이피 주소]
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">EdgeOptions</span><span class="p">()</span>
-<span class="n">options</span><span class="p">.</span><span class="nf">add_experimental_option</span><span class="p">(</span><span class="s">"detach"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">options</span><span class="p">.</span><span class="nf">add_experimental_option</span><span class="p">(</span><span class="sh">"</span><span class="s">detach</span><span class="sh">"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
 
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Edge</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
 </code></pre></div></div>
@@ -264,7 +265,7 @@ $ ssh-keygen -R [아이피 주소]
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
-	<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">'xxx'</span><span class="p">)</span>
+	<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">xxx</span><span class="sh">'</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">UnexpectedAlertPresentException</span><span class="p">:</span>
 	<span class="c1"># 자동으로 alert 창이 닫긴다.
 </span>	<span class="k">pass</span>
@@ -273,7 +274,7 @@ $ ssh-keygen -R [아이피 주소]
 
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
 	<span class="k">try</span><span class="p">:</span>
-		<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">'xxx'</span><span class="p">)</span>
+		<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">xxx</span><span class="sh">'</span><span class="p">)</span>
 		<span class="k">break</span>
 	<span class="k">except</span> <span class="n">UnexpectedAlertPresentException</span><span class="p">:</span>
 		<span class="c1"># 자동으로 alert 창이 닫긴다.
@@ -286,8 +287,8 @@ $ ssh-keygen -R [아이피 주소]
   <li>element 의 소스 코드를 쉽게 확인해볼 수 있다.</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ele</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="s">'아이디'</span><span class="p">)</span>
-<span class="n">ele</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="s">'outerHTML'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ele</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="sh">'</span><span class="s">아이디</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">ele</span><span class="p">.</span><span class="nf">get_attribute</span><span class="p">(</span><span class="sh">'</span><span class="s">outerHTML</span><span class="sh">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="selenium-브라우저-크기-설정">Selenium 브라우저 크기 설정</h2>
@@ -309,7 +310,7 @@ $ ssh-keygen -R [아이피 주소]
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 처음 URL 열기.
 </span><span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="c1"># 새로운 창 만들기.
-</span><span class="n">driver</span><span class="p">.</span><span class="nf">execute_script</span><span class="p">(</span><span class="s">"window.open('');"</span><span class="p">)</span>
+</span><span class="n">driver</span><span class="p">.</span><span class="nf">execute_script</span><span class="p">(</span><span class="sh">"</span><span class="s">window.open(</span><span class="sh">''</span><span class="s">);</span><span class="sh">"</span><span class="p">)</span>
 
 <span class="c1"># 새로운 창으로 전환 및 새로운 URL 로 이동
 </span><span class="n">driver</span><span class="p">.</span><span class="n">switch_to</span><span class="p">.</span><span class="nf">window</span><span class="p">(</span><span class="n">driver</span><span class="p">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -677,14 +678,14 @@ md5 = &amp;�p'='63@-��
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">hashlib</span> <span class="kn">import</span> <span class="n">md5</span>
 
-<span class="n">key1</span> <span class="o">=</span> <span class="sa">b</span><span class="s">"'='"</span>
-<span class="n">key2</span> <span class="o">=</span> <span class="sa">b</span><span class="s">"'or'"</span>
+<span class="n">key1</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">"'</span><span class="s">=</span><span class="sh">'"</span>
+<span class="n">key2</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">"'</span><span class="s">or</span><span class="sh">'"</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">100_000_000</span><span class="p">):</span>
 <span class="err"> </span> <span class="err"> </span> <span class="n">e</span> <span class="o">=</span> <span class="nf">md5</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="nf">encode</span><span class="p">()).</span><span class="nf">digest</span><span class="p">()</span>
 <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="n">key1</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">key1</span><span class="si">}</span><span class="s"> : </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">key1</span><span class="si">}</span><span class="s"> : </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
 <span class="err"> </span> <span class="err"> </span> <span class="k">elif</span> <span class="n">key2</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">key2</span><span class="si">}</span><span class="s"> : </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">key2</span><span class="si">}</span><span class="s"> : </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="참고-사이트">참고 사이트</h2>
@@ -754,15 +755,15 @@ md5 = &amp;�p'='63@-��
   <li>로그 분석 결과 500 에러(서버 에러)가 발생할 때 나오는 비교 정수 값을 char 로 변환해주면 된다.</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">'./file/access.log'</span><span class="p">)</span>
-<span class="n">keyword</span> <span class="o">=</span> <span class="s">'HTTP/1.1" 500'</span>
-<span class="n">keyword2</span> <span class="o">=</span> <span class="s">'))='</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">./file/access.log</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="sh">'</span><span class="s">HTTP/1.1</span><span class="sh">"</span><span class="s"> 500</span><span class="sh">'</span>
+<span class="n">keyword2</span> <span class="o">=</span> <span class="sh">'</span><span class="s">))=</span><span class="sh">'</span>
 
 <span class="n">arr</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
     <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">readline</span><span class="p">()</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
-        <span class="nf">print</span><span class="p">(</span><span class="s">'end'</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">end</span><span class="sh">'</span><span class="p">)</span>
         <span class="k">break</span>
     
     <span class="k">if</span> <span class="n">keyword</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
@@ -773,12 +774,12 @@ md5 = &amp;�p'='63@-��
         <span class="k">continue</span>
     <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">a</span><span class="o">+</span><span class="nf">len</span><span class="p">(</span><span class="n">keyword2</span><span class="p">):]</span>
 
-    <span class="n">l</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="sh">'</span><span class="s">,</span><span class="sh">'</span><span class="p">)</span>
 
     <span class="n">arr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="nf">chr</span><span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="n">l</span><span class="p">])))</span>
     <span class="c1"># print(line[:l])
 </span>    
-<span class="nf">print</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">''</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
 
 <span class="n">f</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
 </code></pre></div></div>
