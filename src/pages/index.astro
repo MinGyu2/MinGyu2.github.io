@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HudPanel from '../components/hud/HudPanel.astro';
+import KnowledgeRing from '../components/hud/KnowledgeRing.astro';
+import PostCard from '../components/blog/PostCard.astro';
+import { buildTaxonomy, formatDate, getCategoryStats, getPosts, UNCATEGORIZED } from '../lib/posts';
+import { SITE } from '../lib/site';
+import { PROJECTS } from '../data/projects';
+import { EXPERIMENTS } from '../data/experiments';
+
+const posts = await getPosts();
+const stats = await getCategoryStats();
+const tags = buildTaxonomy(posts, 'tags');
+const recent = posts.slice(0, 4);
+const latest = posts[0];
+const featured = PROJECTS[0];
+const lab = EXPERIMENTS.find((e) => e.status === 'available');
+const segments = [
+  ...stats.modules.map((m) => ({ key: m.key, label: m.label, count: m.count, color: m.color })),
+  { key: UNCATEGORIZED.key, label: UNCATEGORIZED.label, count: stats.uncategorized.length, color: 'var(--cat-none)' },
+];
+const pct = (n: number) => Math.round((n / stats.totalPosts) * 100);
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+<BaseLayout nav="command" view="command" description={`${SITE.title} — ${SITE.author.name}(${SITE.author.nickname})의 기술 기록소`}>
+  <div class="space-y-6">
+    <section class="grid-hero" aria-label="소개와 통계">
+      <HudPanel class="reveal" innerClass="p-6 sm:p-7 p-pad flex flex-col justify-between">
+        <div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span class="panel-id">SYS-01 // COMMAND CENTER</span>
+            <span class="font-mono-code text-[11px] px-2 py-0.5 badge-cyan rounded-sm">WORKSTATION ARCHIVE</span>
+          </div>
+          <h1 class="hero-title font-hud text-3xl sm:text-4xl font-bold t-heading leading-tight">
+            ARC LAB <span class="t-cyan">ENGINEERING LOGS</span>
+          </h1>
+          <p class="mt-3 text-sm sm:text-[15px] t-body leading-relaxed max-w-2xl">
+            웹 해킹 실습(SQL Injection · XSS · CSRF · SSRF · File Upload), JSP · Servlet 웹 서버 개발, Linux · Docker · LXD
+            환경 구성을 기록하는 <strong class="t-heading">{SITE.author.name}</strong>({SITE.author.nickname})의 개인 기술 블로그입니다.
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-wrap items-center gap-2.5">
+          <a href={latest.data.legacyPath} class="btn-primary px-4 py-2 text-sm rounded">최신 기술 문서 읽기</a>
+          <a href="/projects/" class="btn-outline px-4 py-2 text-sm rounded">웹 서버 프로젝트 보기</a>
+          <button type="button" class="btn-outline px-4 py-2 text-sm rounded" data-search-open aria-haspopup="dialog" aria-controls="search-dialog">전체 검색 열기</button>
+        </div>
+
+        <dl class="mt-6 pt-5 border-t b-circuit-soft grid-kpi">
+          <div class="kpi-tile">
+            <dt class="font-mono-code text-[11px] t-muted">TOTAL LOGS</dt>
+            <dd class="font-hud text-2xl font-bold t-heading mt-0.5">{pad(stats.totalPosts)}</dd>
+          </div>
+          <div class="kpi-tile">
+            <dt class="font-mono-code text-[11px] t-muted">MODULES</dt>
+            <dd class="font-hud text-2xl font-bold t-cyan mt-0.5">{pad(stats.modules.length)}</dd>
+          </div>
+          <div class="kpi-tile">
+            <dt class="font-mono-code text-[11px] t-muted">TAG INDEX</dt>
+            <dd class="font-hud text-2xl font-bold t-amber mt-0.5">{tags.length}</dd>
+          </div>
+          <div class="kpi-tile">
+            <dt class="font-mono-code text-[11px] t-muted">LAST LOG</dt>
+            <dd class="font-hud text-2xl font-bold t-mint mt-0.5"><time datetime={latest.data.date.toISOString()}>{formatDate(latest.data.date).slice(0, 7).replace('-', '.')}</time></dd>
+          </div>
+        </dl>
+      </HudPanel>
+
+      <HudPanel class="reveal reveal-d1" as="section" aria-labelledby="ring-title" innerClass="p-6 p-pad flex flex-col">
+        <div class="flex items-center justify-between mb-2">
+          <h2 id="ring-title" class="panel-id">HUD-02 // KNOWLEDGE RING</h2>
+          <span class="font-mono-code text-[11px] t-muted">CATEGORIES</span>
+        </div>
+        <div class="my-2">
+          <KnowledgeRing segments={segments} totalPosts={stats.totalPosts} moduleCount={stats.modules.length} />
+        </div>
+        <ul class="ring-legend gap-1 mt-2" aria-label="카테고리별 게시글 수">
+          {
+            segments.map((s) => (
+              <li>
+                <a href={`/posts/?category=${encodeURIComponent(s.key)}`} class="ring-legend-item">
+                  <span class="flex items-center gap-2 t-body min-w-0">
+                    <span class="w-2.5 h-2.5 rounded-full shrink-0" style={`background:${s.color}`} aria-hidden="true" />
+                    <span class="truncate">{s.label}</span>
+                  </span>
+                  <span class="font-mono-code text-xs t-muted shrink-0 ml-2">
+                    {s.count} ({pct(s.count)}%)
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          stats.multiCategoryPosts > 0 && (
+            <p class="mt-3 text-[11px] t-muted leading-snug">
+              * {stats.multiCategoryPosts}개 글은 2개 이상의 카테고리에 속해 각 카테고리에 모두 집계됩니다. 비율은 전체 {stats.totalPosts}개 글 기준입니다.
+            </p>
+          )
+        }
+      </HudPanel>
+    </section>
+
+    <section class="grid-hero">
+      <div class="space-y-4 reveal reveal-d2 min-w-0">
+        <div class="flex items-end justify-between gap-3">
+          <div>
+            <span class="panel-id">LOG-FEED // LATEST ENTRIES</span>
+            <h2 class="font-hud text-xl font-bold t-heading mt-0.5">최신 기술 게시글</h2>
+          </div>
+          <a href="/posts/" class="text-sm font-medium link-cyan py-2">전체 보기 -&gt;</a>
+        </div>
+        <ul class="grid-2">
+          {recent.map((p) => <li><PostCard post={p} variant="hud" maxTags={3} /></li>)}
+        </ul>
+      </div>
+
+      <div class="space-y-4 reveal reveal-d3 min-w-0">
+        <div>
+          <span class="panel-id" style="color: var(--accent-amber)">SYS-03 // QUICK ACCESS</span>
+          <h2 class="font-hud text-xl font-bold t-heading mt-0.5">프로젝트 · 실험실</h2>
+        </div>
+
+        <HudPanel href="/projects/" innerClass="p-5 block" aria-label={`프로젝트: ${featured.title}`}>
+          <div class="flex items-center justify-between font-mono-code text-[11px] mb-2">
+            <span class="t-cyan">PROJECT BLUEPRINT</span>
+            <span class="t-amber">{featured.architecture?.length ?? 0} STAGES</span>
+          </div>
+          <h3 class="font-hud text-lg font-bold t-heading">{featured.title}</h3>
+          <p class="mt-1.5 text-[13px] t-muted leading-relaxed">Nginx · Tomcat · Oracle DB로 구성한 웹 서버의 인터랙티브 구조도를 확인하세요.</p>
+          <div class="mt-4 flex items-center justify-between text-xs font-mono-code t-cyan">
+            <span>OPEN BLUEPRINT</span><span aria-hidden="true">-&gt;</span>
+          </div>
+        </HudPanel>
+
+        {
+          lab && (
+            <HudPanel href={lab.href} innerClass="p-5 block" aria-label={`실험실: ${lab.title}`}>
+              <div class="flex items-center justify-between font-mono-code text-[11px] mb-2">
+                <span class="t-blue">EXPERIMENT LAB</span>
+                <span class="t-mint">INTERACTIVE</span>
+              </div>
+              <h3 class="font-hud text-lg font-bold t-heading">{lab.title} 도구</h3>
+              <p class="mt-1.5 text-[13px] t-muted leading-relaxed">{lab.summary}</p>
+              <div class="mt-4 flex items-center justify-between text-xs font-mono-code t-cyan">
+                <span>LAUNCH LAB</span><span aria-hidden="true">-&gt;</span>
+              </div>
+            </HudPanel>
+          )
+        }
+
+        <section class="clean-card p-5" aria-labelledby="top-tags-title">
+          <div class="flex items-center justify-between mb-3">
+            <h3 id="top-tags-title" class="panel-id">DATA INDEX // TOP TAGS</h3>
+            <a href="/tags/" class="font-mono-code text-[11px] link-cyan py-1">ALL {tags.length} -&gt;</a>
+          </div>
+          <ul class="flex flex-wrap gap-1.5">
+            {
+              tags.slice(0, 12).map((t) => (
+                <li>
+                  <a href={`/posts/?tag=${encodeURIComponent(t.key)}`} class="chip min-h-7">
+                    #{t.label} <span class="t-muted">{t.count}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .ring-legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: 420px) {
+    .ring-legend {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  .ring-legend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 2.25rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    background: var(--bg-inset);
+    border: 1px solid transparent;
+    font-size: 0.78rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .ring-legend-item:hover {
+    background: var(--bg-inset-hover);
+    border-color: var(--circuit-line);
+  }
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 1.75rem;
+    }
+  }
+</style>

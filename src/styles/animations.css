@@ -1,0 +1,24 @@
+/* Short, one-shot reveal. No continuous decorative animation. */
+@keyframes panelReveal {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: panelReveal 0.28s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.reveal-d1 { animation-delay: 0.04s; }
+.reveal-d2 { animation-delay: 0.08s; }
+.reveal-d3 { animation-delay: 0.12s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

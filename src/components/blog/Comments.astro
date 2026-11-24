@@ -1,0 +1,81 @@
+---
+/**
+ * utterances comments — same repository and `pathname` issue term as the legacy
+ * site, so every article keeps its existing GitHub issue thread. The widget is
+ * loaded when the section approaches the viewport and follows the site theme.
+ */
+import { SITE } from '../../lib/site';
+---
+<section class="comments mt-10" aria-labelledby="comments-title">
+  <div class="flex items-center justify-between gap-3 mb-3">
+    <h2 id="comments-title" class="font-mono-code text-[11px] t-cyan tracking-wider">COMMENTS // 댓글</h2>
+    <span class="font-mono-code text-[11px] t-muted">via utterances · GitHub Issues</span>
+  </div>
+  <div id="utterances-comments" class="comments-box" data-repo={SITE.comments.repo} data-issue-term={SITE.comments.issueTerm}>
+    <p class="comments-placeholder text-sm t-muted">댓글을 불러오는 중입니다…</p>
+  </div>
+  <noscript><p class="text-sm t-muted">댓글을 보려면 JavaScript를 활성화하세요.</p></noscript>
+</section>
+
+<style>
+  .comments-box {
+    min-height: 8rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--circuit-line-soft);
+    border-radius: 6px;
+    background: var(--bg-reader);
+  }
+  .comments-box :global(.utterances) {
+    max-width: none;
+  }
+</style>
+
+<script>
+  import { currentTheme, THEME_EVENT, type Theme } from '../../scripts/theme';
+
+  const box = document.getElementById('utterances-comments');
+  const utterancesTheme = (t: Theme) => (t === 'light' ? 'github-light' : 'github-dark');
+
+  function load() {
+    if (!box || box.dataset.loaded) return;
+    box.dataset.loaded = 'true';
+    const s = document.createElement('script');
+    s.src = 'https://utteranc.es/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.setAttribute('repo', box.dataset.repo ?? '');
+    s.setAttribute('issue-term', box.dataset.issueTerm ?? 'pathname');
+    s.setAttribute('theme', utterancesTheme(currentTheme()));
+    s.addEventListener('load', () => box.querySelector('.comments-placeholder')?.remove());
+    s.addEventListener('error', () => {
+      const p = box.querySelector('.comments-placeholder');
+      if (p) p.textContent = '댓글 위젯을 불러오지 못했습니다. 네트워크 상태를 확인해 주세요.';
+    });
+    box.appendChild(s);
+  }
+
+  if (box) {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            io.disconnect();
+            load();
+          }
+        },
+        { rootMargin: '600px 0px' },
+      );
+      io.observe(box);
+    } else {
+      load();
+    }
+  }
+
+  document.addEventListener(THEME_EVENT, (e) => {
+    const frame = box?.querySelector<HTMLIFrameElement>('iframe.utterances-frame');
+    frame?.contentWindow?.postMessage(
+      { type: 'set-theme', theme: utterancesTheme((e as CustomEvent<Theme>).detail) },
+      'https://utteranc.es',
+    );
+  });
+</script>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HudPanel from '../components/hud/HudPanel.astro';
+---
+<BaseLayout title="404 · 페이지를 찾을 수 없습니다" noindex>
+  <HudPanel class="max-w-2xl mx-auto mt-10" innerClass="p-8 text-center">
+    <p class="panel-id">ERR-404 // SIGNAL LOST</p>
+    <h1 class="font-hud text-3xl font-bold t-heading mt-2">페이지를 찾을 수 없습니다</h1>
+    <p class="text-sm t-muted mt-3">주소가 바뀌었거나 존재하지 않는 페이지입니다. 검색이나 전체 글 목록에서 찾아보세요.</p>
+    <div class="mt-6 flex flex-wrap justify-center gap-2.5">
+      <a href="/" class="btn-primary px-4 py-2 text-sm rounded">홈으로</a>
+      <a href="/posts/" class="btn-outline px-4 py-2 text-sm rounded">전체 글 목록</a>
+      <button type="button" class="btn-outline px-4 py-2 text-sm rounded js-only" data-search-open aria-haspopup="dialog" aria-controls="search-dialog">검색 열기</button>
+    </div>
+  </HudPanel>
+</BaseLayout>

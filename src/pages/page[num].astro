@@ -1,0 +1,58 @@
+---
+/**
+ * Legacy jekyll-paginate URLs (/page2/ … /pageN/, 5 posts per page, page 1 = "/").
+ * Kept so existing links and search-engine entries still resolve directly.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/blog/PostCard.astro';
+import { getPosts } from '../lib/posts';
+import { SITE } from '../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const size = SITE.legacyPageSize;
+  const pages = Math.ceil(posts.length / size);
+  return Array.from({ length: pages - 1 }, (_, i) => {
+    const n = i + 2;
+    return { params: { num: String(n) }, props: { n, pages, items: posts.slice((n - 1) * size, n * size) } };
+  });
+}
+
+const { n, pages, items } = Astro.props;
+const href = (k: number) => (k === 1 ? '/posts/' : `/page${k}/`);
+---
+<BaseLayout title={`페이지 ${n}`} nav="logs" view="logs" description={`기술 게시글 목록 ${n} / ${pages} 페이지`}>
+  <div class="space-y-6 reveal">
+    <section class="clean-card p-5 sm:p-6">
+      <span class="panel-id">ARCHIVE // PAGE {String(n).padStart(2, '0')} OF {pages}</span>
+      <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">기술 게시글 · {n} 페이지</h1>
+      <p class="text-sm t-muted mt-1">
+        한 페이지에 {SITE.legacyPageSize}개씩, 최신 글부터 나열합니다. 카테고리 · 태그 필터는 <a class="link-cyan" href="/posts/">전체 목록</a>에서 사용할 수 있습니다.
+      </p>
+    </section>
+    <ul class="grid-2">
+      {items.map((p) => <li><PostCard post={p} variant="clean" headingLevel={2} /></li>)}
+    </ul>
+    <nav class="flex flex-wrap items-center justify-center gap-1.5" aria-label="페이지 이동">
+      <a class="btn-outline px-3 rounded text-sm" href={href(n - 1)} rel="prev">&lt;- 이전</a>
+      {
+        Array.from({ length: pages }, (_, i) => i + 1)
+          .filter((k) => k > 1)
+          .map((k) => (
+            <a class="btn-outline px-3 rounded text-sm font-mono-code min-w-10" href={href(k)} aria-current={k === n ? 'page' : undefined}>
+              {k}
+            </a>
+          ))
+      }
+      {n < pages && <a class="btn-outline px-3 rounded text-sm" href={href(n + 1)} rel="next">다음 -&gt;</a>}
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  a[aria-current='page'] {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--accent-primary-soft);
+  }
+</style>

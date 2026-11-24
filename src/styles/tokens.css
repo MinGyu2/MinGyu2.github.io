@@ -1,0 +1,133 @@
+/* =========================================================================
+   ARC LAB theme tokens
+   Dark: Deep Space (default)  ·  Light: Eye-Comfort Mist Paper
+   Values follow the ARC LAB reference; additions are marked "added".
+   ========================================================================= */
+:root,
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --header-h: 4.25rem;
+
+  --bg-outer: #04080d;
+  --bg-canvas: #070d14;
+  --bg-header: rgba(7, 13, 20, 0.94);
+  --bg-panel: #0d1b26;
+  --bg-panel-grad: linear-gradient(160deg, rgba(13, 27, 38, 0.95) 0%, rgba(9, 19, 28, 0.97) 100%);
+  --bg-reader: rgba(13, 27, 38, 0.88);
+  --bg-inset: #070d14;
+  --bg-inset-hover: #122534;
+  --bg-code: #081018;
+  --bg-code-header: #0e1e2b;
+  --circuit-line: #254452;
+  --circuit-line-soft: rgba(37, 68, 82, 0.65);
+  /* added: borders of form controls need 3:1 against their background (WCAG 1.4.11) */
+  --control-border: #4c7486;
+  --grid-line: rgba(37, 68, 82, 0.16);
+  --glow-a: rgba(57, 127, 255, 0.09);
+  --glow-b: rgba(72, 217, 245, 0.065);
+
+  --accent-primary: #48d9f5;
+  --accent-primary-hover: #6ce2f8;
+  --accent-primary-soft: rgba(72, 217, 245, 0.12);
+  --accent-primary-text: #070d14;
+  --accent-secondary: #397fff;
+  /* added: secondary blue used as text needs 4.5:1 on panels */
+  --accent-secondary-text: #7ab3ff;
+  --accent-mint: #63e6be;
+  --accent-amber: #ffb454;
+  --accent-amber-soft: rgba(255, 180, 84, 0.14);
+
+  --text-heading: #eff7fc;
+  --text-primary: #dce8f0;
+  --text-muted: #93aebe;
+
+  --svg-grid: #152b38;
+  --svg-ring-bg: #112331;
+  --svg-core-bg: rgba(7, 13, 20, 0.9);
+  --frame-glow: 0 0 22px rgba(72, 217, 245, 0.16);
+  --hover-drop: drop-shadow(0 6px 14px rgba(72, 217, 245, 0.12));
+  --backdrop-modal: rgba(3, 7, 12, 0.82);
+
+  /* Syntax highlighting (Shiki css-variables theme) */
+  --syn-kw: #48d9f5;
+  --syn-str: #63e6be;
+  --syn-com: #7b96a8;
+  --syn-num: #ffb454;
+  --syn-fn: #7ab3ff;
+
+  /* added: category accents (non-text marks; labels always use text tokens) */
+  --cat-1: #48d9f5;
+  --cat-2: #397fff;
+  --cat-3: #63e6be;
+  --cat-4: #ffb454;
+  --cat-5: #b79cff;
+  --cat-6: #ff7fa1;
+  --cat-7: #b5e35c;
+  --cat-8: #8fb3c9;
+  --cat-none: #5a7a8c;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --bg-outer: #dce4ea;
+  --bg-canvas: #eef2f5;
+  --bg-header: rgba(238, 242, 245, 0.95);
+  --bg-panel: #f7f9fb;
+  --bg-panel-grad: linear-gradient(160deg, #f8fafc 0%, #f1f5f8 100%);
+  --bg-reader: #f8fafc;
+  --bg-inset: #e6edf2;
+  --bg-inset-hover: #dae4ec;
+  --bg-code: #eaeff4;
+  --bg-code-header: #dde6ed;
+  --circuit-line: #b4c6d3;
+  --circuit-line-soft: rgba(180, 198, 211, 0.8);
+  --control-border: #6a8293; /* adjusted: 3:1 against inset/canvas */
+  --grid-line: rgba(110, 140, 160, 0.13);
+  --glow-a: rgba(37, 99, 235, 0.035);
+  --glow-b: rgba(9, 100, 130, 0.04);
+
+  --accent-primary: #096482;
+  --accent-primary-hover: #074f67;
+  --accent-primary-soft: rgba(9, 100, 130, 0.1);
+  --accent-primary-text: #f8fafc;
+  --accent-secondary: #1d4ed8;
+  --accent-secondary-text: #1d4ed8;
+  --accent-mint: #076c54; /* adjusted from #08745A: 4.5:1 on hover surfaces */
+  --accent-amber: #935407;
+  --accent-amber-soft: rgba(147, 84, 7, 0.11);
+
+  --text-heading: #10202b;
+  --text-primary: #1e313f;
+  --text-muted: #4a6070;
+
+  --svg-grid: #d2dee7;
+  --svg-ring-bg: #dce6ee;
+  --svg-core-bg: #f7f9fb;
+  --frame-glow: 0 8px 24px rgba(16, 32, 43, 0.1);
+  --hover-drop: drop-shadow(0 8px 16px rgba(16, 32, 43, 0.08));
+  --backdrop-modal: rgba(16, 32, 43, 0.48);
+
+  --syn-kw: #096482;
+  --syn-str: #08745a;
+  --syn-com: #52687a; /* adjusted from #5C7282: 4.5:1 on code background */
+  --syn-num: #935407;
+  --syn-fn: #1d4ed8;
+
+  --cat-1: #096482;
+  --cat-2: #1d4ed8;
+  --cat-3: #08745a;
+  --cat-4: #935407;
+  --cat-5: #6d3fc0;
+  --cat-6: #b4234a;
+  --cat-7: #4d7c0f;
+  --cat-8: #4a6070;
+  --cat-none: #687f90; /* 3:1 against ring track */
+}
+
+:root {
+  --font-sans: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
+    'Noto Sans KR', 'Noto Sans CJK KR', system-ui, sans-serif;
+  --font-hud: 'Rajdhani', 'Inter Variable', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'D2Coding',
+    'Noto Sans Mono CJK KR', monospace;
+}

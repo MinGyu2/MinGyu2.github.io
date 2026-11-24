@@ -1,0 +1,180 @@
+---
+import type { ArchNode } from '../../data/projects';
+import { displayTitle, getPosts } from '../../lib/posts';
+
+interface Props {
+  id: string;
+  title: string;
+  nodes: ArchNode[];
+}
+const { id, title, nodes } = Astro.props;
+const posts = await getPosts();
+const bySource = new Map(posts.map((p) => [p.data.legacySource, p]));
+const evidence = (n: ArchNode) =>
+  n.evidence.map((src) => {
+    const p = bySource.get(src);
+    if (!p) throw new Error(`Architecture evidence not found: ${src}`);
+    return { href: p.data.legacyPath, title: displayTitle(p) };
+  });
+
+const W = 680;
+const boxW = 128;
+const gap = (W - 36 - boxW * nodes.length) / Math.max(1, nodes.length - 1);
+const xs = nodes.map((_, i) => 18 + i * (boxW + gap));
+---
+<div class="arch" data-arch={id}>
+  <div class="p-4 bg-inset border b-circuit rounded overflow-x-auto arch-scroll">
+    <svg viewBox={`0 0 ${W} 200`} class="arch-svg" role="tablist" aria-label={`${title} 구성 단계`}>
+      <defs>
+        <pattern id={`${id}-grid`} width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--svg-grid)" stroke-width="0.7"></path>
+        </pattern>
+      </defs>
+      <rect width={W} height="200" fill={`url(#${id}-grid)`}></rect>
+      {
+        xs.slice(0, -1).map((x, i) => (
+          <g aria-hidden="true">
+            <line x1={x + boxW} y1="98" x2={xs[i + 1] - 8} y2="98" stroke={nodes[i + 1].color} stroke-width="1.5" />
+            <polygon points={`${xs[i + 1] - 8},94 ${xs[i + 1]},98 ${xs[i + 1] - 8},102`} fill={nodes[i + 1].color} />
+          </g>
+        ))
+      }
+      {
+        nodes.map((n, i) => {
+          const x = xs[i];
+          const cx = x + boxW / 2;
+          const sel = i === 0;
+          return (
+            <g
+              class="arch-node"
+              role="tab"
+              id={`${id}-tab-${n.id}`}
+              data-arch-node={n.id}
+              tabindex={sel ? '0' : '-1'}
+              aria-selected={sel ? 'true' : 'false'}
+              aria-controls={`${id}-panel-${n.id}`}
+              aria-label={`${n.code} ${n.title}: ${n.sub}`}
+            >
+              <rect class="arch-focus" x={x - 5} y="49" width={boxW + 10} height="98" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-dasharray="4 3" />
+              <rect class="arch-box" x={x} y="54" width={boxW} height="88" stroke={n.color} />
+              <text x={cx} y="80" text-anchor="middle" fill={n.color} font-family="JetBrains Mono Variable, monospace" font-size="10">
+                {n.code}
+              </text>
+              <text x={cx} y="102" text-anchor="middle" fill="var(--text-heading)" font-family="Rajdhani, sans-serif" font-size="16" font-weight="700">
+                {n.title}
+              </text>
+              <text x={cx} y="122" text-anchor="middle" fill="var(--text-muted)" font-family="JetBrains Mono Variable, monospace" font-size="9">
+                {n.sub}
+              </text>
+            </g>
+          );
+        })
+      }
+      <text x="18" y="182" fill="var(--text-muted)" font-family="JetBrains Mono Variable, monospace" font-size="10" aria-hidden="true">
+        노드를 클릭·탭하거나 방향키로 이동하면 아래에 단계별 상세가 표시됩니다
+      </text>
+    </svg>
+  </div>
+
+  {
+    nodes.map((n, i) => (
+      <div
+        id={`${id}-panel-${n.id}`}
+        role="tabpanel"
+        aria-labelledby={`${id}-tab-${n.id}`}
+        class="mt-4 p-4 sm:p-5 bg-inset border b-circuit rounded"
+        hidden={i !== 0}
+        data-arch-panel={n.id}
+      >
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <span class="font-mono-code text-xs px-2 py-0.5 badge-cyan rounded-sm">{n.code}</span>
+            <h3 class="font-hud text-lg font-bold t-heading">{n.title}</h3>
+          </div>
+          <ul class="flex flex-wrap gap-1.5" aria-label="사용 기술">
+            {n.stack.map((s) => (
+              <li class="font-mono-code text-[11px] px-2 py-0.5 border b-circuit t-muted rounded-sm bg-panel">{s}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="text-sm t-body leading-relaxed">{n.detail}</p>
+        <div class="mt-3 pt-3 border-t b-circuit-soft">
+          <p class="font-mono-code text-[11px] t-muted mb-1.5">EVIDENCE // 근거 글</p>
+          <ul class="flex flex-wrap gap-x-4 gap-y-1 text-[13px]">
+            {evidence(n).map((e) => (
+              <li>
+                <a href={e.href} class="link-cyan">{e.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .arch-svg {
+    display: block;
+    width: 100%;
+    min-width: 560px;
+    max-width: 880px;
+    margin-inline: auto;
+    height: auto;
+  }
+  .arch-node {
+    cursor: pointer;
+    outline: none;
+  }
+  .arch-box {
+    fill: var(--bg-panel);
+    stroke-width: 1.3;
+    transition: fill 0.2s ease, stroke-width 0.2s ease;
+  }
+  .arch-node:hover .arch-box,
+  .arch-node[aria-selected='true'] .arch-box {
+    stroke-width: 2.4;
+  }
+  .arch-node[aria-selected='true'] .arch-box {
+    fill: var(--accent-primary-soft);
+  }
+  .arch-focus {
+    opacity: 0;
+  }
+  .arch-node:focus-visible .arch-focus {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-arch]').forEach((root) => {
+    const tabs = Array.from(root.querySelectorAll<SVGGElement>('[data-arch-node]'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[data-arch-panel]'));
+    const select = (index: number, focus: boolean) => {
+      tabs.forEach((t, i) => {
+        const on = i === index;
+        t.setAttribute('aria-selected', String(on));
+        t.setAttribute('tabindex', on ? '0' : '-1');
+      });
+      const id = tabs[index].dataset.archNode;
+      panels.forEach((p) => (p.hidden = p.dataset.archPanel !== id));
+      if (focus) tabs[index].focus({ preventScroll: true });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(i, true));
+      t.addEventListener('keydown', (e) => {
+        let next = -1;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') next = 0;
+        else if (e.key === 'End') next = tabs.length - 1;
+        else if (e.key === 'Enter' || e.key === ' ') next = i;
+        if (next >= 0) {
+          e.preventDefault();
+          select(next, true);
+          tabs[next].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        }
+      });
+    });
+  });
+</script>

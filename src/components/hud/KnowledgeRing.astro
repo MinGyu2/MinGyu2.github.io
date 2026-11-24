@@ -1,0 +1,108 @@
+---
+/**
+ * Segmented Knowledge Ring, computed at build time from the content collection.
+ * Each segment is proportional to a category's post count; posts that belong to
+ * several categories are counted once per category, and posts without a category
+ * form the "미분류" segment. Segment counts are the exact legend counts.
+ */
+export interface RingSegment {
+  key: string;
+  label: string;
+  count: number;
+  color: string;
+}
+interface Props {
+  segments: RingSegment[];
+  totalPosts: number;
+  moduleCount: number;
+  class?: string;
+}
+const { segments, totalPosts, moduleCount, class: className } = Astro.props;
+
+const cx = 100;
+const r = 64;
+const c = 2 * Math.PI * r;
+const sum = segments.reduce((s, x) => s + x.count, 0);
+const gap = segments.filter((s) => s.count > 0).length > 1 ? 2.5 : 0;
+
+let acc = 0;
+const arcs = segments
+  .filter((s) => s.count > 0)
+  .map((s) => {
+    const frac = sum > 0 ? s.count / sum : 0;
+    const dash = Math.max(0.8, frac * c - gap);
+    const rot = acc * 360 - 90;
+    acc += frac;
+    return { ...s, dash: dash.toFixed(2), rest: (c - dash).toFixed(2), rot: rot.toFixed(2) };
+  });
+
+const ticks = Array.from({ length: 36 }, (_, i) => {
+  const a = (i * 10 * Math.PI) / 180;
+  const major = i % 3 === 0;
+  const r1 = major ? 80 : 83;
+  const r2 = 88;
+  return {
+    x1: (cx + r1 * Math.cos(a)).toFixed(1),
+    y1: (cx + r1 * Math.sin(a)).toFixed(1),
+    x2: (cx + r2 * Math.cos(a)).toFixed(1),
+    y2: (cx + r2 * Math.sin(a)).toFixed(1),
+    major,
+  };
+});
+const label = `카테고리 분포 원형 차트: 총 ${totalPosts}개 게시글, ${segments.map((s) => `${s.label} ${s.count}`).join(', ')}`;
+---
+<svg viewBox="0 0 200 200" class:list={['knowledge-ring', className]} role="img" aria-label={label}>
+  <title>Knowledge Ring — {totalPosts} posts</title>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="var(--circuit-line)" stroke-width="0.9" stroke-dasharray="18 6 4 6"></circle>
+  {
+    ticks.map((t) => (
+      <line
+        x1={t.x1}
+        y1={t.y1}
+        x2={t.x2}
+        y2={t.y2}
+        stroke={t.major ? 'var(--accent-primary)' : 'var(--circuit-line)'}
+        stroke-width={t.major ? 1.3 : 0.8}
+        opacity={t.major ? 0.85 : 0.6}
+      />
+    ))
+  }
+  <line x1="100" y1="6" x2="100" y2="14" stroke="var(--accent-primary)" stroke-width="1.5"></line>
+  <line x1="100" y1="186" x2="100" y2="194" stroke="var(--accent-primary)" stroke-width="1.5"></line>
+  <line x1="6" y1="100" x2="14" y2="100" stroke="var(--circuit-line)" stroke-width="1.2"></line>
+  <line x1="186" y1="100" x2="194" y2="100" stroke="var(--circuit-line)" stroke-width="1.2"></line>
+  <circle cx="100" cy="100" r={r} fill="none" stroke="var(--svg-ring-bg)" stroke-width="9"></circle>
+  {
+    arcs.map((a) => (
+      <circle
+        cx="100"
+        cy="100"
+        r={r}
+        fill="none"
+        stroke={a.color}
+        stroke-width="9"
+        stroke-dasharray={`${a.dash} ${a.rest}`}
+        transform={`rotate(${a.rot} 100 100)`}
+        data-segment={a.key}
+        opacity={a.key === 'uncategorized' ? 0.7 : 1}
+      >
+        <title>{`${a.label}: ${a.count}`}</title>
+      </circle>
+    ))
+  }
+  <circle cx="100" cy="100" r="51" fill="none" stroke="var(--circuit-line)" stroke-width="1" stroke-dasharray="3 4"></circle>
+  <circle cx="100" cy="100" r="44" fill="var(--svg-core-bg)" stroke="var(--accent-primary)" stroke-width="1.1" opacity="0.92"></circle>
+  <text x="100" y="97" text-anchor="middle" fill="var(--text-heading)" font-family="Rajdhani, sans-serif" font-size="30" font-weight="700">{String(totalPosts).padStart(2, '0')}</text>
+  <text x="100" y="113" text-anchor="middle" fill="var(--accent-primary)" font-family="JetBrains Mono Variable, monospace" font-size="8" letter-spacing="1.2">INDEXED LOGS</text>
+  <text x="100" y="126" text-anchor="middle" fill="var(--text-muted)" font-family="JetBrains Mono Variable, monospace" font-size="7.5">{moduleCount} MODULES</text>
+</svg>
+
+<style>
+  .knowledge-ring {
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    margin-inline: auto;
+    max-width: 100%;
+  }
+</style>

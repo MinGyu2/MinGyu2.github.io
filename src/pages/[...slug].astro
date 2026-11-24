@@ -1,0 +1,24 @@
+---
+/**
+ * Article routes. Every post is generated at its historical Jekyll URL
+ * (`legacyPath`, recorded explicitly by scripts/migrate-jekyll.mjs), including
+ * Korean characters, capitalization and the trailing slash.
+ */
+import { render } from 'astro:content';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { getPosts } from '../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    params: { slug: post.data.legacyPath.slice(1, -1) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+---
+<ArticleLayout post={post} headings={headings}>
+  <Content />
+</ArticleLayout>

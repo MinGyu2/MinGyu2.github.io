@@ -1,0 +1,63 @@
+name: Build & Deploy (GitHub Pages)
+
+# Builds on every push/PR. Deployment is opt-in: it runs only on `main` when the
+# repository variable PAGES_DEPLOY_ENABLED is set to "true" AND
+# Settings → Pages → Source is "GitHub Actions". See MIGRATION.md.
+on:
+  push:
+    branches: [main, astro-arc-lab]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # verify-site reads the legacy Jekyll source commit from history
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install (lockfile)
+        run: npm ci
+
+      - name: Type check
+        run: npm run check
+
+      - name: Build (Astro + Pagefind index)
+        run: npm run build
+
+      - name: Verify migration invariants
+        run: npm run verify
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.PAGES_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

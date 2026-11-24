@@ -1,0 +1,146 @@
+/* =========================================================================
+   HUD frames
+   .hud-frame        outer box: corner brackets, hover lift, focus outline (never clipped)
+   .hud-panel-inner  inner chamfered surface (clip-path lives only here)
+   ========================================================================= */
+@layer components {
+.hud-frame {
+  position: relative;
+  display: block;
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+.hud-frame::before,
+.hud-frame::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.22s ease;
+}
+.hud-frame::before {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid var(--accent-primary);
+  border-right: 2px solid var(--accent-primary);
+  opacity: 0.55;
+}
+.hud-frame::after {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid var(--accent-secondary);
+  border-left: 2px solid var(--accent-secondary);
+  opacity: 0.45;
+}
+.hud-frame:focus-visible {
+  outline-offset: 4px;
+}
+
+.hud-frame-interactive:hover,
+.hud-frame-interactive:focus-visible {
+  transform: translateY(-2px);
+  filter: var(--hover-drop);
+}
+.hud-frame-interactive:hover::before,
+.hud-frame-interactive:focus-visible::before {
+  opacity: 1;
+}
+.hud-frame-interactive:hover .hud-panel-inner,
+.hud-frame-interactive:focus-visible .hud-panel-inner {
+  border-color: var(--accent-primary);
+}
+
+.hud-panel-inner {
+  position: relative;
+  height: 100%;
+  background: var(--bg-panel-grad);
+  border: 1px solid var(--circuit-line);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: border-color 0.22s ease, background 0.25s ease;
+}
+/* Chamfer edges: draw the diagonal border segments the clip removes */
+.hud-panel-inner::before,
+.hud-panel-inner::after {
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 1px;
+  background: var(--circuit-line);
+  pointer-events: none;
+}
+.hud-panel-inner::before {
+  top: 5.5px;
+  left: -2.5px;
+  transform: rotate(-45deg);
+}
+.hud-panel-inner::after {
+  bottom: 5.5px;
+  right: -2.5px;
+  transform: rotate(-45deg);
+}
+
+/* Lower-intensity card (archive, profile) */
+.clean-card {
+  display: block;
+  background: var(--bg-panel);
+  border: 1px solid var(--circuit-line);
+  border-radius: 6px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.clean-card-interactive:hover,
+.clean-card-interactive:focus-visible {
+  border-color: var(--accent-primary);
+  box-shadow: var(--frame-glow);
+  transform: translateY(-2px);
+}
+
+.reader-panel {
+  background: var(--bg-reader);
+  border: 1px solid var(--circuit-line-soft);
+  border-radius: 8px;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+/* Engineering panel identifier, e.g. "SYS-01 // COMMAND CENTER" */
+.panel-id {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+}
+
+.kpi-tile {
+  background: var(--bg-inset);
+  border: 1px solid var(--circuit-line-soft);
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+/* Responsive layout grids (viewport media queries only) */
+.grid-hero { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.grid-kpi { display: grid; gap: 0.75rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-2 { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-split { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.grid-reader { display: grid; gap: 1.75rem; grid-template-columns: minmax(0, 1fr) 268px; align-items: start; }
+
+.page-pad { padding: 1.75rem 1.5rem; }
+
+@media (max-width: 980px) {
+  .grid-hero,
+  .grid-split,
+  .grid-reader { grid-template-columns: minmax(0, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-pad { padding: 1.25rem 1rem; }
+}
+@media (max-width: 640px) {
+  .grid-2,
+  .grid-3 { grid-template-columns: minmax(0, 1fr); }
+  .grid-kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-pad { padding: 1rem 0.85rem; }
+  .hud-panel-inner.p-pad { padding: 1.1rem; }
+}
+
+}

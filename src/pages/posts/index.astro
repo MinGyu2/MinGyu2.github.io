@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/blog/PostCard.astro';
+import {
+  buildTaxonomy,
+  excerptOf,
+  getCategoryStats,
+  getPosts,
+  logCode,
+  postCategoryKeys,
+  postTagKeys,
+  UNCATEGORIZED,
+} from '../../lib/posts';
+
+const posts = await getPosts();
+const stats = await getCategoryStats();
+const tags = buildTaxonomy(posts, 'tags');
+const chips = [
+  ...stats.modules.map((m) => ({ key: m.key, label: m.label, count: m.count, color: m.color })),
+  { key: UNCATEGORIZED.key, label: UNCATEGORIZED.label, count: stats.uncategorized.length, color: 'var(--cat-none)' },
+];
+const haystack = (p: (typeof posts)[number]) =>
+  [p.data.title, excerptOf(p, 400), ...p.data.tags, ...p.data.categories, logCode(p, posts)].join(' ').toLowerCase();
+---
+<BaseLayout title="Dev Logs · 기술 게시글" nav="logs" view="logs" description={`기술 게시글 전체 ${posts.length}개 — 카테고리, 태그, 키워드로 찾아보기`}>
+  <div class="space-y-6 reveal">
+    <section class="clean-card p-5 sm:p-6" aria-labelledby="logs-title">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="panel-id">ARCHIVE // DEVELOPMENT LOGS</span>
+          <h1 id="logs-title" class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">기술 게시글</h1>
+          <p class="text-[13px] sm:text-sm t-muted mt-1">카테고리, 태그, 키워드를 조합해 원하는 기술 문서를 찾을 수 있습니다.</p>
+        </div>
+        <div class="w-full sm:w-80 js-only">
+          <label for="log-filter-q" class="sr-only">게시글 필터 검색 (제목, 요약, 태그)</label>
+          <input id="log-filter-q" type="search" autocomplete="off" placeholder="제목, 요약, 태그 검색..." class="field px-3.5 py-2.5 text-sm" />
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center gap-2 js-only" role="group" aria-label="카테고리 필터">
+        <button type="button" class="filter-chip" data-filter-category="" aria-pressed="true">전체 ({posts.length})</button>
+        {
+          chips.map((c) => (
+            <button type="button" class="filter-chip" data-filter-category={c.key} aria-pressed="false">
+              <span class="w-2 h-2 rounded-full" style={`background:${c.color}`} aria-hidden="true" />
+              {c.label} ({c.count})
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="mt-3 flex flex-wrap items-center gap-2 js-only">
+        <label for="log-filter-tag" class="font-mono-code text-[11px] t-muted">TAG</label>
+        <select id="log-filter-tag" class="field w-auto max-w-full px-2.5 py-1.5 text-sm">
+          <option value="">전체 태그</option>
+          {tags.map((t) => <option value={t.key}>{`#${t.label} (${t.count})`}</option>)}
+        </select>
+        <button type="button" class="btn-outline px-3 py-1.5 text-xs rounded" data-filter-reset>필터 초기화</button>
+        <p class="font-mono-code text-[11px] t-muted ml-auto" id="log-filter-count" role="status" aria-live="polite">
+          {posts.length} / {posts.length} LOGS
+        </p>
+      </div>
+    </section>
+
+    <ul class="grid-2" id="log-list">
+      {
+        posts.map((p) => (
+          <li data-log-item data-categories={postCategoryKeys(p).join(' ') || UNCATEGORIZED.key} data-tags={postTagKeys(p).join(' ')} data-search={haystack(p)}>
+            <PostCard post={p} variant="clean" headingLevel={2} />
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex justify-center js-only">
+      <button type="button" class="btn-outline px-5 py-2 text-sm rounded" id="log-more" hidden>더 보기</button>
+    </div>
+
+    <div class="clean-card p-10 text-center" id="log-empty" hidden>
+      <p class="font-mono-code text-sm t-amber">조건에 맞는 게시글이 없습니다</p>
+      <p class="text-sm t-muted mt-2">필터를 초기화하거나, 게시글 본문까지 전체 검색해 보세요.</p>
+      <div class="mt-4 flex flex-wrap justify-center gap-2">
+        <button type="button" class="btn-outline px-4 py-2 text-sm rounded" data-filter-reset>필터 초기화</button>
+        <button type="button" class="btn-primary px-4 py-2 text-sm rounded" id="log-fulltext">본문 전체 검색</button>
+      </div>
+    </div>
+
+    <nav class="clean-card p-4 text-sm t-muted" aria-label="페이지별 목록">
+      <span class="font-mono-code text-[11px] mr-2">LEGACY PAGES</span>
+      이전 블로그의 페이지 주소도 그대로 열립니다:
+      <a class="link-cyan" href="/page2/">/page2/</a> … <a class="link-cyan" href={`/page${Math.ceil(posts.length / 5)}/`}>{`/page${Math.ceil(posts.length / 5)}/`}</a>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 36px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--control-border);
+    background: var(--bg-inset);
+    color: var(--text-muted);
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  }
+  .filter-chip:hover {
+    color: var(--text-heading);
+    border-color: var(--accent-primary);
+  }
+  .filter-chip[aria-pressed='true'] {
+    background: var(--accent-primary-soft);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  [data-log-item][hidden] {
+    display: none;
+  }
+</style>
+
+<script>
+  import { initArchive } from '../../scripts/archive';
+  initArchive();
+</script>

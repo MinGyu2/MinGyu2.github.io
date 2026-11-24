@@ -1,0 +1,155 @@
+---
+/**
+ * Ctrl/Cmd + K command palette. Static quick links (pages, categories, tags,
+ * projects, experiments) come from /search-index.json; article full-text
+ * results come from Pagefind. Both load only when the palette is first opened.
+ */
+---
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <div class="hud-frame w-full">
+    <div class="hud-panel-inner search-panel">
+      <div class="flex items-center justify-between px-4 py-2.5 border-b b-circuit bg-inset">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full" style="background: var(--accent-primary)" aria-hidden="true"></span>
+          <h2 id="search-dialog-title" class="font-mono-code text-[11px] t-cyan tracking-wider uppercase">SYS.CMD // GLOBAL SEARCH</h2>
+        </div>
+        <button type="button" class="btn-outline font-mono-code text-[11px] px-2.5 rounded min-h-9" data-search-close aria-label="검색창 닫기">ESC</button>
+      </div>
+      <div class="p-4 border-b b-circuit-soft bg-panel">
+        <div class="flex items-center gap-3">
+          <span class="font-mono-code t-cyan text-sm font-semibold" aria-hidden="true">&gt;_</span>
+          <input
+            id="search-input"
+            type="search"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            enterkeyhint="go"
+            role="combobox"
+            aria-expanded="true"
+            aria-controls="search-results"
+            aria-autocomplete="list"
+            aria-label="블로그 전체 검색"
+            placeholder="제목, 본문, 카테고리, 태그 또는 프로젝트 검색..."
+            class="search-input w-full bg-transparent text-[15px] t-heading"
+          />
+        </div>
+      </div>
+      <div class="search-results-wrap">
+        <ul id="search-results" role="listbox" aria-label="검색 결과"></ul>
+        <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="px-4 py-2 bg-inset border-t b-circuit-soft flex items-center justify-between gap-3 text-[11px] font-mono-code t-muted">
+        <span class="search-hints">↑↓ 이동 · Enter 열기 · ESC 닫기</span>
+        <span id="search-count">0 RESULTS</span>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  .search-dialog {
+    width: min(42rem, calc(100vw - 2rem));
+    max-width: none;
+    max-height: none;
+    margin: clamp(1rem, 10vh, 6rem) auto auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    overflow: visible;
+  }
+  .search-dialog::backdrop {
+    background: var(--backdrop-modal);
+    backdrop-filter: blur(4px);
+  }
+  .search-panel {
+    display: flex;
+    flex-direction: column;
+    max-height: min(36rem, calc(100dvh - 2rem - clamp(1rem, 10vh, 6rem)));
+    border-color: var(--accent-primary);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  }
+  .search-input {
+    border: 0;
+    outline: none;
+    min-height: 2rem;
+  }
+  .search-input::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+  }
+  .search-input::-webkit-search-cancel-button {
+    filter: grayscale(1);
+  }
+  .search-results-wrap {
+    flex: 1 1 auto;
+    min-height: 4rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--bg-canvas);
+  }
+  .search-status:empty {
+    display: none;
+  }
+  .search-status {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--accent-amber);
+  }
+  :global(.search-group) {
+    padding: 0.55rem 1rem 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    border-top: 1px solid var(--circuit-line-soft);
+  }
+  :global(.search-option) {
+    border-left: 3px solid transparent;
+    border-top: 1px solid var(--circuit-line-soft);
+  }
+  :global(.search-option > a) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    color: inherit;
+  }
+  :global(.search-option[aria-selected='true']) {
+    background: var(--bg-inset-hover);
+    border-left-color: var(--accent-primary);
+  }
+  :global(.search-option:hover) {
+    background: var(--bg-inset-hover);
+  }
+  :global(.search-option mark) {
+    background: var(--accent-amber-soft);
+    color: var(--text-heading);
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+  @media (max-width: 640px) {
+    .search-dialog {
+      margin-top: 0.75rem;
+    }
+    .search-hints {
+      display: none;
+    }
+  }
+  @media (max-height: 520px) {
+    .search-dialog {
+      margin-top: 0.5rem;
+    }
+    .search-panel {
+      max-height: calc(100dvh - 1rem);
+    }
+  }
+</style>
+
+<script>
+  import { initSearchPalette } from '../../scripts/search';
+  initSearchPalette();
+</script>

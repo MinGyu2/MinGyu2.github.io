@@ -1,0 +1,107 @@
+---
+import HudPanel from '../hud/HudPanel.astro';
+const MAX = 16384;
+const outputs = [
+  { id: 'b64', label: 'BASE64 (UTF-8)', tone: 't-body' },
+  { id: 'url', label: 'URL ENCODED (encodeURIComponent)', tone: 't-body' },
+  { id: 'hex', label: 'HEXADECIMAL BYTES', tone: 't-amber' },
+];
+---
+<section id="payload-inspector" class="grid-split" aria-labelledby="pi-title" data-payload-inspector data-max={MAX}>
+  <h2 id="pi-title" class="sr-only">Payload Inspector</h2>
+  <HudPanel innerClass="p-5 p-pad space-y-4">
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <label for="pi-input" class="panel-id">INPUT STREAM</label>
+      <div class="flex flex-wrap gap-1.5 js-only" role="group" aria-label="입력 예시">
+        <button type="button" data-pi-preset="sqli" class="btn-outline px-2.5 text-xs font-mono-code rounded min-h-9">SQLi</button>
+        <button type="button" data-pi-preset="jwt" class="btn-outline px-2.5 text-xs font-mono-code rounded min-h-9">JWT</button>
+        <button type="button" data-pi-preset="utf8" class="btn-outline px-2.5 text-xs font-mono-code rounded min-h-9">한글/UTF-8</button>
+        <button type="button" data-pi-preset="combining" class="btn-outline px-2.5 text-xs font-mono-code rounded min-h-9">결합 문자</button>
+        <button type="button" data-pi-clear class="btn-outline px-2.5 text-xs font-mono-code rounded min-h-9 t-amber">초기화</button>
+      </div>
+    </div>
+    <textarea
+      id="pi-input"
+      rows="6"
+      maxlength={MAX}
+      spellcheck="false"
+      autocomplete="off"
+      aria-describedby="pi-limit pi-warning"
+      placeholder="변환할 문자열이나 페이로드를 입력하세요..."
+      class="field p-3.5 font-mono-code text-[13px] leading-relaxed resize-y"
+    >' OR '1'='1' -- </textarea>
+    <div class="flex items-center justify-between gap-2 font-mono-code text-[11px] t-muted">
+      <span id="pi-limit">0 / {MAX} UTF-16 units</span>
+      <span id="pi-warning" class="t-amber" role="status" aria-live="polite"></span>
+    </div>
+    <dl class="grid grid-cols-3 gap-2 font-mono-code text-xs">
+      <div class="kpi-tile">
+        <dt class="text-[10px] t-muted" title="UTF-8로 인코딩했을 때의 바이트 수">UTF-8 BYTES</dt>
+        <dd id="pi-bytes" class="text-lg t-cyan font-semibold mt-0.5">0</dd>
+      </div>
+      <div class="kpi-tile">
+        <dt class="text-[10px] t-muted" title="유니코드 코드 포인트 수 (예: 👩‍💻 = 3)">CODE POINTS</dt>
+        <dd id="pi-codepoints" class="text-lg t-amber font-semibold mt-0.5">0</dd>
+      </div>
+      <div class="kpi-tile">
+        <dt class="text-[10px] t-muted" title="사용자가 한 글자로 인식하는 grapheme cluster 수 (Intl.Segmenter)">GRAPHEMES</dt>
+        <dd id="pi-graphemes" class="text-lg t-mint font-semibold mt-0.5">0</dd>
+      </div>
+    </dl>
+    <p class="text-[11px] t-muted leading-relaxed">
+      CODE POINTS는 유니코드 코드 포인트 개수, GRAPHEMES는 사람이 한 글자로 보는 단위(grapheme cluster)입니다. 예: 「👩‍💻」은 코드 포인트 3개 · grapheme 1개,
+      조합형 「한」(ᄒ+ᅡ+ᆫ)은 코드 포인트 3개 · grapheme 1개입니다.
+    </p>
+    <noscript><p class="text-sm t-amber">이 도구는 JavaScript가 필요합니다.</p></noscript>
+  </HudPanel>
+
+  <HudPanel innerClass="p-5 p-pad space-y-4">
+    <div class="panel-id">DIAGNOSTIC OUTPUTS</div>
+    {
+      outputs.map((o) => (
+        <div class="p-3.5 bg-inset border b-circuit rounded">
+          <div class="flex items-center justify-between mb-1.5 gap-2">
+            <span class="font-mono-code text-[11px] t-muted" id={`pi-${o.id}-label`}>
+              {o.label}
+            </span>
+            <button type="button" class="pi-copy font-mono-code text-xs px-2.5 rounded min-h-9" data-pi-copy={o.id} aria-describedby={`pi-${o.id}-label`} disabled>
+              복사
+            </button>
+          </div>
+          <output id={`pi-${o.id}`} class={`pi-out font-mono-code text-[13px] ${o.tone}`} aria-labelledby={`pi-${o.id}-label`} data-empty="true" />
+        </div>
+      ))
+    }
+  </HudPanel>
+</section>
+
+<style>
+  .pi-out {
+    display: block;
+    min-height: 1.5rem;
+    max-height: 8rem;
+    overflow-y: auto;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+  .pi-out[data-empty='true']::before {
+    content: '(입력 대기 중)';
+    color: var(--text-muted);
+  }
+  .pi-copy {
+    color: var(--accent-primary);
+    border: 1px solid transparent;
+  }
+  .pi-copy:hover:not(:disabled) {
+    border-color: var(--accent-primary);
+  }
+  .pi-copy:disabled {
+    color: var(--text-muted);
+    cursor: not-allowed;
+  }
+</style>
+
+<script>
+  import { initPayloadInspector } from '../../scripts/payload-inspector';
+  initPayloadInspector();
+</script>

@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HudPanel from '../../components/hud/HudPanel.astro';
+import PayloadInspector from '../../components/lab/PayloadInspector.astro';
+import { EXPERIMENTS } from '../../data/experiments';
+
+const available = EXPERIMENTS.filter((e) => e.status === 'available');
+const planned = EXPERIMENTS.filter((e) => e.status === 'planned');
+---
+<BaseLayout title="Experiment Lab · 실험실" nav="lab" view="lab" description="Payload Inspector 등 브라우저에서 바로 실행하는 실험 도구">
+  <div class="space-y-6 reveal" data-pagefind-body>
+    <span hidden data-pagefind-meta="type">LAB</span>
+    <span hidden data-pagefind-meta="sub">LAB-01 · Payload Inspector · Base64 / URL / Hex</span>
+    <HudPanel innerClass="p-6 p-pad flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <span class="panel-id">LAB-01 // DIAGNOSTIC SANDBOX</span>
+        <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">Experiment Lab — Payload Inspector</h1>
+        <p class="text-sm t-muted mt-1">웹 보안 실습과 디버깅 중 문자열의 Base64 · URL · Hex 변환과 바이트 · 문자 수를 실시간으로 확인합니다.</p>
+      </div>
+      <span class="font-mono-code text-xs px-2.5 py-1 badge-cyan rounded-sm">MODULE: ENCODER v1</span>
+    </HudPanel>
+
+    <PayloadInspector />
+
+    <section class="clean-card p-5" aria-labelledby="catalog-title" data-pagefind-ignore>
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <h2 id="catalog-title" class="panel-id">LAB CATALOG // 실험 목록</h2>
+        <span class="font-mono-code text-[11px] t-muted">{available.length} AVAILABLE · {planned.length} PLANNED</span>
+      </div>
+      <ul class="grid-3">
+        {
+          available.map((e) => (
+            <li>
+              <a href={e.href} class="clean-card clean-card-interactive p-4 block h-full">
+                <div class="flex items-center justify-between font-mono-code text-[11px] mb-1.5">
+                  <span class="t-cyan">{e.code}</span>
+                  <span class="t-mint">AVAILABLE</span>
+                </div>
+                <h3 class="font-hud text-lg font-bold t-heading">{e.title}</h3>
+                <p class="text-[13px] t-muted mt-1 leading-relaxed">{e.summary}</p>
+                <p class="mt-2 font-mono-code text-[11px] t-muted">{e.tech.join(' · ')}</p>
+              </a>
+            </li>
+          ))
+        }
+        {
+          planned.map((e) => (
+            <li class="planned-card p-4 h-full rounded" aria-label={`${e.title} (계획 중, 아직 실행할 수 없음)`}>
+              <div class="flex items-center justify-between font-mono-code text-[11px] mb-1.5">
+                <span class="t-muted">{e.code}</span>
+                <span class="t-amber">PLANNED · 미구현</span>
+              </div>
+              <h3 class="font-hud text-lg font-bold t-muted">{e.title}</h3>
+              <p class="text-[13px] t-muted mt-1 leading-relaxed">{e.summary}</p>
+              <p class="mt-2 font-mono-code text-[11px] t-muted">{e.tech.join(' · ')}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-4 text-[12px] t-muted leading-relaxed">
+        독립 실행형 실험(HTML · Canvas · WebGL · WebAssembly)은 <code class="font-mono-code t-cyan">public/experiments/&lt;id&gt;/index.html</code> 에 두고 이 목록에
+        등록합니다. 무거운 런타임은 해당 실험 페이지에서만 불러오며, 블로그 글 페이지에는 포함되지 않습니다.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .planned-card {
+    border: 1px dashed var(--circuit-line);
+    background: transparent;
+  }
+</style>

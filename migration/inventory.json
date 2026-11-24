@@ -1,0 +1,1858 @@
+{
+  "generatedBy": "scripts/migrate-jekyll.mjs",
+  "sourceRef": "legacy-jekyll",
+  "sourceCommit": "f83aa109fa1d3c4d1fb82a2c1d105c7bb9019cfb",
+  "permalinkRule": "/:categories/:title/ (Jekyll 3.10, categories downcased)",
+  "postCount": 70,
+  "transformedPosts": [
+    "_posts/2023-03-30-안녕하세요.md",
+    "_posts/2023-04-08-로그인인증방식.md",
+    "_posts/2023-04-19-SQLInjection.md",
+    "_posts/2023-04-27-ErrorBasedSQLi.md",
+    "_posts/2023-05-26-CSRF와SSRF.md",
+    "_posts/2023-05-27-SSRF실습문제BasicSSRF.md",
+    "_posts/2023-05-29-XSS7번문제.md",
+    "_posts/2023-06-06-FileUpload실습(2).md",
+    "_posts/Linux/LXD/2024-11-08-LXD_설치및사용.md",
+    "_posts/웹_서버_개발/2023-04-02-웹서버개발1.md",
+    "_posts/웹_서버_개발/2023-04-09-웹서버개발5.md",
+    "_posts/웹_서버_개발/2023-04-14-웹서버개발7.md",
+    "_posts/웹_서버_개발/2023-04-20-웹서버개발8.md",
+    "_posts/웹_서버_개발/2023-04-26-웹서버개발9주소검색.md",
+    "_posts/웹_서버_개발/2023-05-04-웹서버개발10메뉴버튼및게시판.md",
+    "_posts/웹_서버_개발/2023-05-16-웹서버개발12페이징.md",
+    "_posts/웹_서버_개발/2023-05-25-웹서버개발13.md"
+  ],
+  "posts": [
+    {
+      "legacySource": "_posts/2023-03-30-안녕하세요.md",
+      "target": "src/content/posts/2023-03-30-안녕하세요.md",
+      "legacyPath": "/안녕하세요/",
+      "title": "github.io 블로그 시작하기",
+      "date": "2023-03-30",
+      "lastModifiedAt": "2023-03-30T08:06:00-05:00",
+      "categories": [],
+      "tags": [],
+      "excerpt": "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.",
+      "sourceSha256": "70db629cb43e2dac547f9b9b75e769db3a10ebe7d5703a2b142c53f8612851d3",
+      "sourceBodySha256": "b7f1d3600685d74d39f734abe04be0e34d0ac59e996d4bcae5fb26530832eef2",
+      "migratedBodySha256": "89a455fb8fb932b00696837dbd2eda6236895194a8776ff75ff176e15a8aaf3d",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "liquid-variable",
+          "from": "{{ page.title }}",
+          "to": "github.io 블로그 시작하기"
+        },
+        {
+          "kind": "liquid-variable",
+          "from": "{{ page.last_modified_at }}",
+          "to": "2023-03-30 08:06:00 -0500"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-03-31-1주차수업.md",
+      "target": "src/content/posts/2023-03-31-1주차수업.md",
+      "legacyPath": "/모의해킹수업/1주차수업/",
+      "title": "1주차",
+      "date": "2023-03-31",
+      "lastModifiedAt": "2023-03-31T09:13:00-05:00",
+      "categories": [
+        "모의해킹수업"
+      ],
+      "tags": [
+        "웹 구조"
+      ],
+      "excerpt": "웹 서비스 란 무엇인가?",
+      "sourceSha256": "20ac4a4f6a06a84a9d7999217a475eade8f45dd0231515118f15a273873aea1e",
+      "sourceBodySha256": "3260ce50e27d6be20dcd468ee456eb9cb43738c0cdf15a2cc2ef5a9ec5a55f8f",
+      "migratedBodySha256": "3260ce50e27d6be20dcd468ee456eb9cb43738c0cdf15a2cc2ef5a9ec5a55f8f",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-04-01-웹개념.md",
+      "target": "src/content/posts/2023-04-01-웹개념.md",
+      "legacyPath": "/웹개념/",
+      "title": "JSP, Servlet, Spring 개념",
+      "date": "2023-04-01",
+      "lastModifiedAt": "2023-04-01T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "JSP",
+        "Servlet",
+        "Spring"
+      ],
+      "excerpt": null,
+      "sourceSha256": "6d8e56a50b32ab44308eef30b40a81ce36b31c8de71997797cb1aa3b593570c5",
+      "sourceBodySha256": "73270b7f7878f2545289997de6582f5f4dcd656f6791e7e3c5992c19dc4bf203",
+      "migratedBodySha256": "73270b7f7878f2545289997de6582f5f4dcd656f6791e7e3c5992c19dc4bf203",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-04-08-로그인인증방식.md",
+      "target": "src/content/posts/2023-04-08-로그인인증방식.md",
+      "legacyPath": "/로그인인증방식/",
+      "title": "로그인 인증 방식",
+      "date": "2023-04-08",
+      "lastModifiedAt": "2023-04-08T08:06:00-05:00",
+      "categories": [],
+      "tags": [
+        "cookie",
+        "session",
+        "token"
+      ],
+      "excerpt": "로그인 인증 방식은 여러가지가 있다.",
+      "sourceSha256": "c911bdaf11e829c6be69cf94420763eae0ef5d1bbd47f34a247e16a4bbd7ecb8",
+      "sourceBodySha256": "2bd63bb3816e7d0cd3cb152da8b202e6de96a913cc285f89d4e2dea4023fba4e",
+      "migratedBodySha256": "445754bdece868a340c73de48262c3ddaf6f1d3b9b49c010baca4dd807b5a7de",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 111,
+          "detail": "blank line inserted after <img>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 131,
+          "detail": "blank line inserted after <img>"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-04-10-오라클DB.md",
+      "target": "src/content/posts/2023-04-10-오라클DB.md",
+      "legacyPath": "/오라클DB/",
+      "title": "오라클DB",
+      "date": "2023-04-10",
+      "lastModifiedAt": "2023-04-10T08:06:00-05:00",
+      "categories": [],
+      "tags": [
+        "Oracle DB",
+        "Database"
+      ],
+      "excerpt": "오라클 db로 계정 생성, 테이블 생성, 데이터 삽입을 해보자.",
+      "sourceSha256": "572ed44d498f65bc255bfe6ebbcdd0953bf050637e393657151f70ecdf090c85",
+      "sourceBodySha256": "27371c8bf3eefa96fc3ef51a515e35f713725aa3c1d8e0454f9b3cd9cb675eb4",
+      "migratedBodySha256": "27371c8bf3eefa96fc3ef51a515e35f713725aa3c1d8e0454f9b3cd9cb675eb4",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-04-19-SQLInjection.md",
+      "target": "src/content/posts/2023-04-19-SQLInjection.md",
+      "legacyPath": "/SQLInjection/",
+      "title": "SQL Injection 로그인 우회",
+      "date": "2023-04-19",
+      "lastModifiedAt": "2023-04-19T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "SQL",
+        "Oracle DB",
+        "SQL Injection",
+        "Java"
+      ],
+      "excerpt": "SQL Injection",
+      "sourceSha256": "98de2a94d0641d13980a7808ee4cdff6571f7b97c0a7f6b58e5ee4c9667e43d1",
+      "sourceBodySha256": "3c09a229970c9eff2e5b040d67fd0ec51981305a1b1eee20540a61d1afe153fd",
+      "migratedBodySha256": "40fb28d5f030ca9122eb1d94c6718d4b4e53d7ea0cebf914981bb2b4f200b146",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "blockquote-lazy",
+          "line": 6,
+          "detail": "3 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 11,
+          "detail": "2 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 37,
+          "detail": "5 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 44,
+          "detail": "5 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 54,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 68,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 81,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 98,
+          "detail": "3 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 112,
+          "detail": "4 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 117,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 132,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 154,
+          "detail": "7 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 163,
+          "detail": "1 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 171,
+          "detail": "3 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 175,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 233,
+          "detail": "4 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 245,
+          "detail": "3 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 249,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 265,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 303,
+          "detail": "4 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 309,
+          "detail": "1 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 316,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 319,
+          "detail": "4 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 343,
+          "detail": "2 line(s) prefixed with \"> \""
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-04-24-SQLi방법.md",
+      "target": "src/content/posts/2023-04-24-SQLi방법.md",
+      "legacyPath": "/SQLi방법/",
+      "title": "Union SQLi & Error Based SQLi 과정 정리",
+      "date": "2023-04-24",
+      "lastModifiedAt": "2023-04-30T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "Mysql",
+        "DB",
+        "sql injection"
+      ],
+      "excerpt": "sql injection 보다 쉽게 할 수 있는 과정을 정리하였다.",
+      "sourceSha256": "95a4c92c3191918e526632dd8f094563f542c600d6f5304cb231d79376f5bd68",
+      "sourceBodySha256": "d742578aea0ccb11ad5ade30df6606f4489d965c5a9005fbd13ec6f87a295f13",
+      "migratedBodySha256": "d742578aea0ccb11ad5ade30df6606f4489d965c5a9005fbd13ec6f87a295f13",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-04-27-ErrorBasedSQLi.md",
+      "target": "src/content/posts/2023-04-27-ErrorBasedSQLi.md",
+      "legacyPath": "/ErrorBasedSQLi/",
+      "title": "Error Based SQL Injection 연습",
+      "date": "2023-04-27",
+      "lastModifiedAt": "2023-04-27T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "Oracle DB",
+        "DB",
+        "sql injection"
+      ],
+      "excerpt": "error based sql injection 을 연습하기 위하여 직접 db 에러를 보여주는 로그인 페이지를 만들었다.",
+      "sourceSha256": "0ba428153bf096d8014b89efbb171fe2d17404dc5482319f1e3da42cac27b451",
+      "sourceBodySha256": "da6875b876898faf69783c7772611a3e803cb438e37aed1b9ff8434ca3530666",
+      "migratedBodySha256": "e9bd3f909ae73b0f93133153c73404df6f70f05c844fc9b8326d991ec2392dc8",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "ordered-list-break",
+          "line": 24,
+          "detail": "2. 의도적으로 오류 발생 시킨다음 오류 내용 확인 한다. SQL 오류가"
+        },
+        {
+          "kind": "ordered-list-break",
+          "line": 30,
+          "detail": "3. Error Based SQL Injection Function 동작"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-04-30-BlindSQLi.md",
+      "target": "src/content/posts/2023-04-30-BlindSQLi.md",
+      "legacyPath": "/모의해킹수업/BlindSQLi/",
+      "title": "Blind SQL Injection 과정",
+      "date": "2023-04-30",
+      "lastModifiedAt": "2023-04-30T09:13:00-05:00",
+      "categories": [
+        "모의해킹수업"
+      ],
+      "tags": [
+        "sql injection",
+        "Mysql",
+        "DB"
+      ],
+      "excerpt": "Blind SQL Injection 과정 정리.",
+      "sourceSha256": "112db613f2464d8fafab9134ee8626e622fbf5158c1cb99e88d20908c52cd6b6",
+      "sourceBodySha256": "188b67802e10ee8d896762b9486c097372bc9766c608a667828148e3d01ed7dc",
+      "migratedBodySha256": "188b67802e10ee8d896762b9486c097372bc9766c608a667828148e3d01ed7dc",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-07-XSS이론.md",
+      "target": "src/content/posts/2023-05-07-XSS이론.md",
+      "legacyPath": "/XSS이론/",
+      "title": "XSS 이론",
+      "date": "2023-05-07",
+      "lastModifiedAt": "2023-05-12T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "웹 해킹"
+      ],
+      "excerpt": "XSS에 대하여 알아보자.",
+      "sourceSha256": "7c16226d5b742dfdfc1eacbc10178cec6310dde95c97fb18265e5db15298fded",
+      "sourceBodySha256": "1ae6eef9d4326b875a1762d8273118b873cc64689aaf4fcca2c80c10b2c9fa10",
+      "migratedBodySha256": "1ae6eef9d4326b875a1762d8273118b873cc64689aaf4fcca2c80c10b2c9fa10",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-08-SQLi정리.md",
+      "target": "src/content/posts/2023-05-08-SQLi정리.md",
+      "legacyPath": "/SQLi정리/",
+      "title": "SQL Injection 정리",
+      "date": "2023-05-08",
+      "lastModifiedAt": "2023-05-08T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "SQL Injection"
+      ],
+      "excerpt": "SQL Injection 간단하게 정리해보자.",
+      "sourceSha256": "f4b62d011c40b9f691fe45e283158a5f1a773d493b6e5b2466f0d5ff014029c6",
+      "sourceBodySha256": "6153eff98ac1ef22f139d6c7e7a61cdc9762204ecec2cc14c41b220550df8c71",
+      "migratedBodySha256": "6153eff98ac1ef22f139d6c7e7a61cdc9762204ecec2cc14c41b220550df8c71",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-12-BlindSQLi실습.md",
+      "target": "src/content/posts/2023-05-12-BlindSQLi실습.md",
+      "legacyPath": "/BlindSQLi실습/",
+      "title": "Blind SQL Injection 실습",
+      "date": "2023-05-12",
+      "lastModifiedAt": "2023-05-12T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "Oracle DB",
+        "Blind SQLi",
+        "SQLi",
+        "웹 해킹"
+      ],
+      "excerpt": "직접 Blind SQL Injection 을 시도해보자.",
+      "sourceSha256": "d2ae826e71aab675555835cbd55266e977d45eace8ea985fb84623e1d1b9c614",
+      "sourceBodySha256": "922b560905cec7c2621b474a5856315f3e7e9a63f269d2dccdab4c0c22191161",
+      "migratedBodySha256": "922b560905cec7c2621b474a5856315f3e7e9a63f269d2dccdab4c0c22191161",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-20-XSS정리.md",
+      "target": "src/content/posts/2023-05-20-XSS정리.md",
+      "legacyPath": "/XSS정리/",
+      "title": "XSS 총 정리",
+      "date": "2023-05-20",
+      "lastModifiedAt": "2023-05-20T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "웹 해킹",
+        "javascript",
+        "html"
+      ],
+      "excerpt": "XSS에 대하여 정리해보자.",
+      "sourceSha256": "3410a06273b87501bd41ef75320f107c9865781a59eb27fbb64cb60647c59b4f",
+      "sourceBodySha256": "63ab362b1467881990ff55137ffee8b9369970d0b664b83d34e652852f63283e",
+      "migratedBodySha256": "63ab362b1467881990ff55137ffee8b9369970d0b664b83d34e652852f63283e",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-21-CSRF간단한정리.md",
+      "target": "src/content/posts/2023-05-21-CSRF간단한정리.md",
+      "legacyPath": "/CSRF간단한정리/",
+      "title": "CSRF 간단한 정리",
+      "date": "2023-05-21",
+      "lastModifiedAt": "2021-05-20T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "CSRF",
+        "웹 해킹"
+      ],
+      "excerpt": "CSRF 란 무엇일까.",
+      "sourceSha256": "f41335b0df067dd537b67c6ff71cd0a3416e8173a2f4f3f92f4092a96e3bdc25",
+      "sourceBodySha256": "573d76abcc83fec37f2dcff168fd30ab2dba97be96347f420420425309b6787b",
+      "migratedBodySha256": "573d76abcc83fec37f2dcff168fd30ab2dba97be96347f420420425309b6787b",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-23-CSRF실습1.md",
+      "target": "src/content/posts/2023-05-23-CSRF실습1.md",
+      "legacyPath": "/CSRF실습1/",
+      "title": "CSRF 실습 1",
+      "date": "2023-05-23",
+      "lastModifiedAt": "2021-05-23T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "CSRF",
+        "웹 해킹"
+      ],
+      "excerpt": "CSRF 실습 1번 문제를 풀어보자.",
+      "sourceSha256": "0d7b196a6ae75587da7ff1a4ef8f6fe23bbfb63f171f33db370587e952cea9a7",
+      "sourceBodySha256": "d08d7174f10852d17a70f1c523487e92679ee304fb848ec1bb66a50f1f5c51e4",
+      "migratedBodySha256": "d08d7174f10852d17a70f1c523487e92679ee304fb848ec1bb66a50f1f5c51e4",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-23-CSRF실습2.md",
+      "target": "src/content/posts/2023-05-23-CSRF실습2.md",
+      "legacyPath": "/CSRF실습2/",
+      "title": "CSRF 실습 2",
+      "date": "2023-05-23",
+      "lastModifiedAt": "2021-05-23T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "CSRF",
+        "웹 해킹"
+      ],
+      "excerpt": "CSRF 실습 2번 문제를 풀어보자.",
+      "sourceSha256": "2be3e93de2ef541fa32645f20c981f7b622ead281bd5457ade55671d5a6a07d3",
+      "sourceBodySha256": "0333d9eb7fb6120f558e6c1a1f1048795721e7bc5cca9a0eec60151dc2fd84da",
+      "migratedBodySha256": "0333d9eb7fb6120f558e6c1a1f1048795721e7bc5cca9a0eec60151dc2fd84da",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-25-CSRF실습3.md",
+      "target": "src/content/posts/2023-05-25-CSRF실습3.md",
+      "legacyPath": "/CSRF실습3/",
+      "title": "CSRF 실습 문제 3",
+      "date": "2023-05-25",
+      "lastModifiedAt": "2023-05-25T10:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "csrf",
+        "xss"
+      ],
+      "excerpt": "CSRF 실습 문제 풀어보기",
+      "sourceSha256": "67c054212c322cdb150bc6f1b90a1664eaaa10bd292333aeff2f860c455be8e4",
+      "sourceBodySha256": "d3eb11b315b586518b8794699f819b879e283c42d02cb77e2403d7ff81eb6ff4",
+      "migratedBodySha256": "d3eb11b315b586518b8794699f819b879e283c42d02cb77e2403d7ff81eb6ff4",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-26-CSRF와SSRF.md",
+      "target": "src/content/posts/2023-05-26-CSRF와SSRF.md",
+      "legacyPath": "/CSRF와SSRF/",
+      "title": "CSRF 와 SSRF",
+      "date": "2023-05-26",
+      "lastModifiedAt": "2021-05-26T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "CSRF",
+        "SSRF",
+        "웹 해킹"
+      ],
+      "excerpt": "CSRF 와 SSRF에 대하여 정리하기.",
+      "sourceSha256": "ec84cd8750ef9e3b34afc12926235558b83e00261ad2547742d70598da75bcc7",
+      "sourceBodySha256": "ac857449dd506788e443251aee87ad80bc876862befb22b4fb36e5d59cd9ba1b",
+      "migratedBodySha256": "6e5178256bc9400e5a21d978dff66e049cb126a7ee667b8cc218747858fd371a",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 62,
+          "detail": "blank line inserted after <img>"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-05-27-SSRF실습문제BasicSSRF.md",
+      "target": "src/content/posts/2023-05-27-SSRF실습문제BasicSSRF.md",
+      "legacyPath": "/SSRF실습문제BasicSSRF/",
+      "title": "SSRF 실습 문제 Basic SSRF",
+      "date": "2023-05-27",
+      "lastModifiedAt": "2023-05-27T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "SSRF",
+        "웹 해킹"
+      ],
+      "excerpt": "SSRF 실습 문제 Basic SSRF 문제를 풀어보자. ",
+      "sourceSha256": "66afdbc24c8c4d4eb3c38495df444d5c47394ac4e5ff4c5f959a87e7fa35e737",
+      "sourceBodySha256": "c4db8e7220aa20e9fd447059b16693f885ea38806a92cc23e0117e7ec4ea411a",
+      "migratedBodySha256": "9d05867fa915fb9436db1b4f72480f7108cd825309241913a792addaa4a57727",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 21,
+          "detail": "blank line inserted after <img>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 34,
+          "detail": "blank line inserted after <img>"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-05-29-XSS7번문제.md",
+      "target": "src/content/posts/2023-05-29-XSS7번문제.md",
+      "legacyPath": "/XSS7번문제/",
+      "title": "XSS 실습 7번",
+      "date": "2023-05-29",
+      "lastModifiedAt": "2023-05-29T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "Reflected XSS"
+      ],
+      "excerpt": "XSS 실습 7번 문제를 풀어보자.",
+      "sourceSha256": "47a467e7140c870fc2b2f8af9e273bce729196e9dbd99a10859ae2e5695dd995",
+      "sourceBodySha256": "ca0020edf5552c326162b509c5a5bd9c4f9534f35f6dece9e1113d18123733da",
+      "migratedBodySha256": "cda3c94cc167e3dc5b9908859ae14a14e8246da8a4a5eb1c7f95730caf7bfd02",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "script-trailing",
+          "line": 69,
+          "detail": "trailing content moved to next line"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-05-30-웹서버XSS취약점.md",
+      "target": "src/content/posts/2023-05-30-웹서버XSS취약점.md",
+      "legacyPath": "/웹서버XSS취약점/",
+      "title": "로그인 페이지 Reflected XSS 취약점",
+      "date": "2023-05-30",
+      "lastModifiedAt": "2023-05-30T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "XSS",
+        "Reflected XSS",
+        "java"
+      ],
+      "excerpt": "로그인 페이지 Reflected XSS 취약점 발견하였다.",
+      "sourceSha256": "92567b047bdf7c8534382b6804624e9ed7c35a934fd12957ba1940332306ac10",
+      "sourceBodySha256": "b659a07bd11b1d413c4a4528e02ec0fe24b8641d8507d12d4e97d70c778cdc79",
+      "migratedBodySha256": "b659a07bd11b1d413c4a4528e02ec0fe24b8641d8507d12d4e97d70c778cdc79",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-05-31-FileUpload실습1.md",
+      "target": "src/content/posts/2023-05-31-FileUpload실습1.md",
+      "legacyPath": "/FileUpload실습1/",
+      "title": "File Upload 취약점 실습",
+      "date": "2023-05-31",
+      "lastModifiedAt": "2023-05-31T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "File Upload",
+        "jsp",
+        "servlet"
+      ],
+      "excerpt": "File Upload 에 대하여 알아보고 직접 웹 쉘을 업로드 해보자.",
+      "sourceSha256": "eb946883ae35fd70d6d2c83e700ae46cbb34b84e271498b6c61f49be49a4d2b7",
+      "sourceBodySha256": "55cc81b7bec9f73833aea4c1a79756b8b78375305e0ca928f1140049a7afedba",
+      "migratedBodySha256": "55cc81b7bec9f73833aea4c1a79756b8b78375305e0ca928f1140049a7afedba",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-06-05-FileUpload공격세부정리.md",
+      "target": "src/content/posts/2023-06-05-FileUpload공격세부정리.md",
+      "legacyPath": "/FileUpload공격세부정리/",
+      "title": "File Upload 공격 세부 정리",
+      "date": "2023-06-05",
+      "lastModifiedAt": "2023-06-05T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "file upload",
+        "웹쉘"
+      ],
+      "excerpt": "File Upload 공격에 대하여 자세히 알아보자.",
+      "sourceSha256": "9a7e1a7503a9322058a6249e2849175fb67f2877107760b0495186ee5fdfadf9",
+      "sourceBodySha256": "ee17cc2cdd5750089677e057385b80e8706183cda20ff4ddaa324a8c5c3219f7",
+      "migratedBodySha256": "ee17cc2cdd5750089677e057385b80e8706183cda20ff4ddaa324a8c5c3219f7",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-06-06-FileUpload실습(2).md",
+      "target": "src/content/posts/2023-06-06-FileUpload실습(2).md",
+      "legacyPath": "/FileUpload실습(2)/",
+      "title": "File Upload 공격 실습 (2)",
+      "date": "2023-06-06",
+      "lastModifiedAt": "2023-06-06T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "file upload",
+        "웹쉘",
+        "리버스 쉘"
+      ],
+      "excerpt": "File Upload 취약점을 찾고 공격을 시도해보자.",
+      "sourceSha256": "49052ab45cf692a68ee9c9df91633ee94badac3d55754b78ab992d85f810e4d3",
+      "sourceBodySha256": "760368e05c66d78bdcfe90bf2ad188ac9c14a1dfcc4cbdd6b4cf26e516bdff19",
+      "migratedBodySha256": "60316b68b94e47385e3214e8727328829dc5abdba95794911fa2f118cfc7f1ae",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "script-trailing",
+          "line": 254,
+          "detail": "trailing content moved to next line"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/2023-06-09-FileUploadLFIRFIFileDownload.md",
+      "target": "src/content/posts/2023-06-09-FileUploadLFIRFIFileDownload.md",
+      "legacyPath": "/FileUploadLFIRFIFileDownload/",
+      "title": "File Upload, LFI, RFI, File Download 공격 정리",
+      "date": "2023-06-09",
+      "lastModifiedAt": "2023-06-09T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "file upload",
+        "file download",
+        "lfi",
+        "rfi"
+      ],
+      "excerpt": "File Upload, LFI, RFI, File Download 공격에 대하여 알아보자.",
+      "sourceSha256": "a42e159e338b0365cd570484ddc3d5dad25a48f08fddc99a0836a41c4f77d5b7",
+      "sourceBodySha256": "04055991cadb1b7de08fe5d7ab5832991bc9b04d2c8f3ae23994bcc61a06ce32",
+      "migratedBodySha256": "04055991cadb1b7de08fe5d7ab5832991bc9b04d2c8f3ae23994bcc61a06ce32",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-06-12-보고서작성법.md",
+      "target": "src/content/posts/2023-06-12-보고서작성법.md",
+      "legacyPath": "/보고서작성법/",
+      "title": "보고서 작성법",
+      "date": "2023-06-12",
+      "lastModifiedAt": "2023-06-12T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "보고서"
+      ],
+      "excerpt": "보고서를 어떻게 작성해야 하는지 정리해보자.",
+      "sourceSha256": "31b6f7a4307fac26770956834aa6994293cd6ca3230f3d08e2ac084bafff6803",
+      "sourceBodySha256": "bf6e8e31dcc40321154cd1bebbff9bc332609f39464d2ebd5ca11b349b1b9cb2",
+      "migratedBodySha256": "bf6e8e31dcc40321154cd1bebbff9bc332609f39464d2ebd5ca11b349b1b9cb2",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-06-16-웹서버용어간단한정리.md",
+      "target": "src/content/posts/2023-06-16-웹서버용어간단한정리.md",
+      "legacyPath": "/웹서버용어간단한정리/",
+      "title": "웹 서버 용어 및 취약점 간단한 정리",
+      "date": "2023-06-16",
+      "lastModifiedAt": "2023-06-16T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "인증",
+        "인가",
+        "쿠키",
+        "세션",
+        "세션ID",
+        "javascript",
+        "HSTS"
+      ],
+      "excerpt": "웹 서버 용어 및 취약점에 대하여 간단히 정리해 보자.",
+      "sourceSha256": "a3ba267fdbef9269e40c9d04382d606efb97ccf8fd459f3a7906f6457e3dfb25",
+      "sourceBodySha256": "1e0e03280e5298f07d59b955a6a6a032822d529887fad395c970d861e9a2f8ef",
+      "migratedBodySha256": "1e0e03280e5298f07d59b955a6a6a032822d529887fad395c970d861e9a2f8ef",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-06-30-BoF와FSB.md",
+      "target": "src/content/posts/2023-06-30-BoF와FSB.md",
+      "legacyPath": "/BoF와FSB/",
+      "title": "Buffer Overflow 와 Format String Bug",
+      "date": "2023-06-30",
+      "lastModifiedAt": "2023-06-30T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "BOF",
+        "FSB"
+      ],
+      "excerpt": "bof 와 fsb 에 대하여 알아보자.",
+      "sourceSha256": "5a98c52275be0960c0243b93a91b4823b2a8022577298c335a046602ac1a941f",
+      "sourceBodySha256": "7a9876e3d991ece7da635c3874db5a55ddc637d5675695a4db14b69ee9c8c29a",
+      "migratedBodySha256": "7a9876e3d991ece7da635c3874db5a55ddc637d5675695a4db14b69ee9c8c29a",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-07-02-주통기반공격시나리오정리.md",
+      "target": "src/content/posts/2023-07-02-주통기반공격시나리오정리.md",
+      "legacyPath": "/주통기반공격시나리오정리/",
+      "title": "주통기반 Web 취약점 시나리오",
+      "date": "2023-07-02",
+      "lastModifiedAt": "2023-07-21T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "주통기반"
+      ],
+      "excerpt": "주통기반 Web 취약점 시나리오를 정리해보자",
+      "sourceSha256": "3ad87f61d3cafabf466a22cd0507092c9daa02a92e65785a13f410adcac154f7",
+      "sourceBodySha256": "ea279d9785d6c74640a2b93c6b9f98dc803844d6a7eda18a1cf83e5f6ab14137",
+      "migratedBodySha256": "ea279d9785d6c74640a2b93c6b9f98dc803844d6a7eda18a1cf83e5f6ab14137",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-07-14-MITM공격.md",
+      "target": "src/content/posts/2023-07-14-MITM공격.md",
+      "legacyPath": "/MITM공격/",
+      "title": "MITM 공격이란?",
+      "date": "2023-07-14",
+      "lastModifiedAt": "2023-07-14T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "MIMA",
+        "ARP",
+        "ARP Spoofing"
+      ],
+      "excerpt": "MITM 공격에 대하여 알아보자.",
+      "sourceSha256": "ca2c7bdbab7ae123edef49a5d511f7d09d393f970aa257cd0044bc6c46bcc73f",
+      "sourceBodySha256": "edf63aaf664049c8bb45626f1217f5473376ecdf1990b50aff60c512d13e6d7a",
+      "migratedBodySha256": "edf63aaf664049c8bb45626f1217f5473376ecdf1990b50aff60c512d13e6d7a",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-07-21-JWT.md",
+      "target": "src/content/posts/2023-07-21-JWT.md",
+      "legacyPath": "/JWT/",
+      "title": "JWT 란?",
+      "date": "2023-07-21",
+      "lastModifiedAt": "2023-07-21T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "JWT",
+        "HMAC"
+      ],
+      "excerpt": "JWT에 대하여 알아보자.",
+      "sourceSha256": "8551cd6b81ca398c2ed3b00e0417e1a21b77af72da211827e1441de11c96fbc6",
+      "sourceBodySha256": "f16daccce447d75fd0eda8d122205ae242672489e5d4e613b80c1ff0f85064d5",
+      "migratedBodySha256": "f16daccce447d75fd0eda8d122205ae242672489e5d4e613b80c1ff0f85064d5",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-07-28-IPandMAC.md",
+      "target": "src/content/posts/2023-07-28-IPandMAC.md",
+      "legacyPath": "/IPandMAC/",
+      "title": "IP주소와 MAC주소 간단한 정리",
+      "date": "2023-07-28",
+      "lastModifiedAt": "2023-07-28T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "IP addr",
+        "MAC addr"
+      ],
+      "excerpt": "IP주소와 MAC주소에 대하여 정리해보자.",
+      "sourceSha256": "94af86c589eb7df12ac246af152b1bc053638f0078be138376a2c7a14c519751",
+      "sourceBodySha256": "f2fd8048d0c3dfb917b7094f4b1034f0e1e3ec706e00bff1bdbdfd70451cd113",
+      "migratedBodySha256": "f2fd8048d0c3dfb917b7094f4b1034f0e1e3ec706e00bff1bdbdfd70451cd113",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-08-09-log4j사용해보기.md",
+      "target": "src/content/posts/2023-08-09-log4j사용해보기.md",
+      "legacyPath": "/log4j사용해보기/",
+      "title": "Log4j 직접 사용해보기",
+      "date": "2023-08-09",
+      "lastModifiedAt": "2023-08-09T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "java",
+        "log4j"
+      ],
+      "excerpt": "Log4j가 무엇인지 정리하고, 직접 사용해 보았다.",
+      "sourceSha256": "c1d67e74cea3b573340b0be9ffbaf7704d8c14bae7930dc69d04848945d8dee9",
+      "sourceBodySha256": "f81e18722808e87692f33b307feb47578adbc3a1dc130ac015a0ef714bbe7437",
+      "migratedBodySha256": "f81e18722808e87692f33b307feb47578adbc3a1dc130ac015a0ef714bbe7437",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/2023-08-17-log4shell취약점이론.md",
+      "target": "src/content/posts/2023-08-17-log4shell취약점이론.md",
+      "legacyPath": "/log4shell취약점이론/",
+      "title": "CVE-2021-44228 Log4shell 취약점에 대하여 알아보자.",
+      "date": "2023-08-17",
+      "lastModifiedAt": "2023-08-17T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "java",
+        "log4j",
+        "log4shell",
+        "CVE-2021-44228",
+        "CVE"
+      ],
+      "excerpt": "Log4shell 취약점 무엇인지 정리해 보았다.",
+      "sourceSha256": "2ec3c6bc4ad7bdfeccb9271cbcdbf30b9ca3b5c9f20051559177f2e0e8f1f3e3",
+      "sourceBodySha256": "5b82da9d9f20fe1e8e52e25788657cfcec55e3890c1178d79a5bcb87263073a2",
+      "migratedBodySha256": "5b82da9d9f20fe1e8e52e25788657cfcec55e3890c1178d79a5bcb87263073a2",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/Linux/LXD/2024-11-08-LXD_설치및사용.md",
+      "target": "src/content/posts/Linux/LXD/2024-11-08-LXD_설치및사용.md",
+      "legacyPath": "/linux/ubuntu/LXD_설치및사용/",
+      "title": "LXD 설치 및 사용법",
+      "date": "2024-11-08",
+      "lastModifiedAt": "2024-11-08T09:13:00-05:00",
+      "categories": [
+        "linux",
+        "ubuntu"
+      ],
+      "tags": [
+        "container",
+        "lxd",
+        "lxc"
+      ],
+      "excerpt": "LXD 를 설치하고 사용해보기.",
+      "sourceSha256": "d7648bd7eb3103980c40a3c1602b6f0fe8e4a01e15dc3763ccf39de0a42aefda",
+      "sourceBodySha256": "27725fc75f038f4db9cac14846b3571ff430f63dbc2d6887018480770efd4fd1",
+      "migratedBodySha256": "8a8154397fa89bf844adfa470118e64fec59da5dcf7a1807a1503c3bfb2b9adf",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 172,
+          "detail": "<br> joined with following text line"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/Linux/Ubuntu/2023-10-02-docker설치.md",
+      "target": "src/content/posts/Linux/Ubuntu/2023-10-02-docker설치.md",
+      "legacyPath": "/ubuntu/docker설치/",
+      "title": "Docker 설치하기",
+      "date": "2023-10-02",
+      "lastModifiedAt": "2023-10-02T09:13:00-05:00",
+      "categories": [
+        "Ubuntu"
+      ],
+      "tags": [
+        "docker"
+      ],
+      "excerpt": "Docker 패키지를 이용하여 설치하여 보자.",
+      "sourceSha256": "2c6ed5092d10d1974b8e5493b68ba5ec1ffc1e0a6564b9aada9911200db5994a",
+      "sourceBodySha256": "803dfbdcc07a2320bc73f69ccd9034482ff96c1196663b2369c9a458c675f14d",
+      "migratedBodySha256": "803dfbdcc07a2320bc73f69ccd9034482ff96c1196663b2369c9a458c675f14d",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/Linux/Ubuntu/2023-10-06-docker명령어.md",
+      "target": "src/content/posts/Linux/Ubuntu/2023-10-06-docker명령어.md",
+      "legacyPath": "/ubuntu/docker명령어/",
+      "title": "Docker 명령어 정리",
+      "date": "2023-10-06",
+      "lastModifiedAt": "2023-10-06T09:13:00-05:00",
+      "categories": [
+        "Ubuntu"
+      ],
+      "tags": [
+        "docker"
+      ],
+      "excerpt": "Docker 명령어 정리를 해보았다.",
+      "sourceSha256": "de6e6e33bcc427a097c0dfad84277fa86b298edb5487f07c954c2f59a68a9bbb",
+      "sourceBodySha256": "e00d8db30e2f45c47c82133c97486940bd89463cb8c8505a2b258e056893c48e",
+      "migratedBodySha256": "e00d8db30e2f45c47c82133c97486940bd89463cb8c8505a2b258e056893c48e",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/Linux/Ubuntu/2023-11-02-dockerAndqemu.md",
+      "target": "src/content/posts/Linux/Ubuntu/2023-11-02-dockerAndqemu.md",
+      "legacyPath": "/ubuntu/dockerAndqemu/",
+      "title": "Docker + QEMU",
+      "date": "2023-11-02",
+      "lastModifiedAt": "2023-11-10T09:13:00-05:00",
+      "categories": [
+        "ubuntu"
+      ],
+      "tags": [
+        "docker"
+      ],
+      "excerpt": "host 아키텍처와 다른 docker 이미지를 동작시켜보자.",
+      "sourceSha256": "91d6822bc3df9a134dfd00db31283585aa01d9780a47d31879be451374270fbb",
+      "sourceBodySha256": "ef5aab1bfdf28cd329b67ec7ec625eee79487e2810792839f067d7da5428c594",
+      "migratedBodySha256": "ef5aab1bfdf28cd329b67ec7ec625eee79487e2810792839f067d7da5428c594",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/Linux/Ubuntu/2024-01-26-Debian계열한글깨짐해결법.md",
+      "target": "src/content/posts/Linux/Ubuntu/2024-01-26-Debian계열한글깨짐해결법.md",
+      "legacyPath": "/ubuntu/linux/Debian계열한글깨짐해결법/",
+      "title": "Debian 계열 Linux Chrome 한글 깨짐 해결법",
+      "date": "2024-01-26",
+      "lastModifiedAt": "2024-01-26T09:13:00-05:00",
+      "categories": [
+        "ubuntu",
+        "linux"
+      ],
+      "tags": [
+        "linux",
+        "debian"
+      ],
+      "excerpt": "Linux 한글 깨짐 해결 방법.",
+      "sourceSha256": "b2c5c83cb52f762492d1e9be6bd97c7b6eaff70b88ceac7a2221d76ecd4d8990",
+      "sourceBodySha256": "2ea59d1ce15f8d66441b49f1da1971cbaad6cbe2fad9fa3a8c4d9de217a856f2",
+      "migratedBodySha256": "2ea59d1ce15f8d66441b49f1da1971cbaad6cbe2fad9fa3a8c4d9de217a856f2",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/Windows/2023-12-06-wsl_vhdx옮기기.md",
+      "target": "src/content/posts/Windows/2023-12-06-wsl_vhdx옮기기.md",
+      "legacyPath": "/windows/wsl_vhdx옮기기/",
+      "title": "WSL 저장 공간(VHDX) 위치 옮기기",
+      "date": "2023-12-06",
+      "lastModifiedAt": "2023-12-06T09:13:00-05:00",
+      "categories": [
+        "windows"
+      ],
+      "tags": [
+        "wsl"
+      ],
+      "excerpt": "WSL 저장 공간(VHDX) 위치를 옮겨보자!",
+      "sourceSha256": "955d40e12f17edf62e0d92d11c770f320893f25084a80d47e5d39db4bfa1b856",
+      "sourceBodySha256": "ba4d1e3524dabea6fb07d7aeb4c82c6e16ea211b8777e6065ddaaca54c435e47",
+      "migratedBodySha256": "ba4d1e3524dabea6fb07d7aeb4c82c6e16ea211b8777e6065ddaaca54c435e47",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-08-27-php_5_3_strcmp.md",
+      "target": "src/content/posts/dreamhack/2023-08-27-php_5_3_strcmp.md",
+      "legacyPath": "/dreamhack/php_5_3_strcmp/",
+      "title": "[wargame.kr]php v5.3 strcmp 취약점 문제",
+      "date": "2023-08-27",
+      "lastModifiedAt": "2023-08-27T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "sqli"
+      ],
+      "excerpt": "php v5.3 strcmp 취약점에 대하여 알아보자.",
+      "sourceSha256": "6ba995ed65dfa7cc525991db4722f669d937033e69ca7ed957a2953bfe6edbb8",
+      "sourceBodySha256": "3c9d4746f2b8c666f6f248f5184cde8af7b23386f89a9152b73151cda0f3ffe8",
+      "migratedBodySha256": "3c9d4746f2b8c666f6f248f5184cde8af7b23386f89a9152b73151cda0f3ffe8",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-08-27-php_typeconfusion.md",
+      "target": "src/content/posts/dreamhack/2023-08-27-php_typeconfusion.md",
+      "legacyPath": "/dreamhack/php_typeconfusion/",
+      "title": "[wargame.kr]php type confusion 문제",
+      "date": "2023-08-27",
+      "lastModifiedAt": "2023-08-27T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "php",
+        "type confusion"
+      ],
+      "excerpt": "type confusion 을 통해 if 문 인증을 우회할 수 있다.",
+      "sourceSha256": "2087b3fd90f6af7b6e4ba354fce7ba8c1e8bc6400a6cdeb11ab8f87c3999f692",
+      "sourceBodySha256": "9a7ce96dda05a624d87e83a1f8e62de1326d2ca54f6736b809f9b4464e72a589",
+      "migratedBodySha256": "9a7ce96dda05a624d87e83a1f8e62de1326d2ca54f6736b809f9b4464e72a589",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-08-27-tmitter문제.md",
+      "target": "src/content/posts/dreamhack/2023-08-27-tmitter문제.md",
+      "legacyPath": "/dreamhack/tmitter문제/",
+      "title": "[wargame.kr]tmitter 문제",
+      "date": "2023-08-27",
+      "lastModifiedAt": "2023-08-27T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "sqli"
+      ],
+      "excerpt": "tmitter 문제 풀이.",
+      "sourceSha256": "a644f628f4d73ded3a39221a08c738ad554cffae72437b202e96deeeb4fba6ad",
+      "sourceBodySha256": "338e8c6e8094fc6a3af87bcfb15bfd2550f3a501e2b11d62461129082c4c5488",
+      "migratedBodySha256": "338e8c6e8094fc6a3af87bcfb15bfd2550f3a501e2b11d62461129082c4c5488",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-08-28-fly_me_to_the_moon.md",
+      "target": "src/content/posts/dreamhack/2023-08-28-fly_me_to_the_moon.md",
+      "legacyPath": "/dreamhack/fly_me_to_the_moon/",
+      "title": "[wargame.kr] fly me to the moon 문제",
+      "date": "2023-08-28",
+      "lastModifiedAt": "2023-08-28T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "js",
+        "request"
+      ],
+      "excerpt": "fly me to the moon 문제 풀이.",
+      "sourceSha256": "1126d218c3a5a8c9df729e3f9f83534181cf67ef880d330651d3dda06e283ba8",
+      "sourceBodySha256": "1e905a77b7b25ac4eea3d5b7f30c9b3bc1125adc6d809cf35497f85a595239e6",
+      "migratedBodySha256": "1e905a77b7b25ac4eea3d5b7f30c9b3bc1125adc6d809cf35497f85a595239e6",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-08-28-session_위조.md",
+      "target": "src/content/posts/dreamhack/2023-08-28-session_위조.md",
+      "legacyPath": "/dreamhack/session_위조/",
+      "title": "[wargame.kr] session id 쿠키 값 위조 문제",
+      "date": "2023-08-28",
+      "lastModifiedAt": "2023-08-28T10:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "session"
+      ],
+      "excerpt": "session 위조 문제 풀이.",
+      "sourceSha256": "e3d24bbded170dd1d649fa466a6af01727be7a5a6987d807faea13e9a22324bb",
+      "sourceBodySha256": "683ba138c18e9e9d30d8b8eeadda53627dab011ff322183c3e6e466c74669392",
+      "migratedBodySha256": "683ba138c18e9e9d30d8b8eeadda53627dab011ff322183c3e6e466c74669392",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-08-29-php_LFI_vuln.md",
+      "target": "src/content/posts/dreamhack/2023-08-29-php_LFI_vuln.md",
+      "legacyPath": "/dreamhack/php_LFI_vuln/",
+      "title": "[wargame.kr] PHP LFI 문제",
+      "date": "2023-08-29",
+      "lastModifiedAt": "2023-08-29T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "php",
+        "include",
+        "wrapper"
+      ],
+      "excerpt": "PHP LFI 문제 풀이",
+      "sourceSha256": "044d6dea393f803828208f6bd412a8c3bc95628ea0f199855dc1e231d418969b",
+      "sourceBodySha256": "2a2a59eaa1bbec70eac9c7fb5375c7fe0bfd040fd0b11488b13f817ec6ad57b6",
+      "migratedBodySha256": "2a2a59eaa1bbec70eac9c7fb5375c7fe0bfd040fd0b11488b13f817ec6ad57b6",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-09-10-weblog-1_log확인하기.md",
+      "target": "src/content/posts/dreamhack/2023-09-10-weblog-1_log확인하기.md",
+      "legacyPath": "/dreamhack/weblog-1_log확인하기/",
+      "title": "[wargame.kr] weblog-1 문제",
+      "date": "2023-09-10",
+      "lastModifiedAt": "2023-09-10T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "php",
+        "access.log"
+      ],
+      "excerpt": "weblog-1 문제 풀이",
+      "sourceSha256": "a78aae46b29bca6a12228c4cc67ae6988eaccf4272776d03206ca6011fd34e14",
+      "sourceBodySha256": "0d45b2a703471a219af6dd010576075246fcc2f5e8cc25d2b36d067abc493a85",
+      "migratedBodySha256": "0d45b2a703471a219af6dd010576075246fcc2f5e8cc25d2b36d067abc493a85",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-09-11-php비교연산자.md",
+      "target": "src/content/posts/dreamhack/2023-09-11-php비교연산자.md",
+      "legacyPath": "/dreamhack/php비교연산자/",
+      "title": "PHP 비교연산자",
+      "date": "2023-09-11",
+      "lastModifiedAt": "2023-09-11T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "php",
+        "비교연산자"
+      ],
+      "excerpt": "PHP 비교연산자 취약점에 대하여 알아보자.",
+      "sourceSha256": "2f2c86fc56789e6581a74b1c9b65d0ffc2c3cc366b88d7348f618a48b97babbb",
+      "sourceBodySha256": "9b2bcc5f48252b3fe1fa970c8f9b90a5f4d4873f2fc2fe84263dbe890c57a3f7",
+      "migratedBodySha256": "9b2bcc5f48252b3fe1fa970c8f9b90a5f4d4873f2fc2fe84263dbe890c57a3f7",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/dreamhack/2023-09-12-SQLiPHPmd5.md",
+      "target": "src/content/posts/dreamhack/2023-09-12-SQLiPHPmd5.md",
+      "legacyPath": "/dreamhack/SQLiPHPmd5/",
+      "title": "PHP md5 (SQL Injection)",
+      "date": "2023-09-12",
+      "lastModifiedAt": "2023-09-12T09:13:00-05:00",
+      "categories": [
+        "dreamhack"
+      ],
+      "tags": [
+        "wargame",
+        "php",
+        "md5",
+        "sqli"
+      ],
+      "excerpt": "php 의 md5 기능을 우회하여 sql injection 공격을 시도해보자.",
+      "sourceSha256": "96889f64ce8e73a09528cc88851fa6e04ea8ed7e2fbaf95ca426aae288866c7a",
+      "sourceBodySha256": "6bccab2da73126d42790c49cbd67b15920a819aac5edbc5ca0d6c036e87a5567",
+      "migratedBodySha256": "6bccab2da73126d42790c49cbd67b15920a819aac5edbc5ca0d6c036e87a5567",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/error정리/2023-10-26-SSH_연결_에러.md",
+      "target": "src/content/posts/error정리/2023-10-26-SSH_연결_에러.md",
+      "legacyPath": "/ssh/error/SSH_연결_에러/",
+      "title": "SSH 연결 오류(Host key verification failed.)",
+      "date": "2023-10-26",
+      "lastModifiedAt": "2023-10-26T09:13:00-05:00",
+      "categories": [
+        "ssh",
+        "error"
+      ],
+      "tags": [
+        "ssh"
+      ],
+      "excerpt": "Selenium 사용할 때 유용한 정보를 정리해 보았다.",
+      "sourceSha256": "3dbf170c5f4e2444562c66c530fef1575034bbc0f8b02e23d58a24d8d7311dcd",
+      "sourceBodySha256": "05db597219f71bb444906faed7a1154a202cda20ae58f93a4e4bcb97f6ded376",
+      "migratedBodySha256": "05db597219f71bb444906faed7a1154a202cda20ae58f93a4e4bcb97f6ded376",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/기술/2023-10-19-SeleniumInPython.md",
+      "target": "src/content/posts/기술/2023-10-19-SeleniumInPython.md",
+      "legacyPath": "/기술/SeleniumInPython/",
+      "title": "Selenium in Python 유용한 정보",
+      "date": "2023-10-19",
+      "lastModifiedAt": "2023-10-19T09:13:00-05:00",
+      "categories": [
+        "기술"
+      ],
+      "tags": [
+        "selenium",
+        "python"
+      ],
+      "excerpt": "Selenium 사용할 때 유용한 정보를 정리해 보았다.",
+      "sourceSha256": "5ad141253b2e2b629495afa5e59a04326e4564c3756a441f9989859c7d5ac240",
+      "sourceBodySha256": "277785575387a47d38e337f592c2d1237428c6058197e46acdd9615eae270f7a",
+      "migratedBodySha256": "277785575387a47d38e337f592c2d1237428c6058197e46acdd9615eae270f7a",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-02-웹서버개발1.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-02-웹서버개발1.md",
+      "legacyPath": "/웹서버개발1/",
+      "title": "웹서버 만들기(1)",
+      "date": "2023-04-02",
+      "lastModifiedAt": "2023-04-04T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "nginx",
+        "tomcat"
+      ],
+      "excerpt": "간단한 로그인 서버를 만들기 (1)",
+      "sourceSha256": "d2befa566d3fad6d71b7ab49dbc111ff3cf6c268a04e4a0bd54faf5720fa3a14",
+      "sourceBodySha256": "b700cc40f234e3dba3dfc5788d2e29b56f151415df7dae484c0d7f6b6b17a31b",
+      "migratedBodySha256": "eda9893816d75341658037c5136044dac77f3a0495ce871cac4cb96dc12cfb76",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "liquid-highlight",
+          "lang": "jsp",
+          "meta": "linenos"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-03-웹서버개발2.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-03-웹서버개발2.md",
+      "legacyPath": "/웹서버개발2/",
+      "title": "웹서버 만들기(2)",
+      "date": "2023-04-03",
+      "lastModifiedAt": "2023-04-03T10:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "nginx",
+        "tomcat",
+        "servlet"
+      ],
+      "excerpt": "간단한 로그인 서버를 만들기 (2)",
+      "sourceSha256": "47047d632d1701151214b8b639e64b7260db1e592d262a214f1661656d19f867",
+      "sourceBodySha256": "6171a8f425e925eb15f2d58c570e326e883be88f341a0f12e358f6b54602d483",
+      "migratedBodySha256": "6171a8f425e925eb15f2d58c570e326e883be88f341a0f12e358f6b54602d483",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-04-웹서버개발3.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-04-웹서버개발3.md",
+      "legacyPath": "/웹서버개발3/",
+      "title": "웹서버 만들기(3)",
+      "date": "2023-04-04",
+      "lastModifiedAt": "2023-04-04T10:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "nginx",
+        "tomcat",
+        "servlet",
+        "jsp"
+      ],
+      "excerpt": "간단한 로그인 서버를 만들기 (3)",
+      "sourceSha256": "280d413d82e75b1ad030df0463da177be98f4ed2f4d8c22fefb54f3b86852a7f",
+      "sourceBodySha256": "eb07b59bd723941a5b94de73e7f9190e7b39e46fdb73681ca5af77f7d4219b81",
+      "migratedBodySha256": "eb07b59bd723941a5b94de73e7f9190e7b39e46fdb73681ca5af77f7d4219b81",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-06-웹서버개발4.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-06-웹서버개발4.md",
+      "legacyPath": "/웹서버개발4/",
+      "title": "웹서버 만들기(4)",
+      "date": "2023-04-06",
+      "lastModifiedAt": "2023-04-06T10:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "DB"
+      ],
+      "excerpt": "DB 설치 및 실행",
+      "sourceSha256": "cd7ead92eea0bfe77183bd5acaa6d305c3c7d7c5b44a7bc5bd484c2ec06fd110",
+      "sourceBodySha256": "09a72a6990a706141ee8e14556395f0dff485d95823f08a3f0152384cb8f19eb",
+      "migratedBodySha256": "09a72a6990a706141ee8e14556395f0dff485d95823f08a3f0152384cb8f19eb",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-09-웹서버개발5.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-09-웹서버개발5.md",
+      "legacyPath": "/웹서버개발5/",
+      "title": "웹서버 개발 5",
+      "date": "2023-04-09",
+      "lastModifiedAt": "2023-04-09T08:06:00-05:00",
+      "categories": [],
+      "tags": [
+        "GET",
+        "POST",
+        "servlet",
+        "jsp",
+        "html"
+      ],
+      "excerpt": "get 과 post에 대해 알아보고, 직접 테스트 해보자",
+      "sourceSha256": "741686fbc6470127d6f8a5832b592b14ec3c2c7b626bebc578bbbded4ca031e5",
+      "sourceBodySha256": "52226a2c96dd531d75c8a8912c85c4213f59fb2630fbbbe91950e7bd5daedcd8",
+      "migratedBodySha256": "1109016dad7bcd7c2a14220cfeceedc6d30eab006a0adb82234b3f967fe4af8c",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "unclosed-script",
+          "line": 16,
+          "detail": "<script src=\"https://gist.github.com/MinGyu2/074dd3e21dbed0379e4817fee80eaf24.js\">"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-10-웹서버개발6.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-10-웹서버개발6.md",
+      "legacyPath": "/웹서버개발6/",
+      "title": "웹서버 개발 6",
+      "date": "2023-04-10",
+      "lastModifiedAt": "2023-04-10T08:06:00-05:00",
+      "categories": [],
+      "tags": [
+        "Oracle DB",
+        "nginx",
+        "tomcat",
+        "servlet"
+      ],
+      "excerpt": "오라클 DB 와 웹 서버 연동 테스트",
+      "sourceSha256": "922827acfed275aab132a8f18fef8e283098e7bac706bb30a70c2a60eb291d33",
+      "sourceBodySha256": "be0da3d11111e95aa5a04ab0b862d8982bbeb174759b99a19a1ae55b0de83c8e",
+      "migratedBodySha256": "be0da3d11111e95aa5a04ab0b862d8982bbeb174759b99a19a1ae55b0de83c8e",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-14-웹서버개발7.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-14-웹서버개발7.md",
+      "legacyPath": "/웹서버개발7/",
+      "title": "웹서버 만들기 7",
+      "date": "2023-04-14",
+      "lastModifiedAt": "2023-04-14T10:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "로그인",
+        "로그아웃",
+        "HASH",
+        "Oracle DB"
+      ],
+      "excerpt": "로그인, 로그아웃, 메인페이지 구현",
+      "sourceSha256": "ff22633d6922128726d867c252dc328594fb0a184fc724a7f19dfa4c807ab866",
+      "sourceBodySha256": "bb502e8d48f200588c5fec59c5a3eb6b10400679e1c63adcd152edfb5dd79467",
+      "migratedBodySha256": "d345a36ff13d88a713220c9bb3833c8fcba4d8c2e278277d2da958d9ff92f30f",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "script-trailing",
+          "line": 105,
+          "detail": "trailing content moved to next line"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-20-웹서버개발8.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-20-웹서버개발8.md",
+      "legacyPath": "/웹서버개발8/",
+      "title": "웹 서버 만들기 (8) 회원가입 구현",
+      "date": "2023-04-20",
+      "lastModifiedAt": "2023-04-20T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "Web",
+        "Oracle DB",
+        "Java",
+        "Servlet",
+        "JSP"
+      ],
+      "excerpt": "회원가입 구현하기.",
+      "sourceSha256": "7f4085b322206665fa1b0e76477c9dc1aeec285a5e07b3b8a287d49bd9b69b9f",
+      "sourceBodySha256": "d15d9925b70ba12d0fcb6681316eeaffc66f3f05df4e80361bc29a9779149a67",
+      "migratedBodySha256": "20317a0c939c4b9d9aa03eaab440efa211fc104b90971b61e7bca043f058b819",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 3,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 11,
+          "detail": "1 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 15,
+          "detail": "10 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 28,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 36,
+          "detail": "13 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 50,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 56,
+          "detail": "2 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 60,
+          "detail": "2 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 64,
+          "detail": "1 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 68,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 73,
+          "detail": "2 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 76,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 81,
+          "detail": "3 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 89,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 94,
+          "detail": "4 line(s) prefixed with \"> \""
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 99,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "blockquote-lazy",
+          "line": 104,
+          "detail": "6 line(s) prefixed with \"> \""
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-04-26-웹서버개발9주소검색.md",
+      "target": "src/content/posts/웹_서버_개발/2023-04-26-웹서버개발9주소검색.md",
+      "legacyPath": "/웹서버개발9주소검색/",
+      "title": " 웹서버 만들기 9 주소검색기능",
+      "date": "2023-04-26",
+      "lastModifiedAt": "2023-04-26T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "Oracle DB",
+        "웹서버",
+        "servlet",
+        "jsp"
+      ],
+      "excerpt": "주소검색 기능을 만들어보자.",
+      "sourceSha256": "feb6f0cc3f76e35a4cea485b11e4c2e0eac629b1dd5c29b6be4a22f3b46f3622",
+      "sourceBodySha256": "a1bc8b70cd769ad6e265788a222e6d6fc38c23f8d5e135571490f2534f68fe91",
+      "migratedBodySha256": "64a0c283bce27a2ae8ec784fb680b98e3eccce4cb083eecdcee2be13d16f3b20",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "ordered-list-break",
+          "line": 44,
+          "detail": "6. 다른 데이터를 import 할 때는 `ko_address`테이블로 "
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-05-04-웹서버개발10메뉴버튼및게시판.md",
+      "target": "src/content/posts/웹_서버_개발/2023-05-04-웹서버개발10메뉴버튼및게시판.md",
+      "legacyPath": "/웹서버개발10메뉴버튼및게시판/",
+      "title": "웹서버 만들기 10 메뉴 버튼 및 게시판 제작",
+      "date": "2023-05-04",
+      "lastModifiedAt": "2023-05-04T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "웹",
+        "JSP",
+        "SERVLET",
+        "JAVA"
+      ],
+      "excerpt": "메뉴 버튼 및 게시판 제작 하기",
+      "sourceSha256": "205fd4f169c0e6c38fe0ed85abbd20b5006bb635af15458b6b1e5e2e24e7c976",
+      "sourceBodySha256": "4eaebd36c8960a7279f133ad3506c836cd1f7ac7143de8e2c9caffa671b4af7a",
+      "migratedBodySha256": "4461ab97f1b757338e4e8575a2f64a91b85ce4f549eea2dd939edbab7da67693",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "autolink-scheme",
+          "line": 4,
+          "detail": "<jsp:include>"
+        },
+        {
+          "kind": "autolink-scheme",
+          "line": 14,
+          "detail": "<jsp:include>"
+        },
+        {
+          "kind": "autolink-scheme",
+          "line": 20,
+          "detail": "<jsp:include>"
+        },
+        {
+          "kind": "autolink-scheme",
+          "line": 62,
+          "detail": "<jsp:include>"
+        },
+        {
+          "kind": "autolink-scheme",
+          "line": 93,
+          "detail": "<jsp:include>"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-05-10-웹서버개발11게시글.md",
+      "target": "src/content/posts/웹_서버_개발/2023-05-10-웹서버개발11게시글.md",
+      "legacyPath": "/웹서버개발11게시글/",
+      "title": "웹서버 만들기(11) 게시글 수정, 삭제, 검색",
+      "date": "2023-05-10",
+      "lastModifiedAt": "2023-05-10T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "jsp",
+        "servlet",
+        "웹 서버"
+      ],
+      "excerpt": "게시글 수정, 삭제, 검색 기능 만들기.",
+      "sourceSha256": "bb7838379433d47644f2596c5c0c5eaffa01e084431fb09b07f314135444ed9d",
+      "sourceBodySha256": "8154541413df180c4f58fb2b1fcba604a4dfb21e52617a3642e7a11a28561994",
+      "migratedBodySha256": "8154541413df180c4f58fb2b1fcba604a4dfb21e52617a3642e7a11a28561994",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-05-16-웹서버개발12페이징.md",
+      "target": "src/content/posts/웹_서버_개발/2023-05-16-웹서버개발12페이징.md",
+      "legacyPath": "/웹서버개발12페이징/",
+      "title": "웹 서버 개발 12 페이징 번호",
+      "date": "2023-05-16",
+      "lastModifiedAt": "2023-05-16T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "웹",
+        "jsp",
+        "servlet"
+      ],
+      "excerpt": "게시글에 페이징 번호를 추가하자.",
+      "sourceSha256": "989cb77f5e05144d61d6c024c89f08c92c50894213a7364e03734371d9096802",
+      "sourceBodySha256": "9d7462fd2105f0511e7bd7f98e91dcc41f0c6e7b92ba16ad1880a9f4f50aad4b",
+      "migratedBodySha256": "b69c3b497c491f3babd56beeb0fec6e2ec1a593ed2aca825b095fb6f191f8c7c",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 18,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 30,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 51,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 58,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 63,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 104,
+          "detail": "blank line inserted after <br>"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-05-25-웹서버개발13.md",
+      "target": "src/content/posts/웹_서버_개발/2023-05-25-웹서버개발13.md",
+      "legacyPath": "/웹서버개발13/",
+      "title": "웹 서버 만들기(13) 업로드 다운로드 조회수",
+      "date": "2023-05-25",
+      "lastModifiedAt": "2023-05-30T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "oracle db",
+        "servlet",
+        "jsp",
+        "nginx"
+      ],
+      "excerpt": "업로드 다운로드 조회수 기능 만들기.",
+      "sourceSha256": "e9203eb6fc2dfeb2764be4ec18407496623e0439f2e6f78a82d3f9c1832e2db9",
+      "sourceBodySha256": "ccb9c265eb0ac755d5255a28d69e3e923146f185131084b796b1a23654845cb6",
+      "migratedBodySha256": "e31b35da457f76337db357c50be7ea47007470dc930e3fe9412fe8dd5db58ee1",
+      "bodyUnchanged": false,
+      "transforms": [
+        {
+          "kind": "html-inline-line",
+          "line": 243,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 265,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 329,
+          "detail": "blank line inserted after <img>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 385,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 447,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 593,
+          "detail": "blank line inserted after <img>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 671,
+          "detail": "blank line inserted after <br>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 753,
+          "detail": "blank line inserted after <img>"
+        },
+        {
+          "kind": "html-inline-line",
+          "line": 773,
+          "detail": "blank line inserted after <img>"
+        }
+      ]
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-06-02-웹서버개발14.md",
+      "target": "src/content/posts/웹_서버_개발/2023-06-02-웹서버개발14.md",
+      "legacyPath": "/웹서버개발14/",
+      "title": "웹 서버 만들기(14) 게시글 검색 기능 및 날짜 지정 검색",
+      "date": "2023-06-02",
+      "lastModifiedAt": "2023-06-02T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "jsp",
+        "servlet",
+        "java"
+      ],
+      "excerpt": "게시글 검색 기능 및 날짜 지정 검색을 제작하여 보자.",
+      "sourceSha256": "3b1ef972a4d4b15596b76a00e530ef1d0f82e62bcf5a0caed0bcf6152cfcddf6",
+      "sourceBodySha256": "49372c4c25052926c3b6ee6e352698f7d19313d5a9e9d050212d4ff536276e3b",
+      "migratedBodySha256": "49372c4c25052926c3b6ee6e352698f7d19313d5a9e9d050212d4ff536276e3b",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-06-04-웹서버개발15.md",
+      "target": "src/content/posts/웹_서버_개발/2023-06-04-웹서버개발15.md",
+      "legacyPath": "/웹서버개발15/",
+      "title": "웹 서버 만들기(15) 게시글 좋아요 및 정렬 기능 만들기",
+      "date": "2023-06-04",
+      "lastModifiedAt": "2023-06-04T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "jsp",
+        "servlet",
+        "sql",
+        "oracle db",
+        "java"
+      ],
+      "excerpt": "게시글 좋아요 및 정렬 기능을 만들어 보았다.",
+      "sourceSha256": "e56b52f02757c11219afb920324cd431592c64e62e6e5f51080d059c82a2354d",
+      "sourceBodySha256": "753c01f3ab8decc61695abbe34eed91fc2cf0fa5a374ae8808c10f4498f27bc6",
+      "migratedBodySha256": "753c01f3ab8decc61695abbe34eed91fc2cf0fa5a374ae8808c10f4498f27bc6",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-06-07-웹서버FileUpload취약점제거.md",
+      "target": "src/content/posts/웹_서버_개발/2023-06-07-웹서버FileUpload취약점제거.md",
+      "legacyPath": "/웹서버FileUpload취약점제거/",
+      "title": "웹 서버의 File Upload 취약점 traversal",
+      "date": "2023-06-07",
+      "lastModifiedAt": "2023-06-07T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "file upload",
+        "file upload traversal"
+      ],
+      "excerpt": "웹 서버의 File Upload 취약점을 제거해 보자.",
+      "sourceSha256": "1b65336a6f761fa7b0851879f2b8ddc018738a89b8960fa55056e1c4f2ae9685",
+      "sourceBodySha256": "9adf14d4383036a77d7465d4bed8eb32a2a0e1cd794f8dd662dcc4748593b77e",
+      "migratedBodySha256": "9adf14d4383036a77d7465d4bed8eb32a2a0e1cd794f8dd662dcc4748593b77e",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-06-08-웹서버개발17마이페이지.md",
+      "target": "src/content/posts/웹_서버_개발/2023-06-08-웹서버개발17마이페이지.md",
+      "legacyPath": "/웹서버개발17마이페이지/",
+      "title": "웹 서버 개발 (17) 마이페이지",
+      "date": "2023-06-08",
+      "lastModifiedAt": "2023-06-08T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "웹 서버",
+        "jsp",
+        "servlet",
+        "oracle db"
+      ],
+      "excerpt": "사용자 정보를 수정할 수 있는 마이페이지를 만들어보자.",
+      "sourceSha256": "c4be6eef67ffa0f2af45ceefafbcbc9bfda7780527024cadd662ee0412e7e9c1",
+      "sourceBodySha256": "3bbbe9669d02115666aec16f596ed22b4ee308927f3f3c1432ecf6aa2511f4c0",
+      "migratedBodySha256": "3bbbe9669d02115666aec16f596ed22b4ee308927f3f3c1432ecf6aa2511f4c0",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-06-11-웹서버개발18DB테이블파일저장.md",
+      "target": "src/content/posts/웹_서버_개발/2023-06-11-웹서버개발18DB테이블파일저장.md",
+      "legacyPath": "/웹서버개발18DB테이블파일저장/",
+      "title": "웹 서버 개발 (18) DB 테이블에 파일 저장하기",
+      "date": "2023-06-11",
+      "lastModifiedAt": "2023-06-11T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "file upload",
+        "file download",
+        "웹 서버",
+        "servlet",
+        "java"
+      ],
+      "excerpt": "업로드 파일을 웹 서버에 저장하지 않고 DB 테이블에 저장해보자.",
+      "sourceSha256": "94d68133ae45c853757138a9b0e8c8f14d07aec9a76844231ce16b517df59873",
+      "sourceBodySha256": "c4164d7dd35b7ed21d3e543246dcd6be43231c052b49ea8f53f983f967a4bb3a",
+      "migratedBodySha256": "c4164d7dd35b7ed21d3e543246dcd6be43231c052b49ea8f53f983f967a4bb3a",
+      "bodyUnchanged": true,
+      "transforms": []
+    },
+    {
+      "legacySource": "_posts/웹_서버_개발/2023-06-22-웹서버개발19비회원게시판.md",
+      "target": "src/content/posts/웹_서버_개발/2023-06-22-웹서버개발19비회원게시판.md",
+      "legacyPath": "/웹서버개발19비회원게시판/",
+      "title": "웹 서버 개발 (19) 비회원 문의 게시판",
+      "date": "2023-06-22",
+      "lastModifiedAt": "2023-06-22T09:13:00-05:00",
+      "categories": [],
+      "tags": [
+        "servlet",
+        "jsp",
+        "db",
+        "게시판"
+      ],
+      "excerpt": "비회원 문의 게시판을 만들어 보자.",
+      "sourceSha256": "2c47cfa787ed6f6df2de671339f3d7ab73ba3594d24ac3a76481a802678e38ce",
+      "sourceBodySha256": "e0987fb4b062a9839cb970a8bac064e12d8af893111f21588c7fee6ebf026619",
+      "migratedBodySha256": "e0987fb4b062a9839cb970a8bac064e12d8af893111f21588c7fee6ebf026619",
+      "bodyUnchanged": true,
+      "transforms": []
+    }
+  ]
+}

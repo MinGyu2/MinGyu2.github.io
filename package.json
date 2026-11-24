@@ -1,35 +1,35 @@
 {
-  "name": "minimal-mistakes",
+  "name": "arc-lab-blog",
   "private": true,
-  "version": "4.24.0",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
-  },
-  "keywords": [
-    "jekyll",
-    "theme",
-    "minimal"
-  ],
-  "author": "Michael Rose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ARC LAB — 기록하는 개발자 (MinGyu2.github.io) built with Astro",
   "engines": {
-    "node": ">= 0.10.0"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "uglify-js": "^3.13.6"
+    "node": ">=22.23.4"
   },
   "scripts": {
-    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-3.6.0.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.ba-throttle-debounce.js assets/js/plugins/smooth-scroll.js assets/js/plugins/gumshoe.js assets/js/_main.js -c -m -o assets/js/main.min.js",
-    "add-banner": "node banner.js",
-    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
-    "build:js": "npm run uglify && npm run add-banner"
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "check": "astro check",
+    "migrate": "node scripts/migrate-jekyll.mjs",
+    "verify": "node scripts/verify-site.mjs"
+  },
+  "dependencies": {
+    "@astrojs/markdown-satteri": "0.4.10",
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@fontsource/rajdhani": "5.3.0",
+    "@tailwindcss/vite": "4.3.5",
+    "astro": "7.4.13",
+    "shiki": "4.6.0",
+    "tailwindcss": "4.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "pagefind": "1.6.0",
+    "satteri": "0.11.7",
+    "typescript": "6.0.3",
+    "yaml": "2.9.1"
   }
 }

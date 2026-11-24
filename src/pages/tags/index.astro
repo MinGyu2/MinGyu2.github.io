@@ -1,0 +1,71 @@
+---
+/**
+ * Tag index. Also serves the legacy /tags/ archive: each tag keeps its old
+ * anchor (#<slug>), which Jekyll generated as the lowercase slug.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { buildTaxonomy, displayTitle, formatDate, getPosts } from '../../lib/posts';
+
+const posts = await getPosts();
+const tags = buildTaxonomy(posts, 'tags');
+const max = Math.max(...tags.map((t) => t.count));
+const byName = [...tags].sort((a, b) => a.label.localeCompare(b.label, 'ko'));
+---
+<BaseLayout title="Tag Index · 태그" nav="modules" view="modules" description={`태그 ${tags.length}개로 기술 게시글 찾아보기`}>
+  <div class="space-y-6 reveal">
+    <section class="clean-card p-6" aria-labelledby="tags-title">
+      <div class="flex flex-wrap items-end justify-between gap-3 mb-4">
+        <div>
+          <span class="panel-id">DATA INDEX // TAGS</span>
+          <h1 id="tags-title" class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">태그 인덱스</h1>
+          <p class="text-sm t-muted mt-1">대소문자만 다른 태그는 하나로 묶었습니다. 태그를 누르면 해당 글만 모아 봅니다.</p>
+        </div>
+        <span class="font-mono-code text-xs t-muted">{tags.length} TAGS · {posts.length} LOGS · <a href="/categories/" class="link-cyan">MODULES -&gt;</a></span>
+      </div>
+      <ul class="flex flex-wrap gap-2">
+        {
+          tags.map((t) => (
+            <li>
+              <a href={`/posts/?tag=${encodeURIComponent(t.key)}`} class="btn-outline px-3 py-1.5 text-xs font-mono-code rounded tag-btn" style={`--w:${t.count / max}`}>
+                #{t.label} <span class="t-muted ml-1">{t.count}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="tag-archive-title" class="space-y-3">
+      <h2 id="tag-archive-title" class="panel-id">ARCHIVE // POSTS BY TAG (가나다 · ABC)</h2>
+      <div class="grid-2">
+        {
+          byName.map((t) => (
+            <section id={t.key} class="clean-card p-4" aria-labelledby={`tag-${t.key}`}>
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <h3 id={`tag-${t.key}`} class="font-mono-code text-sm font-semibold t-heading">
+                  <a href={`/posts/?tag=${encodeURIComponent(t.key)}`} class="hover:text-[var(--accent-primary)]">#{t.label}</a>
+                </h3>
+                <span class="font-mono-code text-[11px] t-muted">{t.count}</span>
+              </div>
+              {t.variants.length > 1 && <p class="font-mono-code text-[11px] t-muted mb-2">표기: {t.variants.join(' · ')}</p>}
+              <ul class="space-y-1">
+                {t.posts.map((p) => (
+                  <li class="flex items-baseline justify-between gap-3 text-[13px]">
+                    <a href={p.data.legacyPath} class="t-body hover:text-[var(--accent-primary)]">{displayTitle(p)}</a>
+                    <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={p.data.date.toISOString()}>{formatDate(p.data.date)}</time>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .tag-btn {
+    border-left: 3px solid color-mix(in srgb, var(--accent-primary) calc(var(--w) * 100%), var(--control-border));
+  }
+</style>

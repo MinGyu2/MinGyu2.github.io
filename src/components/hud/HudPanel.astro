@@ -1,0 +1,22 @@
+---
+/**
+ * Chamfered HUD panel. The outer element owns brackets, hover lift and the focus
+ * outline; the inner element owns the clip-path (so focus rings are never clipped).
+ * Pass `href` to render the whole panel as a link.
+ */
+import type { HTMLAttributes } from 'astro/types';
+interface Props extends HTMLAttributes<'div'> {
+  href?: string;
+  interactive?: boolean;
+  as?: 'div' | 'section' | 'article' | 'aside';
+  innerClass?: string;
+  class?: string;
+}
+const { href, interactive = !!href, as = 'div', innerClass = 'p-6', class: className, ...rest } = Astro.props;
+const Outer = href ? 'a' : as;
+---
+<Outer href={href} class:list={['hud-frame', { 'hud-frame-interactive': interactive }, className]} {...rest}>
+  <div class:list={['hud-panel-inner', innerClass]}>
+    <slot />
+  </div>
+</Outer>

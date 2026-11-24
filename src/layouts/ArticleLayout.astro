@@ -1,0 +1,225 @@
+---
+import type { MarkdownHeading } from 'astro';
+import BaseLayout from './BaseLayout.astro';
+import Toc from '../components/blog/Toc.astro';
+import Comments from '../components/blog/Comments.astro';
+import {
+  displayTitle,
+  formatDate,
+  getCategoryStats,
+  getPosts,
+  logCode,
+  readingMinutes,
+  relatedPosts,
+  excerptOf,
+  taxonomyKey,
+  primaryModule,
+  type Post,
+} from '../lib/posts';
+
+interface Props {
+  post: Post;
+  headings: MarkdownHeading[];
+}
+const { post, headings } = Astro.props;
+const posts = await getPosts();
+const { modules } = await getCategoryStats();
+const idx = posts.indexOf(post);
+const newer = idx > 0 ? posts[idx - 1] : undefined;
+const older = idx < posts.length - 1 ? posts[idx + 1] : undefined;
+const related = relatedPosts(post, posts, 3);
+const title = displayTitle(post);
+const code = logCode(post, posts);
+const mod = primaryModule(post, modules);
+const minutes = readingMinutes(post);
+const modified = post.data.last_modified_at ? new Date(post.data.last_modified_at) : undefined;
+const showModified = modified && !Number.isNaN(modified.getTime()) && modified.getTime() > post.data.date.getTime() + 86_400_000;
+const categories = post.data.categories.map((c) => ({ label: c, key: taxonomyKey(c) }));
+const description = excerptOf(post, 200);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  nav="logs"
+  view="reader"
+  type="article"
+  article={{ published: post.data.date, modified: modified && !Number.isNaN(modified.getTime()) ? modified : undefined, tags: post.data.tags, section: post.data.categories[0] }}
+>
+  <div slot="before-main" class="reading-bar" role="progressbar" aria-label="문서 읽기 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="reading-bar-fill" data-progress-bar></div>
+  </div>
+
+  <div class="reveal">
+    <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+      <a href="/posts/" class="btn-outline px-3.5 py-1.5 rounded text-sm min-h-11">&lt;- 목록으로 돌아가기</a>
+      <span class="font-mono-code text-xs t-muted">{code} // {mod.label}</span>
+    </div>
+
+    <div class="toc-mobile-wrap"><Toc headings={headings} variant="mobile" /></div>
+
+    <div class="grid-reader">
+      <div class="min-w-0">
+        <article class="reader-panel article-panel" data-pagefind-body>
+          <span hidden data-pagefind-meta="type">LOG</span>
+          <span hidden data-pagefind-meta="sub">{`${code} · ${mod.label} · ${formatDate(post.data.date)}`}</span>
+          <header class="pb-6 border-b b-circuit-soft">
+            <div class="flex flex-wrap items-center gap-2 font-mono-code text-xs mb-3">
+              {
+                categories.length > 0 ? (
+                  categories.map((c) => (
+                    <a href={`/posts/?category=${encodeURIComponent(c.key)}`} class="px-2 py-0.5 badge-cyan rounded-sm hover:underline">
+                      {c.label}
+                    </a>
+                  ))
+                ) : (
+                  <span class="px-2 py-0.5 rounded-sm border b-circuit t-muted">미분류</span>
+                )
+              }
+              <time class="t-muted" datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+              {
+                showModified && modified && (
+                  <span class="t-muted">
+                    · 수정 <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
+                  </span>
+                )
+              }
+              <span class="t-muted" aria-hidden="true">·</span>
+              <span class="t-muted">약 {minutes}분</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold t-heading leading-snug break-keep">{title}</h1>
+            {post.data.excerpt && <p class="mt-3 text-[15px] t-muted leading-relaxed">{post.data.excerpt}</p>}
+            {
+              post.data.tags.length > 0 && (
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="태그">
+                  {post.data.tags.map((t) => (
+                    <li>
+                      <a href={`/posts/?tag=${encodeURIComponent(taxonomyKey(t))}`} class="btn-outline font-mono-code text-xs px-2.5 rounded-sm min-h-8">
+                        #{t}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </header>
+
+          <div class="article-prose mt-7" data-article-content>
+            <slot />
+          </div>
+        </article>
+
+        <nav class="mt-6 grid-2" aria-label="이전 · 다음 글" data-pagefind-ignore>
+          {
+            older ? (
+              <a href={older.data.legacyPath} class="clean-card clean-card-interactive p-4 block">
+                <span class="font-mono-code text-[11px] t-muted">&lt;- 이전 글 · {formatDate(older.data.date)}</span>
+                <span class="block mt-1 text-sm font-semibold t-heading leading-snug">{displayTitle(older)}</span>
+              </a>
+            ) : (
+              <span />
+            )
+          }
+          {
+            newer && (
+              <a href={newer.data.legacyPath} class="clean-card clean-card-interactive p-4 block text-right">
+                <span class="font-mono-code text-[11px] t-muted">다음 글 · {formatDate(newer.data.date)} -&gt;</span>
+                <span class="block mt-1 text-sm font-semibold t-heading leading-snug">{displayTitle(newer)}</span>
+              </a>
+            )
+          }
+        </nav>
+
+        {
+          related.length > 0 && (
+            <section class="mt-8" aria-labelledby="related-title" data-pagefind-ignore>
+              <h2 id="related-title" class="font-mono-code text-[11px] t-cyan tracking-wider mb-3">
+                RELATED LOGS // 관련 글
+              </h2>
+              <ul class="grid-3">
+                {related.map((r) => (
+                  <li>
+                    <a href={r.data.legacyPath} class="clean-card clean-card-interactive p-4 block h-full">
+                      <span class="font-mono-code text-[11px] t-muted">{formatDate(r.data.date)}</span>
+                      <span class="block mt-1 text-sm font-semibold t-heading leading-snug">{displayTitle(r)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+
+        <div data-pagefind-ignore><Comments /></div>
+      </div>
+
+      <aside class="reader-aside space-y-4" aria-label="읽기 보조" data-pagefind-ignore>
+        <div class="clean-card p-5">
+          <div class="font-mono-code text-[11px] t-cyan mb-3">READING PROGRESS</div>
+          <div class="flex items-center gap-4">
+            <svg viewBox="0 0 80 80" class="w-16 h-16 shrink-0" aria-hidden="true">
+              <circle cx="40" cy="40" r="32" fill="none" stroke="var(--svg-ring-bg)" stroke-width="5"></circle>
+              <circle data-progress-ring cx="40" cy="40" r="32" fill="none" stroke="var(--accent-primary)" stroke-width="5" stroke-dasharray="201.06" stroke-dashoffset="201.06" transform="rotate(-90 40 40)" stroke-linecap="round"></circle>
+              <text data-progress-text x="40" y="44.5" text-anchor="middle" fill="var(--text-heading)" font-family="JetBrains Mono Variable, monospace" font-size="13" font-weight="600">0%</text>
+            </svg>
+            <div class="text-xs">
+              <div class="t-heading font-semibold text-[13px]">본문 진행률</div>
+              <div class="t-muted mt-1 leading-snug">본문 영역 기준으로 계산됩니다.</div>
+            </div>
+          </div>
+        </div>
+        <Toc headings={headings} variant="desktop" />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-panel {
+    padding: 2.5rem;
+    max-width: 52rem;
+  }
+  .reader-aside {
+    position: sticky;
+    top: calc(var(--header-h) + 1.25rem);
+  }
+  .toc-mobile-wrap {
+    display: none;
+  }
+  .reading-bar {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 29;
+    height: 3px;
+    margin-bottom: -3px;
+    background: var(--bg-inset);
+    display: none;
+  }
+  .reading-bar-fill {
+    height: 100%;
+    width: 100%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  }
+  @media (max-width: 980px) {
+    .reader-aside {
+      display: none;
+    }
+    .toc-mobile-wrap {
+      display: block;
+    }
+    .reading-bar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .article-panel {
+      padding: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  import { initArticle } from '../scripts/article';
+  initArticle();
+</script>

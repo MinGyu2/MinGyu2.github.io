@@ -1,0 +1,90 @@
+---
+import type { MarkdownHeading } from 'astro';
+interface Props {
+  headings: MarkdownHeading[];
+  variant: 'desktop' | 'mobile';
+}
+const { headings, variant } = Astro.props;
+const items = headings.filter((h) => h.depth <= 3 && h.slug);
+const base = items.length ? Math.min(...items.map((h) => h.depth)) : 1;
+---
+{
+  items.length > 0 &&
+    (variant === 'desktop' ? (
+      <nav class="clean-card p-5 toc-desktop" aria-labelledby="toc-title-desktop">
+        <h2 id="toc-title-desktop" class="font-mono-code text-[11px] t-muted mb-3">
+          ON THIS PAGE
+        </h2>
+        <ul class="space-y-0.5">
+          {items.map((h) => (
+            <li style={`--toc-indent:${h.depth - base}`}>
+              <a href={`#${h.slug}`} data-toc-link={h.slug} class="toc-link">
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    ) : (
+      <details class="clean-card overflow-hidden toc-mobile mb-5">
+        <summary class="px-4 py-3 flex items-center justify-between text-sm font-semibold t-heading bg-inset">
+          <span>목차 (On This Page)</span>
+          <span class="font-mono-code text-xs t-cyan toc-mobile-icon" aria-hidden="true" />
+        </summary>
+        <ul class="px-4 py-3 space-y-0.5 border-t b-circuit-soft">
+          {items.map((h) => (
+            <li style={`--toc-indent:${h.depth - base}`}>
+              <a href={`#${h.slug}`} data-toc-link={h.slug} class="toc-link">
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    ))
+}
+
+<style>
+  .toc-desktop ul {
+    max-height: calc(100vh - var(--header-h) - 16rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .toc-link {
+    display: block;
+    padding: 0.35rem 0.25rem 0.35rem calc(0.75rem + var(--toc-indent, 0) * 0.85rem);
+    border-left: 2px solid var(--circuit-line);
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.4;
+    transition: color 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+  }
+  .toc-link:hover {
+    color: var(--text-heading);
+    border-left-color: var(--accent-primary);
+  }
+  .toc-link[aria-current='location'] {
+    color: var(--accent-primary);
+    border-left-color: var(--accent-primary);
+    background: var(--accent-primary-soft);
+    font-weight: 600;
+  }
+  .toc-mobile summary {
+    cursor: pointer;
+    list-style: none;
+    min-height: 44px;
+  }
+  .toc-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+  .toc-mobile-icon::after {
+    content: '펼치기 +';
+  }
+  .toc-mobile[open] .toc-mobile-icon::after {
+    content: '접기 −';
+  }
+  .toc-mobile ul {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+</style>

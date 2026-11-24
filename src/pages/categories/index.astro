@@ -1,0 +1,126 @@
+---
+/**
+ * Knowledge Modules — category exploration. Also serves the legacy
+ * /categories/ archive: each category keeps its old anchor (#<slug>).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HudPanel from '../../components/hud/HudPanel.astro';
+import KnowledgeRing from '../../components/hud/KnowledgeRing.astro';
+import { buildTaxonomy, displayTitle, formatDate, getCategoryStats, getPosts, UNCATEGORIZED } from '../../lib/posts';
+import { CATEGORY_DESCRIPTIONS } from '../../data/taxonomy';
+
+const posts = await getPosts();
+const stats = await getCategoryStats();
+const tags = buildTaxonomy(posts, 'tags');
+const modules = [
+  ...stats.modules.map((m) => ({ ...m, ko: m.variants.length > 1 ? `표기: ${m.variants.join(' · ')}` : '' })),
+  {
+    key: UNCATEGORIZED.key,
+    label: UNCATEGORIZED.label,
+    code: 'MOD-00',
+    color: 'var(--cat-none)',
+    count: stats.uncategorized.length,
+    posts: stats.uncategorized,
+    variants: [],
+    ko: UNCATEGORIZED.en,
+  },
+];
+const pct = (n: number) => Math.round((n / stats.totalPosts) * 100);
+---
+<BaseLayout title="Knowledge Modules · 카테고리" nav="modules" view="modules" description="카테고리별 지식 모듈과 태그 인덱스">
+  <div class="space-y-6 reveal">
+    <section class="clean-card p-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div>
+        <span class="panel-id">INDEX // KNOWLEDGE MODULES</span>
+        <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">지식 모듈 및 태그 인덱스</h1>
+        <p class="text-sm t-muted mt-1.5 max-w-2xl">
+          글에 지정된 카테고리를 그대로 모듈로 보여줍니다. 대소문자만 다른 표기(예: Ubuntu · ubuntu)는 하나로 묶었고, 글 주소에는 영향을 주지 않습니다.
+        </p>
+        <p class="mt-3 font-mono-code text-xs t-muted">
+          {stats.totalPosts} LOGS · {stats.modules.length} MODULES · {tags.length} TAGS · <a href="/tags/" class="link-cyan">TAG INDEX -&gt;</a>
+        </p>
+      </div>
+      <div class="w-44 shrink-0 self-center">
+        <KnowledgeRing
+          segments={modules.map((m) => ({ key: m.key, label: m.label, count: m.count, color: m.color }))}
+          totalPosts={stats.totalPosts}
+          moduleCount={stats.modules.length}
+        />
+      </div>
+    </section>
+
+    <ul class="grid-2">
+      {
+        modules.map((m) => (
+          <li>
+            <HudPanel href={`/posts/?category=${encodeURIComponent(m.key)}`} innerClass="p-5 flex flex-col justify-between" aria-label={`${m.label} 모듈 문서 ${m.count}개 보기`}>
+              <div>
+                <div class="flex items-center justify-between font-mono-code text-xs mb-2 gap-2">
+                  <span class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full" style={`background:${m.color}`} aria-hidden="true" />
+                    <span class="t-muted">{m.code}</span>
+                  </span>
+                  <span class="px-2 py-0.5 bg-inset border b-circuit t-body rounded-sm">
+                    {m.count}개 문서 ({pct(m.count)}%)
+                  </span>
+                </div>
+                <h2 class="font-hud text-xl font-bold t-heading">{m.label}</h2>
+                {m.ko && <p class="text-[13px] t-cyan mt-0.5">{m.ko}</p>}
+                {CATEGORY_DESCRIPTIONS[m.key] && <p class="text-[13px] t-muted mt-2.5 leading-relaxed">{CATEGORY_DESCRIPTIONS[m.key]}</p>}
+                <div class="module-meter mt-3" aria-hidden="true">
+                  <span style={`width:${Math.max(2, pct(m.count))}%;background:${m.color}`} />
+                </div>
+              </div>
+              <div class="mt-4 pt-3 border-t b-circuit-soft font-mono-code text-xs t-cyan">모듈 문서 보기 -&gt;</div>
+            </HudPanel>
+          </li>
+        ))
+      }
+    </ul>
+
+    <section aria-labelledby="cat-archive-title" class="space-y-4">
+      <h2 id="cat-archive-title" class="panel-id">ARCHIVE // POSTS BY CATEGORY</h2>
+      {
+        modules.map((m) => (
+          <section id={m.key} class="clean-card p-5" aria-labelledby={`cat-${m.key}`}>
+            <div class="flex items-center justify-between gap-3 mb-3">
+              <h3 id={`cat-${m.key}`} class="font-hud text-lg font-bold t-heading flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full" style={`background:${m.color}`} aria-hidden="true" />
+                {m.label}
+              </h3>
+              <span class="font-mono-code text-xs t-muted">{m.count}</span>
+            </div>
+            <ul class="divide-y b-circuit-soft">
+              {m.posts.map((p) => (
+                <li class="py-2 flex items-baseline justify-between gap-4">
+                  <a href={p.data.legacyPath} class="text-sm t-body hover:text-[var(--accent-primary)]">
+                    {displayTitle(p)}
+                  </a>
+                  <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={p.data.date.toISOString()}>
+                    {formatDate(p.data.date)}
+                  </time>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .module-meter {
+    height: 4px;
+    background: var(--svg-ring-bg);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .module-meter span {
+    display: block;
+    height: 100%;
+  }
+  .divide-y > li + li {
+    border-top: 1px solid var(--circuit-line-soft);
+  }
+</style>

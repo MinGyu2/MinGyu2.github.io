@@ -1,0 +1,42 @@
+---
+import { SITE } from '../../lib/site';
+const year = new Date().getUTCFullYear();
+---
+<footer class="relative z-10 border-t b-circuit-soft mt-10" style="background: var(--bg-header)">
+  <div class="footer-row max-w-7xl mx-auto px-4 sm:px-6 py-5 text-xs t-muted">
+    <div class="flex items-center gap-2.5">
+      <span class="w-2 h-2 rounded-full" style="background: var(--accent-primary)" aria-hidden="true"></span>
+      <span class="font-mono-code">ARC LAB // {SITE.author.name} ({SITE.author.nickname})</span>
+    </div>
+    <ul class="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <li><a href={SITE.author.github} class="footer-link" rel="me noopener">GitHub</a></li>
+      <li><a href="/feed.xml" class="footer-link">RSS</a></li>
+      <li><a href="/sitemap.xml" class="footer-link">Sitemap</a></li>
+      <li><span class="font-mono-code text-[11px]">© {year} {SITE.title}</span></li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .footer-link {
+    display: inline-block;
+    padding: 0.4rem 0;
+    color: var(--text-muted);
+  }
+  .footer-link:hover {
+    color: var(--accent-primary);
+    text-decoration: underline;
+  }
+  @media (max-width: 640px) {
+    .footer-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
