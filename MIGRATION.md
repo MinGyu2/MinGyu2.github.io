@@ -84,32 +84,32 @@ highlights are rebuilt as `<mark>` elements.
 - Old archive anchors are kept: `/categories/#<slug>` and `/tags/#<slug>` (lowercase slug, as Minimal
   Mistakes generated them).
 
-## 4. Deployment (repository owner)
+## 4. Deployment (current state)
 
-Nothing has been pushed, merged, or deployed. Branches:
+Deployed on 2026-11-24 from `main` (commit `a4d87f3`, a fast-forward of the former `astro-arc-lab`
+branch, which has since been deleted).
 
-- `legacy-jekyll`: exact copy of `main` at `f83aa10` (last Jekyll state).
-- `astro-arc-lab`: Astro implementation (changes are uncommitted in the working tree until you commit them).
+- **Settings → Pages → Source:** GitHub Actions.
+- **Repository variable** `PAGES_DEPLOY_ENABLED = true` (Settings → Secrets and variables → Actions →
+  Variables). The `deploy` job runs only when it is `true`; a secret or an environment-level variable
+  of the same name is not read.
+- **Workflow** `.github/workflows/deploy.yml`: on pushes to `main` it installs, type-checks, builds,
+  runs `npm run verify` and deploys. Pull requests and manual runs (`workflow_dispatch`) build and
+  verify; manual runs on `main` also deploy.
+- **Branches:** `main` (Astro site) and `legacy-jekyll` (`f83aa10`, last Jekyll state, kept for rollback).
 
-Steps:
-
-1. Review and commit on `astro-arc-lab` (include `package-lock.json`, exclude `.agent-tmp.md`).
-2. Push both branches: `git push origin legacy-jekyll astro-arc-lab`.
-   The workflow builds and verifies on push. It does **not** deploy from `astro-arc-lab`.
-3. Optionally open a PR `astro-arc-lab → main` and check the workflow result.
-4. In **Settings → Pages**, set **Source: GitHub Actions**. Do this before or together with the merge:
-   with the classic "Deploy from branch" source, GitHub would try to build the Astro repo with Jekyll.
-5. In **Settings → Secrets and variables → Actions → Variables**, add `PAGES_DEPLOY_ENABLED = true`.
-6. Merge into `main`. The `deploy` job publishes `dist/`.
-7. Smoke test: `/`, `/linux/ubuntu/LXD_설치및사용/`, `/FileUpload실습(2)/`, `/page14/`, `/feed.xml`,
-   comments on one article, Ctrl+K search for `취약점`.
+Publishing a post: add the Markdown file under `src/content/posts/`, push to `main`, and the site
+deploys automatically. Smoke test after larger changes: `/`, `/linux/ubuntu/LXD_설치및사용/`,
+`/FileUpload실습(2)/`, `/page14/`, `/feed.xml`, comments on `/안녕하세요/` (existing thread),
+Ctrl+K search for `취약점`.
 
 ## 5. Rollback
 
 - **Fast:** Settings → Pages → Source: *Deploy from a branch* → `legacy-jekyll` / `(root)`. GitHub Pages
   rebuilds the untouched Jekyll site (requires `legacy-jekyll` to be pushed). Optionally also set
   `PAGES_DEPLOY_ENABLED` to `false`.
-- **Permanent:** `git revert -m 1 <merge-commit>` on `main` (no history rewrite), then switch the
-  Pages source back to *Deploy from a branch: main*.
+- **Permanent:** on `main`, `git revert a4d87f3` (the migration commit; the merge was a fast-forward,
+  so there is no merge commit) — no history rewrite — then switch the Pages source back to
+  *Deploy from a branch: main*.
 - Comments are unaffected either way: utterances threads are keyed by URL pathname, and both sites use
   the same pathnames.

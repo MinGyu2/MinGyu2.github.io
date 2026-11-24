@@ -1,11 +1,11 @@
 name: Build & Deploy (GitHub Pages)
 
-# Builds on every push/PR. Deployment is opt-in: it runs only on `main` when the
-# repository variable PAGES_DEPLOY_ENABLED is set to "true" AND
+# Builds on pushes to main, pull requests and manual runs. Deployment runs only on
+# `main` when the repository variable PAGES_DEPLOY_ENABLED is set to "true" AND
 # Settings → Pages → Source is "GitHub Actions". See MIGRATION.md.
 on:
   push:
-    branches: [main, astro-arc-lab]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
