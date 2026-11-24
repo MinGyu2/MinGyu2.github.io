@@ -1,5 +1,15 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { RESERVED_PREFIXES, SITE } from './site';
+import {
+  MODULES,
+  getModule,
+  getSeries,
+  getSubmodule,
+  submoduleCode,
+  type KnowledgeModule,
+  type Series,
+  type Submodule,
+} from '../data/taxonomy';
 
 type Entry = CollectionEntry<'posts'>;
 /** A post with its URL, date and source resolved (always present after getPosts()). */
@@ -39,6 +49,7 @@ export async function getPosts(): Promise<Post[]> {
     return a.data.legacySource < b.data.legacySource ? 1 : a.data.legacySource > b.data.legacySource ? -1 : 0;
   });
   assertRoutes(all);
+  assertSeries(all);
   cache = all;
   return all;
 }
@@ -147,65 +158,127 @@ export function postTagKeys(p: Post): string[] {
   return [...new Set(p.data.tags.map(taxonomyKey).filter(Boolean))];
 }
 
+/** Legacy "no category" group (historical categories only; never used for modules). */
 export const UNCATEGORIZED = { key: 'uncategorized', label: '미분류', en: 'Uncategorized' } as const;
 
-/** Category accent tokens (CSS custom properties defined in tokens.css). */
-export const CATEGORY_COLORS = [
-  'var(--cat-1)',
-  'var(--cat-2)',
-  'var(--cat-3)',
-  'var(--cat-4)',
-  'var(--cat-5)',
-  'var(--cat-6)',
-  'var(--cat-7)',
-  'var(--cat-8)',
-];
+/* ------------------------------------------------------------------------------
+ * Knowledge modules (authoritative classification, src/data/taxonomy.ts)
+ * ---------------------------------------------------------------------------- */
 
-export interface CategoryModule extends Term {
+export interface SubmoduleStat extends Submodule {
   code: string;
-  color: string;
+  posts: Post[];
+  count: number;
 }
 
-export interface CategoryStats {
+export interface ModuleStat extends Omit<KnowledgeModule, 'submodules'> {
+  posts: Post[];
+  count: number;
+  /** Percentage of all posts; rounded with the largest-remainder method so the shown values sum to 100. */
+  pct: number;
+  /** All submodules in taxonomy order (including empty ones). */
+  submodules: SubmoduleStat[];
+  /** Only submodules with posts. */
+  populated: SubmoduleStat[];
+}
+
+export interface ModuleStats {
   totalPosts: number;
-  modules: CategoryModule[];
-  uncategorized: Post[];
-  /** Number of posts that belong to more than one category. */
-  multiCategoryPosts: number;
-  /** Sum of all category memberships including the uncategorized group. */
-  membershipTotal: number;
+  /** All modules in taxonomy order. */
+  all: ModuleStat[];
+  /** Only modules with posts (for public listings and the Knowledge Ring). */
+  populated: ModuleStat[];
 }
 
-export async function getCategoryStats(): Promise<CategoryStats> {
+/** Largest-remainder rounding: integer percentages that sum to exactly 100. */
+export function roundedPercentages(counts: number[]): number[] {
+  const total = counts.reduce((a, b) => a + b, 0);
+  if (total === 0) return counts.map(() => 0);
+  const raw = counts.map((c) => (c / total) * 100);
+  const floor = raw.map(Math.floor);
+  let rest = 100 - floor.reduce((a, b) => a + b, 0);
+  const order = raw.map((r, i) => ({ i, frac: r - Math.floor(r) })).sort((a, b) => b.frac - a.frac || a.i - b.i);
+  for (const { i } of order) {
+    if (rest <= 0) break;
+    if (counts[i] > 0) {
+      floor[i]++;
+      rest--;
+    }
+  }
+  return floor;
+}
+
+export async function getModuleStats(): Promise<ModuleStats> {
   const posts = await getPosts();
-  const terms = buildTaxonomy(posts, 'categories');
-  const modules = terms.map((t, i) => ({
-    ...t,
-    code: `MOD-${String(i + 1).padStart(2, '0')}`,
-    color: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
-  }));
-  const uncategorized = posts.filter((p) => postCategoryKeys(p).length === 0);
-  return {
-    totalPosts: posts.length,
-    modules,
-    uncategorized,
-    multiCategoryPosts: posts.filter((p) => postCategoryKeys(p).length > 1).length,
-    membershipTotal: modules.reduce((s, m) => s + m.count, 0) + uncategorized.length,
-  };
+  const all = MODULES.map((m) => {
+    const modPosts = posts.filter((p) => p.data.module === m.id);
+    const submodules = m.submodules.map((s, i) => {
+      const subPosts = modPosts.filter((p) => p.data.submodule === s.id);
+      return { ...s, code: `SUB-${String(i + 1).padStart(2, '0')}`, posts: subPosts, count: subPosts.length };
+    });
+    return { ...m, posts: modPosts, count: modPosts.length, pct: 0, submodules, populated: submodules.filter((s) => s.count > 0) };
+  });
+  const sum = all.reduce((s, m) => s + m.count, 0);
+  if (sum !== posts.length) throw new Error(`Module counts (${sum}) do not add up to the post count (${posts.length})`);
+  const pcts = roundedPercentages(all.map((m) => m.count));
+  all.forEach((m, i) => (m.pct = pcts[i]));
+  return { totalPosts: posts.length, all, populated: all.filter((m) => m.count > 0) };
 }
 
-/** Related posts: shared tags/categories, then nearest in time. */
+export interface PostClassification {
+  module: KnowledgeModule;
+  submodule: Submodule;
+  subCode: string;
+}
+
+export function classificationOf(post: Post): PostClassification {
+  const module = getModule(post.data.module)!;
+  const submodule = getSubmodule(post.data.module, post.data.submodule)!;
+  return { module, submodule, subCode: submoduleCode(module.id, submodule.id) };
+}
+
+/* ------------------------------------------------------------------------------
+ * Series
+ * ---------------------------------------------------------------------------- */
+
+export interface SeriesInfo {
+  series: Series;
+  posts: Post[];
+}
+
+/** Posts of a series ordered by `series.order`. */
+export async function getSeriesPosts(id: string): Promise<SeriesInfo | undefined> {
+  const series = getSeries(id);
+  if (!series) return undefined;
+  const posts = (await getPosts()).filter((p) => p.data.series?.id === id).sort((a, b) => a.data.series!.order - b.data.series!.order);
+  return { series, posts };
+}
+
+function assertSeries(posts: Post[]) {
+  const seen = new Map<string, string>();
+  for (const p of posts) {
+    const s = p.data.series;
+    if (!s) continue;
+    const key = `${s.id}#${s.order}`;
+    if (seen.has(key)) throw new Error(`Series "${s.id}" order ${s.order} is used twice: ${seen.get(key)} and ${p.id}`);
+    seen.set(key, p.id);
+  }
+}
+
+/** Related posts: same series/submodule/module and shared tags, then nearest in time. */
 export function relatedPosts(post: Post, posts: Post[], limit = 3): Post[] {
   const tags = new Set(postTagKeys(post));
-  const cats = new Set(postCategoryKeys(post));
   return posts
     .filter((p) => p.id !== post.id)
     .map((p) => {
+      const sameSeries = !!post.data.series && p.data.series?.id === post.data.series.id;
       const score =
-        postTagKeys(p).filter((t) => tags.has(t)).length * 2 + postCategoryKeys(p).filter((c) => cats.has(c)).length * 3;
+        postTagKeys(p).filter((t) => tags.has(t)).length * 2 +
+        (p.data.submodule === post.data.submodule ? 3 : p.data.module === post.data.module ? 1 : 0) -
+        (sameSeries ? 2 : 0); // series neighbours are already linked in the series panel
       return { p, score, dist: Math.abs(p.data.date.getTime() - post.data.date.getTime()) };
     })
-    .filter((x) => x.score > 0)
+    .filter((x) => x.score > 1)
     .sort((a, b) => b.score - a.score || a.dist - b.dist)
     .slice(0, limit)
     .map((x) => x.p);
@@ -215,11 +288,4 @@ export function relatedPosts(post: Post, posts: Post[], limit = 3): Post[] {
 export function logCode(post: Post, posts: Post[]): string {
   const n = posts.length - posts.indexOf(post);
   return `LOG-${String(n).padStart(3, '0')}`;
-}
-
-/** Category label + color lookup for a post (first category, normalized). */
-export function primaryModule(post: Post, modules: CategoryModule[]): { label: string; color: string; key: string } {
-  const key = postCategoryKeys(post)[0];
-  const m = key ? modules.find((x) => x.key === key) : undefined;
-  return m ? { label: m.label, color: m.color, key: m.key } : { label: UNCATEGORIZED.label, color: 'var(--cat-none)', key: UNCATEGORIZED.key };
 }

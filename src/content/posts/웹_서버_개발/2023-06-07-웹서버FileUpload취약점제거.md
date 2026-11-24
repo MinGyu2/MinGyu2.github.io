@@ -9,6 +9,12 @@ last_modified_at: 2023-06-07T09:13:00-05:00
 date: 2023-06-07
 legacyPath: "/웹서버FileUpload취약점제거/"
 legacySource: "_posts/웹_서버_개발/2023-06-07-웹서버FileUpload취약점제거.md"
+# --- ARC LAB knowledge classification (primary module / submodule / series) ---
+module: security
+submodule: security-lab
+series:
+  id: web-server-lab
+  order: 16
 ---
 
 

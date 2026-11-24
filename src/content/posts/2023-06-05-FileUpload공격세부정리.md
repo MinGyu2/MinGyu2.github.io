@@ -9,6 +9,9 @@ last_modified_at: 2023-06-05T09:13:00-05:00
 date: 2023-06-05
 legacyPath: "/FileUpload공격세부정리/"
 legacySource: "_posts/2023-06-05-FileUpload공격세부정리.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 ## File Upload 공격이란?
 - 공격자가 임의의 파일을 업로드할 수 있는 공격이다.

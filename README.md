@@ -15,8 +15,10 @@ audit, URL-compatibility rules, deployment and rollback procedure.
 | `npm run build` | Static build to `dist/` and Pagefind search index (`dist/pagefind/`) |
 | `npm run preview` | Serve the production build locally |
 | `npm run check` | `astro check` (TypeScript + template diagnostics) |
-| `npm run verify` | Post-build migration checks: content integrity, legacy URLs, feed/sitemap, counts |
-| `npm run migrate` | Re-run the Jekyll → Astro content migration (`--check` to verify only) |
+| `npm run verify` | Runs `verify:site` then `verify:migration` (used by CI after the build) |
+| `npm run verify:site` | Current content + built site: taxonomy, historical URLs, pages, comments mapping, feed/sitemap, links, module statistics |
+| `npm run verify:migration` | Frozen Jekyll → Astro baseline (Git commits in `migration/baseline.json`); never blocks later edits |
+| `npm run migrate -- --check` | Re-run the migration in memory and compare with the baseline migration commit |
 
 ## Writing a post
 
@@ -26,17 +28,39 @@ Create `src/content/posts/<any-folder>/YYYY-MM-DD-<slug>.md`:
 ---
 title: "제목"
 excerpt: "목록에 보일 요약 (선택)"
-categories:
-  - ubuntu
+module: infrastructure        # required — primary knowledge module
+submodule: containers         # required — must belong to the module
 tags:
   - docker
+# series:                     # optional — only for posts in a defined series
+#   id: web-server-lab
+#   order: 20
 ---
 
 본문 (CommonMark + GFM). 코드 블록은 빌드 시 Shiki로 하이라이트됩니다.
 ```
 
-- The URL follows the legacy rule `/:categories/:slug/` (categories lowercased), e.g. `/ubuntu/<slug>/`.
-  Set `legacyPath: "/custom/path/"` to choose a URL explicitly. Migrated posts already record theirs.
+- **Classification** (`module`, `submodule`, `series`) is defined in `src/data/taxonomy.ts`. The build fails
+  with a message listing the valid IDs if a value is missing or does not belong to its module.
+
+  | module | submodules |
+  | --- | --- |
+  | `security` | `web-security`, `wargame`, `security-lab`, `system-security`, `network-security` |
+  | `infrastructure` | `linux`, `windows-wsl`, `containers`, `virtualization`, `networking`, `system-administration` |
+  | `development` | `web-backend`, `desktop-apps`, `developer-tools`, `programming-languages` |
+  | `ai` | `llm-agents`, `local-ai`, `gpu-npu`, `machine-learning` |
+  | `computer-science` | `algorithms`, `computer-architecture`, `operating-systems`, `math-theory` |
+  | `notes` | `blog`, `learning-notes`, `retrospectives`, `technical-documentation` |
+
+  Choose by the article's main purpose, not by keywords it mentions. Empty modules stay hidden until
+  they have a post. To add a submodule or a series, edit only `taxonomy.ts` (series also need a title
+  and description there; `series.order` must be unique within the series).
+- **Tags** are free-form technical keywords, independent of the module.
+- **`categories`** is historical metadata from the Jekyll site. It is not needed for new posts, but if
+  present it still feeds the URL rule below.
+- **URL**: `/:categories/:slug/` (categories lowercased; no categories → `/:slug/`), e.g. `/<slug>/`.
+  Set `legacyPath: "/custom/path/"` to choose a URL explicitly. The module never affects URLs.
+  Migrated posts already record their historical `legacyPath` — do not change it (`verify:site` fails).
 - `date` defaults to the file-name date. `last_modified_at` is shown as the update date when later.
 - Raw HTML is passed through as authored (trusted content), e.g. GitHub Gist `<script>` embeds.
 
@@ -46,18 +70,19 @@ tags:
 src/
   content/posts/        Markdown posts (migrated 1:1 from _posts/, same folder and file names)
   content.config.ts     Content collection schema
-  pages/                Routes: index, posts/, page[num] (legacy pagination), categories/, tags/,
+  pages/                Routes: index, posts/, page[num] (legacy pagination), categories/ (Knowledge Modules), tags/,
                         projects/, lab/, about/, [...slug] (articles at legacy URLs),
                         feed.xml, sitemap.xml, search-index.json, 404
   layouts/              BaseLayout (head, header, footer, search), ArticleLayout (reader)
   components/           hud/ navigation/ blog/ projects/ lab/
   scripts/              Small client modules (theme, search palette, archive filters, reader, lab)
   styles/               tokens.css (theme tokens), global/hud/typography/animations.css
-  data/                 projects.ts, experiments.ts, taxonomy.ts
+  data/                 taxonomy.ts (modules, submodules, series), projects.ts, experiments.ts
   lib/                  posts.ts (collection, ordering, taxonomy), site.ts, Shiki/Markdown plugins
 public/                 Static files (robots.txt, favicon, Google verification, experiments/)
-scripts/                migrate-jekyll.mjs, lib/markdown-compat.mjs, verify-site.mjs
-migration/              inventory.json (legacy ↔ migrated mapping), legacy-urls.txt (live sitemap snapshot)
+scripts/                migrate-jekyll.mjs, lib/markdown-compat.mjs, verify-site.mjs, verify-migration.mjs
+migration/              baseline.json (frozen migration commits), inventory.json (legacy ↔ migrated mapping),
+                        legacy-urls.txt (pre-migration live sitemap), optional retired-urls.txt
 ```
 
 ## Experiment Lab

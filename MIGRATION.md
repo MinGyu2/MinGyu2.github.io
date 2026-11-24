@@ -33,8 +33,11 @@ missing, it uses the source commit recorded in `migration/inventory.json`. For e
 3. writes `migration/inventory.json` with source/target paths, URLs, metadata, SHA-256 of the source and
    migrated bodies, and every transformation with its line number.
 
-`npm run migrate -- --check` regenerates in memory and fails on any difference. `npm run verify`
-re-derives the comparison from Git.
+`npm run migrate -- --check` regenerates in memory and compares with the **frozen migration commit**
+(`migration/baseline.json` → `migrationCommit` `a4d87f3`), so it keeps proving the original migration
+even after posts are edited. Writing into `src/content/posts` is refused when any existing file would
+change unless `--force` is given; use `--out <dir>` for an isolated output. See section 6 for the
+verification commands.
 
 ### Transformations (17 of 70 posts touched; all others byte-identical)
 
@@ -113,3 +116,55 @@ Ctrl+K search for `취약점`.
   *Deploy from a branch: main*.
 - Comments are unaffected either way: utterances threads are keyed by URL pathname, and both sites use
   the same pathnames.
+
+## 6. Knowledge taxonomy and ongoing verification (2026-11-24)
+
+### Taxonomy
+
+`src/data/taxonomy.ts` defines six primary modules with stable IDs, codes and colors:
+`security` (MOD-01), `infrastructure` (MOD-02), `development` (MOD-03), `ai` (MOD-04),
+`computer-science` (MOD-05), `notes` (MOD-06), each with fixed submodules, plus the series
+`web-server-lab`. Every post has exactly one `module` and `submodule` (validated at build time).
+`categories` stays as historical metadata only; URLs never depend on the module.
+
+Classification of the 70 migrated posts (front matter only — `verify:migration` reports
+"70 with front-matter-only edits; 0 with body edits"):
+
+| Module / submodule | Posts |
+| --- | --- |
+| security / web-security | 26 — SQLi, XSS, CSRF, SSRF, File Upload/LFI/RFI, Log4Shell, plus judgment calls below |
+| security / wargame | 9 — wargame.kr / Dreamhack problems |
+| security / security-lab | 19 — the whole 웹_서버_개발 series (`series: web-server-lab`, order 1–19) |
+| security / system-security | 1 — BoF & FSB |
+| security / network-security | 1 — MITM / ARP spoofing |
+| infrastructure / containers | 4 — Docker ×3, LXD |
+| infrastructure / system-administration | 2 — SSH host-key error, Oracle DB user/privilege administration |
+| infrastructure / linux · windows-wsl · networking | 1 each — Debian Korean fonts, WSL VHDX, IP & MAC |
+| development / developer-tools | 2 — Selenium, Log4j usage |
+| development / web-backend | 1 — JSP/Servlet/Spring concepts |
+| notes / blog · technical-documentation | 1 each — blog introduction, report writing |
+
+Judgment calls (decided from the article content, not keywords):
+
+- `1주차수업` (pentest course week 1), `로그인인증방식` (presents cookie auth as tamperable),
+  `웹서버용어간단한정리` (authentication/authorization vulnerabilities), `JWT` (integrity/tamper detection),
+  `주통기반` → **web-security**.
+- `웹서버XSS취약점`, `FileUpload실습1/(2)`, `ErrorBasedSQLi` attack the self-built server, but their
+  purpose is the attack technique → **web-security**. **security-lab** is reserved for building the
+  controlled environment (the 19-part series).
+- `웹개념` has no security framing → **development / web-backend**. `오라클DB` is DB user, privilege
+  and tablespace administration → **infrastructure / system-administration**.
+- Series order follows publication date. Titles skip "16"; the unnumbered
+  "웹 서버의 File Upload 취약점 traversal" (2023-06-07) is position 16. Titles were not changed.
+
+### Verification commands
+
+| Command | Scope | Blocks normal edits? |
+| --- | --- | --- |
+| `npm run verify:site` | Current posts and `dist/`: valid classification and unique series orders; migrated posts keep their recorded `legacyPath`; every URL in `migration/legacy-urls.txt` is generated; one page per post with canonical URL, utterances (`MinGyu2/comments`, `pathname`), search body; feed/sitemap/robots/Pagefind; internal links; Knowledge Ring counts each post once (sum = post count, percentages = 100, populated modules only) | No — any post count, any edit that keeps historical URLs |
+| `npm run verify:migration` | Frozen baseline from Git: source hashes at `f83aa10`, migration reproduces `a4d87f3` exactly, baseline front matter/body hashes; reports drift of current posts as information | No |
+| `npm run verify` | Both (CI runs it after the build; needs `fetch-depth: 0`) | No |
+
+Retiring a historical post on purpose: list its URL in `migration/retired-urls.txt` (one path per
+line); otherwise `verify:site` fails when a migrated post or its URL disappears.
+

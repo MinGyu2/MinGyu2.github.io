@@ -1,5 +1,5 @@
 ---
-import { excerptOf, formatDate, readingMinutes, displayTitle, logCode, primaryModule, getPosts, getCategoryStats, type Post } from '../../lib/posts';
+import { excerptOf, formatDate, readingMinutes, displayTitle, logCode, getPosts, classificationOf, type Post } from '../../lib/posts';
 interface Props {
   post: Post;
   variant?: 'hud' | 'clean';
@@ -8,8 +8,9 @@ interface Props {
 }
 const { post, variant = 'clean', headingLevel = 3, maxTags = 4 } = Astro.props;
 const posts = await getPosts();
-const { modules } = await getCategoryStats();
-const mod = primaryModule(post, modules);
+const cls = classificationOf(post);
+const mod = { color: cls.module.color, label: `${cls.module.short} · ${cls.submodule.name}` };
+const seriesLabel = post.data.series ? `#${String(post.data.series.order).padStart(2, '0')}` : '';
 const code = logCode(post, posts);
 const minutes = readingMinutes(post);
 const summary = excerptOf(post);
@@ -26,7 +27,7 @@ const date = formatDate(post.data.date);
           <div class="flex items-center justify-between gap-2 mb-2.5 font-mono-code text-[11px]">
             <span class="flex items-center gap-1.5 min-w-0 t-muted">
               <span class="w-2 h-2 rounded-full shrink-0" style={`background:${mod.color}`} aria-hidden="true" />
-              <span class="truncate">{code} · {mod.label}</span>
+              <span class="truncate">{code} · {mod.label}{seriesLabel && ` · ${seriesLabel}`}</span>
             </span>
             <span class="t-muted shrink-0">{minutes}분</span>
           </div>
@@ -49,7 +50,7 @@ const date = formatDate(post.data.date);
         <div class="flex items-center justify-between font-mono-code text-[11px] mb-2 gap-2">
           <span class="flex items-center gap-1.5 min-w-0 t-muted">
             <span class="w-2 h-2 rounded-full shrink-0" style={`background:${mod.color}`} aria-hidden="true" />
-            <span class="truncate">{code} · {mod.label}</span>
+            <span class="truncate">{code} · {mod.label}{seriesLabel && ` · ${seriesLabel}`}</span>
           </span>
           <span class="t-muted shrink-0">
             <time datetime={post.data.date.toISOString()}>{date}</time> · {minutes}분

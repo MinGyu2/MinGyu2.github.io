@@ -3,23 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HudPanel from '../components/hud/HudPanel.astro';
 import KnowledgeRing from '../components/hud/KnowledgeRing.astro';
 import PostCard from '../components/blog/PostCard.astro';
-import { buildTaxonomy, formatDate, getCategoryStats, getPosts, UNCATEGORIZED } from '../lib/posts';
+import { buildTaxonomy, formatDate, getModuleStats, getPosts } from '../lib/posts';
 import { SITE } from '../lib/site';
 import { PROJECTS } from '../data/projects';
 import { EXPERIMENTS } from '../data/experiments';
 
 const posts = await getPosts();
-const stats = await getCategoryStats();
+const stats = await getModuleStats();
 const tags = buildTaxonomy(posts, 'tags');
 const recent = posts.slice(0, 4);
 const latest = posts[0];
 const featured = PROJECTS[0];
 const lab = EXPERIMENTS.find((e) => e.status === 'available');
-const segments = [
-  ...stats.modules.map((m) => ({ key: m.key, label: m.label, count: m.count, color: m.color })),
-  { key: UNCATEGORIZED.key, label: UNCATEGORIZED.label, count: stats.uncategorized.length, color: 'var(--cat-none)' },
-];
-const pct = (n: number) => Math.round((n / stats.totalPosts) * 100);
+// One segment per populated primary module; every post is counted exactly once.
+const segments = stats.populated.map((m) => ({ key: m.id, label: m.name, count: m.count, color: m.color, pct: m.pct, code: m.code, ko: m.ko }));
 const pad = (n: number) => String(n).padStart(2, '0');
 ---
 <BaseLayout nav="command" view="command" description={`${SITE.title} — ${SITE.author.name}(${SITE.author.nickname})의 기술 기록소`}>
@@ -42,7 +39,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 
         <div class="mt-6 flex flex-wrap items-center gap-2.5">
           <a href={latest.data.legacyPath} class="btn-primary px-4 py-2 text-sm rounded">최신 기술 문서 읽기</a>
-          <a href="/projects/" class="btn-outline px-4 py-2 text-sm rounded">웹 서버 프로젝트 보기</a>
+          <a href="/projects/" class="btn-outline px-4 py-2 text-sm rounded">보안 실습 서버 보기</a>
           <button type="button" class="btn-outline px-4 py-2 text-sm rounded" data-search-open aria-haspopup="dialog" aria-controls="search-dialog">전체 검색 열기</button>
         </div>
 
@@ -53,7 +50,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
           </div>
           <div class="kpi-tile">
             <dt class="font-mono-code text-[11px] t-muted">MODULES</dt>
-            <dd class="font-hud text-2xl font-bold t-cyan mt-0.5">{pad(stats.modules.length)}</dd>
+            <dd class="font-hud text-2xl font-bold t-cyan mt-0.5">{pad(stats.populated.length)}</dd>
           </div>
           <div class="kpi-tile">
             <dt class="font-mono-code text-[11px] t-muted">TAG INDEX</dt>
@@ -69,35 +66,33 @@ const pad = (n: number) => String(n).padStart(2, '0');
       <HudPanel class="reveal reveal-d1" as="section" aria-labelledby="ring-title" innerClass="p-6 p-pad flex flex-col">
         <div class="flex items-center justify-between mb-2">
           <h2 id="ring-title" class="panel-id">HUD-02 // KNOWLEDGE RING</h2>
-          <span class="font-mono-code text-[11px] t-muted">CATEGORIES</span>
+          <span class="font-mono-code text-[11px] t-muted">PRIMARY MODULES</span>
         </div>
         <div class="my-2">
-          <KnowledgeRing segments={segments} totalPosts={stats.totalPosts} moduleCount={stats.modules.length} />
+          <KnowledgeRing segments={segments} totalPosts={stats.totalPosts} moduleCount={stats.populated.length} />
         </div>
-        <ul class="ring-legend gap-1 mt-2" aria-label="카테고리별 게시글 수">
+        <ul class="ring-legend gap-1 mt-2" aria-label="지식 모듈별 게시글 수">
           {
             segments.map((s) => (
               <li>
-                <a href={`/posts/?category=${encodeURIComponent(s.key)}`} class="ring-legend-item">
+                <a href={`/posts/?module=${s.key}`} class="ring-legend-item" data-ring-module={s.key} data-count={s.count} data-pct={s.pct}>
                   <span class="flex items-center gap-2 t-body min-w-0">
                     <span class="w-2.5 h-2.5 rounded-full shrink-0" style={`background:${s.color}`} aria-hidden="true" />
+                    <span class="font-mono-code text-[11px] t-muted shrink-0">{s.code}</span>
                     <span class="truncate">{s.label}</span>
                   </span>
                   <span class="font-mono-code text-xs t-muted shrink-0 ml-2">
-                    {s.count} ({pct(s.count)}%)
+                    {s.count} ({s.pct}%)
                   </span>
                 </a>
               </li>
             ))
           }
         </ul>
-        {
-          stats.multiCategoryPosts > 0 && (
-            <p class="mt-3 text-[11px] t-muted leading-snug">
-              * {stats.multiCategoryPosts}개 글은 2개 이상의 카테고리에 속해 각 카테고리에 모두 집계됩니다. 비율은 전체 {stats.totalPosts}개 글 기준입니다.
-            </p>
-          )
-        }
+        <p class="mt-3 text-[11px] t-muted leading-snug">
+          * 모든 글은 하나의 주 모듈에만 속합니다. 비율은 전체 {stats.totalPosts}개 글 기준이며 합계가 100%가 되도록 반올림했습니다.
+          <a href="/categories/" class="link-cyan">모듈 구조 보기 -&gt;</a>
+        </p>
       </HudPanel>
     </section>
 
@@ -127,7 +122,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
             <span class="t-amber">{featured.architecture?.length ?? 0} STAGES</span>
           </div>
           <h3 class="font-hud text-lg font-bold t-heading">{featured.title}</h3>
-          <p class="mt-1.5 text-[13px] t-muted leading-relaxed">Nginx · Tomcat · Oracle DB로 구성한 웹 서버의 인터랙티브 구조도를 확인하세요.</p>
+          <p class="mt-1.5 text-[13px] t-muted leading-relaxed">웹 취약점 재현·검증을 위해 직접 구축한 Nginx · Tomcat · Oracle DB 실습 서버의 인터랙티브 구조도를 확인하세요.</p>
           <div class="mt-4 flex items-center justify-between text-xs font-mono-code t-cyan">
             <span>OPEN BLUEPRINT</span><span aria-hidden="true">-&gt;</span>
           </div>
@@ -174,12 +169,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 <style>
   .ring-legend {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  @media (max-width: 420px) {
-    .ring-legend {
-      grid-template-columns: minmax(0, 1fr);
-    }
+    grid-template-columns: minmax(0, 1fr);
   }
   .ring-legend-item {
     display: flex;

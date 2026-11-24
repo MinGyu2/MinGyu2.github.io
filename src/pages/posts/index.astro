@@ -3,33 +3,41 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/blog/PostCard.astro';
 import {
   buildTaxonomy,
+  classificationOf,
   excerptOf,
-  getCategoryStats,
+  getModuleStats,
   getPosts,
   logCode,
   postCategoryKeys,
   postTagKeys,
   UNCATEGORIZED,
 } from '../../lib/posts';
+import { SERIES } from '../../data/taxonomy';
 
 const posts = await getPosts();
-const stats = await getCategoryStats();
+const stats = await getModuleStats();
 const tags = buildTaxonomy(posts, 'tags');
-const chips = [
-  ...stats.modules.map((m) => ({ key: m.key, label: m.label, count: m.count, color: m.color })),
-  { key: UNCATEGORIZED.key, label: UNCATEGORIZED.label, count: stats.uncategorized.length, color: 'var(--cat-none)' },
-];
-const haystack = (p: (typeof posts)[number]) =>
-  [p.data.title, excerptOf(p, 400), ...p.data.tags, ...p.data.categories, logCode(p, posts)].join(' ').toLowerCase();
+const legacyCategories = buildTaxonomy(posts, 'categories');
+const haystack = (p: (typeof posts)[number]) => {
+  const c = classificationOf(p);
+  return [p.data.title, excerptOf(p, 400), ...p.data.tags, ...p.data.categories, logCode(p, posts), c.module.name, c.module.ko, c.submodule.name, c.submodule.ko]
+    .join(' ')
+    .toLowerCase();
+};
+// Labels for legacy ?category= and ?series= chips (rendered by the archive script)
+const filterLabels = {
+  category: Object.fromEntries([...legacyCategories.map((c) => [c.key, c.label]), [UNCATEGORIZED.key, UNCATEGORIZED.label]]),
+  series: Object.fromEntries(SERIES.map((s) => [s.id, s.title])),
+};
 ---
-<BaseLayout title="Dev Logs · 기술 게시글" nav="logs" view="logs" description={`기술 게시글 전체 ${posts.length}개 — 카테고리, 태그, 키워드로 찾아보기`}>
+<BaseLayout title="Dev Logs · 기술 게시글" nav="logs" view="logs" description={`기술 게시글 전체 ${posts.length}개 — 지식 모듈, 태그, 키워드로 찾아보기`}>
   <div class="space-y-6 reveal">
     <section class="clean-card p-5 sm:p-6" aria-labelledby="logs-title">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
           <span class="panel-id">ARCHIVE // DEVELOPMENT LOGS</span>
           <h1 id="logs-title" class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">기술 게시글</h1>
-          <p class="text-[13px] sm:text-sm t-muted mt-1">카테고리, 태그, 키워드를 조합해 원하는 기술 문서를 찾을 수 있습니다.</p>
+          <p class="text-[13px] sm:text-sm t-muted mt-1">주 모듈 · 세부 모듈 · 태그 · 키워드를 조합해 원하는 기술 문서를 찾을 수 있습니다.</p>
         </div>
         <div class="w-full sm:w-80 js-only">
           <label for="log-filter-q" class="sr-only">게시글 필터 검색 (제목, 요약, 태그)</label>
@@ -37,17 +45,32 @@ const haystack = (p: (typeof posts)[number]) =>
         </div>
       </div>
 
-      <div class="mt-4 flex flex-wrap items-center gap-2 js-only" role="group" aria-label="카테고리 필터">
-        <button type="button" class="filter-chip" data-filter-category="" aria-pressed="true">전체 ({posts.length})</button>
+      <div class="mt-4 flex flex-wrap items-center gap-2 js-only" role="group" aria-label="주 모듈 필터">
+        <button type="button" class="filter-chip" data-filter-module="" aria-pressed="true">전체 ({posts.length})</button>
         {
-          chips.map((c) => (
-            <button type="button" class="filter-chip" data-filter-category={c.key} aria-pressed="false">
-              <span class="w-2 h-2 rounded-full" style={`background:${c.color}`} aria-hidden="true" />
-              {c.label} ({c.count})
+          stats.populated.map((m) => (
+            <button type="button" class="filter-chip" data-filter-module={m.id} aria-pressed="false">
+              <span class="w-2 h-2 rounded-full" style={`background:${m.color}`} aria-hidden="true" />
+              {m.name} ({m.count})
             </button>
           ))
         }
       </div>
+
+      <div class="mt-2 flex flex-wrap items-center gap-2 js-only" role="group" aria-label="세부 모듈 필터" id="log-sub-group" hidden>
+        <span class="font-mono-code text-[11px] t-muted mr-1">SUB</span>
+        {
+          stats.populated.flatMap((m) =>
+            m.populated.map((s) => (
+              <button type="button" class="filter-chip sub-chip" data-filter-submodule={s.id} data-module={m.id} aria-pressed="false" hidden>
+                {s.code} · {s.name} ({s.count})
+              </button>
+            )),
+          )
+        }
+      </div>
+
+      <div class="mt-2 flex flex-wrap items-center gap-2 js-only" id="log-extra-chips"></div>
 
       <div class="mt-3 flex flex-wrap items-center gap-2 js-only">
         <label for="log-filter-tag" class="font-mono-code text-[11px] t-muted">TAG</label>
@@ -62,10 +85,20 @@ const haystack = (p: (typeof posts)[number]) =>
       </div>
     </section>
 
+    <script type="application/json" id="log-filter-labels" set:html={JSON.stringify(filterLabels)} />
     <ul class="grid-2" id="log-list">
       {
         posts.map((p) => (
-          <li data-log-item data-categories={postCategoryKeys(p).join(' ') || UNCATEGORIZED.key} data-tags={postTagKeys(p).join(' ')} data-search={haystack(p)}>
+          <li
+            data-log-item
+            data-module={p.data.module}
+            data-submodule={p.data.submodule}
+            data-series={p.data.series?.id ?? ''}
+            data-series-order={p.data.series?.order ?? ''}
+            data-categories={postCategoryKeys(p).join(' ') || UNCATEGORIZED.key}
+            data-tags={postTagKeys(p).join(' ')}
+            data-search={haystack(p)}
+          >
             <PostCard post={p} variant="clean" headingLevel={2} />
           </li>
         ))
@@ -117,7 +150,14 @@ const haystack = (p: (typeof posts)[number]) =>
     border-color: var(--accent-primary);
     color: var(--accent-primary);
   }
-  [data-log-item][hidden] {
+  .filter-chip.legacy {
+    border-color: var(--accent-amber);
+    color: var(--accent-amber);
+    background: var(--accent-amber-soft);
+    font-family: var(--font-mono);
+  }
+  [data-log-item][hidden],
+  .sub-chip[hidden] {
     display: none;
   }
 </style>

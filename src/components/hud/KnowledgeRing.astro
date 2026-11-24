@@ -1,9 +1,8 @@
 ---
 /**
  * Segmented Knowledge Ring, computed at build time from the content collection.
- * Each segment is proportional to a category's post count; posts that belong to
- * several categories are counted once per category, and posts without a category
- * form the "미분류" segment. Segment counts are the exact legend counts.
+ * Callers pass one segment per populated primary module; every post belongs to exactly
+ * one module, so segment counts sum to the post count and equal the legend counts.
  */
 export interface RingSegment {
   key: string;
@@ -84,7 +83,6 @@ const label = `카테고리 분포 원형 차트: 총 ${totalPosts}개 게시글
         stroke-dasharray={`${a.dash} ${a.rest}`}
         transform={`rotate(${a.rot} 100 100)`}
         data-segment={a.key}
-        opacity={a.key === 'uncategorized' ? 0.7 : 1}
       >
         <title>{`${a.label}: ${a.count}`}</title>
       </circle>

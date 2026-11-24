@@ -10,6 +10,9 @@ last_modified_at: 2023-05-31T09:13:00-05:00
 date: 2023-05-31
 legacyPath: "/FileUpload실습1/"
 legacySource: "_posts/2023-05-31-FileUpload실습1.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 ## File Upload 취약점이란?
 - 파일 업로드 기능의 취약점을 이용하여 악의적인 파일(웹쉘)을 업로드한다. 이러한 업로드를 통해 서버의 시스템 권환을 장악할 수 있다.

@@ -9,6 +9,9 @@ last_modified_at: 2023-05-27T09:13:00-05:00
 date: 2023-05-27
 legacyPath: "/SSRF실습문제BasicSSRF/"
 legacySource: "_posts/2023-05-27-SSRF실습문제BasicSSRF.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 
 ## SSRF 란?

@@ -12,6 +12,9 @@ last_modified_at: 2023-08-27T09:13:00-05:00
 date: 2023-08-27
 legacyPath: "/dreamhack/php_typeconfusion/"
 legacySource: "_posts/dreamhack/2023-08-27-php_typeconfusion.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: wargame
 ---
 ## PHP 형 변환
 - [문제](https://dreamhack.io/wargame/challenges/329)

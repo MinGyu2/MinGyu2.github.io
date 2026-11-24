@@ -10,6 +10,9 @@ last_modified_at: 2023-11-10T09:13:00-05:00
 date: 2023-11-02
 legacyPath: "/ubuntu/dockerAndqemu/"
 legacySource: "_posts/Linux/Ubuntu/2023-11-02-dockerAndqemu.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: infrastructure
+submodule: containers
 ---
 
 - 다른 아키텍처 이미지를 동작시키기 위해서는 qemu 가 필요하다.

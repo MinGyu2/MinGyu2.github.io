@@ -11,6 +11,9 @@ last_modified_at: 2023-05-12T09:13:00-05:00
 date: 2023-05-12
 legacyPath: "/BlindSQLi실습/"
 legacySource: "_posts/2023-05-12-BlindSQLi실습.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 ## 실습 환경
 - 오라클 DB

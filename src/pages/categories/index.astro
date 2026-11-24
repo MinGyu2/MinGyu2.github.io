@@ -1,111 +1,149 @@
 ---
 /**
- * Knowledge Modules — category exploration. Also serves the legacy
- * /categories/ archive: each category keeps its old anchor (#<slug>).
+ * Knowledge Modules — primary module / submodule exploration (authoritative taxonomy).
+ * The legacy Jekyll category archive stays at the bottom of this page so historical
+ * anchors such as /categories/#dreamhack keep working.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HudPanel from '../../components/hud/HudPanel.astro';
 import KnowledgeRing from '../../components/hud/KnowledgeRing.astro';
-import { buildTaxonomy, displayTitle, formatDate, getCategoryStats, getPosts, UNCATEGORIZED } from '../../lib/posts';
-import { CATEGORY_DESCRIPTIONS } from '../../data/taxonomy';
+import { buildTaxonomy, displayTitle, formatDate, getModuleStats, getPosts, postCategoryKeys, UNCATEGORIZED } from '../../lib/posts';
+import { SERIES } from '../../data/taxonomy';
 
 const posts = await getPosts();
-const stats = await getCategoryStats();
+const stats = await getModuleStats();
 const tags = buildTaxonomy(posts, 'tags');
-const modules = [
-  ...stats.modules.map((m) => ({ ...m, ko: m.variants.length > 1 ? `표기: ${m.variants.join(' · ')}` : '' })),
-  {
-    key: UNCATEGORIZED.key,
-    label: UNCATEGORIZED.label,
-    code: 'MOD-00',
-    color: 'var(--cat-none)',
-    count: stats.uncategorized.length,
-    posts: stats.uncategorized,
-    variants: [],
-    ko: UNCATEGORIZED.en,
-  },
-];
-const pct = (n: number) => Math.round((n / stats.totalPosts) * 100);
+const legacy = [
+  ...buildTaxonomy(posts, 'categories'),
+  { key: UNCATEGORIZED.key, label: UNCATEGORIZED.label, variants: [], posts: posts.filter((p) => postCategoryKeys(p).length === 0), count: 0 },
+].map((t) => ({ ...t, count: t.posts.length }));
+const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.series?.id === s.id).length })).filter((s) => s.count > 0);
 ---
-<BaseLayout title="Knowledge Modules · 카테고리" nav="modules" view="modules" description="카테고리별 지식 모듈과 태그 인덱스">
+<BaseLayout title="Knowledge Modules · 지식 모듈" nav="modules" view="modules" description="주 모듈과 세부 모듈로 정리한 기술 게시글 지식 구조">
   <div class="space-y-6 reveal">
     <section class="clean-card p-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
       <div>
         <span class="panel-id">INDEX // KNOWLEDGE MODULES</span>
-        <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">지식 모듈 및 태그 인덱스</h1>
+        <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">지식 모듈</h1>
         <p class="text-sm t-muted mt-1.5 max-w-2xl">
-          글에 지정된 카테고리를 그대로 모듈로 보여줍니다. 대소문자만 다른 표기(예: Ubuntu · ubuntu)는 하나로 묶었고, 글 주소에는 영향을 주지 않습니다.
+          모든 글은 하나의 주 모듈과 그 아래 하나의 세부 모듈에 속합니다. 기술 태그는 이와 별개로 붙으며, 글 주소는 분류와 무관하게 그대로 유지됩니다.
         </p>
         <p class="mt-3 font-mono-code text-xs t-muted">
-          {stats.totalPosts} LOGS · {stats.modules.length} MODULES · {tags.length} TAGS · <a href="/tags/" class="link-cyan">TAG INDEX -&gt;</a>
+          {stats.totalPosts} LOGS · {stats.populated.length} MODULES · {stats.populated.reduce((s, m) => s + m.populated.length, 0)} SUBMODULES · {tags.length} TAGS ·
+          <a href="/tags/" class="link-cyan">TAG INDEX -&gt;</a>
         </p>
       </div>
       <div class="w-44 shrink-0 self-center">
         <KnowledgeRing
-          segments={modules.map((m) => ({ key: m.key, label: m.label, count: m.count, color: m.color }))}
+          segments={stats.populated.map((m) => ({ key: m.id, label: m.name, count: m.count, color: m.color }))}
           totalPosts={stats.totalPosts}
-          moduleCount={stats.modules.length}
+          moduleCount={stats.populated.length}
         />
       </div>
     </section>
 
-    <ul class="grid-2">
+    <ul class="grid-2" aria-label="주 모듈">
       {
-        modules.map((m) => (
+        stats.populated.map((m) => (
           <li>
-            <HudPanel href={`/posts/?category=${encodeURIComponent(m.key)}`} innerClass="p-5 flex flex-col justify-between" aria-label={`${m.label} 모듈 문서 ${m.count}개 보기`}>
+            <HudPanel as="section" id={`module-${m.id}`} aria-labelledby={`module-${m.id}-title`} innerClass="p-5 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between font-mono-code text-xs mb-2 gap-2">
                   <span class="flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full" style={`background:${m.color}`} aria-hidden="true" />
-                    <span class="t-muted">{m.code}</span>
+                    <span class="t-muted">{m.code} // {m.name.toUpperCase()}</span>
                   </span>
                   <span class="px-2 py-0.5 bg-inset border b-circuit t-body rounded-sm">
-                    {m.count}개 문서 ({pct(m.count)}%)
+                    {m.count}개 문서 ({m.pct}%)
                   </span>
                 </div>
-                <h2 class="font-hud text-xl font-bold t-heading">{m.label}</h2>
-                {m.ko && <p class="text-[13px] t-cyan mt-0.5">{m.ko}</p>}
-                {CATEGORY_DESCRIPTIONS[m.key] && <p class="text-[13px] t-muted mt-2.5 leading-relaxed">{CATEGORY_DESCRIPTIONS[m.key]}</p>}
+                <h2 id={`module-${m.id}-title`} class="font-hud text-xl font-bold t-heading">
+                  <a href={`/posts/?module=${m.id}`} class="hover:text-[var(--accent-primary)]">
+                    {m.name}
+                  </a>
+                </h2>
+                <p class="text-[13px] t-cyan mt-0.5">{m.ko}</p>
+                <p class="text-[13px] t-muted mt-2 leading-relaxed">{m.description}</p>
                 <div class="module-meter mt-3" aria-hidden="true">
-                  <span style={`width:${Math.max(2, pct(m.count))}%;background:${m.color}`} />
+                  <span style={`width:${Math.max(2, m.pct)}%;background:${m.color}`} />
                 </div>
               </div>
-              <div class="mt-4 pt-3 border-t b-circuit-soft font-mono-code text-xs t-cyan">모듈 문서 보기 -&gt;</div>
+              <ul class="mt-4 pt-3 border-t b-circuit-soft space-y-1" aria-label={`${m.name} 세부 모듈`}>
+                {m.populated.map((s) => (
+                  <li id={`sub-${s.id}`}>
+                    <a href={`/posts/?module=${m.id}&submodule=${s.id}`} class="sub-link">
+                      <span class="min-w-0">
+                        <span class="font-mono-code text-[11px] t-muted">{s.code} // </span>
+                        <span class="text-[13px] t-body">{s.name}</span>
+                        <span class="text-[12px] t-muted"> · {s.ko}</span>
+                      </span>
+                      <span class="font-mono-code text-xs t-muted shrink-0">{s.count}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </HudPanel>
           </li>
         ))
       }
     </ul>
 
-    <section aria-labelledby="cat-archive-title" class="space-y-4">
-      <h2 id="cat-archive-title" class="panel-id">ARCHIVE // POSTS BY CATEGORY</h2>
-      {
-        modules.map((m) => (
-          <section id={m.key} class="clean-card p-5" aria-labelledby={`cat-${m.key}`}>
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <h3 id={`cat-${m.key}`} class="font-hud text-lg font-bold t-heading flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full" style={`background:${m.color}`} aria-hidden="true" />
-                {m.label}
-              </h3>
-              <span class="font-mono-code text-xs t-muted">{m.count}</span>
-            </div>
-            <ul class="divide-y b-circuit-soft">
-              {m.posts.map((p) => (
-                <li class="py-2 flex items-baseline justify-between gap-4">
-                  <a href={p.data.legacyPath} class="text-sm t-body hover:text-[var(--accent-primary)]">
-                    {displayTitle(p)}
+    {
+      seriesList.length > 0 && (
+        <section class="clean-card p-5" aria-labelledby="series-title">
+          <h2 id="series-title" class="panel-id mb-3">SERIES // 연재</h2>
+          <ul class="space-y-2">
+            {seriesList.map((s) => (
+              <li class="flex flex-wrap items-baseline justify-between gap-2">
+                <a href={`/posts/?series=${s.id}`} class="text-sm t-heading font-semibold hover:text-[var(--accent-primary)]">
+                  {s.title} <span class="t-muted font-normal">· {s.ko}</span>
+                </a>
+                <span class="font-mono-code text-[11px] t-muted">{s.count}편</span>
+                <p class="w-full text-[13px] t-muted">{s.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <details class="clean-card p-5 legacy-archive">
+      <summary class="cursor-pointer min-h-11 flex items-center justify-between gap-3">
+        <span>
+          <span class="panel-id">LEGACY // POSTS BY ORIGINAL CATEGORY</span>
+          <span class="block text-[13px] t-muted mt-1">이전 블로그의 카테고리(과거 메타데이터) 기준 목록입니다. 기존 링크 호환을 위해 유지합니다.</span>
+        </span>
+        <span class="font-mono-code text-[11px] t-cyan shrink-0">{legacy.length} GROUPS</span>
+      </summary>
+      <div class="mt-4 space-y-4">
+        {
+          legacy.map((c) => (
+            <section id={c.key} aria-labelledby={`cat-${c.key}`}>
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <h3 id={`cat-${c.key}`} class="font-mono-code text-sm font-semibold t-heading">
+                  <a href={`/posts/?category=${encodeURIComponent(c.key)}`} class="hover:text-[var(--accent-primary)]">
+                    {c.label}
                   </a>
-                  <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={p.data.date.toISOString()}>
-                    {formatDate(p.data.date)}
-                  </time>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))
-      }
-    </section>
+                </h3>
+                <span class="font-mono-code text-xs t-muted">{c.count}</span>
+              </div>
+              <ul class="divide-y b-circuit-soft">
+                {c.posts.map((p) => (
+                  <li class="py-1.5 flex items-baseline justify-between gap-4">
+                    <a href={p.data.legacyPath} class="text-[13px] t-body hover:text-[var(--accent-primary)]">
+                      {displayTitle(p)}
+                    </a>
+                    <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={p.data.date.toISOString()}>
+                      {formatDate(p.data.date)}
+                    </time>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+      </div>
+    </details>
   </div>
 </BaseLayout>
 
@@ -120,7 +158,42 @@ const pct = (n: number) => Math.round((n / stats.totalPosts) * 100);
     display: block;
     height: 100%;
   }
+  .sub-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 2.25rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    background: var(--bg-inset);
+    border: 1px solid transparent;
+  }
+  .sub-link:hover {
+    border-color: var(--accent-primary);
+  }
   .divide-y > li + li {
     border-top: 1px solid var(--circuit-line-soft);
   }
+  .legacy-archive summary {
+    list-style: none;
+  }
+  .legacy-archive summary::-webkit-details-marker {
+    display: none;
+  }
 </style>
+
+<script>
+  // Open the legacy archive automatically when arriving via an old anchor (/categories/#dreamhack).
+  const open = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const el = id ? document.getElementById(id) : null;
+    const details = el?.closest('details');
+    if (details && !details.open) {
+      details.open = true;
+      el!.scrollIntoView();
+    }
+  };
+  open();
+  window.addEventListener('hashchange', open);
+</script>

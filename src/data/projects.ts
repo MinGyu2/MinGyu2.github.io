@@ -19,14 +19,17 @@ export interface Project {
   id: string;
   code: string;
   title: string;
+  subtitle?: string;
+  /** Article series documenting the project (src/data/taxonomy.ts) */
+  seriesId?: string;
+  /** Documented security exercises/findings — each must link to the post that records it. */
+  findings?: { label: string; href: string }[];
   summary: string;
   status: string;
   verification: 'verified';
   verificationNote: string;
   stack: string[];
   links: { label: string; href: string }[];
-  /** legacySource prefix used to list the project's posts */
-  postSourcePrefix?: string;
   architecture?: ArchNode[];
 }
 
@@ -36,18 +39,25 @@ export const PROJECTS: Project[] = [
   {
     id: 'jsp-web-server',
     code: 'PRJ-01',
-    title: 'JSP · Servlet 웹 서버 만들기',
+    title: 'Web Server Security Lab',
+    subtitle: 'JSP · Servlet 기반 보안 실습용 웹 서버',
     summary:
-      'Nginx 리버스 프록시와 Apache Tomcat(Servlet/JSP), Oracle DB를 연동해 로그인·회원가입·게시판·파일 업로드/다운로드·마이페이지·비회원 문의 게시판까지 단계별로 구현하고 기록한 연재입니다.',
+      '웹 취약점을 학습·재현·검증하기 위한 통제된 실습 환경으로 직접 구축한 웹 서버입니다. Nginx 리버스 프록시, Apache Tomcat(Servlet/JSP), Oracle DB를 연동해 로그인·회원가입·게시판·파일 업로드/다운로드·마이페이지·비회원 문의 게시판을 구현했고, 이 기능들을 대상으로 공격을 시도하고 발견한 취약점을 보완했습니다.',
     status: '연재 기록 19편 · 2023-04-02 ~ 2023-06-22',
     verification: 'verified',
-    verificationNote: '구성과 기능은 모두 「웹서버 만들기」 연재 글에 기록된 내용만 반영했습니다.',
+    verificationNote: '구성·기능·취약점 사례는 모두 「웹서버 만들기」 연재와 관련 실습 글에 기록된 내용만 반영했습니다.',
+    seriesId: 'web-server-lab',
+    findings: [
+      { label: '파일 업로드 저장 경로 조작(Traversal) 취약점을 발견하고 특정 문자 차단으로 제거', href: '/웹서버FileUpload취약점제거/' },
+      { label: '직접 만든 로그인 페이지에서 Reflected XSS 취약점 확인', href: '/웹서버XSS취약점/' },
+      { label: '직접 만든 웹 페이지의 업로드 기능을 대상으로 웹 쉘 업로드 실습', href: '/FileUpload실습1/' },
+      { label: 'File Upload 취약점 제거를 위해 업로드 파일을 웹 서버가 아닌 DB 테이블에 저장하도록 변경', href: '/웹서버개발18DB테이블파일저장/' },
+    ],
     stack: ['Ubuntu 22.04.2 LTS', 'Nginx', 'Apache Tomcat 10.1.7', 'Java Servlet · JSP', 'JDBC', 'Oracle Database XE 21c', 'Rocky Linux (VM)'],
     links: [
       { label: '연재 1편 읽기', href: '/웹서버개발1/' },
       { label: '최신 편(19) 읽기', href: '/웹서버개발19비회원게시판/' },
     ],
-    postSourcePrefix: WS,
     architecture: [
       {
         id: 'client',

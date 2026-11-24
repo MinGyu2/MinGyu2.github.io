@@ -1,6 +1,9 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { assertTaxonomy, validateClassification } from './data/taxonomy';
+
+assertTaxonomy();
 
 const stringList = z
   .union([z.array(z.union([z.string(), z.number()])), z.string(), z.null()])
@@ -33,6 +36,17 @@ const posts = defineCollection({
     legacyPath: z.string().regex(/^\/.+\/$/, 'legacyPath must start and end with "/"').optional(),
     /** Original `_posts/` path for migrated posts. */
     legacySource: z.string().optional(),
+    /**
+     * Authoritative classification (see src/data/taxonomy.ts). Required for every post.
+     * `categories` above is kept only as historical metadata.
+     */
+    module: z.string({ error: 'module is required (e.g. module: security) — see src/data/taxonomy.ts' }),
+    submodule: z.string({ error: 'submodule is required (e.g. submodule: web-security) — see src/data/taxonomy.ts' }),
+    series: z
+      .object({ id: z.string(), order: z.number().int().positive() })
+      .optional(),
+  }).superRefine((data, ctx) => {
+    for (const message of validateClassification(data)) ctx.addIssue({ code: 'custom', message });
   }),
 });
 

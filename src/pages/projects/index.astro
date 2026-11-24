@@ -4,11 +4,13 @@ import HudPanel from '../../components/hud/HudPanel.astro';
 import ArchitectureDiagram from '../../components/projects/ArchitectureDiagram.astro';
 import { PROJECTS } from '../../data/projects';
 import { displayTitle, formatDate, getPosts } from '../../lib/posts';
+import { getSeries } from '../../data/taxonomy';
 
 const posts = await getPosts();
 const [featured, ...others] = PROJECTS;
-const seriesPosts = featured.postSourcePrefix
-  ? posts.filter((p) => p.data.legacySource.startsWith(featured.postSourcePrefix!)).reverse()
+const series = featured.seriesId ? getSeries(featured.seriesId) : undefined;
+const seriesPosts = series
+  ? posts.filter((p) => p.data.series?.id === series.id).sort((a, b) => a.data.series!.order - b.data.series!.order)
   : [];
 ---
 <BaseLayout title="Engineering Projects · 프로젝트" nav="projects" view="projects" description="직접 구현하고 기록한 엔지니어링 프로젝트와 아키텍처">
@@ -30,6 +32,7 @@ const seriesPosts = featured.postSourcePrefix
             <span class="px-2 py-0.5 rounded-sm border b-circuit t-mint" title={featured.verificationNote}>VERIFIED · 기록 기반</span>
           </div>
           <h2 id={`${featured.id}-title`} class="font-hud text-2xl font-bold t-heading mt-1.5">{featured.title}</h2>
+          {featured.subtitle && <p class="text-[13px] t-cyan mt-0.5">{featured.subtitle}</p>}
           <p class="text-sm t-muted mt-1 max-w-3xl leading-relaxed">{featured.summary}</p>
           <ul class="mt-3 flex flex-wrap gap-1.5" aria-label="기술 스택">
             {featured.stack.map((s) => <li class="chip">{s}</li>)}
@@ -42,12 +45,32 @@ const seriesPosts = featured.postSourcePrefix
 
       {featured.architecture && <ArchitectureDiagram id={featured.id} title={featured.title} nodes={featured.architecture} />}
 
+      {
+        featured.findings && featured.findings.length > 0 && (
+          <section class="p-4 bg-inset border b-circuit rounded" aria-labelledby="findings-title">
+            <h3 id="findings-title" class="font-mono-code text-[11px] t-amber mb-2">SECURITY EXERCISES // 기록된 실습 · 보완 사례</h3>
+            <ul class="space-y-1.5 text-[13px] list-disc pl-5">
+              {featured.findings.map((f) => (
+                <li class="t-body">
+                  <a href={f.href} class="link-cyan">{f.label}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
       <p class="text-[12px] t-muted">{featured.verificationNote}</p>
 
       {
         seriesPosts.length > 0 && (
           <details class="bg-inset border b-circuit rounded">
-            <summary class="px-4 py-3 cursor-pointer text-sm font-semibold t-heading min-h-11">연재 전체 목록 ({seriesPosts.length}편)</summary>
+            <summary class="px-4 py-3 cursor-pointer text-sm font-semibold t-heading min-h-11">
+              {series?.title} · 연재 전체 목록 ({seriesPosts.length}편)
+            </summary>
+            <p class="px-4 pb-2 text-[12px]">
+              <a href={`/posts/?series=${series?.id}`} class="link-cyan">기술 게시글에서 연재만 모아 보기 -&gt;</a>
+            </p>
             <ol class="px-4 pb-4 space-y-1.5 list-decimal list-inside text-sm">
               {seriesPosts.map((p) => (
                 <li class="t-muted">

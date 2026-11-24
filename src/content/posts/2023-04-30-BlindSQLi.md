@@ -12,6 +12,9 @@ last_modified_at: 2023-04-30T09:13:00-05:00
 date: 2023-04-30
 legacyPath: "/모의해킹수업/BlindSQLi/"
 legacySource: "_posts/2023-04-30-BlindSQLi.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 ## 이전 포스팅
 [Union SQLi 과 Error Based SQLi 과정 정리.](https://mingyu2.github.io/SQLi%EB%B0%A9%EB%B2%95/)

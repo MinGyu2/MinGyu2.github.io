@@ -12,6 +12,9 @@ last_modified_at: 2023-08-28T09:13:00-05:00
 date: 2023-08-28
 legacyPath: "/dreamhack/fly_me_to_the_moon/"
 legacySource: "_posts/dreamhack/2023-08-28-fly_me_to_the_moon.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: wargame
 ---
 
 [문제](https://dreamhack.io/wargame/challenges/324)

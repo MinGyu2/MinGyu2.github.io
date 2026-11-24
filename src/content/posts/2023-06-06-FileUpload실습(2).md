@@ -10,6 +10,9 @@ last_modified_at: 2023-06-06T09:13:00-05:00
 date: 2023-06-06
 legacyPath: "/FileUpload실습(2)/"
 legacySource: "_posts/2023-06-06-FileUpload실습(2).md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 ## 취약점 사이트
 - 내가 만든 웹 사이트를 이용하였다.<br>![Pasted image 20230606142017](https://github.com/MinGyu2/MinGyu2.github.io/assets/31990118/c46d4050-cc28-43ea-8e0f-0fca6023ca7f)

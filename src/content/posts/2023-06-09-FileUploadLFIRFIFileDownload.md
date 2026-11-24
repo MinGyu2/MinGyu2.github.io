@@ -11,6 +11,9 @@ last_modified_at: 2023-06-09T09:13:00-05:00
 date: 2023-06-09
 legacyPath: "/FileUploadLFIRFIFileDownload/"
 legacySource: "_posts/2023-06-09-FileUploadLFIRFIFileDownload.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 ## File Upload 
 

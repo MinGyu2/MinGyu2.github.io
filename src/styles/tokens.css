@@ -131,3 +131,13 @@ html[data-theme='light'] {
   --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'D2Coding',
     'Noto Sans Mono CJK KR', monospace;
 }
+
+/* Knowledge module identity colors (stable per module ID; theme-aware via --cat-*) */
+:root {
+  --mod-security: var(--cat-1);
+  --mod-infrastructure: var(--cat-2);
+  --mod-development: var(--cat-3);
+  --mod-ai: var(--cat-5);
+  --mod-computer-science: var(--cat-4);
+  --mod-notes: var(--cat-8);
+}

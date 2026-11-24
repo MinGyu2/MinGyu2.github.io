@@ -14,8 +14,17 @@
  * transformation is recorded in `migration/inventory.json`. Any unknown Liquid
  * tag aborts the migration instead of being silently dropped.
  *
- * Usage: node scripts/migrate-jekyll.mjs [--ref legacy-jekyll] [--out src/content/posts] [--check]
- *   --check  verify that the committed output matches what the script would generate
+ * Usage:
+ *   node scripts/migrate-jekyll.mjs --check [--against <commit>|worktree]
+ *       Regenerate in memory and compare with the frozen migration output. By default the
+ *       comparison target is migration/baseline.json → migrationCommit (read from Git), so
+ *       later legitimate edits to posts never affect this historical check.
+ *   node scripts/migrate-jekyll.mjs --out <dir>
+ *       Write a fresh, isolated migration output (plus <dir>/_inventory.json).
+ *   node scripts/migrate-jekyll.mjs [--out src/content/posts] --force
+ *       Regenerate into the live content directory. Refused without --force whenever an
+ *       existing file would change, because posts are edited after migration.
+ *   --ref <ref>  Jekyll source ref (default legacy-jekyll, falls back to the recorded commit)
  */
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -32,7 +41,22 @@ const opt = (name, fallback) => {
 const REF = opt('--ref', 'legacy-jekyll');
 const OUT = opt('--out', 'src/content/posts');
 const CHECK = args.includes('--check');
+const FORCE = args.includes('--force');
+const LIVE_OUT = OUT === 'src/content/posts';
 const INVENTORY = 'migration/inventory.json';
+const OUT_INVENTORY = LIVE_OUT ? INVENTORY : join(OUT, '_inventory.json');
+const BASELINE = existsSync('migration/baseline.json') ? JSON.parse(readFileSync('migration/baseline.json', 'utf8')) : {};
+const AGAINST = opt('--against', BASELINE.migrationCommit ?? 'worktree');
+/** Content of a path in the comparison target (a Git commit, or the working tree). */
+function targetContent(path) {
+  if (AGAINST === 'worktree') return existsSync(path) ? readFileSync(path, 'utf8') : null;
+  try {
+    return execFileSync('git', ['show', `${AGAINST}:${path}`], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+  } catch {
+    return null;
+  }
+}
+const pendingWrites = [];
 
 const git = (...a) => execFileSync('git', a, { encoding: 'buffer', maxBuffer: 64 * 1024 * 1024 });
 const sha256 = (s) => createHash('sha256').update(s).digest('hex');
@@ -152,14 +176,12 @@ for (const source of files.sort()) {
 
   const target = join(OUT, source.replace(/^_posts\//, ''));
   if (CHECK) {
-    const current = existsSync(target) ? readFileSync(target, 'utf8') : null;
-    if (current !== output) {
+    if (targetContent(target) !== output) {
       mismatches++;
       console.error(`MISMATCH ${target}`);
     }
   } else {
-    mkdirSync(dirname(target), { recursive: true });
-    writeFileSync(target, output);
+    pendingWrites.push([target, output]);
   }
 
   entries.push({
@@ -199,15 +221,28 @@ const inventory = {
 const inventoryJson = JSON.stringify(inventory, null, 2) + '\n';
 
 if (CHECK) {
-  const current = existsSync(INVENTORY) ? readFileSync(INVENTORY, 'utf8') : null;
-  if (current !== inventoryJson) {
+  if (targetContent(INVENTORY) !== inventoryJson) {
     mismatches++;
     console.error(`MISMATCH ${INVENTORY}`);
   }
-  console.log(`check: ${entries.length} posts, ${mismatches} mismatches`);
+  console.log(`check against ${AGAINST === 'worktree' ? 'working tree' : AGAINST.slice(0, 7)}: ${entries.length} posts, ${mismatches} mismatches`);
   process.exit(mismatches ? 1 : 0);
 }
-mkdirSync('migration', { recursive: true });
-writeFileSync(INVENTORY, inventoryJson);
+
+// Overwrite guard: never silently replace edited posts or the historical inventory.
+pendingWrites.push([OUT_INVENTORY, inventoryJson]);
+const wouldChange = pendingWrites.filter(([path, content]) => existsSync(path) && readFileSync(path, 'utf8') !== content);
+if (wouldChange.length && !FORCE) {
+  console.error(`Refusing to overwrite ${wouldChange.length} existing file(s) that differ from the regenerated output:`);
+  for (const [path] of wouldChange.slice(0, 20)) console.error(`  ${path}`);
+  if (wouldChange.length > 20) console.error(`  … and ${wouldChange.length - 20} more`);
+  console.error('Posts are edited after migration (e.g. module/submodule classification). Use --out <dir> for an');
+  console.error('isolated output, or pass --force to replace them deliberately.');
+  process.exit(2);
+}
+for (const [path, content] of pendingWrites) {
+  mkdirSync(dirname(path), { recursive: true });
+  writeFileSync(path, content);
+}
 console.log(`migrated ${entries.length} posts from ${REF} (${refCommit.slice(0, 7)}) → ${OUT}`);
 console.log(`transformed bodies: ${inventory.transformedPosts.join(', ') || 'none'}`);

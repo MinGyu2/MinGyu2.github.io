@@ -10,6 +10,9 @@ last_modified_at: 2023-04-27T09:13:00-05:00
 date: 2023-04-27
 legacyPath: "/ErrorBasedSQLi/"
 legacySource: "_posts/2023-04-27-ErrorBasedSQLi.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: web-security
 ---
 - Error Based SQL Injection을 연습하기 위해 DB 에러를 보여주는 로그인 페이지를 만들었다.
 

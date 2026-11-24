@@ -1,46 +1,45 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HudPanel from '../../components/hud/HudPanel.astro';
-import { buildTaxonomy, formatDate, getCategoryStats, getPosts } from '../../lib/posts';
+import { formatDate, getModuleStats, getPosts } from '../../lib/posts';
 import { SITE } from '../../lib/site';
 import { PROJECTS } from '../../data/projects';
 
 const posts = await getPosts();
-const stats = await getCategoryStats();
-const tags = buildTaxonomy(posts, 'tags');
+const stats = await getModuleStats();
 const first = posts[posts.length - 1];
 const latest = posts[0];
 const series = PROJECTS[0];
-const countTag = (key: string) => tags.find((t) => t.key === key)?.count ?? 0;
-const countCat = (key: string) => stats.modules.find((m) => m.key === key)?.count ?? 0;
+const sub = (m: string, id: string) => stats.all.find((x) => x.id === m)?.submodules.find((x) => x.id === id)?.count ?? 0;
+const mod = (m: string) => stats.all.find((x) => x.id === m)?.count ?? 0;
 const interests = [
   {
     code: 'WEB SECURITY',
     tone: 't-cyan',
     text: '모의해킹 수업과 실습 — SQL Injection, XSS, CSRF, SSRF, File Upload, Log4Shell',
-    href: '/posts/?tag=xss',
-    meta: `#XSS ${countTag('xss')} · #SQL Injection ${countTag('sql-injection')}`,
+    href: '/posts/?module=security&submodule=web-security',
+    meta: `Web Security ${sub('security', 'web-security')}`,
   },
   {
-    code: 'WEB SERVER DEV',
+    code: 'SECURITY LAB',
     tone: 't-mint',
-    text: 'Nginx · Tomcat(Servlet/JSP) · Oracle DB로 웹 서버를 직접 만들며 기록한 연재',
+    text: '웹 취약점 실습을 위해 Nginx · Tomcat(Servlet/JSP) · Oracle DB 웹 서버를 직접 구축한 연재',
     href: '/projects/',
-    meta: series.status,
+    meta: `${series.status}`,
   },
   {
     code: 'WARGAME',
     tone: 't-blue',
     text: '워게임 문제 풀이 — PHP 취약점, LFI, 세션 위조, SQL Injection',
-    href: '/posts/?category=dreamhack',
-    meta: `dreamhack ${countCat('dreamhack')}`,
+    href: '/posts/?module=security&submodule=wargame',
+    meta: `Wargame ${sub('security', 'wargame')}`,
   },
   {
     code: 'SYSTEM & INFRA',
     tone: 't-amber',
     text: 'Ubuntu · Debian, Docker, LXD, WSL 환경 구성과 SSH 오류 해결',
-    href: '/posts/?category=ubuntu',
-    meta: `ubuntu ${countCat('ubuntu')} · linux ${countCat('linux')} · windows ${countCat('windows')}`,
+    href: '/posts/?module=infrastructure',
+    meta: `Systems & Infrastructure ${mod('infrastructure')}`,
   },
 ];
 ---
@@ -90,7 +89,7 @@ const interests = [
       </ul>
       <dl class="grid-kpi">
         <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">LOGS</dt><dd class="font-hud text-xl font-bold t-heading">{posts.length}</dd></div>
-        <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">MODULES</dt><dd class="font-hud text-xl font-bold t-cyan">{stats.modules.length}</dd></div>
+        <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">MODULES</dt><dd class="font-hud text-xl font-bold t-cyan">{stats.populated.length}</dd></div>
         <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">FIRST LOG</dt><dd class="font-mono-code text-sm t-heading mt-1">{formatDate(first.data.date)}</dd></div>
         <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">LATEST</dt><dd class="font-mono-code text-sm t-heading mt-1">{formatDate(latest.data.date)}</dd></div>
       </dl>

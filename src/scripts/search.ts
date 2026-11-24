@@ -33,7 +33,9 @@ interface Pagefind {
 const TYPE_TONE: Record<string, string> = {
   LOG: 't-cyan',
   PAGE: 't-muted',
-  CATEGORY: 't-blue',
+  MODULE: 't-blue',
+  SUBMODULE: 't-blue',
+  SERIES: 't-mint',
   TAG: 't-amber',
   PROJECT: 't-amber',
   LAB: 't-mint',
@@ -162,7 +164,7 @@ export function initSearchPalette() {
 
   function matchStatic(all: StaticItem[], q: string): StaticItem[] {
     if (!q) {
-      return [...all.filter((i) => i.type !== 'TAG' && i.type !== 'CATEGORY' && !i.recent), ...all.filter((i) => i.recent)];
+      return [...all.filter((i) => ['PAGE', 'PROJECT', 'LAB'].includes(i.type) && !i.recent), ...all.filter((i) => i.recent)];
     }
     const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
     return all
@@ -171,7 +173,7 @@ export function initSearchPalette() {
         const hay = `${i.title} ${i.sub} ${i.keywords}`.toLowerCase();
         return terms.every((t) => hay.includes(t));
       })
-      .slice(0, 6);
+      .slice(0, 8);
   }
 
   async function update() {

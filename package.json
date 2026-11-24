@@ -13,7 +13,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "migrate": "node scripts/migrate-jekyll.mjs",
-    "verify": "node scripts/verify-site.mjs"
+    "verify": "npm run verify:site && npm run verify:migration",
+    "verify:site": "node scripts/verify-site.mjs",
+    "verify:migration": "node scripts/verify-migration.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.10",

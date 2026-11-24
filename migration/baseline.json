@@ -1,0 +1,8 @@
+{
+  "description": "Frozen baseline of the Jekyll → Astro migration. Historical verification compares against these commits, never against the editable working tree.",
+  "sourceCommit": "f83aa109fa1d3c4d1fb82a2c1d105c7bb9019cfb",
+  "sourceRef": "legacy-jekyll",
+  "migrationCommit": "a4d87f38b61ecf49ea78cd17c18c49fb25bb5cdb",
+  "migratedOn": "2026-11-24",
+  "postCount": 70
+}

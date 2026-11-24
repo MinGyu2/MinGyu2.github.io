@@ -31,7 +31,7 @@ export const SITE = {
 export const NAV_ITEMS = [
   { id: 'command', href: '/', label: 'Command', ko: '홈 대시보드' },
   { id: 'logs', href: '/posts/', label: 'Dev Logs', ko: '기술 게시글' },
-  { id: 'modules', href: '/categories/', label: 'Modules', ko: '카테고리 · 태그' },
+  { id: 'modules', href: '/categories/', label: 'Modules', ko: '지식 모듈 · 태그' },
   { id: 'projects', href: '/projects/', label: 'Projects', ko: '엔지니어링' },
   { id: 'lab', href: '/lab/', label: 'Exp Lab', ko: '실험실' },
   { id: 'profile', href: '/about/', label: 'Profile', ko: '소개' },

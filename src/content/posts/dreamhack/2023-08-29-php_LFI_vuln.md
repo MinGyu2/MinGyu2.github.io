@@ -13,6 +13,9 @@ last_modified_at: 2023-08-29T09:13:00-05:00
 date: 2023-08-29
 legacyPath: "/dreamhack/php_LFI_vuln/"
 legacySource: "_posts/dreamhack/2023-08-29-php_LFI_vuln.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: security
+submodule: wargame
 ---
 ## LFI + PHP Wrapper
 - include 취약점과 wrapper 취약점을 이용하여 문제를 해결해 주어야 한다.

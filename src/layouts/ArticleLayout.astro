@@ -6,14 +6,14 @@ import Comments from '../components/blog/Comments.astro';
 import {
   displayTitle,
   formatDate,
-  getCategoryStats,
+  classificationOf,
   getPosts,
+  getSeriesPosts,
   logCode,
   readingMinutes,
   relatedPosts,
   excerptOf,
   taxonomyKey,
-  primaryModule,
   type Post,
 } from '../lib/posts';
 
@@ -23,18 +23,21 @@ interface Props {
 }
 const { post, headings } = Astro.props;
 const posts = await getPosts();
-const { modules } = await getCategoryStats();
 const idx = posts.indexOf(post);
 const newer = idx > 0 ? posts[idx - 1] : undefined;
 const older = idx < posts.length - 1 ? posts[idx + 1] : undefined;
 const related = relatedPosts(post, posts, 3);
 const title = displayTitle(post);
 const code = logCode(post, posts);
-const mod = primaryModule(post, modules);
+const cls = classificationOf(post);
+const mod = { label: `${cls.module.name} / ${cls.submodule.name}` };
+const seriesInfo = post.data.series ? await getSeriesPosts(post.data.series.id) : undefined;
+const seriesIdx = seriesInfo ? seriesInfo.posts.indexOf(post) : -1;
+const seriesPrev = seriesInfo && seriesIdx > 0 ? seriesInfo.posts[seriesIdx - 1] : undefined;
+const seriesNext = seriesInfo && seriesIdx >= 0 && seriesIdx < seriesInfo.posts.length - 1 ? seriesInfo.posts[seriesIdx + 1] : undefined;
 const minutes = readingMinutes(post);
 const modified = post.data.last_modified_at ? new Date(post.data.last_modified_at) : undefined;
 const showModified = modified && !Number.isNaN(modified.getTime()) && modified.getTime() > post.data.date.getTime() + 86_400_000;
-const categories = post.data.categories.map((c) => ({ label: c, key: taxonomyKey(c) }));
 const description = excerptOf(post, 200);
 ---
 <BaseLayout
@@ -43,7 +46,7 @@ const description = excerptOf(post, 200);
   nav="logs"
   view="reader"
   type="article"
-  article={{ published: post.data.date, modified: modified && !Number.isNaN(modified.getTime()) ? modified : undefined, tags: post.data.tags, section: post.data.categories[0] }}
+  article={{ published: post.data.date, modified: modified && !Number.isNaN(modified.getTime()) ? modified : undefined, tags: post.data.tags, section: cls.module.name }}
 >
   <div slot="before-main" class="reading-bar" role="progressbar" aria-label="문서 읽기 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
     <div class="reading-bar-fill" data-progress-bar></div>
@@ -59,22 +62,24 @@ const description = excerptOf(post, 200);
 
     <div class="grid-reader">
       <div class="min-w-0">
-        <article class="reader-panel article-panel" data-pagefind-body>
+        <article
+          class="reader-panel article-panel"
+          data-pagefind-body
+          data-module={cls.module.id}
+          data-submodule={cls.submodule.id}
+          data-series={post.data.series ? `${post.data.series.id}#${post.data.series.order}` : undefined}
+          data-legacy-source={post.data.legacySource}
+        >
           <span hidden data-pagefind-meta="type">LOG</span>
           <span hidden data-pagefind-meta="sub">{`${code} · ${mod.label} · ${formatDate(post.data.date)}`}</span>
           <header class="pb-6 border-b b-circuit-soft">
             <div class="flex flex-wrap items-center gap-2 font-mono-code text-xs mb-3">
-              {
-                categories.length > 0 ? (
-                  categories.map((c) => (
-                    <a href={`/posts/?category=${encodeURIComponent(c.key)}`} class="px-2 py-0.5 badge-cyan rounded-sm hover:underline">
-                      {c.label}
-                    </a>
-                  ))
-                ) : (
-                  <span class="px-2 py-0.5 rounded-sm border b-circuit t-muted">미분류</span>
-                )
-              }
+              <a href={`/posts/?module=${cls.module.id}`} class="module-badge px-2 py-0.5 rounded-sm hover:underline" style={`--mc:${cls.module.color}`}>
+                {cls.module.code} · {cls.module.name}
+              </a>
+              <a href={`/posts/?module=${cls.module.id}&submodule=${cls.submodule.id}`} class="px-2 py-0.5 badge-cyan rounded-sm hover:underline">
+                {cls.submodule.name}
+              </a>
               <time class="t-muted" datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
               {
                 showModified && modified && (
@@ -99,6 +104,48 @@ const description = excerptOf(post, 200);
                     </li>
                   ))}
                 </ul>
+              )
+            }
+            {
+              seriesInfo && post.data.series && (
+                <nav class="series-panel mt-5" aria-label={`연재: ${seriesInfo.series.title}`} data-pagefind-ignore>
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span class="font-mono-code text-[11px] t-cyan">SERIES // {seriesInfo.series.title.toUpperCase()}</span>
+                    <span class="font-mono-code text-[11px] t-muted">
+                      {String(seriesIdx + 1).padStart(2, '0')} / {String(seriesInfo.posts.length).padStart(2, '0')}
+                    </span>
+                  </div>
+                  <p class="text-[13px] t-body mt-1">
+                    {seriesInfo.series.ko} 연재의 {seriesIdx + 1}번째 글입니다 (전체 {seriesInfo.posts.length}편).
+                  </p>
+                  <div class="series-meter mt-2" aria-hidden="true">
+                    <span style={`width:${((seriesIdx + 1) / seriesInfo.posts.length) * 100}%`} />
+                  </div>
+                  <ul class="mt-3 grid-2 text-[13px]">
+                    <li>
+                      {seriesPrev ? (
+                        <a href={seriesPrev.data.legacyPath} class="link-cyan" rel="prev">
+                          &lt;- {String(seriesIdx).padStart(2, '0')}. {displayTitle(seriesPrev)}
+                        </a>
+                      ) : (
+                        <span class="t-muted">첫 번째 글입니다</span>
+                      )}
+                    </li>
+                    <li class="text-right">
+                      {seriesNext ? (
+                        <a href={seriesNext.data.legacyPath} class="link-cyan" rel="next">
+                          {String(seriesIdx + 2).padStart(2, '0')}. {displayTitle(seriesNext)} -&gt;
+                        </a>
+                      ) : (
+                        <span class="t-muted">마지막 글입니다</span>
+                      )}
+                    </li>
+                  </ul>
+                  <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono-code text-[11px]">
+                    <a href={`/posts/?series=${seriesInfo.series.id}`} class="link-cyan">전체 연재 목록 ({seriesInfo.posts.length}) -&gt;</a>
+                    {seriesInfo.series.href && <a href={seriesInfo.series.href} class="link-cyan">프로젝트 청사진 -&gt;</a>}
+                  </div>
+                </nav>
               )
             }
           </header>
@@ -174,6 +221,27 @@ const description = excerptOf(post, 200);
 </BaseLayout>
 
 <style>
+  .module-badge {
+    border: 1px solid var(--mc);
+    color: var(--text-heading);
+    background: color-mix(in srgb, var(--mc) 12%, transparent);
+  }
+  .series-panel {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--circuit-line);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 0 6px 6px 0;
+    background: var(--bg-inset);
+  }
+  .series-meter {
+    height: 3px;
+    background: var(--svg-ring-bg);
+  }
+  .series-meter span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  }
   .article-panel {
     padding: 2.5rem;
     max-width: 52rem;
@@ -213,7 +281,28 @@ const description = excerptOf(post, 200);
     }
   }
   @media (max-width: 640px) {
-    .article-panel {
+    .module-badge {
+    border: 1px solid var(--mc);
+    color: var(--text-heading);
+    background: color-mix(in srgb, var(--mc) 12%, transparent);
+  }
+  .series-panel {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--circuit-line);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 0 6px 6px 0;
+    background: var(--bg-inset);
+  }
+  .series-meter {
+    height: 3px;
+    background: var(--svg-ring-bg);
+  }
+  .series-meter span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  }
+  .article-panel {
       padding: 1.2rem;
     }
   }

@@ -11,6 +11,9 @@ last_modified_at: 2023-10-19T09:13:00-05:00
 date: 2023-10-19
 legacyPath: "/기술/SeleniumInPython/"
 legacySource: "_posts/기술/2023-10-19-SeleniumInPython.md"
+# --- ARC LAB knowledge classification (primary module / submodule) ---
+module: development
+submodule: developer-tools
 ---
 
 ## Selenium 브라우저 드라이버 경로 주기
