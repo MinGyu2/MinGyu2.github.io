@@ -7,16 +7,33 @@ import { buildTaxonomy, displayTitle, formatDate, getModuleStats, getPosts, logC
 import { SERIES } from '../data/taxonomy';
 import { NAV_ITEMS } from '../lib/site';
 import { PROJECTS } from '../data/projects';
-import { EXPERIMENTS } from '../data/experiments';
+import { getExperimentCatalog } from '../lib/experiments';
 
 export const GET: APIRoute = async () => {
   const posts = await getPosts();
   const stats = await getModuleStats();
   const tags = buildTaxonomy(posts, 'tags');
+  const lab = getExperimentCatalog();
   const items = [
     ...NAV_ITEMS.map((n) => ({ type: 'PAGE', title: `${n.label} · ${n.ko}`, sub: n.href, url: n.href, keywords: `${n.id} ${n.label} ${n.ko}` })),
     ...PROJECTS.map((p) => ({ type: 'PROJECT', title: p.title, sub: `${p.code} · ${p.stack.slice(0, 4).join(' · ')}`, url: '/projects/', keywords: `${p.summary} ${p.stack.join(' ')} project 프로젝트` })),
-    ...EXPERIMENTS.filter((e) => e.status === 'available').map((e) => ({ type: 'LAB', title: e.title, sub: `${e.code} · ${e.summary}`, url: e.href!, keywords: `${e.tech.join(' ')} lab 실험실 base64 url hex` })),
+    // Experiment Lab: launchable experiments open directly; groups open the catalog filtered by name.
+    ...lab.experiments
+      .filter((e) => e.launchable)
+      .map((e) => ({
+        type: 'LAB',
+        title: e.title,
+        sub: [e.code, ...e.groupTrail, e.description].filter(Boolean).join(' · '),
+        url: e.href!,
+        keywords: `${e.id} ${e.tags.join(' ')} ${e.groupTrail.join(' ')} lab experiment 실험실 실험`,
+      })),
+    ...lab.groups.map((g) => ({
+      type: 'LAB',
+      title: `${g.title} (실험 그룹)`,
+      sub: `${g.code} · ${g.count}개 실험`,
+      url: `/lab/?q=${encodeURIComponent(g.title)}`,
+      keywords: `${g.id} ${g.description ?? ''} group 그룹 실험실`,
+    })),
     ...stats.populated.map((m) => ({
       type: 'MODULE',
       title: `${m.name} · ${m.ko}`,

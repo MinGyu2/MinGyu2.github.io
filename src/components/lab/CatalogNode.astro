@@ -1,0 +1,269 @@
+---
+/**
+ * One Experiment Lab catalog node, rendered recursively.
+ * Groups: native <details>/<summary> disclosure (the summary never launches anything).
+ * Experiments: compact card with separate launch links; non-launchable entries show why.
+ */
+import { anchorId, type CatalogNode } from '../../lib/experiments';
+
+interface Props {
+  node: CatalogNode;
+  depth?: number;
+}
+const { node, depth = 0 } = Astro.props;
+
+const ICONS: Record<string, string> = {
+  folder: 'M3 7h6l2 2h10v10H3z',
+  shield: 'M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z',
+  atom: 'M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M12 3c4 0 7 4 7 9s-3 9-7 9-7-4-7-9 3-9 7-9',
+  cube: 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12L4 7.5',
+  flask: 'M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3',
+  cpu: 'M7 7h10v10H7zM10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4',
+  globe: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18',
+  terminal: 'M4 5h16v14H4zM7 9l3 3-3 3M12 15h5',
+};
+const STATUS_LABEL: Record<string, string> = { available: 'AVAILABLE', 'in-development': 'IN DEVELOPMENT', planned: 'PLANNED' };
+
+const search =
+  node.kind === 'experiment'
+    ? [node.title, node.description ?? '', ...node.tags, ...node.groupTrail, node.id, node.code, STATUS_LABEL[node.status]].join(' ').toLowerCase()
+    : '';
+---
+{
+  node.kind === 'group' ? (
+    <li class="lab-group-item" data-group-item>
+      <div class="hud-frame">
+        <details class="hud-panel-inner lab-group" id={anchorId('grp', node.id)} data-group={node.id} data-group-title={node.title.toLowerCase()}>
+          <summary class="lab-group-summary">
+            <svg class="lab-group-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d={ICONS[node.icon] ?? ICONS.folder} />
+            </svg>
+            <span class="min-w-0 flex-1">
+              <span class="block font-mono-code text-[11px] t-muted break-all">
+                {node.code} // {depth === 0 ? 'EXPERIMENT GROUP' : 'SUBGROUP'} · <span class="t-cyan">{node.id}/</span>
+              </span>
+              <span class="block font-hud text-lg font-bold t-heading leading-tight mt-0.5">{node.title}</span>
+              {node.description && <span class="block text-[13px] t-muted mt-0.5">{node.description}</span>}
+            </span>
+            <span class="lab-group-meta">
+              <span class="font-mono-code text-[11px] t-body">
+                {node.count} EXPERIMENT{node.count === 1 ? '' : 'S'}
+              </span>
+              <span class="font-mono-code text-[11px] t-mint">{node.available} AVAILABLE</span>
+              <span class="lab-group-toggle font-mono-code text-[11px] t-cyan" aria-hidden="true" />
+            </span>
+          </summary>
+          <ul class="lab-group-children">
+            {node.children.map((child) => (
+              <Astro.self node={child} depth={depth + 1} />
+            ))}
+          </ul>
+        </details>
+      </div>
+    </li>
+  ) : (
+    <li class="lab-exp-item" data-exp-item>
+      <article class="lab-exp" id={anchorId('exp', node.id)} data-exp={node.id} data-search={search} data-status={node.status}>
+        {node.thumbnail && <img class="lab-exp-thumb" src={node.thumbnail} alt="" width="72" height="54" loading="lazy" decoding="async" />}
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono-code text-[11px]">
+            <span class="t-cyan">{node.code}</span>
+            {node.version && <span class="t-muted">v{node.version}</span>}
+            <span class={`lab-status lab-status-${node.status}`}>{STATUS_LABEL[node.status]}</span>
+            {node.requiresCrossOriginIsolation && <span class="lab-status lab-status-planned">COOP/COEP</span>}
+          </div>
+          <h3 class="font-hud text-base font-bold t-heading leading-snug mt-1">{node.title}</h3>
+          {node.description && <p class="text-[13px] t-muted leading-relaxed mt-0.5">{node.description}</p>}
+          {node.tags.length > 0 && (
+            <ul class="mt-2 flex flex-wrap gap-1" aria-label="기술 태그">
+              {node.tags.map((t) => (
+                <li class="chip">{t}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div class="lab-exp-actions">
+          {node.launchable ? (
+            <>
+              <a href={node.href} class="btn-primary px-3 rounded text-xs font-mono-code min-h-9" aria-label={`${node.title} 실행`}>
+                LAUNCH
+              </a>
+              <a
+                href={node.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline px-2.5 rounded text-xs font-mono-code min-h-9"
+                aria-label={`${node.title} 새 탭에서 실행`}
+              >
+                새 탭 ↗
+              </a>
+            </>
+          ) : (
+            <span class="lab-exp-unavailable font-mono-code text-[11px] t-muted">{node.unavailableReason}</span>
+          )}
+        </div>
+      </article>
+    </li>
+  )
+}
+
+<style>
+  .lab-group {
+    padding: 0;
+  }
+  .lab-group-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    min-height: 3.5rem;
+  }
+  .lab-group-summary::-webkit-details-marker {
+    display: none;
+  }
+  .lab-group-summary:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: -4px;
+  }
+  .lab-group-summary:hover .lab-group-toggle {
+    text-decoration: underline;
+  }
+  .lab-group-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.4rem;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--accent-primary);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background: var(--accent-primary-soft);
+    border: 1px solid var(--circuit-line);
+    border-radius: 4px;
+  }
+  .lab-group-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15rem;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .lab-group-toggle::after {
+    content: 'EXPAND +';
+  }
+  .lab-group[open] > .lab-group-summary .lab-group-toggle::after {
+    content: 'COLLAPSE −';
+  }
+  .lab-group-children {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr); /* long paths must not widen the track */
+    gap: 0.6rem;
+    padding: 0 1rem 1rem 1rem;
+    margin-left: 1.1rem;
+    border-left: 1px dashed var(--circuit-line);
+  }
+  .lab-group[open] > .lab-group-children {
+    animation: labReveal 0.18s ease-out;
+  }
+  @keyframes labReveal {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .lab-group-children .hud-frame::before,
+  .lab-group-children .hud-frame::after {
+    width: 10px;
+    height: 10px;
+  }
+  .lab-exp {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.85rem 1rem;
+    background: var(--bg-inset);
+    border: 1px solid var(--circuit-line-soft);
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+  }
+  .lab-exp:hover,
+  .lab-exp:focus-within {
+    border-color: var(--accent-primary);
+  }
+  .lab-exp:target {
+    border-color: var(--accent-primary);
+    box-shadow: var(--frame-glow);
+  }
+  .lab-exp-thumb {
+    width: 72px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--circuit-line);
+    flex-shrink: 0;
+  }
+  .lab-exp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    max-width: 14rem;
+  }
+  .lab-exp-unavailable {
+    text-align: right;
+    line-height: 1.4;
+  }
+  .lab-status {
+    padding: 0 0.35rem;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+  }
+  .lab-status-available {
+    color: var(--accent-mint);
+  }
+  .lab-status-in-development {
+    color: var(--accent-primary);
+  }
+  .lab-status-planned {
+    color: var(--accent-amber);
+  }
+  [data-exp-item][hidden],
+  [data-group-item][hidden] {
+    display: none;
+  }
+  @media (max-width: 640px) {
+    .lab-group-summary {
+      flex-wrap: wrap;
+    }
+    .lab-group-meta {
+      flex-direction: row;
+      gap: 0.6rem;
+      width: 100%;
+      justify-content: flex-start;
+      padding-left: 3.15rem;
+    }
+    .lab-exp {
+      flex-wrap: wrap;
+    }
+    .lab-exp-actions,
+    .lab-exp-unavailable {
+      max-width: none;
+      width: 100%;
+      justify-content: flex-start;
+      text-align: left;
+    }
+    .lab-group-children {
+      margin-left: 0.4rem;
+      padding: 0 0.6rem 0.8rem;
+    }
+  }
+</style>

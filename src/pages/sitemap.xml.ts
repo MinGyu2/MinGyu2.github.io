@@ -5,7 +5,7 @@ import { SITE, absoluteUrl } from '../lib/site';
 
 export const GET: APIRoute = async () => {
   const posts = await getPosts();
-  const pages = ['/', '/posts/', '/categories/', '/tags/', '/projects/', '/lab/', '/about/'];
+  const pages = ['/', '/posts/', '/categories/', '/tags/', '/projects/', '/lab/', '/lab/payload-inspector/', '/about/'];
   const legacyPages = Array.from({ length: Math.ceil(posts.length / SITE.legacyPageSize) - 1 }, (_, i) => `/page${i + 2}/`);
   const lastmod = (p: (typeof posts)[number]) => {
     const m = p.data.last_modified_at ? new Date(p.data.last_modified_at) : undefined;

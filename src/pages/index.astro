@@ -6,7 +6,7 @@ import PostCard from '../components/blog/PostCard.astro';
 import { buildTaxonomy, formatDate, getModuleStats, getPosts } from '../lib/posts';
 import { SITE } from '../lib/site';
 import { PROJECTS } from '../data/projects';
-import { EXPERIMENTS } from '../data/experiments';
+import { getExperimentCatalog } from '../lib/experiments';
 
 const posts = await getPosts();
 const stats = await getModuleStats();
@@ -14,7 +14,8 @@ const tags = buildTaxonomy(posts, 'tags');
 const recent = posts.slice(0, 4);
 const latest = posts[0];
 const featured = PROJECTS[0];
-const lab = EXPERIMENTS.find((e) => e.status === 'available');
+const lab = getExperimentCatalog();
+const labHighlights = lab.experiments.filter((e) => e.launchable).slice(0, 3);
 // One segment per populated primary module; every post is counted exactly once.
 const segments = stats.populated.map((m) => ({ key: m.id, label: m.name, count: m.count, color: m.color, pct: m.pct, code: m.code, ko: m.ko }));
 const pad = (n: number) => String(n).padStart(2, '0');
@@ -128,21 +129,22 @@ const pad = (n: number) => String(n).padStart(2, '0');
           </div>
         </HudPanel>
 
-        {
-          lab && (
-            <HudPanel href={lab.href} innerClass="p-5 block" aria-label={`실험실: ${lab.title}`}>
-              <div class="flex items-center justify-between font-mono-code text-[11px] mb-2">
-                <span class="t-blue">EXPERIMENT LAB</span>
-                <span class="t-mint">INTERACTIVE</span>
-              </div>
-              <h3 class="font-hud text-lg font-bold t-heading">{lab.title} 도구</h3>
-              <p class="mt-1.5 text-[13px] t-muted leading-relaxed">{lab.summary}</p>
-              <div class="mt-4 flex items-center justify-between text-xs font-mono-code t-cyan">
-                <span>LAUNCH LAB</span><span aria-hidden="true">-&gt;</span>
-              </div>
-            </HudPanel>
-          )
-        }
+        <HudPanel href="/lab/" innerClass="p-5 block" aria-label={`Experiment Lab: 실험 ${lab.counts.total}개, 실행 가능 ${lab.counts.launchable}개`}>
+          <div class="flex items-center justify-between font-mono-code text-[11px] mb-2">
+            <span class="t-blue">EXPERIMENT LAB</span>
+            <span class="t-mint" data-dashboard-lab-count={lab.counts.total}>
+              {lab.counts.total} EXPERIMENTS · {lab.counts.launchable} AVAILABLE
+            </span>
+          </div>
+          <h3 class="font-hud text-lg font-bold t-heading">실험 카탈로그</h3>
+          <p class="mt-1.5 text-[13px] t-muted leading-relaxed">
+            {labHighlights.length > 0 ? `${labHighlights.map((e) => e.title).join(', ')} 등 브라우저에서 바로 실행하는 도구와 실험` : '브라우저에서 실행하는 실험 도구 모음'}
+            {lab.counts.planned > 0 && ` · 계획 ${lab.counts.planned}개`}
+          </p>
+          <div class="mt-4 flex items-center justify-between text-xs font-mono-code t-cyan">
+            <span>OPEN CATALOG</span><span aria-hidden="true">-&gt;</span>
+          </div>
+        </HudPanel>
 
         <section class="clean-card p-5" aria-labelledby="top-tags-title">
           <div class="flex items-center justify-between mb-3">

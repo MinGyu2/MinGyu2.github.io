@@ -1,73 +1,152 @@
 ---
+/**
+ * Experiment Lab — catalog and launcher only. No experiment is rendered or executed here;
+ * each one opens on its own page (Astro tool route or public/experiments/<path>/).
+ */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HudPanel from '../../components/hud/HudPanel.astro';
-import PayloadInspector from '../../components/lab/PayloadInspector.astro';
-import { EXPERIMENTS } from '../../data/experiments';
+import CatalogNode from '../../components/lab/CatalogNode.astro';
+import { getExperimentCatalog } from '../../lib/experiments';
 
-const available = EXPERIMENTS.filter((e) => e.status === 'available');
-const planned = EXPERIMENTS.filter((e) => e.status === 'planned');
+const catalog = getExperimentCatalog();
+const { counts } = catalog;
+const rootGroups = catalog.roots.filter((n) => n.kind === 'group');
+const rootExperiments = catalog.roots.filter((n) => n.kind === 'experiment');
+const pad = (n: number) => String(n).padStart(2, '0');
 ---
-<BaseLayout title="Experiment Lab · 실험실" nav="lab" view="lab" description="Payload Inspector 등 브라우저에서 바로 실행하는 실험 도구">
+<BaseLayout title="Experiment Lab · 실험실" nav="lab" view="lab" description="브라우저에서 바로 실행하는 실험 도구와 시뮬레이션 모음">
+  <script is:inline slot="head">
+    // Legacy link: /lab/#payload-inspector → dedicated route (only this exact fragment).
+    if (location.hash === '#payload-inspector') location.replace('/lab/payload-inspector/');
+  </script>
   <div class="space-y-6 reveal" data-pagefind-body>
     <span hidden data-pagefind-meta="type">LAB</span>
-    <span hidden data-pagefind-meta="sub">LAB-01 · Payload Inspector · Base64 / URL / Hex</span>
-    <HudPanel innerClass="p-6 p-pad flex flex-wrap items-center justify-between gap-3">
-      <div>
-        <span class="panel-id">LAB-01 // DIAGNOSTIC SANDBOX</span>
-        <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">Experiment Lab — Payload Inspector</h1>
-        <p class="text-sm t-muted mt-1">웹 보안 실습과 디버깅 중 문자열의 Base64 · URL · Hex 변환과 바이트 · 문자 수를 실시간으로 확인합니다.</p>
+    <span hidden data-pagefind-meta="sub">EXPERIMENT LAB · 실험 카탈로그</span>
+
+    <HudPanel innerClass="p-6 p-pad">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div class="max-w-2xl">
+          <span class="panel-id">LAB // EXPERIMENT CATALOG</span>
+          <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">Experiment Lab</h1>
+          <p class="text-sm t-muted mt-1.5 leading-relaxed">
+            보안 실습 도구와 독립 실행형 HTML · Canvas · WebGL · WebAssembly 실험을 모아 둔 실험실입니다. 그룹을 펼쳐 실험을 확인하고, 원하는 실험만 직접 실행하세요.
+          </p>
+        </div>
+        <dl class="lab-stats" aria-label="실험 현황">
+          <div><dt>TOTAL</dt><dd class="t-heading" data-lab-count="total">{pad(counts.total)}</dd></div>
+          <div><dt>AVAILABLE</dt><dd class="t-mint" data-lab-count="available">{pad(counts.available)}</dd></div>
+          <div><dt>IN DEV</dt><dd class="t-cyan" data-lab-count="in-development">{pad(counts.inDevelopment)}</dd></div>
+          <div><dt>PLANNED</dt><dd class="t-amber" data-lab-count="planned">{pad(counts.planned)}</dd></div>
+          <div><dt>GROUPS</dt><dd class="t-blue" data-lab-count="groups">{pad(counts.groups)}</dd></div>
+        </dl>
       </div>
-      <span class="font-mono-code text-xs px-2.5 py-1 badge-cyan rounded-sm">MODULE: ENCODER v1</span>
     </HudPanel>
 
-    <PayloadInspector />
+    {
+      counts.total === 0 ? (
+        <div class="clean-card p-10 text-center">
+          <p class="font-mono-code text-sm t-amber">등록된 실험이 없습니다</p>
+          <p class="text-sm t-muted mt-2">public/experiments/&lt;폴더&gt;/index.html 을 추가하고 다시 빌드하면 자동으로 표시됩니다.</p>
+        </div>
+      ) : (
+        <>
+          <div class="clean-card p-4 flex flex-wrap items-center gap-3 js-only" data-pagefind-ignore>
+            <label for="lab-search" class="sr-only">실험 검색 (제목, 설명, 태그, 그룹, 경로)</label>
+            <input id="lab-search" type="search" autocomplete="off" placeholder="실험 검색 — 제목, 설명, 태그, 그룹, 경로..." class="field px-3.5 py-2.5 text-sm flex-1 min-w-[12rem]" />
+            <button type="button" class="btn-outline px-3 rounded text-xs min-h-10" id="lab-search-clear" hidden>
+              검색 지우기
+            </button>
+            <p id="lab-result-count" class="font-mono-code text-[11px] t-muted" role="status" aria-live="polite">
+              {counts.total} EXPERIMENTS
+            </p>
+          </div>
 
-    <section class="clean-card p-5" aria-labelledby="catalog-title" data-pagefind-ignore>
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <h2 id="catalog-title" class="panel-id">LAB CATALOG // 실험 목록</h2>
-        <span class="font-mono-code text-[11px] t-muted">{available.length} AVAILABLE · {planned.length} PLANNED</span>
-      </div>
-      <ul class="grid-3">
-        {
-          available.map((e) => (
-            <li>
-              <a href={e.href} class="clean-card clean-card-interactive p-4 block h-full">
-                <div class="flex items-center justify-between font-mono-code text-[11px] mb-1.5">
-                  <span class="t-cyan">{e.code}</span>
-                  <span class="t-mint">AVAILABLE</span>
-                </div>
-                <h3 class="font-hud text-lg font-bold t-heading">{e.title}</h3>
-                <p class="text-[13px] t-muted mt-1 leading-relaxed">{e.summary}</p>
-                <p class="mt-2 font-mono-code text-[11px] t-muted">{e.tech.join(' · ')}</p>
-              </a>
-            </li>
-          ))
-        }
-        {
-          planned.map((e) => (
-            <li class="planned-card p-4 h-full rounded" aria-label={`${e.title} (계획 중, 아직 실행할 수 없음)`}>
-              <div class="flex items-center justify-between font-mono-code text-[11px] mb-1.5">
-                <span class="t-muted">{e.code}</span>
-                <span class="t-amber">PLANNED · 미구현</span>
-              </div>
-              <h3 class="font-hud text-lg font-bold t-muted">{e.title}</h3>
-              <p class="text-[13px] t-muted mt-1 leading-relaxed">{e.summary}</p>
-              <p class="mt-2 font-mono-code text-[11px] t-muted">{e.tech.join(' · ')}</p>
-            </li>
-          ))
-        }
-      </ul>
-      <p class="mt-4 text-[12px] t-muted leading-relaxed">
-        독립 실행형 실험(HTML · Canvas · WebGL · WebAssembly)은 <code class="font-mono-code t-cyan">public/experiments/&lt;id&gt;/index.html</code> 에 두고 이 목록에
-        등록합니다. 무거운 런타임은 해당 실험 페이지에서만 불러오며, 블로그 글 페이지에는 포함되지 않습니다.
-      </p>
-    </section>
+          {
+            rootGroups.length > 0 && (
+              <section aria-labelledby="lab-groups-title">
+                <h2 id="lab-groups-title" class="panel-id mb-3">
+                  GROUPS // 실험 그룹 ({rootGroups.length})
+                </h2>
+                <ul class="space-y-3" data-lab-tree>
+                  {rootGroups.map((n) => (
+                    <CatalogNode node={n} />
+                  ))}
+                </ul>
+              </section>
+            )
+          }
+
+          {
+            rootExperiments.length > 0 && (
+              <section aria-labelledby="lab-root-title" data-lab-root-section>
+                <h2 id="lab-root-title" class="panel-id mb-3">
+                  STANDALONE // 독립 실험 ({rootExperiments.length})
+                </h2>
+                <ul class="lab-root-grid">
+                  {rootExperiments.map((n) => (
+                    <CatalogNode node={n} />
+                  ))}
+                </ul>
+              </section>
+            )
+          }
+
+          <div class="clean-card p-10 text-center" id="lab-no-results" hidden>
+            <p class="font-mono-code text-sm t-amber">검색과 일치하는 실험이 없습니다</p>
+            <p class="text-sm t-muted mt-2">다른 키워드로 찾거나 검색을 지워 전체 목록을 확인하세요.</p>
+            <button type="button" class="btn-outline px-4 py-2 text-sm rounded mt-4" data-lab-clear>
+              검색 지우기
+            </button>
+          </div>
+        </>
+      )
+    }
+
+    <p class="text-[12px] t-muted leading-relaxed" data-pagefind-ignore>
+      새 실험은 <code class="font-mono-code t-cyan">public/experiments/&lt;그룹&gt;/&lt;실험&gt;/index.html</code> 로 추가하면 다음 빌드에서 자동으로 이 목록에 나타납니다. 무거운 런타임(WebGL, WASM 등)은 해당
+      실험 페이지를 실행할 때만 불러옵니다.
+    </p>
   </div>
 </BaseLayout>
 
 <style>
-  .planned-card {
-    border: 1px dashed var(--circuit-line);
-    background: transparent;
+  .lab-stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(4.5rem, auto));
+    gap: 0.5rem;
+  }
+  .lab-stats > div {
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-inset);
+    border: 1px solid var(--circuit-line-soft);
+    border-radius: 4px;
+  }
+  .lab-stats dt {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .lab-stats dd {
+    font-family: var(--font-hud);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .lab-root-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  }
+  @media (max-width: 640px) {
+    .lab-stats {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+    }
   }
 </style>
+
+<script>
+  import { initLabCatalog } from '../../scripts/lab-catalog';
+  initLabCatalog();
+</script>

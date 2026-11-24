@@ -13,9 +13,10 @@
     "preview": "astro preview",
     "check": "astro check",
     "migrate": "node scripts/migrate-jekyll.mjs",
-    "verify": "npm run verify:site && npm run verify:migration",
+    "verify": "npm run verify:site && npm run verify:migration && npm run test:experiments",
     "verify:site": "node scripts/verify-site.mjs",
-    "verify:migration": "node scripts/verify-migration.mjs"
+    "verify:migration": "node scripts/verify-migration.mjs",
+    "test:experiments": "node scripts/test-experiments.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.10",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
+    "@types/node": "24.19.2",
     "pagefind": "1.6.0",
     "satteri": "0.11.7",
     "typescript": "6.0.3",
