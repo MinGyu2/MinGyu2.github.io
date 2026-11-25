@@ -1,0 +1,7 @@
+{
+  "title": "Two-Dimensional",
+  "description": "수학 함수와 방정식을 실시간으로 시각화하는 2차원 그래핑 계산기",
+  "tags": ["React", "TypeScript", "Canvas", "Math.js", "Web Worker"],
+  "status": "available",
+  "entry": "index.html"
+}
