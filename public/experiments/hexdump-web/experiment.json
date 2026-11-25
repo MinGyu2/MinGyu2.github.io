@@ -1,0 +1,15 @@
+{
+  "title": "HexDump Web",
+  "description": "대용량 파일의 Hex/ASCII 분석, 바이트 검색, 두 파일 비교, 파일 형식 감지 및 zlib 압축 해제를 지원하는 브라우저 기반 바이너리 분석 도구",
+  "version": "2.0.0",
+  "tags": [
+    "JavaScript",
+    "Hex",
+    "Web Worker",
+    "OPFS",
+    "Binary Analysis"
+  ],
+  "status": "available",
+  "entry": "index.html",
+  "requiresCrossOriginIsolation": false
+}

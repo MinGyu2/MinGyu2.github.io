@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta
+      name="description"
+      content="파일을 업로드하지 않고 브라우저 안에서 동작하는 대용량 HexDump·zlib·비교 분석기"
+    />
+    <title>HexScope · Local HexDump Analyzer</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script type="module" crossorigin src="./assets/index-Bg6juLfh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BXbm-vab.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">0x</span>
+        <div>
+          <h1>HexScope</h1>
+          <p>Local HexDump &amp; zlib analyzer</p>
+        </div>
+      </div>
+
+      <nav class="tabs" role="tablist" aria-label="분석 모드">
+        <button
+          id="tab-single"
+          class="tab is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-single"
+          tabindex="0"
+          data-tab="single"
+        >
+          싱글 분석
+        </button>
+        <button
+          id="tab-compare"
+          class="tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-compare"
+          tabindex="-1"
+          data-tab="compare"
+        >
+          두 파일 비교
+        </button>
+      </nav>
+
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="다크·라이트 테마 전환">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <div class="privacy-strip">
+      <span aria-hidden="true">◆</span>
+      파일 내용은 서버나 외부 API로 전송되지 않으며, 설치된 로컬 코드만 브라우저에서 실행됩니다.
+    </div>
+
+    <main id="main-content" class="app-shell">
+      <section
+        id="panel-single"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-single"
+        data-panel="single"
+      >
+        <div class="layout-single">
+          <aside class="input-column">
+            <section class="card" aria-labelledby="single-file-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="single-file-title">파일 입력</h2>
+                  <p>선택 후 분석을 눌러 현재 데이터로 적용합니다.</p>
+                </div>
+                <span class="limit-badge">각 파일 최대 1 GiB</span>
+              </div>
+
+              <div
+                id="single-dropzone"
+                class="dropzone"
+                role="button"
+                tabindex="0"
+                aria-label="싱글 분석 파일 선택 또는 드롭"
+              >
+                <input id="single-file-input" type="file" hidden />
+                <strong>파일을 선택하거나 여기에 놓으세요</strong>
+                <span>정확히 1 GiB까지 허용 · 필요한 범위만 읽음</span>
+              </div>
+
+              <div id="single-pending" class="pending-file hidden" aria-live="polite">
+                <div>
+                  <strong id="single-pending-name"></strong>
+                  <span id="single-pending-size"></span>
+                </div>
+                <div class="button-row compact">
+                  <button id="single-pending-clear" class="button ghost" type="button">선택 취소</button>
+                  <button id="single-file-load" class="button primary" type="button">파일 분석</button>
+                </div>
+              </div>
+
+              <p class="policy-note">
+                파일 선택과 드롭 모두 A/B 각각 <strong>1,073,741,824바이트</strong>까지 허용합니다.
+                초과 파일은 분석 전에 거부됩니다.
+              </p>
+            </section>
+
+            <section class="card" aria-labelledby="single-direct-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="single-direct-title">데이터 직접 입력</h2>
+                  <p>Text는 공백·탭·마지막 줄바꿈을 그대로 보존합니다.</p>
+                </div>
+                <span class="limit-badge">최대 16 MiB</span>
+              </div>
+
+              <div class="segmented" role="group" aria-label="직접 입력 형식">
+                <button type="button" class="is-active" data-single-input-type="hex">Hex</button>
+                <button type="button" data-single-input-type="base64">Base64</button>
+                <button type="button" data-single-input-type="text">UTF-8 Text</button>
+              </div>
+              <textarea
+                id="single-direct-input"
+                rows="7"
+                spellcheck="false"
+                placeholder="예: 78 9c 4b cb cf 07 00 02 82 01 45"
+                aria-label="싱글 직접 입력 데이터"
+              ></textarea>
+              <p class="field-help">
+                Base64는 표준(+/)과 URL-safe(-_)를 지원하며 올바른 선택적 패딩만 허용합니다.
+              </p>
+              <button id="single-direct-load" class="button primary full" type="button">직접 입력 분석</button>
+            </section>
+
+            <section class="card" aria-labelledby="single-zlib-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="single-zlib-title">zlib 처리</h2>
+                  <p>헤더는 2바이트만 읽고, 해제 결과는 OPFS에 기록합니다.</p>
+                </div>
+              </div>
+              <label class="check-row">
+                <input id="single-auto-zlib" type="checkbox" checked />
+                zlib 감지 시 자동 압축 해제
+              </label>
+              <button id="single-source-toggle" class="button ghost full" type="button" disabled>
+                압축 해제본이 아직 없습니다
+              </button>
+              <p id="single-zlib-capability" class="field-help"></p>
+            </section>
+          </aside>
+
+          <div class="viewer-column">
+            <section class="stats-grid" aria-label="현재 데이터 상태">
+              <div class="stat-card">
+                <span>현재 출처</span>
+                <strong id="single-source-kind">데이터 없음</strong>
+              </div>
+              <div class="stat-card">
+                <span>현재 크기</span>
+                <strong id="single-size">0 Bytes</strong>
+              </div>
+              <div class="stat-card">
+                <span>페이지 범위</span>
+                <strong id="single-page-range">--</strong>
+              </div>
+              <div class="stat-card">
+                <span>현재 오프셋</span>
+                <strong id="single-current-offset">--</strong>
+              </div>
+            </section>
+
+            <section class="card file-type-card" aria-labelledby="single-file-type-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="single-file-type-title">파일 형식</h2>
+                  <p>Magic Number와 제한된 컨테이너 내부 구조를 브라우저에서 분석합니다.</p>
+                </div>
+                <span class="limit-badge">최대 2 MiB 읽기</span>
+              </div>
+              <div
+                id="single-file-type"
+                class="file-type-result"
+                aria-live="polite"
+                aria-atomic="false"
+              >
+                <p class="file-type-status">
+                  파일을 분석하면 확장자가 아닌 내부 시그니처로 형식을 감지합니다.
+                </p>
+              </div>
+            </section>
+
+            <section id="single-zlib-stats" class="card zlib-stats hidden" aria-labelledby="zlib-stats-title">
+              <h2 id="zlib-stats-title">압축 해제 정보</h2>
+              <dl>
+                <div><dt>압축 전 크기</dt><dd id="zlib-compressed-size">--</dd></div>
+                <div><dt>압축 해제 후 크기</dt><dd id="zlib-decompressed-size">--</dd></div>
+                <div><dt>압축 크기 비율</dt><dd id="zlib-size-ratio">--</dd></div>
+                <div><dt>절감률</dt><dd id="zlib-saving-ratio">--</dd></div>
+              </dl>
+            </section>
+
+            <section class="card viewer-card" aria-labelledby="single-view-title">
+              <div class="viewer-toolbar">
+                <div>
+                  <h2 id="single-view-title">Hex Dump</h2>
+                  <p id="single-meta">파일 또는 직접 입력 데이터를 분석하세요.</p>
+                </div>
+                <div class="button-row compact">
+                  <button id="single-copy-page" class="button ghost" type="button" disabled>현재 페이지 복사</button>
+                  <button id="single-export-text" class="button ghost" type="button" disabled>전체 TXT 저장</button>
+                  <button id="single-export-binary" class="button primary" type="button" disabled>바이너리 저장</button>
+                </div>
+              </div>
+
+              <div class="search-bar">
+                <label>
+                  <span class="sr-only">검색 모드</span>
+                  <select id="search-mode" aria-label="검색 모드">
+                    <option value="auto">자동</option>
+                    <option value="hex">Hex</option>
+                    <option value="text">UTF-8 Text</option>
+                  </select>
+                </label>
+                <label class="search-input-wrap">
+                  <span class="sr-only">바이트 검색</span>
+                  <input id="search-input" type="search" placeholder="Hex 또는 UTF-8 Text 검색" autocomplete="off" />
+                </label>
+                <button id="search-prev" class="icon-button" type="button" aria-label="이전 검색 결과" disabled>↑</button>
+                <button id="search-next" class="icon-button" type="button" aria-label="다음 검색 결과" disabled>↓</button>
+                <span id="search-status" class="search-status">검색 대기</span>
+              </div>
+
+              <div class="pagination">
+                <label>
+                  페이지당
+                  <select id="single-rows">
+                    <option value="16">16행</option>
+                    <option value="32">32행</option>
+                    <option value="64">64행</option>
+                    <option value="128">128행</option>
+                  </select>
+                </label>
+                <div class="page-buttons">
+                  <button id="single-page-prev" class="icon-button" type="button" aria-label="이전 페이지" disabled>←</button>
+                  <label>
+                    <span class="sr-only">현재 페이지</span>
+                    <input id="single-page-number" type="number" min="1" value="1" inputmode="numeric" />
+                  </label>
+                  <span>/ <span id="single-page-total">1</span></span>
+                  <button id="single-page-next" class="icon-button" type="button" aria-label="다음 페이지" disabled>→</button>
+                </div>
+              </div>
+
+              <div id="single-hex-view" class="hex-view" tabindex="0">
+                <p class="empty-state">파일을 업로드하거나 데이터를 직접 입력해 주세요.</p>
+              </div>
+            </section>
+
+            <section class="card inspector" aria-labelledby="inspector-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="inspector-title">바이트 인스펙터</h2>
+                  <p>선택한 위치부터 최대 4바이트만 추가로 읽습니다.</p>
+                </div>
+              </div>
+              <dl id="inspector-values">
+                <div><dt>Offset</dt><dd data-inspect="offset">--</dd></div>
+                <div><dt>Hex / Dec</dt><dd data-inspect="byte">--</dd></div>
+                <div><dt>Binary / Char</dt><dd data-inspect="binary">--</dd></div>
+                <div><dt>Int16 LE / BE</dt><dd data-inspect="int16">--</dd></div>
+                <div><dt>UInt16 LE / BE</dt><dd data-inspect="uint16">--</dd></div>
+                <div><dt>Int32 LE / BE</dt><dd data-inspect="int32">--</dd></div>
+                <div><dt>UInt32 LE / BE</dt><dd data-inspect="uint32">--</dd></div>
+                <div><dt>Float32 LE / BE</dt><dd data-inspect="float32">--</dd></div>
+              </dl>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="panel-compare"
+        class="tab-panel hidden"
+        role="tabpanel"
+        aria-labelledby="tab-compare"
+        data-panel="compare"
+      >
+        <div class="compare-input-grid">
+          <section class="card compare-input-card" data-compare-input="A" aria-labelledby="compare-a-title">
+            <div class="section-heading">
+              <div>
+                <h2 id="compare-a-title">대상 A</h2>
+                <p id="compare-meta-A">데이터 없음</p>
+              </div>
+              <span class="limit-badge">최대 1 GiB</span>
+            </div>
+            <div class="dropzone compact-dropzone" data-dropzone="A" role="button" tabindex="0" aria-label="비교 대상 A 파일 선택 또는 드롭">
+              <input id="compare-file-A" type="file" hidden />
+              <strong>A 파일 선택 또는 드롭</strong>
+              <span>범위 단위로만 읽습니다</span>
+            </div>
+            <div id="compare-pending-A" class="pending-file hidden">
+              <div><strong data-pending-name="A"></strong><span data-pending-size="A"></span></div>
+              <div class="button-row compact">
+                <button class="button ghost" type="button" data-pending-clear="A">취소</button>
+                <button class="button primary" type="button" data-file-load="A">A 분석</button>
+              </div>
+            </div>
+            <div class="segmented compact-segmented" role="group" aria-label="대상 A 직접 입력 형식">
+              <button type="button" class="is-active" data-compare-type="A:hex">Hex</button>
+              <button type="button" data-compare-type="A:base64">Base64</button>
+              <button type="button" data-compare-type="A:text">Text</button>
+            </div>
+            <textarea id="compare-direct-A" rows="4" spellcheck="false" aria-label="대상 A 직접 입력"></textarea>
+            <button class="button ghost full" type="button" data-direct-load="A">A 직접 입력 분석</button>
+            <label class="check-row">
+              <input id="compare-zlib-A" type="checkbox" checked />
+              zlib 자동 해제
+            </label>
+            <button class="button ghost full" type="button" data-source-toggle="A" disabled>해제본 없음</button>
+            <section class="file-type-compact-region" aria-labelledby="compare-file-type-title-A">
+              <h3 id="compare-file-type-title-A">A 파일 형식</h3>
+              <div id="compare-file-type-A" class="file-type-result" aria-live="polite">
+                <p class="file-type-status">A 파일을 분석하면 내부 형식을 감지합니다.</p>
+              </div>
+            </section>
+          </section>
+
+          <section class="card compare-input-card" data-compare-input="B" aria-labelledby="compare-b-title">
+            <div class="section-heading">
+              <div>
+                <h2 id="compare-b-title">대상 B</h2>
+                <p id="compare-meta-B">데이터 없음</p>
+              </div>
+              <span class="limit-badge teal">최대 1 GiB</span>
+            </div>
+            <div class="dropzone compact-dropzone teal" data-dropzone="B" role="button" tabindex="0" aria-label="비교 대상 B 파일 선택 또는 드롭">
+              <input id="compare-file-B" type="file" hidden />
+              <strong>B 파일 선택 또는 드롭</strong>
+              <span>범위 단위로만 읽습니다</span>
+            </div>
+            <div id="compare-pending-B" class="pending-file hidden">
+              <div><strong data-pending-name="B"></strong><span data-pending-size="B"></span></div>
+              <div class="button-row compact">
+                <button class="button ghost" type="button" data-pending-clear="B">취소</button>
+                <button class="button primary teal" type="button" data-file-load="B">B 분석</button>
+              </div>
+            </div>
+            <div class="segmented compact-segmented" role="group" aria-label="대상 B 직접 입력 형식">
+              <button type="button" class="is-active" data-compare-type="B:hex">Hex</button>
+              <button type="button" data-compare-type="B:base64">Base64</button>
+              <button type="button" data-compare-type="B:text">Text</button>
+            </div>
+            <textarea id="compare-direct-B" rows="4" spellcheck="false" aria-label="대상 B 직접 입력"></textarea>
+            <button class="button ghost full" type="button" data-direct-load="B">B 직접 입력 분석</button>
+            <label class="check-row">
+              <input id="compare-zlib-B" type="checkbox" checked />
+              zlib 자동 해제
+            </label>
+            <button class="button ghost full" type="button" data-source-toggle="B" disabled>해제본 없음</button>
+            <section class="file-type-compact-region" aria-labelledby="compare-file-type-title-B">
+              <h3 id="compare-file-type-title-B">B 파일 형식</h3>
+              <div id="compare-file-type-B" class="file-type-result" aria-live="polite">
+                <p class="file-type-status">B 파일을 분석하면 내부 형식을 감지합니다.</p>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <section class="card compare-summary-card" aria-labelledby="compare-summary-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="compare-summary-title">오프셋 기준 비교</h2>
+              <p>같은 오프셋의 바이트를 비교합니다. 삽입·삭제 정렬 Diff는 수행하지 않습니다.</p>
+            </div>
+            <label class="check-row inline">
+              <input id="compare-sync-scroll" type="checkbox" checked />
+              스크롤 동기화
+            </label>
+          </div>
+          <p id="compare-summary">A와 B 데이터를 모두 로드하면 전체 통계를 백그라운드에서 계산합니다.</p>
+          <div class="button-row">
+            <button id="compare-first-diff" class="button ghost" type="button" disabled>첫 불일치</button>
+            <button id="compare-prev-diff" class="button ghost" type="button" disabled>이전 불일치</button>
+            <button id="compare-next-diff" class="button ghost" type="button" disabled>다음 불일치</button>
+          </div>
+        </section>
+
+        <section class="card viewer-card" aria-labelledby="compare-view-title">
+          <div class="viewer-toolbar">
+            <div>
+              <h2 id="compare-view-title">Side-by-side Hex Dump</h2>
+              <p id="compare-page-range">페이지 범위 --</p>
+            </div>
+            <div class="pagination no-border">
+              <label>
+                페이지당
+                <select id="compare-rows">
+                  <option value="16">16행</option>
+                  <option value="32">32행</option>
+                  <option value="64">64행</option>
+                  <option value="128">128행</option>
+                </select>
+              </label>
+              <div class="page-buttons">
+                <button id="compare-page-prev" class="icon-button" type="button" aria-label="비교 이전 페이지" disabled>←</button>
+                <label>
+                  <span class="sr-only">비교 현재 페이지</span>
+                  <input id="compare-page-number" type="number" min="1" value="1" inputmode="numeric" />
+                </label>
+                <span>/ <span id="compare-page-total">1</span></span>
+                <button id="compare-page-next" class="icon-button" type="button" aria-label="비교 다음 페이지" disabled>→</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare-legend" aria-label="비교 범례">
+            <span class="legend-match">일치</span>
+            <span class="legend-diff">값 불일치</span>
+            <span class="legend-missing">한쪽에만 존재</span>
+          </div>
+
+          <div class="compare-view-grid">
+            <article>
+              <div class="compare-view-heading">
+                <strong>A</strong>
+                <span id="compare-size-A">0 Bytes</span>
+                <button class="button tiny ghost" type="button" data-export-text="A" disabled>TXT</button>
+                <button class="button tiny ghost" type="button" data-export-binary="A" disabled>BIN</button>
+              </div>
+              <div id="compare-scroll-A" class="compare-scroll">
+                <div id="compare-view-A" class="hex-view compare-hex-view">
+                  <p class="empty-state">대상 A 데이터 대기 중</p>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div class="compare-view-heading">
+                <strong>B</strong>
+                <span id="compare-size-B">0 Bytes</span>
+                <button class="button tiny ghost" type="button" data-export-text="B" disabled>TXT</button>
+                <button class="button tiny ghost" type="button" data-export-binary="B" disabled>BIN</button>
+              </div>
+              <div id="compare-scroll-B" class="compare-scroll">
+                <div id="compare-view-B" class="hex-view compare-hex-view">
+                  <p class="empty-state">대상 B 데이터 대기 중</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <aside id="task-tray" class="task-tray hidden" aria-label="진행 중인 작업">
+      <h2>백그라운드 작업</h2>
+      <div id="task-list"></div>
+    </aside>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite" aria-atomic="true">
+      <div>
+        <strong id="toast-title"></strong>
+        <p id="toast-message"></p>
+      </div>
+      <button id="toast-close" class="icon-button" type="button" aria-label="알림 닫기">×</button>
+    </div>
+
+    <footer>
+      모든 데이터 처리는 브라우저 안에서 진행됩니다. 원본 파일 내용은 네트워크로 전송되지 않습니다.
+    </footer>
+
+  </body>
+</html>
