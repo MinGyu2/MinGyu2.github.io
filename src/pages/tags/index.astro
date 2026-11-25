@@ -18,7 +18,7 @@ const byName = [...tags].sort((a, b) => a.label.localeCompare(b.label, 'ko'));
         <div>
           <span class="panel-id">DATA INDEX // TAGS</span>
           <h1 id="tags-title" class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">태그 인덱스</h1>
-          <p class="text-sm t-muted mt-1">대소문자만 다른 태그는 하나로 묶었습니다. 태그를 누르면 해당 글만 모아 봅니다.</p>
+          <p class="text-desc t-muted mt-1.5">대소문자만 다른 태그는 하나로 묶었습니다. 태그를 누르면 해당 글만 모아 봅니다.</p>
         </div>
         <span class="font-mono-code text-xs t-muted">{tags.length} TAGS · {posts.length} LOGS · <a href="/categories/" class="link-cyan">MODULES -&gt;</a></span>
       </div>
@@ -26,7 +26,7 @@ const byName = [...tags].sort((a, b) => a.label.localeCompare(b.label, 'ko'));
         {
           tags.map((t) => (
             <li>
-              <a href={`/posts/?tag=${encodeURIComponent(t.key)}`} class="btn-outline px-3 py-1.5 text-xs font-mono-code rounded tag-btn" style={`--w:${t.count / max}`}>
+              <a href={`/posts/?tag=${encodeURIComponent(t.key)}`} class="btn-outline px-3 py-1.5 text-meta font-mono-code rounded tag-btn" style={`--w:${t.count / max}`}>
                 #{t.label} <span class="t-muted ml-1">{t.count}</span>
               </a>
             </li>
@@ -45,14 +45,14 @@ const byName = [...tags].sort((a, b) => a.label.localeCompare(b.label, 'ko'));
                 <h3 id={`tag-${t.key}`} class="font-mono-code text-sm font-semibold t-heading">
                   <a href={`/posts/?tag=${encodeURIComponent(t.key)}`} class="hover:text-[var(--accent-primary)]">#{t.label}</a>
                 </h3>
-                <span class="font-mono-code text-[11px] t-muted">{t.count}</span>
+                <span class="font-mono-code text-meta t-muted">{t.count}</span>
               </div>
-              {t.variants.length > 1 && <p class="font-mono-code text-[11px] t-muted mb-2">표기: {t.variants.join(' · ')}</p>}
+              {t.variants.length > 1 && <p class="font-mono-code text-micro t-muted mb-2">표기: {t.variants.join(' · ')}</p>}
               <ul class="space-y-1">
                 {t.posts.map((p) => (
-                  <li class="flex items-baseline justify-between gap-3 text-[13px]">
+                  <li class="flex items-baseline justify-between gap-3 text-desc">
                     <a href={p.data.legacyPath} class="t-body hover:text-[var(--accent-primary)]">{displayTitle(p)}</a>
-                    <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={p.data.date.toISOString()}>{formatDate(p.data.date)}</time>
+                    <time class="font-mono-code text-micro t-muted shrink-0" datetime={p.data.date.toISOString()}>{formatDate(p.data.date)}</time>
                   </li>
                 ))}
               </ul>

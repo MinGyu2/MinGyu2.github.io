@@ -30,7 +30,7 @@ const related = relatedPosts(post, posts, 3);
 const title = displayTitle(post);
 const code = logCode(post, posts);
 const cls = classificationOf(post);
-const mod = { label: `${cls.module.name} / ${cls.submodule.name}` };
+const mod = { label: `${cls.module.ko} / ${cls.submodule.ko}` };
 const seriesInfo = post.data.series ? await getSeriesPosts(post.data.series.id) : undefined;
 const seriesIdx = seriesInfo ? seriesInfo.posts.indexOf(post) : -1;
 const seriesPrev = seriesInfo && seriesIdx > 0 ? seriesInfo.posts[seriesIdx - 1] : undefined;
@@ -73,32 +73,32 @@ const description = excerptOf(post, 200);
           <span hidden data-pagefind-meta="type">LOG</span>
           <span hidden data-pagefind-meta="sub">{`${code} · ${mod.label} · ${formatDate(post.data.date)}`}</span>
           <header class="pb-6 border-b b-circuit-soft">
-            <div class="flex flex-wrap items-center gap-2 font-mono-code text-xs mb-3">
+            <div class="flex flex-wrap items-center gap-2 font-mono-code text-micro mb-3">
               <a href={`/posts/?module=${cls.module.id}`} class="module-badge px-2 py-0.5 rounded-sm hover:underline" style={`--mc:${cls.module.color}`}>
-                {cls.module.code} · {cls.module.name}
+                {cls.module.code} · {cls.module.ko}
               </a>
               <a href={`/posts/?module=${cls.module.id}&submodule=${cls.submodule.id}`} class="px-2 py-0.5 badge-cyan rounded-sm hover:underline">
-                {cls.submodule.name}
+                {cls.submodule.ko}
               </a>
-              <time class="t-muted" datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+              <time class="t-muted text-meta" datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
               {
                 showModified && modified && (
-                  <span class="t-muted">
+                  <span class="t-muted text-meta">
                     · 수정 <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
                   </span>
                 )
               }
               <span class="t-muted" aria-hidden="true">·</span>
-              <span class="t-muted">약 {minutes}분</span>
+              <span class="t-muted text-meta">약 {minutes}분</span>
             </div>
             <h1 class="text-2xl sm:text-3xl font-bold t-heading leading-snug break-keep">{title}</h1>
-            {post.data.excerpt && <p class="mt-3 text-[15px] t-muted leading-relaxed">{post.data.excerpt}</p>}
+            {post.data.excerpt && <p class="mt-3 text-base t-muted leading-relaxed">{post.data.excerpt}</p>}
             {
               post.data.tags.length > 0 && (
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="태그">
                   {post.data.tags.map((t) => (
                     <li>
-                      <a href={`/posts/?tag=${encodeURIComponent(taxonomyKey(t))}`} class="btn-outline font-mono-code text-xs px-2.5 rounded-sm min-h-8">
+                      <a href={`/posts/?tag=${encodeURIComponent(taxonomyKey(t))}`} class="btn-outline font-mono-code text-meta px-2.5 rounded-sm min-h-8">
                         #{t}
                       </a>
                     </li>
@@ -110,18 +110,18 @@ const description = excerptOf(post, 200);
               seriesInfo && post.data.series && (
                 <nav class="series-panel mt-5" aria-label={`연재: ${seriesInfo.series.title}`} data-pagefind-ignore>
                   <div class="flex flex-wrap items-center justify-between gap-2">
-                    <span class="font-mono-code text-[11px] t-cyan">SERIES // {seriesInfo.series.title.toUpperCase()}</span>
-                    <span class="font-mono-code text-[11px] t-muted">
+                    <span class="font-mono-code text-micro t-cyan">SERIES // {seriesInfo.series.title.toUpperCase()}</span>
+                    <span class="font-mono-code text-micro t-muted">
                       {String(seriesIdx + 1).padStart(2, '0')} / {String(seriesInfo.posts.length).padStart(2, '0')}
                     </span>
                   </div>
-                  <p class="text-[13px] t-body mt-1">
+                  <p class="text-desc t-body mt-1">
                     {seriesInfo.series.ko} 연재의 {seriesIdx + 1}번째 글입니다 (전체 {seriesInfo.posts.length}편).
                   </p>
                   <div class="series-meter mt-2" aria-hidden="true">
                     <span style={`width:${((seriesIdx + 1) / seriesInfo.posts.length) * 100}%`} />
                   </div>
-                  <ul class="mt-3 grid-2 text-[13px]">
+                  <ul class="mt-3 grid-2 text-sm">
                     <li>
                       {seriesPrev ? (
                         <a href={seriesPrev.data.legacyPath} class="link-cyan" rel="prev">
@@ -141,7 +141,7 @@ const description = excerptOf(post, 200);
                       )}
                     </li>
                   </ul>
-                  <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono-code text-[11px]">
+                  <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono-code text-micro">
                     <a href={`/posts/?series=${seriesInfo.series.id}`} class="link-cyan">전체 연재 목록 ({seriesInfo.posts.length}) -&gt;</a>
                     {seriesInfo.series.href && <a href={seriesInfo.series.href} class="link-cyan">프로젝트 청사진 -&gt;</a>}
                   </div>
@@ -159,8 +159,8 @@ const description = excerptOf(post, 200);
           {
             older ? (
               <a href={older.data.legacyPath} class="clean-card clean-card-interactive p-4 block">
-                <span class="font-mono-code text-[11px] t-muted">&lt;- 이전 글 · {formatDate(older.data.date)}</span>
-                <span class="block mt-1 text-sm font-semibold t-heading leading-snug">{displayTitle(older)}</span>
+                <span class="font-mono-code text-micro t-muted">&lt;- 이전 글 · {formatDate(older.data.date)}</span>
+                <span class="block mt-1 text-desc font-semibold t-heading leading-snug">{displayTitle(older)}</span>
               </a>
             ) : (
               <span />
@@ -169,8 +169,8 @@ const description = excerptOf(post, 200);
           {
             newer && (
               <a href={newer.data.legacyPath} class="clean-card clean-card-interactive p-4 block text-right">
-                <span class="font-mono-code text-[11px] t-muted">다음 글 · {formatDate(newer.data.date)} -&gt;</span>
-                <span class="block mt-1 text-sm font-semibold t-heading leading-snug">{displayTitle(newer)}</span>
+                <span class="font-mono-code text-micro t-muted">다음 글 · {formatDate(newer.data.date)} -&gt;</span>
+                <span class="block mt-1 text-desc font-semibold t-heading leading-snug">{displayTitle(newer)}</span>
               </a>
             )
           }
@@ -179,15 +179,15 @@ const description = excerptOf(post, 200);
         {
           related.length > 0 && (
             <section class="mt-8" aria-labelledby="related-title" data-pagefind-ignore>
-              <h2 id="related-title" class="font-mono-code text-[11px] t-cyan tracking-wider mb-3">
+              <h2 id="related-title" class="font-mono-code text-micro t-cyan tracking-wider mb-3">
                 RELATED LOGS // 관련 글
               </h2>
               <ul class="grid-3">
                 {related.map((r) => (
                   <li>
                     <a href={r.data.legacyPath} class="clean-card clean-card-interactive p-4 block h-full">
-                      <span class="font-mono-code text-[11px] t-muted">{formatDate(r.data.date)}</span>
-                      <span class="block mt-1 text-sm font-semibold t-heading leading-snug">{displayTitle(r)}</span>
+                      <span class="font-mono-code text-micro t-muted">{formatDate(r.data.date)}</span>
+                      <span class="block mt-1 text-desc font-semibold t-heading leading-snug">{displayTitle(r)}</span>
                     </a>
                   </li>
                 ))}
@@ -201,15 +201,15 @@ const description = excerptOf(post, 200);
 
       <aside class="reader-aside space-y-4" aria-label="읽기 보조" data-pagefind-ignore>
         <div class="clean-card p-5">
-          <div class="font-mono-code text-[11px] t-cyan mb-3">READING PROGRESS</div>
+          <div class="font-mono-code text-micro t-cyan mb-3">READING PROGRESS</div>
           <div class="flex items-center gap-4">
             <svg viewBox="0 0 80 80" class="w-16 h-16 shrink-0" aria-hidden="true">
               <circle cx="40" cy="40" r="32" fill="none" stroke="var(--svg-ring-bg)" stroke-width="5"></circle>
               <circle data-progress-ring cx="40" cy="40" r="32" fill="none" stroke="var(--accent-primary)" stroke-width="5" stroke-dasharray="201.06" stroke-dashoffset="201.06" transform="rotate(-90 40 40)" stroke-linecap="round"></circle>
               <text data-progress-text x="40" y="44.5" text-anchor="middle" fill="var(--text-heading)" font-family="JetBrains Mono Variable, monospace" font-size="13" font-weight="600">0%</text>
             </svg>
-            <div class="text-xs">
-              <div class="t-heading font-semibold text-[13px]">본문 진행률</div>
+            <div class="text-meta">
+              <div class="t-heading font-semibold text-sm">본문 진행률</div>
               <div class="t-muted mt-1 leading-snug">본문 영역 기준으로 계산됩니다.</div>
             </div>
           </div>
@@ -269,7 +269,7 @@ const description = excerptOf(post, 200);
     transform: scaleX(0);
     background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
   }
-  @media (max-width: 980px) {
+  @media (max-width: 61.25em) {
     .reader-aside {
       display: none;
     }
@@ -280,7 +280,7 @@ const description = excerptOf(post, 200);
       display: block;
     }
   }
-  @media (max-width: 640px) {
+  @media (max-width: 40em) {
     .module-badge {
     border: 1px solid var(--mc);
     color: var(--text-heading);

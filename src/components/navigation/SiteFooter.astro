@@ -3,7 +3,7 @@ import { SITE } from '../../lib/site';
 const year = new Date().getUTCFullYear();
 ---
 <footer class="relative z-10 border-t b-circuit-soft mt-10" style="background: var(--bg-header)">
-  <div class="footer-row max-w-7xl mx-auto px-4 sm:px-6 py-5 text-xs t-muted">
+  <div class="footer-row max-w-7xl mx-auto px-4 sm:px-6 py-5 text-meta t-muted">
     <div class="flex items-center gap-2.5">
       <span class="w-2 h-2 rounded-full" style="background: var(--accent-primary)" aria-hidden="true"></span>
       <span class="font-mono-code">ARC LAB // {SITE.author.name} ({SITE.author.nickname})</span>
@@ -12,7 +12,7 @@ const year = new Date().getUTCFullYear();
       <li><a href={SITE.author.github} class="footer-link" rel="me noopener">GitHub</a></li>
       <li><a href="/feed.xml" class="footer-link">RSS</a></li>
       <li><a href="/sitemap.xml" class="footer-link">Sitemap</a></li>
-      <li><span class="font-mono-code text-[11px]">© {year} {SITE.title}</span></li>
+      <li><span class="font-mono-code text-micro">© {year} {SITE.title}</span></li>
     </ul>
   </div>
 </footer>
@@ -33,7 +33,7 @@ const year = new Date().getUTCFullYear();
     color: var(--accent-primary);
     text-decoration: underline;
   }
-  @media (max-width: 640px) {
+  @media (max-width: 40em) {
     .footer-row {
       flex-direction: column;
       align-items: flex-start;

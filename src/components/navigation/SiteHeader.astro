@@ -14,9 +14,9 @@ const { active } = Astro.props;
       <span class="whitespace-nowrap">
         <span class="flex items-center gap-2">
           <span class="font-hud text-xl font-bold tracking-wider t-heading group-hover:opacity-85 transition-opacity">ARC LAB</span>
-          <span class="brand-version-badge font-mono-code text-[10px] px-1.5 py-0.5 badge-cyan rounded-sm">LAB.02</span>
+          <span class="brand-version-badge font-mono-code text-micro px-1.5 py-0.5 badge-cyan rounded-sm">LAB.02</span>
         </span>
-        <span class="block text-xs t-muted leading-none mt-0.5">기록하는 개발자</span>
+        <span class="block text-meta t-muted leading-none mt-1">기록하는 개발자</span>
       </span>
     </a>
 
@@ -25,11 +25,11 @@ const { active } = Astro.props;
         NAV_ITEMS.map((item) => (
           <a
             href={item.href}
-            class="nav-btn px-3 py-1.5 rounded border border-transparent whitespace-nowrap"
+            class="nav-btn px-2.5 py-1.5 rounded border border-transparent whitespace-nowrap"
             aria-current={active === item.id ? 'page' : undefined}
           >
-            <span class="block font-hud text-[13px] font-semibold uppercase tracking-wider leading-tight">{item.label}</span>
-            <span class="block text-[11px] t-muted leading-tight">{item.ko}</span>
+            <span class="block font-hud text-desc font-semibold uppercase tracking-wider leading-tight">{item.label}</span>
+            <span class="nav-ko block text-meta leading-tight mt-0.5">{item.ko}</span>
           </a>
         ))
       }
@@ -48,8 +48,8 @@ const { active } = Astro.props;
         <svg class="w-4 h-4 t-cyan shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
         </svg>
-        <span class="search-btn-label text-[13px] t-muted">검색</span>
-        <kbd class="search-kbd-hint font-mono-code text-[10px] px-1.5 py-0.5 rounded border b-circuit t-cyan bg-panel" data-kbd-hint>Ctrl K</kbd>
+        <span class="search-btn-label text-sm t-body">검색</span>
+        <kbd class="search-kbd-hint font-mono-code text-micro px-1.5 py-0.5 rounded border b-circuit t-cyan bg-panel" data-kbd-hint>Ctrl K</kbd>
       </button>
 
       <button type="button" class="btn-outline rounded w-11 h-11 min-h-11 p-0" id="theme-toggle" aria-label="테마 전환">
@@ -87,8 +87,8 @@ const { active } = Astro.props;
               class="mobile-nav-link block px-3.5 py-2.5 rounded border b-circuit bg-inset"
               aria-current={active === item.id ? 'page' : undefined}
             >
-              <span class="block font-hud text-sm font-semibold t-heading uppercase">{item.label}</span>
-              <span class="text-xs t-muted">{item.ko}</span>
+              <span class="block text-desc font-semibold t-heading">{item.ko}</span>
+              <span class="block font-hud text-meta font-semibold t-muted uppercase tracking-wider">{item.label}</span>
             </a>
           </li>
         ))
@@ -107,6 +107,14 @@ const { active } = Astro.props;
   }
   .mobile-nav-link:hover {
     border-color: var(--accent-primary);
+  }
+  /* Korean destination name: readable but secondary to the HUD label; follows hover/current. */
+  .nav-ko {
+    color: var(--text-muted);
+  }
+  .nav-btn:hover .nav-ko,
+  .nav-btn[aria-current='page'] .nav-ko {
+    color: inherit;
   }
   :global(html[data-theme='light']) .theme-icon-sun,
   :global(html:not([data-theme='light'])) .theme-icon-moon {
@@ -149,7 +157,7 @@ const { active } = Astro.props;
     const t = e.target as Node;
     if (!menu.contains(t) && !menuBtn?.contains(t)) setMenu(false);
   });
-  window.matchMedia('(min-width: 1101px)').addEventListener('change', (e) => {
+  window.matchMedia('(min-width: 68.8125em)').addEventListener('change', (e) => {
     if (e.matches) setMenu(false);
   });
 

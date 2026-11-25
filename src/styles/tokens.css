@@ -124,12 +124,15 @@ html[data-theme='light'] {
   --cat-none: #687f90; /* 3:1 against ring track */
 }
 
+/* Latin → Inter / Rajdhani / JetBrains Mono. Hangul is not covered by those faces, so it
+   falls through to Pretendard (vendored, unicode-range subsets), then to system Korean fonts. */
 :root {
-  --font-sans: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
-    'Noto Sans KR', 'Noto Sans CJK KR', system-ui, sans-serif;
-  --font-hud: 'Rajdhani', 'Inter Variable', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Malgun Gothic', 'Noto Sans KR', 'Noto Sans CJK KR', system-ui, sans-serif;
+  --font-hud: 'Rajdhani', 'Inter Variable', 'Pretendard Variable', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic',
+    'Noto Sans KR', sans-serif;
   --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'D2Coding',
-    'Noto Sans Mono CJK KR', monospace;
+    'Noto Sans Mono CJK KR', 'Pretendard Variable', monospace;
 }
 
 /* Knowledge module identity colors (stable per module ID; theme-aware via --cat-*) */

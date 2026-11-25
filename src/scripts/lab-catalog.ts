@@ -98,7 +98,7 @@ export function initLabCatalog() {
     if (rootSection) rootSection.hidden = searching && !rootSection.querySelector('[data-exp-item]:not([hidden])');
     if (groupsSection) groupsSection.hidden = searching && !groupsSection.querySelector('[data-group-item]:not([hidden])');
     if (noResults) noResults.hidden = !searching || shown > 0;
-    if (count) count.textContent = searching ? `${shown} / ${total} EXPERIMENTS` : `${total} EXPERIMENTS`;
+    if (count) count.textContent = searching ? `실험 ${total}개 중 ${shown}개 표시` : `실험 ${total}개`;
   }
 
   const clear = () => {

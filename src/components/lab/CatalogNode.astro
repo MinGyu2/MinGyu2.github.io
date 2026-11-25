@@ -22,11 +22,15 @@ const ICONS: Record<string, string> = {
   globe: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18',
   terminal: 'M4 5h16v14H4zM7 9l3 3-3 3M12 15h5',
 };
-const STATUS_LABEL: Record<string, string> = { available: 'AVAILABLE', 'in-development': 'IN DEVELOPMENT', planned: 'PLANNED' };
+// Korean status labels are shown; the English HUD terms stay searchable.
+const STATUS_LABEL: Record<string, string> = { available: '실행 가능', 'in-development': '개발 중', planned: '개발 예정' };
+const STATUS_EN: Record<string, string> = { available: 'AVAILABLE', 'in-development': 'IN DEVELOPMENT', planned: 'PLANNED' };
 
 const search =
   node.kind === 'experiment'
-    ? [node.title, node.description ?? '', ...node.tags, ...node.groupTrail, node.id, node.code, STATUS_LABEL[node.status]].join(' ').toLowerCase()
+    ? [node.title, node.description ?? '', ...node.tags, ...node.groupTrail, node.id, node.code, STATUS_LABEL[node.status], STATUS_EN[node.status]]
+        .join(' ')
+        .toLowerCase()
     : '';
 ---
 {
@@ -39,18 +43,16 @@ const search =
               <path d={ICONS[node.icon] ?? ICONS.folder} />
             </svg>
             <span class="min-w-0 flex-1">
-              <span class="block font-mono-code text-[11px] t-muted break-all">
+              <span class="block font-mono-code text-micro t-muted break-all">
                 {node.code} // {depth === 0 ? 'EXPERIMENT GROUP' : 'SUBGROUP'} · <span class="t-cyan">{node.id}/</span>
               </span>
-              <span class="block font-hud text-lg font-bold t-heading leading-tight mt-0.5">{node.title}</span>
-              {node.description && <span class="block text-[13px] t-muted mt-0.5">{node.description}</span>}
+              <span class="block font-hud text-xl font-bold t-heading leading-tight mt-0.5">{node.title}</span>
+              {node.description && <span class="block text-desc t-body mt-0.5">{node.description}</span>}
             </span>
             <span class="lab-group-meta">
-              <span class="font-mono-code text-[11px] t-body">
-                {node.count} EXPERIMENT{node.count === 1 ? '' : 'S'}
-              </span>
-              <span class="font-mono-code text-[11px] t-mint">{node.available} AVAILABLE</span>
-              <span class="lab-group-toggle font-mono-code text-[11px] t-cyan" aria-hidden="true" />
+              <span class="text-meta t-body">실험 {node.count}개</span>
+              <span class="text-meta t-mint">실행 가능 {node.available}</span>
+              <span class="lab-group-toggle text-sm font-semibold t-cyan" aria-hidden="true" />
             </span>
           </summary>
           <ul class="lab-group-children">
@@ -65,42 +67,42 @@ const search =
     <li class="lab-exp-item" data-exp-item>
       <article class="lab-exp" id={anchorId('exp', node.id)} data-exp={node.id} data-search={search} data-status={node.status}>
         {node.thumbnail && <img class="lab-exp-thumb" src={node.thumbnail} alt="" width="72" height="54" loading="lazy" decoding="async" />}
-        <div class="min-w-0 flex-1">
-          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono-code text-[11px]">
-            <span class="t-cyan">{node.code}</span>
-            {node.version && <span class="t-muted">v{node.version}</span>}
-            <span class={`lab-status lab-status-${node.status}`}>{STATUS_LABEL[node.status]}</span>
+        <div class="lab-exp-body">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span class="font-mono-code text-micro t-cyan">{node.code}</span>
+            {node.version && <span class="font-mono-code text-micro t-muted">v{node.version}</span>}
+            <span class={`lab-status lab-status-${node.status}`} title={STATUS_EN[node.status]}>{STATUS_LABEL[node.status]}</span>
             {node.requiresCrossOriginIsolation && <span class="lab-status lab-status-planned">COOP/COEP</span>}
           </div>
-          <h3 class="font-hud text-base font-bold t-heading leading-snug mt-1">{node.title}</h3>
-          {node.description && <p class="text-[13px] t-muted leading-relaxed mt-0.5">{node.description}</p>}
+          <h3 class="font-hud text-lg font-bold t-heading leading-snug mt-1">{node.title}</h3>
+          {node.description && <p class="text-desc t-body mt-0.5">{node.description}</p>}
           {node.tags.length > 0 && (
-            <ul class="mt-2 flex flex-wrap gap-1" aria-label="기술 태그">
+            <ul class="mt-2.5 flex flex-wrap gap-1" aria-label="기술 태그">
               {node.tags.map((t) => (
                 <li class="chip">{t}</li>
               ))}
             </ul>
           )}
-        </div>
-        <div class="lab-exp-actions">
-          {node.launchable ? (
-            <>
-              <a href={node.href} class="btn-primary px-3 rounded text-xs font-mono-code min-h-9" aria-label={`${node.title} 실행`}>
-                LAUNCH
-              </a>
-              <a
-                href={node.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-outline px-2.5 rounded text-xs font-mono-code min-h-9"
-                aria-label={`${node.title} 새 탭에서 실행`}
-              >
-                새 탭 ↗
-              </a>
-            </>
-          ) : (
-            <span class="lab-exp-unavailable font-mono-code text-[11px] t-muted">{node.unavailableReason}</span>
-          )}
+          <div class="lab-exp-actions">
+            {node.launchable ? (
+              <>
+                <a href={node.href} class="btn-primary px-4 rounded text-sm min-h-10" aria-label={`${node.title} 실행`}>
+                  실행하기
+                </a>
+                <a
+                  href={node.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline px-3 rounded text-sm min-h-10"
+                  aria-label={`${node.title} 새 탭에서 실행`}
+                >
+                  새 탭 ↗
+                </a>
+              </>
+            ) : (
+              <span class="lab-exp-unavailable text-meta t-muted">{node.unavailableReason}</span>
+            )}
+          </div>
         </div>
       </article>
     </li>
@@ -153,10 +155,10 @@ const search =
     text-align: right;
   }
   .lab-group-toggle::after {
-    content: 'EXPAND +';
+    content: '펼치기 +';
   }
   .lab-group[open] > .lab-group-summary .lab-group-toggle::after {
-    content: 'COLLAPSE −';
+    content: '접기 −';
   }
   .lab-group-children {
     display: grid;
@@ -188,7 +190,8 @@ const search =
     display: flex;
     align-items: flex-start;
     gap: 0.85rem;
-    padding: 0.85rem 1rem;
+    width: 100%;
+    padding: 0.95rem 1.1rem;
     background: var(--bg-inset);
     border: 1px solid var(--circuit-line-soft);
     border-radius: 6px;
@@ -210,20 +213,30 @@ const search =
     border: 1px solid var(--circuit-line);
     flex-shrink: 0;
   }
+  /* Text gets the full card width; actions sit at the bottom (aligned across a row of cards). */
+  .lab-exp-body {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    min-width: 0;
+    flex: 1;
+  }
   .lab-exp-actions {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0.4rem;
-    flex-shrink: 0;
-    max-width: 14rem;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.85rem;
   }
   .lab-exp-unavailable {
-    text-align: right;
-    line-height: 1.4;
+    line-height: 1.45;
   }
   .lab-status {
-    padding: 0 0.35rem;
+    padding: 0.05rem 0.45rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
     border: 1px solid currentColor;
     border-radius: 2px;
   }
@@ -240,7 +253,7 @@ const search =
   [data-group-item][hidden] {
     display: none;
   }
-  @media (max-width: 640px) {
+  @media (max-width: 40em) {
     .lab-group-summary {
       flex-wrap: wrap;
     }
@@ -250,16 +263,6 @@ const search =
       width: 100%;
       justify-content: flex-start;
       padding-left: 3.15rem;
-    }
-    .lab-exp {
-      flex-wrap: wrap;
-    }
-    .lab-exp-actions,
-    .lab-exp-unavailable {
-      max-width: none;
-      width: 100%;
-      justify-content: flex-start;
-      text-align: left;
     }
     .lab-group-children {
       margin-left: 0.4rem;

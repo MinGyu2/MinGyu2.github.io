@@ -12,8 +12,8 @@ const base = items.length ? Math.min(...items.map((h) => h.depth)) : 1;
   items.length > 0 &&
     (variant === 'desktop' ? (
       <nav class="clean-card p-5 toc-desktop" aria-labelledby="toc-title-desktop">
-        <h2 id="toc-title-desktop" class="font-mono-code text-[11px] t-muted mb-3">
-          ON THIS PAGE
+        <h2 id="toc-title-desktop" class="font-mono-code text-micro t-muted mb-3">
+          <span class="font-sans text-sm font-semibold t-heading">목차</span> · ON THIS PAGE
         </h2>
         <ul class="space-y-0.5">
           {items.map((h) => (
@@ -29,7 +29,7 @@ const base = items.length ? Math.min(...items.map((h) => h.depth)) : 1;
       <details class="clean-card overflow-hidden toc-mobile mb-5">
         <summary class="px-4 py-3 flex items-center justify-between text-sm font-semibold t-heading bg-inset">
           <span>목차 (On This Page)</span>
-          <span class="font-mono-code text-xs t-cyan toc-mobile-icon" aria-hidden="true" />
+          <span class="font-mono-code text-micro t-cyan toc-mobile-icon" aria-hidden="true" />
         </summary>
         <ul class="px-4 py-3 space-y-0.5 border-t b-circuit-soft">
           {items.map((h) => (
@@ -55,8 +55,8 @@ const base = items.length ? Math.min(...items.map((h) => h.depth)) : 1;
     padding: 0.35rem 0.25rem 0.35rem calc(0.75rem + var(--toc-indent, 0) * 0.85rem);
     border-left: 2px solid var(--circuit-line);
     color: var(--text-muted);
-    font-size: 0.84rem;
-    line-height: 1.4;
+    font-size: 0.90625rem; /* 14.5px */
+    line-height: 1.45;
     transition: color 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
   }
   .toc-link:hover {

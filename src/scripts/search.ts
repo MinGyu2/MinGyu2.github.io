@@ -232,23 +232,23 @@ export function initSearchPalette() {
     const text = document.createElement('div');
     text.className = 'min-w-0';
     const title = document.createElement('div');
-    title.className = 'text-sm font-medium t-heading truncate';
+    title.className = 'text-desc font-medium t-heading truncate';
     title.textContent = item.title;
     text.append(title);
     if (item.sub) {
       const sub = document.createElement('div');
-      sub.className = 'font-mono-code text-xs t-muted truncate mt-0.5';
+      sub.className = 'font-mono-code text-micro t-muted truncate mt-0.5';
       sub.textContent = item.sub;
       text.append(sub);
     }
     if (item.excerpt) {
       const ex = document.createElement('div');
-      ex.className = 'text-[13px] t-body mt-1 line-clamp-2';
+      ex.className = 'text-sm t-body mt-1 line-clamp-2';
       appendExcerpt(ex, item.excerpt);
       text.append(ex);
     }
     const badge = document.createElement('span');
-    badge.className = `shrink-0 font-mono-code text-[11px] px-2 py-0.5 rounded-sm border b-circuit ${TYPE_TONE[item.type] ?? 't-muted'}`;
+    badge.className = `shrink-0 font-mono-code text-micro px-2 py-0.5 rounded-sm border b-circuit ${TYPE_TONE[item.type] ?? 't-muted'}`;
     badge.textContent = item.type;
     a.append(text, badge);
     li.append(a);

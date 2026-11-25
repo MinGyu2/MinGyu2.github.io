@@ -27,12 +27,12 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <div>
           <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
             <span class="panel-id">SYS-01 // COMMAND CENTER</span>
-            <span class="font-mono-code text-[11px] px-2 py-0.5 badge-cyan rounded-sm">WORKSTATION ARCHIVE</span>
+            <span class="font-mono-code text-micro px-2 py-0.5 badge-cyan rounded-sm">WORKSTATION ARCHIVE</span>
           </div>
           <h1 class="hero-title font-hud text-3xl sm:text-4xl font-bold t-heading leading-tight">
             ARC LAB <span class="t-cyan">ENGINEERING LOGS</span>
           </h1>
-          <p class="mt-3 text-sm sm:text-[15px] t-body leading-relaxed max-w-2xl">
+          <p class="mt-3 text-desc sm:text-base t-body leading-relaxed max-w-2xl">
             웹 해킹 실습(SQL Injection · XSS · CSRF · SSRF · File Upload), JSP · Servlet 웹 서버 개발, Linux · Docker · LXD
             환경 구성을 기록하는 <strong class="t-heading">{SITE.author.name}</strong>({SITE.author.nickname})의 개인 기술 블로그입니다.
           </p>
@@ -46,19 +46,19 @@ const pad = (n: number) => String(n).padStart(2, '0');
 
         <dl class="mt-6 pt-5 border-t b-circuit-soft grid-kpi">
           <div class="kpi-tile">
-            <dt class="font-mono-code text-[11px] t-muted">TOTAL LOGS</dt>
+            <dt class="font-mono-code text-micro t-muted">TOTAL LOGS</dt>
             <dd class="font-hud text-2xl font-bold t-heading mt-0.5">{pad(stats.totalPosts)}</dd>
           </div>
           <div class="kpi-tile">
-            <dt class="font-mono-code text-[11px] t-muted">MODULES</dt>
+            <dt class="font-mono-code text-micro t-muted">MODULES</dt>
             <dd class="font-hud text-2xl font-bold t-cyan mt-0.5">{pad(stats.populated.length)}</dd>
           </div>
           <div class="kpi-tile">
-            <dt class="font-mono-code text-[11px] t-muted">TAG INDEX</dt>
+            <dt class="font-mono-code text-micro t-muted">TAG INDEX</dt>
             <dd class="font-hud text-2xl font-bold t-amber mt-0.5">{tags.length}</dd>
           </div>
           <div class="kpi-tile">
-            <dt class="font-mono-code text-[11px] t-muted">LAST LOG</dt>
+            <dt class="font-mono-code text-micro t-muted">LAST LOG</dt>
             <dd class="font-hud text-2xl font-bold t-mint mt-0.5"><time datetime={latest.data.date.toISOString()}>{formatDate(latest.data.date).slice(0, 7).replace('-', '.')}</time></dd>
           </div>
         </dl>
@@ -67,7 +67,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
       <HudPanel class="reveal reveal-d1" as="section" aria-labelledby="ring-title" innerClass="p-6 p-pad flex flex-col">
         <div class="flex items-center justify-between mb-2">
           <h2 id="ring-title" class="panel-id">HUD-02 // KNOWLEDGE RING</h2>
-          <span class="font-mono-code text-[11px] t-muted">PRIMARY MODULES</span>
+          <span class="font-mono-code text-micro t-muted">PRIMARY MODULES</span>
         </div>
         <div class="my-2">
           <KnowledgeRing segments={segments} totalPosts={stats.totalPosts} moduleCount={stats.populated.length} />
@@ -79,10 +79,11 @@ const pad = (n: number) => String(n).padStart(2, '0');
                 <a href={`/posts/?module=${s.key}`} class="ring-legend-item" data-ring-module={s.key} data-count={s.count} data-pct={s.pct}>
                   <span class="flex items-center gap-2 t-body min-w-0">
                     <span class="w-2.5 h-2.5 rounded-full shrink-0" style={`background:${s.color}`} aria-hidden="true" />
-                    <span class="font-mono-code text-[11px] t-muted shrink-0">{s.code}</span>
-                    <span class="truncate">{s.label}</span>
+                    <span class="font-mono-code text-micro t-muted shrink-0">{s.code}</span>
+                    <span class="ring-legend-ko truncate t-heading">{s.ko}</span>
+                    <span class="ring-legend-en truncate t-muted">{s.label}</span>
                   </span>
-                  <span class="font-mono-code text-xs t-muted shrink-0 ml-2">
+                  <span class="font-mono-code text-meta t-muted shrink-0 ml-2">
                     {s.count} ({s.pct}%)
                   </span>
                 </a>
@@ -90,7 +91,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
             ))
           }
         </ul>
-        <p class="mt-3 text-[11px] t-muted leading-snug">
+        <p class="mt-3 text-meta t-muted">
           * 모든 글은 하나의 주 모듈에만 속합니다. 비율은 전체 {stats.totalPosts}개 글 기준이며 합계가 100%가 되도록 반올림했습니다.
           <a href="/categories/" class="link-cyan">모듈 구조 보기 -&gt;</a>
         </p>
@@ -102,7 +103,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <div class="flex items-end justify-between gap-3">
           <div>
             <span class="panel-id">LOG-FEED // LATEST ENTRIES</span>
-            <h2 class="font-hud text-xl font-bold t-heading mt-0.5">최신 기술 게시글</h2>
+            <h2 class="section-title font-hud text-2xl font-bold t-heading mt-1">최신 기술 게시글</h2>
           </div>
           <a href="/posts/" class="text-sm font-medium link-cyan py-2">전체 보기 -&gt;</a>
         </div>
@@ -114,30 +115,30 @@ const pad = (n: number) => String(n).padStart(2, '0');
       <div class="space-y-4 reveal reveal-d3 min-w-0">
         <div>
           <span class="panel-id" style="color: var(--accent-amber)">SYS-03 // QUICK ACCESS</span>
-          <h2 class="font-hud text-xl font-bold t-heading mt-0.5">프로젝트 · 실험실</h2>
+          <h2 class="section-title font-hud text-2xl font-bold t-heading mt-1">프로젝트 · 실험실</h2>
         </div>
 
         <HudPanel href="/projects/" innerClass="p-5 block" aria-label={`프로젝트: ${featured.title}`}>
-          <div class="flex items-center justify-between font-mono-code text-[11px] mb-2">
+          <div class="flex flex-wrap items-center justify-between gap-x-3 font-mono-code text-micro mb-2">
             <span class="t-cyan">PROJECT BLUEPRINT</span>
             <span class="t-amber">{featured.architecture?.length ?? 0} STAGES</span>
           </div>
-          <h3 class="font-hud text-lg font-bold t-heading">{featured.title}</h3>
-          <p class="mt-1.5 text-[13px] t-muted leading-relaxed">웹 취약점 재현·검증을 위해 직접 구축한 Nginx · Tomcat · Oracle DB 실습 서버의 인터랙티브 구조도를 확인하세요.</p>
+          <h3 class="font-hud text-xl font-bold t-heading">{featured.title}</h3>
+          <p class="mt-1.5 text-desc t-body">웹 취약점 재현·검증을 위해 직접 구축한 Nginx · Tomcat · Oracle DB 실습 서버의 인터랙티브 구조도를 확인하세요.</p>
           <div class="mt-4 flex items-center justify-between text-xs font-mono-code t-cyan">
             <span>OPEN BLUEPRINT</span><span aria-hidden="true">-&gt;</span>
           </div>
         </HudPanel>
 
         <HudPanel href="/lab/" innerClass="p-5 block" aria-label={`Experiment Lab: 실험 ${lab.counts.total}개, 실행 가능 ${lab.counts.launchable}개`}>
-          <div class="flex items-center justify-between font-mono-code text-[11px] mb-2">
+          <div class="flex flex-wrap items-center justify-between gap-x-3 font-mono-code text-micro mb-2">
             <span class="t-blue">EXPERIMENT LAB</span>
             <span class="t-mint" data-dashboard-lab-count={lab.counts.total}>
               {lab.counts.total} EXPERIMENTS · {lab.counts.launchable} AVAILABLE
             </span>
           </div>
-          <h3 class="font-hud text-lg font-bold t-heading">실험 카탈로그</h3>
-          <p class="mt-1.5 text-[13px] t-muted leading-relaxed">
+          <h3 class="font-hud text-xl font-bold t-heading">실험 카탈로그</h3>
+          <p class="mt-1.5 text-desc t-body">
             {labHighlights.length > 0 ? `${labHighlights.map((e) => e.title).join(', ')} 등 브라우저에서 바로 실행하는 도구와 실험` : '브라우저에서 실행하는 실험 도구 모음'}
             {lab.counts.planned > 0 && ` · 계획 ${lab.counts.planned}개`}
           </p>
@@ -149,7 +150,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <section class="clean-card p-5" aria-labelledby="top-tags-title">
           <div class="flex items-center justify-between mb-3">
             <h3 id="top-tags-title" class="panel-id">DATA INDEX // TOP TAGS</h3>
-            <a href="/tags/" class="font-mono-code text-[11px] link-cyan py-1">ALL {tags.length} -&gt;</a>
+            <a href="/tags/" class="font-mono-code text-micro link-cyan py-1">ALL {tags.length} -&gt;</a>
           </div>
           <ul class="flex flex-wrap gap-1.5">
             {
@@ -182,16 +183,27 @@ const pad = (n: number) => String(n).padStart(2, '0');
     border-radius: 4px;
     background: var(--bg-inset);
     border: 1px solid transparent;
-    font-size: 0.78rem;
+    font-size: 0.875rem;
     transition: border-color 0.2s ease, background-color 0.2s ease;
   }
   .ring-legend-item:hover {
     background: var(--bg-inset-hover);
     border-color: var(--circuit-line);
   }
-  @media (max-width: 640px) {
+  .ring-legend-ko {
+    min-width: 0;
+  }
+  /* English name is secondary: it gives up space first. */
+  .ring-legend-en {
+    flex-shrink: 100;
+    font-size: var(--text-meta);
+  }
+  @media (max-width: 40em) {
     .hero-title {
       font-size: 1.75rem;
+    }
+    .section-title {
+      font-size: 1.375rem;
     }
   }
 </style>

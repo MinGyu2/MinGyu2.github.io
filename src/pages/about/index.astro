@@ -57,15 +57,15 @@ const interests = [
             <p class="text-sm t-muted">{SITE.title} ({SITE.author.nickname}) · {SITE.author.location}</p>
           </div>
         </div>
-        <p class="mt-5 text-[15px] t-body leading-relaxed">안녕하세요</p>
-        <p class="mt-2 text-[15px] t-body leading-relaxed">
+        <p class="mt-5 text-base t-body leading-relaxed">안녕하세요</p>
+        <p class="mt-2 text-base t-body leading-relaxed">
           {SITE.author.bio} {SITE.author.name}의 블로그 「{SITE.title}」는 공부하고 실습한 내용을 정리해 두는 {SITE.description}입니다.
         </p>
       </div>
       <div class="mt-6 pt-4 border-t b-circuit-soft flex flex-wrap gap-2.5">
-        <a href={SITE.author.github} rel="me noopener" class="btn-outline px-4 py-2 text-xs font-mono-code rounded">GITHUB -&gt;</a>
-        <a href={SITE.author.email} class="btn-outline px-4 py-2 text-xs font-mono-code rounded">EMAIL -&gt;</a>
-        <a href="/posts/" class="btn-outline px-4 py-2 text-xs font-mono-code rounded">BLOG ARCHIVE -&gt;</a>
+        <a href={SITE.author.github} rel="me noopener" class="btn-outline px-4 py-2 text-sm font-mono-code rounded">GITHUB -&gt;</a>
+        <a href={SITE.author.email} class="btn-outline px-4 py-2 text-sm font-mono-code rounded">EMAIL -&gt;</a>
+        <a href="/posts/" class="btn-outline px-4 py-2 text-sm font-mono-code rounded">BLOG ARCHIVE -&gt;</a>
       </div>
     </HudPanel>
 
@@ -80,18 +80,18 @@ const interests = [
             <li>
               <a href={i.href} class="block p-4 bg-inset border b-circuit-soft rounded h-full interest">
                 <div class={`font-mono-code text-xs ${i.tone}`}>{i.code}</div>
-                <p class="text-[13px] t-body mt-1.5 leading-relaxed">{i.text}</p>
-                <p class="font-mono-code text-[11px] t-muted mt-2">{i.meta}</p>
+                <p class="text-desc t-body mt-1.5">{i.text}</p>
+                <p class="font-mono-code text-micro t-muted mt-2">{i.meta}</p>
               </a>
             </li>
           ))
         }
       </ul>
       <dl class="grid-kpi">
-        <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">LOGS</dt><dd class="font-hud text-xl font-bold t-heading">{posts.length}</dd></div>
-        <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">MODULES</dt><dd class="font-hud text-xl font-bold t-cyan">{stats.populated.length}</dd></div>
-        <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">FIRST LOG</dt><dd class="font-mono-code text-sm t-heading mt-1">{formatDate(first.data.date)}</dd></div>
-        <div class="kpi-tile"><dt class="font-mono-code text-[11px] t-muted">LATEST</dt><dd class="font-mono-code text-sm t-heading mt-1">{formatDate(latest.data.date)}</dd></div>
+        <div class="kpi-tile"><dt class="font-mono-code text-micro t-muted">LOGS</dt><dd class="font-hud text-xl font-bold t-heading">{posts.length}</dd></div>
+        <div class="kpi-tile"><dt class="font-mono-code text-micro t-muted">MODULES</dt><dd class="font-hud text-xl font-bold t-cyan">{stats.populated.length}</dd></div>
+        <div class="kpi-tile"><dt class="font-mono-code text-micro t-muted">FIRST LOG</dt><dd class="font-mono-code text-sm t-heading mt-1">{formatDate(first.data.date)}</dd></div>
+        <div class="kpi-tile"><dt class="font-mono-code text-micro t-muted">LATEST</dt><dd class="font-mono-code text-sm t-heading mt-1">{formatDate(latest.data.date)}</dd></div>
       </dl>
     </section>
   </div>

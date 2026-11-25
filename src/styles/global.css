@@ -4,6 +4,8 @@
 @import '@fontsource/rajdhani/latin-500.css';
 @import '@fontsource/rajdhani/latin-600.css';
 @import '@fontsource/rajdhani/latin-700.css';
+/* Korean text face (vendored dynamic subset; only the subsets a page uses are downloaded). */
+@import '../assets/fonts/pretendard/pretendard-variable-dynamic-subset.css';
 @import './tokens.css';
 @import './hud.css';
 @import './typography.css';
@@ -11,6 +13,28 @@
 
 /* Post sources are Markdown; their class-like words must not generate utilities. */
 @source not '../content';
+@source not '../assets';
+
+/* =========================================================================
+   Type scale (16px root; rem so browser font-size preferences apply).
+   Tailwind utilities: text-micro / text-meta / text-desc / text-card, alongside the
+   default text-sm (14px) / text-base (16px). Plain CSS uses var(--text-*).
+     micro 12px  decorative HUD identifiers, statistic labels, keyboard hints
+     meta  13px  dates, counts, metadata, tags/chips, Korean nav labels
+     sm    14px  controls, filters, table of contents (Tailwind default)
+     desc  15px  descriptions, summaries, list titles, English nav labels
+     card  17px  card titles
+   ========================================================================= */
+@theme static {
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1.45;
+  --text-meta: 0.8125rem;
+  --text-meta--line-height: 1.5;
+  --text-desc: 0.9375rem;
+  --text-desc--line-height: 1.65;
+  --text-card: 1.0625rem;
+  --text-card--line-height: 1.45;
+}
 
 @layer base {
 /* =========================================================================
@@ -31,7 +55,17 @@ body {
   background-color: var(--bg-canvas);
   color: var(--text-primary);
   overflow-x: clip;
+  /* Korean: wrap at word (eojeol) boundaries everywhere, not only in articles; very long
+     tokens (URLs, paths, identifiers) may still break so they never widen their container. */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+pre,
+code,
+kbd,
+samp {
+  word-break: normal;
 }
 
 /* Blueprint grid + soft glows (static, no animation) */
@@ -166,9 +200,9 @@ html:not(.js) .js-only { display: none !important; }
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.15rem 0.45rem;
+  padding: 0.15rem 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--text-meta);
   line-height: 1.4;
   background: var(--bg-inset);
   border: 1px solid var(--circuit-line-soft);
@@ -235,11 +269,13 @@ a.chip:hover {
 
 .desktop-nav { display: flex; }
 .mobile-menu-trigger { display: none; }
-@media (max-width: 1100px) {
+/* Breakpoints use em so they follow the browser's default font-size preference
+   (em in media queries = initial font size; 68.75em = 1100px at 16px). */
+@media (max-width: 68.75em) {
   .desktop-nav { display: none; }
   .mobile-menu-trigger { display: inline-flex; }
 }
-@media (max-width: 640px) {
+@media (max-width: 40em) {
   .search-kbd-hint,
   .search-btn-label,
   .brand-version-badge { display: none; }
@@ -256,7 +292,7 @@ a.chip:hover {
   gap: 0.6rem;
   padding: 0.65rem 1rem;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-meta);
   color: var(--text-heading);
   background: var(--bg-panel);
   border: 1px solid var(--accent-primary);

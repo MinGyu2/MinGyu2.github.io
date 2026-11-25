@@ -9,7 +9,7 @@ interface Props {
 const { post, variant = 'clean', headingLevel = 3, maxTags = 4 } = Astro.props;
 const posts = await getPosts();
 const cls = classificationOf(post);
-const mod = { color: cls.module.color, label: `${cls.module.short} · ${cls.submodule.name}` };
+const mod = { color: cls.module.color, label: `${cls.module.short} · ${cls.submodule.ko}` };
 const seriesLabel = post.data.series ? `#${String(post.data.series.order).padStart(2, '0')}` : '';
 const code = logCode(post, posts);
 const minutes = readingMinutes(post);
@@ -24,30 +24,30 @@ const date = formatDate(post.data.date);
     <article class="hud-frame hud-frame-interactive post-card h-full">
       <div class="hud-panel-inner p-5 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between gap-2 mb-2.5 font-mono-code text-[11px]">
+          <div class="flex items-center justify-between gap-2 mb-2.5 font-mono-code text-micro">
             <span class="flex items-center gap-1.5 min-w-0 t-muted">
               <span class="w-2 h-2 rounded-full shrink-0" style={`background:${mod.color}`} aria-hidden="true" />
               <span class="truncate">{code} · {mod.label}{seriesLabel && ` · ${seriesLabel}`}</span>
             </span>
             <span class="t-muted shrink-0">{minutes}분</span>
           </div>
-          <H class="text-[15px] font-semibold t-heading leading-snug mb-2">
+          <H class="text-card font-semibold t-heading mb-2">
             <a href={post.data.legacyPath} class="post-card-link">{title}</a>
           </H>
-          <p class="text-[13px] t-muted leading-relaxed line-clamp-3">{summary}</p>
+          <p class="text-desc t-body line-clamp-3">{summary}</p>
         </div>
         <div class="mt-4 pt-3 border-t b-circuit-soft flex items-center justify-between gap-2">
           <ul class="flex flex-wrap gap-1.5 min-w-0" aria-label="태그">
             {tags.map((t) => <li class="chip">#{t}</li>)}
           </ul>
-          <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={post.data.date.toISOString()}>{date}</time>
+          <time class="font-mono-code text-micro t-muted shrink-0" datetime={post.data.date.toISOString()}>{date}</time>
         </div>
       </div>
     </article>
   ) : (
     <article class="clean-card clean-card-interactive post-card p-5 flex flex-col justify-between h-full">
       <div>
-        <div class="flex items-center justify-between font-mono-code text-[11px] mb-2 gap-2">
+        <div class="flex items-center justify-between font-mono-code text-micro mb-2 gap-2">
           <span class="flex items-center gap-1.5 min-w-0 t-muted">
             <span class="w-2 h-2 rounded-full shrink-0" style={`background:${mod.color}`} aria-hidden="true" />
             <span class="truncate">{code} · {mod.label}{seriesLabel && ` · ${seriesLabel}`}</span>
@@ -56,17 +56,17 @@ const date = formatDate(post.data.date);
             <time datetime={post.data.date.toISOString()}>{date}</time> · {minutes}분
           </span>
         </div>
-        <H class="text-base font-semibold t-heading leading-snug">
+        <H class="text-card font-semibold t-heading">
           <a href={post.data.legacyPath} class="post-card-link">{title}</a>
         </H>
-        <p class="text-[13px] t-muted mt-2 leading-relaxed line-clamp-3">{summary}</p>
+        <p class="text-desc t-body mt-2 line-clamp-3">{summary}</p>
       </div>
       <div class="mt-4 pt-3 border-t b-circuit-soft flex items-center justify-between gap-2">
         <ul class="flex flex-wrap gap-1.5 min-w-0" aria-label="태그">
           {tags.map((t) => <li class="chip">#{t}</li>)}
           {post.data.tags.length > maxTags && <li class="chip">+{post.data.tags.length - maxTags}</li>}
         </ul>
-        <span class="font-mono-code text-xs t-cyan shrink-0" aria-hidden="true">읽기 -&gt;</span>
+        <span class="font-mono-code text-micro t-cyan shrink-0" aria-hidden="true">읽기 -&gt;</span>
       </div>
     </article>
   )

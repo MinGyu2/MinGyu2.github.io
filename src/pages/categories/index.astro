@@ -25,7 +25,7 @@ const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.
       <div>
         <span class="panel-id">INDEX // KNOWLEDGE MODULES</span>
         <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">지식 모듈</h1>
-        <p class="text-sm t-muted mt-1.5 max-w-2xl">
+        <p class="text-desc t-muted mt-1.5 max-w-2xl">
           모든 글은 하나의 주 모듈과 그 아래 하나의 세부 모듈에 속합니다. 기술 태그는 이와 별개로 붙으며, 글 주소는 분류와 무관하게 그대로 유지됩니다.
         </p>
         <p class="mt-3 font-mono-code text-xs t-muted">
@@ -48,22 +48,22 @@ const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.
           <li>
             <HudPanel as="section" id={`module-${m.id}`} aria-labelledby={`module-${m.id}-title`} innerClass="p-5 flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between font-mono-code text-xs mb-2 gap-2">
+                <div class="flex flex-wrap items-center justify-between font-mono-code text-micro mb-2 gap-2">
                   <span class="flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full" style={`background:${m.color}`} aria-hidden="true" />
-                    <span class="t-muted">{m.code} // {m.name.toUpperCase()}</span>
+                    <span class="t-muted">{m.code} // {m.short}</span>
                   </span>
-                  <span class="px-2 py-0.5 bg-inset border b-circuit t-body rounded-sm">
+                  <span class="px-2 py-0.5 bg-inset border b-circuit t-body rounded-sm text-meta">
                     {m.count}개 문서 ({m.pct}%)
                   </span>
                 </div>
-                <h2 id={`module-${m.id}-title`} class="font-hud text-xl font-bold t-heading">
+                <h2 id={`module-${m.id}-title`} class="text-2xl font-bold t-heading leading-snug">
                   <a href={`/posts/?module=${m.id}`} class="hover:text-[var(--accent-primary)]">
-                    {m.name}
+                    {m.ko}
                   </a>
                 </h2>
-                <p class="text-[13px] t-cyan mt-0.5">{m.ko}</p>
-                <p class="text-[13px] t-muted mt-2 leading-relaxed">{m.description}</p>
+                <p class="font-hud text-base font-semibold tracking-wide t-cyan mt-0.5">{m.name}</p>
+                <p class="text-desc t-body mt-2">{m.description}</p>
                 <div class="module-meter mt-3" aria-hidden="true">
                   <span style={`width:${Math.max(2, m.pct)}%;background:${m.color}`} />
                 </div>
@@ -73,11 +73,11 @@ const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.
                   <li id={`sub-${s.id}`}>
                     <a href={`/posts/?module=${m.id}&submodule=${s.id}`} class="sub-link">
                       <span class="min-w-0">
-                        <span class="font-mono-code text-[11px] t-muted">{s.code} // </span>
-                        <span class="text-[13px] t-body">{s.name}</span>
-                        <span class="text-[12px] t-muted"> · {s.ko}</span>
+                        <span class="font-mono-code text-micro t-muted">{s.code} // </span>
+                        <span class="text-desc t-heading">{s.ko}</span>
+                        <span class="text-meta t-muted"> · {s.name}</span>
                       </span>
-                      <span class="font-mono-code text-xs t-muted shrink-0">{s.count}</span>
+                      <span class="font-mono-code text-meta t-muted shrink-0">{s.count}</span>
                     </a>
                   </li>
                 ))}
@@ -95,11 +95,11 @@ const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.
           <ul class="space-y-2">
             {seriesList.map((s) => (
               <li class="flex flex-wrap items-baseline justify-between gap-2">
-                <a href={`/posts/?series=${s.id}`} class="text-sm t-heading font-semibold hover:text-[var(--accent-primary)]">
-                  {s.title} <span class="t-muted font-normal">· {s.ko}</span>
+                <a href={`/posts/?series=${s.id}`} class="text-base t-heading font-semibold hover:text-[var(--accent-primary)]">
+                  {s.ko} <span class="t-muted font-normal text-meta">· {s.title}</span>
                 </a>
-                <span class="font-mono-code text-[11px] t-muted">{s.count}편</span>
-                <p class="w-full text-[13px] t-muted">{s.description}</p>
+                <span class="font-mono-code text-meta t-muted">{s.count}편</span>
+                <p class="w-full text-desc t-muted">{s.description}</p>
               </li>
             ))}
           </ul>
@@ -111,9 +111,9 @@ const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.
       <summary class="cursor-pointer min-h-11 flex items-center justify-between gap-3">
         <span>
           <span class="panel-id">LEGACY // POSTS BY ORIGINAL CATEGORY</span>
-          <span class="block text-[13px] t-muted mt-1">이전 블로그의 카테고리(과거 메타데이터) 기준 목록입니다. 기존 링크 호환을 위해 유지합니다.</span>
+          <span class="block text-desc t-muted mt-1">이전 블로그의 카테고리(과거 메타데이터) 기준 목록입니다. 기존 링크 호환을 위해 유지합니다.</span>
         </span>
-        <span class="font-mono-code text-[11px] t-cyan shrink-0">{legacy.length} GROUPS</span>
+        <span class="font-mono-code text-micro t-cyan shrink-0">{legacy.length} GROUPS</span>
       </summary>
       <div class="mt-4 space-y-4">
         {
@@ -125,15 +125,15 @@ const seriesList = SERIES.map((s) => ({ ...s, count: posts.filter((p) => p.data.
                     {c.label}
                   </a>
                 </h3>
-                <span class="font-mono-code text-xs t-muted">{c.count}</span>
+                <span class="font-mono-code text-meta t-muted">{c.count}</span>
               </div>
               <ul class="divide-y b-circuit-soft">
                 {c.posts.map((p) => (
                   <li class="py-1.5 flex items-baseline justify-between gap-4">
-                    <a href={p.data.legacyPath} class="text-[13px] t-body hover:text-[var(--accent-primary)]">
+                    <a href={p.data.legacyPath} class="text-desc t-body hover:text-[var(--accent-primary)]">
                       {displayTitle(p)}
                     </a>
-                    <time class="font-mono-code text-[11px] t-muted shrink-0" datetime={p.data.date.toISOString()}>
+                    <time class="font-mono-code text-micro t-muted shrink-0" datetime={p.data.date.toISOString()}>
                       {formatDate(p.data.date)}
                     </time>
                   </li>

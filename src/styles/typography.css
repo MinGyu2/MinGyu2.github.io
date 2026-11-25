@@ -1,9 +1,9 @@
 /* =========================================================================
-   Article reader typography (reading comfort first: ~16.5px, 1.8 line-height)
+   Article reader typography (reading comfort first: 17.5px, 1.8 line-height)
    ========================================================================= */
 @layer components {
 .article-prose {
-  font-size: 1.03rem;
+  font-size: 1.09375rem; /* 17.5px */
   line-height: 1.8;
   color: var(--text-primary);
   overflow-wrap: anywhere;
@@ -20,25 +20,26 @@
   color: var(--text-heading);
   font-weight: 700;
   line-height: 1.4;
+  text-wrap: pretty;
 }
 .article-prose h1 {
-  font-size: 1.55rem;
-  margin: 2.4rem 0 1rem;
+  font-size: 1.625rem;
+  margin: 2.6rem 0 1.05rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--circuit-line);
 }
 .article-prose h2 {
-  font-size: 1.38rem;
-  margin: 2.3rem 0 0.9rem;
+  font-size: 1.45rem;
+  margin: 2.5rem 0 0.95rem;
   padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--circuit-line-soft);
 }
-.article-prose h3 { font-size: 1.18rem; margin: 1.9rem 0 0.7rem; }
-.article-prose h4 { font-size: 1.05rem; margin: 1.6rem 0 0.6rem; }
+.article-prose h3 { font-size: 1.25rem; margin: 2rem 0 0.75rem; }
+.article-prose h4 { font-size: 1.125rem; margin: 1.7rem 0 0.6rem; }
 .article-prose h5,
-.article-prose h6 { font-size: 1rem; margin: 1.4rem 0 0.5rem; color: var(--text-muted); }
+.article-prose h6 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; color: var(--text-muted); }
 
-.article-prose p { margin: 0 0 1.15rem; }
+.article-prose p { margin: 0 0 1.2rem; }
 .article-prose a {
   color: var(--accent-primary);
   text-decoration: underline;
@@ -69,7 +70,8 @@
   border-left: 3px solid var(--accent-primary);
   background: var(--accent-primary-soft);
   border-radius: 0 6px 6px 0;
-  font-size: 0.97rem;
+  font-size: 1.03125rem; /* 16.5px */
+  line-height: 1.75;
 }
 .article-prose blockquote > :last-child { margin-bottom: 0; }
 
@@ -105,7 +107,7 @@
 .article-prose table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.92rem;
+  font-size: 0.9375rem; /* 15px */
   line-height: 1.6;
 }
 .article-prose .table-scroll table { margin: 0; }
@@ -118,7 +120,7 @@
 }
 .article-prose th {
   text-align: left;
-  padding: 0.6rem 0.9rem;
+  padding: 0.65rem 0.95rem;
   background: var(--bg-inset);
   color: var(--text-heading);
   font-weight: 600;
@@ -126,7 +128,7 @@
   white-space: nowrap;
 }
 .article-prose td {
-  padding: 0.6rem 0.9rem;
+  padding: 0.65rem 0.95rem;
   border-bottom: 1px solid var(--circuit-line-soft);
   vertical-align: top;
 }
@@ -197,7 +199,7 @@ li .code-block { margin: 0.75rem 0; }
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--text-micro);
   letter-spacing: 0.06em;
   color: var(--accent-primary);
 }
@@ -209,7 +211,7 @@ li .code-block { margin: 0.75rem 0; }
 }
 .code-copy {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--text-micro);
   min-height: 32px;
   min-width: 52px;
   padding: 0.2rem 0.7rem;
@@ -230,7 +232,7 @@ pre.astro-code {
   padding: 1rem 1.1rem;
   overflow-x: auto;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.90625rem; /* 14.5px */
   line-height: 1.7;
   tab-size: 4;
   font-variant-ligatures: none;

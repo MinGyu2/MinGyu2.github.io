@@ -11,9 +11,9 @@
       <div class="flex items-center justify-between px-4 py-2.5 border-b b-circuit bg-inset">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full" style="background: var(--accent-primary)" aria-hidden="true"></span>
-          <h2 id="search-dialog-title" class="font-mono-code text-[11px] t-cyan tracking-wider uppercase">SYS.CMD // GLOBAL SEARCH</h2>
+          <h2 id="search-dialog-title" class="font-mono-code text-micro t-cyan tracking-wider uppercase">SYS.CMD // GLOBAL SEARCH</h2>
         </div>
-        <button type="button" class="btn-outline font-mono-code text-[11px] px-2.5 rounded min-h-9" data-search-close aria-label="검색창 닫기">ESC</button>
+        <button type="button" class="btn-outline font-mono-code text-micro px-2.5 rounded min-h-9" data-search-close aria-label="검색창 닫기">ESC</button>
       </div>
       <div class="p-4 border-b b-circuit-soft bg-panel">
         <div class="flex items-center gap-3">
@@ -31,7 +31,7 @@
             aria-autocomplete="list"
             aria-label="블로그 전체 검색"
             placeholder="제목, 본문, 카테고리, 태그 또는 프로젝트 검색..."
-            class="search-input w-full bg-transparent text-[15px] t-heading"
+            class="search-input w-full bg-transparent text-base t-heading"
           />
         </div>
       </div>
@@ -39,7 +39,7 @@
         <ul id="search-results" role="listbox" aria-label="검색 결과"></ul>
         <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
       </div>
-      <div class="px-4 py-2 bg-inset border-t b-circuit-soft flex items-center justify-between gap-3 text-[11px] font-mono-code t-muted">
+      <div class="px-4 py-2 bg-inset border-t b-circuit-soft flex items-center justify-between gap-3 text-micro font-mono-code t-muted">
         <span class="search-hints">↑↓ 이동 · Enter 열기 · ESC 닫기</span>
         <span id="search-count">0 RESULTS</span>
       </div>
@@ -101,8 +101,8 @@
   :global(.search-group) {
     padding: 0.55rem 1rem 0.35rem;
     font-family: var(--font-mono);
-    font-size: 0.66rem;
-    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
     color: var(--text-muted);
     border-top: 1px solid var(--circuit-line-soft);
   }
@@ -131,7 +131,7 @@
     border-radius: 2px;
     padding: 0 1px;
   }
-  @media (max-width: 640px) {
+  @media (max-width: 40em) {
     .search-dialog {
       margin-top: 0.75rem;
     }
@@ -139,7 +139,7 @@
       display: none;
     }
   }
-  @media (max-height: 520px) {
+  @media (max-height: 32.5em) {
     .search-dialog {
       margin-top: 0.5rem;
     }

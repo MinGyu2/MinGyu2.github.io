@@ -28,16 +28,16 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <div class="max-w-2xl">
           <span class="panel-id">LAB // EXPERIMENT CATALOG</span>
           <h1 class="font-hud text-2xl sm:text-3xl font-bold t-heading mt-1">Experiment Lab</h1>
-          <p class="text-sm t-muted mt-1.5 leading-relaxed">
+          <p class="text-desc t-muted mt-1.5">
             보안 실습 도구와 독립 실행형 HTML · Canvas · WebGL · WebAssembly 실험을 모아 둔 실험실입니다. 그룹을 펼쳐 실험을 확인하고, 원하는 실험만 직접 실행하세요.
           </p>
         </div>
         <dl class="lab-stats" aria-label="실험 현황">
-          <div><dt>TOTAL</dt><dd class="t-heading" data-lab-count="total">{pad(counts.total)}</dd></div>
-          <div><dt>AVAILABLE</dt><dd class="t-mint" data-lab-count="available">{pad(counts.available)}</dd></div>
-          <div><dt>IN DEV</dt><dd class="t-cyan" data-lab-count="in-development">{pad(counts.inDevelopment)}</dd></div>
-          <div><dt>PLANNED</dt><dd class="t-amber" data-lab-count="planned">{pad(counts.planned)}</dd></div>
-          <div><dt>GROUPS</dt><dd class="t-blue" data-lab-count="groups">{pad(counts.groups)}</dd></div>
+          <div><dt>전체 <span>TOTAL</span></dt><dd class="t-heading" data-lab-count="total">{pad(counts.total)}</dd></div>
+          <div><dt>실행 가능 <span>AVAILABLE</span></dt><dd class="t-mint" data-lab-count="available">{pad(counts.available)}</dd></div>
+          <div><dt>개발 중 <span>IN DEV</span></dt><dd class="t-cyan" data-lab-count="in-development">{pad(counts.inDevelopment)}</dd></div>
+          <div><dt>개발 예정 <span>PLANNED</span></dt><dd class="t-amber" data-lab-count="planned">{pad(counts.planned)}</dd></div>
+          <div><dt>그룹 <span>GROUPS</span></dt><dd class="t-blue" data-lab-count="groups">{pad(counts.groups)}</dd></div>
         </dl>
       </div>
     </HudPanel>
@@ -52,20 +52,20 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <>
           <div class="clean-card p-4 flex flex-wrap items-center gap-3 js-only" data-pagefind-ignore>
             <label for="lab-search" class="sr-only">실험 검색 (제목, 설명, 태그, 그룹, 경로)</label>
-            <input id="lab-search" type="search" autocomplete="off" placeholder="실험 검색 — 제목, 설명, 태그, 그룹, 경로..." class="field px-3.5 py-2.5 text-sm flex-1 min-w-[12rem]" />
-            <button type="button" class="btn-outline px-3 rounded text-xs min-h-10" id="lab-search-clear" hidden>
+            <input id="lab-search" type="search" autocomplete="off" placeholder="실험 검색 — 제목, 설명, 태그, 그룹, 경로..." class="field px-3.5 py-2.5 text-desc flex-1 min-w-[12rem]" />
+            <button type="button" class="btn-outline px-3 rounded text-sm min-h-10" id="lab-search-clear" hidden>
               검색 지우기
             </button>
-            <p id="lab-result-count" class="font-mono-code text-[11px] t-muted" role="status" aria-live="polite">
-              {counts.total} EXPERIMENTS
+            <p id="lab-result-count" class="text-meta t-muted" role="status" aria-live="polite">
+              실험 {counts.total}개
             </p>
           </div>
 
           {
             rootGroups.length > 0 && (
               <section aria-labelledby="lab-groups-title">
-                <h2 id="lab-groups-title" class="panel-id mb-3">
-                  GROUPS // 실험 그룹 ({rootGroups.length})
+                <h2 id="lab-groups-title" class="lab-section-title">
+                  <span class="panel-id">GROUPS //</span> 실험 그룹 <span class="lab-section-count">{rootGroups.length}</span>
                 </h2>
                 <ul class="space-y-3" data-lab-tree>
                   {rootGroups.map((n) => (
@@ -79,8 +79,8 @@ const pad = (n: number) => String(n).padStart(2, '0');
           {
             rootExperiments.length > 0 && (
               <section aria-labelledby="lab-root-title" data-lab-root-section>
-                <h2 id="lab-root-title" class="panel-id mb-3">
-                  STANDALONE // 독립 실험 ({rootExperiments.length})
+                <h2 id="lab-root-title" class="lab-section-title">
+                  <span class="panel-id">STANDALONE //</span> 독립 실험 <span class="lab-section-count">{rootExperiments.length}</span>
                 </h2>
                 <ul class="lab-root-grid">
                   {rootExperiments.map((n) => (
@@ -102,7 +102,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
       )
     }
 
-    <p class="text-[12px] t-muted leading-relaxed" data-pagefind-ignore>
+    <p class="text-meta t-muted" data-pagefind-ignore>
       새 실험은 <code class="font-mono-code t-cyan">public/experiments/&lt;그룹&gt;/&lt;실험&gt;/index.html</code> 로 추가하면 다음 빌드에서 자동으로 이 목록에 나타납니다. 무거운 런타임(WebGL, WASM 등)은 해당
       실험 페이지를 실행할 때만 불러옵니다.
     </p>
@@ -112,7 +112,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 <style>
   .lab-stats {
     display: grid;
-    grid-template-columns: repeat(5, minmax(4.5rem, auto));
+    grid-template-columns: repeat(5, minmax(5rem, auto));
     gap: 0.5rem;
   }
   .lab-stats > div {
@@ -122,9 +122,32 @@ const pad = (n: number) => String(n).padStart(2, '0');
     border-radius: 4px;
   }
   .lab-stats dt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text-primary);
+  }
+  .lab-stats dt span {
+    display: block;
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.6875rem;
+    font-weight: 400;
     letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .lab-section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-heading);
+  }
+  .lab-section-count {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 400;
     color: var(--text-muted);
   }
   .lab-stats dd {
@@ -138,10 +161,17 @@ const pad = (n: number) => String(n).padStart(2, '0');
     gap: 0.75rem;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
   }
-  @media (max-width: 640px) {
+  .lab-root-grid > :global(li) {
+    display: flex;
+  }
+  @media (max-width: 40em) {
     .lab-stats {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       width: 100%;
+    }
+    /* Narrow tiles: the Korean label is enough; avoid mid-word breaks in the English one. */
+    .lab-stats dt span {
+      display: none;
     }
   }
 </style>
