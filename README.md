@@ -1,6 +1,6 @@
 # ARC LAB — 기록하는 개발자
 
-Personal engineering blog of Jung MinGyu (MinQ), published at <https://mingyu2.github.io/>.
+Personal engineering blog of MQ, published at <https://mingyu2.github.io/>.
 A static [Astro](https://astro.build) site with the ARC LAB workstation design (dark "Deep Space" / light "Mist Paper").
 
 The site was migrated from Jekyll + Minimal Mistakes; see [MIGRATION.md](MIGRATION.md) for the

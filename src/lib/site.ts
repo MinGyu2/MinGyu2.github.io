@@ -7,8 +7,7 @@ export const SITE = {
   locale: 'ko-KR',
   ogLocale: 'ko_KR',
   author: {
-    name: 'Jung MinGyu',
-    nickname: 'MinQ',
+    name: 'MQ',
     bio: '개발자',
     location: 'Republic of Korea',
     github: 'https://github.com/MinGyu2/',

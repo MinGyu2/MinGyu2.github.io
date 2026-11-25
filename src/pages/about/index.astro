@@ -43,7 +43,7 @@ const interests = [
   },
 ];
 ---
-<BaseLayout title="About" nav="profile" view="profile" description={`${SITE.author.name}(${SITE.author.nickname}) — ${SITE.title}`}>
+<BaseLayout title="About" nav="profile" view="profile" description={`${SITE.author.name} — ${SITE.title}`}>
   <div class="grid-split reveal" data-pagefind-body>
     <span hidden data-pagefind-meta="type">PAGE</span>
     <span hidden data-pagefind-meta="sub">PROFILE · 소개</span>
@@ -54,7 +54,7 @@ const interests = [
           <div class="w-16 h-16 rounded-full bg-inset border-2 flex items-center justify-center font-hud text-2xl font-bold t-cyan shrink-0" style="border-color: var(--accent-primary)" aria-hidden="true">MQ</div>
           <div>
             <h1 class="font-hud text-2xl font-bold t-heading">{SITE.author.name}</h1>
-            <p class="text-sm t-muted">{SITE.title} ({SITE.author.nickname}) · {SITE.author.location}</p>
+            <p class="text-sm t-muted">{SITE.title} · {SITE.author.location}</p>
           </div>
         </div>
         <p class="mt-5 text-base t-body leading-relaxed">안녕하세요</p>
