@@ -1,63 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 424" width="720" height="424" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 798" width="400" height="939" role="img" aria-labelledby="title desc">
   <title id="title">프로젝트 접근 권한 변경</title>
-  <desc id="desc">변경 전에는 restricted: true인 클라이언트 인증서가 user-1000 프로젝트에만 접근할 수 있고 user-1000-gui에는 접근할 수 없다. 변경 후에는 같은 restricted 인증서가 user-1000과 user-1000-gui 모두에 접근할 수 있다. 바뀌는 것은 인증서의 projects 목록뿐이며 restricted 값, 즉 권한 수준은 그대로이다.</desc>
+  <desc id="desc">변경 전에는 restricted: true인 클라이언트 인증서가 user-1000 프로젝트에만 접근할 수 있고 user-1000-gui에는 접근할 수 없다. 변경 후에는 같은 인증서가 user-1000과 user-1000-gui 모두에 접근한다. 인증서의 restricted 설정은 유지되지만 허용 프로젝트와 실질적인 접근 범위는 넓어진다. 인증서 제한과 프로젝트 제한은 별개이며, 제한 없는 프로젝트에 접근을 허용하면 호스트 수준 작업이 가능해질 수 있다.</desc>
   <style>
     .t{font-family:'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#1f2937}
     .m{font-family:ui-monospace,'JetBrains Mono','D2Coding',Menlo,Consolas,monospace;fill:#1f2937}
+    .mu{fill:#4b5563}
     .p{fill:#ffffff;stroke:#d6dce4}
     .k{fill:#fff7e6;stroke:#c9890f}
     .y{fill:#eef4ff;stroke:#2563eb}
     .x{fill:#f9fafb;stroke:#9ca3af;stroke-dasharray:4 3}
     .w{stroke:#ffffff;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .ok{fill:#166534}
+    .no{fill:#991b1b}
+    .am{fill:#92400e}
   </style>
   <defs>
     <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker>
   </defs>
-  <rect x="0.5" y="0.5" width="719" height="423" rx="12" fill="#fbfcfd" stroke="#d6dce4"/>
-  <text class="t" x="32" y="40" font-size="20" font-weight="700">프로젝트 접근 권한 변경</text>
-  <text class="t" x="32" y="62" font-size="13" style="fill:#4b5563">인증서의 허용 프로젝트 목록(projects)만 바뀌고 권한 수준(restricted)은 그대로</text>
+  <rect x="0.5" y="0.5" width="339" height="797" rx="12" fill="#fbfcfd" stroke="#d6dce4"/>
+  <text class="t" x="20" y="34" font-size="19" font-weight="700">프로젝트 접근 권한 변경</text>
+  <text class="t mu" x="20" y="56" font-size="14">인증서의 restricted 설정은 유지되지만</text>
+  <text class="t mu" x="20" y="76" font-size="14">허용 프로젝트와 실제 접근 범위는 넓어짐</text>
 
   <!-- 변경 전 -->
-  <rect class="p" x="24" y="84" width="308" height="270" rx="10"/>
-  <text class="t" x="40" y="110" font-size="15" font-weight="700">변경 전</text>
-  <rect class="k" x="40" y="124" width="276" height="74" rx="8"/>
-  <text class="t" x="56" y="148" font-size="14" font-weight="700" style="fill:#92400e">클라이언트 인증서</text>
-  <text class="m" x="56" y="169" font-size="12.5">type: client</text>
-  <text class="m" x="56" y="187" font-size="12.5">restricted: true</text>
-  <text class="m" x="40" y="222" font-size="12.5" style="fill:#4b5563">projects:</text>
-  <rect class="y" x="40" y="234" width="276" height="40" rx="6"/>
-  <circle cx="62" cy="254" r="10" fill="#15803d"/><path class="w" d="M57 254l3.5 3.5L67 251"/>
-  <text class="m" x="82" y="259" font-size="13">user-1000</text>
-  <text class="t" x="304" y="259" font-size="12" text-anchor="end" style="fill:#166534">접근 허용</text>
-  <rect class="x" x="40" y="284" width="276" height="40" rx="6"/>
-  <circle cx="62" cy="304" r="10" fill="#b91c1c"/><path class="w" d="M58 300l8 8M66 300l-8 8"/>
-  <text class="m" x="82" y="309" font-size="13" style="fill:#6b7280">user-1000-gui</text>
-  <text class="t" x="304" y="309" font-size="12" text-anchor="end" style="fill:#991b1b">접근 불가</text>
+  <rect class="p" x="16" y="92" width="308" height="248" rx="10"/>
+  <text class="t" x="30" y="116" font-size="16" font-weight="700">변경 전</text>
+  <rect class="k" x="30" y="128" width="280" height="80" rx="8"/>
+  <text class="t am" x="44" y="151" font-size="15" font-weight="700">클라이언트 인증서</text>
+  <text class="m" x="44" y="172" font-size="14">type: client</text>
+  <text class="m" x="44" y="194" font-size="14">restricted: true</text>
+  <text class="m mu" x="30" y="232" font-size="14">projects:</text>
+  <rect class="y" x="30" y="242" width="280" height="38" rx="6"/>
+  <circle cx="51" cy="261" r="10" fill="#15803d"/><path class="w" d="M46 261l3.5 3.5L56 258"/>
+  <text class="m" x="70" y="266" font-size="14">user-1000</text>
+  <text class="t ok" x="298" y="266" font-size="14" text-anchor="end">허용</text>
+  <rect class="x" x="30" y="288" width="280" height="38" rx="6"/>
+  <circle cx="51" cy="307" r="10" fill="#b91c1c"/><path class="w" d="M47 303l8 8M55 303l-8 8"/>
+  <text class="m" x="70" y="312" font-size="14" style="fill:#6b7280">user-1000-gui</text>
+  <text class="t no" x="298" y="312" font-size="14" text-anchor="end">불가</text>
 
-  <!-- 화살표 -->
-  <path d="M340 219H380" stroke="#6b7280" stroke-width="2" marker-end="url(#a)"/>
-  <text class="t" x="360" y="208" font-size="11" text-anchor="middle" style="fill:#4b5563">edit</text>
+  <path d="M170 344V370" stroke="#6b7280" stroke-width="2" marker-end="url(#a)"/>
+  <text class="m mu" x="182" y="362" font-size="14">trust edit</text>
 
   <!-- 변경 후 -->
-  <rect class="p" x="388" y="84" width="308" height="270" rx="10"/>
-  <text class="t" x="404" y="110" font-size="15" font-weight="700">변경 후</text>
-  <rect class="k" x="404" y="124" width="276" height="74" rx="8"/>
-  <text class="t" x="420" y="148" font-size="14" font-weight="700" style="fill:#92400e">같은 클라이언트 인증서</text>
-  <text class="m" x="420" y="169" font-size="12.5">type: client</text>
-  <text class="m" x="420" y="187" font-size="12.5">restricted: true</text>
-  <text class="m" x="404" y="222" font-size="12.5" style="fill:#4b5563">projects:</text>
-  <rect class="y" x="404" y="234" width="276" height="40" rx="6"/>
-  <circle cx="426" cy="254" r="10" fill="#15803d"/><path class="w" d="M421 254l3.5 3.5L431 251"/>
-  <text class="m" x="446" y="259" font-size="13">user-1000</text>
-  <text class="t" x="668" y="259" font-size="12" text-anchor="end" style="fill:#166534">접근 허용</text>
-  <rect class="y" x="404" y="284" width="276" height="40" rx="6" stroke-width="2"/>
-  <circle cx="426" cy="304" r="10" fill="#15803d"/><path class="w" d="M421 304l3.5 3.5L431 301"/>
-  <text class="m" x="446" y="309" font-size="13">user-1000-gui</text>
-  <text class="t" x="668" y="309" font-size="12" text-anchor="end" style="fill:#166534">접근 허용 (추가)</text>
+  <rect class="p" x="16" y="376" width="308" height="248" rx="10"/>
+  <text class="t" x="30" y="400" font-size="16" font-weight="700">변경 후</text>
+  <rect class="k" x="30" y="412" width="280" height="80" rx="8"/>
+  <text class="t am" x="44" y="435" font-size="15" font-weight="700">같은 클라이언트 인증서</text>
+  <text class="m" x="44" y="456" font-size="14">type: client</text>
+  <text class="m" x="44" y="478" font-size="14">restricted: true</text>
+  <text class="m mu" x="30" y="516" font-size="14">projects:</text>
+  <rect class="y" x="30" y="526" width="280" height="38" rx="6"/>
+  <circle cx="51" cy="545" r="10" fill="#15803d"/><path class="w" d="M46 545l3.5 3.5L56 542"/>
+  <text class="m" x="70" y="550" font-size="14">user-1000</text>
+  <text class="t ok" x="298" y="550" font-size="14" text-anchor="end">허용</text>
+  <rect class="y" x="30" y="572" width="280" height="38" rx="6" stroke-width="2"/>
+  <circle cx="51" cy="591" r="10" fill="#15803d"/><path class="w" d="M46 591l3.5 3.5L56 588"/>
+  <text class="m" x="70" y="596" font-size="14">user-1000-gui</text>
+  <text class="t ok" x="298" y="596" font-size="14" text-anchor="end">허용 (추가)</text>
 
   <!-- 요약 -->
-  <circle cx="38" cy="381" r="5" fill="#c9890f"/>
-  <text class="t" x="52" y="386" font-size="13"><tspan font-weight="700">변경됨</tspan> · 인증서의 projects 목록에 user-1000-gui 추가</text>
-  <circle cx="38" cy="405" r="5" fill="#9aa4b2"/>
-  <text class="t" x="52" y="410" font-size="13"><tspan font-weight="700">유지됨</tspan> · restricted: true — 무제한 관리자 권한으로 바뀌지 않음</text>
+  <circle cx="26" cy="651" r="5" fill="#c9890f"/>
+  <text class="t" x="38" y="656" font-size="14"><tspan font-weight="700">변경</tspan> · projects에 user-1000-gui 추가</text>
+  <circle cx="26" cy="675" r="5" fill="#9aa4b2"/>
+  <text class="t" x="38" y="680" font-size="14"><tspan font-weight="700">유지</tspan> · 인증서의 restricted: true</text>
+
+  <rect x="16" y="696" width="308" height="86" rx="8" fill="#fff7e6" stroke="#c9890f"/>
+  <text class="t am" x="30" y="720" font-size="14" font-weight="700">주의 · 인증서 제한 ≠ 프로젝트 제한</text>
+  <text class="t am" x="30" y="743" font-size="14">제한 없는 프로젝트에 접근을 허용하면</text>
+  <text class="t am" x="30" y="765" font-size="14">호스트 수준 작업이 가능해질 수 있음</text>
 </svg>

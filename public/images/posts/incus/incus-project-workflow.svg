@@ -1,67 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 662" width="560" height="662" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 770" width="400" height="906" role="img" aria-labelledby="title desc">
   <title id="title">Incus 프로젝트 설정 순서</title>
-  <desc id="desc">1 프로젝트 생성, 2 Trust 접근 권한 설정, 3 Btrfs 스토리지 생성, 4 네트워크 확인, 5 기본 프로파일 설정, 6 프로젝트 전환, 7 인스턴스 생성 및 검증 순서로 진행하는 세로 흐름도. 각 단계에 대표 명령이 함께 표시된다.</desc>
+  <desc id="desc">1 프로젝트 생성, 2 Trust 접근 권한 설정(공유 환경이면 프로젝트 제한을 먼저 설정), 3 Btrfs 스토리지 생성, 4 default 프로젝트의 네트워크 확인, 5 기본 프로파일 설정, 6 프로젝트 전환, 7 인스턴스 생성 및 검증 순서로 진행하는 세로 흐름도. 각 단계에 대표 명령이 요약되어 있다.</desc>
   <style>
     .t{font-family:'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#1f2937}
-    .m{font-family:ui-monospace,'JetBrains Mono','D2Coding',Menlo,Consolas,monospace;fill:#4b5563;font-size:12.5px}
+    .m{font-family:ui-monospace,'JetBrains Mono','D2Coding',Menlo,Consolas,monospace;fill:#4b5563;font-size:14px}
     .b{fill:#ffffff;stroke:#d6dce4}
     .n{font-family:'Pretendard','Noto Sans KR',sans-serif;fill:#ffffff;font-size:15px;font-weight:700;text-anchor:middle}
-    .h{font-size:15px;font-weight:700}
+    .h{font-size:16px;font-weight:700}
     .c{stroke:#9aa4b2;stroke-width:1.5}
   </style>
   <defs>
     <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa4b2"/></marker>
   </defs>
-  <rect x="0.5" y="0.5" width="559" height="661" rx="12" fill="#fbfcfd" stroke="#d6dce4"/>
-  <text class="t" x="24" y="40" font-size="20" font-weight="700">Incus 프로젝트 설정 순서</text>
-  <text class="t" x="24" y="62" font-size="13" style="fill:#4b5563">대표 명령 요약 · 이름은 예시</text>
+  <rect x="0.5" y="0.5" width="339" height="769" rx="12" fill="#fbfcfd" stroke="#d6dce4"/>
+  <text class="t" x="20" y="34" font-size="19" font-weight="700">Incus 프로젝트 설정 순서</text>
+  <text class="t" x="20" y="56" font-size="14" style="fill:#4b5563">명령 요약 · 전체 명령은 본문 참고</text>
 
-  <g>
-    <rect class="b" x="20" y="84" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="115" r="16" fill="#2563eb"/><text class="n" x="52" y="120">1</text>
-    <text class="t h" x="84" y="110">프로젝트 생성</text>
-    <text class="m" x="84" y="131">sudo incus project create user-1000-gui</text>
-  </g>
-  <path class="c" d="M52 148V164" marker-end="url(#a)"/>
-  <g>
-    <rect class="b" x="20" y="166" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="197" r="16" fill="#a16207"/><text class="n" x="52" y="202">2</text>
-    <text class="t h" x="84" y="192">Trust 접근 권한 설정</text>
-    <text class="m" x="84" y="213">sudo incus config trust edit &lt;fingerprint&gt;</text>
-  </g>
-  <path class="c" d="M52 230V246" marker-end="url(#a)"/>
-  <g>
-    <rect class="b" x="20" y="248" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="279" r="16" fill="#15803d"/><text class="n" x="52" y="284">3</text>
-    <text class="t h" x="84" y="274">Btrfs 스토리지 생성</text>
-    <text class="m" x="84" y="295">sudo incus storage create mq_pool btrfs</text>
-  </g>
-  <path class="c" d="M52 312V328" marker-end="url(#a)"/>
-  <g>
-    <rect class="b" x="20" y="330" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="361" r="16" fill="#6d4fd1"/><text class="n" x="52" y="366">4</text>
-    <text class="t h" x="84" y="356">네트워크 확인</text>
-    <text class="m" x="84" y="377">sudo incus network show incusbr-1000</text>
-  </g>
-  <path class="c" d="M52 394V410" marker-end="url(#a)"/>
-  <g>
-    <rect class="b" x="20" y="412" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="443" r="16" fill="#4b5563"/><text class="n" x="52" y="448">5</text>
-    <text class="t h" x="84" y="438">기본 프로파일 설정</text>
-    <text class="m" x="84" y="459">incus --project user-1000-gui profile edit default</text>
-  </g>
-  <path class="c" d="M52 476V492" marker-end="url(#a)"/>
-  <g>
-    <rect class="b" x="20" y="494" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="525" r="16" fill="#2563eb"/><text class="n" x="52" y="530">6</text>
-    <text class="t h" x="84" y="520">프로젝트 전환</text>
-    <text class="m" x="84" y="541">incus project switch user-1000-gui</text>
-  </g>
-  <path class="c" d="M52 558V574" marker-end="url(#a)"/>
-  <g>
-    <rect class="b" x="20" y="576" width="520" height="62" rx="10"/>
-    <circle cx="52" cy="607" r="16" fill="#4b5563"/><text class="n" x="52" y="612">7</text>
-    <text class="t h" x="84" y="602">인스턴스 생성 및 검증</text>
-    <text class="m" x="84" y="623">incus launch images:ubuntu/24.04 test-ub</text>
-  </g>
+  <rect class="b" x="12" y="76" width="316" height="78" rx="10"/>
+  <circle cx="36" cy="102" r="15" fill="#2563eb"/><text class="n" x="36" y="107">1</text>
+  <text class="t h" x="62" y="106">프로젝트 생성</text>
+  <text class="m" x="62" y="128">sudo incus project create</text>
+  <text class="m" x="62" y="147">user-1000-gui</text>
+  <path class="c" d="M36 156V170" marker-end="url(#a)"/>
+
+  <rect class="b" x="12" y="172" width="316" height="98" rx="10"/>
+  <circle cx="36" cy="198" r="15" fill="#a16207"/><text class="n" x="36" y="203">2</text>
+  <text class="t h" x="62" y="202">Trust 접근 권한 설정</text>
+  <text class="m" x="62" y="224">sudo incus config trust edit</text>
+  <text class="m" x="62" y="243">&lt;fingerprint&gt;</text>
+  <text class="t" x="62" y="262" font-size="14" style="fill:#92400e">공유 환경이면 프로젝트 제한 먼저</text>
+  <path class="c" d="M36 272V286" marker-end="url(#a)"/>
+
+  <rect class="b" x="12" y="288" width="316" height="78" rx="10"/>
+  <circle cx="36" cy="314" r="15" fill="#15803d"/><text class="n" x="36" y="319">3</text>
+  <text class="t h" x="62" y="318">Btrfs 스토리지 생성</text>
+  <text class="m" x="62" y="340">sudo incus storage create</text>
+  <text class="m" x="62" y="359">mq_pool btrfs</text>
+  <path class="c" d="M36 368V382" marker-end="url(#a)"/>
+
+  <rect class="b" x="12" y="384" width="316" height="78" rx="10"/>
+  <circle cx="36" cy="410" r="15" fill="#6d4fd1"/><text class="n" x="36" y="415">4</text>
+  <text class="t h" x="62" y="414">네트워크 확인</text>
+  <text class="m" x="62" y="436">sudo incus --project default</text>
+  <text class="m" x="62" y="455">network show incusbr-1000</text>
+  <path class="c" d="M36 464V478" marker-end="url(#a)"/>
+
+  <rect class="b" x="12" y="480" width="316" height="78" rx="10"/>
+  <circle cx="36" cy="506" r="15" fill="#4b5563"/><text class="n" x="36" y="511">5</text>
+  <text class="t h" x="62" y="510">기본 프로파일 설정</text>
+  <text class="m" x="62" y="532">incus --project user-1000-gui</text>
+  <text class="m" x="62" y="551">profile edit default</text>
+  <path class="c" d="M36 560V574" marker-end="url(#a)"/>
+
+  <rect class="b" x="12" y="576" width="316" height="78" rx="10"/>
+  <circle cx="36" cy="602" r="15" fill="#2563eb"/><text class="n" x="36" y="607">6</text>
+  <text class="t h" x="62" y="606">프로젝트 전환</text>
+  <text class="m" x="62" y="628">incus project switch</text>
+  <text class="m" x="62" y="647">user-1000-gui</text>
+  <path class="c" d="M36 656V670" marker-end="url(#a)"/>
+
+  <rect class="b" x="12" y="672" width="316" height="78" rx="10"/>
+  <circle cx="36" cy="698" r="15" fill="#4b5563"/><text class="n" x="36" y="703">7</text>
+  <text class="t h" x="62" y="702">인스턴스 생성 및 검증</text>
+  <text class="m" x="62" y="724">incus launch</text>
+  <text class="m" x="62" y="743">images:ubuntu/24.04 test-ub</text>
 </svg>
