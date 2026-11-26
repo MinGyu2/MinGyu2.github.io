@@ -190,6 +190,21 @@ const unresolved = launchable.filter((e) => {
   return !existsSync(path.endsWith('/') ? join(DIST, path, 'index.html') : join(DIST, path));
 });
 ok(unresolved.length === 0, 'every launch link resolves to a generated file', unresolved.map((e) => `${e.id} → ${e.href}`));
+const rootPos = labHtml.indexOf('id="lab-root-title"');
+const groupsPos = labHtml.indexOf('id="lab-groups-title"');
+const rootGroupCount = lab.roots.filter((n) => n.kind === 'group').length;
+const rootExpCount = lab.roots.filter((n) => n.kind === 'experiment').length;
+ok(
+  (rootExpCount === 0 || rootPos !== -1) && (rootGroupCount === 0 || groupsPos !== -1) && (rootPos === -1 || groupsPos === -1 || rootPos < groupsPos),
+  `/lab/ lists standalone experiments (${rootExpCount}) before experiment groups (${rootGroupCount}) in DOM order`,
+);
+const rootIds = new Set(lab.roots.filter((n) => n.kind === 'experiment').map((e) => e.id));
+const groupedIds = flat.filter((e) => !rootIds.has(e.id)).map((e) => e.id);
+const firstGroupedPos = Math.min(...groupedIds.map((id) => labHtml.indexOf(`data-exp="${id}"`)));
+const lastRootPos = Math.max(-1, ...lab.roots.filter((n) => n.kind === 'experiment').map((e) => labHtml.indexOf(`data-exp="${e.id}"`)));
+ok(groupedIds.length === 0 || lastRootPos < firstGroupedPos, 'every grouped experiment card comes after every standalone card');
+const cardCounts = flat.map((e) => labHtml.split(`data-exp="${e.id}"`).length - 1);
+ok(cardCounts.every((c) => c === 1), 'every catalog experiment is rendered exactly once on /lab/');
 const pi = existsSync(join(DIST, 'lab', 'payload-inspector', 'index.html')) ? readFileSync(join(DIST, 'lab', 'payload-inspector', 'index.html'), 'utf8') : '';
 ok(pi.includes('data-payload-inspector') && pi.includes('LAB-01') && pi.includes('href="/lab/"'), 'Payload Inspector at /lab/payload-inspector/ (LAB-01, link back to the lab)');
 ok(labHtml.includes("location.hash === '#payload-inspector'") && labHtml.includes("location.replace('/lab/payload-inspector/')"), 'legacy /lab/#payload-inspector forwards to the dedicated route');

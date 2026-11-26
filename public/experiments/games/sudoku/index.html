@@ -1,0 +1,3299 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#172222" />
+    <title>스도쿠 클럽</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #f1f3f4;
+        --surface: #fff;
+        --soft: #f7f8f8;
+        --ink: #172222;
+        --muted: #768181;
+        --line: #dce1e1;
+        --strong: #758181;
+        --accent: #e76d59;
+        --accent-dark: #c34e3d;
+        --accent-soft: #fff0ed;
+        --mint: #e7f3eb;
+        --mint-ink: #39734c;
+        --peer: #f0f3f3;
+        --selected: #e4eff2;
+        --same: #f8e5df;
+        --bad: #c83d42;
+        --shadow: 0 10px 32px #1d2d2d0d;
+        --radius: 18px;
+        --font:
+          Inter, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+          sans-serif;
+      }
+      [data-theme="dark"] {
+        color-scheme: dark;
+        --page: #111919;
+        --surface: #1b2525;
+        --soft: #222e2e;
+        --ink: #ecf1f0;
+        --muted: #a2afad;
+        --line: #344141;
+        --strong: #82918f;
+        --accent: #f0826d;
+        --accent-dark: #ff9a86;
+        --accent-soft: #3b2927;
+        --mint: #24392c;
+        --mint-ink: #9ad4a8;
+        --peer: #253030;
+        --selected: #294047;
+        --same: #49332f;
+        --bad: #ff888c;
+        --shadow: 0 10px 32px #0003;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font: 15px var(--font);
+        -webkit-font-smoothing: antialiased;
+      }
+      button,
+      select {
+        font: inherit;
+        color: inherit;
+      }
+      button {
+        cursor: pointer;
+      }
+      button:focus-visible,
+      select:focus-visible,
+      [tabindex]:focus-visible {
+        outline: 3px solid #e76d5999;
+        outline-offset: 3px;
+      }
+      .icon-sprite {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+      .icon {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .topbar {
+        height: 70px;
+        padding: 0 max(24px, calc((100vw - 1200px) / 2));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #172222;
+        color: #f4f6f5;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 16px;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        gap: 2px;
+        padding: 3px;
+        border: 1px solid #f0826d;
+        border-radius: 8px;
+        transform: rotate(-5deg);
+      }
+      .brand-mark i {
+        background: #f0826d;
+        border-radius: 1px;
+      }
+      .brand-mark i:nth-child(2),
+      .brand-mark i:nth-child(4),
+      .brand-mark i:nth-child(9) {
+        opacity: 0.4;
+      }
+      .top-actions {
+        display: flex;
+        gap: 8px;
+      }
+      .icon-button {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #3b4848;
+        border-radius: 11px;
+        background: transparent;
+        color: #d5dfdd;
+      }
+      .icon-button:hover {
+        background: #293535;
+        color: white;
+      }
+      main {
+        width: min(1200px, calc(100% - 48px));
+        margin: 40px auto 56px;
+      }
+      .page-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 24px;
+      }
+      .eyebrow {
+        margin: 0 0 7px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(28px, 4vw, 36px);
+        letter-spacing: -0.065em;
+        line-height: 1.12;
+      }
+      .status-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: var(--mint);
+        color: var(--mint-ink);
+        font-size: 12px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+      .game-layout {
+        display: grid;
+        grid-template-columns: minmax(450px, 1.12fr) minmax(360px, 0.88fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+      .board-card {
+        padding: 22px;
+      }
+      .board-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 17px;
+      }
+      .board-label {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 13px;
+        font-weight: 750;
+      }
+      .mini-mark {
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+        background: var(--accent);
+      }
+      .timer-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .timer {
+        font-variant-numeric: tabular-nums;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .quiet-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 34px;
+        padding: 6px 10px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--surface);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+      .quiet-button:hover {
+        border-color: var(--strong);
+        color: var(--ink);
+      }
+      #pauseButton .icon {
+        width: 14px;
+        height: 14px;
+      }
+      #board {
+        width: 100%;
+        aspect-ratio: 1;
+        display: grid;
+        grid-template: repeat(9, minmax(0, 1fr)) / repeat(9, minmax(0, 1fr));
+        overflow: hidden;
+        border: 2px solid var(--ink);
+        border-radius: 5px;
+        background: var(--surface);
+        touch-action: manipulation;
+      }
+      .cell {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        border: 0;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        border-radius: 0;
+        background: transparent;
+        color: var(--accent-dark);
+        font-size: clamp(18px, 3.2vw, 29px);
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+      }
+      .cell:nth-child(3n) {
+        border-right: 2px solid var(--strong);
+      }
+      .cell:nth-child(9n) {
+        border-right: 0;
+      }
+      .cell:nth-child(n + 19):nth-child(-n + 27),
+      .cell:nth-child(n + 46):nth-child(-n + 54) {
+        border-bottom: 2px solid var(--strong);
+      }
+      .cell:nth-child(n + 73) {
+        border-bottom: 0;
+      }
+      .cell.given {
+        color: var(--ink);
+        font-weight: 760;
+      }
+      .cell.peer {
+        background: var(--peer);
+      }
+      .cell.selected {
+        z-index: 1;
+        background: var(--selected);
+        box-shadow: inset 0 0 0 2px var(--accent);
+      }
+      .cell.same {
+        background: var(--same);
+      }
+      .cell.conflict {
+        color: var(--bad);
+        background: color-mix(in srgb, var(--bad) 12%, var(--surface));
+      }
+      .cell.hint-related {
+        background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+      }
+      .cell.hint-target {
+        box-shadow: inset 0 0 0 2px var(--accent);
+      }
+      .cell .candidates {
+        position: absolute;
+        inset: 3px;
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        color: var(--muted);
+        font-size: clamp(9px, 1.3vw, 14px);
+        font-weight: 500;
+        line-height: 1;
+      }
+      .candidates span {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      .candidates span.hint-candidate {
+        color: var(--accent-dark);
+        font-weight: 850;
+      }
+      .board-legend {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .legend-swatch {
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+        background: var(--ink);
+      }
+      .legend-swatch.entry {
+        background: var(--accent);
+      }
+      .side-column {
+        display: grid;
+        gap: 14px;
+      }
+      .controls-card {
+        padding: 20px;
+      }
+      .section-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+      .section-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 750;
+        letter-spacing: -0.02em;
+      }
+      .difficulty-name {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+      .action-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 9px;
+      }
+      select {
+        width: 100%;
+        height: 44px;
+        padding: 0 36px 0 12px;
+        appearance: none;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--soft);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23768181' stroke-width='1.6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 13px center;
+        font-size: 13px;
+        font-weight: 650;
+      }
+      .primary-button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 15px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--ink);
+        color: var(--surface);
+        font-size: 13px;
+        font-weight: 750;
+        white-space: nowrap;
+        transition:
+          transform 0.15s,
+          opacity 0.15s;
+      }
+      .primary-button:hover {
+        transform: translateY(-1px);
+        opacity: 0.92;
+      }
+      .primary-button .icon {
+        width: 16px;
+        height: 16px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 19px;
+        padding-top: 17px;
+        border-top: 1px solid var(--line);
+      }
+      .stat {
+        padding: 0 12px;
+        border-right: 1px solid var(--line);
+      }
+      .stat:first-child {
+        padding-left: 0;
+      }
+      .stat:last-child {
+        border: 0;
+      }
+      .stat-label {
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .stat-value {
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: 750;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -0.04em;
+      }
+      .stat-value small {
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .keypad-card {
+        padding: 18px 20px 20px;
+      }
+      .keypad {
+        display: grid;
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+        gap: 7px;
+      }
+      .number-button {
+        min-width: 0;
+        height: 57px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 3px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--soft);
+        color: var(--ink);
+        transition:
+          background 0.15s,
+          border-color 0.15s;
+      }
+      .number-button:hover,
+      .number-button.active {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+      .number-button strong {
+        font-size: 19px;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+      }
+      .number-button small {
+        color: var(--muted);
+        font-size: 9px;
+        font-variant-numeric: tabular-nums;
+      }
+      .tool-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .tool-button {
+        min-height: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 650;
+      }
+      .tool-button .icon {
+        width: 16px;
+        height: 16px;
+      }
+      .tool-button:hover,
+      .tool-button[aria-pressed="true"] {
+        border-color: var(--accent);
+        color: var(--accent-dark);
+        background: var(--accent-soft);
+      }
+      .hint-card {
+        overflow: hidden;
+        border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+        background: var(--accent-soft);
+      }
+      .hint-content {
+        padding: 17px 19px;
+      }
+      .hint-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .hint-title {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 760;
+      }
+      .hint-title .icon {
+        color: var(--accent-dark);
+        width: 17px;
+        height: 17px;
+      }
+      .hint-button {
+        min-height: 36px;
+        padding: 0 12px;
+        border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+        border-radius: 9px;
+        background: var(--surface);
+        color: var(--accent-dark);
+        font-size: 12px;
+        font-weight: 750;
+      }
+      .hint-button:hover {
+        background: var(--accent);
+        color: white;
+      }
+      #hintResult {
+        margin-top: 13px;
+        padding-top: 12px;
+        border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+        font-size: 12px;
+        line-height: 1.65;
+      }
+      #hintResult[hidden] {
+        display: none;
+      }
+      .hint-technique {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--accent-dark);
+        font-weight: 800;
+      }
+      .hint-apply {
+        margin-top: 10px;
+      }
+      .analysis-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 18px;
+        padding-top: 14px;
+      }
+      .analysis-item span {
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .analysis-item strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      #techniqueCounts {
+        margin: 13px 0 0;
+        padding: 12px 0 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.8;
+      }
+      .overlay {
+        position: fixed;
+        z-index: 20;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background: #0f1919a6;
+        backdrop-filter: blur(4px);
+      }
+      .overlay[hidden] {
+        display: none;
+      }
+      .modal {
+        width: min(420px, 100%);
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--surface);
+        box-shadow: 0 24px 80px #0004;
+      }
+      .modal h2 {
+        margin: 0 0 8px;
+        font-size: 21px;
+        letter-spacing: -0.04em;
+      }
+      .modal p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+      .modal-actions {
+        display: flex;
+        justify-content: end;
+        gap: 9px;
+        margin-top: 22px;
+      }
+      .modal-actions .primary-button {
+        min-width: 92px;
+      }
+      .settings-list {
+        display: grid;
+        gap: 13px;
+        margin-top: 20px;
+      }
+      .setting-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 13px;
+      }
+      .setting-row input {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--accent);
+      }
+      .progress-track {
+        height: 5px;
+        overflow: hidden;
+        margin-top: 20px;
+        border-radius: 9px;
+        background: var(--line);
+      }
+      .progress-track span {
+        display: block;
+        width: 34%;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--accent);
+        animation: indeterminate 1.1s ease-in-out infinite alternate;
+      }
+      @keyframes indeterminate {
+        from {
+          transform: translateX(-80%);
+        }
+        to {
+          transform: translateX(230%);
+        }
+      }
+      #generationAttempt {
+        margin-top: 14px;
+        font-variant-numeric: tabular-nums;
+      }
+      .keypad {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .number-button {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 8px;
+        height: 46px;
+        padding-top: 9px;
+      }
+      .number-button small {
+        font-size: 11px;
+      }
+      .number-button strong {
+        font-size: 22px;
+      }
+      .board-card {
+        position: relative;
+      }
+      #resumeMask {
+        position: absolute;
+        inset: 64px 16px 34px;
+        border: 0;
+        background: var(--soft);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .cell:focus-visible {
+        outline-offset: -4px;
+      }
+      .candidates .remove {
+        text-decoration: line-through;
+        background: var(--accent-soft);
+        color: var(--bad);
+      }
+      button:disabled {
+        opacity: 0.42;
+        cursor: default;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .board-legend {
+        font-size: 12px;
+      }
+      .cell {
+        font-size: clamp(20px, 3vw, 36px);
+      }
+      .number-button:disabled {
+        opacity: 0.55;
+      }
+      .board-progress {
+        margin-top: 18px;
+        height: 4px;
+        background: var(--line);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .board-progress i {
+        display: block;
+        height: 100%;
+        background: var(--accent);
+        transition: width 0.16s ease;
+      }
+      .board-wrap {
+        position: relative;
+      }
+      .section-title,
+      .hint-title {
+        font-size: 16px;
+      }
+      .tool-button,
+      .stat-label,
+      .analysis summary,
+      .board-label,
+      .hint-button {
+        font-size: 13px;
+      }
+      .tool-button {
+        min-height: 48px;
+      }
+      .number-button {
+        align-items: center;
+        padding: 0;
+      }
+      .primary-button {
+        background: #b64d3b;
+        color: white;
+      }
+      .cell.selected {
+        background: var(--selected);
+      }
+      :root {
+        --muted: #5f6d6d;
+        --space: 16px;
+      }
+      [data-theme="dark"] {
+        --muted: #adbbb9;
+      }
+      .keypad-card,
+      .controls-card {
+        padding: calc(var(--space) * 1.25);
+      }
+      #resumeMask {
+        z-index: 2;
+      }
+      .analysis-item span {
+        font-size: 12px;
+      }
+      .candidates span.hint-candidate {
+        border-radius: 3px;
+        background: var(--accent-soft);
+      }
+      .progress-track span {
+        animation-iteration-count: infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      /* Let the board use the space remaining after the controls are laid out. */
+      body {
+        --edge: 12px;
+        --gap: 12px;
+        height: 100vh;
+        height: 100dvh;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .topbar {
+        height: auto;
+        min-height: calc(58px + env(safe-area-inset-top));
+        gap: 12px;
+        padding: env(safe-area-inset-top)
+          max(var(--edge), env(safe-area-inset-right), (100vw - 1160px) / 2) 0
+          max(var(--edge), env(safe-area-inset-left), (100vw - 1160px) / 2);
+      }
+      .top-actions {
+        margin-left: auto;
+      }
+      .brand {
+        white-space: nowrap;
+      }
+      main {
+        width: min(1160px, 100%);
+        margin: 0 auto;
+        padding: var(--gap) max(var(--edge), env(safe-area-inset-right))
+          max(var(--gap), env(safe-area-inset-bottom))
+          max(var(--edge), env(safe-area-inset-left));
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        gap: var(--gap);
+      }
+      .page-heading {
+        margin: 0;
+      }
+      .game-layout {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: var(--gap);
+        align-items: stretch;
+        min-height: 0;
+      }
+      .board-card {
+        min-width: 0;
+        min-height: 0;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto auto;
+        gap: 8px;
+        padding: 14px;
+      }
+      .board-top,
+      .board-progress,
+      .board-legend {
+        margin: 0;
+      }
+      .board-wrap {
+        container-type: size;
+        display: grid;
+        place-items: center;
+        min-height: 0;
+      }
+      #board {
+        width: min(100cqw, 100cqh);
+      }
+      #resumeMask {
+        inset: 0;
+        width: min(100cqw, 100cqh);
+        height: min(100cqw, 100cqh);
+        margin: auto;
+        border-radius: 5px;
+      }
+      .cell {
+        font-size: clamp(12px, 5.4cqmin, 38px);
+      }
+      .cell .candidates {
+        inset: clamp(0px, 0.4cqmin, 3px);
+        font-size: clamp(5px, 2.4cqmin, 14px);
+      }
+      .side-column {
+        position: relative;
+        align-content: center;
+        align-self: center;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: var(--gap);
+      }
+      .controls-card,
+      .keypad-card {
+        grid-column: 1 / -1;
+      }
+      .tool-row {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .tool-button {
+        padding-inline: 2px;
+        white-space: nowrap;
+      }
+      .hint-card {
+        overflow: visible;
+      }
+      .hint-content {
+        padding: 8px 12px;
+      }
+      .analysis-button {
+        align-self: stretch;
+        padding-inline: 14px;
+        white-space: nowrap;
+      }
+      .hint-title {
+        font-size: 13px;
+        gap: 6px;
+        white-space: nowrap;
+      }
+      #hintResult {
+        position: absolute;
+        z-index: 4;
+        inset: auto 0 calc(48px + var(--gap)) 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: min(225px, 48dvh, calc(100% - 48px - var(--gap)));
+        margin: 0;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface);
+        box-shadow: 0 8px 28px #17222238;
+      }
+      .hint-result-top {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      #closeHintButton {
+        flex: none;
+        width: 34px;
+        height: 34px;
+        padding: 0;
+      }
+      #hintExplanation {
+        overflow: auto;
+        overscroll-behavior: contain;
+        width: 100%;
+        padding-inline: 2px;
+      }
+      .hint-apply {
+        flex-shrink: 0;
+        margin-top: 6px;
+      }
+      .overlay {
+        padding: max(12px, env(safe-area-inset-top))
+          max(12px, env(safe-area-inset-right))
+          max(12px, env(safe-area-inset-bottom))
+          max(12px, env(safe-area-inset-left));
+      }
+      .modal {
+        max-height: 100%;
+        min-height: 0;
+        overflow: auto;
+      }
+      .modal-actions {
+        flex-wrap: wrap;
+      }
+      .analysis-body {
+        padding: 0;
+      }
+      #techniqueCounts {
+        margin-top: 14px;
+      }
+
+      @media (max-width: 1100px), (max-height: 840px), (pointer: coarse) {
+        body {
+          --edge: 8px;
+          --gap: 6px;
+        }
+        .topbar {
+          min-height: calc(44px + env(safe-area-inset-top));
+          gap: 8px;
+        }
+        .brand {
+          gap: 8px;
+          font-size: 14px;
+        }
+        .brand-mark {
+          width: 24px;
+          height: 24px;
+          flex: none;
+        }
+        .top-actions {
+          gap: 4px;
+        }
+        .top-actions .icon-button {
+          width: 40px;
+          height: 42px;
+        }
+        main {
+          grid-template-rows: minmax(0, 1fr);
+        }
+        .page-heading,
+        .board-legend,
+        #numberHeading,
+        #gameControlsHeading {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip-path: inset(50%);
+        }
+        .status-chip {
+          padding: 5px 8px;
+        }
+        .board-card {
+          padding: 7px;
+          gap: 5px;
+          border-radius: 12px;
+        }
+        .board-label,
+        .timer-wrap {
+          gap: 6px;
+        }
+        .board-progress {
+          height: 3px;
+        }
+        #pauseButton {
+          min-height: 32px;
+        }
+        .controls-card,
+        .keypad-card {
+          padding: 6px;
+        }
+        .controls-card .section-head,
+        .keypad-card .section-head {
+          margin: 0;
+        }
+        .difficulty-name {
+          display: none;
+        }
+        .stats {
+          margin-top: 5px;
+          padding-top: 5px;
+        }
+        .stat {
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          align-items: baseline;
+          padding: 0 3px;
+        }
+        .stat-label {
+          font-size: 11px;
+          white-space: nowrap;
+        }
+        .stat-value {
+          margin: 0;
+          font-size: 15px;
+        }
+        .keypad,
+        .tool-row {
+          gap: 4px;
+        }
+        .keypad {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .number-button {
+          height: 44px;
+        }
+        .tool-row {
+          margin-top: 5px;
+        }
+        .tool-button {
+          min-height: 44px;
+          gap: 2px;
+          font-size: 10px;
+        }
+        .hint-content {
+          padding: 4px 6px 4px 9px;
+        }
+        .hint-top {
+          gap: 6px;
+        }
+        .hint-button {
+          padding-inline: 8px;
+          white-space: nowrap;
+        }
+      }
+      @media (max-width: 900px) and (orientation: portrait) {
+        main {
+          --portrait-width: min(100vw, 740px);
+          width: var(--portrait-width);
+          max-height: calc(var(--portrait-width) + 315px);
+        }
+        .game-layout {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-rows: minmax(0, 1fr) auto;
+        }
+        .keypad {
+          grid-template-columns: repeat(9, minmax(0, 1fr));
+        }
+        .number-button {
+          height: 44px;
+          gap: 4px;
+        }
+        .number-button strong {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: 599px) and (max-height: 700px) and (orientation: portrait) {
+        .number-button {
+          flex-direction: column;
+          gap: 1px;
+        }
+        .number-button small {
+          font-size: 9px;
+        }
+      }
+      @media (max-width: 599px) and (min-height: 701px) and (orientation: portrait) {
+        main {
+          max-height: calc(var(--portrait-width) + 363px);
+        }
+        .keypad {
+          grid-template-columns: repeat(10, minmax(0, 1fr));
+        }
+        .number-button {
+          grid-column: span 2;
+        }
+        .number-button:nth-child(6) {
+          grid-column: 2 / span 2;
+        }
+      }
+      @media (orientation: landscape) and (max-height: 520px) {
+        .game-layout {
+          grid-template-columns: minmax(0, 1fr) minmax(216px, 0.95fr);
+        }
+        .topbar {
+          min-height: calc(40px + env(safe-area-inset-top));
+        }
+        .top-actions .icon-button {
+          width: 40px;
+          height: 38px;
+        }
+        .keypad {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+        .number-button {
+          grid-column: span 2;
+          height: 36px;
+          gap: 4px;
+        }
+        .number-button strong {
+          font-size: 19px;
+        }
+        .tool-button {
+          min-height: 36px;
+        }
+        .controls-card select,
+        .controls-card .primary-button {
+          height: 34px;
+          min-height: 34px;
+        }
+        .hint-content {
+          padding-block: 2px;
+        }
+      }
+      @media (max-height: 365px) and (orientation: landscape) {
+        .keypad {
+          grid-template-columns: repeat(9, minmax(0, 1fr));
+        }
+        .number-button {
+          grid-column: auto;
+          height: 42px;
+          flex-direction: column;
+          gap: 0;
+        }
+        .number-button small {
+          font-size: 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      class="icon-sprite"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path d="M20 15A8.5 8.5 0 0 1 9 4 8.5 8.5 0 1 0 20 15Z" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+        />
+      </symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="m19 13.5 1.5 1.2-1.7 3-1.8-.6a7 7 0 0 1-1.5.9l-.4 1.9h-3.4l-.4-1.9a7 7 0 0 1-1.5-.9l-1.8.6-1.7-3 1.5-1.2a7 7 0 0 1 0-1.8l-1.5-1.2 1.7-3 1.8.6a7 7 0 0 1 1.5-.9l.4-1.9h3.4l.4 1.9a7 7 0 0 1 1.5.9l1.8-.6 1.7 3-1.5 1.2a7 7 0 0 1 0 1.8Z"
+        />
+      </symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24">
+        <path d="M8 5v14M16 5v14" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7z" />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M20 7v5h-5M4 17v-5h5" />
+        <path d="M5.6 9a7 7 0 0 1 11.8-2L20 12M4 12l2.6 5a7 7 0 0 0 11.8-2" />
+      </symbol>
+      <symbol id="i-undo" viewBox="0 0 24 24">
+        <path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-2" />
+      </symbol>
+      <symbol id="i-redo" viewBox="0 0 24 24">
+        <path d="m15 14 5-5-5-5M20 9H10a6 6 0 0 0 0 12h2" />
+      </symbol>
+      <symbol id="i-pencil" viewBox="0 0 24 24">
+        <path d="m15 5 4 4M4 20l4-.8L19 8a2.1 2.1 0 0 0-3-3L5 16l-1 4Z" />
+      </symbol>
+      <symbol id="i-erase" viewBox="0 0 24 24">
+        <path d="m8 5 11 11-5 5H5l-3-3 11-13a2 2 0 0 1 3 0Zm0 10 6 6" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path
+          d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Zm7 12 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"
+        />
+      </symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <path d="M4 12h16M12 4v16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+    </svg>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"
+          ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span
+        ><span>스도쿠 클럽</span>
+      </div>
+      <div class="top-actions">
+        <button
+          class="icon-button"
+          id="themeButton"
+          type="button"
+          aria-label="테마 전환"
+          title="테마 전환"
+        >
+          <svg class="icon"><use href="#i-moon"></use></svg></button
+        ><button
+          class="icon-button"
+          id="settingsButton"
+          type="button"
+          aria-label="설정 열기"
+          title="설정"
+        >
+          <svg class="icon"><use href="#i-settings"></use></svg>
+        </button>
+      </div>
+      <div class="status-chip" id="gameStatus" role="status">
+        <span class="status-dot"></span
+        ><span id="statusText">새 게임을 준비해 주세요</span>
+      </div>
+    </header>
+    <main>
+      <div class="page-heading">
+        <div><h1>플레이 보드</h1></div>
+      </div>
+      <div class="game-layout" id="gameLayout">
+        <section class="card board-card" aria-label="스도쿠 게임 보드">
+          <div class="board-top">
+            <div class="board-label">
+              <span class="mini-mark"></span
+              ><span id="boardDifficulty">보통 난이도</span>
+            </div>
+            <div class="timer-wrap">
+              <span class="timer" id="timer" aria-label="경과 시간">00:00</span
+              ><button
+                class="quiet-button"
+                id="pauseButton"
+                type="button"
+                aria-pressed="false"
+              >
+                <svg class="icon"><use href="#i-pause"></use></svg
+                ><span id="pauseLabel">멈춤</span>
+              </button>
+            </div>
+          </div>
+          <div class="board-wrap">
+            <div
+              id="board"
+              role="grid"
+              aria-label="스도쿠 9 곱하기 9 보드"
+              aria-describedby="boardHelp"
+            ></div>
+            <button id="resumeMask" type="button" hidden>
+              일시 정지 · 계속 풀기
+            </button>
+          </div>
+          <div class="board-progress" title="채운 칸 비율">
+            <i id="filledProgress"></i>
+          </div>
+          <div class="board-legend" id="boardHelp">
+            <span class="legend-item"
+              ><i class="legend-swatch"></i>처음 주어진 숫자</span
+            ><span class="legend-item"
+              ><i class="legend-swatch entry"></i>내가 입력한 숫자</span
+            >
+          </div>
+        </section>
+        <aside class="side-column" aria-label="게임 도구와 정보">
+          <section class="card keypad-card" aria-labelledby="numberHeading">
+            <div class="section-head">
+              <h2 class="section-title" id="numberHeading">숫자 입력</h2>
+              <span class="difficulty-name">키보드 1–9</span>
+            </div>
+            <div
+              class="keypad"
+              id="numberPad"
+              role="group"
+              aria-label="숫자 입력 패드"
+            >
+              <button
+                class="number-button"
+                type="button"
+                data-number="1"
+                aria-label="1 입력"
+              >
+                <strong>1</strong><small data-remaining="1">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="2"
+                aria-label="2 입력"
+              >
+                <strong>2</strong><small data-remaining="2">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="3"
+                aria-label="3 입력"
+              >
+                <strong>3</strong><small data-remaining="3">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="4"
+                aria-label="4 입력"
+              >
+                <strong>4</strong><small data-remaining="4">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="5"
+                aria-label="5 입력"
+              >
+                <strong>5</strong><small data-remaining="5">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="6"
+                aria-label="6 입력"
+              >
+                <strong>6</strong><small data-remaining="6">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="7"
+                aria-label="7 입력"
+              >
+                <strong>7</strong><small data-remaining="7">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="8"
+                aria-label="8 입력"
+              >
+                <strong>8</strong><small data-remaining="8">—</small></button
+              ><button
+                class="number-button"
+                type="button"
+                data-number="9"
+                aria-label="9 입력"
+              >
+                <strong>9</strong><small data-remaining="9">—</small>
+              </button>
+            </div>
+            <div class="tool-row" aria-label="보드 편집 도구">
+              <button
+                class="tool-button"
+                id="undoButton"
+                type="button"
+                aria-label="실행 취소"
+              >
+                <svg class="icon"><use href="#i-undo"></use></svg
+                ><span>되돌리기</span></button
+              ><button
+                class="tool-button"
+                id="redoButton"
+                type="button"
+                aria-label="다시 실행"
+              >
+                <svg class="icon"><use href="#i-redo"></use></svg
+                ><span>다시 하기</span></button
+              ><button
+                class="tool-button"
+                id="noteModeButton"
+                type="button"
+                aria-label="메모 모드"
+                aria-pressed="false"
+              >
+                <svg class="icon"><use href="#i-pencil"></use></svg
+                ><span>메모</span></button
+              ><button
+                class="tool-button"
+                id="clearCellButton"
+                type="button"
+                aria-label="선택 칸 지우기"
+              >
+                <svg class="icon"><use href="#i-erase"></use></svg
+                ><span>지우기</span>
+              </button>
+              <button
+                class="tool-button"
+                id="autoNotesButton"
+                type="button"
+                aria-label="빈칸 후보 자동 채우기"
+              >
+                <svg class="icon"><use href="#i-grid"></use></svg
+                ><span>자동 후보</span>
+              </button>
+            </div>
+          </section>
+          <section
+            class="card controls-card"
+            aria-labelledby="gameControlsHeading"
+          >
+            <div class="section-head">
+              <h2 class="section-title" id="gameControlsHeading">새 게임</h2>
+              <span class="difficulty-name" id="difficultyLabel">보통</span>
+            </div>
+            <div class="action-row">
+              <select id="difficultySelect" aria-label="난이도 선택">
+                <option value="easy">쉬움</option>
+                <option value="normal" selected>보통</option>
+                <option value="hard">어려움</option>
+                <option value="expert">전문가</option>
+                <option value="master">마스터</option></select
+              ><button class="primary-button" id="newGameButton" type="button">
+                <svg class="icon"><use href="#i-refresh"></use></svg>새 게임
+              </button>
+            </div>
+            <div class="stats" aria-label="현재 게임 통계">
+              <div class="stat">
+                <div class="stat-label">실수</div>
+                <div class="stat-value" id="mistakeCount">0</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">남은 칸</div>
+                <div class="stat-value" id="remainingCount">—</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">논리 점수</div>
+                <div class="stat-value" id="scoreValue">—</div>
+              </div>
+            </div>
+          </section>
+          <section class="card hint-card" aria-labelledby="hintHeading">
+            <div class="hint-content">
+              <div class="hint-top">
+                <h2 class="hint-title" id="hintHeading">
+                  <svg class="icon"><use href="#i-spark"></use></svg>논리 힌트
+                </h2>
+                <button class="hint-button" id="hintButton" type="button">
+                  힌트 보기
+                </button>
+              </div>
+              <div id="hintResult" hidden>
+                <div class="hint-result-top">
+                  <span
+                    class="hint-technique"
+                    id="hintTechnique"
+                    aria-live="polite"
+                  ></span>
+                  <button
+                    class="quiet-button"
+                    id="closeHintButton"
+                    type="button"
+                    aria-label="힌트 닫기"
+                  >
+                    <svg class="icon"><use href="#i-close"></use></svg>
+                  </button>
+                </div>
+                <div id="hintExplanation" tabindex="0" aria-live="polite"></div>
+                <button
+                  class="hint-button hint-apply"
+                  id="applyHintButton"
+                  type="button"
+                  hidden
+                >
+                  이 수 적용하기
+                </button>
+              </div>
+            </div>
+          </section>
+          <button
+            class="card quiet-button analysis-button"
+            id="analysisButton"
+            type="button"
+            aria-haspopup="dialog"
+          >
+            퍼즐 분석
+          </button>
+        </aside>
+      </div>
+    </main>
+    <div
+      class="overlay"
+      id="analysisOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="analysisTitle"
+      hidden
+    >
+      <div class="modal">
+        <h2 id="analysisTitle">퍼즐 분석</h2>
+        <div class="analysis-body">
+          <div class="analysis-grid">
+            <div class="analysis-item">
+              <span>처음 주어진 숫자</span><strong id="clueCount">—</strong>
+            </div>
+            <div class="analysis-item">
+              <span>논리 난이도 점수</span><strong id="analysisScore">—</strong>
+            </div>
+            <div class="analysis-item">
+              <span>가장 어려운 기법</span
+              ><strong id="hardestTechnique">—</strong>
+            </div>
+            <div class="analysis-item">
+              <span>생성 시간</span><strong id="generationTime">—</strong>
+            </div>
+            <div class="analysis-item">
+              <span>유일해 검증</span
+              ><strong id="uniquenessStatus">대기</strong>
+            </div>
+          </div>
+          <p id="techniqueCounts">기법 사용 정보가 여기에 표시됩니다.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="primary-button" id="closeAnalysisButton" type="button">
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="overlay"
+      id="generationOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="generationTitle"
+      hidden
+    >
+      <div class="modal">
+        <h2 id="generationTitle">퍼즐을 만드는 중</h2>
+        <p id="generationPhase" aria-live="polite">
+          새로운 스도쿠를 준비하고 있어요.
+        </p>
+        <div class="progress-track" aria-hidden="true"><span></span></div>
+        <p id="generationAttempt">시도 0회 · 0초</p>
+        <div class="modal-actions">
+          <button
+            class="quiet-button"
+            id="cancelGenerationButton"
+            type="button"
+          >
+            취소</button
+          ><button
+            class="primary-button"
+            id="retryGenerationButton"
+            type="button"
+            hidden
+          >
+            다시 시도
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="overlay"
+      id="settingsOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="settingsTitle"
+      hidden
+    >
+      <div class="modal">
+        <div class="section-head">
+          <h2 id="settingsTitle">플레이 설정</h2>
+          <button
+            class="icon-button"
+            id="closeSettingsButton"
+            type="button"
+            aria-label="설정 닫기"
+          >
+            <svg class="icon"><use href="#i-close"></use></svg>
+          </button>
+        </div>
+        <div class="settings-list">
+          <label class="setting-row"
+            ><span>실수 표시</span
+            ><input
+              id="mistakeHighlightToggle"
+              type="checkbox"
+              checked /></label
+          ><label class="setting-row"
+            ><span>충돌 표시</span
+            ><input
+              id="conflictHighlightToggle"
+              type="checkbox"
+              checked /></label
+          ><label class="setting-row"
+            ><span>입력 후 후보 메모 정리</span
+            ><input id="autoRemoveNotesToggle" type="checkbox" checked /></label
+          ><label class="setting-row"
+            ><span>테마</span
+            ><select id="themeSelect" aria-label="테마 선택">
+              <option value="light">라이트</option>
+              <option value="dark">다크</option>
+              <option value="system">시스템 설정</option>
+            </select></label
+          >
+        </div>
+        <div class="modal-actions">
+          <button class="quiet-button" id="resetButton">처음부터</button
+          ><button class="quiet-button" id="revealButton">정답 공개</button
+          ><button class="primary-button" id="doneSettingsButton" type="button">
+            완료
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="overlay"
+      id="confirmOverlay"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="confirmTitle"
+      aria-describedby="confirmMessage"
+      hidden
+    >
+      <div class="modal">
+        <h2 id="confirmTitle">정답을 확인할까요?</h2>
+        <p id="confirmMessage">정답을 공개하면 현재 퍼즐이 완료 처리됩니다.</p>
+        <div class="modal-actions">
+          <button class="quiet-button" id="dismissConfirmButton" type="button">
+            계속 풀기</button
+          ><button
+            class="primary-button"
+            id="confirmActionButton"
+            type="button"
+          >
+            정답 공개
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="overlay"
+      id="completionOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="completionTitle"
+      hidden
+    >
+      <div class="modal">
+        <h2 id="completionTitle">퍼즐 완성!</h2>
+        <p id="completionMessage">멋지게 풀어냈어요.</p>
+        <div class="modal-actions">
+          <button
+            class="primary-button"
+            id="completionCloseButton"
+            type="button"
+          >
+            계속
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      // This factory runs unchanged in the UI, the isolated worker, and verification tools.
+      function createEngine() {
+        const ALL = 511;
+        const range = (n) => Array.from({ length: n }, (_, i) => i);
+        const cells = range(81),
+          nine = range(9);
+        const bit = (d) => 1 << (d - 1),
+          digit = (b) => 32 - Math.clz32(b);
+        const bits = Array.from({ length: 512 }, (_, m) =>
+          nine.map((n) => 1 << n).filter((b) => b & m),
+        );
+        const size = (m) => bits[m].length;
+        const row = (i) => Math.floor(i / 9),
+          col = (i) => i % 9;
+        const box = (i) => Math.floor(row(i) / 3) * 3 + Math.floor(col(i) / 3);
+        const units = [row, col, box].flatMap((f) =>
+          nine.map((n) => cells.filter((i) => f(i) === n)),
+        );
+        const sees = (i, j) =>
+          i !== j &&
+          (row(i) === row(j) || col(i) === col(j) || box(i) === box(j));
+        const peers = cells.map((i) => cells.filter((j) => sees(i, j)));
+        const pos = (i) => row(i) + 1 + "행 " + (col(i) + 1) + "열";
+        const unitName = (u) =>
+          (u % 9) + 1 + ["행", "열", "번 블록"][Math.floor(u / 9)];
+        function shuffle(a) {
+          for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+          }
+          return a;
+        }
+        function combinations(items, k) {
+          const out = [];
+          function visit(start, group) {
+            if (group.length === k) {
+              out.push(group.slice());
+              return;
+            }
+            for (let j = start; j <= items.length - k + group.length; j++) {
+              group.push(items[j]);
+              visit(j + 1, group);
+              group.pop();
+            }
+          }
+          visit(0, []);
+          return out;
+        }
+        const validGrid = (a) =>
+          Array.isArray(a) &&
+          a.length === 81 &&
+          a.every((d) => Number.isInteger(d) && d >= 0 && d <= 9);
+        // Search limits are explicit outcomes, never evidence of uniqueness.
+        function exact(
+          input,
+          {
+            limit = 2,
+            random = false,
+            maxNodes = 150000,
+            deadline = Infinity,
+          } = {},
+        ) {
+          let count = 0,
+            solution = null,
+            nodes = 0,
+            aborted = false;
+          if (!validGrid(input)) return { invalid: true, count, aborted };
+          const board = input.slice(),
+            used = new Uint16Array(27);
+          const order = random ? shuffle(cells.slice()) : cells;
+          function toggle(i, b) {
+            used[row(i)] ^= b;
+            used[9 + col(i)] ^= b;
+            used[18 + box(i)] ^= b;
+          }
+          const occupied = (i) =>
+            used[row(i)] | used[9 + col(i)] | used[18 + box(i)];
+          for (const i of cells)
+            if (board[i]) {
+              const b = bit(board[i]);
+              if (occupied(i) & b) return { invalid: true, count, aborted };
+              toggle(i, b);
+            }
+          function search() {
+            if (
+              ++nodes > maxNodes ||
+              ((nodes === 1 || !(nodes % 128)) && Date.now() >= deadline)
+            ) {
+              aborted = true;
+              return;
+            }
+            let best = -1,
+              mask = 0,
+              min = 10;
+            for (const i of order)
+              if (!board[i]) {
+                const m = ALL & ~occupied(i),
+                  n = size(m);
+                if (!n) return;
+                if (n < min) {
+                  best = i;
+                  mask = m;
+                  min = n;
+                }
+              }
+            if (best < 0) {
+              count++;
+              if (!solution) solution = board.slice();
+              return;
+            }
+            for (const b of random ? shuffle(bits[mask].slice()) : bits[mask]) {
+              board[best] = digit(b);
+              toggle(best, b);
+              search();
+              toggle(best, b);
+              board[best] = 0;
+              if (aborted || count >= limit) break;
+            }
+          }
+          search();
+          return {
+            count,
+            solution,
+            nodes,
+            aborted,
+            invalid: false,
+            unique: limit >= 2 && !aborted && count === 1,
+          };
+        }
+        const levels = ["easy", "normal", "hard", "expert", "master"];
+        const rules = {
+          single: [0, 1, "단일 후보"],
+          hidden: [0, 2, "숨은 싱글"],
+          pointing: [1, 5, "잠긴 후보 · 포인팅"],
+          claiming: [1, 5, "잠긴 후보 · 클레이밍"],
+          pair: [1, 7, "네이키드 페어"],
+          hiddenPair: [2, 10, "숨은 페어"],
+          triple: [2, 12, "네이키드 트리플"],
+          hiddenTriple: [2, 14, "숨은 트리플"],
+          xwing: [2, 16, "엑스윙"],
+          swordfish: [3, 24, "소드피시"],
+          xywing: [3, 26, "XY윙"],
+          aic: [4, 38, "교대 추론 체인"],
+          forcing: [4, 44, "강제 체인"],
+          als: [4, 48, "거의 잠긴 집합"],
+        };
+        const candidates = (board, removed = []) =>
+          board.map((v, i) =>
+            v
+              ? 0
+              : peers[i].reduce(
+                  (m, j) => (board[j] ? m & ~bit(board[j]) : m),
+                  ALL & ~(removed[i] || 0),
+                ),
+          );
+        function step(id, region, mask, actions, reason, complexity = 0) {
+          const [tier, weight, name] = rules[id];
+          return {
+            id,
+            name,
+            tier,
+            weight,
+            region: [...new Set(region)],
+            digits: bits[mask].map(digit),
+            actions,
+            reason,
+            complexity,
+          };
+        }
+        const remove = (m, targets, mask) =>
+          targets
+            .filter((i) => m[i] & mask)
+            .map((i) => ({ i, remove: m[i] & mask }));
+        const place = (i, b) => [{ i, value: digit(b) }];
+        const list = (m) => bits[m].map(digit).join("·");
+        function singles(m, hidden) {
+          if (!hidden) {
+            const i = m.findIndex((v) => size(v) === 1);
+            if (i >= 0)
+              return step(
+                "single",
+                [i],
+                m[i],
+                place(i, m[i]),
+                "이미 놓인 숫자와 앞선 후보 제거를 반영하면, 이 칸에 넣을 수 있는 후보가 하나만 남습니다.",
+              );
+          } else
+            for (const [u, group] of units.entries())
+              for (const b of bits[ALL]) {
+                const p = group.filter((i) => m[i] & b);
+                if (p.length === 1)
+                  return step(
+                    "hidden",
+                    group,
+                    b,
+                    place(p[0], b),
+                    unitName(u) +
+                      "에서 " +
+                      digit(b) +
+                      "을 넣을 수 있는 칸은 " +
+                      pos(p[0]) +
+                      " 한 곳입니다.",
+                  );
+              }
+        }
+        function locked(m, pointing) {
+          for (let u = pointing ? 18 : 0; u < (pointing ? 27 : 18); u++)
+            for (const b of bits[ALL]) {
+              const p = units[u].filter((i) => m[i] & b);
+              if (p.length < 2 || p.length > 3) continue;
+              for (const v of pointing
+                ? [row(p[0]), 9 + col(p[0])]
+                : [18 + box(p[0])]) {
+                const other = units[v];
+                if (!p.every((i) => other.includes(i))) continue;
+                const a = remove(
+                  m,
+                  other.filter((i) => !units[u].includes(i)),
+                  b,
+                );
+                if (a.length)
+                  return step(
+                    pointing ? "pointing" : "claiming",
+                    p,
+                    b,
+                    a,
+                    unitName(u) +
+                      "의 후보 " +
+                      digit(b) +
+                      "가 모두 " +
+                      unitName(v) +
+                      " 안에 있으므로 그 밖의 " +
+                      unitName(v) +
+                      " 칸에서는 제외됩니다.",
+                  );
+              }
+            }
+        }
+        function subset(m, k, hidden) {
+          const id = hidden
+            ? k === 2
+              ? "hiddenPair"
+              : "hiddenTriple"
+            : k === 2
+              ? "pair"
+              : "triple";
+          for (const [u, g] of units.entries()) {
+            const options = hidden
+              ? bits[ALL].filter((b) => {
+                  const n = g.filter((i) => m[i] & b).length;
+                  return n >= 2 && n <= k;
+                })
+              : g.filter((i) => size(m[i]) >= 2 && size(m[i]) <= k);
+            for (const group of combinations(options, k)) {
+              const mask = group.reduce((a, v) => a | (hidden ? v : m[v]), 0);
+              const p = hidden ? g.filter((i) => m[i] & mask) : group;
+              if (size(mask) !== k || p.length !== k) continue;
+              const a = hidden
+                ? remove(m, p, ALL ^ mask)
+                : remove(
+                    m,
+                    g.filter((i) => !p.includes(i)),
+                    mask,
+                  );
+              if (a.length)
+                return step(
+                  id,
+                  p,
+                  mask,
+                  a,
+                  unitName(u) +
+                    "에서 " +
+                    list(mask) +
+                    " 후보" +
+                    (hidden
+                      ? "가 표시된 " +
+                        k +
+                        "칸에만 나타납니다. 그 칸의 다른 후보는 제외됩니다."
+                      : "만 가진 " +
+                        k +
+                        "칸이 이 숫자들을 모두 사용하므로 다른 칸에서는 제외됩니다."),
+                );
+            }
+          }
+        }
+        function fish(m, k) {
+          for (const off of [0, 9])
+            for (const b of bits[ALL]) {
+              const lines = nine.map((n) =>
+                units[off + n].filter((i) => m[i] & b),
+              );
+              for (const base of combinations(
+                nine.filter(
+                  (n) => lines[n].length >= 2 && lines[n].length <= k,
+                ),
+                k,
+              )) {
+                const p = base.flatMap((n) => lines[n]),
+                  cross = off ? row : col,
+                  cover = new Set(p.map(cross));
+                if (cover.size !== k) continue;
+                const a = remove(
+                  m,
+                  cells.filter(
+                    (i) =>
+                      cover.has(cross(i)) &&
+                      !base.includes((off ? col : row)(i)),
+                  ),
+                  b,
+                );
+                if (a.length)
+                  return step(
+                    k === 2 ? "xwing" : "swordfish",
+                    p,
+                    b,
+                    a,
+                    base.map((n) => unitName(off + n)).join(", ") +
+                      "에서 후보 " +
+                      digit(b) +
+                      "의 위치가 맞은편 " +
+                      k +
+                      "개 " +
+                      (off ? "행" : "열") +
+                      "로 제한됩니다. 각 줄에 한 번씩 들어가야 하므로 다른 위치에서는 제외됩니다.",
+                  );
+              }
+            }
+        }
+        function xy(m) {
+          for (const pivot of cells.filter((i) => size(m[i]) === 2)) {
+            const wings = peers[pivot].filter(
+              (i) => size(m[i]) === 2 && size(m[i] & m[pivot]) === 1,
+            );
+            for (const [a, b] of combinations(wings, 2)) {
+              const z = m[a] & m[b] & ~m[pivot];
+              if (!z || m[a] === m[b]) continue;
+              const act = remove(
+                m,
+                peers[a].filter((i) => sees(i, b) && i !== pivot),
+                z,
+              );
+              if (act.length)
+                return step(
+                  "xywing",
+                  [pivot, a, b],
+                  m[pivot] | z,
+                  act,
+                  pos(pivot) +
+                    "의 두 후보 중 어느 쪽을 넣어도 " +
+                    pos(a) +
+                    " 또는 " +
+                    pos(b) +
+                    "에 " +
+                    digit(z) +
+                    "가 들어갑니다. 두 칸을 함께 보는 칸에서 이 후보를 지웁니다.",
+                );
+            }
+          }
+        }
+        // AIC: candidate literals. True implies false across a weak link;
+        // false implies true across a conjugate pair or a bivalue cell.
+        function aic(m) {
+          const nodes = m.flatMap((mask, i) =>
+            bits[mask].map((b) => i * 9 + digit(b) - 1),
+          );
+          const strong = Array.from({ length: 729 }, () => []),
+            weak = Array.from({ length: 729 }, () => []);
+          function links(ids) {
+            for (const a of ids)
+              for (const b of ids)
+                if (a !== b) {
+                  weak[a].push(b);
+                  if (ids.length === 2) strong[a].push(b);
+                }
+          }
+          m.forEach((mask, i) =>
+            links(bits[mask].map((b) => i * 9 + digit(b) - 1)),
+          );
+          for (const g of units)
+            for (const d of nine)
+              links(g.filter((i) => m[i] & (1 << d)).map((i) => i * 9 + d));
+          for (const start of nodes) {
+            const root = start * 2 + 1,
+              prev = new Int16Array(1458).fill(-1);
+            prev[root] = root;
+            let layer = [root];
+            for (let depth = 1; depth <= 9 && layer.length; depth++) {
+              const next = [];
+              for (const literal of layer)
+                for (const n of (literal % 2 ? weak : strong)[literal >> 1]) {
+                  const l = n * 2 + 1 - (literal % 2);
+                  if (prev[l] >= 0) continue;
+                  prev[l] = literal;
+                  next.push(l);
+                  if (l !== start * 2) continue;
+                  const path = [l];
+                  while (path[0] !== root) path.unshift(prev[path[0]]);
+                  const region = path.map((t) => Math.floor(t / 18)),
+                    mask = path.reduce((a, t) => a | (1 << ((t >> 1) % 9)), 0);
+                  const trace = path
+                    .map(
+                      (t, j) =>
+                        pos(region[j]) +
+                        "의 " +
+                        (((t >> 1) % 9) + 1) +
+                        (t % 2 ? " 참" : " 거짓"),
+                    )
+                    .join(" → ");
+                  return step(
+                    "aic",
+                    region,
+                    mask,
+                    [{ i: Math.floor(start / 9), remove: 1 << (start % 9) }],
+                    "같은 칸·영역의 배타 관계와 두 후보 중 하나가 참인 관계를 번갈아 적용합니다. " +
+                      trace +
+                      ". 처음 가정이 스스로 모순되므로 제거합니다.",
+                    depth,
+                  );
+                }
+              layer = next;
+            }
+          }
+        }
+        function apply(board, m, deduction) {
+          for (const a of deduction.actions) {
+            if (a.value) {
+              board[a.i] = a.value;
+              m[a.i] = 0;
+              for (const j of peers[a.i]) m[j] &= ~bit(a.value);
+            } else m[a.i] &= ~a.remove;
+          }
+        }
+        // Two exhaustive branches of a bivalue cell. Propagate at most 12 singles
+        // per branch and retain only consequences proved in both branches.
+        function forcing(board, m) {
+          for (const pivot of cells.filter((i) => size(m[i]) === 2)) {
+            const branches = bits[m[pivot]].map((b) => {
+              const v = board.slice(),
+                c = m.slice(),
+                trace = [];
+              let action = { actions: place(pivot, b) };
+              for (let n = 0; action && n < 13; n++) {
+                const { i, value } = action.actions[0];
+                trace.push(pos(i) + "=" + value);
+                apply(v, c, action);
+                action = singles(c, false) || singles(c, true);
+              }
+              return {
+                possible: c.map((mask, i) => (v[i] ? bit(v[i]) : mask)),
+                trace,
+              };
+            });
+            const [left, right] = branches;
+            for (const i of cells) {
+              const gone = m[i] & ~(left.possible[i] | right.possible[i]);
+              if (!gone) continue;
+              return step(
+                "forcing",
+                [pivot, i],
+                m[pivot] | gone,
+                [{ i, remove: gone }],
+                "두 가정을 각각 단일 후보와 숨은 싱글로 전개합니다. ① " +
+                  left.trace.join(" → ") +
+                  " ② " +
+                  right.trace.join(" → ") +
+                  ". 어느 경우에도 " +
+                  pos(i) +
+                  "에 " +
+                  list(gone) +
+                  " 후보는 남지 않습니다.",
+                left.trace.length + right.trace.length,
+              );
+            }
+          }
+        }
+        // ALS-XZ: disjoint sets in houses, each with n+1 digits. One restricted
+        // common digit x cannot occur in both sets. At least one set must use z.
+        function als(m) {
+          const sets = [],
+            seen = new Set();
+          for (const g of units)
+            for (let k = 1; k <= 3; k++) {
+              for (const p of combinations(
+                g.filter((i) => m[i] && size(m[i]) <= k + 1),
+                k,
+              )) {
+                const mask = p.reduce((a, i) => a | m[i], 0),
+                  key = p.join(",");
+                if (size(mask) === k + 1 && !seen.has(key)) {
+                  seen.add(key);
+                  sets.push({ p, mask });
+                }
+              }
+            }
+          for (let j = 0; j < sets.length; j++)
+            for (let h = 0; h < j; h++) {
+              const a = sets[j],
+                b = sets[h],
+                common = a.mask & b.mask;
+              if (size(common) < 2 || a.p.some((i) => b.p.includes(i)))
+                continue;
+              const region = [...a.p, ...b.p];
+              for (const x of bits[common]) {
+                if (
+                  !a.p
+                    .filter((i) => m[i] & x)
+                    .every((i) =>
+                      b.p.filter((t) => m[t] & x).every((t) => sees(i, t)),
+                    )
+                )
+                  continue;
+                for (const z of bits[common ^ x]) {
+                  const positions = region.filter((i) => m[i] & z);
+                  const act = remove(
+                    m,
+                    peers[positions[0]].filter(
+                      (i) =>
+                        !region.includes(i) &&
+                        positions.every((t) => sees(i, t)),
+                    ),
+                    z,
+                  );
+                  if (act.length)
+                    return step(
+                      "als",
+                      region,
+                      x | z,
+                      act,
+                      "두 집합 (" +
+                        a.p.map(pos).join(", ") +
+                        ")과 (" +
+                        b.p.map(pos).join(", ") +
+                        ")은 각각 칸 수보다 후보가 하나 많습니다. " +
+                        digit(x) +
+                        "의 위치는 서로 마주 보므로 한 집합은 이 숫자를 쓰지 못합니다. 그 집합은 남은 후보를 모두 써야 하므로 두 집합의 " +
+                        digit(z) +
+                        " 위치를 모두 보는 칸에서 이를 제외합니다.",
+                      region.length,
+                    );
+                }
+              }
+            }
+        }
+        function next(board, m, cap = 4) {
+          return (
+            singles(m, false) ||
+            singles(m, true) ||
+            (cap >= 1 &&
+              (locked(m, true) || locked(m, false) || subset(m, 2, false))) ||
+            (cap >= 2 &&
+              (subset(m, 2, true) ||
+                subset(m, 3, false) ||
+                subset(m, 3, true) ||
+                fish(m, 2))) ||
+            (cap >= 3 && (fish(m, 3) || xy(m))) ||
+            (cap >= 4 && (aic(m) || forcing(board, m) || als(m))) ||
+            null
+          );
+        }
+        function complete(board, clues) {
+          return (
+            validGrid(board) &&
+            cells.every(
+              (i) => board[i] && (!clues[i] || board[i] === clues[i]),
+            ) &&
+            units.every((g) => g.reduce((a, i) => a | bit(board[i]), 0) === ALL)
+          );
+        }
+        function evaluate(puzzle, cap = 4) {
+          const board = puzzle.slice(),
+            m = candidates(board),
+            counts = {};
+          let tier = -1,
+            score = 0,
+            hardest = null;
+          for (let n = 0; n < 810 && board.includes(0); n++) {
+            const d = next(board, m, cap);
+            if (!d) break;
+            counts[d.id] = (counts[d.id] || 0) + 1;
+            score += d.weight + d.complexity;
+            if (!hardest || rules[hardest][1] < d.weight) hardest = d.id;
+            tier = Math.max(tier, d.tier);
+            apply(board, m, d);
+          }
+          return {
+            solved: complete(board, puzzle),
+            board,
+            tier,
+            score,
+            counts,
+            hardest,
+          };
+        }
+        function generate(
+          level,
+          progress = () => {},
+          budget = 45000,
+          maxAttempts = 1000,
+        ) {
+          const cap = levels.indexOf(level),
+            start = Date.now(),
+            deadline = start + budget;
+          if (cap < 0) throw Error("지원하지 않는 난이도입니다.");
+          for (
+            let attempt = 1;
+            attempt <= maxAttempts && Date.now() < deadline;
+            attempt++
+          ) {
+            progress(attempt, "완성 보드 생성");
+            const full = exact(Array(81).fill(0), {
+              random: true,
+              limit: 1,
+              deadline,
+            });
+            if (!full.solution) continue;
+            const puzzle = full.solution.slice(),
+              order = [];
+            // Shuffle rotational pairs, checking uniqueness after EACH removal.
+            for (const v of shuffle(range(41)))
+              order.push(...(v === 40 ? [v] : shuffle([v, 80 - v])));
+            let clues = 81;
+            progress(attempt, "단서 제거 및 유일해 검증");
+            for (const i of order) {
+              if (Date.now() >= deadline) break;
+              const saved = puzzle[i];
+              puzzle[i] = 0;
+              if (!exact(puzzle, { deadline }).unique) {
+                puzzle[i] = saved;
+                continue;
+              }
+              if (--clues > (cap === 0 ? 39 : 32)) continue;
+              progress(attempt, "논리 풀이 및 난이도 검증");
+              const report = evaluate(puzzle, cap);
+              if (
+                !report.solved ||
+                report.tier !== cap ||
+                !report.board.every((v, i) => v === full.solution[i])
+              )
+                continue;
+              if (cap > 0 && evaluate(puzzle, cap - 1).solved) continue;
+              return {
+                puzzle,
+                solution: full.solution,
+                level,
+                report,
+                attempt,
+                ms: Date.now() - start,
+              };
+            }
+          }
+          throw Error(
+            "생성 한도 안에 선택한 난이도를 검증하지 못했습니다. 다시 시도해 주세요.",
+          );
+        }
+        return {
+          ALL,
+          cells,
+          units,
+          peers,
+          bit,
+          bits,
+          digit,
+          pos,
+          validGrid,
+          exact,
+          rules,
+          levels,
+          candidates,
+          complete,
+          next,
+          apply,
+          evaluate,
+          generate,
+          techniques: { singles, locked, subset, fish, xy, aic, forcing, als },
+        };
+      }
+    </script>
+    <script>
+      "use strict";
+      const E = createEngine();
+      const levelNames = {
+        easy: "쉬움",
+        normal: "보통",
+        hard: "어려움",
+        expert: "전문가",
+        master: "마스터",
+      };
+      function workerMain() {
+        const e = createEngine();
+        self.onmessage = ({ data }) => {
+          const { task, payload } = data;
+          try {
+            let result;
+            if (task === "generate") {
+              let last = 0,
+                previous = "";
+              result = e.generate(payload, (attempt, phase) => {
+                if (previous === phase && Date.now() - last < 150) return;
+                postMessage({ progress: { attempt, phase } });
+                last = Date.now();
+                previous = phase;
+              });
+            } else if (task === "restore") {
+              const { puzzle, level } = payload,
+                exact = e.exact(puzzle);
+              if (!exact.unique)
+                throw Error("저장된 퍼즐의 유일해를 확인할 수 없습니다.");
+              const cap = e.levels.indexOf(level),
+                report = e.evaluate(puzzle, cap);
+              if (
+                !report.solved ||
+                report.tier !== cap ||
+                !report.board.every((v, i) => v === exact.solution[i]) ||
+                (cap > 0 && e.evaluate(puzzle, cap - 1).solved)
+              )
+                throw Error("저장된 난이도를 확인할 수 없습니다.");
+              result = { solution: exact.solution, report };
+            } else {
+              const { puzzle, board, removed } = payload;
+              const check = e.exact(puzzle);
+              if (
+                !check.unique ||
+                board.some((d, i) => d && d !== check.solution[i])
+              )
+                throw Error(
+                  "입력한 숫자 중 퍼즐 조건과 맞지 않는 숫자가 있습니다. 먼저 입력을 확인해 주세요.",
+                );
+              // The logical engine receives only current values and candidate domains.
+              result = e.next(board, e.candidates(board, removed));
+            }
+            postMessage({ result });
+          } catch (error) {
+            postMessage({ error: error.message });
+          }
+        };
+      }
+      class WorkerController {
+        stop() {
+          clearTimeout(this.timer);
+          if (this.worker) {
+            this.worker.terminate();
+            this.worker = null;
+          }
+          if (this.url) {
+            URL.revokeObjectURL(this.url);
+            this.url = null;
+          }
+          this.task = null;
+        }
+        run(task, payload, done, fail, progress = () => {}) {
+          this.stop();
+          this.task = task;
+          try {
+            this.url = URL.createObjectURL(
+              new Blob(
+                [createEngine.toString(), "\n(", workerMain.toString(), ")();"],
+                { type: "text/javascript" },
+              ),
+            );
+            const worker = (this.worker = new Worker(this.url));
+            const finish = (callback, value) => {
+              if (this.worker !== worker) return;
+              this.stop();
+              callback(value);
+            };
+            worker.onmessage = ({ data }) => {
+              if (worker !== this.worker) return;
+              if (data.progress) progress(data.progress);
+              else if (data.error) finish(fail, data.error);
+              else finish(done, data.result);
+            };
+            worker.onerror = () =>
+              finish(
+                fail,
+                "이 브라우저에서 계산 작업을 실행할 수 없습니다. 로컬 웹 워커를 지원하는 브라우저로 열어 주세요.",
+              );
+            this.timer = setTimeout(
+              () =>
+                finish(fail, "계산 시간이 초과되었습니다. 다시 시도해 주세요."),
+              task === "generate" ? 48500 : 12000,
+            );
+            worker.postMessage({ task, payload });
+          } catch {
+            this.stop();
+            fail(
+              "이 환경에서는 블롭 웹 워커를 사용할 수 없습니다. 브라우저 설정을 확인해 주세요.",
+            );
+          }
+        }
+      }
+      const zero = () => Array(81).fill(0);
+      const snapshot = (g) => ({
+        board: g.board.slice(),
+        notes: g.notes.slice(),
+        removed: g.removed.slice(),
+      });
+      class HistoryManager {
+        constructor(past = [], future = []) {
+          this.past = past;
+          this.future = future;
+        }
+        record(before) {
+          this.past.push(before);
+          if (this.past.length > 100) this.past.shift();
+          this.future = [];
+        }
+        move(g, redo) {
+          const source = redo ? this.future : this.past,
+            destination = redo ? this.past : this.future;
+          if (source.length) {
+            destination.push(snapshot(g));
+            Object.assign(g, source.pop());
+          }
+        }
+      }
+      class GameState {
+        constructor(data) {
+          Object.assign(this, data);
+          this.board = data.puzzle.slice();
+          this.notes = zero();
+          this.removed = zero();
+          this.history = new HistoryManager();
+          this.elapsed = 0;
+          this.mistakes = 0;
+          this.status = "playing";
+          this.anchor = performance.now();
+        }
+        time() {
+          return (
+            this.elapsed +
+            (this.status === "playing" ? performance.now() - this.anchor : 0)
+          );
+        }
+        transition(status) {
+          this.elapsed = this.time();
+          this.status = status;
+          this.anchor = performance.now();
+        }
+        put(i, value, clean) {
+          if (this.puzzle[i] || this.board[i] === value) return false;
+          if (this.board[i]) this.removed = zero(); // Retracting a premise invalidates cached deductions.
+          this.board[i] = value;
+          this.notes[i] = 0;
+          if (value) {
+            if (value !== this.solution[i]) this.mistakes++;
+            if (clean)
+              for (const j of E.peers[i]) this.notes[j] &= ~E.bit(value);
+          }
+          return true;
+        }
+      }
+      const prefsDefault = {
+        theme: "light",
+        mistake: true,
+        conflict: true,
+        clean: true,
+      };
+      const isInt = (n, max) => Number.isInteger(n) && n >= 0 && n <= max;
+      class PersistenceManager {
+        constructor() {
+          this.key = "sudoku.club.v1";
+          this.available = true;
+        }
+        read(key) {
+          try {
+            const raw = localStorage.getItem(this.key + key);
+            return raw ? JSON.parse(raw) : null;
+          } catch {
+            return null;
+          }
+        }
+        write(key, value) {
+          try {
+            localStorage.setItem(this.key + key, JSON.stringify(value));
+            this.available = true;
+          } catch {
+            this.available = false;
+          }
+        }
+        preferences() {
+          const data = this.read(".preferences"),
+            p = { ...prefsDefault };
+          if (data?.version === 1) {
+            if (["light", "dark", "system"].includes(data.theme))
+              p.theme = data.theme;
+            for (const k of ["mistake", "conflict", "clean"])
+              if (typeof data[k] === "boolean") p[k] = data[k];
+          }
+          return p;
+        }
+        save(g) {
+          if (!g) return;
+          const { puzzle, level, ms, status, mistakes, history } = g;
+          this.write(".game", {
+            version: 1,
+            puzzle,
+            level,
+            ms,
+            status,
+            mistakes,
+            elapsed: Math.floor(g.time()),
+            history,
+            ...snapshot(g),
+          });
+        }
+        valid(data, solution) {
+          const masks = (a) =>
+            Array.isArray(a) &&
+            a.length === 81 &&
+            a.every((v) => isInt(v, 511));
+          const frame = (f) =>
+            f &&
+            E.validGrid(f.board) &&
+            masks(f.notes) &&
+            masks(f.removed) &&
+            E.cells.every(
+              (i) =>
+                (!data.puzzle[i] || data.puzzle[i] === f.board[i]) &&
+                (!f.board[i] || !f.notes[i]) &&
+                !(f.removed[i] & E.bit(solution[i])),
+            );
+          if (
+            !frame(data) ||
+            !isInt(data.mistakes, 1e9) ||
+            !isInt(data.elapsed, Number.MAX_SAFE_INTEGER) ||
+            !isInt(data.ms, 1e7)
+          )
+            return false;
+          if (!["playing", "paused", "won", "revealed"].includes(data.status))
+            return false;
+          if (
+            E.complete(data.board, data.puzzle) !==
+            ["won", "revealed"].includes(data.status)
+          )
+            return false;
+          return ["past", "future"].every(
+            (k) =>
+              Array.isArray(data.history?.[k]) &&
+              data.history[k].length <= 100 &&
+              data.history[k].every(frame),
+          );
+        }
+      }
+      const $ = (id) => document.getElementById(id),
+        jobs = new WorkerController(),
+        storage = new PersistenceManager();
+      let prefs = storage.preferences(),
+        game = null,
+        selected = 0,
+        noteMode = false,
+        hint = null,
+        hintStage = 0;
+      let generation = null,
+        confirmation = null,
+        lastOpener = null,
+        lastSavedSecond = -1;
+      const cells = E.cells.map((i) => {
+        const el = document.createElement("button");
+        el.className = "cell";
+        el.type = "button";
+        el.tabIndex = -1;
+        el.setAttribute("role", "gridcell");
+        el.onclick = () => selectCell(i);
+        $("board").append(el);
+        return el;
+      });
+      const timeText = (ms) => {
+        const s = Math.floor(ms / 1000);
+        return (
+          String(Math.floor(s / 60)).padStart(2, "0") +
+          ":" +
+          String(s % 60).padStart(2, "0")
+        );
+      };
+      const write = (id, text) => {
+        if ($(id).textContent !== String(text)) $(id).textContent = text;
+      };
+      function dialog(id) {
+        const overlays = [...document.querySelectorAll(".overlay")];
+        if (id && !overlays.some((el) => !el.hidden))
+          lastOpener = document.activeElement;
+        overlays.forEach((el) => (el.hidden = el.id !== id));
+        document.querySelector("main").inert = !!id;
+        document.querySelector("header").inert = !!id;
+        if (id)
+          $(id)
+            .querySelector("button:not([hidden]),select,input")
+            ?.focus({ preventScroll: true });
+        else if (lastOpener?.isConnected) {
+          lastOpener.focus({ preventScroll: true });
+          lastOpener = null;
+        }
+      }
+      function applyPrefs(save = true) {
+        const dark =
+          prefs.theme === "dark" ||
+          (prefs.theme === "system" &&
+            matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        $("themeButton")
+          .querySelector("use")
+          .setAttribute("href", dark ? "#i-sun" : "#i-moon");
+        $("themeSelect").value = prefs.theme;
+        for (const [id, k] of Object.entries({
+          mistakeHighlightToggle: "mistake",
+          conflictHighlightToggle: "conflict",
+          autoRemoveNotesToggle: "clean",
+        }))
+          $(id).checked = prefs[k];
+        if (save) storage.write(".preferences", { version: 1, ...prefs });
+      }
+      function clearHint() {
+        if (jobs.task === "hint") jobs.stop();
+        hint = null;
+        hintStage = 0;
+        $("hintResult").hidden = true;
+        $("applyHintButton").hidden = true;
+        write("hintButton", "힌트 보기");
+      }
+      function hintMessage(title, message) {
+        $("hintResult").hidden = false;
+        write("hintTechnique", title);
+        write("hintExplanation", message);
+        $("hintExplanation").scrollTop = 0;
+      }
+      function selectCell(i, focus = false) {
+        if (game?.status !== "playing") return;
+        selected = i;
+        $("clearCellButton").disabled = !!game.puzzle[i];
+        renderBoard();
+        if (focus) cells[i].focus();
+      }
+      function renderBoard() {
+        const board = game?.board || zero(),
+          sleep = game?.status === "paused";
+        const logical =
+          hint && hintStage >= 2 ? E.candidates(board, game.removed) : null;
+        for (const i of E.cells) {
+          const el = cells[i],
+            v = sleep ? 0 : board[i],
+            related = !!hint?.region.includes(i),
+            action = hintStage >= 3 && hint?.actions.find((a) => a.i === i);
+          const classes = ["cell"];
+          if (game?.puzzle[i]) classes.push("given");
+          if (E.peers[selected].includes(i)) classes.push("peer");
+          if (board[selected] && v === board[selected]) classes.push("same");
+          if (selected === i) classes.push("selected");
+          if (
+            v &&
+            ((prefs.mistake && v !== game.solution[i]) ||
+              (prefs.conflict && E.peers[i].some((j) => board[j] === v)))
+          )
+            classes.push("conflict");
+          if (related) classes.push("hint-related");
+          if (action) classes.push("hint-target");
+          const style = classes.join(" ");
+          if (el.className !== style) el.className = style;
+          let html = v ? String(v) : "";
+          const mask =
+            !sleep && !v && game
+              ? logical && (related || action)
+                ? logical[i]
+                : game.notes[i]
+              : 0;
+          if (mask)
+            html =
+              '<span class="candidates">' +
+              Array.from({ length: 9 }, (_, n) => {
+                const d = n + 1,
+                  mark =
+                    action?.remove & E.bit(d)
+                      ? "remove"
+                      : hint?.digits.includes(d) && related && hintStage >= 2
+                        ? "hint-candidate"
+                        : "";
+                return (
+                  '<span class="' +
+                  mark +
+                  '">' +
+                  (mask & E.bit(d) ? d : "") +
+                  "</span>"
+                );
+              }).join("") +
+              "</span>";
+          if (el._content !== html) {
+            el.innerHTML = html;
+            el._content = html;
+          }
+          el.tabIndex = selected === i && !sleep ? 0 : -1;
+          const label =
+            E.pos(i) +
+            (v ? ", " + v + (game.puzzle[i] ? " 단서" : " 입력") : ", 빈칸") +
+            (mask ? ", 후보 " + E.bits[mask].map(E.digit).join(", ") : "");
+          if (el.getAttribute("aria-label") !== label)
+            el.setAttribute("aria-label", label);
+        }
+      }
+      function render() {
+        const playing = game?.status === "playing",
+          paused = game?.status === "paused";
+        renderBoard();
+        $("resumeMask").hidden = !paused;
+        $("board").inert = !playing;
+        $("pauseButton").disabled = !playing && !paused;
+        write("pauseLabel", paused ? "재개" : "멈춤");
+        $("pauseButton").setAttribute("aria-pressed", String(paused));
+        $("pauseButton")
+          .querySelector("use")
+          .setAttribute("href", paused ? "#i-play" : "#i-pause");
+        $("undoButton").disabled = !playing || !game.history.past.length;
+        $("redoButton").disabled = !playing || !game.history.future.length;
+        for (const id of [
+          "clearCellButton",
+          "autoNotesButton",
+          "hintButton",
+          "noteModeButton",
+        ])
+          $(id).disabled = !playing;
+        $("clearCellButton").disabled = !playing || !!game.puzzle[selected];
+        $("noteModeButton").setAttribute("aria-pressed", String(noteMode));
+        $("resetButton").disabled = !game;
+        $("revealButton").disabled =
+          !game || game.status === "revealed" || game.status === "won";
+        write(
+          "statusText",
+          game
+            ? {
+                playing: "플레이 중",
+                paused: "일시 정지",
+                won: "풀이 완료",
+                revealed: "정답 공개됨",
+              }[game.status]
+            : "새 게임 대기",
+        );
+        write("difficultyLabel", "다음 퍼즐");
+        write(
+          "boardDifficulty",
+          game ? levelNames[game.level] + " 난이도" : "스도쿠 보드",
+        );
+        $("filledProgress").style.width =
+          (game ? (game.board.filter(Boolean).length / 81) * 100 : 0) + "%";
+        write(
+          "remainingCount",
+          game ? game.board.filter((v) => !v).length : "—",
+        );
+        write("mistakeCount", game?.mistakes ?? 0);
+        for (const el of $("numberPad").children) {
+          const d = Number(el.dataset.number),
+            left = game
+              ? Math.max(0, 9 - game.board.filter((v) => v === d).length)
+              : 0;
+          el.disabled = !playing;
+          el.lastElementChild.textContent = game ? left + "개" : "—";
+          el.title = d + " · 남은 수 " + left + "개";
+        }
+        write("timer", timeText(game?.time() || 0));
+        if (!game) return;
+        const r = game.report;
+        write("scoreValue", r.score);
+        write("analysisScore", r.score);
+        write("hardestTechnique", E.rules[r.hardest][2]);
+        write("clueCount", game.puzzle.filter(Boolean).length + "개");
+        write("generationTime", (game.ms / 1000).toFixed(2) + "초");
+        write("uniquenessStatus", "하나의 해 확인");
+        write(
+          "techniqueCounts",
+          Object.entries(r.counts)
+            .map(([id, n]) => E.rules[id][2] + " " + n + "회")
+            .join(" · ") + " · 설정된 기법 순서 기준",
+        );
+      }
+      function afterEdit() {
+        clearHint();
+        if (E.complete(game.board, game.puzzle)) {
+          game.transition("won");
+          write(
+            "completionMessage",
+            levelNames[game.level] +
+              " · " +
+              timeText(game.time()) +
+              " · 실수 " +
+              game.mistakes +
+              "회 · 논리 점수 " +
+              game.report.score,
+          );
+          dialog("completionOverlay");
+        }
+        storage.save(game);
+        render();
+      }
+      function edit(fn) {
+        if (game?.status !== "playing") return;
+        const before = snapshot(game);
+        if (fn() === false) return;
+        game.history.record(before);
+        afterEdit();
+      }
+      function enter(value) {
+        edit(() => {
+          if (game.puzzle[selected]) return false;
+          if (noteMode && value) {
+            if (game.board[selected]) return false;
+            game.notes[selected] ^= E.bit(value);
+            return true;
+          }
+          if (!value && !game.board[selected] && game.notes[selected]) {
+            game.notes[selected] = 0;
+            return true;
+          }
+          return game.put(selected, value, prefs.clean);
+        });
+      }
+      function travel(redo) {
+        if (
+          game?.status !== "playing" ||
+          !game.history[redo ? "future" : "past"].length
+        )
+          return;
+        game.history.move(game, redo);
+        afterEdit();
+      }
+      function pause() {
+        if (!["paused", "playing"].includes(game?.status)) return;
+        clearHint();
+        game.transition(game.status === "paused" ? "playing" : "paused");
+        storage.save(game);
+        render();
+      }
+      function chooseGame(g) {
+        clearHint();
+        game = g;
+        selected = Math.max(0, g.board.indexOf(0));
+        noteMode = false;
+        generation = null;
+        $("difficultySelect").value = g.level;
+        dialog(null);
+        storage.save(g);
+        render();
+      }
+      function loading(phase) {
+        clearHint();
+        generation = { start: performance.now(), attempt: 0 };
+        write("generationTitle", "퍼즐 준비");
+        write("generationPhase", phase);
+        write("generationAttempt", "시도 0회 · 0초");
+        $("retryGenerationButton").hidden = true;
+        dialog("generationOverlay");
+      }
+      function failed(message) {
+        if (generation) generation.finished = true;
+        write("generationTitle", "퍼즐 준비를 마치지 못했습니다");
+        write("generationPhase", message);
+        $("retryGenerationButton").hidden = false;
+      }
+      function newGame() {
+        loading("완성 보드 생성");
+        jobs.run(
+          "generate",
+          $("difficultySelect").value,
+          (data) => chooseGame(new GameState(data)),
+          failed,
+          (p) => {
+            generation.attempt = p.attempt;
+            write("generationPhase", p.phase);
+          },
+        );
+      }
+      function restore() {
+        const d = storage.read(".game");
+        if (
+          d?.version !== 1 ||
+          !E.validGrid(d.puzzle) ||
+          !E.levels.includes(d.level)
+        )
+          return newGame();
+        loading("저장된 퍼즐과 난이도 검증");
+        jobs.run(
+          "restore",
+          { puzzle: d.puzzle, level: d.level },
+          (result) => {
+            if (!storage.valid(d, result.solution))
+              return failed(
+                "저장된 진행 정보가 손상되었습니다. 다시 시도하면 새 퍼즐을 생성합니다.",
+              );
+            const g = new GameState({
+              ...result,
+              puzzle: d.puzzle,
+              level: d.level,
+              ms: d.ms,
+            });
+            Object.assign(g, snapshot(d), {
+              status: d.status,
+              elapsed: d.elapsed,
+              mistakes: d.mistakes,
+              history: new HistoryManager(d.history.past, d.history.future),
+            });
+            chooseGame(g);
+          },
+          failed,
+        );
+      }
+      function showStage() {
+        const d = hint;
+        hintStage++;
+        const places = d.region.map(E.pos).join(", ");
+        if (hintStage === 1)
+          hintMessage("1단계 · 살펴볼 칸", places + "을 살펴보세요.");
+        if (hintStage === 2) hintMessage("2단계 · " + d.name, d.reason);
+        if (hintStage === 3)
+          hintMessage(
+            "3단계 · " + d.name,
+            d.actions
+              .map(
+                (a) =>
+                  E.pos(a.i) +
+                  (a.value
+                    ? "에 " + a.value + " 입력"
+                    : "에서 " +
+                      E.bits[a.remove].map(E.digit).join("·") +
+                      " 제거"),
+              )
+              .join(" / "),
+          );
+        write("hintButton", hintStage === 3 ? "힌트 닫기" : "다음 단계");
+        $("applyHintButton").hidden = hintStage !== 3;
+        renderBoard();
+      }
+      function requestHint() {
+        if (game?.status !== "playing" || jobs.task === "hint") return;
+        if (hint) {
+          if (hintStage < 3) showStage();
+          else {
+            clearHint();
+            renderBoard();
+          }
+          return;
+        }
+        hintMessage("논리 탐색", "현재 후보 관계를 확인하고 있습니다.");
+        jobs.run(
+          "hint",
+          { puzzle: game.puzzle, board: game.board, removed: game.removed },
+          (result) => {
+            if (!result)
+              return hintMessage(
+                "탐색 완료",
+                "지원하는 기법으로 다음 단계를 찾지 못했습니다.",
+              );
+            hint = result;
+            showStage();
+          },
+          (message) => hintMessage("입력 확인", message),
+        );
+      }
+      $("applyHintButton").onclick = () =>
+        edit(() => {
+          if (!hint || hintStage !== 3) return false;
+          for (const a of hint.actions) {
+            selected = a.i;
+            if (a.value) game.put(a.i, a.value, prefs.clean);
+            else {
+              game.removed[a.i] |= a.remove;
+              game.notes[a.i] &= ~a.remove;
+            }
+          }
+        });
+      function confirmAction(title, message, label, fn) {
+        write("confirmTitle", title);
+        write("confirmMessage", message);
+        write("confirmActionButton", label);
+        confirmation = fn;
+        dialog("confirmOverlay");
+      }
+      $("resetButton").onclick = () =>
+        confirmAction(
+          "처음부터 풀까요?",
+          "현재 퍼즐의 입력, 메모, 시간과 실수 기록을 초기화합니다.",
+          "처음부터",
+          () =>
+            chooseGame(
+              new GameState({
+                puzzle: game.puzzle,
+                solution: game.solution,
+                level: game.level,
+                report: game.report,
+                ms: game.ms,
+              }),
+            ),
+        );
+      $("revealButton").onclick = () =>
+        confirmAction(
+          "정답을 공개할까요?",
+          "퍼즐 풀이를 종료하고 모든 칸의 정답을 표시합니다.",
+          "정답 공개",
+          () => {
+            clearHint();
+            game.board = game.solution.slice();
+            game.notes = zero();
+            game.removed = zero();
+            game.transition("revealed");
+            storage.save(game);
+            render();
+          },
+        );
+      $("confirmActionButton").onclick = () => {
+        const fn = confirmation;
+        confirmation = null;
+        dialog(null);
+        fn?.();
+      };
+      $("dismissConfirmButton").onclick = () => {
+        confirmation = null;
+        dialog(null);
+      };
+      $("settingsButton").onclick = () => dialog("settingsOverlay");
+      $("analysisButton").onclick = () => dialog("analysisOverlay");
+      $("closeHintButton").onclick = () => {
+        clearHint();
+        renderBoard();
+        $("hintButton").focus({ preventScroll: true });
+      };
+      for (const id of [
+        "doneSettingsButton",
+        "closeSettingsButton",
+        "completionCloseButton",
+        "closeAnalysisButton",
+      ])
+        $(id).onclick = () => dialog(null);
+      $("cancelGenerationButton").onclick = () => {
+        jobs.stop();
+        generation = null;
+        dialog(null);
+        render();
+      };
+      $("retryGenerationButton").onclick = $("newGameButton").onclick = newGame;
+      $("themeButton").onclick = () => {
+        prefs.theme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        applyPrefs();
+      };
+      $("themeSelect").onchange = (e) => {
+        prefs.theme = e.target.value;
+        applyPrefs();
+      };
+      matchMedia("(prefers-color-scheme: dark)").addEventListener(
+        "change",
+        () => applyPrefs(false),
+      );
+      for (const [id, k] of Object.entries({
+        mistakeHighlightToggle: "mistake",
+        conflictHighlightToggle: "conflict",
+        autoRemoveNotesToggle: "clean",
+      }))
+        $(id).onchange = (e) => {
+          prefs[k] = e.target.checked;
+          applyPrefs();
+          render();
+        };
+      $("pauseButton").onclick = $("resumeMask").onclick = pause;
+      $("numberPad").onclick = (e) => {
+        const b = e.target.closest("[data-number]");
+        if (b) enter(+b.dataset.number);
+      };
+      $("undoButton").onclick = () => travel(false);
+      $("redoButton").onclick = () => travel(true);
+      $("noteModeButton").onclick = () => {
+        noteMode = !noteMode;
+        render();
+      };
+      $("clearCellButton").onclick = () => enter(0);
+      $("hintButton").onclick = requestHint;
+      $("autoNotesButton").onclick = () =>
+        edit(() => {
+          const notes = E.candidates(game.board, game.removed);
+          if (notes.every((v, i) => v === game.notes[i])) return false;
+          game.notes = notes;
+        });
+      document.addEventListener("keydown", (e) => {
+        const modal = document.querySelector(".overlay:not([hidden])");
+        if (modal) {
+          if (e.key === "Escape") {
+            modal
+              .querySelector(
+                "#cancelGenerationButton,#closeSettingsButton,#dismissConfirmButton,#completionCloseButton,#closeAnalysisButton",
+              )
+              ?.click();
+            e.preventDefault();
+          }
+          if (e.key === "Tab") {
+            const focusable = [
+              ...modal.querySelectorAll("button,input,select"),
+            ].filter((el) => !el.disabled && !el.hidden);
+            if (e.shiftKey && document.activeElement === focusable[0]) {
+              e.preventDefault();
+              focusable.at(-1).focus();
+            } else if (
+              !e.shiftKey &&
+              document.activeElement === focusable.at(-1)
+            ) {
+              e.preventDefault();
+              focusable[0].focus();
+            }
+          }
+          return;
+        }
+        if (e.key === "Escape" && !$("hintResult").hidden) {
+          $("closeHintButton").click();
+          return;
+        }
+        if (
+          game?.status !== "playing" ||
+          e.target.matches("select,input,textarea,#hintExplanation")
+        )
+          return;
+        if (e.ctrlKey || e.metaKey) {
+          if (e.key.toLowerCase() === "z") {
+            e.preventDefault();
+            travel(e.shiftKey);
+          }
+          return;
+        }
+        const delta = {
+          ArrowLeft: -1,
+          ArrowRight: 1,
+          ArrowUp: -9,
+          ArrowDown: 9,
+        }[e.key];
+        if (delta) {
+          e.preventDefault();
+          selectCell(Math.max(0, Math.min(80, selected + delta)), true);
+        } else if (/^[1-9]$/.test(e.key)) enter(+e.key);
+        else if (["Backspace", "Delete", "0"].includes(e.key)) {
+          e.preventDefault();
+          enter(0);
+        } else if (e.key.toLowerCase() === "n") $("noteModeButton").click();
+      });
+      setInterval(() => {
+        if (generation && !generation.finished)
+          write(
+            "generationAttempt",
+            "시도 " +
+              generation.attempt +
+              "회 · " +
+              ((performance.now() - generation.start) / 1000).toFixed(1) +
+              "초",
+          );
+        if (game?.status === "playing") {
+          const ms = game.time(),
+            second = Math.floor(ms / 1000);
+          write("timer", timeText(ms));
+          if (second !== lastSavedSecond && second % 10 === 0) {
+            lastSavedSecond = second;
+            storage.save(game);
+          }
+        }
+      }, 200);
+      addEventListener("pagehide", () => storage.save(game));
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) storage.save(game);
+      });
+      applyPrefs(false);
+      render();
+      restore();
+    </script>
+  </body>
+</html>

@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { discoverExperiments, safeRelativePath, titleFromDirName } from '../src/lib/experiment-discovery.ts';
 import { buildCatalog } from '../src/lib/experiments.ts';
 
@@ -194,6 +195,32 @@ test('safeRelativePath', () => {
     assert.equal(safeRelativePath(v, d), null, v);
 });
 test('missing root → empty catalog without errors', () => assert.deepEqual(discoverExperiments(join(tmpdir(), 'arc-lab-does-not-exist-' + Date.now())), { nodes: [], errors: [] }));
+
+// --- Site tree: public/experiments as shipped (Games group with Sudoku) ------------------------
+test('gamepad is an accepted group icon', () => {
+  const r = discover({ 'g/group.json': { icon: 'gamepad' }, 'g/x/index.html': html });
+  assert.deepEqual(r.errors, []);
+  assert.equal(r.nodes[0].icon, 'gamepad');
+});
+const site = discoverExperiments(fileURLToPath(new URL('../public/experiments', import.meta.url)));
+test('site tree has no metadata errors', () => assert.deepEqual(site.errors, []));
+const games = site.nodes.find((n) => n.path === 'games');
+test('games/ is discovered as a group with its metadata', () => {
+  assert.equal(games?.kind, 'group');
+  assert.deepEqual([games.title, games.description, games.icon, games.order], ['Games · 게임', '브라우저에서 바로 실행하는 게임 모음', 'gamepad', 100]);
+});
+test('Sudoku is a launchable experiment inside Games, counted once', () => {
+  const siteCat = buildCatalog(site.nodes);
+  const sudoku = siteCat.experiments.filter((e) => e.id === 'games/sudoku');
+  assert.equal(sudoku.length, 1);
+  assert.equal(sudoku[0].href, '/experiments/games/sudoku/');
+  assert.equal(sudoku[0].title, 'Sudoku · 스도쿠');
+  assert.equal(sudoku[0].launchable, true);
+  assert.deepEqual(sudoku[0].groupTrail, ['Games · 게임']);
+  const g = siteCat.groups.find((x) => x.id === 'games');
+  assert.ok(g.count >= 1 && g.available >= 1 && g.children.some((c) => c.id === 'games/sudoku'));
+  assert.ok(!siteCat.roots.some((n) => n.id === 'games/sudoku' || n.id === 'sudoku'));
+});
 
 for (const r of roots) rmSync(r, { recursive: true, force: true });
 console.log(`\n${passed}/${passed + failures.length} experiment discovery tests passed${failures.length ? ` — FAILED: ${failures.join(', ')}` : ''}`);

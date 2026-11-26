@@ -1,0 +1,8 @@
+{
+  "title": "Sudoku · 스도쿠",
+  "description": "난이도별 문제를 생성하는 스도쿠 퍼즐 게임",
+  "tags": ["JavaScript", "Puzzle", "Algorithm"],
+  "status": "available",
+  "entry": "index.html",
+  "requiresCrossOriginIsolation": false
+}

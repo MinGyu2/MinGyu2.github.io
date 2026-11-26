@@ -22,7 +22,7 @@ import { join, posix, resolve, sep } from 'node:path';
 
 export type ExperimentStatus = 'available' | 'in-development' | 'planned';
 export const STATUSES: ExperimentStatus[] = ['available', 'in-development', 'planned'];
-export const GROUP_ICONS = ['folder', 'shield', 'atom', 'cube', 'flask', 'cpu', 'globe', 'terminal'] as const;
+export const GROUP_ICONS = ['folder', 'shield', 'atom', 'cube', 'flask', 'cpu', 'globe', 'terminal', 'gamepad'] as const;
 export type GroupIcon = (typeof GROUP_ICONS)[number];
 
 /** Directory names that hold resources, never experiments or groups (case-insensitive). */

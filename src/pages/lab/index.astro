@@ -62,13 +62,13 @@ const pad = (n: number) => String(n).padStart(2, '0');
           </div>
 
           {
-            rootGroups.length > 0 && (
-              <section aria-labelledby="lab-groups-title">
-                <h2 id="lab-groups-title" class="lab-section-title">
-                  <span class="panel-id">GROUPS //</span> 실험 그룹 <span class="lab-section-count">{rootGroups.length}</span>
+            rootExperiments.length > 0 && (
+              <section aria-labelledby="lab-root-title" data-lab-root-section>
+                <h2 id="lab-root-title" class="lab-section-title">
+                  <span class="panel-id">STANDALONE //</span> 독립 실험 <span class="lab-section-count">{rootExperiments.length}</span>
                 </h2>
-                <ul class="space-y-3" data-lab-tree>
-                  {rootGroups.map((n) => (
+                <ul class="lab-root-grid">
+                  {rootExperiments.map((n) => (
                     <CatalogNode node={n} />
                   ))}
                 </ul>
@@ -77,13 +77,13 @@ const pad = (n: number) => String(n).padStart(2, '0');
           }
 
           {
-            rootExperiments.length > 0 && (
-              <section aria-labelledby="lab-root-title" data-lab-root-section>
-                <h2 id="lab-root-title" class="lab-section-title">
-                  <span class="panel-id">STANDALONE //</span> 독립 실험 <span class="lab-section-count">{rootExperiments.length}</span>
+            rootGroups.length > 0 && (
+              <section aria-labelledby="lab-groups-title">
+                <h2 id="lab-groups-title" class="lab-section-title">
+                  <span class="panel-id">GROUPS //</span> 실험 그룹 <span class="lab-section-count">{rootGroups.length}</span>
                 </h2>
-                <ul class="lab-root-grid">
-                  {rootExperiments.map((n) => (
+                <ul class="space-y-3" data-lab-tree>
+                  {rootGroups.map((n) => (
                     <CatalogNode node={n} />
                   ))}
                 </ul>
