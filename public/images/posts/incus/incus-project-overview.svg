@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 532" width="720" height="532" role="img" aria-labelledby="title desc">
+  <title id="title">Incus 프로젝트 구성도</title>
+  <desc id="desc">하나의 Incus 서버 안에 기존 프로젝트 user-1000과 신규 프로젝트 user-1000-gui가 있다. 각 프로젝트는 자체 default 프로파일과 인스턴스를 가진다. 기존 프로파일의 root 디바이스는 default 스토리지 풀을, 신규 프로파일의 root 디바이스는 Btrfs 스토리지 풀 mq_pool을 참조하며, 두 프로파일의 eth0 디바이스는 모두 공유 네트워크 incusbr-1000을 참조한다. 스토리지 풀과 네트워크는 프로젝트 소유가 아닌 서버 수준 리소스이다.</desc>
+  <style>
+    .t{font-family:'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#1f2937}
+    .m{font-family:ui-monospace,'JetBrains Mono','D2Coding',Menlo,Consolas,monospace;fill:#1f2937}
+    .mu{fill:#4b5563}
+  </style>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#15803d"/></marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6d4fd1"/></marker>
+    <marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="719" height="531" rx="12" fill="#fbfcfd" stroke="#d6dce4"/>
+  <text class="t" x="32" y="40" font-size="20" font-weight="700">Incus 프로젝트 구성도</text>
+  <text class="t mu" x="32" y="62" font-size="13">이름은 예시이며 환경마다 다를 수 있습니다</text>
+
+  <rect x="16" y="80" width="688" height="402" rx="10" fill="none" stroke="#9aa4b2" stroke-dasharray="5 4"/>
+  <text class="t mu" x="32" y="102" font-size="13" font-weight="700">Incus 서버</text>
+
+  <!-- 기존 프로젝트 -->
+  <rect x="36" y="114" width="308" height="196" rx="10" fill="#eef4ff" stroke="#2563eb"/>
+  <text class="m" x="52" y="139" font-size="15" font-weight="700" style="fill:#1e40af">user-1000</text>
+  <text class="t" x="328" y="139" font-size="12" text-anchor="end" style="fill:#1e40af">기존 프로젝트</text>
+  <rect x="52" y="152" width="130" height="44" rx="6" fill="#ffffff" stroke="#9aa4b2"/>
+  <text class="t" x="117" y="179" font-size="13" text-anchor="middle">인스턴스 A</text>
+  <rect x="198" y="152" width="130" height="44" rx="6" fill="#ffffff" stroke="#9aa4b2"/>
+  <text class="t" x="263" y="179" font-size="13" text-anchor="middle">인스턴스 B</text>
+  <path d="M117 196V212" stroke="#6b7280" stroke-width="1.5" marker-end="url(#an)"/><path d="M263 196V212" stroke="#6b7280" stroke-width="1.5" marker-end="url(#an)"/>
+  <rect x="52" y="214" width="276" height="80" rx="8" fill="#f3f4f6" stroke="#6b7280"/>
+  <text class="t" x="66" y="236" font-size="14" font-weight="700">profile: default</text>
+  <text class="m" x="66" y="258" font-size="13">eth0 → incusbr-1000</text>
+  <text class="m" x="66" y="279" font-size="13">root → default</text>
+
+  <!-- 신규 프로젝트 -->
+  <rect x="376" y="114" width="308" height="196" rx="10" fill="#eef4ff" stroke="#2563eb"/>
+  <text class="m" x="392" y="139" font-size="15" font-weight="700" style="fill:#1e40af">user-1000-gui</text>
+  <text class="t" x="668" y="139" font-size="12" text-anchor="end" style="fill:#1e40af">신규 프로젝트</text>
+  <rect x="392" y="152" width="130" height="44" rx="6" fill="#ffffff" stroke="#9aa4b2"/>
+  <text class="m" x="457" y="179" font-size="13" text-anchor="middle">test-ub</text>
+  <rect x="538" y="152" width="130" height="44" rx="6" fill="#ffffff" stroke="#9aa4b2"/>
+  <text class="t" x="603" y="179" font-size="13" text-anchor="middle">새 인스턴스</text>
+  <path d="M457 196V212" stroke="#6b7280" stroke-width="1.5" marker-end="url(#an)"/><path d="M603 196V212" stroke="#6b7280" stroke-width="1.5" marker-end="url(#an)"/>
+  <rect x="392" y="214" width="276" height="80" rx="8" fill="#f3f4f6" stroke="#6b7280"/>
+  <text class="t" x="406" y="236" font-size="14" font-weight="700">profile: default</text>
+  <text class="m" x="406" y="258" font-size="13">eth0 → incusbr-1000</text>
+  <text class="m" x="406" y="279" font-size="13">root → mq_pool</text>
+
+  <!-- 참조 화살표 -->
+  <path d="M120 294L134 348" stroke="#15803d" stroke-width="2" fill="none" marker-end="url(#ag)"/>
+  <path d="M262 294L328 348" stroke="#6d4fd1" stroke-width="2" fill="none" marker-end="url(#ap)"/>
+  <path d="M458 294L392 348" stroke="#6d4fd1" stroke-width="2" fill="none" marker-end="url(#ap)"/>
+  <path d="M600 294L586 348" stroke="#15803d" stroke-width="2" fill="none" marker-end="url(#ag)"/>
+
+  <!-- 서버 수준 리소스 -->
+  <rect x="36" y="352" width="200" height="84" rx="8" fill="#eaf7ef" stroke="#2f9e5e"/>
+  <text class="t" x="136" y="375" font-size="12" text-anchor="middle" style="fill:#166534">storage pool</text>
+  <text class="m" x="136" y="398" font-size="15" font-weight="700" text-anchor="middle">default</text>
+  <text class="t mu" x="136" y="420" font-size="12" text-anchor="middle">기존 스토리지 풀</text>
+  <rect x="260" y="352" width="200" height="84" rx="8" fill="#f3eeff" stroke="#7c5cd6"/>
+  <text class="t" x="360" y="375" font-size="12" text-anchor="middle" style="fill:#5b21b6">network</text>
+  <text class="m" x="360" y="398" font-size="15" font-weight="700" text-anchor="middle">incusbr-1000</text>
+  <text class="t mu" x="360" y="420" font-size="12" text-anchor="middle">두 프로젝트가 함께 참조</text>
+  <rect x="484" y="352" width="200" height="84" rx="8" fill="#eaf7ef" stroke="#2f9e5e"/>
+  <text class="t" x="584" y="375" font-size="12" text-anchor="middle" style="fill:#166534">storage pool · btrfs</text>
+  <text class="m" x="584" y="398" font-size="15" font-weight="700" text-anchor="middle">mq_pool</text>
+  <text class="t mu" x="584" y="420" font-size="12" text-anchor="middle">새로 만든 스토리지 풀</text>
+  <text class="t mu" x="360" y="464" font-size="13" text-anchor="middle">스토리지 풀 · 네트워크 = 프로파일이 이름으로 참조하는 서버 리소스</text>
+
+  <!-- 범례 -->
+  <rect x="32" y="499" width="14" height="14" rx="3" fill="#eef4ff" stroke="#2563eb"/>
+  <text class="t" x="52" y="511" font-size="12">프로젝트</text>
+  <rect x="132" y="499" width="14" height="14" rx="3" fill="#f3f4f6" stroke="#6b7280"/>
+  <text class="t" x="152" y="511" font-size="12">프로파일 · 인스턴스</text>
+  <rect x="282" y="499" width="14" height="14" rx="3" fill="#eaf7ef" stroke="#2f9e5e"/>
+  <text class="t" x="302" y="511" font-size="12">스토리지</text>
+  <rect x="382" y="499" width="14" height="14" rx="3" fill="#f3eeff" stroke="#7c5cd6"/>
+  <text class="t" x="402" y="511" font-size="12">네트워크</text>
+  <path d="M482 506H504" stroke="#6b7280" stroke-width="1.5" marker-end="url(#an)"/>
+  <text class="t" x="512" y="511" font-size="12">디바이스 참조 · 적용</text>
+</svg>
