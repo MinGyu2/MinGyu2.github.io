@@ -547,28 +547,6 @@
         border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
         background: var(--accent-soft);
       }
-      .hint-content {
-        padding: 17px 19px;
-      }
-      .hint-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-      .hint-title {
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 13px;
-        font-weight: 760;
-      }
-      .hint-title .icon {
-        color: var(--accent-dark);
-        width: 17px;
-        height: 17px;
-      }
       .hint-button {
         min-height: 36px;
         padding: 0 12px;
@@ -583,24 +561,9 @@
         background: var(--accent);
         color: white;
       }
-      #hintResult {
-        margin-top: 13px;
-        padding-top: 12px;
-        border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-        font-size: 12px;
-        line-height: 1.65;
-      }
-      #hintResult[hidden] {
-        display: none;
-      }
       .hint-technique {
-        display: block;
-        margin-bottom: 4px;
         color: var(--accent-dark);
         font-weight: 800;
-      }
-      .hint-apply {
-        margin-top: 10px;
       }
       .analysis-grid {
         display: grid;
@@ -779,8 +742,7 @@
       .board-wrap {
         position: relative;
       }
-      .section-title,
-      .hint-title {
+      .section-title {
         font-size: 16px;
       }
       .tool-button,
@@ -920,12 +882,8 @@
         align-content: center;
         align-self: center;
         min-width: 0;
-        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-columns: minmax(0, 1fr);
         gap: var(--gap);
-      }
-      .controls-card,
-      .keypad-card {
-        grid-column: 1 / -1;
       }
       .tool-row {
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -934,36 +892,69 @@
         padding-inline: 2px;
         white-space: nowrap;
       }
-      .hint-card {
-        overflow: visible;
+      .game-menu-button {
+        min-height: 44px;
+        color: var(--ink);
+        font-size: 14px;
       }
-      .hint-content {
-        padding: 8px 12px;
+      .game-menu {
+        padding: 16px;
       }
-      .analysis-button {
-        align-self: stretch;
-        padding-inline: 14px;
-        white-space: nowrap;
+      .game-menu .section-head {
+        margin-bottom: 10px;
       }
-      .hint-title {
-        font-size: 13px;
+      #gameMenuTitle {
+        margin: 0;
+      }
+      .menu-close {
+        width: 38px;
+        min-height: 38px;
+        padding: 0;
+      }
+      .game-menu .controls-card {
+        padding: 12px;
+        box-shadow: none;
+      }
+      .menu-shortcuts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .menu-shortcuts button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 6px;
+        min-height: 44px;
         white-space: nowrap;
+      }
+      .hint-card #hintButton {
+        width: 100%;
+        border: 0;
+        background: transparent;
+      }
+      .hint-card #hintButton:not(:disabled):hover {
+        background: var(--accent-dark);
+        color: var(--surface);
+      }
+      .side-column:has(#hintResult:not([hidden])) > :not(#hintResult) {
+        visibility: hidden;
       }
       #hintResult {
         position: absolute;
         z-index: 4;
-        inset: auto 0 calc(48px + var(--gap)) 0;
+        inset: 0;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        max-height: min(225px, 48dvh, calc(100% - 48px - var(--gap)));
-        margin: 0;
-        padding: 10px 12px;
+        gap: 6px;
+        padding: 8px 12px;
         border: 1px solid var(--line);
         border-radius: 12px;
         background: var(--surface);
-        box-shadow: 0 8px 28px #17222238;
+        box-shadow: var(--shadow);
+        font-size: 13px;
+        line-height: 1.55;
       }
       .hint-result-top {
         display: flex;
@@ -984,9 +975,12 @@
         width: 100%;
         padding-inline: 2px;
       }
-      .hint-apply {
-        flex-shrink: 0;
-        margin-top: 6px;
+      .hint-actions {
+        display: flex;
+        margin-top: auto;
+      }
+      .hint-actions button {
+        min-height: 42px;
       }
       .overlay {
         padding: max(12px, env(safe-area-inset-top))
@@ -1039,8 +1033,7 @@
         }
         .page-heading,
         .board-legend,
-        #numberHeading,
-        #gameControlsHeading {
+        #numberHeading {
           position: absolute;
           width: 1px;
           height: 1px;
@@ -1069,7 +1062,6 @@
         .keypad-card {
           padding: 6px;
         }
-        .controls-card .section-head,
         .keypad-card .section-head {
           margin: 0;
         }
@@ -1113,22 +1105,12 @@
           gap: 2px;
           font-size: 10px;
         }
-        .hint-content {
-          padding: 4px 6px 4px 9px;
-        }
-        .hint-top {
-          gap: 6px;
-        }
-        .hint-button {
-          padding-inline: 8px;
-          white-space: nowrap;
-        }
       }
       @media (max-width: 900px) and (orientation: portrait) {
         main {
           --portrait-width: min(100vw, 740px);
           width: var(--portrait-width);
-          max-height: calc(var(--portrait-width) + 315px);
+          max-height: calc(var(--portrait-width) + 215px);
         }
         .game-layout {
           grid-template-columns: minmax(0, 1fr);
@@ -1156,7 +1138,7 @@
       }
       @media (max-width: 599px) and (min-height: 701px) and (orientation: portrait) {
         main {
-          max-height: calc(var(--portrait-width) + 363px);
+          max-height: calc(var(--portrait-width) + 263px);
         }
         .keypad {
           grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -1197,9 +1179,6 @@
         .controls-card .primary-button {
           height: 34px;
           min-height: 34px;
-        }
-        .hint-content {
-          padding-block: 2px;
         }
       }
       @media (max-height: 365px) and (orientation: landscape) {
@@ -1269,6 +1248,12 @@
       <symbol id="i-grid" viewBox="0 0 24 24">
         <rect x="4" y="4" width="16" height="16" rx="2" />
         <path d="M4 12h16M12 4v16" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <path d="M4 4v16h16M9 15v-3m5 3V8m5 7V5" />
       </symbol>
       <symbol id="i-close" viewBox="0 0 24 24">
         <path d="m6 6 12 12M18 6 6 18" />
@@ -1473,89 +1458,133 @@
               </button>
             </div>
           </section>
-          <section
-            class="card controls-card"
-            aria-labelledby="gameControlsHeading"
+          <button
+            class="card quiet-button game-menu-button"
+            id="gameMenuButton"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="gameMenuOverlay"
+            aria-expanded="false"
           >
-            <div class="section-head">
-              <h2 class="section-title" id="gameControlsHeading">새 게임</h2>
-              <span class="difficulty-name" id="difficultyLabel">보통</span>
-            </div>
-            <div class="action-row">
-              <select id="difficultySelect" aria-label="난이도 선택">
-                <option value="easy">쉬움</option>
-                <option value="normal" selected>보통</option>
-                <option value="hard">어려움</option>
-                <option value="expert">전문가</option>
-                <option value="master">마스터</option></select
-              ><button class="primary-button" id="newGameButton" type="button">
-                <svg class="icon"><use href="#i-refresh"></use></svg>새 게임
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg
+            >게임 메뉴
+          </button>
+          <div id="hintResult" hidden>
+            <div class="hint-result-top">
+              <span
+                class="hint-technique"
+                id="hintTechnique"
+                aria-live="polite"
+              ></span>
+              <button
+                class="quiet-button"
+                id="closeHintButton"
+                type="button"
+                aria-label="힌트 닫기"
+              >
+                <svg class="icon"><use href="#i-close"></use></svg>
               </button>
             </div>
-            <div class="stats" aria-label="현재 게임 통계">
-              <div class="stat">
-                <div class="stat-label">실수</div>
-                <div class="stat-value" id="mistakeCount">0</div>
-              </div>
-              <div class="stat">
-                <div class="stat-label">남은 칸</div>
-                <div class="stat-value" id="remainingCount">—</div>
-              </div>
-              <div class="stat">
-                <div class="stat-label">논리 점수</div>
-                <div class="stat-value" id="scoreValue">—</div>
-              </div>
+            <div id="hintExplanation" tabindex="0" aria-live="polite"></div>
+            <div class="hint-actions">
+              <button
+                class="hint-button"
+                id="nextHintButton"
+                type="button"
+                hidden
+              >
+                다음 단계
+              </button>
+              <button
+                class="hint-button"
+                id="applyHintButton"
+                type="button"
+                hidden
+              >
+                이 수 적용하기
+              </button>
             </div>
-          </section>
-          <section class="card hint-card" aria-labelledby="hintHeading">
-            <div class="hint-content">
-              <div class="hint-top">
-                <h2 class="hint-title" id="hintHeading">
-                  <svg class="icon"><use href="#i-spark"></use></svg>논리 힌트
-                </h2>
-                <button class="hint-button" id="hintButton" type="button">
-                  힌트 보기
-                </button>
-              </div>
-              <div id="hintResult" hidden>
-                <div class="hint-result-top">
-                  <span
-                    class="hint-technique"
-                    id="hintTechnique"
-                    aria-live="polite"
-                  ></span>
-                  <button
-                    class="quiet-button"
-                    id="closeHintButton"
-                    type="button"
-                    aria-label="힌트 닫기"
-                  >
-                    <svg class="icon"><use href="#i-close"></use></svg>
-                  </button>
-                </div>
-                <div id="hintExplanation" tabindex="0" aria-live="polite"></div>
-                <button
-                  class="hint-button hint-apply"
-                  id="applyHintButton"
-                  type="button"
-                  hidden
-                >
-                  이 수 적용하기
-                </button>
-              </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <div
+      class="overlay"
+      id="gameMenuOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gameMenuTitle"
+      hidden
+    >
+      <div class="modal game-menu">
+        <div class="section-head">
+          <h2 id="gameMenuTitle">게임 메뉴</h2>
+          <button
+            class="quiet-button menu-close"
+            id="closeGameMenuButton"
+            type="button"
+            aria-label="게임 메뉴 닫기"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-close"></use>
+            </svg>
+          </button>
+        </div>
+        <section
+          class="card controls-card"
+          aria-labelledby="gameControlsHeading"
+        >
+          <div class="section-head">
+            <h2 class="section-title" id="gameControlsHeading">새 게임</h2>
+            <span class="difficulty-name" id="difficultyLabel">보통</span>
+          </div>
+          <div class="action-row">
+            <select id="difficultySelect" aria-label="난이도 선택">
+              <option value="easy">쉬움</option>
+              <option value="normal" selected>보통</option>
+              <option value="hard">어려움</option>
+              <option value="expert">전문가</option>
+              <option value="master">마스터</option></select
+            ><button class="primary-button" id="newGameButton" type="button">
+              <svg class="icon"><use href="#i-refresh"></use></svg>새 게임
+            </button>
+          </div>
+          <div class="stats" aria-label="현재 게임 통계">
+            <div class="stat">
+              <div class="stat-label">실수</div>
+              <div class="stat-value" id="mistakeCount">0</div>
             </div>
-          </section>
+            <div class="stat">
+              <div class="stat-label">남은 칸</div>
+              <div class="stat-value" id="remainingCount">—</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">논리 점수</div>
+              <div class="stat-value" id="scoreValue">—</div>
+            </div>
+          </div>
+        </section>
+        <div class="menu-shortcuts">
+          <div class="card hint-card">
+            <button class="hint-button" id="hintButton" type="button">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-spark"></use></svg
+              >논리 힌트
+            </button>
+          </div>
           <button
             class="card quiet-button analysis-button"
             id="analysisButton"
             type="button"
             aria-haspopup="dialog"
           >
-            퍼즐 분석
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-chart"></use></svg
+            >퍼즐 분석
           </button>
-        </aside>
+        </div>
       </div>
-    </main>
+    </div>
     <div
       class="overlay"
       id="analysisOverlay"
@@ -1590,7 +1619,7 @@
         </div>
         <div class="modal-actions">
           <button class="primary-button" id="closeAnalysisButton" type="button">
-            닫기
+            메뉴로
           </button>
         </div>
       </div>
@@ -2714,6 +2743,10 @@
         if (id && !overlays.some((el) => !el.hidden))
           lastOpener = document.activeElement;
         overlays.forEach((el) => (el.hidden = el.id !== id));
+        $("gameMenuButton").setAttribute(
+          "aria-expanded",
+          String(id === "gameMenuOverlay"),
+        );
         document.querySelector("main").inert = !!id;
         document.querySelector("header").inert = !!id;
         if (id)
@@ -2747,9 +2780,11 @@
         if (jobs.task === "hint") jobs.stop();
         hint = null;
         hintStage = 0;
+        const focused = $("hintResult").contains(document.activeElement);
         $("hintResult").hidden = true;
+        $("nextHintButton").hidden = true;
         $("applyHintButton").hidden = true;
-        write("hintButton", "힌트 보기");
+        if (focused) $("gameMenuButton").focus({ preventScroll: true });
       }
       function hintMessage(title, message) {
         $("hintResult").hidden = false;
@@ -3055,21 +3090,17 @@
               )
               .join(" / "),
           );
-        write("hintButton", hintStage === 3 ? "힌트 닫기" : "다음 단계");
+        $("nextHintButton").hidden = hintStage === 3;
         $("applyHintButton").hidden = hintStage !== 3;
+        if (hintStage === 3)
+          $("applyHintButton").focus({ preventScroll: true });
         renderBoard();
       }
       function requestHint() {
         if (game?.status !== "playing" || jobs.task === "hint") return;
-        if (hint) {
-          if (hintStage < 3) showStage();
-          else {
-            clearHint();
-            renderBoard();
-          }
-          return;
-        }
+        dialog(null);
         hintMessage("논리 탐색", "현재 후보 관계를 확인하고 있습니다.");
+        $("closeHintButton").focus({ preventScroll: true });
         jobs.run(
           "hint",
           { puzzle: game.puzzle, board: game.board, removed: game.removed },
@@ -3146,17 +3177,22 @@
         dialog(null);
       };
       $("settingsButton").onclick = () => dialog("settingsOverlay");
+      $("gameMenuButton").onclick = () => dialog("gameMenuOverlay");
       $("analysisButton").onclick = () => dialog("analysisOverlay");
+      $("closeAnalysisButton").onclick = () => {
+        dialog("gameMenuOverlay");
+        $("analysisButton").focus({ preventScroll: true });
+      };
       $("closeHintButton").onclick = () => {
         clearHint();
         renderBoard();
-        $("hintButton").focus({ preventScroll: true });
+        $("gameMenuButton").focus({ preventScroll: true });
       };
       for (const id of [
         "doneSettingsButton",
         "closeSettingsButton",
         "completionCloseButton",
-        "closeAnalysisButton",
+        "closeGameMenuButton",
       ])
         $(id).onclick = () => dialog(null);
       $("cancelGenerationButton").onclick = () => {
@@ -3202,6 +3238,7 @@
       };
       $("clearCellButton").onclick = () => enter(0);
       $("hintButton").onclick = requestHint;
+      $("nextHintButton").onclick = showStage;
       $("autoNotesButton").onclick = () =>
         edit(() => {
           const notes = E.candidates(game.board, game.removed);
@@ -3214,7 +3251,7 @@
           if (e.key === "Escape") {
             modal
               .querySelector(
-                "#cancelGenerationButton,#closeSettingsButton,#dismissConfirmButton,#completionCloseButton,#closeAnalysisButton",
+                "#cancelGenerationButton,#closeSettingsButton,#dismissConfirmButton,#completionCloseButton,#closeGameMenuButton,#closeAnalysisButton",
               )
               ?.click();
             e.preventDefault();
