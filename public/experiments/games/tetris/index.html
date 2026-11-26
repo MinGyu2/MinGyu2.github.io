@@ -15,7 +15,7 @@ button:focus-visible{outline:3px solid #9a3c46;outline-offset:4px}
 main{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px 14px}
 .unit{width:min(100%,520px)}
 .case{background:linear-gradient(115deg,#e7e8dd,#dedfd4 62%,#d4d6ca);padding:20px 25px 22px;border:1px solid #aaafa1;border-radius:22px 22px 56px 22px;box-shadow:inset 2px 3px 1px #f7f8ef,inset -3px -5px 1px #b1b5a6,0 5px 0 #9b9f92,0 14px 19px -8px #53594268}
-header,.power,.brand,.controls,.screen-footer,.sound,.pair,.system{display:flex;align-items:center}
+header,.power,.brand,.screen-footer,.sound{display:flex;align-items:center}
 header{justify-content:space-between;margin:0 3px 15px}
 .brand{gap:10px}
 .mark{display:grid;grid-template:repeat(2,8px)/repeat(3,8px);gap:2px;transform:skew(-8deg)}
@@ -41,20 +41,42 @@ h1{margin:0;font:italic 900 21px/1 Arial,sans-serif;letter-spacing:-1.3px}
 .overlay p{font-size:11px;letter-spacing:2px;margin:0 0 11px}.title-art{width:90%;max-width:210px;height:auto;image-rendering:pixelated}
 #start{margin-top:20px;border:2px solid var(--pixel);box-shadow:2px 3px 0 #81936d;border-radius:3px;background:var(--pixel);color:#d8e6ba;font:bold 13px var(--mono);padding:9px 13px}
 #start:before{content:'▶';font-size:10px;margin-right:8px}.overlay h2{font:900 24px var(--mono);margin:0}
-.controls{justify-content:space-between;gap:8px;padding:16px 6px 0}
-.pad{position:relative;width:93px;height:93px;flex-shrink:0;filter:drop-shadow(0 3px 1px #848a7b)}
+.controls{--pad-size:93px;--round-size:47px;--pair-gap:14px;--inset:6px;--stock-height:max(var(--pad-size),calc(var(--round-size) + 46px));--pad-offset:calc((var(--stock-height) - var(--pad-size)) / 2);position:relative;height:var(--stock-height);margin-top:16px}
+.controls.expanded{height:184px}
+.controls.editing{border-radius:10px;outline:1px dashed #838b79;background:radial-gradient(#a9afa0 1px,transparent 1px) 0 0/8px 8px}
+.pad{position:absolute;left:var(--inset);top:var(--pad-offset);width:var(--pad-size);height:var(--pad-size);filter:drop-shadow(0 3px 1px #848a7b);pointer-events:none}
 .pad:before,.pad:after{content:"";position:absolute;background:#41473e;border-radius:5px;box-shadow:inset 1px 2px 1px #63695f}
 .pad:before{inset:0 33.333%}.pad:after{inset:33.333% 0}
-.pad button{position:absolute;z-index:1;background:none;border:0;color:#c6cbbd;font-size:13px;width:33.333%;height:33.333%;padding:0}
-.up{left:33.333%;top:0}.left{left:0;top:33.333%}.right{right:0;top:33.333%}.down{left:33.333%;bottom:0}
+.pad[hidden]{display:none}
 .pad i{position:absolute;z-index:1;width:16px;height:16px;border-radius:50%;background:#353b32;top:calc(50% - 8px);left:calc(50% - 8px);box-shadow:inset 0 2px 2px #262d25}
-.system{align-self:end;gap:8px;flex-direction:column;margin-bottom:4px}.system button{border-radius:12px;width:41px;height:12px;border:1px solid #757c6d;background:#8b9282;box-shadow:inset 0 2px 0 #afb5a6,0 2px 0 #666e5e}.system span,.caption{font-size:10px;letter-spacing:1px}
-.pair{gap:14px}.action{display:grid;justify-items:center;gap:7px}.action:first-child{margin-top:24px}
-.round{border:2px solid #63363c;border-radius:50%;width:47px;height:47px;background:#944752;color:#f3dce0;font:italic bold 20px Arial;box-shadow:inset 1px 2px 1px #b16b75,0 3px 0 #63363c,0 4px 3px #5e605051}
+[data-control]{--scale:1;position:absolute;width:var(--control-width);height:var(--control-height);left:clamp(calc(var(--control-width) / 2),var(--custom-x,var(--default-x)),calc(100% - var(--control-width) / 2));top:clamp(calc(var(--control-height) / 2),var(--custom-y,var(--default-y)),calc(100% - var(--control-height) / 2));transform:translate(-50%,-50%)}
+.direction{--control-width:calc(var(--pad-size) / 3 * var(--scale));--control-height:var(--control-width);--default-x:calc(var(--inset) + var(--pad-size) / 2);--default-y:calc(var(--stock-height) / 2);background:none;border:0;border-radius:5px;color:#c6cbbd;font-size:calc(13px * var(--scale));padding:0}
+.up{--default-y:calc(var(--pad-offset) + var(--pad-size) / 6)}.down{--default-y:calc(var(--pad-offset) + var(--pad-size) * 5 / 6)}.left{--default-x:calc(var(--inset) + var(--pad-size) / 6)}.right{--default-x:calc(var(--inset) + var(--pad-size) * 5 / 6)}
+.pad[hidden]~.direction{background:#41473e;box-shadow:inset 1px 2px 1px #63695f,0 3px 1px #848a7b}
+.system,.action{display:grid;justify-items:center;align-content:start;white-space:nowrap}
+.system{--button-width:calc(41px * var(--scale));--button-height:calc(12px * var(--scale));--control-width:max(92px,var(--button-width));--control-height:calc(var(--button-height) + 23px);--default-x:calc(50% + (var(--pad-size) - var(--round-size) * 2 - var(--pair-gap)) / 2);--default-y:calc(var(--stock-height) - 4px - var(--control-height) / 2);gap:8px}
+.system button{border-radius:12px;width:var(--button-width);height:var(--button-height);border:1px solid #757c6d;background:#8b9282;box-shadow:inset 0 2px 0 #afb5a6,0 2px 0 #666e5e}
+.system span,.caption{font-size:10px;line-height:15px;letter-spacing:1px}
+.action{--button-width:calc(var(--round-size) * var(--scale));--control-width:max(29px,var(--button-width));--control-height:calc(var(--button-width) + 22px);--default-x:calc(100% - var(--inset) - var(--round-size) / 2);--default-y:calc(var(--stock-height) / 2);gap:7px}
+.action[data-control="hold"]{--default-x:calc(100% - var(--inset) - var(--round-size) * 1.5 - var(--pair-gap));--default-y:calc(var(--stock-height) / 2 + 12px)}
+.round{border:2px solid #63363c;border-radius:50%;width:var(--button-width);height:var(--button-width);padding:0;background:#944752;color:#f3dce0;font:italic bold calc(20px * var(--scale)) Arial;box-shadow:inset 1px 2px 1px #b16b75,0 3px 0 #63363c,0 4px 3px #5e605051}
+.controls.editing [data-control],.controls.editing [data-control] button{cursor:grab;touch-action:none;user-select:none}
+.controls.editing [data-selected]{z-index:1;outline:2px solid #9a3c46;outline-offset:2px;border-radius:5px}
+.controls.editing [data-selected]:active,.controls.editing [data-selected]:active button{cursor:grabbing}
 button:active,.pressed{filter:brightness(.84)}
+.preferences{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px;font:bold 11px var(--mono)}
+.preferences button,.layout-editor button,.layout-editor select{min-height:34px;border:1px solid #a7ad9d;border-radius:5px;padding:5px 10px;background:#f4f4ed;color:#404936;font:inherit}
+.preferences button[aria-expanded="true"]{background:#e0e5d6;border-color:#838f78}
+.layout-editor{margin-top:14px;padding:12px;background:#eff0e7;border:1px solid #a7ad9d;border-radius:9px;font:bold 12px var(--mono)}
+.editor-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.editor-heading label{display:flex;align-items:center;gap:8px}
+.editor-hint{margin:9px 0;color:#59614f;font-weight:normal;line-height:1.4}
+.layout-field{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 8px;margin-top:8px}
+.layout-field input{grid-column:1 / -1;width:100%;margin:0;min-height:25px;accent-color:#894650}
 .key-help{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 17px;margin:18px 0 0;font-size:11px;color:#59614f}.key-help span{white-space:nowrap}kbd{font:inherit;border:1px solid #bec2b6;border-bottom-width:2px;background:#f4f4ee;border-radius:3px;padding:1px 4px}
+.key-help[hidden]{display:none}
 @media(min-width:600px) and (max-height:820px){.unit{width:min(470px,66vh + 15px)}}
-@media(max-width:430px){.case{padding:16px 13px 18px}.bezel{padding:9px 8px 7px}.lcd{padding:8px;gap:9px}.controls{padding:14px 2px 0}.side section{padding-bottom:4px}.side h2{font-size:10px}.preview{height:34px}.preview canvas{height:30px;width:51px}.round{width:40px;height:40px}.pad{width:78px;height:78px}.pair{gap:9px}.key-help{gap:8px 12px}.screen-footer{font-size:8px}}
+@media(max-width:430px){.case{padding:16px 13px 18px}.bezel{padding:9px 8px 7px}.lcd{padding:8px;gap:9px}.controls{--pad-size:78px;--round-size:40px;--pair-gap:9px;--inset:2px;margin-top:14px}.side section{padding-bottom:4px}.side h2{font-size:10px}.preview{height:34px}.preview canvas{height:30px;width:51px}.key-help{gap:8px 12px}.screen-footer{font-size:8px}}
 </style>
 </head>
 <body>
@@ -71,12 +93,34 @@ button:active,.pressed{filter:brightness(.84)}
 <section><h2>HOLD</h2><div class="preview"><canvas id="hold" width="68" height="40" aria-label="Held piece"></canvas></div></section>
 </aside></div>
 <div class="screen-footer"><span>DOT MATRIX DISPLAY</span><button id="sound" class="sound" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 16 12"><path d="M1 4h3l4-3v10L4 8H1zM10 3q4 3 0 6V7q2-1 0-2z"/></svg><span>SOUND OFF</span></button></div></div>
-<div class="controls">
-<div class="pad" aria-label="Directional controls"><button class="up" data-action="cw" aria-label="Rotate clockwise">▲</button><button class="left" data-action="left" aria-label="Move left">◀</button><i></i><button class="right" data-action="right" aria-label="Move right">▶</button><button class="down" data-action="down" aria-label="Soft drop">▼</button></div>
-<div class="system"><button id="pause" aria-label="Start or pause game"></button><span>START / PAUSE</span></div>
-<div class="pair"><div class="action"><button class="round" data-action="hold" aria-label="Hold piece">B</button><span class="caption">HOLD</span></div><div class="action"><button class="round" data-action="drop" aria-label="Hard drop">A</button><span class="caption">DROP</span></div></div></div>
+<div class="controls" id="controls" role="group" aria-label="Console controls">
+<div class="pad" id="pad" aria-hidden="true"><i></i></div>
+<button class="direction up" data-control="cw" data-action="cw" aria-label="Rotate clockwise">▲</button>
+<button class="direction left" data-control="left" data-action="left" aria-label="Move left">◀</button>
+<button class="direction right" data-control="right" data-action="right" aria-label="Move right">▶</button>
+<button class="direction down" data-control="down" data-action="down" aria-label="Soft drop">▼</button>
+<div class="system" data-control="pause"><button id="pause" aria-label="Start or pause game"></button><span>START / PAUSE</span></div>
+<div class="action" data-control="hold"><button class="round" data-action="hold" aria-label="Hold piece">B</button><span class="caption">HOLD</span></div>
+<div class="action" data-control="drop"><button class="round" data-action="drop" aria-label="Hard drop">A</button><span class="caption">DROP</span></div>
+</div>
+<section class="layout-editor" id="layout-editor" aria-label="Customize console controls" hidden>
+<div class="editor-heading">
+<label for="control-select">Button <select id="control-select">
+<option value="cw">▲ Rotate clockwise</option><option value="left">◀ Move left</option><option value="right">▶ Move right</option><option value="down">▼ Soft drop</option><option value="hold">B · Hold</option><option value="drop">A · Drop</option><option value="pause">Start / Pause</option>
+</select></label>
+<button id="layout-reset">Reset layout</button>
+</div>
+<p class="editor-hint">Drag a button above, or adjust its size and position below.</p>
+<div class="layout-field"><label for="control-size">Size</label><output id="control-size-value" for="control-size">100%</output><input id="control-size" type="range" min="60" max="250" step="5" value="100"></div>
+<div class="layout-field"><label for="control-x">Horizontal position</label><output id="control-x-value" for="control-x"></output><input id="control-x" type="range" min="0" max="100"></div>
+<div class="layout-field"><label for="control-y">Vertical position</label><output id="control-y-value" for="control-y"></output><input id="control-y" type="range" min="0" max="100"></div>
+</section>
 </article>
-<footer class="key-help" aria-label="Keyboard controls"><span><kbd>←</kbd> <kbd>→</kbd> Move</span><span><kbd>↑</kbd> / <kbd>Z</kbd> Rotate</span><span><kbd>↓</kbd> Soft drop</span><span><kbd>C</kbd> Hold</span><span><kbd>Space</kbd> Drop</span><span><kbd>P</kbd> Pause</span></footer></div></main>
+<div class="preferences" id="preferences">
+<button id="layout-toggle" aria-expanded="false" aria-controls="layout-editor">Customize controls</button>
+<button id="keyboard-toggle" aria-expanded="true" aria-controls="key-help">Hide keyboard guide</button>
+</div>
+<footer class="key-help" id="key-help" aria-label="Keyboard controls"><span><kbd>←</kbd> <kbd>→</kbd> Move</span><span><kbd>↑</kbd> / <kbd>X</kbd> Rotate right</span><span><kbd>Z</kbd> Rotate left</span><span><kbd>↓</kbd> Soft drop</span><span><kbd>C</kbd> Hold</span><span><kbd>Space</kbd> Drop</span><span><kbd>P</kbd> / <kbd>Esc</kbd> Pause</span></footer></div></main>
 <script>
 'use strict';
 // Store each orientation as four occupied coordinates. Rotate once during setup around
@@ -278,6 +322,11 @@ function act(action){
 const bindings={ArrowLeft:'left',ArrowRight:'right',ArrowDown:'down',ArrowUp:'cw',KeyX:'cw',KeyZ:'ccw',Space:'drop',KeyC:'hold'};
 window.addEventListener('keydown',e=>{
   if(e.ctrlKey || e.metaKey || e.altKey)return;
+  if(layoutEditing){
+    if(e.code==='Escape' && !e.defaultPrevented){e.preventDefault();setLayoutEditing(false);}
+    return;
+  }
+  if(e.code==='Space' && e.target.closest?.('#preferences'))return;
   // Keep Enter available to activate focused hardware buttons with native semantics.
   if((e.code==='Enter' && document.activeElement.tagName!=='BUTTON') || e.code==='KeyP' || (e.code==='Escape' && (mode==='playing'||mode==='paused'))){
     e.preventDefault();if(!e.repeat)startOrPause();return;
@@ -286,7 +335,8 @@ window.addEventListener('keydown',e=>{
   if(!a || mode!=='playing')return;
   e.preventDefault();if(!e.repeat || ['left','right','down'].includes(a))act(a);
 });
-$('start').onclick=startOrPause;$('pause').onclick=startOrPause;
+$('start').onclick=startOrPause;
+$('pause').onclick=()=>{if(!layoutEditing)startOrPause();};
 // Pointer capture lets a held direction repeat on touch devices even if a finger
 // drifts away. Each release, cancellation or loss of focus stops its repeat timer.
 let repeatTimer=0;
@@ -294,7 +344,7 @@ function stopRepeat(){clearTimeout(repeatTimer);repeatTimer=0;}
 for(const button of document.querySelectorAll('[data-action]')){
   const a=button.dataset.action;
   button.addEventListener('pointerdown',e=>{
-    if(e.button!==0 || mode!=='playing')return;
+    if(e.button!==0 || layoutEditing || mode!=='playing')return;
     e.preventDefault();button.setPointerCapture(e.pointerId);stopRepeat();act(a);
     if(['left','right','down'].includes(a)){
       const again=()=>{if(mode==='playing'){act(a);repeatTimer=setTimeout(again,75);}};
@@ -304,10 +354,158 @@ for(const button of document.querySelectorAll('[data-action]')){
   button.addEventListener('lostpointercapture',stopRepeat);
   button.addEventListener('pointerup',stopRepeat);
   button.addEventListener('pointercancel',stopRepeat);
-  button.addEventListener('click',e=>{if(e.detail===0)act(a);});
+  button.addEventListener('click',e=>{if(!layoutEditing && e.detail===0)act(a);});
 }
 window.addEventListener('blur',()=>{if(mode==='playing')changeMode('paused');});
 document.addEventListener('visibilitychange',()=>{if(document.hidden && mode==='playing')changeMode('paused');});
+
+const controls=$('controls'),controlSelect=$('control-select');
+const controlElements=Object.fromEntries([...controls.querySelectorAll('[data-control]')].map(el=>[el.dataset.control,el]));
+const layoutFields={size:$('control-size'),x:$('control-x'),y:$('control-y')};
+const preferencesKey='brick-pocket-preferences';
+const preferences=readPreferences();
+let layoutEditing=false,controlDrag=null;
+
+function readPreferences(){
+  let saved;
+  try{saved=JSON.parse(localStorage.getItem(preferencesKey));}catch{}
+  const layout={};
+  for(const name of Object.keys(controlElements)){
+    const values={};
+    for(const [key,input] of Object.entries(layoutFields)){
+      const value=saved?.layout?.[name]?.[key];
+      if(Number.isInteger(value) && value>=Number(input.min) && value<=Number(input.max)){
+        if(key!=='size' || value!==100)values[key]=value;
+      }
+    }
+    if(Object.keys(values).length)layout[name]=values;
+  }
+  return {layout,keyboardGuide:saved?.keyboardGuide!==false};
+}
+function savePreferences(){
+  try{localStorage.setItem(preferencesKey,JSON.stringify(preferences));}catch{}
+}
+function renderKeyboardGuide(){
+  const shown=preferences.keyboardGuide;
+  $('key-help').hidden=!shown;
+  $('keyboard-toggle').setAttribute('aria-expanded',shown);
+  $('keyboard-toggle').textContent=shown?'Hide keyboard guide':'Show keyboard guide';
+}
+$('keyboard-toggle').onclick=e=>{
+  preferences.keyboardGuide=!preferences.keyboardGuide;
+  renderKeyboardGuide();
+  savePreferences();
+  if(e.detail>0 && mode==='playing')e.currentTarget.blur();
+};
+
+function renderControlLayout(){
+  controls.classList.toggle('expanded',layoutEditing || Object.keys(preferences.layout).length>0);
+  controls.classList.toggle('editing',layoutEditing);
+  $('pad').hidden=['cw','left','right','down'].some(name=>preferences.layout[name]);
+  for(const [name,el] of Object.entries(controlElements)){
+    const {size=100,x,y}=preferences.layout[name] ?? {};
+    el.style.setProperty('--scale',size/100);
+    // Percentages refer to available travel, so the entire control stays on the case.
+    for(const [axis,position,dimension] of [['x',x,'width'],['y',y,'height']]){
+      const property='--custom-'+axis;
+      if(position===undefined)el.style.removeProperty(property);
+      else el.style.setProperty(property,`calc(var(--control-${dimension}) / 2 + (100% - var(--control-${dimension})) * ${position/100})`);
+    }
+    el.toggleAttribute('data-selected',layoutEditing && name===controlSelect.value);
+  }
+}
+function positionPercent(offset,space){
+  return Math.round(100 * Math.max(0,Math.min(1,offset/Math.max(1,space))));
+}
+function renderLayoutFields(){
+  if(!layoutEditing)return;
+  const name=controlSelect.value,values=preferences.layout[name] ?? {};
+  const stage=controls.getBoundingClientRect(),rect=controlElements[name].getBoundingClientRect();
+  const fieldValues={
+    size:values.size ?? 100,
+    x:values.x ?? positionPercent(rect.left-stage.left,stage.width-rect.width),
+    y:values.y ?? positionPercent(rect.top-stage.top,stage.height-rect.height)
+  };
+  for(const [key,input] of Object.entries(layoutFields)){
+    input.value=fieldValues[key];
+    $('control-'+key+'-value').value=fieldValues[key]+'%';
+  }
+}
+function updateControl(name,changes){
+  const values={...preferences.layout[name],...changes};
+  if(values.size===100)delete values.size;
+  if(Object.keys(values).length)preferences.layout[name]=values;
+  else delete preferences.layout[name];
+  renderControlLayout();
+  renderLayoutFields();
+}
+function setLayoutEditing(editing){
+  layoutEditing=editing;
+  if(editing && mode==='playing')changeMode('paused');
+  if(!editing)finishControlDrag();
+  $('start').disabled=editing;
+  $('layout-editor').hidden=!editing;
+  const toggle=$('layout-toggle');
+  toggle.setAttribute('aria-expanded',editing);
+  toggle.textContent=editing?'Done editing':'Customize controls';
+  renderControlLayout();
+  renderLayoutFields();
+  if(editing)controlSelect.focus();
+  else{savePreferences();toggle.focus();}
+}
+$('layout-toggle').onclick=()=>setLayoutEditing(!layoutEditing);
+$('layout-reset').onclick=()=>{
+  preferences.layout={};
+  renderControlLayout();
+  renderLayoutFields();
+  savePreferences();
+};
+function selectControl(name){
+  controlSelect.value=name;
+  renderControlLayout();
+  renderLayoutFields();
+}
+controlSelect.onchange=()=>selectControl(controlSelect.value);
+for(const [key,input] of Object.entries(layoutFields)){
+  input.oninput=()=>updateControl(controlSelect.value,{[key]:Number(input.value)});
+  input.onchange=savePreferences;
+}
+new ResizeObserver(renderLayoutFields).observe(controls);
+
+controls.addEventListener('click',e=>{
+  const control=e.target.closest('[data-control]');
+  if(layoutEditing && control && e.detail===0)selectControl(control.dataset.control);
+});
+controls.addEventListener('pointerdown',e=>{
+  const control=e.target.closest('[data-control]');
+  if(!layoutEditing || !control || controlDrag || e.button!==0)return;
+  e.preventDefault();
+  selectControl(control.dataset.control);
+  const rect=control.getBoundingClientRect();
+  controlDrag={control,id:e.pointerId,x:e.clientX-rect.left,y:e.clientY-rect.top};
+  control.setPointerCapture(e.pointerId);
+});
+controls.addEventListener('pointermove',e=>{
+  if(e.pointerId!==controlDrag?.id)return;
+  const {control,x,y}=controlDrag;
+  const stage=controls.getBoundingClientRect(),rect=control.getBoundingClientRect();
+  updateControl(control.dataset.control,{
+    x:positionPercent(e.clientX-stage.left-x,stage.width-rect.width),
+    y:positionPercent(e.clientY-stage.top-y,stage.height-rect.height)
+  });
+});
+function finishControlDrag(e){
+  if(!controlDrag || (e && e.pointerId!==controlDrag.id))return;
+  const {control,id}=controlDrag;
+  controlDrag=null;
+  if(control.hasPointerCapture(id))control.releasePointerCapture(id);
+  savePreferences();
+}
+for(const event of ['pointerup','pointercancel','lostpointercapture']){
+  controls.addEventListener(event,finishControlDrag);
+}
+renderControlLayout();
+renderKeyboardGuide();
 // Show the first queued piece as a title-screen preview, then consume it on Start.
 nextType=drawType();score=lines=0;level=1;changeMode('ready');
 </script>
