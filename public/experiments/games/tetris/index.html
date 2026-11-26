@@ -337,16 +337,20 @@ window.addEventListener('keydown',e=>{
 });
 $('start').onclick=startOrPause;
 $('pause').onclick=()=>{if(!layoutEditing)startOrPause();};
-// Pointer capture lets a held direction repeat on touch devices even if a finger
-// drifts away. Each release, cancellation or loss of focus stops its repeat timer.
-let repeatTimer=0;
-function stopRepeat(){clearTimeout(repeatTimer);repeatTimer=0;}
+// Pointer capture keeps a direction held when its finger drifts away. Only the
+// pointer that owns the repeat can stop it with a release or cancellation.
+let repeatTimer=0,repeatPointerId=null;
+function stopRepeat(e){
+  if(e && e.pointerId!==repeatPointerId)return;
+  clearTimeout(repeatTimer);repeatTimer=0;repeatPointerId=null;
+}
 for(const button of document.querySelectorAll('[data-action]')){
   const a=button.dataset.action;
   button.addEventListener('pointerdown',e=>{
     if(e.button!==0 || layoutEditing || mode!=='playing')return;
-    e.preventDefault();button.setPointerCapture(e.pointerId);stopRepeat();act(a);
+    e.preventDefault();button.setPointerCapture(e.pointerId);act(a);
     if(['left','right','down'].includes(a)){
+      stopRepeat();repeatPointerId=e.pointerId;
       const again=()=>{if(mode==='playing'){act(a);repeatTimer=setTimeout(again,75);}};
       repeatTimer=setTimeout(again,220);
     }
