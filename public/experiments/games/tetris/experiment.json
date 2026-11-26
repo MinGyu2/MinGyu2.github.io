@@ -1,0 +1,8 @@
+{
+  "title": "테트리",
+  "description": "테트리스 게임",
+  "tags": ["JavaScript", "Puzzle", "Algorithm"],
+  "status": "available",
+  "entry": "index.html",
+  "requiresCrossOriginIsolation": false
+}

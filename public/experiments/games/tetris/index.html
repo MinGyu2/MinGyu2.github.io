@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ecece6">
+<title>Brick Pocket · Tetris</title>
+<style>
+/* The case is drawn with CSS so the entire handheld works without fonts or image downloads. */
+*{box-sizing:border-box}
+:root{--ink:#30382d;--lcd:#b8c79a;--pixel:#35472e;--plastic:#dedfd4;--mono:"Courier New",monospace}
+body{margin:0;min-height:100svh;color:var(--ink);font-family:Arial,Helvetica,sans-serif;background-color:#efefe9;background-image:radial-gradient(#c8c9bf .8px,transparent .9px);background-size:7px 7px}
+button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:3px solid #9a3c46;outline-offset:4px}
+main{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+.unit{width:min(100%,520px)}
+.case{background:linear-gradient(115deg,#e7e8dd,#dedfd4 62%,#d4d6ca);padding:20px 25px 22px;border:1px solid #aaafa1;border-radius:22px 22px 56px 22px;box-shadow:inset 2px 3px 1px #f7f8ef,inset -3px -5px 1px #b1b5a6,0 5px 0 #9b9f92,0 14px 19px -8px #53594268}
+header,.power,.brand,.controls,.screen-footer,.sound,.pair,.system{display:flex;align-items:center}
+header{justify-content:space-between;margin:0 3px 15px}
+.brand{gap:10px}
+.mark{display:grid;grid-template:repeat(2,8px)/repeat(3,8px);gap:2px;transform:skew(-8deg)}
+.mark i{background:#42493c}.mark i:first-child{grid-column:2}.mark i:nth-child(2){grid-row:2}
+h1{margin:0;font:italic 900 21px/1 Arial,sans-serif;letter-spacing:-1.3px}
+.power,.screen-footer,.caption,.system span,.key-help,.side h2,.readout,.overlay p{font-family:var(--mono);font-weight:bold}
+.power{font-size:10px;letter-spacing:1px;gap:7px}
+.led{width:7px;height:7px;border-radius:50%;background:#bd483b;box-shadow:0 0 0 2px #c0c3b5,0 0 5px #cd6a48}
+.bezel{background:#474d46;padding:14px 15px 9px;border:2px solid #353c34;border-bottom-right-radius:26px;border-top-left-radius:12px;border-top-right-radius:12px;border-bottom-left-radius:12px;box-shadow:0 2px 0 #f4f5ec,inset 1px 2px 1px #62695f}
+.lcd{position:relative;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);padding:12px;gap:15px;background:var(--lcd);border:2px solid #2e382b;box-shadow:inset 2px 3px 5px #52634565;border-radius:4px}
+.field{position:relative;border:2px solid #536546;align-self:start}
+#board{width:100%;aspect-ratio:1/2;display:block;image-rendering:pixelated}
+.side{min-width:0;display:flex;flex-direction:column;justify-content:space-between;padding:2px 0;color:var(--pixel)}
+.side h2{font-size:12px;letter-spacing:.13em;line-height:1;margin:0 0 5px}
+.side section{border-bottom:2px dotted #859672;padding-bottom:9px}.side section:last-child{border:0;padding:0}
+.readout{font-size:clamp(17px,4vw,25px);line-height:1;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.preview{width:100%;height:47px;display:grid;place-items:center;background:#72895c15;border:1px solid #94a67e}
+.preview canvas{width:68px;height:40px;image-rendering:pixelated}
+.screen-footer{justify-content:space-between;color:#d3d7c7;font-size:9px;letter-spacing:1.5px;margin:8px 2px 0}
+.sound{gap:5px;background:transparent;color:inherit;border:0;font:inherit;letter-spacing:1px;padding:2px}.sound svg{width:13px;height:12px;fill:currentColor}
+.overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--pixel)}
+.overlay[hidden]{display:none}
+.overlay p{font-size:11px;letter-spacing:2px;margin:0 0 11px}.title-art{width:90%;max-width:210px;height:auto;image-rendering:pixelated}
+#start{margin-top:20px;border:2px solid var(--pixel);box-shadow:2px 3px 0 #81936d;border-radius:3px;background:var(--pixel);color:#d8e6ba;font:bold 13px var(--mono);padding:9px 13px}
+#start:before{content:'▶';font-size:10px;margin-right:8px}.overlay h2{font:900 24px var(--mono);margin:0}
+.controls{justify-content:space-between;gap:8px;padding:16px 6px 0}
+.pad{position:relative;width:93px;height:93px;flex-shrink:0;filter:drop-shadow(0 3px 1px #848a7b)}
+.pad:before,.pad:after{content:"";position:absolute;background:#41473e;border-radius:5px;box-shadow:inset 1px 2px 1px #63695f}
+.pad:before{inset:0 33.333%}.pad:after{inset:33.333% 0}
+.pad button{position:absolute;z-index:1;background:none;border:0;color:#c6cbbd;font-size:13px;width:33.333%;height:33.333%;padding:0}
+.up{left:33.333%;top:0}.left{left:0;top:33.333%}.right{right:0;top:33.333%}.down{left:33.333%;bottom:0}
+.pad i{position:absolute;z-index:1;width:16px;height:16px;border-radius:50%;background:#353b32;top:calc(50% - 8px);left:calc(50% - 8px);box-shadow:inset 0 2px 2px #262d25}
+.system{align-self:end;gap:8px;flex-direction:column;margin-bottom:4px}.system button{border-radius:12px;width:41px;height:12px;border:1px solid #757c6d;background:#8b9282;box-shadow:inset 0 2px 0 #afb5a6,0 2px 0 #666e5e}.system span,.caption{font-size:10px;letter-spacing:1px}
+.pair{gap:14px}.action{display:grid;justify-items:center;gap:7px}.action:first-child{margin-top:24px}
+.round{border:2px solid #63363c;border-radius:50%;width:47px;height:47px;background:#944752;color:#f3dce0;font:italic bold 20px Arial;box-shadow:inset 1px 2px 1px #b16b75,0 3px 0 #63363c,0 4px 3px #5e605051}
+button:active,.pressed{filter:brightness(.84)}
+.key-help{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 17px;margin:18px 0 0;font-size:11px;color:#59614f}.key-help span{white-space:nowrap}kbd{font:inherit;border:1px solid #bec2b6;border-bottom-width:2px;background:#f4f4ee;border-radius:3px;padding:1px 4px}
+@media(min-width:600px) and (max-height:820px){.unit{width:min(470px,66vh + 15px)}}
+@media(max-width:430px){.case{padding:16px 13px 18px}.bezel{padding:9px 8px 7px}.lcd{padding:8px;gap:9px}.controls{padding:14px 2px 0}.side section{padding-bottom:4px}.side h2{font-size:10px}.preview{height:34px}.preview canvas{height:30px;width:51px}.round{width:40px;height:40px}.pad{width:78px;height:78px}.pair{gap:9px}.key-help{gap:8px 12px}.screen-footer{font-size:8px}}
+</style>
+</head>
+<body>
+<main><div class="unit"><article class="case" aria-label="Brick Pocket Tetris console">
+<header><div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><h1>BRICK POCKET</h1></div><div class="power"><i class="led"></i>POWER</div></header>
+<div class="bezel"><div class="lcd">
+<div class="field"><canvas id="board" width="240" height="480" aria-label="Tetris playfield, 10 columns by 20 rows"></canvas>
+<div class="overlay" id="overlay"><p id="message">FALLING BLOCKS</p><canvas class="title-art" id="titleArt" width="180" height="39" aria-label="Tetris"></canvas><h2 hidden id="stateTitle"></h2><button id="start">START GAME</button></div></div>
+<aside class="side" aria-label="Game statistics and pieces">
+<section><h2>SCORE</h2><div class="readout" id="score">000000</div></section>
+<section><h2>LEVEL</h2><div class="readout" id="level">01</div></section>
+<section><h2>LINES</h2><div class="readout" id="lines">000</div></section>
+<section><h2>NEXT</h2><div class="preview"><canvas id="next" width="68" height="40" aria-label="Next piece"></canvas></div></section>
+<section><h2>HOLD</h2><div class="preview"><canvas id="hold" width="68" height="40" aria-label="Held piece"></canvas></div></section>
+</aside></div>
+<div class="screen-footer"><span>DOT MATRIX DISPLAY</span><button id="sound" class="sound" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 16 12"><path d="M1 4h3l4-3v10L4 8H1zM10 3q4 3 0 6V7q2-1 0-2z"/></svg><span>SOUND OFF</span></button></div></div>
+<div class="controls">
+<div class="pad" aria-label="Directional controls"><button class="up" data-action="cw" aria-label="Rotate clockwise">▲</button><button class="left" data-action="left" aria-label="Move left">◀</button><i></i><button class="right" data-action="right" aria-label="Move right">▶</button><button class="down" data-action="down" aria-label="Soft drop">▼</button></div>
+<div class="system"><button id="pause" aria-label="Start or pause game"></button><span>START / PAUSE</span></div>
+<div class="pair"><div class="action"><button class="round" data-action="hold" aria-label="Hold piece">B</button><span class="caption">HOLD</span></div><div class="action"><button class="round" data-action="drop" aria-label="Hard drop">A</button><span class="caption">DROP</span></div></div></div>
+</article>
+<footer class="key-help" aria-label="Keyboard controls"><span><kbd>←</kbd> <kbd>→</kbd> Move</span><span><kbd>↑</kbd> / <kbd>Z</kbd> Rotate</span><span><kbd>↓</kbd> Soft drop</span><span><kbd>C</kbd> Hold</span><span><kbd>Space</kbd> Drop</span><span><kbd>P</kbd> Pause</span></footer></div></main>
+<script>
+'use strict';
+// Store each orientation as four occupied coordinates. Rotate once during setup around
+// the SRS pivot (the 3x3 or 4x4 box center), keeping the square stationary.
+const shapes = {I:['....','IIII','....','....'],J:['J..','JJJ','...'],L:['..L','LLL','...'],
+  O:['OO','OO'],S:['.SS','SS.','...'],T:['.T.','TTT','...'],Z:['ZZ.','.ZZ','...']};
+const pieces = {};
+for (const [type,rows] of Object.entries(shapes)) {
+  let cells = [];
+  rows.forEach((row,y) => [...row].forEach((c,x) => { if(c!=='.') cells.push([x,y]); }));
+  pieces[type] = [cells];
+  for(let r=1;r<4;r++) {
+    if(type!=='O') cells=cells.map(([x,y])=>[rows.length-1-y,x]);
+    pieces[type].push(cells);
+  }
+}
+// Kick tables use the SRS convention of positive Y pointing upward. The rotation
+// routine converts each candidate to screen coordinates before testing collisions.
+const regularKicks = {
+ '01':[[0,0],[-1,0],[-1,1],[0,-2],[-1,-2]], '10':[[0,0],[1,0],[1,-1],[0,2],[1,2]],
+ '12':[[0,0],[1,0],[1,-1],[0,2],[1,2]], '21':[[0,0],[-1,0],[-1,1],[0,-2],[-1,-2]],
+ '23':[[0,0],[1,0],[1,1],[0,-2],[1,-2]], '32':[[0,0],[-1,0],[-1,-1],[0,2],[-1,2]],
+ '30':[[0,0],[-1,0],[-1,-1],[0,2],[-1,2]], '03':[[0,0],[1,0],[1,1],[0,-2],[1,-2]]
+};
+const iKicks = {
+ '01':[[0,0],[-2,0],[1,0],[-2,-1],[1,2]], '10':[[0,0],[2,0],[-1,0],[2,1],[-1,-2]],
+ '12':[[0,0],[-1,0],[2,0],[-1,2],[2,-1]], '21':[[0,0],[1,0],[-2,0],[1,-2],[-2,1]],
+ '23':[[0,0],[2,0],[-1,0],[2,1],[-1,-2]], '32':[[0,0],[-2,0],[1,0],[-2,-1],[1,2]],
+ '30':[[0,0],[1,0],[-2,0],[1,-2],[-2,1]], '03':[[0,0],[-1,0],[2,0],[-1,2],[2,-1]]
+};
+const $=id=>document.getElementById(id);
+const ctx=$('board').getContext('2d'), W=10,H=20,CELL=24;
+// Two hidden rows accommodate kicked pieces above the visible ceiling.
+const grid=Array.from({length:H+2},()=>new Uint8Array(W));
+let active, bag=[], nextType, held, usedHold, score, lines, level, mode='ready';
+let elapsed=0,lockedFor=0,resets=0,lastTime=0,frame=0,dirty=true;
+const tones={hold:330,drop:150,clear:660,start:440};
+let audio,onSound=false;
+// Generate short oscillator tones on demand; the page needs no audio assets.
+function beep(name){
+  if(!onSound || !audio) return;
+  const t=audio.currentTime, osc=audio.createOscillator(), gain=audio.createGain();
+  osc.type='square';osc.frequency.value=tones[name];
+  gain.gain.setValueAtTime(.028,t);gain.gain.exponentialRampToValueAtTime(.001,t+.09);
+  osc.connect(gain);gain.connect(audio.destination);osc.start(t);osc.stop(t+.1);
+}
+$('sound').onclick=()=>{
+  const AudioEngine=window.AudioContext || window.webkitAudioContext;
+  if(!AudioEngine)return;
+  audio ??= new AudioEngine();audio.resume();onSound=!onSound;
+  $('sound').lastElementChild.textContent=onSound?'SOUND ON':'SOUND OFF';
+  $('sound').setAttribute('aria-pressed',onSound);beep('start');
+};
+// Shuffle all seven pieces with Fisher-Yates. Consume the bag before refilling it.
+function drawType(){
+  if(!bag.length){
+    bag=Object.keys(shapes);
+    for(let i=bag.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[bag[i],bag[j]]=[bag[j],bag[i]];}
+  }
+  return bag.pop();
+}
+// The same collision predicate governs movement, rotation, gravity and both drops.
+function fits(x,y,r){
+  for(const [dx,dy] of pieces[active.type][r]){
+    const cx=x+dx,cy=y+dy;
+    if(cx<0 || cx>=W || cy< -2 || cy>=H || grid[cy+2][cx])return false;
+  }
+  return true;
+}
+function landing(){let y=active.y;while(fits(active.x,y+1,active.r))y++;return y;}
+function spawn(type){
+  active={type,x:type==='O'?4:3,y:type==='I'?-1:0,r:0};
+  elapsed=lockedFor=resets=0;dirty=true;
+  if(!fits(active.x,active.y,0))changeMode('over');
+}
+function advance(){const type=nextType;nextType=drawType();spawn(type);}
+// Grounded pieces get 500 ms to slide or rotate. Bound the number of lock-delay
+// resets so repeated moves cannot indefinitely postpone placement on a flat stack.
+function shift(dx,dy,r){
+  if(!fits(active.x+dx,active.y+dy,r))return false;
+  if((dx || r!==active.r) && resets<15 && !fits(active.x,active.y+1,active.r)){
+    lockedFor=0;resets++;
+  }
+  active.x+=dx;active.y+=dy;active.r=r;dirty=true;return true;
+}
+function rotate(dir){
+  if(active.type==='O')return;
+  const r=(active.r+dir+4)%4, table=active.type==='I'?iKicks:regularKicks;
+  for(const [dx,dy] of table[String(active.r)+r])if(shift(dx,-dy,r))break;
+}
+// Compact surviving rows toward the floor in one pass, including the hidden rows.
+// Score a clear at its original level, then increase speed every ten cleared lines.
+function lock(){
+  for(const [dx,dy] of pieces[active.type][active.r])grid[active.y+dy+2][active.x+dx]=1;
+  let dest=grid.length-1;
+  for(let src=dest;src>=0;src--){
+    if(grid[src].every(Boolean))continue;
+    if(dest!==src)grid[dest].set(grid[src]);dest--;
+  }
+  const cleared=dest+1;
+  while(dest>=0)grid[dest--].fill(0);
+  score+=[0,100,300,500,800][cleared]*level;lines+=cleared;level=1+Math.floor(lines/10);
+  beep(cleared?'clear':'drop');usedHold=false;
+  if(grid[0].some(Boolean)||grid[1].some(Boolean)){changeMode('over');return;}
+  advance();hud();
+}
+// Draw raised LCD pixels with a dark outline and a single recessed highlight.
+function tile(g,x,y,size,ghost=false){
+  g.strokeStyle=ghost?'#788d66':'#394c32';g.lineWidth=ghost?1:2;
+  g.strokeRect(x+2,y+2,size-4,size-4);
+  if(!ghost){g.fillStyle='#4b5f40';g.fillRect(x+4,y+4,size-8,size-8);
+    g.fillStyle='#71845e';g.fillRect(x+4,y+4,size-8,2);}
+}
+function preview(id,type){
+  const el=$(id),g=el.getContext('2d');g.clearRect(0,0,68,40);
+  el.setAttribute('aria-label',(id==='next'?'Next piece: ':'Held piece: ')+(type||'empty'));
+  if(!type){g.fillStyle='#82956f';g.fillRect(27,19,14,2);return;}
+  const cells=pieces[type][0],xs=cells.map(p=>p[0]),ys=cells.map(p=>p[1]);
+  const ox=(68-(Math.max(...xs)+1)*14)/2,oy=(40-(Math.max(...ys)+Math.min(...ys)+1)*14)/2;
+  for(const [x,y] of cells)tile(g,ox+x*14,oy+y*14,14);
+}
+function hud(){
+  $('score').textContent=String(score).padStart(6,'0');$('level').textContent=String(level).padStart(2,'0');
+  $('lines').textContent=String(lines).padStart(3,'0');preview('next',nextType);preview('hold',held);
+}
+// Cache the static grid once. Idle, paused and unchanged frames never redraw it.
+const paper=document.createElement('canvas');paper.width=240;paper.height=480;
+const pg=paper.getContext('2d');pg.fillStyle='#b8c79a';pg.fillRect(0,0,240,480);pg.fillStyle='#aabb8e';
+for(let y=0;y<480;y+=CELL)for(let x=0;x<240;x+=CELL){pg.fillRect(x,y,1,CELL);pg.fillRect(x,y,CELL,1);}
+function render(){
+  ctx.drawImage(paper,0,0);dirty=false;
+  if(mode==='ready'){
+    // The title screen has its own decorative skyline, separate from the empty board.
+    [3,2,2,1,2,3,2,4,3,5].forEach((n,x)=>{for(let i=0;i<n;i++)tile(ctx,x*CELL,(19-i)*CELL,CELL);});
+    return;
+  }
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(grid[y+2][x])tile(ctx,x*CELL,y*CELL,CELL);
+  if(mode==='playing'){
+    const ghostY=landing();
+    for(const [x,y] of pieces[active.type][active.r]){
+      if(ghostY!==active.y)tile(ctx,(active.x+x)*CELL,(ghostY+y)*CELL,CELL,true);
+    }
+    for(const [x,y] of pieces[active.type][active.r])tile(ctx,(active.x+x)*CELL,(active.y+y)*CELL,CELL);
+  }
+  else {ctx.fillStyle='rgba(184,199,154,.78)';ctx.fillRect(0,0,240,480);}
+}
+// Paint the title from a small bitmap alphabet for crisp offline pixel lettering.
+const glyphs={T:['11111','00100','00100','00100','00100','00100','00100'],E:['11111','10000','10000','11110','10000','10000','11111'],R:['11110','10001','10001','11110','10100','10010','10001'],I:['11111','00100','00100','00100','00100','00100','11111'],S:['01111','10000','10000','01110','00001','00001','11110']};
+const logo=$('titleArt').getContext('2d');logo.fillStyle='#35472e';
+[...'TETRIS'].forEach((c,i)=>glyphs[c].forEach((row,y)=>[...row].forEach((p,x)=>{if(p==='1')logo.fillRect(2+i*30+x*5,y*5+2,5,5);})));
+// Mode transitions own the animation callback. Reset the timestamp after a pause
+// so time spent in a background tab never becomes a burst of gravity updates.
+function changeMode(value){
+  mode=value;cancelAnimationFrame(frame);frame=0;stopRepeat();lastTime=0;
+  $('overlay').hidden=mode==='playing';$('titleArt').hidden=mode!=='ready';
+  $('stateTitle').hidden=mode==='ready';$('stateTitle').textContent=mode==='paused'?'PAUSED':'GAME OVER';
+  $('message').textContent=mode==='over'?'FINAL SCORE '+score:mode==='paused'?'BRICK POCKET':'FALLING BLOCKS';
+  $('start').textContent=mode==='over'?'PLAY AGAIN':mode==='paused'?'RESUME':'START GAME';
+  if(mode==='playing')frame=requestAnimationFrame(tick);
+  dirty=true;render();hud();
+}
+function startOrPause(){
+  if(mode==='playing'){changeMode('paused');return;}
+  if(mode==='paused'){changeMode('playing');return;}
+  grid.forEach(row=>row.fill(0));held=null;usedHold=false;score=lines=0;level=1;
+  advance();beep('start');changeMode('playing');
+}
+function tick(now){
+  // Clamp long frames to keep gravity responsive following an OS scheduling stall.
+  const dt=lastTime?Math.min(now-lastTime,100):0;lastTime=now;
+  const interval=Math.max(55,900*Math.pow(.83,level-1));
+  elapsed+=dt;
+  while(elapsed>=interval){elapsed-=interval;shift(0,1,active.r);}
+  if(!fits(active.x,active.y+1,active.r)){
+    lockedFor+=dt;if(lockedFor>=500)lock();
+  }
+  if(dirty)render();
+  if(mode==='playing')frame=requestAnimationFrame(tick);
+}
+// Keyboard and handheld buttons share one action dispatcher. A successful hold
+// always resets orientation, and the hold slot unlocks only after the next lock.
+function act(action){
+  if(mode!=='playing')return;
+  switch(action){
+    case 'left':shift(-1,0,active.r);break;
+    case 'right':shift(1,0,active.r);break;
+    case 'down':if(shift(0,1,active.r)){score++;$('score').textContent=String(score).padStart(6,'0');}break;
+    case 'cw':rotate(1);break;
+    case 'ccw':rotate(-1);break;
+    case 'drop':{const y=landing();score+=2*(y-active.y);active.y=y;lock();break;}
+    case 'hold':{
+      if(usedHold)return;
+      const old=held;held=active.type;usedHold=true;
+      if(old)spawn(old);else advance();
+      beep('hold');hud();break;
+    }
+  }
+}
+const bindings={ArrowLeft:'left',ArrowRight:'right',ArrowDown:'down',ArrowUp:'cw',KeyX:'cw',KeyZ:'ccw',Space:'drop',KeyC:'hold'};
+window.addEventListener('keydown',e=>{
+  if(e.ctrlKey || e.metaKey || e.altKey)return;
+  // Keep Enter available to activate focused hardware buttons with native semantics.
+  if((e.code==='Enter' && document.activeElement.tagName!=='BUTTON') || e.code==='KeyP' || (e.code==='Escape' && (mode==='playing'||mode==='paused'))){
+    e.preventDefault();if(!e.repeat)startOrPause();return;
+  }
+  const a=bindings[e.code];
+  if(!a || mode!=='playing')return;
+  e.preventDefault();if(!e.repeat || ['left','right','down'].includes(a))act(a);
+});
+$('start').onclick=startOrPause;$('pause').onclick=startOrPause;
+// Pointer capture lets a held direction repeat on touch devices even if a finger
+// drifts away. Each release, cancellation or loss of focus stops its repeat timer.
+let repeatTimer=0;
+function stopRepeat(){clearTimeout(repeatTimer);repeatTimer=0;}
+for(const button of document.querySelectorAll('[data-action]')){
+  const a=button.dataset.action;
+  button.addEventListener('pointerdown',e=>{
+    if(e.button!==0 || mode!=='playing')return;
+    e.preventDefault();button.setPointerCapture(e.pointerId);stopRepeat();act(a);
+    if(['left','right','down'].includes(a)){
+      const again=()=>{if(mode==='playing'){act(a);repeatTimer=setTimeout(again,75);}};
+      repeatTimer=setTimeout(again,220);
+    }
+  });
+  button.addEventListener('lostpointercapture',stopRepeat);
+  button.addEventListener('pointerup',stopRepeat);
+  button.addEventListener('pointercancel',stopRepeat);
+  button.addEventListener('click',e=>{if(e.detail===0)act(a);});
+}
+window.addEventListener('blur',()=>{if(mode==='playing')changeMode('paused');});
+document.addEventListener('visibilitychange',()=>{if(document.hidden && mode==='playing')changeMode('paused');});
+// Show the first queued piece as a title-screen preview, then consume it on Start.
+nextType=drawType();score=lines=0;level=1;changeMode('ready');
+</script>
+</body>
+</html>
