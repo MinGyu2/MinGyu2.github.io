@@ -1,0 +1,8 @@
+{
+  "title": "벽돌 깨기",
+  "description": "난이도별 벽돌 깨기 게임",
+  "tags": ["JavaScript", "Arcade", "Algorithm"],
+  "status": "available",
+  "entry": "index.html",
+  "requiresCrossOriginIsolation": false
+}
