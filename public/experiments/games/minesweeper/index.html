@@ -42,6 +42,7 @@ main { padding:26px 0 36px }
 .card-heading { display:flex; gap:9px; align-items:center }
 .card-heading>.icon { color:var(--accent); width:19px }
 .play-header { display:flex; justify-content:space-between; align-items:center; padding:18px 21px 16px; gap:10px }
+.play-heading { display:flex; align-items:center; flex-wrap:wrap; gap:3px 12px }
 .status { display:flex; align-items:center; gap:7px; background:#323d30; color:#d2e4b7; border:1px solid #485542; padding:4px 10px; border-radius:20px; font-weight:650; font-size:.78rem; white-space:nowrap }
 .status::before { content:""; width:7px; height:7px; border-radius:50%; background:currentColor }
 .status[data-state="lost"],.status[data-state="failed"] { background:#482f2c; color:#ffb9a9; border-color:#72443c }
@@ -55,6 +56,7 @@ main { padding:26px 0 36px }
 .readout svg { width:16px; height:27px; fill:currentColor }
 .readout svg.sep { width:7px }
 #best-time { color:#cad3c5 }
+#best-time[data-value="< 1초"] { font-size:1.12rem }
 .surface {
   position:relative; container-type:inline-size; margin:0 20px; border-radius:9px; border:1px solid #3b4840;
   background-color:#121a16; background-image:radial-gradient(#36453d 0.9px,transparent 1px);
@@ -65,8 +67,8 @@ main { padding:26px 0 36px }
 .surface::after { bottom:10px; right:10px; border-width:0 1px 1px 0 }
 .scroll { width:100%; overflow:auto; overscroll-behavior-inline:contain; scrollbar-color:#62786a #1c2720; scrollbar-width:thin; border-radius:inherit }
 .mat { width:max-content; min-width:100%; display:grid; place-items:center; padding:25px 22px 29px; min-height:372px }
-.instrument { --cell:40px; display:grid; grid-template-columns:24px auto; grid-template-rows:19px auto; align-items:center; justify-items:center }
-.instrument[data-size="2"] { --cell:clamp(32px,calc((100cqw - 74px) / 30),42px) }
+.instrument { --base-cell:40px; --cell:calc(var(--base-cell) * var(--zoom, 1)); display:grid; grid-template-columns:24px auto; grid-template-rows:19px auto; align-items:center; justify-items:center }
+.instrument[data-size="2"] { --base-cell:clamp(32px,calc((100cqw - 74px) / 30),42px) }
 .axis { font:normal 10px var(--mono); color:#92a595; user-select:none; font-variant-numeric:tabular-nums }
 .cols { grid-column:2; display:grid; grid-template-columns:repeat(var(--w),var(--cell)); text-align:center }
 .rows { grid-column:1; display:grid; grid-template-rows:repeat(var(--h),var(--cell)); align-items:center }
@@ -90,11 +92,14 @@ main { padding:26px 0 36px }
 .cell[data-number="3"] { color:#a02c25 } .cell[data-number="4"] { color:#433380 }
 .cell[data-number="5"] { color:#7c2526 } .cell[data-number="6"] { color:#11616a }
 .cell[data-number="7"] { color:#192821 } .cell[data-number="8"] { color:#4b5750 }
-.board-tools { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 20px 14px }
+.board-tools { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:6px 10px; margin:0 20px 14px }
 .toolset { display:inline-flex; border:1px solid var(--line); background:var(--inset); border-radius:8px; padding:3px; gap:2px }
 .tool { background:transparent; border:1px solid transparent; min-height:40px; padding:3px 10px; border-radius:5px; color:var(--muted) }
 .tool .icon { width:16px; height:16px }
 .tool[aria-pressed=true] { color:#e1eadb; background:#3c473d; border-color:#4c594c }
+#zoom { margin-inline-start:auto }
+.zoom-step { min-width:44px; min-height:44px; padding-inline:5px; font-size:1.3rem }
+.zoom-reset { min-width:53px; min-height:44px; padding-inline:4px; color:var(--text); font-variant-numeric:tabular-nums }
 .mode { font-size:.85rem; font-weight:650; color:var(--muted); white-space:nowrap }
 .board-area { padding:16px 0 20px }
 .scroll-hint { padding:8px 21px 0; color:var(--muted); font-size:.78rem; text-align:end }
@@ -133,6 +138,9 @@ dialog::backdrop { background:#070e0ac9 }
 .guide h3 { font-size:.96rem }
 .guide ul { margin:0; padding-left:1.15rem; display:grid; gap:7px; color:var(--muted); font-size:.85rem; line-height:1.55 }
 body:has(.settings-dialog[open]) { overflow:hidden }
+@media(min-width:1025px) and (pointer:fine) {
+  .play:not([data-size="0"]) .scroll { max-height:clamp(300px,calc(100dvh - 300px),790px) }
+}
 @media(max-width:1024px) {
   .shell { width:calc(100% - 36px) }
   header { padding:16px 0 }
@@ -146,13 +154,14 @@ body:has(.settings-dialog[open]) { overflow:hidden }
   .scoreboard { margin:0 11px 11px } .metric { padding:10px 9px } .metric-label { font-size:.77rem; gap:4px }
   .readout { margin-top:6px; gap:2px } .readout svg { width:13px; height:24px }
   .surface { margin:0 8px } .mat { padding:12px 4px; min-height:0 } .instrument { grid-template-columns:17px auto }
-  .instrument[data-size="0"] { --cell:clamp(34px,calc((100cqw - 32px) / 9),42px) }
+  .instrument[data-size="0"] { --base-cell:clamp(34px,calc((100cqw - 32px) / 9),42px) }
   .board-tools { margin:0 11px 9px } .notice { padding:8px 11px; word-break:keep-all }
   .board-area { padding:12px 0 } .scroll-hint { padding-inline:11px } .size { min-height:66px }
 }
 @media(pointer:coarse) {
-  .instrument:not([data-size="0"]) { --cell:44px }
-  .tool { min-width:70px; min-height:44px }
+  .instrument:not([data-size="0"]) { --base-cell:44px }
+  .tool { min-height:44px }
+  #open-tool,#flag-tool { min-width:66px }
   .scroll { max-height:clamp(180px,57dvh,740px) }
 }
 @media(orientation:landscape) and (max-height:510px) and (min-width:560px) and (max-width:1100px) {
@@ -204,16 +213,26 @@ body:has(.settings-dialog[open]) { overflow:hidden }
 <main>
 <section class="card play" aria-labelledby="board-title">
   <div class="play-controls">
-  <div class="play-header"><div class="card-heading"><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg><h2 id="board-title">게임 보드</h2></div><span id="status" class="status">준비 완료</span></div>
+  <div class="play-header">
+    <div class="play-heading"><div class="card-heading"><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg><h2 id="board-title">게임 보드</h2></div><span class="mode" id="mode"></span></div>
+    <span id="status" class="status">준비 완료</span>
+  </div>
   <div class="scoreboard">
     <div class="metric"><div class="metric-label"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>남은 지뢰</div><div id="mine-count" class="readout" role="img"></div></div>
     <div class="metric"><div class="metric-label"><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg>경과 시간</div><div id="time" class="readout" role="img"></div></div>
     <div class="metric"><div class="metric-label"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>최고 기록</div><div id="best-time" class="readout" role="img"></div></div>
   </div>
-  <div class="board-tools"><div class="toolset" role="group" aria-label="입력 모드">
-    <button id="open-tool" class="tool" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-pointer"/></svg>열기</button>
-    <button id="flag-tool" class="tool" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>깃발</button>
-  </div><span class="mode" id="mode"></span></div>
+  <div class="board-tools">
+    <div class="toolset" role="group" aria-label="입력 모드">
+      <button id="open-tool" class="tool" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-pointer"/></svg>열기</button>
+      <button id="flag-tool" class="tool" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>깃발</button>
+    </div>
+    <div class="toolset" id="zoom" role="group" aria-label="보드 확대 및 축소" hidden>
+      <button id="zoom-out" class="tool zoom-step" aria-label="보드 축소">−</button>
+      <button id="zoom-reset" class="tool zoom-reset" aria-label="보드 배율 100%, 기본 배율로 재설정">100%</button>
+      <button id="zoom-in" class="tool zoom-step" aria-label="보드 확대">+</button>
+    </div>
+  </div>
   <div class="progress-line" hidden id="progress" role="progressbar" aria-label="보드 생성 시간 한도" aria-valuemin="0" aria-valuemax="100"><span></span></div>
   <div class="notice"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span id="message" role="status"></span><button class="mini" id="action" hidden></button></div>
   </div>
@@ -597,7 +616,7 @@ function createRecords() {
   }
 
   function validTime(value) {
-    return Number.isSafeInteger(value) && value >= 0;
+    return Number.isSafeInteger(value) && value > 0;
   }
 
   function readStoredTime(storage, key) {
@@ -671,7 +690,10 @@ function generationWorker() {
   const { UNKNOWN, MARK, MINE } = engine;
   const $ = id => document.getElementById(id);
   const settingsDialog = $('settings-dialog'), boardScroll = $('scroll');
+  const boardGrid = $('board'), instrument = $('instrument');
   const sizeNames = ['소형','중형','대형'], levels = ['쉬움','보통','어려움','전문가'];
+  const zoomLevels = [75, 90, 100, 125, 150, 175];
+  const defaultZoom = zoomLevels.indexOf(100);
   const descriptions = [
     '숫자 하나와 주변 칸만 살펴보면 풀 수 있어요.',
     '겹쳐 있는 두 숫자의 범위를 비교해 보세요.',
@@ -690,6 +712,7 @@ function generationWorker() {
   let size = 0, tier = 0, g, state, board, view, first, opened, flags, hit;
   let worker = null, workerURL = null, version = 0;
   let ticker = 0, started = 0, elapsed = 0, flagMode = false, focusIndex = 0;
+  let zoomIndex = defaultZoom;
   let buttons = [];
   const icon = name => '<svg class="icon" aria-hidden="true"><use href="#i-'+name+'"/></svg>';
 
@@ -703,6 +726,10 @@ function generationWorker() {
     if (node.dataset.value === value) return;
     node.dataset.value = value;
     node.setAttribute('aria-label',label);
+    if (value === '< 1초') {
+      node.textContent = value;
+      return;
+    }
     node.innerHTML = [...value].map(ch => {
       if (ch === ':') return '<svg class="sep" viewBox="0 0 7 28" aria-hidden="true"><path d="M2 7h3v3H2zm0 12h3v3H2z"/></svg>';
       const lit = ch === '-' ? 'g' : digits[Number(ch)];
@@ -724,7 +751,12 @@ function generationWorker() {
   }
   function paintBest() {
     const best = records.get(size,tier);
-    display('best-time',best === null ? '--:--' : clockText(best),best === null ? '최고 기록 없음' : '최고 기록 '+clockText(best));
+    if (best === null) display('best-time','--:--','최고 기록 없음');
+    else if (best < 1000) display('best-time','< 1초','최고 기록 1초 미만');
+    else {
+      const time = clockText(best);
+      display('best-time',time,'최고 기록 '+time);
+    }
   }
   function selectTool(flag) {
     flagMode = flag;
@@ -760,11 +792,36 @@ function generationWorker() {
     for (let i=0; i<g.n; i++) drawCell(i);
     paintMines();
   }
+  function paintZoom() {
+    const percent = size === 0 ? 100 : zoomLevels[zoomIndex];
+    instrument.style.setProperty('--zoom',percent/100);
+    $('zoom').hidden = size === 0;
+    $('zoom-out').disabled = zoomIndex === 0;
+    $('zoom-in').disabled = zoomIndex === zoomLevels.length-1;
+    $('zoom-reset').textContent = percent+'%';
+    $('zoom-reset').setAttribute('aria-label','보드 배율 '+percent+'%, 기본 배율로 재설정');
+  }
+  function setZoom(next) {
+    if (size === 0 || next === zoomIndex || next < 0 || next >= zoomLevels.length) return;
+    const area = boardScroll.getBoundingClientRect();
+    const before = boardGrid.getBoundingClientRect();
+    // Keep the center of the currently visible cells in place where scrolling permits.
+    const x = (Math.max(area.left,before.left)+Math.min(area.right,before.right))/2;
+    const y = (Math.max(area.top,before.top)+Math.min(area.bottom,before.bottom))/2;
+    zoomIndex = next;
+    paintZoom();
+    const after = boardGrid.getBoundingClientRect();
+    boardScroll.scrollBy(
+      after.left+(x-before.left)*after.width/before.width-x,
+      after.top+(y-before.top)*after.height/before.height-y
+    );
+  }
   function buildBoard() {
     $('board-title').closest('.play').dataset.size=size;
-    $('instrument').dataset.size=size;
-    $('instrument').style.setProperty('--w',g.w);
-    $('instrument').style.setProperty('--h',g.h);
+    instrument.dataset.size=size;
+    instrument.style.setProperty('--w',g.w);
+    instrument.style.setProperty('--h',g.h);
+    paintZoom();
     const ticks = n => Array.from({length:n},(_,i)=>'<span>'+String(i+1).padStart(2,'0')+'</span>').join('');
     $('cols').innerHTML=ticks(g.w); $('rows').innerHTML=ticks(g.h);
     $('mode').textContent=sizeNames[size]+' · '+levels[tier];
@@ -798,13 +855,17 @@ function generationWorker() {
     [...$('sizes').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===size)));
     [...$('levels').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===tier)));
   }
-  function finish(won) {
+  function finish(won, { fromFirstReveal = false } = {}) {
     stopClock();
     if (won) {
       for (let i=0; i<g.n; i++) if (view[i] === UNKNOWN) { view[i]=MARK; flags++; }
-      records.save(size,tier,elapsed);
+      if (fromFirstReveal) elapsed=0;
+      else records.save(size,tier,Math.max(1,elapsed));
     }
-    status(won ? 'won' : 'lost');
+    const message = fromFirstReveal
+      ? '첫 클릭으로 모든 안전 칸이 열렸습니다. 기록은 직접 풀어 승리한 판부터 저장됩니다.'
+      : undefined;
+    status(won ? 'won' : 'lost',message);
     drawBoard(); paintClock(); paintBest();
   }
   function begin(layout) {
@@ -813,7 +874,7 @@ function generationWorker() {
     opened=engine.reveal(g,board,view,first);
     selectTool(false); status('playing');
     started=performance.now();
-    if (opened === g.n-g.mines) { finish(true); return; }
+    if (opened === g.n-g.mines) { finish(true,{ fromFirstReveal:true }); return; }
     ticker=setInterval(paintClock,200);
     drawBoard(); paintClock();
   }
@@ -894,13 +955,16 @@ function generationWorker() {
   };
   $('open-tool').onclick=()=>selectTool(false);
   $('flag-tool').onclick=()=>selectTool(true);
+  $('zoom-out').onclick=()=>setZoom(zoomIndex-1);
+  $('zoom-in').onclick=()=>setZoom(zoomIndex+1);
+  $('zoom-reset').onclick=()=>setZoom(defaultZoom);
   $('settings-button').onclick=()=>settingsDialog.showModal();
   const scrollObserver = new ResizeObserver(() => {
     $('scroll-hint').hidden = boardScroll.scrollWidth <= boardScroll.clientWidth &&
       boardScroll.scrollHeight <= boardScroll.clientHeight;
   });
   scrollObserver.observe(boardScroll);
-  scrollObserver.observe($('instrument'));
+  scrollObserver.observe(instrument);
   const cellOf=e=>e.target.closest('.cell');
   $('board').onclick=e=>{ const b=cellOf(e); if (b) activate(+b.dataset.i); };
   $('board').oncontextmenu=e=>{ const b=cellOf(e); if (b) { e.preventDefault(); toggle(+b.dataset.i); } };
