@@ -1,0 +1,8 @@
+{
+  "title": "지뢰찾기",
+  "description": "난이도별 문제를 생성하는 지뢰 찾기 게임",
+  "tags": ["JavaScript", "Puzzle", "Algorithm"],
+  "status": "available",
+  "entry": "index.html",
+  "requiresCrossOriginIsolation": false
+}

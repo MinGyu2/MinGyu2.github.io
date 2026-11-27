@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#161b19">
+<title>지뢰찾기 · 논리 퍼즐</title>
+<style>
+:root {
+  color-scheme: dark;
+  --page:#151a18; --panel:#202622; --inset:#181e1b; --line:#39423c;
+  --text:#f0f3e9; --muted:#afb9af; --accent:#d3ee82; --accent-ink:#222b14;
+  --mono:ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  font-family:system-ui,-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+  color:var(--text); background:var(--page); font-size:16px;
+}
+* { box-sizing:border-box }
+body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 18% 7%,#242b23 0,transparent 54%),var(--page) }
+button { font:inherit; color:inherit; cursor:pointer; touch-action:manipulation }
+button:disabled { cursor:default; opacity:.48 }
+button:focus-visible,summary:focus-visible { outline:3px solid #ffdc84; outline-offset:3px; z-index:2 }
+button,dialog { -webkit-tap-highlight-color:transparent }
+.icon { width:20px; height:20px; flex:none; display:inline-block; vertical-align:middle; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round }
+.sprites { position:absolute; width:0; height:0; overflow:hidden }
+.shell { width:min(1192px,calc(100% - 80px)); margin:0 auto }
+header { display:flex; align-items:center; justify-content:space-between; padding:29px 0 24px; border-bottom:1px solid var(--line) }
+.brand { display:flex; align-items:center; gap:14px }
+.brand-mark { background:var(--accent); color:var(--accent-ink); display:grid; place-items:center; width:45px; height:45px; border-radius:12px; box-shadow:inset 0 -3px 0 #a0ba62 }
+.brand-mark svg { width:30px; height:30px }
+h1,h2,h3,p { margin:0 }
+h1 { font-size:clamp(1.55rem,3vw,2rem); font-weight:830; letter-spacing:-.065em }
+h2 { font-size:1.08rem; letter-spacing:-.04em }
+.header-actions { display:flex; gap:8px }
+.secondary,.mini,.tool { border:1px solid var(--line); border-radius:8px; background:#2a312c; display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:650; font-size:.89rem; min-height:44px; padding:6px 13px; white-space:nowrap }
+.secondary:hover,.mini:hover,.tool:hover { background:#363e36 }
+.header-actions .secondary { background:transparent }
+.header-actions .secondary:hover { background:#2a312c }
+main { padding:26px 0 36px }
+.play { max-width:880px; margin-inline:auto }
+.play[data-size="2"] { max-width:none }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:15px; overflow:hidden; box-shadow:0 6px 18px #070d0924 }
+.card-heading { display:flex; gap:9px; align-items:center }
+.card-heading>.icon { color:var(--accent); width:19px }
+.play-header { display:flex; justify-content:space-between; align-items:center; padding:18px 21px 16px; gap:10px }
+.status { display:flex; align-items:center; gap:7px; background:#323d30; color:#d2e4b7; border:1px solid #485542; padding:4px 10px; border-radius:20px; font-weight:650; font-size:.78rem; white-space:nowrap }
+.status::before { content:""; width:7px; height:7px; border-radius:50%; background:currentColor }
+.status[data-state="lost"],.status[data-state="failed"] { background:#482f2c; color:#ffb9a9; border-color:#72443c }
+.status[data-state="generating"] { color:#f8d088; background:#403927; border-color:#625538 }
+.scoreboard { display:grid; grid-template-columns:repeat(3,1fr); margin:0 20px 18px; border:1px solid #424c43; border-radius:10px; overflow:hidden; background:#191f1b }
+.metric { padding:13px 17px 12px; min-width:0 }
+.metric + .metric { border-left:1px solid var(--line) }
+.metric-label { display:flex; align-items:center; gap:7px; color:#bac3b7; font-size:.84rem; font-weight:600 }
+.metric-label .icon { width:16px; height:16px }
+.readout { display:flex; align-items:center; height:30px; gap:3px; margin-top:9px; color:#d7ef92; font:700 1.65rem var(--mono); font-variant-numeric:tabular-nums }
+.readout svg { width:16px; height:27px; fill:currentColor }
+.readout svg.sep { width:7px }
+#best-time { color:#cad3c5 }
+.surface {
+  position:relative; container-type:inline-size; margin:0 20px; border-radius:9px; border:1px solid #3b4840;
+  background-color:#121a16; background-image:radial-gradient(#36453d 0.9px,transparent 1px);
+  background-size:12px 12px; box-shadow:inset 0 2px 10px #080d0a55;
+}
+.surface::before,.surface::after { content:""; position:absolute; width:9px; height:9px; pointer-events:none; border-color:#6e806f; border-style:solid; z-index:1 }
+.surface::before { top:10px; left:10px; border-width:1px 0 0 1px }
+.surface::after { bottom:10px; right:10px; border-width:0 1px 1px 0 }
+.scroll { width:100%; overflow:auto; overscroll-behavior-inline:contain; scrollbar-color:#62786a #1c2720; scrollbar-width:thin; border-radius:inherit }
+.mat { width:max-content; min-width:100%; display:grid; place-items:center; padding:25px 22px 29px; min-height:372px }
+.instrument { --cell:40px; display:grid; grid-template-columns:24px auto; grid-template-rows:19px auto; align-items:center; justify-items:center }
+.instrument[data-size="2"] { --cell:clamp(32px,calc((100cqw - 74px) / 30),42px) }
+.axis { font:normal 10px var(--mono); color:#92a595; user-select:none; font-variant-numeric:tabular-nums }
+.cols { grid-column:2; display:grid; grid-template-columns:repeat(var(--w),var(--cell)); text-align:center }
+.rows { grid-column:1; display:grid; grid-template-rows:repeat(var(--h),var(--cell)); align-items:center }
+#board { grid-column:2; display:grid; grid-template-columns:repeat(var(--w),var(--cell)); background:#23372d; border:3px solid #101914; border-radius:3px; box-shadow:0 0 0 1px #4c6052,0 5px 12px #050b0777; touch-action:manipulation; user-select:none }
+.cell {
+  width:var(--cell); height:var(--cell); padding:0; position:relative; display:grid; place-items:center; -webkit-touch-callout:none;
+  color:#142b21; background:#82a395; border-style:solid; border-width:2px 3px 3px 2px;
+  border-color:#a5c0ae #526e5f #4c695b #93b1a1; border-radius:2px;
+  box-shadow:inset 0 0 0 1px #ffffff08; font:bold calc(var(--cell) * .59) var(--mono);
+}
+@media(hover:hover) { .cell[data-kind="closed"]:hover,.cell[data-kind="flag"]:hover { background:#9abcab } }
+.cell[data-kind="closed"]:active,.cell[data-kind="flag"]:active { background:#9abcab }
+.cell:focus-visible { outline-offset:-3px; outline:3px solid #fff4a2 }
+.cell[data-kind="open"] { background:#d5dfcf; border:0; border-radius:0; box-shadow:inset -1px -1px #a7b7a7 }
+.cell .icon { width:64%; height:64% }
+.cell[data-kind="flag"] { color:#602d19; background:#afbc93 }
+.cell[data-kind="mine"],.cell[data-kind="wrong"] { background:#e6c3a8; color:#532f28; border:1px solid #bba28c }
+.cell[data-kind="hit"] { background:#e56852; color:#2a1514; border:2px solid #ffd09c }
+.cell[data-kind="wrong"]::after { content:""; position:absolute; width:86%; height:3px; background:#a62821; transform:rotate(-45deg); box-shadow:0 1px #ffe2b5 }
+.cell[data-number="1"] { color:#185595 } .cell[data-number="2"] { color:#126035 }
+.cell[data-number="3"] { color:#a02c25 } .cell[data-number="4"] { color:#433380 }
+.cell[data-number="5"] { color:#7c2526 } .cell[data-number="6"] { color:#11616a }
+.cell[data-number="7"] { color:#192821 } .cell[data-number="8"] { color:#4b5750 }
+.board-tools { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 20px 14px }
+.toolset { display:inline-flex; border:1px solid var(--line); background:var(--inset); border-radius:8px; padding:3px; gap:2px }
+.tool { background:transparent; border:1px solid transparent; min-height:40px; padding:3px 10px; border-radius:5px; color:var(--muted) }
+.tool .icon { width:16px; height:16px }
+.tool[aria-pressed=true] { color:#e1eadb; background:#3c473d; border-color:#4c594c }
+.mode { font-size:.85rem; font-weight:650; color:var(--muted); white-space:nowrap }
+.board-area { padding:16px 0 20px }
+.scroll-hint { padding:8px 21px 0; color:var(--muted); font-size:.78rem; text-align:end }
+.notice { padding:12px 20px; display:flex; align-items:center; gap:9px; font-size:.87rem; background:#252e26; border-top:1px solid var(--line); line-height:1.55; color:#d0d9c9; min-height:48px }
+.notice>.icon { width:17px; height:17px; color:var(--accent) }
+.notice .mini { margin-left:auto }
+.progress-line { height:4px; background:#394235 }
+.progress-line span { display:block; height:100%; background:var(--accent) }
+[hidden] { display:none!important }
+fieldset { border:0; padding:0; margin:0 0 19px; min-width:0 }
+legend { font-size:.9rem; font-weight:700; margin-bottom:10px; padding:0 }
+.sizes { display:grid; grid-template-columns:repeat(3,1fr); gap:6px }
+.choice { cursor:pointer; background:#292f2a; border:1px solid #404940; color:#c4cdc2; border-radius:7px; text-align:center; font-size:.87rem; font-weight:650 }
+.choice:hover { background:#333c33 }
+.choice[aria-pressed=true] { background:#323e2c; color:var(--accent); border-color:#91a963 }
+.size { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; min-height:80px }
+.size small { font:normal .71rem var(--mono); color:#afbaac }
+.grid-glyph { display:block; height:17px; color:inherit; margin-bottom:1px; width:17px; background-image:linear-gradient(90deg,currentColor 1px,transparent 1px),linear-gradient(currentColor 1px,transparent 1px); background-size:5px 5px; border:1px solid currentColor }
+.size:nth-child(2) .grid-glyph { width:20px; background-size:4px 4px }
+.size:nth-child(3) .grid-glyph { width:25px; background-size:4px 4px }
+.levels { display:grid; grid-template-columns:repeat(4,1fr); gap:4px }
+.level { min-height:44px; padding:4px 1px }
+.level-info { display:flex; align-items:flex-start; gap:8px; margin-top:10px; color:var(--muted); font-size:.84rem; line-height:1.6; word-break:keep-all }
+.level-info .icon { width:15px; height:15px; margin-top:3px; color:#b7c89f }
+.primary { min-height:44px; border:1px solid #daeea6; background:var(--accent); color:var(--accent-ink); border-radius:8px; display:inline-flex; align-items:center; justify-content:center; padding:6px 13px; gap:8px; font-size:.89rem; font-weight:800; white-space:nowrap }
+.primary:hover { background:#e2f6a8 }
+.settings-dialog { width:min(460px,calc(100% - 24px)); max-height:calc(100dvh - 24px); background:var(--panel); color:var(--text); border:1px solid #53624f; border-radius:14px; padding:0; box-shadow:0 16px 80px #0007; overflow:hidden }
+.settings-dialog[open] { display:flex; flex-direction:column }
+dialog::backdrop { background:#070e0ac9 }
+.dialog-heading { display:flex; flex:none; align-items:center; justify-content:space-between; padding:12px 18px; border-bottom:1px solid var(--line) }
+.settings-content { overflow:auto; overscroll-behavior:contain; padding:18px }
+.settings-content .secondary { width:100%; margin-top:12px }
+.settings-note { color:var(--muted); font-size:.82rem; line-height:1.5 }
+.guide { border-top:1px solid var(--line); margin-top:18px; padding-top:16px }
+.guide .card-heading { margin-bottom:10px }
+.guide h3 { font-size:.96rem }
+.guide ul { margin:0; padding-left:1.15rem; display:grid; gap:7px; color:var(--muted); font-size:.85rem; line-height:1.55 }
+body:has(.settings-dialog[open]) { overflow:hidden }
+@media(max-width:1024px) {
+  .shell { width:calc(100% - 36px) }
+  header { padding:16px 0 }
+  main { padding:16px 0 26px }
+  .scroll { max-height:clamp(180px,57dvh,700px) }
+}
+@media(max-width:600px) {
+  .shell { width:calc(100% - 20px) } header { padding:12px 0 } .brand-mark { width:36px; height:36px; border-radius:9px } .brand { gap:7px } h1 { font-size:1.48rem }
+  .header-actions { gap:5px } .header-actions button { gap:5px; padding-inline:8px } .header-actions .icon { width:16px; height:16px }
+  main { padding-top:11px } .play-header { padding:11px }
+  .scoreboard { margin:0 11px 11px } .metric { padding:10px 9px } .metric-label { font-size:.77rem; gap:4px }
+  .readout { margin-top:6px; gap:2px } .readout svg { width:13px; height:24px }
+  .surface { margin:0 8px } .mat { padding:12px 4px; min-height:0 } .instrument { grid-template-columns:17px auto }
+  .instrument[data-size="0"] { --cell:clamp(34px,calc((100cqw - 32px) / 9),42px) }
+  .board-tools { margin:0 11px 9px } .notice { padding:8px 11px; word-break:keep-all }
+  .board-area { padding:12px 0 } .scroll-hint { padding-inline:11px } .size { min-height:66px }
+}
+@media(pointer:coarse) {
+  .instrument:not([data-size="0"]) { --cell:44px }
+  .tool { min-width:70px; min-height:44px }
+  .scroll { max-height:clamp(180px,57dvh,740px) }
+}
+@media(orientation:landscape) and (max-height:510px) and (min-width:560px) and (max-width:1100px) {
+  header { padding-block:6px }
+  main { padding-top:8px }
+  .play { display:grid; grid-template-columns:minmax(207px,29%) minmax(0,1fr) }
+  .play-controls { border-right:1px solid var(--line) }
+  .mat { min-height:0; padding-block:10px }
+  .play-header { padding:8px 10px }
+  .scoreboard { margin:0 8px 10px }
+  .metric { padding:7px 5px }
+  .metric-label { font-size:.74rem }
+  .metric-label .icon { display:none }
+  .readout { margin-top:3px; gap:2px }
+  .readout svg { width:11px; height:23px }
+  .readout svg.sep { width:5px }
+  .board-tools { margin:0 8px 8px; flex-wrap:wrap; gap:5px 8px }
+  .notice { padding:8px; font-size:.8rem; word-break:keep-all; flex-wrap:wrap }
+  .notice #message { flex:1 }
+  .board-area { padding:10px 0 }
+  .surface { margin:0 8px }
+  .scroll { max-height:max(155px,calc(100dvh - 110px)) }
+}
+@media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important } }
+</style>
+</head>
+<body>
+<svg class="sprites" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-mine" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M10 1h4v4h3V3h3v4h-2v2h5v4h-4v4h2v3h-4v-2h-3v5h-4v-5H7v2H3v-3h2v-4H1V9h5V7H4V3h3v2h3z"/><path d="M8 8h4v3H8z" fill="#f2f7db" stroke="none"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18m6-18v18M3 9h18M3 15h18"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="14" r="7.8"/><path d="M9 2h6m-3 1v3m0 4v4l2 1m4-9 2-2"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0zm0 2H3v2a5 5 0 0 0 5 5m9-7h4v2a5 5 0 0 1-5 5m-4 3v5m-4 1h8"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M6.5 21V3m-3 18h7"/><path d="M7 3.5h12l-3.5 4 3.5 4H7z" fill="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="i-pointer" viewBox="0 0 24 24"><path d="m5 3 14 9-6 1.5 3.2 6.1-3.3 1.6-3-6.4L5 19z"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M3 6h6m5 0h7M3 12h10m5 0h3M3 18h3m5 0h10"/><circle cx="11.5" cy="6" r="2.5"/><circle cx="15.5" cy="12" r="2.5"/><circle cx="8.5" cy="18" r="2.5"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1.5 7M4 4v6h6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9h.01"/></symbol>
+  <symbol id="i-mouse" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="7"/><path d="M12 3v6"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M8.5 15.5a6 6 0 1 1 7 0L15 18H9zm1 6h5"/></symbol>
+</svg>
+<div class="shell">
+<header>
+  <div class="brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-mine"/></svg></span><h1>지뢰찾기</h1></div>
+  <div class="header-actions">
+    <button class="primary" id="new"><svg class="icon" aria-hidden="true"><use href="#i-reset"/></svg>새 게임</button>
+    <button class="secondary" id="settings-button" aria-haspopup="dialog" aria-controls="settings-dialog"><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg>설정</button>
+  </div>
+</header>
+<main>
+<section class="card play" aria-labelledby="board-title">
+  <div class="play-controls">
+  <div class="play-header"><div class="card-heading"><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg><h2 id="board-title">게임 보드</h2></div><span id="status" class="status">준비 완료</span></div>
+  <div class="scoreboard">
+    <div class="metric"><div class="metric-label"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>남은 지뢰</div><div id="mine-count" class="readout" role="img"></div></div>
+    <div class="metric"><div class="metric-label"><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg>경과 시간</div><div id="time" class="readout" role="img"></div></div>
+    <div class="metric"><div class="metric-label"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>최고 기록</div><div id="best-time" class="readout" role="img"></div></div>
+  </div>
+  <div class="board-tools"><div class="toolset" role="group" aria-label="입력 모드">
+    <button id="open-tool" class="tool" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-pointer"/></svg>열기</button>
+    <button id="flag-tool" class="tool" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>깃발</button>
+  </div><span class="mode" id="mode"></span></div>
+  <div class="progress-line" hidden id="progress" role="progressbar" aria-label="보드 생성 시간 한도" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+  <div class="notice"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span id="message" role="status"></span><button class="mini" id="action" hidden></button></div>
+  </div>
+  <div class="board-area">
+    <div class="surface"><div class="scroll" id="scroll"><div class="mat"><div class="instrument" id="instrument">
+      <div class="axis cols" id="cols" aria-hidden="true"></div><div class="axis rows" id="rows" aria-hidden="true"></div><div id="board" role="group" aria-label="게임 보드"></div>
+    </div></div></div></div>
+    <p class="scroll-hint" id="scroll-hint" hidden>보드를 스크롤해 나머지 칸을 보세요.</p>
+  </div>
+</section>
+</main>
+</div>
+<dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title">
+  <div class="dialog-heading">
+    <div class="card-heading"><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg><h2 id="settings-title">게임 설정</h2></div>
+    <form method="dialog"><button class="secondary" autofocus>닫기</button></form>
+  </div>
+  <div class="settings-content">
+    <fieldset><legend>보드 크기</legend><div class="sizes" id="sizes"></div></fieldset>
+    <fieldset><legend>논리 난이도</legend><div class="levels" id="levels"></div>
+      <p class="level-info"><svg class="icon" aria-hidden="true"><use href="#i-bulb"/></svg><span id="level-info"></span></p></fieldset>
+    <p class="settings-note">크기나 난이도를 바꾸면 새 게임이 시작됩니다.</p>
+    <button class="secondary" id="restart" hidden>같은 보드 다시 풀기</button>
+    <section class="guide" aria-labelledby="guide-title">
+      <div class="card-heading"><svg class="icon" aria-hidden="true"><use href="#i-mouse"/></svg><h3 id="guide-title">조작 안내</h3></div>
+      <ul>
+        <li>지뢰가 없는 칸을 모두 열면 승리합니다. 숫자는 주변의 지뢰 수입니다.</li>
+        <li><strong>열기</strong> 모드에서 칸을 클릭하거나 탭하세요. 첫 칸과 그 주변은 안전합니다.</li>
+        <li><strong>깃발</strong> 모드로 전환한 뒤 칸을 누르거나 마우스 오른쪽 버튼을 쓰세요.</li>
+        <li>주변 깃발 수가 숫자와 같으면 <strong>열기</strong> 모드에서 그 숫자를 눌러 주변을 엽니다. 깃발이 틀리면 지뢰가 열릴 수 있습니다.</li>
+        <li>키보드에서는 방향키로 이동하고 Enter 또는 스페이스로 선택합니다. F 키는 깃발을 전환합니다.</li>
+      </ul>
+    </section>
+  </div>
+</dialog>
+<script id="engine">
+// This factory is shared verbatim with the Blob worker. It has no DOM dependencies.
+function mineEngine() {
+  const SIZES = [{ w: 9, h: 9, mines: 10 }, { w: 16, h: 16, mines: 40 }, { w: 30, h: 16, mines: 99 }];
+  const UNKNOWN = -2, MARK = -3, MINE = -1;
+  class Contradiction extends Error {}
+  class SearchLimit extends Error {}
+
+  function geometry(size) {
+    const { w, h, mines } = SIZES[size];
+    const n = w * h;
+    const near = Array.from({ length: n }, (_, i) => {
+      const result = [], x = i % w, y = Math.floor(i / w);
+      for (let row = Math.max(0, y - 1); row <= Math.min(h - 1, y + 1); row++) {
+        for (let col = Math.max(0, x - 1); col <= Math.min(w - 1, x + 1); col++) {
+          const j = row * w + col;
+          if (i !== j) result.push(j);
+        }
+      }
+      return result;
+    });
+    return { w, h, n, mines, near };
+  }
+  function rng(seed) {
+    return () => {
+      seed = (seed + 0x6D2B79F5) >>> 0;
+      let t = Math.imul(seed ^ (seed >>> 15), seed | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function makeBoard(g, positions) {
+    const board = new Int8Array(g.n);
+    for (const i of positions) board[i] = MINE;
+    for (const i of positions) for (const j of g.near[i]) if (board[j] !== MINE) board[j]++;
+    return board;
+  }
+  function candidate(g, allowed, random) {
+    const pool = allowed.slice();
+    for (let i = 0; i < g.mines; i++) {
+      const j = i + Math.floor(random() * (pool.length - i));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    return makeBoard(g, pool.slice(0, g.mines));
+  }
+
+  // Simulation boundary. Only this side knows the layout. A zero clue proves
+  // its whole neighbourhood safe. Game flags and solver marks both block opening.
+  function reveal(g, board, view, start) {
+    if (view[start] !== UNKNOWN) return 0;
+    if (board[start] === MINE) return -1;
+    const queue = [start];
+    view[start] = board[start];
+    for (let k = 0; k < queue.length; k++) {
+      const i = queue[k];
+      if (view[i] !== 0) continue;
+      for (const j of g.near[i]) {
+        if (view[j] !== UNKNOWN) continue;
+        view[j] = board[j];
+        queue.push(j);
+      }
+    }
+    return queue.length;
+  }
+
+  // Constraints use sorted unique cell indices. A clue is reduced by proven
+  // marks only. The deductions below receive no board, reveal callback or RNG.
+  function equation(cells, count) {
+    const vars = [...new Set(cells)].sort((a, b) => a - b);
+    if (!Number.isInteger(count) || count < 0 || count > vars.length) throw new Contradiction();
+    return { vars, count };
+  }
+  function clues(g, view) {
+    const rows = [], safe = new Set(), mines = new Set();
+    const seen = new Map();
+    for (let i = 0; i < g.n; i++) {
+      if (view[i] < 0) continue;
+      let count = view[i];
+      const vars = [];
+      for (const j of g.near[i]) {
+        if (view[j] === UNKNOWN) vars.push(j);
+        else if (view[j] === MARK) count--;
+      }
+      if (count < 0 || count > vars.length) throw new Contradiction();
+      if (!vars.length) continue;
+      const key = vars.join(',');
+      if (seen.has(key)) {
+        if (seen.get(key) !== count) throw new Contradiction();
+        continue;
+      }
+      seen.set(key, count);
+      rows.push({ vars, count });
+      if (!count || count === vars.length) for (const v of vars) (count ? mines : safe).add(v);
+    }
+    return { rows, safe, mines };
+  }
+
+  // Normal closes subset subtraction. Hard also partitions partially overlapping
+  // pairs when their lower and upper bounds agree on the intersection sum.
+  // Derived rows stay inside the original eight-cell neighbourhood of a clue.
+  function localClosure(source, overlap) {
+    const rows = [], seen = new Map(), byVar = new Map();
+    const safe = new Set(), mines = new Set();
+    function add(vars, count) {
+      if (count < 0 || count > vars.length) throw new Contradiction();
+      if (!vars.length) return;
+      const key = vars.join(',');
+      if (seen.has(key)) {
+        if (seen.get(key) !== count) throw new Contradiction();
+        return;
+      }
+      seen.set(key, count);
+      rows.push({ vars, count });
+      if (!count || count === vars.length) for (const v of vars) (count ? mines : safe).add(v);
+    }
+    for (const row of source) {
+      const r = equation(row.vars, row.count);
+      add(r.vars, r.count);
+    }
+    for (let k = 0; k < rows.length; k++) {
+      if (safe.size || mines.size) break; // Rebuild rows after applying proofs.
+      const a = rows[k], partners = new Set();
+      for (const v of a.vars) for (const j of byVar.get(v) || []) partners.add(j);
+      for (const j of partners) {
+        const b = rows[j];
+        const common = a.vars.filter(v => b.vars.includes(v));
+        const left = a.vars.filter(v => !b.vars.includes(v));
+        const right = b.vars.filter(v => !a.vars.includes(v));
+        if (!left.length) add(right, b.count - a.count);
+        else if (!right.length) add(left, a.count - b.count);
+        else if (overlap) {
+          const low = Math.max(0, a.count - left.length, b.count - right.length);
+          const high = Math.min(common.length, a.count, b.count);
+          if (low > high) throw new Contradiction();
+          if (low === high) {
+            add(common, low);
+            add(left, a.count - low);
+            add(right, b.count - low);
+          }
+        }
+      }
+      for (const v of a.vars) {
+        if (!byVar.has(v)) byVar.set(v, []);
+        byVar.get(v).push(k);
+      }
+    }
+    return { safe, mines };
+  }
+
+  function components(rows) {
+    const links = new Map();
+    rows.forEach((r, k) => r.vars.forEach(v => {
+      if (!links.has(v)) links.set(v, []);
+      links.get(v).push(k);
+    }));
+    const visited = new Set(), parts = [];
+    for (let k = 0; k < rows.length; k++) {
+      if (visited.has(k)) continue;
+      const queue = [k], vars = new Set();
+      visited.add(k);
+      for (let i = 0; i < queue.length; i++) {
+        for (const v of rows[queue[i]].vars) {
+          if (vars.has(v)) continue;
+          vars.add(v);
+          for (const j of links.get(v)) if (!visited.has(j)) {
+            visited.add(j);
+            queue.push(j);
+          }
+        }
+      }
+      parts.push({ vars: [...vars].sort((a,b) => links.get(b).length - links.get(a).length || a-b),
+        rows: queue.map(i => rows[i]) });
+    }
+    return parts;
+  }
+  function enumerate(part, budget) {
+    const { vars, rows } = part;
+    const links = vars.map(v => rows.flatMap((r, i) => r.vars.includes(v) ? [i] : []));
+    const need = rows.map(r => r.count), free = rows.map(r => r.vars.length);
+    const values = new Uint8Array(vars.length), masks = new Map();
+    function visit(i, total) {
+      if (--budget.nodes < 0) throw new SearchLimit();
+      if (i === vars.length) {
+        if (!masks.has(total)) masks.set(total, new Uint8Array(i));
+        const mask = masks.get(total);
+        for (let j = 0; j < i; j++) mask[j] |= 1 << values[j];
+        return;
+      }
+      for (let bit = 0; bit <= 1; bit++) {
+        let ok = true;
+        for (const k of links[i]) {
+          free[k]--; need[k] -= bit;
+          if (need[k] < 0 || need[k] > free[k]) ok = false;
+        }
+        values[i] = bit;
+        if (ok) visit(i + 1, total + bit);
+        for (const k of links[i]) { free[k]++; need[k] += bit; }
+      }
+    }
+    visit(0, 0);
+    if (!masks.size) throw new Contradiction();
+    return { vars, masks };
+  }
+  function sums(previous, counts, limit) {
+    const result = new Set();
+    for (const b of counts) for (const a of previous) if (a+b <= limit) result.add(a+b);
+    return result;
+  }
+  function expert(rows, unknown, remaining, budget) {
+    if (remaining < 0 || remaining > unknown.length) throw new Contradiction();
+    // An interrupted component throws before any partial model is used.
+    const parts = components(rows).map(p => enumerate(p, budget));
+    const frontier = new Set(parts.flatMap(p => p.vars));
+    const outside = unknown.filter(v => !frontier.has(v));
+    const prefix = [new Set([0])], suffix = [];
+    for (const p of parts) prefix.push(sums(prefix.at(-1), p.masks.keys(), remaining));
+    suffix[parts.length] = new Set([0]);
+    for (let k = parts.length-1; k >= 0; k--) suffix[k] = sums(suffix[k+1], parts[k].masks.keys(), remaining);
+    const totals = [...prefix.at(-1)].map(n => remaining-n).filter(n => n <= outside.length);
+    if (!totals.length) throw new Contradiction();
+    const safe = new Set(), mines = new Set();
+    if (totals.every(n => n === 0)) outside.forEach(v => safe.add(v));
+    if (totals.every(n => n === outside.length)) outside.forEach(v => mines.add(v));
+    parts.forEach(({ vars, masks }, k) => {
+      const rest = sums(prefix[k], suffix[k+1], remaining);
+      const possible = new Uint8Array(vars.length);
+      for (const [n, mask] of masks) {
+        if (![...rest].some(r => n+r <= remaining && n+r+outside.length >= remaining)) continue;
+        for (let i = 0; i < vars.length; i++) possible[i] |= mask[i];
+      }
+      possible.forEach((bits, i) => {
+        if (!bits) throw new Contradiction();
+        if (bits === 1) safe.add(vars[i]);
+        if (bits === 2) mines.add(vars[i]);
+      });
+    });
+    return { safe, mines };
+  }
+
+  // Ascend ONLY on a deduction fixed point. Resuming the identical prefix
+  // avoids replaying first-click floods for each higher ceiling.
+  function classify(g, first, openProven, ceiling = 3, nodeLimit = 120000) {
+    const view = new Int8Array(g.n).fill(UNKNOWN);
+    let opened = openProven(view, first), marked = 0, tier = 0;
+    const budget = { nodes: nodeLimit };
+    if (opened < 1) throw new Error('Invalid first reveal');
+    try {
+      while (opened < g.n - g.mines) {
+        const base = clues(g, view);
+        let proof = base;
+        if (tier >= 1 && !proof.safe.size && !proof.mines.size) proof = localClosure(base.rows, false);
+        if (tier >= 2 && !proof.safe.size && !proof.mines.size) proof = localClosure(base.rows, true);
+        if (tier === 3 && !proof.safe.size && !proof.mines.size) {
+          const unknown = [];
+          for (let i = 0; i < view.length; i++) if (view[i] === UNKNOWN) unknown.push(i);
+          proof = expert(base.rows, unknown, g.mines-marked, budget);
+        }
+        if (!proof.safe.size && !proof.mines.size) {
+          if (tier === ceiling) return { status: 'stalled', tier, view, opened };
+          tier++;
+          continue;
+        }
+        for (const i of proof.mines) {
+          if (proof.safe.has(i) || view[i] !== UNKNOWN) throw new Contradiction();
+          view[i] = MARK;
+          marked++;
+        }
+        for (const i of proof.safe) {
+          const count = openProven(view, i);
+          if (count < 0) throw new Error('Unsound safe deduction');
+          opened += count;
+        }
+      }
+      return { status: 'solved', tier, opened };
+    } catch (e) {
+      if (e instanceof SearchLimit) return { status: 'limited' };
+      if (e instanceof Contradiction) return { status: 'contradiction' };
+      throw e;
+    }
+  }
+  function verify(g, board, first, tier, nodeLimit) {
+    return classify(g, first, (view, i) => reveal(g, board, view, i), tier, nodeLimit);
+  }
+
+  // The generator may change the layout between attempts. Relocate one mine
+  // from a stalled region to any eligible safe cell, then discard the entire
+  // previous proof and run the verifier again from the original first click.
+  function perturb(g, allowed, previous, random) {
+    const positions = [], movable = [], vacant = [];
+    for (const i of allowed) {
+      if (previous.board[i] !== MINE) vacant.push(i);
+      else {
+        if (previous.view[i] === UNKNOWN) movable.push(positions.length);
+        positions.push(i);
+      }
+    }
+    if (!movable.length) return candidate(g, allowed, random);
+    positions[movable[Math.floor(random()*movable.length)]] = vacant[Math.floor(random()*vacant.length)];
+    return makeBoard(g, positions);
+  }
+  function generate({ size, tier, first, seed, maxAttempts = 35000, maxMs = 12000 }, progress = () => {}) {
+    const g = geometry(size), random = rng(seed);
+    const excluded = new Set([first, ...g.near[first]]);
+    const allowed = Array.from({ length: g.n }, (_, i) => i).filter(i => !excluded.has(i));
+    const start = performance.now();
+    let last = start, attempts = 0, limited = 0;
+    let previous = null, repairs = 0;
+    while (attempts < maxAttempts && performance.now()-start < maxMs) {
+      attempts++;
+      const board = previous ? perturb(g, allowed, previous, random) : candidate(g, allowed, random);
+      const result = verify(g, board, first, tier);
+      if (result.status === 'solved' && result.tier === tier) {
+        return { status: 'ok', board, attempts, limited, ms: performance.now()-start };
+      }
+      if (result.status === 'contradiction') throw new Error('Inconsistent generated clues');
+      if (result.status === 'limited') limited++;
+      if (size === 2 && tier === 0 && result.status === 'stalled') {
+        if (previous) repairs++;
+        if (repairs >= 12) { previous = null; repairs = 0; }
+        else if (result.opened >= (previous?.opened ?? g.n * 0.25)) {
+          previous = { board, view: result.view, opened: result.opened };
+        }
+      }
+      const now = performance.now();
+      if (now-last >= 120) {
+        progress({ attempts, ms: now-start, maxMs });
+        last = now;
+      }
+    }
+    return { status: 'exhausted', attempts, limited, ms: performance.now()-start };
+  }
+  return { SIZES, UNKNOWN, MARK, MINE, geometry, rng, makeBoard, candidate, reveal,
+    equation, clues, localClosure, components, expert, classify, verify, generate, Contradiction, SearchLimit };
+}
+</script>
+<script>
+function createRecords() {
+  const sessionRecords = new Map();
+
+  function makeKey(size, tier) {
+    if (!Number.isSafeInteger(size) || size < 0 ||
+        !Number.isSafeInteger(tier) || tier < 0) {
+      return null;
+    }
+    return `minefield.best.${size}.${tier}`;
+  }
+
+  function validTime(value) {
+    return Number.isSafeInteger(value) && value >= 0;
+  }
+
+  function readStoredTime(storage, key) {
+    try {
+      const stored = storage.getItem(key);
+      if (stored === null || !/^\d+$/.test(stored)) return null;
+
+      const milliseconds = Number(stored);
+      return validTime(milliseconds) ? milliseconds : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function get(size, tier) {
+    const key = makeKey(size, tier);
+    if (key === null) return null;
+
+    let best = sessionRecords.get(key) ?? null;
+    try {
+      if (typeof window !== "undefined") {
+        const stored = readStoredTime(window.localStorage, key);
+        if (stored !== null && (best === null || stored < best)) {
+          best = stored;
+          sessionRecords.set(key, stored);
+        }
+      }
+    } catch {
+      // Storage can be unavailable, including when its browser getter throws.
+    }
+    return best;
+  }
+
+  function save(size, tier, milliseconds) {
+    const key = makeKey(size, tier);
+    if (key === null || !validTime(milliseconds)) return null;
+
+    const previous = get(size, tier);
+    const best = previous === null
+      ? milliseconds
+      : Math.min(previous, milliseconds);
+
+    sessionRecords.set(key, best);
+    try {
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(key, String(best));
+      }
+    } catch {
+      // Keep the best time for this session when persistence fails.
+    }
+    return best;
+  }
+
+  return { get, save };
+}
+function generationWorker() {
+  const core = mineEngine();
+  self.onmessage = ({ data }) => {
+    try {
+      const result = core.generate(data, p => self.postMessage({ type: 'progress', ...p }));
+      self.postMessage({ type: 'result', ...result }, result.board ? [result.board.buffer] : []);
+    } catch {
+      self.postMessage({ type: 'error' });
+    }
+  };
+}
+
+(() => {
+  'use strict';
+  const engine = mineEngine(), records = createRecords();
+  const { UNKNOWN, MARK, MINE } = engine;
+  const $ = id => document.getElementById(id);
+  const settingsDialog = $('settings-dialog'), boardScroll = $('scroll');
+  const sizeNames = ['소형','중형','대형'], levels = ['쉬움','보통','어려움','전문가'];
+  const descriptions = [
+    '숫자 하나와 주변 칸만 살펴보면 풀 수 있어요.',
+    '겹쳐 있는 두 숫자의 범위를 비교해 보세요.',
+    '일부만 겹치는 숫자들의 단서를 함께 사용하세요.',
+    '가능한 지뢰 배치와 남은 지뢰 수까지 고려하세요.'
+  ];
+  const states = { ready:'준비 완료', generating:'생성 중', playing:'진행 중', won:'승리', lost:'패배', failed:'생성 실패' };
+  const messages = {
+    ready:'시작할 칸을 선택하세요. 첫 칸과 그 주변은 안전합니다.',
+    generating:'선택한 위치에서 풀 수 있는 보드를 검증하고 있어요.',
+    playing:'숫자를 단서로 지뢰가 없는 칸을 모두 여세요.',
+    won:'성공! 지뢰가 없는 칸을 모두 열었습니다.',
+    lost:'지뢰가 터졌습니다. 다시 풀거나 새 게임을 시작하세요.',
+    failed:'시간 안에 조건에 맞는 보드를 찾지 못했습니다.'
+  };
+  let size = 0, tier = 0, g, state, board, view, first, opened, flags, hit;
+  let worker = null, workerURL = null, version = 0;
+  let ticker = 0, started = 0, elapsed = 0, flagMode = false, focusIndex = 0;
+  let buttons = [];
+  const icon = name => '<svg class="icon" aria-hidden="true"><use href="#i-'+name+'"/></svg>';
+
+  // Seven-segment readouts retain a complete accessible text equivalent.
+  const strokes = ['3,1 13,1 15,3 13,5 3,5 1,3','13,5 15,3 16,4 16,12 14,14 12,12',
+    '14,14 16,16 16,24 14,26 12,24 12,16','3,24 12,24 14,26 12,28 3,28 1,26',
+    '0,16 2,14 4,16 4,23 2,25 0,24','0,4 2,3 4,5 4,12 2,14 0,12','3,12 12,12 14,14 12,16 3,16 1,14'];
+  const digits = ['abcdef','bc','abdeg','abcdg','bcfg','acdfg','acdefg','abc','abcdefg','abcdfg'];
+  function display(id, value, label) {
+    const node = $(id);
+    if (node.dataset.value === value) return;
+    node.dataset.value = value;
+    node.setAttribute('aria-label',label);
+    node.innerHTML = [...value].map(ch => {
+      if (ch === ':') return '<svg class="sep" viewBox="0 0 7 28" aria-hidden="true"><path d="M2 7h3v3H2zm0 12h3v3H2z"/></svg>';
+      const lit = ch === '-' ? 'g' : digits[Number(ch)];
+      return '<svg viewBox="0 0 16 29" aria-hidden="true">'+strokes.map((s,i) =>
+        '<polygon points="'+s+'" opacity="'+(lit.includes('abcdefg'[i]) ? 1 : .065)+'"/>').join('')+'</svg>';
+    }).join('');
+  }
+  function clockText(ms) {
+    const s = Math.floor(ms / 1000);
+    return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+  }
+  function paintClock() {
+    const time = clockText(state === 'playing' ? performance.now()-started : elapsed);
+    display('time',time,'경과 시간 '+time);
+  }
+  function paintMines() {
+    const left = g.mines-flags;
+    display('mine-count',(left < 0 ? '-' : '')+String(Math.abs(left)).padStart(left < 0 ? 2 : 3,'0'),'남은 지뢰 '+left+'개');
+  }
+  function paintBest() {
+    const best = records.get(size,tier);
+    display('best-time',best === null ? '--:--' : clockText(best),best === null ? '최고 기록 없음' : '최고 기록 '+clockText(best));
+  }
+  function selectTool(flag) {
+    flagMode = flag;
+    $('flag-tool').setAttribute('aria-pressed',String(flag));
+    $('open-tool').setAttribute('aria-pressed',String(!flag));
+  }
+  function status(next, message = messages[next]) {
+    state = next;
+    $('status').textContent = states[next];
+    $('status').dataset.state = next;
+    $('message').textContent = message;
+    $('progress').hidden = next !== 'generating';
+    $('action').hidden = !['failed','generating'].includes(next);
+    $('action').textContent = next === 'failed' ? '다시 시도' : '취소';
+    $('restart').hidden = !board;
+    $('flag-tool').disabled = $('open-tool').disabled = next !== 'playing';
+    if (next !== 'playing') selectTool(false);
+    $('board').setAttribute('aria-busy',String(next === 'generating'));
+  }
+  function drawCell(i) {
+    const b = buttons[i], v = view[i], ended = state === 'lost';
+    let kind = 'closed', number = '', inside = '', label = '닫힌 칸';
+    if (ended && i === hit) { kind='hit'; inside=icon('mine'); label='터진 지뢰'; }
+    else if (ended && v === MARK && board[i] !== MINE) { kind='wrong'; inside=icon('flag'); label='잘못 놓은 깃발'; }
+    else if (v === MARK) { kind='flag'; inside=icon('flag'); label='깃발'; }
+    else if (ended && board[i] === MINE) { kind='mine'; inside=icon('mine'); label='지뢰'; }
+    else if (v >= 0) { kind='open'; number=String(v); inside=v ? number : ''; label=v ? '주변 지뢰 '+v+'개' : '빈 칸'; }
+    if (b.dataset.kind === kind && b.dataset.number === number) return;
+    b.dataset.kind=kind; b.dataset.number=number; b.innerHTML=inside;
+    b.setAttribute('aria-label',(Math.floor(i/g.w)+1)+'행 '+(i%g.w+1)+'열, '+label);
+  }
+  function drawBoard() {
+    for (let i=0; i<g.n; i++) drawCell(i);
+    paintMines();
+  }
+  function buildBoard() {
+    $('board-title').closest('.play').dataset.size=size;
+    $('instrument').dataset.size=size;
+    $('instrument').style.setProperty('--w',g.w);
+    $('instrument').style.setProperty('--h',g.h);
+    const ticks = n => Array.from({length:n},(_,i)=>'<span>'+String(i+1).padStart(2,'0')+'</span>').join('');
+    $('cols').innerHTML=ticks(g.w); $('rows').innerHTML=ticks(g.h);
+    $('mode').textContent=sizeNames[size]+' · '+levels[tier];
+    $('board').setAttribute('aria-label',sizeNames[size]+' '+levels[tier]+' 게임 보드, '+g.h+'행 '+g.w+'열');
+    buttons=Array.from({length:g.n},(_,i) => {
+      const b=document.createElement('button');
+      b.type='button'; b.className='cell'; b.dataset.i=i; b.tabIndex=i===0 ? 0 : -1;
+      return b;
+    });
+    $('board').replaceChildren(...buttons);
+    boardScroll.scrollTo(0,0);
+    focusIndex=0;
+  }
+  function stopWorker() {
+    version++;
+    if (worker) worker.terminate();
+    if (workerURL) URL.revokeObjectURL(workerURL);
+    worker=null; workerURL=null;
+  }
+  function stopClock() {
+    if (state === 'playing') elapsed=Math.max(0,Math.floor(performance.now()-started));
+    clearInterval(ticker); ticker=0;
+  }
+  function reset(message) {
+    stopWorker(); stopClock();
+    g=engine.geometry(size);
+    view=new Int8Array(g.n).fill(UNKNOWN);
+    board=null; first=-1; flags=0; opened=0; hit=-1; elapsed=0;
+    buildBoard(); status('ready',message); drawBoard(); paintClock(); paintBest();
+    $('level-info').textContent=descriptions[tier];
+    [...$('sizes').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===size)));
+    [...$('levels').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===tier)));
+  }
+  function finish(won) {
+    stopClock();
+    if (won) {
+      for (let i=0; i<g.n; i++) if (view[i] === UNKNOWN) { view[i]=MARK; flags++; }
+      records.save(size,tier,elapsed);
+    }
+    status(won ? 'won' : 'lost');
+    drawBoard(); paintClock(); paintBest();
+  }
+  function begin(layout) {
+    stopClock();
+    board=layout; view.fill(UNKNOWN); flags=0; hit=-1; elapsed=0;
+    opened=engine.reveal(g,board,view,first);
+    selectTool(false); status('playing');
+    started=performance.now();
+    if (opened === g.n-g.mines) { finish(true); return; }
+    ticker=setInterval(paintClock,200);
+    drawBoard(); paintClock();
+  }
+  function setProgress(percent) {
+    $('progress').firstElementChild.style.width=percent+'%';
+    $('progress').setAttribute('aria-valuenow',String(percent));
+  }
+  function generate(i) {
+    stopWorker();
+    first=i;
+    const token=version;
+    status('generating'); setProgress(0);
+    try {
+      const source=mineEngine.toString()+'\n('+generationWorker.toString()+')();';
+      workerURL=URL.createObjectURL(new Blob([source],{type:'text/javascript'}));
+      worker=new Worker(workerURL);
+      const fail = message => {
+        if (token !== version) return;
+        stopWorker(); status('failed',message);
+      };
+      worker.onerror=() => fail('이 브라우저에서 보드 생성 작업을 실행할 수 없습니다. 다른 브라우저에서 열거나 다시 시도하세요.');
+      worker.onmessageerror=() => fail('검증 결과를 읽지 못했습니다. 다시 시도하세요.');
+      worker.onmessage=({data}) => {
+        if (token !== version || state !== 'generating') return;
+        if (data.type === 'progress') {
+          $('message').textContent='보드 검증 중 · '+data.attempts.toLocaleString('ko-KR')+'개 후보 확인';
+          setProgress(Math.min(99,Math.floor(100*data.ms/data.maxMs)));
+          return;
+        }
+        stopWorker();
+        if (data.type === 'result' && data.status === 'ok') begin(data.board);
+        else status('failed',data.status === 'exhausted' ? messages.failed : '보드 검증 중 오류가 발생했습니다. 다시 시도하세요.');
+      };
+      const seed=globalThis.crypto?.getRandomValues(new Uint32Array(1))[0] ?? Math.floor(Math.random()*4294967296);
+      worker.postMessage({ size,tier,first,seed });
+    } catch {
+      stopWorker();
+      status('failed','이 브라우저에서 백그라운드 보드 생성을 사용할 수 없습니다. 작업자를 지원하는 브라우저에서 열어 주세요.');
+    }
+  }
+  function toggle(i) {
+    if (state !== 'playing' || view[i] >= 0) return;
+    if (view[i] === MARK) { view[i]=UNKNOWN; flags--; }
+    else { view[i]=MARK; flags++; }
+    drawCell(i); paintMines();
+  }
+  function activate(i) {
+    if (state === 'ready') { generate(i); return; }
+    if (state !== 'playing') return;
+    if (flagMode) { toggle(i); return; }
+    if (view[i] === MARK) return;
+    let targets=[i];
+    if (view[i] >= 0) {
+      if (!view[i] || g.near[i].filter(j=>view[j]===MARK).length !== view[i]) return;
+      targets=g.near[i].filter(j=>view[j]===UNKNOWN);
+    }
+    for (const j of targets) {
+      const n=engine.reveal(g,board,view,j);
+      if (n < 0) { hit=j; finish(false); return; }
+      opened+=n;
+    }
+    if (opened === g.n-g.mines) finish(true);
+    else drawBoard();
+  }
+  $('sizes').innerHTML=engine.SIZES.map((s,i)=>'<button class="size choice"><span class="grid-glyph" aria-hidden="true"></span>'+sizeNames[i]+'<small>'+s.w+' × '+s.h+'</small></button>').join('');
+  $('levels').innerHTML=levels.map(label=>'<button class="level choice">'+label+'</button>').join('');
+  [...$('sizes').children].forEach((b,i)=>b.onclick=()=>{ if (size!==i) { size=i; reset(); } });
+  [...$('levels').children].forEach((b,i)=>b.onclick=()=>{ if (tier!==i) { tier=i; reset(); } });
+  $('new').onclick=()=>reset();
+  $('restart').onclick=()=>{
+    if (!board) return;
+    settingsDialog.close();
+    begin(board);
+  };
+  $('action').onclick=()=>{
+    if (state === 'generating') reset('생성을 취소했습니다. 시작할 칸을 다시 선택하세요.');
+    else if (state === 'failed') generate(first);
+  };
+  $('open-tool').onclick=()=>selectTool(false);
+  $('flag-tool').onclick=()=>selectTool(true);
+  $('settings-button').onclick=()=>settingsDialog.showModal();
+  const scrollObserver = new ResizeObserver(() => {
+    $('scroll-hint').hidden = boardScroll.scrollWidth <= boardScroll.clientWidth &&
+      boardScroll.scrollHeight <= boardScroll.clientHeight;
+  });
+  scrollObserver.observe(boardScroll);
+  scrollObserver.observe($('instrument'));
+  const cellOf=e=>e.target.closest('.cell');
+  $('board').onclick=e=>{ const b=cellOf(e); if (b) activate(+b.dataset.i); };
+  $('board').oncontextmenu=e=>{ const b=cellOf(e); if (b) { e.preventDefault(); toggle(+b.dataset.i); } };
+  $('board').onfocusin=e=>{
+    const b=cellOf(e);
+    if (!b) return;
+    buttons[focusIndex].tabIndex=-1; focusIndex=+b.dataset.i; b.tabIndex=0;
+  };
+  $('board').onkeydown=e=>{
+    const b=cellOf(e);
+    if (!b) return;
+    const i=+b.dataset.i;
+    if (e.key.toLowerCase()==='f') { e.preventDefault(); if (!e.repeat) toggle(i); return; }
+    const moves={ ArrowLeft:i%g.w ? i-1 : i, ArrowRight:i%g.w<g.w-1 ? i+1 : i,
+      ArrowUp:i>=g.w ? i-g.w : i, ArrowDown:i+g.w<g.n ? i+g.w : i, Home:0, End:g.n-1 };
+    if (Object.hasOwn(moves,e.key)) { e.preventDefault(); buttons[moves[e.key]].focus(); }
+  };
+  // Clean up even when a file tab is put into the browser's back/forward cache.
+  window.addEventListener('pagehide',()=>{ if (state === 'generating') reset(); else stopWorker(); });
+  document.addEventListener('visibilitychange',()=>{ if (!document.hidden) paintClock(); });
+  reset();
+})();
+</script>
+</body>
+</html>
