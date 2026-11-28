@@ -1,0 +1,8 @@
+{
+  "title": "CURTA Type I",
+  "description": "Curta Type I 기계식 계산기의 보수 계단 드럼, 전달축, 자리올림, 캐리지, 클리어링 링을 재현한 인터랙티브 3D 시뮬레이터",
+  "tags": ["JavaScript", "Three.js", "3D", "Simulation", "Mechanical Calculator"],
+  "status": "available",
+  "entry": "index.html",
+  "requiresCrossOriginIsolation": false
+}
